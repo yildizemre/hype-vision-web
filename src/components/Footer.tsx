@@ -1,162 +1,144 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Twitter, Linkedin, Github, Mail } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { Linkedin, Twitter, Mail } from 'lucide-react';
+import { useState } from 'react';
 
-const ADDRESS = 'Hightech Binası, Gebze OSB, Kemal Nehrozoğlu Cd. 400. Sokak, 41480 Gebze/Kocaeli';
-const PHONE = '0216 451 91 12';
-const EMAIL = 'hello@hypevisionlab.com';
+const FOOTER_LOGO = '/hypefoooterlogo.png';
 
-const Footer = () => {
-  const { t } = useLanguage();
+const footerLinks: Record<string, { label: string; href: string }[]> = {
+  Ürün: [
+    { label: 'Kamera Entegrasyonu', href: '#kamera' },
+    { label: 'Canlı Panel', href: '#urunler' },
+    { label: 'Denetim Modülleri', href: '#denetim' },
+    { label: 'İletişim', href: '#demo' },
+  ],
+  Çözümler: [
+    { label: 'Kimler İçin', href: '#kimler-icin' },
+    { label: 'İSG Denetimi', href: '#denetim' },
+    { label: 'Kalite Kontrol', href: '#denetim' },
+    { label: 'SSS', href: '#sss' },
+  ],
+  Kurumsal: [
+    { label: 'Hakkımızda', href: '#hakkimizda' },
+    { label: 'Platform Süreci', href: '#platform' },
+    { label: 'Sektörler', href: '#sektorler' },
+    { label: 'İletişim', href: '#demo' },
+  ],
+};
 
-  const footerSections = [
-    {
-      title: t('footer.company'),
-      links: [
-        { label: t('footer.about-us'), to: '/about' },
-        { label: t('footer.careers'), to: '/contact' },
-        { label: t('footer.press'), to: '/contact' },
-        { label: t('footer.partners'), to: '/contact' },
-        { label: t('footer.contact'), to: '/contact' },
-      ]
-    },
-    {
-      title: t('footer.product'),
-      links: [
-        { label: t('footer.analytics-platform'), to: '/production-control' },
-        { label: t('footer.reporting-tools'), to: '/blog' },
-        { label: t('footer.api-documentation'), to: '/blog' },
-        { label: t('footer.integrations'), to: '/erp-integration' },
-      ]
-    },
-    {
-      title: t('footer.solutions'),
-      links: [
-        { label: t('footer.enterprise'), to: '/enterprise' },
-        { label: t('footer.small-business'), to: '/small-business' },
-      ]
-    },
-    {
-      title: t('footer.resources'),
-      links: [
-        { label: t('footer.documentation'), to: '/blog' },
-        { label: t('footer.tutorials'), to: '/blog' },
-        { label: t('footer.blog'), to: '/blog' },
-      ]
-    }
-  ];
+export default function Footer() {
+  const [email, setEmail] = useState('');
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Footer Content */}
-        <div className="py-10 sm:py-12 lg:py-16">
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8">
-            {/* Brand Section */}
-            <div className="col-span-2 space-y-5">
-              <Link to="/" className="inline-block">
-                <img src="/images/hypefoooterlogo.png" alt="Hype Vision" className="h-9 sm:h-10 w-auto" />
-              </Link>
-              <p className="text-gray-400 text-sm leading-relaxed max-w-md">
-                {t('footer.empowering-businesses')}
-              </p>
-              <div className="space-y-2 text-xs sm:text-sm text-gray-400">
-                <p><strong className="text-white">{t('footer.address')}:</strong></p>
-                <p className="break-words">{ADDRESS}</p>
-                <p><strong className="text-white">{t('footer.phone')}:</strong> {PHONE}</p>
-                <p><strong className="text-white">{t('footer.email')}:</strong> {EMAIL}</p>
-              </div>
-              <div className="flex gap-2">
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2.5 rounded-lg hover:bg-gray-700 transition-colors duration-200" aria-label="Twitter">
-                  <Twitter className="h-5 w-5" />
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2.5 rounded-lg hover:bg-gray-700 transition-colors duration-200" aria-label="LinkedIn">
-                  <Linkedin className="h-5 w-5" />
-                </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2.5 rounded-lg hover:bg-gray-700 transition-colors duration-200" aria-label="GitHub">
-                  <Github className="h-5 w-5" />
-                </a>
-                <a href={`mailto:${EMAIL}`} className="bg-gray-800 p-2.5 rounded-lg hover:bg-gray-700 transition-colors duration-200" aria-label="E-posta">
-                  <Mail className="h-5 w-5" />
-                </a>
-              </div>
-            </div>
+    <footer className="bg-[#0A0A0A] border-t border-white/8" style={{ borderColor: 'rgba(255,255,255,0.08)' }} role="contentinfo">
+      <div className="border-b border-white/8 py-4 text-center" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
+        <p className="text-xs text-gray-600 font-light px-4">
+          İnsan gözüyle takibi zor süreçlerde yapay zeka ile verimlilik artışı —{' '}
+          <span className="text-gray-500 font-medium">7/24 otomatik denetim.</span>
+        </p>
+      </div>
 
-            {/* Footer Link Columns */}
-            {footerSections.map((section, index) => (
-              <div key={index} className="space-y-4">
-                <h3 className="font-semibold text-white text-sm uppercase tracking-wider">{section.title}</h3>
-                <ul className="space-y-2.5">
-                  {section.links.map((link) => (
-                    <li key={link.to + link.label}>
-                      <Link
-                        to={link.to}
-                        className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 lg:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          <div className="lg:col-span-1">
+            <a href="#" className="inline-block mb-6" aria-label="Hype Vision">
+              <img
+                src={FOOTER_LOGO}
+                alt="Hype Vision"
+                width={180}
+                height={48}
+                className="h-10 sm:h-12 w-auto object-contain"
+              />
+            </a>
+            <p className="text-gray-500 text-sm font-light leading-relaxed mb-6">
+              İnsan denetimini yapay zekaya devrederek İSG, verimlilik, kalite ve güvenlikte
+              ölçülebilir sonuç üretiyoruz.
+            </p>
+            <address className="not-italic text-xs text-gray-600 leading-relaxed space-y-1">
+              <p>Yeni Riva Yolu</p>
+              <p>Beykoz, 34805</p>
+              <p>Türkiye</p>
+              <div className="pt-3 space-y-1">
+                <p>
+                  <a href="tel:+905418629190" className="hover:text-gray-400 transition-colors">
+                    0541 862 91 90
+                  </a>
+                </p>
+                <p>
+                  <a
+                    href="mailto:info@hypevisionlab.com"
+                    className="hover:text-gray-400 transition-colors flex items-center gap-1.5"
+                  >
+                    <Mail size={11} />
+                    info@hypevisionlab.com
+                  </a>
+                </p>
               </div>
-            ))}
+            </address>
           </div>
-        </div>
 
-        {/* Newsletter Section */}
-        <div className="border-t border-gray-800 py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <div>
-              <h3 className="font-semibold text-white mb-2">{t('footer.stay-updated')}</h3>
-              <p className="text-gray-400">{t('footer.latest-insights')}</p>
+          {Object.entries(footerLinks).map(([section, links]) => (
+            <div key={section}>
+              <h4 className="text-white font-semibold text-sm mb-5">{section}</h4>
+              <ul className="space-y-3">
+                {links.map((link) => (
+                  <li key={link.label}>
+                    <a href={link.href} className="text-xs text-gray-500 hover:text-gray-300 transition-colors font-light">
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-            
-            <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+          ))}
+
+          <div>
+            <h4 className="text-white font-semibold text-sm mb-5">Bülten</h4>
+            <p className="text-xs text-gray-500 mb-3 font-light">
+              Endüstriyel AI ve akıllı üretim güncellemeleri
+            </p>
+            <div className="flex gap-2">
               <input
                 type="email"
-                placeholder={t('footer.enter-email')}
-                className="flex-1 min-w-0 md:w-64 px-4 py-3 sm:py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-white placeholder-gray-400 text-base"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="E-posta adresiniz"
+                className="flex-1 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-xs text-white placeholder-gray-600 outline-none focus:border-white/20 transition-colors"
               />
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 sm:py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 font-semibold whitespace-nowrap min-h-[44px] sm:min-h-0">
-                {t('footer.subscribe')}
+              <button
+                type="button"
+                className="text-xs font-semibold text-white px-4 py-2 rounded-lg whitespace-nowrap bg-vision hover:bg-vision-dark transition-colors"
+              >
+                Abone Ol
               </button>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Bottom Footer */}
-        <div className="border-t border-gray-800 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm">
-              © 2024 HypeVisionLab. {t('footer.all-rights')}
+      <div className="border-t border-white/8 py-6" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-gray-600 font-light">
+            © {new Date().getFullYear()} Hype Vision. Tüm hakları saklıdır.
+          </p>
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 text-xs text-gray-600">
+              {['Gizlilik Politikası', 'Hizmet Şartları', 'Çerez Politikası'].map((item, i) => (
+                <span key={item} className="flex items-center gap-4">
+                  {i > 0 && <span className="text-gray-700">·</span>}
+                  <a href="#" className="hover:text-gray-400 transition-colors">{item}</a>
+                </span>
+              ))}
             </div>
-            
-            <div className="flex flex-wrap justify-center md:justify-end gap-4 sm:gap-6 text-sm">
-              <Link
-                to="/privacy-policy"
-                className="text-gray-400 hover:text-white transition-colors duration-200 py-1"
-              >
-                {t('footer.privacy-policy')}
-              </Link>
-              <Link
-                to="/terms-of-service"
-                className="text-gray-400 hover:text-white transition-colors duration-200 py-1"
-              >
-                {t('footer.terms-service')}
-              </Link>
-              <Link
-                to="/cookie-policy"
-                className="text-gray-400 hover:text-white transition-colors duration-200 py-1"
-              >
-                {t('footer.cookie-policy')}
-              </Link>
+            <div className="flex items-center gap-3 ml-4">
+              <a href="#" className="text-gray-600 hover:text-gray-400 transition-colors" aria-label="LinkedIn">
+                <Linkedin size={15} />
+              </a>
+              <a href="#" className="text-gray-600 hover:text-gray-400 transition-colors" aria-label="Twitter">
+                <Twitter size={15} />
+              </a>
             </div>
           </div>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
