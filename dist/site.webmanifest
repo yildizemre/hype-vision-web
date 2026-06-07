@@ -1,0 +1,28 @@
+{
+  "name": "Hype Vision",
+  "short_name": "Hype Vision",
+  "description": "Endüstriyel yapay zeka — İSG, kalite, verimlilik",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c2a30",
+  "theme_color": "#00cadc",
+  "lang": "tr",
+  "icons": [
+    {
+      "src": "/favicon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/hypevisionlogo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
