@@ -1,50 +1,17 @@
 import { HardHat, Users, ScanEye, ShieldAlert, AlertTriangle, EyeOff } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-const pains = [
-  {
-    Icon: AlertTriangle,
-    title: 'Manuel denetim kritik riski kaçırır',
-    desc: 'Kağıt İSG denetimi, checklist ve örneklemeli saha turu ciddi ihlalleri göremez. Vardiya sonunda öğrenilen kaza, önlenememiş kaza demektir.',
-  },
-  {
-    Icon: EyeOff,
-    title: 'Göremediğinizi önleyemezsiniz',
-    desc: 'İSG ekipleri çok çalışır; ama gerçek zamanlı görünürlük olmadan gizli riskler fire, idle kaybı ve iş kazasına dönüşür. Hep bir adım geridesiniz.',
-  },
-];
-
-const areas = [
-  {
-    Icon: HardHat,
-    title: 'İSG Denetimleri',
-    desc: 'Baret, yelek, maske ve tehlikeli bölge ihlalleri 7/24 izlenir. İnsan denetimi yerine sürekli, kanıt üreten AI gözetimi.',
-    highlight: 'KKD & bölge',
-    tags: ['İSG denetimi', 'İhlal uyarısı'],
-  },
-  {
-    Icon: Users,
-    title: 'Personel & Verimlilik',
-    desc: 'Personel denetimleri, çalışma süreleri, verimlilik ve boşta kalma süreleri otomatik ölçülür — kayıp zaman görünür olur.',
-    highlight: 'Boşta kalma',
-    tags: ['Personel denetimi', 'Verimlilik KPI'],
-  },
-  {
-    Icon: ScanEye,
-    title: 'Kalite Kontrol',
-    desc: 'Hat üzerinde anlık hata tespiti; fire ve hurda insan yorgunluğuna ve geç müdahaleye bağlı kalmaz.',
-    highlight: 'Anlık tespit',
-    tags: ['Kalite kontrol', 'Fire azaltma'],
-  },
-  {
-    Icon: ShieldAlert,
-    title: 'Güvenlik & Tesis',
-    desc: 'Şüpheli hareket, yetkisiz giriş-çıkış ve anormal durumlar 7/24 bildirilir.',
-    highlight: '7/24 alarm',
-    tags: ['Güvenlik', 'Anomali'],
-  },
-];
+type Pain = { title: string; desc: string };
+type Area = { title: string; desc: string; highlight: string; tags: string[] };
+const painIcons = [AlertTriangle, EyeOff];
+const areaIcons = [HardHat, Users, ScanEye, ShieldAlert];
 
 export default function ProblemSolution() {
+  const { t } = useTranslation();
+  const painsText = t('sections.problemSolution.pains', { returnObjects: true }) as Pain[];
+  const areasText = t('sections.problemSolution.areas', { returnObjects: true }) as Area[];
+  const pains = painsText.map((item, i) => ({ ...item, Icon: painIcons[i] ?? AlertTriangle }));
+  const areas = areasText.map((item, i) => ({ ...item, Icon: areaIcons[i] ?? HardHat }));
   return (
     <section
       id="cozumler"
@@ -54,14 +21,14 @@ export default function ProblemSolution() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="max-w-3xl mb-12 sm:mb-16">
           <p className="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-3">
-            Neden hâlâ oluyor?
+            {t('sections.problemSolution.eyebrow')}
           </p>
           <h2
             id="cozumler-heading"
             className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white leading-tight mb-8"
           >
-            Gecikmiş göstergeler ve manuel yöntemler{' '}
-            <span className="text-vision-light">tesisi modernleştiremez.</span>
+            {t('sections.problemSolution.title')}{' '}
+            <span className="text-vision-light">{t('sections.problemSolution.titleHighlight')}</span>
           </h2>
           <div className="grid sm:grid-cols-2 gap-5">
             {pains.map((p) => (
@@ -84,32 +51,33 @@ export default function ProblemSolution() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start pt-10 border-t border-white/10">
           <div className="lg:sticky lg:top-28">
             <p className="text-xs font-semibold tracking-[0.15em] uppercase text-vision-light/80 mb-4">
-              Hype Vision ile
+              {t('sections.problemSolution.withHype')}
             </p>
             <h3 className="text-3xl lg:text-4xl font-light text-white leading-tight mb-6">
-              İnsan denetimi{' '}
-              <span className="font-semibold">ölçeklenmez.</span>
+              {t('sections.problemSolution.headline1')}{' '}
+              <span className="font-semibold">{t('sections.problemSolution.headlineHighlight')}</span>
               <br />
               <span className="text-gray-500 font-light text-2xl lg:text-3xl">
-                Yapay zeka ölçeklenir.
+                {t('sections.problemSolution.headline2')}
               </span>
             </h3>
             <p className="text-sm text-gray-400 leading-relaxed mb-6">
-              Görüntüyü anlamlandırılmış veriye çeviririz: alarm, metrik, kanıt. Vardiya içinde
-              müdahale; maliyet, risk ve fire düşer.
+              {t('sections.problemSolution.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href="#denetim"
                 className="inline-flex items-center justify-center gap-2 text-sm font-medium text-gray-300 hover:text-white transition-colors"
               >
-                Tüm denetim modülleri →
+                {t('sections.problemSolution.allModules')}
               </a>
               <a
-                href="#demo"
+                href="/#iletisim"
+                data-track="contact_cta"
+                data-track-location="problem_solution"
                 className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-white px-6 py-3 rounded-lg bg-vision hover:bg-vision-dark transition-colors"
               >
-                Demo planla
+                {t('sections.problemSolution.contact')}
               </a>
             </div>
           </div>

@@ -1,47 +1,31 @@
-import Header from './components/Header';
-import Hero from './components/Hero';
-import CameraIntegration from './components/CameraIntegration';
-import VisionShowcase from './components/VisionShowcase';
-import LogoStrip from './components/LogoStrip';
-import TrustStrip from './components/TrustStrip';
-import AboutSection from './components/AboutSection';
-import CoreProducts from './components/CoreProducts';
-import InspectionModules from './components/InspectionModules';
-import AudienceSection from './components/AudienceSection';
-import ProblemSolution from './components/ProblemSolution';
-import HowItWorks from './components/HowItWorks';
-import ValueImpact from './components/ValueImpact';
-import UseCases from './components/UseCases';
-import PlatformOverview from './components/PlatformOverview';
-import FaqSection from './components/FaqSection';
-import FinalCTA from './components/FinalCTA';
-import Footer from './components/Footer';
-import SeoSchema from './components/SeoSchema';
+import { Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
+import CookieConsent from './components/CookieConsent';
+import DocumentLang from './components/DocumentLang';
+import AnalyticsRouteTracker, { AnalyticsBootstrap } from './components/AnalyticsRouteTracker';
+import AnalyticsClickTracker from './components/AnalyticsClickTracker';
+import HomePage from './pages/HomePage';
+import LegalPage from './pages/LegalPage';
+import BlogPostPage from './pages/BlogPostPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 export default function App() {
   return (
-    <div className="min-h-screen overflow-x-hidden">
-      <SeoSchema />
-      <Header />
-      <main>
-        <Hero />
-        <CameraIntegration />
-        <VisionShowcase />
-        <LogoStrip />
-        <TrustStrip />
-        <AboutSection />
-        <CoreProducts />
-        <InspectionModules />
-        <AudienceSection />
-        <ProblemSolution />
-        <HowItWorks />
-        <ValueImpact />
-        <UseCases />
-        <PlatformOverview />
-        <FaqSection />
-        <FinalCTA />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <DocumentLang />
+      <AnalyticsBootstrap />
+      <ScrollToTop />
+      <AnalyticsRouteTracker />
+      <AnalyticsClickTracker />
+      <CookieConsent />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/gizlilik-politikasi" element={<LegalPage />} />
+        <Route path="/hizmet-sartlari" element={<LegalPage />} />
+        <Route path="/cerez-politikasi" element={<LegalPage />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </>
   );
 }

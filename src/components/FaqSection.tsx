@@ -1,8 +1,12 @@
 import { useState } from 'react';
 import { ChevronDown, Search } from 'lucide-react';
-import { faqCategories, allFaqs } from '../data/faqData';
+import { useTranslation } from 'react-i18next';
+import { useAllFaqs, useFaqCategories } from '../i18n/content';
 
 export default function FaqSection() {
+  const { t } = useTranslation();
+  const faqCategories = useFaqCategories();
+  const allFaqs = useAllFaqs();
   const [activeCategory, setActiveCategory] = useState(faqCategories[0].id);
   const [openKey, setOpenKey] = useState<string | null>(
     `${faqCategories[0].id}-0`
@@ -28,18 +32,17 @@ export default function FaqSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="text-center mb-8 sm:mb-12">
           <p className="text-xs font-semibold tracking-[0.15em] uppercase text-vision-dark mb-3">
-            Sık Sorulan Sorular
+            {t('sections.faq.eyebrow')}
           </p>
           <h2
             id="faq-heading"
             className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#0A0A0A] leading-tight mb-4"
           >
-            Genel, teknik ve{' '}
-            <span className="text-vision">kurulum</span>
+            {t('sections.faq.title')}{' '}
+            <span className="text-vision">{t('sections.faq.titleHighlight')}</span>
           </h2>
           <p className="text-sm text-gray-500 max-w-xl mx-auto">
-            Hype Vision platformu hakkında en çok sorulan sorular — kamera, KVKK, Edge/Cloud,
-            lisans ve API.
+            {t('sections.faq.description')}
           </p>
         </div>
 
@@ -49,7 +52,7 @@ export default function FaqSection() {
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="SSS içinde ara..."
+            placeholder={t('sections.faq.searchPlaceholder')}
             className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 text-sm outline-none focus:border-vision focus:ring-2 focus:ring-vision/20 bg-white"
           />
         </div>
@@ -78,7 +81,7 @@ export default function FaqSection() {
 
         <div className="space-y-2">
           {filteredItems.length === 0 ? (
-            <p className="text-center text-sm text-gray-500 py-8">Sonuç bulunamadı.</p>
+            <p className="text-center text-sm text-gray-500 py-8">{t('sections.faq.noResults')}</p>
           ) : (
             filteredItems.map((faq, i) => {
               const key = `${activeCategory}-${i}`;
@@ -116,12 +119,24 @@ export default function FaqSection() {
         </div>
 
         <p className="text-center text-sm text-gray-500 mt-10">
-          Cevabını bulamadınız mı?{' '}
-          <a href="mailto:info@hypevisionlab.com" className="font-semibold text-vision hover:underline">
+          {t('sections.faq.notFound')}{' '}
+          <a
+            href="mailto:info@hypevisionlab.com"
+            data-track="email"
+            data-track-location="faq"
+            id="cta-email-faq"
+            className="font-semibold text-vision hover:underline"
+          >
             info@hypevisionlab.com
           </a>
           {' · '}
-          <a href="tel:+905418629190" className="font-semibold text-vision hover:underline">
+          <a
+            href="tel:+905418629190"
+            data-track="phone"
+            data-track-location="faq"
+            id="cta-phone-faq"
+            className="font-semibold text-vision hover:underline"
+          >
             0541 862 91 90
           </a>
         </p>

@@ -1,12 +1,19 @@
 import { Shield, Zap, Calendar, type LucideIcon } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-const metrics: { Icon?: LucideIcon; value: string; label: string }[] = [
-  { Icon: Calendar, value: '2020+', label: 'Saha deneyimi' },
-  { value: 'ONVIF', label: 'Marka bağımsız' },
-  { Icon: Zap, value: '7/24', label: 'AI denetim' },
-];
+type Metric = { value: string; label: string };
 
 export default function TrustStrip() {
+  const { t } = useTranslation();
+  const main = t('sections.trustStrip.main');
+  const mainBold = t('sections.trustStrip.mainBold');
+  const [mainPrefix = '', mainSuffix = ''] = main.split(mainBold);
+  const rawMetrics = t('sections.trustStrip.metrics', { returnObjects: true }) as Metric[];
+  const metrics: { Icon?: LucideIcon; value: string; label: string }[] = rawMetrics.map((m, i) => ({
+    ...m,
+    Icon: i === 0 ? Calendar : i === 2 ? Zap : undefined,
+  }));
+
   return (
     <section className="section-tint border-y border-vision/10 py-10 lg:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
@@ -17,11 +24,12 @@ export default function TrustStrip() {
             </div>
             <div>
               <p className="text-sm lg:text-base text-[#0A0A0A] font-medium leading-relaxed">
-                <strong className="font-semibold">2020&apos;den beri</strong> endüstriyel yapay zeka
-                ve görüntü işleme — mevcut IP kameralarınızla, marka bağımsız entegrasyon.
+                {mainPrefix}
+                <strong className="font-semibold">{mainBold}</strong>
+                {mainSuffix}
               </p>
               <p className="text-xs text-gray-500 mt-2">
-                Edge · Cloud · Hibrit · KVKK uyumlu mimari
+                {t('sections.trustStrip.sub')}
               </p>
             </div>
           </div>

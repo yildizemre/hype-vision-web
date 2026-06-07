@@ -1,6 +1,6 @@
-import { allFaqs } from '../data/faqData';
-
-const SITE_URL = 'https://hypevisionlab.com';
+import { useTranslation } from 'react-i18next';
+import { SOCIAL_LINKS, SITE_URL } from '../data/legalContent';
+import { useAllFaqs } from '../i18n/content';
 
 const organization = {
   '@context': 'https://schema.org',
@@ -10,8 +10,13 @@ const organization = {
   legalName: 'Hype Teknoloji',
   alternateName: ['HypeVisionLab', 'Hype Analytics AI'],
   url: SITE_URL,
-  logo: `${SITE_URL}/hypevisionlogo.png`,
-  image: [`${SITE_URL}/og-image.png`, `${SITE_URL}/hypevisionlogo.png`],
+  logo: {
+    '@type': 'ImageObject',
+    url: `${SITE_URL}/apple-touch-icon.png`,
+    width: 180,
+    height: 180,
+  },
+  image: [`${SITE_URL}/og-image.png`, `${SITE_URL}/apple-touch-icon.png`],
   description:
     "2020'den beri endüstriyel yapay zeka: mevcut IP kameralarla İSG, kalite kontrol, personel verimliliği ve güvenlik denetimi. RTSP/ONVIF, Edge/Cloud, KVKK uyumlu.",
   foundingDate: '2020',
@@ -35,7 +40,7 @@ const organization = {
     availableLanguage: ['Turkish', 'English'],
     areaServed: 'TR',
   },
-  sameAs: [],
+  sameAs: [SOCIAL_LINKS.facebook, SOCIAL_LINKS.instagram],
   knowsAbout: [
     'Endüstriyel yapay zeka',
     'Görüntü işleme',
@@ -85,8 +90,8 @@ const software = {
     '@type': 'Offer',
     price: '0',
     priceCurrency: 'TRY',
-    description: 'Ücretsiz demo ve keşif',
-    url: `${SITE_URL}/#demo`,
+    description: 'Keşif görüşmesi ve iletişim',
+    url: `${SITE_URL}/#iletisim`,
   },
   featureList: [
     'Mevcut IP kamera entegrasyonu — RTSP/ONVIF, marka bağımsız',
@@ -149,17 +154,19 @@ function JsonLd({ data }: { data: object }) {
 }
 
 export default function SeoSchema() {
+  const { t, i18n } = useTranslation();
+  const allFaqs = useAllFaqs();
   const faqPage = buildFaqPage(allFaqs);
+  const langCode = i18n.language === 'en' ? 'en-US' : 'tr-TR';
 
   const webPage = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     '@id': `${SITE_URL}/#webpage`,
     url: SITE_URL,
-    name: 'Hype Vision | Endüstriyel Yapay Zeka — İSG, Kalite, Verimlilik',
-    description:
-      "2020'den beri Hype Teknoloji. Mevcut IP kameralarla İSG analizi, kalite kontrol ve operasyonel verimlilik. Beykoz, İstanbul.",
-    inLanguage: 'tr-TR',
+    name: t('common.seo.webPage.name'),
+    description: t('common.seo.webPage.description'),
+    inLanguage: langCode,
     isPartOf: { '@id': `${SITE_URL}/#website` },
     about: { '@id': `${SITE_URL}/#software` },
     primaryImageOfPage: `${SITE_URL}/og-image.png`,
@@ -167,10 +174,35 @@ export default function SeoSchema() {
 
   return (
     <>
-      <JsonLd data={organization} />
+      <JsonLd
+        data={{
+          ...organization,
+          legalName: t('common.brand.legalName'),
+          description: t('common.seo.organization.description'),
+          knowsAbout: t('common.seo.organization.knowsAbout', {
+            returnObjects: true,
+          }) as string[],
+        }}
+      />
       <JsonLd data={localBusiness} />
-      <JsonLd data={software} />
-      <JsonLd data={website} />
+      <JsonLd
+        data={{
+          ...software,
+          description: t('common.seo.software.description'),
+          offers: {
+            ...software.offers,
+            description: t('common.seo.software.offerDescription'),
+          },
+          featureList: t('common.seo.software.features', { returnObjects: true }) as string[],
+        }}
+      />
+      <JsonLd
+        data={{
+          ...website,
+          inLanguage: langCode,
+          description: t('common.seo.website.description'),
+        }}
+      />
       <JsonLd data={webPage} />
       <JsonLd data={faqPage} />
     </>

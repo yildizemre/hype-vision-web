@@ -1,21 +1,29 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 /** Koyu / mavi hero üzerinde (footer logosu) */
 const LOGO_ON_HERO = '/hypefoooterlogo.png';
 /** Kaydırınca ve mobil menüde */
 const LOGO_DEFAULT = '/hypevisionlogo.png';
 
-const navLinks = [
-  { label: 'Ürün', href: '#urunler' },
-  { label: 'Denetim', href: '#denetim' },
-  { label: 'Hakkımızda', href: '#hakkimizda' },
-  { label: 'SSS', href: '#sss' },
-];
+type HeaderProps = {
+  /** Yasal ve iç sayfalarda her zaman solid header */
+  variant?: 'default' | 'solid';
+};
 
-export default function Header() {
+export default function Header({ variant = 'default' }: HeaderProps) {
+  const { t } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navLinks = [
+    { label: t('common.header.nav.product'), href: '/#urunler' },
+    { label: t('common.header.nav.inspection'), href: '/#denetim' },
+    { label: t('common.header.nav.about'), href: '/#hakkimizda' },
+    { label: t('common.header.nav.faq'), href: '/#sss' },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 48);
@@ -33,8 +41,8 @@ export default function Header() {
 
   const closeMobile = () => setMobileOpen(false);
 
-  /** Üstte hero: footer logosu + şeffaf koyu bar */
-  const onHero = !scrolled && !mobileOpen;
+  /** Üstte hero: footer logosu + şeffaf koyu bar — yasal sayfalarda kapalı */
+  const onHero = variant === 'default' && !scrolled && !mobileOpen;
   const logoSrc = onHero ? LOGO_ON_HERO : LOGO_DEFAULT;
 
   return (
@@ -48,20 +56,20 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
           <div className="relative flex items-center justify-between h-16 lg:h-[4.25rem]">
-            <a href="#" className="relative z-10 shrink-0" onClick={closeMobile} aria-label="Hype Vision">
+            <Link to="/" className="relative z-10 shrink-0" onClick={closeMobile} aria-label={t('common.brand.ariaLabel')}>
               <img
                 key={logoSrc}
                 src={logoSrc}
-                alt="Hype Vision"
+                alt={t('common.brand.alt')}
                 width={180}
                 height={44}
                 className="h-9 sm:h-10 w-auto object-contain transition-opacity duration-300"
               />
-            </a>
+            </Link>
 
             <nav
               className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-8"
-              aria-label="Ana menü"
+              aria-label={t('common.header.mainMenu')}
             >
               {navLinks.map((link) => (
                 <a
@@ -86,21 +94,28 @@ export default function Header() {
             <div className="relative z-10 flex items-center gap-3">
               <a
                 href="tel:+905418629190"
+                data-track="phone"
+                data-track-location="header"
+                id="cta-phone-header"
                 className={`hidden xl:block text-[13px] font-medium transition-colors ${
                   onHero ? 'text-white/65 hover:text-white' : 'text-vision-dark hover:text-vision'
                 }`}
               >
                 0541 862 91 90
               </a>
+              <LanguageSwitcher variant={onHero ? 'hero' : 'solid'} />
               <a
-                href="#demo"
+                href="/#iletisim"
+                data-track="contact_cta"
+                data-track-location="header"
+                id="cta-contact-header"
                 className={`hidden sm:inline-flex text-[13px] font-semibold px-5 py-2.5 rounded-lg transition-colors ${
                   onHero
                     ? 'text-[#0A0A0A] bg-white hover:bg-gray-100'
                     : 'text-white bg-vision hover:bg-vision-dark'
                 }`}
               >
-                İletişim
+                {t('common.header.contact')}
               </a>
               <button
                 type="button"
@@ -111,7 +126,7 @@ export default function Header() {
                 }`}
                 onClick={() => setMobileOpen(!mobileOpen)}
                 aria-expanded={mobileOpen}
-                aria-label={mobileOpen ? 'Menüyü kapat' : 'Menüyü aç'}
+                aria-label={mobileOpen ? t('common.header.closeMenu') : t('common.header.openMenu')}
               >
                 {mobileOpen ? <X size={20} /> : (
                   <span className="flex flex-col gap-1">
@@ -140,7 +155,7 @@ export default function Header() {
           type="button"
           className={`absolute inset-0 bg-black/30 transition-opacity ${mobileOpen ? 'opacity-100' : 'opacity-0'}`}
           onClick={closeMobile}
-          aria-label="Kapat"
+          aria-label={t('common.header.close')}
         />
         <div
           className={`absolute top-0 right-0 h-full w-[min(100%,300px)] bg-vision-50 shadow-xl flex flex-col transition-transform duration-300 border-l border-vision/20 ${
@@ -149,7 +164,7 @@ export default function Header() {
         >
           <div className="flex items-center justify-between px-5 h-16 border-b border-vision/20 bg-white/80">
             <img src={LOGO_DEFAULT} alt="" className="h-8 w-auto" />
-            <button type="button" onClick={closeMobile} className="p-2 text-vision-dark" aria-label="Kapat">
+            <button type="button" onClick={closeMobile} className="p-2 text-vision-dark" aria-label={t('common.header.close')}>
               <X size={20} />
             </button>
           </div>
@@ -165,13 +180,19 @@ export default function Header() {
               </a>
             ))}
           </nav>
+          <div className="px-5 pb-4">
+            <LanguageSwitcher variant="solid" />
+          </div>
           <div className="p-5 border-t border-vision/20 bg-white/60">
             <a
-              href="#demo"
+              href="/#iletisim"
+              data-track="contact_cta"
+              data-track-location="header_mobile"
+              id="cta-contact-header-mobile"
               onClick={closeMobile}
               className="block text-center text-sm font-semibold text-white py-3.5 rounded-lg bg-vision hover:bg-vision-dark"
             >
-              İletişim
+              {t('common.header.contact')}
             </a>
           </div>
         </div>

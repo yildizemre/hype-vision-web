@@ -1,34 +1,15 @@
 import { Camera, Brain, LayoutDashboard, BellRing, ArrowRight } from 'lucide-react';
-import { Term, TERMS } from './TermTooltip';
+import { useTranslation } from 'react-i18next';
 
-const flow = [
-  {
-    Icon: Camera,
-    label: 'Bağlan',
-    short: 'Mevcut IP kameralarınız tanınır',
-    detail: 'Marka fark etmez. Yeni kamera almanız gerekmez.',
-  },
-  {
-    Icon: Brain,
-    label: 'Analiz et',
-    short: 'Yapay zeka görüntüyü okur',
-    detail: 'İSG, kalite veya verimlilik — seçtiğiniz modül.',
-  },
-  {
-    Icon: LayoutDashboard,
-    label: 'Panel',
-    short: 'Sonuç tek ekrana düşer',
-    detail: 'Alarm, sayaç, kanıt görüntüsü — Excel değil.',
-  },
-  {
-    Icon: BellRing,
-    label: 'Aksiyon',
-    short: 'Ekip anında haberdar olur',
-    detail: 'WhatsApp, VMS popup veya saha sireni.',
-  },
-];
+type FlowItem = { label: string; short: string; detail: string };
+type CardItem = { title: string; text: string; bold?: string; suffix?: string };
+const flowIcons = [Camera, Brain, LayoutDashboard, BellRing];
 
 export default function HowItWorks() {
+  const { t } = useTranslation();
+  const flowRaw = t('sections.howItWorks.flow', { returnObjects: true }) as FlowItem[];
+  const flow = flowRaw.map((item, i) => ({ ...item, Icon: flowIcons[i] ?? Camera }));
+  const cards = t('sections.howItWorks.cards', { returnObjects: true }) as CardItem[];
   return (
     <section
       id="nasil-calisir"
@@ -38,30 +19,23 @@ export default function HowItWorks() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
           <p className="text-xs font-semibold tracking-[0.15em] uppercase text-vision-dark mb-3">
-            Nasıl çalışır?
+            {t('sections.howItWorks.eyebrow')}
           </p>
           <h2
             id="nasil-heading"
             className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#0A0A0A] leading-tight mb-4"
           >
-            4 adımda{' '}
-            <span className="text-vision">kameradan aksiyona</span>
+            {t('sections.howItWorks.title')}{' '}
+            <span className="text-vision">{t('sections.howItWorks.titleHighlight')}</span>
           </h2>
-          <p className="text-sm text-gray-500 leading-relaxed">
-            Kurulum{' '}
-            <Term tip={TERMS.edge}>
-              tesis içi (Edge)
-            </Term>{' '}
-            veya{' '}
-            <Term tip={TERMS.cloud}>bulut</Term> olabilir — keşif sonrası netleşir.
-          </p>
+          <p className="text-sm text-gray-500 leading-relaxed">{t('sections.howItWorks.description')}</p>
         </div>
 
         {/* Infografik + saha görseli */}
         <div className="panel-card rounded-2xl overflow-hidden mb-8">
           <img
             src="/nasil.jpg"
-            alt="Hype Vision akış şeması — kamera, AI analiz, panel ve aksiyon"
+            alt={t('sections.howItWorks.imageAlt')}
             loading="lazy"
             decoding="async"
             className="w-full h-auto block"
@@ -84,39 +58,32 @@ export default function HowItWorks() {
 
         {/* Kısa detay kartları */}
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
-          <div className="p-5 rounded-xl bg-white border border-gray-100">
-            <p className="text-xs font-bold text-vision-dark mb-2">Ne kadar sürer?</p>
-            <p className="text-sm text-gray-600">
-              Pilot kurulum genelde <strong className="text-[#0A0A0A]">3–5 iş günü</strong>.
-            </p>
-          </div>
-          <div className="p-5 rounded-xl bg-white border border-gray-100">
-            <p className="text-xs font-bold text-vision-dark mb-2">Hangi kameralar?</p>
-            <p className="text-sm text-gray-600">
-              <Term tip={TERMS.rtsp}>RTSP</Term> /{' '}
-              <Term tip={TERMS.onvif}>ONVIF</Term> uyumlu IP kameralar.
-            </p>
-          </div>
-          <div className="p-5 rounded-xl bg-white border border-gray-100 sm:col-span-1">
-            <p className="text-xs font-bold text-vision-dark mb-2">IT yükü?</p>
-            <p className="text-sm text-gray-600">
-              Mevcut altyapı kullanılır; modüler başlangıç mümkün.
-            </p>
-          </div>
+          {cards.map((card) => (
+            <div key={card.title} className="p-5 rounded-xl bg-white border border-gray-100">
+              <p className="text-xs font-bold text-vision-dark mb-2">{card.title}</p>
+              <p className="text-sm text-gray-600">
+                {card.text}{' '}
+                {card.bold ? <strong className="text-[#0A0A0A]">{card.bold}</strong> : null}
+                {card.suffix ?? ''}
+              </p>
+            </div>
+          ))}
         </div>
 
         <div className="panel-card rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
           <div>
             <p className="font-semibold text-[#0A0A0A] text-lg mb-1">
-              Sahadaki görüntüyü birlikte konuşalım
+              {t('sections.howItWorks.ctaTitle')}
             </p>
-            <p className="text-sm text-gray-500">Formu doldurun veya doğrudan arayın.</p>
+            <p className="text-sm text-gray-500">{t('sections.howItWorks.ctaDesc')}</p>
           </div>
           <a
-            href="#demo"
+            href="/#iletisim"
+            data-track="contact_cta"
+            data-track-location="how_it_works"
             className="shrink-0 inline-flex items-center gap-2 text-sm font-semibold text-white px-8 py-3.5 rounded-lg bg-vision hover:bg-vision-dark transition-colors"
           >
-            İletişim
+            {t('sections.howItWorks.contact')}
             <ArrowRight size={16} />
           </a>
         </div>

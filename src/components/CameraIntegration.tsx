@@ -1,33 +1,20 @@
 import { Camera, ArrowRight, CheckCircle2, LayoutDashboard } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-const cameraBrands = [
-  'Hikvision',
-  'Dahua',
-  'Axis',
-  'Bosch',
-  'Hanwha',
-  'Uniview',
-  'Honeywell',
-  'TP-Link',
-  'Genel IP / RTSP',
-];
-
-const protocols = ['ONVIF', 'RTSP', 'IP Kamera', 'NVR uyumlu'];
-
-const benefits = [
-  'Yeni kamera almanız gerekmez — sahada ne varsa ona bağlanırız',
-  'Marka ve model fark etmez; standart protokollerle entegrasyon',
-  'Kurulum sonrası tüm denetimler tek panelden yönetilir',
-  'İSG, personel, kalite ve güvenlik modülleri aynı altyapıda',
-];
-
-const steps = [
-  { Icon: Camera, label: 'Mevcut IP kameralar', sub: 'Tüm markalar' },
-  { Icon: ArrowRight, label: 'Hype Vision AI', sub: 'Görüntü analizi', hideIcon: true },
-  { Icon: LayoutDashboard, label: 'Canlı panel', sub: 'Uyarı ve rapor' },
-];
+type Step = { label: string; sub: string };
 
 export default function CameraIntegration() {
+  const { t } = useTranslation();
+  const cameraBrands = t('sections.cameraIntegration.brands', { returnObjects: true }) as string[];
+  const protocols = t('sections.cameraIntegration.protocols', { returnObjects: true }) as string[];
+  const benefits = t('sections.cameraIntegration.benefits', { returnObjects: true }) as string[];
+  const stepTexts = t('sections.cameraIntegration.steps', { returnObjects: true }) as Step[];
+  const steps = stepTexts.map((step, i) => ({
+    ...step,
+    Icon: i === 0 ? Camera : i === 2 ? LayoutDashboard : ArrowRight,
+    hideIcon: i === 1,
+  }));
+
   return (
     <section
       id="kamera"
@@ -38,16 +25,15 @@ export default function CameraIntegration() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div>
             <p className="text-xs font-semibold tracking-[0.15em] uppercase text-vision-dark mb-3">
-              Ürün · Kamera entegrasyonu
+              {t('sections.cameraIntegration.eyebrow')}
             </p>
             <h2 id="kamera-heading" className="text-3xl lg:text-4xl font-semibold text-[#0A0A0A] leading-tight mb-5">
-              Mevcut marka ve model kameralarınızla çalışırız.
+              {t('sections.cameraIntegration.title')}
             </h2>
             <p className="text-gray-600 text-base leading-relaxed mb-8">
-              Hype Vision, tesisinizdeki IP kameraları yapay zeka katmanına bağlar.
-              Hikvision, Dahua, Axis veya başka bir üretici —{' '}
-              <strong className="font-medium text-[#0A0A0A]">marka fark etmez</strong>.
-              Saha altyapınızı değiştirmeden denetim modüllerini devreye alırsınız.
+              {t('sections.cameraIntegration.description')}
+              <strong className="font-medium text-[#0A0A0A]">{t('sections.cameraIntegration.descriptionBold')}</strong>
+              {t('sections.cameraIntegration.descriptionSuffix')}
             </p>
 
             <ul className="space-y-3 mb-8">
@@ -71,16 +57,18 @@ export default function CameraIntegration() {
             </div>
 
             <a
-              href="#demo"
+              href="/#iletisim"
+              data-track="contact_cta"
+              data-track-location="camera"
               className="inline-flex items-center text-sm font-semibold text-white px-6 py-3 rounded-lg bg-vision hover:bg-vision-dark transition-colors"
             >
-              Kamera uyumluluğu için iletişim
+              {t('sections.cameraIntegration.cta')}
             </a>
           </div>
 
           <div>
             <div className="panel-card rounded-2xl p-6 sm:p-8 mb-6">
-              <p className="text-xs font-semibold text-vision-dark mb-5">Nasıl bağlanır?</p>
+              <p className="text-xs font-semibold text-vision-dark mb-5">{t('sections.cameraIntegration.howConnect')}</p>
               <div className="flex items-start justify-between gap-3">
                 {steps.map((step, i) => (
                   <div key={step.label} className="flex-1 min-w-0 text-center relative">
@@ -105,7 +93,7 @@ export default function CameraIntegration() {
               </div>
             </div>
 
-            <p className="text-xs font-medium text-gray-500 mb-2">Uyumlu markalar (örnek)</p>
+            <p className="text-xs font-medium text-gray-500 mb-2">{t('sections.cameraIntegration.brandsLabel')}</p>
             <div className="flex flex-wrap gap-2">
               {cameraBrands.slice(0, 6).map((brand) => (
                 <span
@@ -117,7 +105,7 @@ export default function CameraIntegration() {
               ))}
             </div>
             <p className="text-xs text-gray-500 mt-2">
-              Listede yok mu? RTSP veya ONVIF ile bağlanır.
+              {t('sections.cameraIntegration.brandsNote')}
             </p>
           </div>
         </div>

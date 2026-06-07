@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import i18n from '../i18n';
 
 export function Term({ children, tip }: { children: ReactNode; tip: string }) {
   return (
@@ -21,12 +22,28 @@ export function Term({ children, tip }: { children: ReactNode; tip: string }) {
 }
 
 export const TERMS = {
-  edge: 'Görüntü tesisinizdeki sunucuda işlenir — video dışarı çıkmaz, hızlı tepki.',
-  cloud: 'Merkezi bulutta işlenir — çok lokasyonlu tesisler için ölçeklenebilir.',
-  vms: 'Milestone, Dahua vb. kamera yönetim yazılımları — olay anında popup açılabilir.',
-  oee: 'Makine verimliliği skoru: çalışma × hız × kalite.',
-  rtsp: 'IP kameraların görüntü akışı protokolü — çoğu marka destekler.',
-  onvif: 'Kamera keşfi ve bağlantı standardı — marka bağımsız entegrasyon.',
-  idle: 'Boşta kalma: personel veya hatın atıl geçirdiği süre.',
-  mes: 'Üretim yürütme sistemi — hat durumu ve iş emirleri.',
+  get edge() {
+    return i18n.t('common.terms.edge');
+  },
+  get cloud() {
+    return i18n.t('common.terms.cloud');
+  },
+  get vms() {
+    return i18n.t('common.terms.vms');
+  },
+  get oee() {
+    return i18n.t('common.terms.oee');
+  },
+  get rtsp() {
+    return i18n.t('common.terms.rtsp');
+  },
+  get onvif() {
+    return i18n.t('common.terms.onvif');
+  },
+  get idle() {
+    return i18n.t('common.terms.idle');
+  },
+  get mes() {
+    return i18n.t('common.terms.mes');
+  },
 } as const;

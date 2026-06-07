@@ -1,29 +1,16 @@
 import { Calendar, MapPin, Cpu, ArrowRight, HardHat, ScanEye, Users, ShieldAlert } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-const focusAreas = [
-  {
-    Icon: HardHat,
-    label: 'İSG denetimi',
-    desc: 'KKD, tehlikeli bölge, forklift–yaya',
-  },
-  {
-    Icon: ScanEye,
-    label: 'Kalite kontrol',
-    desc: 'Hat üzerinde anlık hata tespiti',
-  },
-  {
-    Icon: Users,
-    label: 'Personel & verimlilik',
-    desc: 'Boşta kalma, istasyon uyumu',
-  },
-  {
-    Icon: ShieldAlert,
-    label: 'Tesis güvenliği',
-    desc: 'Alan ihlali, 7/24 alarm',
-  },
-];
+type FocusArea = { label: string; desc: string };
 
 export default function AboutSection() {
+  const { t } = useTranslation();
+  const focusText = t('sections.about.focusAreas', { returnObjects: true }) as FocusArea[];
+  const focusAreas = focusText.map((item, i) => ({
+    ...item,
+    Icon: [HardHat, ScanEye, Users, ShieldAlert][i] ?? HardHat,
+  }));
+  const stats = t('sections.about.stats', { returnObjects: true }) as { value: string; label: string }[];
   return (
     <section
       id="hakkimizda"
@@ -34,51 +21,49 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <p className="text-xs font-semibold tracking-[0.15em] uppercase text-vision-dark mb-3">
-              Hakkımızda
+              {t('sections.about.eyebrow')}
             </p>
             <h2
               id="hakkimizda-heading"
               className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#0A0A0A] leading-tight mb-5"
             >
-              2020&apos;den beri{' '}
-              <span className="text-vision">endüstriyel yapay zeka</span>
+              {t('sections.about.title')}{' '}
+              <span className="text-vision">{t('sections.about.titleHighlight')}</span>
             </h2>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4">
-              <strong className="font-semibold text-[#0A0A0A]">Hype Teknoloji</strong> olarak 2020
-              yılından bu yana endüstriyel güvenlik ve operasyonel verimlilik alanında yapay zeka
-              destekli görüntü işleme sistemleri geliştiriyoruz.
+              <strong className="font-semibold text-[#0A0A0A]">{t('sections.about.p1Bold')}</strong>{' '}
+              {t('sections.about.p1')}
             </p>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4">
-              <strong className="font-semibold text-[#0A0A0A]">Hype Vision</strong> platformumuz;
-              sahadaki IP kameralardan gelen görüntüyü analiz ederek İSG, kalite kontrol, personel
-              verimliliği ve güvenlik süreçlerini otomatikleştirir. Ham video depolamak yerine
-              anlamlandırılmış veri — alarm, metrik, rapor — üretir.
+              <strong className="font-semibold text-[#0A0A0A]">{t('sections.about.p2Bold')}</strong>{' '}
+              {t('sections.about.p2')}
             </p>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-8">
-              Amacımız fabrikalarda insan gözünün yetemediği sürekli denetimi ölçeklenebilir,
-              KVKK uyumlu ve mevcut altyapıyla uyumlu bir katmana dönüştürmek.
+              {t('sections.about.p3')}
             </p>
 
             <div className="flex flex-wrap gap-4 text-xs text-gray-500 mb-8">
               <span className="flex items-center gap-1.5">
                 <Calendar size={14} className="text-vision" />
-                Kuruluş: 2020
+                {t('sections.about.founded')}
               </span>
               <span className="flex items-center gap-1.5">
                 <MapPin size={14} className="text-vision" />
-                Beykoz, İstanbul
+                {t('sections.about.location')}
               </span>
               <span className="flex items-center gap-1.5">
                 <Cpu size={14} className="text-vision" />
-                Edge · Cloud · Hibrit
+                {t('sections.about.architecture')}
               </span>
             </div>
 
             <a
-              href="#demo"
+              href="/#iletisim"
+              data-track="contact_cta"
+              data-track-location="about"
               className="inline-flex items-center gap-2 text-sm font-semibold text-white px-6 py-3.5 rounded-lg bg-vision hover:bg-vision-dark transition-colors"
             >
-              Ekibimizle tanışın
+              {t('sections.about.cta')}
               <ArrowRight size={16} />
             </a>
           </div>
@@ -88,7 +73,7 @@ export default function AboutSection() {
               <div className="relative">
                 <img
                   src="/4.avif"
-                  alt="Hype Vision saha analizi — depo alanında personel ve bölge izleme"
+                  alt={t('sections.about.imageAlt')}
                   width={1280}
                   height={667}
                   loading="lazy"
@@ -97,11 +82,7 @@ export default function AboutSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0c2a30]/80 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 flex flex-wrap gap-3">
-                  {[
-                    { value: '2020', label: 'Kuruluş' },
-                    { value: '7/24', label: 'Saha izleme' },
-                    { value: 'KVKK', label: 'Uyumlu mimari' },
-                  ].map((stat) => (
+                  {stats.map((stat) => (
                     <div
                       key={stat.label}
                       className="px-3 py-2 rounded-lg bg-black/40 backdrop-blur-sm border border-white/15"
@@ -118,7 +99,7 @@ export default function AboutSection() {
 
             <div className="panel-card rounded-2xl p-5 sm:p-6">
               <p className="text-xs font-bold uppercase tracking-widest text-vision-dark mb-4">
-                Neye odaklanıyoruz?
+                {t('sections.about.focusTitle')}
               </p>
               <div className="grid grid-cols-2 gap-3">
                 {focusAreas.map(({ Icon, label, desc }) => (

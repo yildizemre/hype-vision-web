@@ -1,38 +1,13 @@
 import { useState } from 'react';
 import { ScanEye, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-const shots = [
-  {
-    src: '/1.avif',
-    alt: 'Forklift ve yaya mesafe analizi — tehlikeli bölge tespiti',
-    title: 'Forklift–yaya riski',
-    desc: 'Araç ile personel arası mesafe anlık ölçülür; kırmızı bölge ihlali alarm üretir.',
-    tags: ['İSG', 'Tehlikeli alan', 'Mesafe analizi'],
-  },
-  {
-    src: '/2.avif',
-    alt: 'Gıda üretim hattında personel ve bölge izleme',
-    title: 'Tehlike alanı & hareket',
-    desc: 'Personel pozisyonu ve zemin bölgesi izlenir; makine önü ihlalleri kayda alınır.',
-    tags: ['İSG', 'Bölge kuralı', 'Pose takibi'],
-  },
-  {
-    src: '/3.avif',
-    alt: 'Konveyör hattında personel denetimi ve iskelet takibi',
-    title: 'Hat denetimi',
-    desc: 'Vardiya sırasında kim nerede — istasyon ve hat kurallarına uyum görünür olur.',
-    tags: ['Personel', 'Hat izleme', 'Verimlilik'],
-  },
-  {
-    src: '/4.avif',
-    alt: 'Depo alanında alan ihlali ve personel tespiti',
-    title: 'Depo & alan güvenliği',
-    desc: 'Yetkisiz veya riskli alana giriş anında tespit; kanıt görüntüsü panelde.',
-    tags: ['Güvenlik', 'Alan ihlali', '7/24'],
-  },
-];
+type Shot = { alt: string; title: string; desc: string; tags: string[] };
 
 export default function VisionShowcase() {
+  const { t } = useTranslation();
+  const shotTexts = t('sections.visionShowcase.shots', { returnObjects: true }) as Shot[];
+  const shots = shotTexts.map((shot, i) => ({ ...shot, src: `/${i + 1}.avif` }));
   const [active, setActive] = useState(0);
   const current = shots[active];
 
@@ -49,18 +24,17 @@ export default function VisionShowcase() {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           <div>
             <p className="text-xs font-semibold tracking-[0.15em] uppercase text-vision-dark mb-3">
-              Sahada AI ne görür?
+              {t('sections.visionShowcase.eyebrow')}
             </p>
             <h2
               id="vision-showcase-heading"
               className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#0A0A0A] leading-tight mb-4"
             >
-              Kamera görüntüsü değil —{' '}
-              <span className="text-vision">anlamlandırılmış olay</span>
+              {t('sections.visionShowcase.title')}{' '}
+              <span className="text-vision">{t('sections.visionShowcase.titleHighlight')}</span>
             </h2>
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-6">
-              Ham video depolanmaz. Yapay zeka personeli, araçları, bölgeleri ve ihlalleri
-              okur; panelde alarm, sayaç ve kanıt olarak sunar.
+              {t('sections.visionShowcase.description')}
             </p>
 
             <div className="space-y-3">
@@ -117,7 +91,7 @@ export default function VisionShowcase() {
                 type="button"
                 onClick={prev}
                 className="p-2 rounded-lg border border-gray-200 hover:bg-white transition-colors"
-                aria-label="Önceki görsel"
+                aria-label={t('sections.visionShowcase.prevImage')}
               >
                 <ChevronLeft size={18} className="text-gray-600" />
               </button>
@@ -128,7 +102,7 @@ export default function VisionShowcase() {
                 type="button"
                 onClick={next}
                 className="p-2 rounded-lg border border-gray-200 hover:bg-white transition-colors"
-                aria-label="Sonraki görsel"
+                aria-label={t('sections.visionShowcase.nextImage')}
               >
                 <ChevronRight size={18} className="text-gray-600" />
               </button>
