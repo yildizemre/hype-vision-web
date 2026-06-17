@@ -106,7 +106,7 @@ export default function FinalCTA() {
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 xl:gap-16 items-start">
             <div>
               <p className="text-xs font-semibold tracking-[0.15em] uppercase text-vision-light mb-4">{t('sections.finalCta.eyebrow')}</p>
-              <h2 id="iletisim-heading" className="text-2xl sm:text-3xl lg:text-4xl xl:text-[2.75rem] font-semibold text-white leading-tight mb-5">
+              <h2 id="iletisim-heading" className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white leading-tight mb-5">
                 {t('common.forms.contact.sectionTitle')}
               </h2>
               <p className="text-white/75 text-sm sm:text-base leading-relaxed mb-8 max-w-lg">{t('common.forms.contact.sectionDesc')}</p>
@@ -193,7 +193,7 @@ export default function FinalCTA() {
                     <p className="text-xs font-semibold text-gray-700 mb-3">
                       {t('common.forms.contact.focusLabel')} <span className="text-gray-400 font-normal">{t('common.forms.contact.focusHint')}</span>
                     </p>
-                    <div className="grid grid-cols-2 gap-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {focusOptions.map((opt) => {
                         const active = form.focus.includes(opt.id);
                         const Icon = focusIcons[opt.id] ?? HardHat;

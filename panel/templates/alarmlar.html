@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="alarm-stats">
+  {% for s in alarm_stats %}
+  <div class="alarm-stat">
+    <div class="as-icon" style="color:{{ s.color }}"><i data-lucide="{{ s.icon }}"></i></div>
+    <div>
+      <span class="as-val" style="color:{{ s.color }}">{{ s.value }}</span>
+      <span class="as-label">{{ s.label }}</span>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="alarm-toolbar">
+  <div class="chip-row" id="type-filters">
+    {% for t in alarm_types %}
+    <button type="button" class="chip {% if t.key == 'all' %}active{% endif %}" data-filter-type="{{ t.key }}">{{ t.label }}</button>
+    {% endfor %}
+  </div>
+  <div class="toolbar-right">
+    <select id="severity-filter" class="toolbar-select">
+      <option value="all">Tüm öncelikler</option>
+      <option value="critical">Kritik</option>
+      <option value="high">Yüksek</option>
+      <option value="medium">Orta</option>
+    </select>
+    <select id="status-filter" class="toolbar-select">
+      <option value="all">Tüm durumlar</option>
+      <option value="open">Açık</option>
+      <option value="investigating">İnceleniyor</option>
+      <option value="resolved">Çözüldü</option>
+    </select>
+    <span class="live-pill"><i class="pulse-dot"></i> Canlı</span>
+  </div>
+</div>
+
+<div class="alarm-layout">
+  <section class="card alarm-feed">
+    <div class="card-head">
+      <h2>Bildirim Akışı</h2>
+      <span class="hint" id="feed-count">{{ alarms|length }} kayıt</span>
+    </div>
+    <div class="feed-list" id="alarm-feed">
+      {% for a in alarms %}
+      <article class="feed-item sev-{{ a.severity }} {% if a.is_new %}is-new{% endif %}"
+               data-id="{{ a.id }}"
+               data-type="{{ a.type }}"
+               data-severity="{{ a.severity }}"
+               data-status="{{ a.status }}"
+               tabindex="0">
+        <div class="fi-icon type-{{ a.type | lower | replace(' ', '-') | replace('ı','i') | replace('ş','s') | replace('ü','u') | replace('ö','o') | replace('ğ','g') }}">
+          <i data-lucide="{{ a.icon }}"></i>
+        </div>
+        <div class="fi-body">
+          <div class="fi-top">
+            <span class="fi-type">{{ a.type }}</span>
+            {% if a.is_new %}<span class="fi-new">YENİ</span>{% endif %}
+            <span class="fi-time">{{ a.elapsed }}</span>
+          </div>
+          <h3>{{ a.title }}</h3>
+          <p>{{ a.camera }}</p>
+        </div>
+        <span class="fi-sev">{{ a.severity }}</span>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <aside class="card alarm-detail" id="alarm-detail">
+    {% set first = alarms[0] %}
+    <div class="detail-media">
+      <img id="detail-img" src="{{ url_for('static', filename='img/' + first.thumb) }}" alt="" />
+      <span class="detail-live">CANLI KAYIT</span>
+    </div>
+    <div class="detail-body">
+      <div class="detail-badges">
+        <span class="badge-type" id="detail-type">{{ first.type }}</span>
+        <span class="badge-sev sev-{{ first.severity }}" id="detail-sev">{{ first.severity }}</span>
+        <span class="badge-status st-{{ first.status }}" id="detail-status">{{ first.status }}</span>
+      </div>
+      <h2 id="detail-title">{{ first.title }}</h2>
+      <p class="detail-desc" id="detail-desc">{{ first.desc }}</p>
+      <dl class="detail-meta">
+        <div><dt>Kamera</dt><dd id="detail-camera">{{ first.camera }}</dd></div>
+        <div><dt>Bölge</dt><dd id="detail-zone">{{ first.zone }}</dd></div>
+        <div><dt>Güven</dt><dd id="detail-conf">%{{ first.confidence }}</dd></div>
+        <div><dt>Atanan</dt><dd id="detail-assignee">{{ first.assignee or '—' }}</dd></div>
+        <div><dt>Saat</dt><dd id="detail-time">{{ first.time }}</dd></div>
+      </dl>
+      <div class="detail-actions">
+        <button type="button" class="btn-primary" id="btn-assign">Üstlen</button>
+        <button type="button" class="btn-outline" id="btn-resolve">Çözüldü</button>
+        <button type="button" class="btn-ghost" id="btn-dismiss">Yanlış Alarm</button>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<div class="card chart-wrap alarm-chart-wrap">
+  <div class="card-head">
+    <h2>Saatlik Alarm Yoğunluğu</h2>
+    <span class="hint">Bugün · toplam {{ alarms|length }} olay</span>
+  </div>
+  <canvas id="alarm-chart" height="80"></canvas>
+</div>
+
+<script id="alarms-json" type="application/json">{{ alarms | tojson }}</script>
+{% endblock %}

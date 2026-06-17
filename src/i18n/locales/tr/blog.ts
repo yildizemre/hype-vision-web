@@ -150,5 +150,107 @@ export default {
         },
       ],
     },
+    'tekstil-hat-a-fire-dususu': {
+      title: 'Hat A paketlemede fire oranı %31 nasıl düştü?',
+      excerpt:
+        'Anonim tekstil tesisi — dikiş sonrası paketleme hattında erken hata ayırma; hurda birikimi ve geri işleme maliyeti belirgin şekilde azaldı.',
+      sector: 'Tekstil & Konfeksiyon',
+      readTime: '6 dk',
+      date: '28 Mayıs 2026',
+      metaDescription:
+        'Tekstil Hat A vaka çalışması: paketleme hattında fire %31 düşüş, anlık kalite alarmı, anonim fabrika örneği.',
+      results: [
+        { label: 'Hat A fire', value: '−%31' },
+        { label: 'Geri işleme', value: '−%45' },
+        { label: 'Pilot süre', value: '30 gün' },
+      ],
+      sections: [
+        {
+          paragraphs: [
+            'Bu vaka notu, İstanbul yakınlarında faaliyet gösteren orta ölçekli bir konfeksiyon ve paketleme tesisindeki Hat A pilotunu anlatır. Müşteri adı gizlilik nedeniyle paylaşılmamaktadır.',
+            'Hat A günlük 4.200 parça kapasiteli paketleme hattıdır. Fire çoğunlukla etiket hizası, dikiş görünümü ve ambalaj bütünlüğü kaynaklıydı.',
+          ],
+        },
+        {
+          heading: 'Başlangıç metrikleri',
+          paragraphs: [
+            'Pilot öncesi 30 günlük ortalama fire oranı %4.8 idi. Kalite ekibi hat sonunda örnekleme yapıyor; hat içi hatalar birikerek geri işleme kuyruğuna düşüyordu.',
+            'Mevcut 4 IP kamera (paketleme giriş, orta nokta, çıkış, etiket istasyonu) RTSP ile edge kutusuna bağlandı. Yeni kamera alınmadı.',
+          ],
+        },
+        {
+          heading: 'Hat A\'da ne değişti?',
+          paragraphs: [
+            'Kalite modülü her parçayı 0.2–0.4 saniye içinde sınıflandırdı. Sapma tespitinde kalite mühendisine panel alarmı ve VMS popup gitti.',
+            'İlk 30 gün sonunda Hat A fire oranı %3.3\'e indi — göreli %31 iyileşme. Geri işleme kuyruğu hacmi %45 azaldı.',
+            'Operatör müdahalesi hat içinde yapılabildiği için hurda birikimi kesildi; asıl kazanç geç müdahaleden çok erken ayırmada.',
+          ],
+        },
+        {
+          heading: 'Vardiya bazlı görünürlük',
+          paragraphs: [
+            'Saatlik fire eğrisi vardiya amirine gösterildi. Öğle vardiyası sonrası spike tespit edilince etiket rulosu değişimi prosedüre alındı — kök neden 48 saat içinde kapandı.',
+          ],
+        },
+        {
+          heading: 'Sonuç ve yaygınlaştırma',
+          paragraphs: [
+            'Pilot 5 iş gününde kuruldu, 30 gün ölçüldü, yazılı rapor teslim edildi. Hat B için aynı edge altyapısı ile genişletme planlandı.',
+            'Benzer paketleme hattına sahip tekstil tesisleri için keşif görüşmesinde hat haritası ve kamera açıları birlikte değerlendirilir.',
+          ],
+        },
+      ],
+    },
+    'lojistik-palet-sayim-sapmasi': {
+      title: 'Sevkiyat rampasında palet sayım sapması: anlık alarm vakası',
+      excerpt:
+        'Anonim lojistik merkezi — beklenen ve tespit edilen palet sayısı arasındaki sapma anında yakalandı; sevkiyat hataları %60 azaldı.',
+      sector: 'Lojistik & Sevkiyat',
+      readTime: '5 dk',
+      date: '10 Mayıs 2026',
+      metaDescription:
+        'Lojistik palet sayım vaka çalışması: sevkiyat sapması tespiti, nesne sayım modülü, %60 sevkiyat hatası azalması.',
+      results: [
+        { label: 'Sapma tespiti', value: 'Anlık' },
+        { label: 'Sevkiyat hatası', value: '−%60' },
+        { label: 'Kamera', value: 'Mevcut 3' },
+      ],
+      sections: [
+        {
+          paragraphs: [
+            'Bu vaka, Marmara bölgesinde bir üreticinin sevkiyat rampasında yapılan nesne sayım pilotunu özetler. Tesis adı anonimdir.',
+            'Rampada forklift ile yüklenen paletler manuel sayılıyor; ERP girişi saatler sonra yapılıyordu. Sayım farkları ancak gün sonu mutabakatında çıkıyordu.',
+          ],
+        },
+        {
+          heading: 'Sorun',
+          paragraphs: [
+            'Haftalık ortalama 12 sevkiyat sapması kaydı vardı. Farkın kaynağı (eksik palet, çift sayım, yanlış SKU) kamera kaydından manuel aranarak bulunuyordu.',
+            'Lojistik sorumlusu her sapmada 25–40 dakika kayıt taraması yapıyordu.',
+          ],
+        },
+        {
+          heading: 'Çözüm',
+          paragraphs: [
+            'Rampaya bakan 3 mevcut kamera nesne sayım modülüne bağlandı. Her yükleme olayında beklenen palet sayısı (ERP\'den veya operatör girişinden) ile AI sayımı karşılaştırıldı.',
+            'Sapma %5 eşiğini aştığında lojistik sorumlusuna panel bildirimi gitti; olay kartında zaman damgası ve sayım özeti arşivlendi.',
+          ],
+        },
+        {
+          heading: '30 günlük sonuç',
+          paragraphs: [
+            'Sevkiyat sapması kayıtları haftalık 12\'den 5\'e düştü (%60 azalma). Kayıt arama süresi ortalama 3 dakikaya indi.',
+            'Pilot raporunda ROI, fire değil operasyonel hata maliyeti üzerinden hesaplandı — müşteri iç verilerini paylaşmadığı için rakamlar anonim bırakıldı.',
+          ],
+        },
+        {
+          heading: 'Öğrenilenler',
+          paragraphs: [
+            'Sayım modülü lojistikte en hızlı ROI veren modüllerden biri; kurulum süresi 3 iş günü.',
+            'ERP entegrasyonu ikinci fazda tamamlandı — pilot aşamasında operatör tablet girişi yeterli oldu.',
+          ],
+        },
+      ],
+    },
   },
 };

@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Cpu, ArrowRight, HardHat, ScanEye, Users, ShieldAlert } from 'lucide-react';
+import { Calendar, MapPin, Cpu, HardHat, ScanEye, Users, ShieldAlert } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 type FocusArea = { label: string; desc: string };
@@ -56,16 +56,6 @@ export default function AboutSection() {
                 {t('sections.about.architecture')}
               </span>
             </div>
-
-            <a
-              href="/#iletisim"
-              data-track="contact_cta"
-              data-track-location="about"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-white px-6 py-3.5 rounded-lg bg-vision hover:bg-vision-dark transition-colors"
-            >
-              {t('sections.about.cta')}
-              <ArrowRight size={16} />
-            </a>
           </div>
 
           <div className="relative">
@@ -101,7 +91,7 @@ export default function AboutSection() {
               <p className="text-xs font-bold uppercase tracking-widest text-vision-dark mb-4">
                 {t('sections.about.focusTitle')}
               </p>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {focusAreas.map(({ Icon, label, desc }) => (
                   <div
                     key={label}

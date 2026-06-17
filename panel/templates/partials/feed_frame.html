@@ -1,0 +1,19 @@
+{# Sentetik kamera görüntüsü — harici resim yok #}
+<div class="feed-canvas{% if mini %} feed-canvas--mini{% endif %}{% if offline %} feed-canvas--offline{% endif %}">
+  <div class="feed-floor"></div>
+  <div class="feed-grid"></div>
+  <div class="feed-vignette"></div>
+  <div class="feed-scan"></div>
+  {% if not mini %}
+  <div class="feed-hud">
+    <span class="feed-cam-id">{{ cam_id | default('CAM-03') }}</span>
+    <span class="feed-cam-name">{{ cam_name | default('Üretim #3') }}</span>
+  </div>
+  <div class="feed-corner feed-corner--tl"></div>
+  <div class="feed-corner feed-corner--tr"></div>
+  <div class="feed-corner feed-corner--bl"></div>
+  <div class="feed-corner feed-corner--br"></div>
+  {% else %}
+  <span class="feed-mini-label">{{ cam_name | default('CAM') }}</span>
+  {% endif %}
+</div>

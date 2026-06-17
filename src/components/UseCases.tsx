@@ -39,7 +39,7 @@ export default function UseCases() {
           <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{t('sections.useCases.description')}</p>
         </div>
 
-        <div className="flex gap-2 sm:gap-3 overflow-x-auto pb-2" role="tablist" aria-label={t('sections.useCases.tablist')}>
+        <div className="scroll-tabs mb-6" role="tablist" aria-label={t('sections.useCases.tablist')}>
           {sectorKeys.map((key) => {
             const item = sectors[key];
             const Icon = sectorIcons[key] ?? Cpu;
@@ -81,7 +81,7 @@ export default function UseCases() {
             <div className="p-6 sm:p-8 flex flex-col">
               <span className="text-[10px] font-bold uppercase tracking-widest text-vision mb-2">{t('sections.useCases.outcomeTitle')}</span>
               <p className="text-sm text-gray-600 leading-relaxed mb-6">{active.outcomeSummary}</p>
-              <div className="mt-auto grid grid-cols-3 gap-3">
+              <div className="mt-auto grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {active.stats.map((stat) => (
                   <div key={stat.label} className="text-center rounded-lg bg-vision-50/60 border border-vision/10 px-2 py-3">
                     <div className="text-lg font-bold text-[#0A0A0A]">{stat.value}</div>

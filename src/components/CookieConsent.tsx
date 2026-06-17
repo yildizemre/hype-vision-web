@@ -19,6 +19,11 @@ export default function CookieConsent() {
     if (!stored) setVisible(true);
   }, []);
 
+  useEffect(() => {
+    document.body.classList.toggle('cookie-banner-open', visible);
+    return () => document.body.classList.remove('cookie-banner-open');
+  }, [visible]);
+
   const save = (value: CookieConsent) => {
     localStorage.setItem(COOKIE_CONSENT_KEY, value);
     setVisible(false);

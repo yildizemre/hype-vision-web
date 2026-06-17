@@ -7,6 +7,7 @@ import AnalyticsClickTracker from './components/AnalyticsClickTracker';
 import HomePage from './pages/HomePage';
 import LegalPage from './pages/LegalPage';
 import BlogPostPage from './pages/BlogPostPage';
+import SectorPage from './pages/SectorPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/hizmet-sartlari" element={<LegalPage />} />
         <Route path="/cerez-politikasi" element={<LegalPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
+        <Route path="/sektor/:slug" element={<SectorPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>

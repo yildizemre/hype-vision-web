@@ -18,7 +18,12 @@ export const BLOG_SLUGS = [
   'gida-hattinda-idle-azaltma',
   'isg-kkd-ihlal-tespiti',
   'kalite-kontrol-fire-azaltma',
+  'tekstil-hat-a-fire-dususu',
+  'lojistik-palet-sayim-sapmasi',
 ] as const;
+
+export const SECTOR_SLUGS = ['tekstil', 'otomotiv', 'gida', 'metal'] as const;
+export type SectorSlug = (typeof SECTOR_SLUGS)[number];
 
 export const LEGAL_SLUGS = [
   'gizlilik-politikasi',
@@ -98,6 +103,36 @@ export function useBlogPosts(): BlogPost[] {
 export function useBlogPost(slug: string): BlogPost | undefined {
   const posts = useBlogPosts();
   return useMemo(() => posts.find((p) => p.slug === slug), [posts, slug]);
+}
+
+export type SectorPage = {
+  slug: SectorSlug;
+  title: string;
+  metaDescription: string;
+  eyebrow: string;
+  headline: string;
+  headlineHighlight: string;
+  intro: string;
+  pains: { title: string; desc: string }[];
+  modules: string[];
+  metrics: { value: string; label: string }[];
+  caseSlug: string;
+};
+
+type SectorPageRaw = Omit<SectorPage, 'slug'>;
+
+export function useSectorPage(slug: string): SectorPage | undefined {
+  const { t, i18n } = useTranslation();
+
+  return useMemo(() => {
+    if (!SECTOR_SLUGS.includes(slug as SectorSlug)) return undefined;
+    const raw = t(`sectors.pages.${slug}`, { returnObjects: true }) as SectorPageRaw;
+    return { slug: slug as SectorSlug, ...raw };
+  }, [slug, t, i18n.language]);
+}
+
+export function useSectorList(): SectorSlug[] {
+  return [...SECTOR_SLUGS];
 }
 
 export function useLegalPagesList(): LegalPageData[] {

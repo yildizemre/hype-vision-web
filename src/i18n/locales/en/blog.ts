@@ -150,5 +150,105 @@ export default {
         },
       ],
     },
+    'tekstil-hat-a-fire-dususu': {
+      title: 'How Line A scrap rate dropped 31% in packaging',
+      excerpt:
+        'Anonymous textile site — early defect separation on post-sewing packaging; scrap buildup and rework cost fell sharply.',
+      sector: 'Textile & Apparel',
+      readTime: '6 min',
+      date: '28 May 2026',
+      metaDescription:
+        'Textile Line A case study: 31% scrap reduction on packaging, instant quality alerts, anonymous factory example.',
+      results: [
+        { label: 'Line A scrap', value: '−31%' },
+        { label: 'Rework', value: '−45%' },
+        { label: 'Pilot', value: '30 days' },
+      ],
+      sections: [
+        {
+          paragraphs: [
+            'This case note covers the Line A pilot at a mid-size apparel and packaging facility near Istanbul. Customer name withheld for confidentiality.',
+            'Line A is a packaging line with ~4,200 pieces/day capacity. Scrap was mostly due to label alignment, stitch appearance, and packaging integrity.',
+          ],
+        },
+        {
+          heading: 'Baseline metrics',
+          paragraphs: [
+            'Pre-pilot 30-day average scrap rate was 4.8%. Quality sampled at line end; in-line defects piled into rework queue.',
+            'Four existing IP cameras (pack in, mid, out, label station) connected via RTSP to edge box. No new cameras purchased.',
+          ],
+        },
+        {
+          heading: 'What changed on Line A',
+          paragraphs: [
+            'Quality module classified each piece in 0.2–0.4 s. On deviation, quality engineer got panel alert and VMS popup.',
+            'After 30 days Line A scrap fell to 3.3% — 31% relative improvement. Rework queue volume dropped 45%.',
+            'Main gain was early separation, not end-of-line scrap cost alone.',
+          ],
+        },
+        {
+          heading: 'Shift-level visibility',
+          paragraphs: [
+            'Hourly scrap curve shown to shift lead. Post-lunch spike traced to label roll — root cause closed within 48 hours.',
+          ],
+        },
+        {
+          heading: 'Outcome and rollout',
+          paragraphs: [
+            'Pilot deployed in 5 business days, measured 30 days, written report delivered. Line B expansion planned on same edge stack.',
+          ],
+        },
+      ],
+    },
+    'lojistik-palet-sayim-sapmasi': {
+      title: 'Pallet count mismatch at shipping dock: instant alert case',
+      excerpt:
+        'Anonymous logistics hub — expected vs detected pallet count caught in real time; shipping errors down 60%.',
+      sector: 'Logistics & Shipping',
+      readTime: '5 min',
+      date: '10 May 2026',
+      metaDescription:
+        'Logistics pallet counting case: shipment variance detection, object count module, 60% fewer shipping errors.',
+      results: [
+        { label: 'Variance detection', value: 'Instant' },
+        { label: 'Shipping errors', value: '−60%' },
+        { label: 'Cameras', value: '3 existing' },
+      ],
+      sections: [
+        {
+          paragraphs: [
+            'This case summarizes an object-counting pilot at a manufacturer’s shipping ramp. Site name anonymous.',
+            'Pallets loaded by forklift were counted manually; ERP entry hours later. Variances surfaced only at day-end reconciliation.',
+          ],
+        },
+        {
+          heading: 'Problem',
+          paragraphs: [
+            'Average 12 shipment variance records per week. Root cause (missing pallet, double count, wrong SKU) found by manual footage search.',
+            'Logistics lead spent 25–40 minutes per variance scanning recordings.',
+          ],
+        },
+        {
+          heading: 'Solution',
+          paragraphs: [
+            'Three ramp cameras connected to object-count module. Each load compared expected pallets (ERP or operator input) vs AI count.',
+            'When variance exceeded 5% threshold, logistics lead got panel alert with timestamp and count summary archived.',
+          ],
+        },
+        {
+          heading: '30-day result',
+          paragraphs: [
+            'Weekly variance records fell from 12 to 5 (60% reduction). Footage search time averaged 3 minutes.',
+          ],
+        },
+        {
+          heading: 'Lessons',
+          paragraphs: [
+            'Counting module often delivers fastest ROI in logistics; setup in 3 business days.',
+            'ERP integration completed in phase two — operator tablet input sufficed for pilot.',
+          ],
+        },
+      ],
+    },
   },
 };

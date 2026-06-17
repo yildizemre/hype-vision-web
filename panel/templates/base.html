@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }} — Hype Vision</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css') }}" />
+</head>
+<body class="{% if layout is defined %}{{ layout }}{% endif %}">
+  <div class="app">
+    <aside class="sidebar">
+      <a href="/" class="sidebar-logo">hype <span>vision</span></a>
+      <div class="sidebar-user">
+        <div class="avatar">{{ user.initials }}</div>
+        <div>
+          <div class="su-name">{{ user.name }}</div>
+          <div class="su-role">{{ user.role }}</div>
+        </div>
+      </div>
+
+      {% for group in sidebar %}
+      <div class="nav-group">
+        <div class="nav-group-title">{{ group.title }}</div>
+        {% for item in group.links %}
+        <a href="{{ '/' if not item.slug else '/' + item.slug }}"
+           class="nav-item {% if active == item.slug %}active{% endif %}">
+          <i data-lucide="{{ item.icon }}"></i>
+          <span>{{ item.label }}</span>
+          {% if item.badge %}<span class="nav-badge">{{ item.badge }}</span>{% endif %}
+        </a>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </aside>
+
+    <div class="workspace">
+      <header class="top {% if layout is defined %}top-{{ layout }}{% endif %}">
+        <div>
+          <h1>{{ title }}</h1>
+          {% if subtitle %}<p>{{ subtitle }}</p>{% endif %}
+        </div>
+        <div class="top-actions">
+          <span class="live-pill subtle"><i class="pulse-dot"></i> Sistem aktif</span>
+          <div class="notif-wrap" id="notif-wrap">
+            <button type="button" class="notif-btn" id="notif-btn" aria-label="Bildirimler">
+              <i data-lucide="bell"></i>
+              {% if open_alarm_count %}<span class="notif-count" id="notif-count">{{ open_alarm_count }}</span>{% endif %}
+            </button>
+            <div class="notif-dropdown" id="notif-dropdown" hidden>
+              <div class="nd-head">
+                <strong>Bildirimler</strong>
+                <a href="/izleme">Tümünü gör</a>
+              </div>
+              <div class="nd-list">
+                {% for a in header_alarms %}
+                <a href="/izleme" class="nd-item sev-{{ a.severity }}">
+                  <i data-lucide="{{ a.icon }}"></i>
+                  <div>
+                    <span class="nd-title">{{ a.title }}</span>
+                    <span class="nd-meta">{{ a.camera }} · {{ a.elapsed }}</span>
+                  </div>
+                </a>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="page {% if layout is defined %}page-{{ layout }}{% endif %}">
+        {% block content %}{% endblock %}
+      </main>
+
+      {% if live_log is defined %}
+      <footer class="statusbar">
+        <div class="status-metrics">
+          {% if status is defined %}
+          <div class="sm"><span>Aktif Kamera</span><div class="sm-bar"><i style="width:66%"></i></div><b>{{ status.cameras }}</b></div>
+          <div class="sm"><span>Personel Sayısı</span><div class="sm-bar green"><i style="width:100%"></i></div><b>{{ status.personnel }}</b></div>
+          {% endif %}
+        </div>
+        <div class="live-log">
+          <span class="log-label">CANLI LOG</span>
+          <div class="log-track" id="log-track">
+            {% for level, msg in live_log %}
+            <span class="log-item {{ level }}">{{ msg }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </footer>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="toast-stack" id="toast-stack"></div>
+
+  <script>
+    window.CHART_DATA = {{ chart | default({}) | tojson }};
+    window.ALARM_CHART = {{ alarm_chart | default({}) | tojson }};
+  </script>
+  <script src="{{ url_for('static', filename='js/panel.js') }}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

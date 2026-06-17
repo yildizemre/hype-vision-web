@@ -18,6 +18,7 @@ export default {
     closeMenu: 'Close menu',
     close: 'Close',
     phone: '+90 541 862 91 90',
+    panel: 'Panel',
   },
   footer: {
     tagline: 'AI-driven efficiency in processes hard to track by eye —',

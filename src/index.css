@@ -21,6 +21,8 @@
     font-family: 'Inter', 'SF Pro Display', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+    scroll-padding-top: 4.25rem;
   }
 
   body {
@@ -28,6 +30,11 @@
     padding: 0;
     background: var(--hv-tint);
     color: #0A0A0A;
+    overflow-x: clip;
+  }
+
+  body.cookie-banner-open {
+    padding-bottom: max(7rem, env(safe-area-inset-bottom, 0px));
   }
 }
 
@@ -69,5 +76,13 @@
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  .scroll-tabs {
+    @apply flex gap-2 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide snap-x snap-mandatory;
+  }
+
+  .scroll-tabs > * {
+    @apply snap-start;
   }
 }

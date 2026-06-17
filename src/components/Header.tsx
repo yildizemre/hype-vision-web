@@ -23,6 +23,7 @@ export default function Header({ variant = 'default' }: HeaderProps) {
     { label: t('common.header.nav.inspection'), href: '/#denetim' },
     { label: t('common.header.nav.about'), href: '/#hakkimizda' },
     { label: t('common.header.nav.faq'), href: '/#sss' },
+    { label: t('common.header.contact'), href: '/#iletisim' },
   ];
 
   useEffect(() => {
@@ -68,7 +69,7 @@ export default function Header({ variant = 'default' }: HeaderProps) {
             </Link>
 
             <nav
-              className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-8"
+              className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-5 lg:gap-8"
               aria-label={t('common.header.mainMenu')}
             >
               {navLinks.map((link) => (
@@ -91,35 +92,26 @@ export default function Header({ variant = 'default' }: HeaderProps) {
               ))}
             </nav>
 
-            <div className="relative z-10 flex items-center gap-3">
-              <a
-                href="tel:+905418629190"
-                data-track="phone"
-                data-track-location="header"
-                id="cta-phone-header"
-                className={`hidden xl:block text-[13px] font-medium transition-colors ${
-                  onHero ? 'text-white/65 hover:text-white' : 'text-vision-dark hover:text-vision'
-                }`}
-              >
-                0541 862 91 90
-              </a>
+            <div className="relative z-10 flex items-center gap-2 sm:gap-3">
               <LanguageSwitcher variant={onHero ? 'hero' : 'solid'} />
               <a
-                href="/#iletisim"
-                data-track="contact_cta"
+                href="https://panel.hypevisionlab.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-track="panel_cta"
                 data-track-location="header"
-                id="cta-contact-header"
-                className={`hidden sm:inline-flex text-[13px] font-semibold px-5 py-2.5 rounded-lg transition-colors ${
+                id="cta-panel-header"
+                className={`inline-flex text-xs sm:text-[13px] font-semibold px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg transition-colors ${
                   onHero
                     ? 'text-[#0A0A0A] bg-white hover:bg-gray-100'
                     : 'text-white bg-vision hover:bg-vision-dark'
                 }`}
               >
-                {t('common.header.contact')}
+                {t('common.header.panel')}
               </a>
               <button
                 type="button"
-                className={`lg:hidden w-10 h-10 rounded-lg flex items-center justify-center transition-colors ${
+                className={`md:hidden w-10 h-10 rounded-lg flex items-center justify-center transition-colors ${
                   onHero
                     ? 'border border-white/25 text-white hover:bg-white/10'
                     : 'border border-vision/30 text-vision-dark hover:bg-vision/10'
@@ -148,7 +140,7 @@ export default function Header({ variant = 'default' }: HeaderProps) {
       </header>
 
       <div
-        className={`fixed inset-0 z-[60] lg:hidden ${mobileOpen ? 'visible' : 'invisible'}`}
+        className={`fixed inset-0 z-[60] md:hidden ${mobileOpen ? 'visible' : 'invisible'}`}
         aria-hidden={!mobileOpen}
       >
         <button
@@ -183,16 +175,18 @@ export default function Header({ variant = 'default' }: HeaderProps) {
           <div className="px-5 pb-4">
             <LanguageSwitcher variant="solid" />
           </div>
-          <div className="p-5 border-t border-vision/20 bg-white/60">
+          <div className="p-5 border-t border-vision/20 bg-white/60 space-y-3">
             <a
-              href="/#iletisim"
-              data-track="contact_cta"
+              href="https://panel.hypevisionlab.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-track="panel_cta"
               data-track-location="header_mobile"
-              id="cta-contact-header-mobile"
+              id="cta-panel-header-mobile"
               onClick={closeMobile}
               className="block text-center text-sm font-semibold text-white py-3.5 rounded-lg bg-vision hover:bg-vision-dark"
             >
-              {t('common.header.contact')}
+              {t('common.header.panel')}
             </a>
           </div>
         </div>

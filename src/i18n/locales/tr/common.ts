@@ -18,6 +18,7 @@ export default {
     closeMenu: 'Menüyü kapat',
     close: 'Kapat',
     phone: '0541 862 91 90',
+    panel: 'Panel',
   },
   footer: {
     tagline:

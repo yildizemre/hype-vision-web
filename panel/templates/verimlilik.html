@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="filters">
+  <div class="field">
+    <label>Konum</label>
+    <select><option>{{ locations[0] }}</option>{% for l in locations[1:] %}<option>{{ l }}</option>{% endfor %}</select>
+  </div>
+  <div class="field">
+    <label>Kamera</label>
+    <select><option>{{ cameras[0] }}</option>{% for c in cameras[1:] %}<option>{{ c }}</option>{% endfor %}</select>
+  </div>
+  <div class="field">
+    <label>Başlangıç Tarihi</label>
+    <input type="text" value="15.01.2024" readonly />
+  </div>
+  <div class="field">
+    <label>Bitiş Tarihi</label>
+    <input type="text" value="22.01.2024" readonly />
+  </div>
+  <button type="button" class="btn-primary">Tabloyu Güncelle</button>
+</div>
+
+<div class="tabs">
+  <button type="button" class="tab active">Saatlik Grafik</button>
+  <button type="button" class="tab">Gün Bazlı Liste</button>
+  <button type="button" class="tab">Personel Listesi</button>
+  <button type="button" class="tab">Toplam Özet</button>
+</div>
+
+<div class="summary-row">
+  {% for s in summary %}
+  <div class="summary-card">
+    <span class="sc-label">{{ s.label }}</span>
+    <span class="sc-value" style="color:{{ s.color }}">{{ s.value }}</span>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="card chart-wrap">
+  <div class="card-head">
+    <h2>Saatlik Zaman Dağılımı</h2>
+    <span class="hint">dk · stacked · hedef çizgisi</span>
+  </div>
+  <canvas id="hourly-chart" height="100"></canvas>
+</div>
+
+<div class="card table-wrap">
+  <div class="card-head">
+    <h2>Saat Bazlı Detay</h2>
+  </div>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Saat</th>
+        <th>Verimli</th>
+        <th>Boşta</th>
+        <th>Mola</th>
+        <th>Kamera Dışı</th>
+        <th>Hedef</th>
+        <th>Fark</th>
+        <th>Verimlilik %</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in hourly %}
+      {% set diff = r.productive - r.target %}
+      <tr>
+        <td class="td-time">{{ r.hour }}</td>
+        <td class="c-green"><span class="cell-bar green"><i style="width:{{ (r.productive / 60 * 100)|int }}%"></i></span>{{ r.productive }} dk</td>
+        <td class="c-red"><span class="cell-bar red"><i style="width:{{ (r.idle / 60 * 100)|int }}%"></i></span>{{ r.idle }} dk</td>
+        <td class="c-amber"><span class="cell-bar amber"><i style="width:{{ (r.break / 60 * 100)|int }}%"></i></span>{{ r.break }} dk</td>
+        <td class="c-gray">{{ r.off }} dk</td>
+        <td>{{ r.target }} dk</td>
+        <td class="{% if diff < 0 %}c-red{% else %}c-green{% endif %}">{{ diff }} dk</td>
+        <td class="td-prod">
+          <div class="prod-bar"><i style="width:{{ r.productivity }}%; background:{% if r.productivity >= 90 %}#22c55e{% elif r.productivity >= 80 %}#f59e0b{% else %}#ef4444{% endif %}"></i></div>
+          <span>{{ r.productivity }}%</span>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

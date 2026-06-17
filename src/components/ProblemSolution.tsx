@@ -53,11 +53,11 @@ export default function ProblemSolution() {
             <p className="text-xs font-semibold tracking-[0.15em] uppercase text-vision-light/80 mb-4">
               {t('sections.problemSolution.withHype')}
             </p>
-            <h3 className="text-3xl lg:text-4xl font-light text-white leading-tight mb-6">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-light text-white leading-tight mb-6">
               {t('sections.problemSolution.headline1')}{' '}
               <span className="font-semibold">{t('sections.problemSolution.headlineHighlight')}</span>
               <br />
-              <span className="text-gray-500 font-light text-2xl lg:text-3xl">
+              <span className="text-gray-500 font-light text-xl sm:text-2xl lg:text-3xl">
                 {t('sections.problemSolution.headline2')}
               </span>
             </h3>

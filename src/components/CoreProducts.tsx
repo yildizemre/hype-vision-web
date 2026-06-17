@@ -126,7 +126,7 @@ export default function CoreProducts() {
           </p>
         </div>
 
-        <div className="flex gap-2 overflow-x-auto pb-2 mb-6" role="tablist" aria-label={t('sections.coreProducts.tablist')}>
+        <div className="scroll-tabs mb-6" role="tablist" aria-label={t('sections.coreProducts.tablist')}>
           {products.map((p) => (
             <button
               key={p.id}

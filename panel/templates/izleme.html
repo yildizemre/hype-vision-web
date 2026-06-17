@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="cam-strip">
+  {% for cam in camera_strip %}
+  <button type="button" class="cam-thumb {% if cam.active %}active{% endif %}" title="{{ cam.name }}">
+    {% with cam_id=cam.id, cam_name=cam.name, mini=true %}
+    {% include 'partials/feed_frame.html' %}
+    {% endwith %}
+    <span>{{ cam.name }}</span>
+  </button>
+  {% endfor %}
+</div>
+
+<div class="monitor-shell">
+  <section class="video-stage">
+    <div class="video-feed" id="video-feed">
+      {% with cam_id=active_camera.id, cam_name=active_camera.name %}
+      {% include 'partials/feed_frame.html' %}
+      {% endwith %}
+
+      {% for box in boxes %}
+      <div class="bbox bbox-{{ box.color }}" style="top:{{ box.top }}%;left:{{ box.left }}%;width:{{ box.w }}%;height:{{ box.h }}%">
+        <span>{{ box.label }}</span>
+      </div>
+      {% endfor %}
+
+      <div class="glass-panel glass-options">
+        <div class="gp-title">Seçenekler</div>
+        {% for t in toggles %}
+        <label class="toggle-row">
+          <span>{{ t.label }}</span>
+          <input type="checkbox" {% if t.on %}checked{% endif %} data-layer="{{ t.key }}" />
+          <i class="toggle-ui"></i>
+        </label>
+        {% endfor %}
+      </div>
+
+      <div class="glass-panel glass-analytics">
+        <div class="gp-title">Anlık Analiz</div>
+        <div class="an-row">
+          <div class="an-stat">
+            <span class="an-dot" style="background:{{ analytics.people.color }}"></span>
+            Kişi <b>{{ analytics.people.count }}</b>
+            <canvas class="spark" data-series="{{ analytics.people.series | join(',') }}" data-color="{{ analytics.people.color }}"></canvas>
+          </div>
+          <div class="an-stat">
+            <span class="an-dot" style="background:{{ analytics.lifters.color }}"></span>
+            Forklift <b>{{ analytics.lifters.count }}</b>
+            <canvas class="spark" data-series="{{ analytics.lifters.series | join(',') }}" data-color="{{ analytics.lifters.color }}"></canvas>
+          </div>
+        </div>
+        <div class="an-focus">
+          <span>{{ analytics.focus.label }}</span>
+          <strong>{{ analytics.focus.metric }}: {{ analytics.focus.value }}</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-bar">
+      <div class="vb-presets">
+        <button type="button" class="vb-btn">1dk</button>
+        <button type="button" class="vb-btn">10dk</button>
+        <button type="button" class="vb-btn active">1sa</button>
+        <button type="button" class="vb-btn">12sa</button>
+        <button type="button" class="vb-btn">24sa</button>
+      </div>
+      <div class="vb-playback">
+        <button type="button" class="vb-icon" aria-label="Geri"><i data-lucide="skip-back"></i></button>
+        <button type="button" class="vb-icon play" aria-label="Oynat"><i data-lucide="play"></i></button>
+        <button type="button" class="vb-icon" aria-label="İleri"><i data-lucide="skip-forward"></i></button>
+        <span class="vb-speed">1x</span>
+      </div>
+      <div class="vb-live">
+        <button type="button" class="vb-icon" aria-label="Ekran görüntüsü"><i data-lucide="camera"></i></button>
+        <button type="button" class="vb-icon" aria-label="Ses"><i data-lucide="volume-2"></i></button>
+        <span class="live-badge">CANLI</span>
+      </div>
+    </div>
+
+    <div class="timeline-wrap">
+      <div class="timeline-labels">
+        <span>20:00</span><span>00:00</span><span>04:00</span><span>08:00</span>
+      </div>
+      <div class="timeline-track" id="timeline-track">
+        {% for seg in timeline %}
+        <div class="tl-seg tl-{{ seg.type }}" style="left:{{ seg.start }}%;width:{{ seg.width }}%"></div>
+        {% endfor %}
+        {% for m in timeline_markers %}
+        <i class="tl-marker" style="left:{{ m }}%"></i>
+        {% endfor %}
+        <i class="tl-playhead" id="tl-playhead" style="left:58%"></i>
+      </div>
+      <div class="timeline-legend">
+        <span><i class="leg alert"></i> Alarm</span>
+        <span><i class="leg unknown"></i> Bilinmeyen</span>
+        <span><i class="leg movement"></i> Hareket</span>
+        <span><i class="leg norecord"></i> Kayıt yok</span>
+      </div>
+    </div>
+  </section>
+
+  <aside class="activity-panel">
+    <div class="ap-head">
+      <h2>Son Aktivite</h2>
+      <select id="activity-type-filter" class="toolbar-select">
+        <option value="all">Tür: Tümü</option>
+        <option value="KKD">KKD</option>
+        <option value="Yangın">Yangın / ISG</option>
+        <option value="Güvenlik">Güvenlik</option>
+        <option value="Personel">Personel</option>
+        <option value="Lojistik">Lojistik</option>
+      </select>
+    </div>
+    <div class="activity-list" id="activity-list">
+      {% for a in activities %}
+      <article class="activity-card sev-{{ a.severity }} {% if a.is_new %}is-new{% endif %}"
+               data-id="{{ a.id }}" data-type="{{ a.type }}" data-icon="{{ a.icon }}" tabindex="0">
+        <div class="event-thumb sev-{{ a.severity }}">
+          <i data-lucide="{{ a.icon }}"></i>
+        </div>
+        <div class="ac-content">
+          <div class="ac-top">
+            <strong>{{ a.subject }}</strong>
+            <time>{{ a.time }}</time>
+          </div>
+          <p>{{ a.location }}</p>
+          <span class="ac-module">{{ a.module }}</span>
+        </div>
+        <button type="button" class="ac-menu" aria-label="Menü"><i data-lucide="more-horizontal"></i></button>
+      </article>
+      {% endfor %}
+    </div>
+  </aside>
+</div>
+
+<script id="activities-json" type="application/json">{{ activities | tojson }}</script>
+{% endblock %}

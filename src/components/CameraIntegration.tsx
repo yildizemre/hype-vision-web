@@ -27,7 +27,7 @@ export default function CameraIntegration() {
             <p className="text-xs font-semibold tracking-[0.15em] uppercase text-vision-dark mb-3">
               {t('sections.cameraIntegration.eyebrow')}
             </p>
-            <h2 id="kamera-heading" className="text-3xl lg:text-4xl font-semibold text-[#0A0A0A] leading-tight mb-5">
+            <h2 id="kamera-heading" className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#0A0A0A] leading-tight mb-5">
               {t('sections.cameraIntegration.title')}
             </h2>
             <p className="text-gray-600 text-base leading-relaxed mb-8">
@@ -69,9 +69,9 @@ export default function CameraIntegration() {
           <div>
             <div className="panel-card rounded-2xl p-6 sm:p-8 mb-6">
               <p className="text-xs font-semibold text-vision-dark mb-5">{t('sections.cameraIntegration.howConnect')}</p>
-              <div className="flex items-start justify-between gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-3">
                 {steps.map((step, i) => (
-                  <div key={step.label} className="flex-1 min-w-0 text-center relative">
+                  <div key={step.label} className="flex sm:flex-col items-center sm:text-center gap-4 sm:gap-0 relative">
                     {i < steps.length - 1 && (
                       <ArrowRight
                         size={16}
@@ -79,15 +79,15 @@ export default function CameraIntegration() {
                         aria-hidden
                       />
                     )}
-                    <div className="w-12 h-12 mx-auto rounded-xl bg-vision-50 border-2 border-vision/25 flex items-center justify-center mb-2">
+                    <div className="w-12 h-12 shrink-0 sm:mx-auto rounded-xl bg-vision-50 border-2 border-vision/25 flex items-center justify-center sm:mb-2">
                       {step.hideIcon ? (
                         <span className="text-xs font-bold text-vision">AI</span>
                       ) : (
                         <step.Icon size={20} className="text-vision" strokeWidth={1.5} />
                       )}
                     </div>
-                    <p className="text-xs font-semibold text-[#0A0A0A] mb-0.5">{step.label}</p>
-                    <p className="text-[11px] text-gray-500">{step.sub}</p>
+                    <p className="text-xs font-semibold text-[#0A0A0A] mb-0.5 sm:text-center">{step.label}</p>
+                    <p className="text-[11px] text-gray-500 sm:text-center">{step.sub}</p>
                   </div>
                 ))}
               </div>

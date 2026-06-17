@@ -40,7 +40,7 @@ export default function HowItWorks() {
             decoding="async"
             className="w-full h-auto block"
           />
-          <div className="p-6 sm:p-8 grid grid-cols-2 sm:grid-cols-4 gap-6">
+          <div className="p-6 sm:p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {flow.map((step, i) => (
               <div key={step.label} className="relative flex flex-col items-center text-center">
                 <div className="w-14 h-14 rounded-2xl bg-vision-50 border-2 border-vision/25 flex items-center justify-center mb-3">

@@ -58,7 +58,7 @@ export default function FaqSection() {
         </div>
 
         {!query.trim() && (
-          <div className="flex gap-2 overflow-x-auto pb-2 mb-6 -mx-1 px-1">
+          <div className="scroll-tabs mb-6">
             {faqCategories.map((c) => (
               <button
                 key={c.id}

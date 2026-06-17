@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="lines-grid">
+  {% for line in lines %}
+  {% set pct = (line.count / line.target * 100) | int %}
+  <div class="card line-card">
+    <h3>{{ line.name }}</h3>
+    <div class="line-big">{{ line.count }} <small>/ {{ line.target }}</small></div>
+    <div class="line-progress"><i style="width:{{ [pct,100]|min }}%"></i></div>
+    <span class="line-fire">Fire: {{ line.defect }}</span>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

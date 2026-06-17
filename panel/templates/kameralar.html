@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="cam-wall-toolbar">
+  <select class="toolbar-select">
+    <option>Durum: Aktif</option>
+    <option>Tümü</option>
+    <option>Alarm var</option>
+  </select>
+  <select class="toolbar-select">
+    <option>Konum: Tümü</option>
+    <option>Üretim</option>
+    <option>Depo</option>
+    <option>Sevkiyat</option>
+  </select>
+  <a href="/izleme" class="btn-primary">Detaylı izlemeye geç</a>
+</div>
+
+<div class="cam-wall">
+  {% for cam in cameras_wall %}
+  <a href="/izleme" class="cam-cell status-{{ cam.status }}">
+    {% with cam_id=cam.id, cam_name=cam.name, mini=true, offline=(cam.status == 'offline') %}
+    {% include 'partials/feed_frame.html' %}
+    {% endwith %}
+    <div class="cc-overlay">
+      {% if cam.status == 'live' %}
+      <span class="cc-live">CANLI</span>
+      {% elif cam.status == 'alert' %}
+      <span class="cc-alert">AKTİVİTE · {{ cam.activity }}</span>
+      {% else %}
+      <span class="cc-off">Çevrimdışı</span>
+      {% endif %}
+      <div class="cc-info">
+        <strong>{{ cam.name }}</strong>
+        <span>{{ cam.location }}</span>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}

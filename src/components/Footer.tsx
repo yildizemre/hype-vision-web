@@ -6,6 +6,7 @@ import { SOCIAL_LINKS } from '../data/legalContent';
 import { submitNewsletter } from '../lib/forms';
 import { trackLeadSubmit } from '../lib/conversions';
 import LegalFooterBar from './LegalFooterBar';
+import TrustBadges from './TrustBadges';
 import { useLegalNavLinks } from '../i18n/content';
 
 const FOOTER_LOGO = '/hypefoooterlogo.png';
@@ -17,6 +18,7 @@ type FooterProps = {
 export default function Footer({ hideLegalBar = false }: FooterProps) {
   const { t } = useTranslation();
   const legalNavLinks = useLegalNavLinks();
+  const sectorLinks = t('growth.sectorHub.sectors', { returnObjects: true }) as { slug: string; tag: string }[];
   const [email, setEmail] = useState('');
   const [newsletterLoading, setNewsletterLoading] = useState(false);
   const [newsletterDone, setNewsletterDone] = useState(false);
@@ -56,6 +58,7 @@ export default function Footer({ hideLegalBar = false }: FooterProps) {
       section: t('common.footer.sections.solutions'),
       links: [
         { label: t('common.footer.links.whoFor'), href: '/#kimler-icin' },
+        ...sectorLinks.map((s) => ({ label: s.tag, href: `/sektor/${s.slug}` })),
         { label: t('common.footer.links.hseInspection'), href: '/#denetim' },
         { label: t('common.footer.links.qualityControl'), href: '/#denetim' },
         { label: t('common.footer.links.faq'), href: '/#sss' },
@@ -148,6 +151,7 @@ export default function Footer({ hideLegalBar = false }: FooterProps) {
                 </p>
               </div>
             </address>
+            <TrustBadges variant="footer" />
           </div>
 
           {footerLinks.map(({ section, links }) => (
@@ -232,7 +236,7 @@ export default function Footer({ hideLegalBar = false }: FooterProps) {
             {legalNavLinks.map((item, i) => (
               <span key={item.slug} className="flex items-center gap-3">
                 {i > 0 && <span className="text-gray-700 hidden sm:inline" aria-hidden>·</span>}
-                <Link to={item.href} className="hover:text-vision-light transition-colors whitespace-nowrap">
+                <Link to={item.href} className="hover:text-vision-light transition-colors">
                   {item.title}
                 </Link>
               </span>
