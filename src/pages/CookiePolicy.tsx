@@ -57,8 +57,8 @@ const CookiePolicy: React.FC = () => {
             </h2>
             <p>
               {isTr
-                ? 'Çerez politikamızla ilgili sorularınız için bizimle şu adresten iletişime geçebilirsiniz: hello@hypevisionlab.com'
-                : 'If you have any questions about this cookie policy, you can contact us at: hello@hypevisionlab.com'}
+                ? 'Çerez politikamızla ilgili sorularınız için bizimle şu adresten iletişime geçebilirsiniz: info@hypevisionlab.com'
+                : 'If you have any questions about this cookie policy, you can contact us at: info@hypevisionlab.com'}
             </p>
           </section>
         </div>

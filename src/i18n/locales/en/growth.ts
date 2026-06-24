@@ -15,7 +15,8 @@ export default {
     titleHighlight: 'report in 4 steps',
     description:
       'No ambiguity after sign-off — each phase has clear deliverables, measurable KPIs, and a written pilot report.',
-    cta: 'Request a pilot plan',
+    cta: 'Request a pilot',
+    ctaHint: 'Book a free discovery call and we will outline your 30-day pilot plan together.',
     steps: [
       {
         step: '01',

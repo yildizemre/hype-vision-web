@@ -6,7 +6,6 @@ import { SOCIAL_LINKS } from '../data/legalContent';
 import { submitNewsletter } from '../lib/forms';
 import { trackLeadSubmit } from '../lib/conversions';
 import LegalFooterBar from './LegalFooterBar';
-import TrustBadges from './TrustBadges';
 import { useLegalNavLinks } from '../i18n/content';
 
 const FOOTER_LOGO = '/hypefoooterlogo.png';
@@ -87,7 +86,7 @@ export default function Footer({ hideLegalBar = false }: FooterProps) {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16 lg:py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           <div className="sm:col-span-2 lg:col-span-1">
             <Link to="/" className="inline-block mb-6" aria-label={t('common.brand.ariaLabel')}>
               <img
@@ -121,37 +120,60 @@ export default function Footer({ hideLegalBar = false }: FooterProps) {
                 <Instagram size={17} />
               </a>
             </div>
-            <address className="not-italic text-xs text-gray-600 leading-relaxed space-y-1">
+            <address className="not-italic text-xs text-gray-600 leading-relaxed space-y-1 mb-8">
               <p>{t('common.footer.address.street')}</p>
               <p>{t('common.footer.address.city')}</p>
               <p>{t('common.footer.address.country')}</p>
-              <div className="pt-3 space-y-1">
-                <p>
-                  <a
-                    href="tel:+905418629190"
-                    data-track="phone"
-                    data-track-location="footer"
-                    id="cta-phone-footer"
-                    className="hover:text-gray-400 transition-colors"
-                  >
-                    {t('common.footer.phone')}
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="mailto:info@hypevisionlab.com"
-                    data-track="email"
-                    data-track-location="footer"
-                    id="cta-email-footer"
-                    className="hover:text-gray-400 transition-colors inline-flex items-center gap-1.5"
-                  >
-                    <Mail size={11} />
-                    {t('common.footer.email')}
-                  </a>
-                </p>
-              </div>
+              <p className="pt-3">
+                <a
+                  href="mailto:info@hypevisionlab.com"
+                  data-track="email"
+                  data-track-location="footer"
+                  id="cta-email-footer"
+                  className="hover:text-gray-400 transition-colors inline-flex items-center gap-1.5"
+                >
+                  <Mail size={11} />
+                  {t('common.footer.email')}
+                </a>
+              </p>
             </address>
-            <TrustBadges variant="footer" />
+
+            <div className="max-w-sm">
+              <h4 className="text-white font-semibold text-sm mb-3">{t('common.footer.sections.newsletter')}</h4>
+              <p className="text-xs text-gray-500 mb-3 font-light">
+                {t('common.footer.newsletter.desc')}
+              </p>
+              {newsletterDone ? (
+                <p className="flex items-center gap-2 text-xs text-vision-light">
+                  <CheckCircle2 size={14} />
+                  {t('common.footer.newsletter.success')}
+                </p>
+              ) : (
+                <form onSubmit={handleNewsletter} className="space-y-2">
+                  <div className="flex flex-col gap-2">
+                    <input
+                      type="email"
+                      required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder={t('common.footer.newsletter.placeholder')}
+                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-xs text-white placeholder-gray-600 outline-none focus:border-white/20 transition-colors"
+                    />
+                    <button
+                      type="submit"
+                      disabled={newsletterLoading}
+                      className="inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-white px-4 py-2.5 rounded-lg bg-vision hover:bg-vision-dark transition-colors disabled:opacity-70"
+                    >
+                      {newsletterLoading ? <Loader2 size={14} className="animate-spin" /> : null}
+                      {t('common.footer.newsletter.subscribe')}
+                    </button>
+                  </div>
+                  {newsletterError && (
+                    <p className="text-[10px] text-red-400 leading-snug">{newsletterError}</p>
+                  )}
+                </form>
+              )}
+            </div>
           </div>
 
           {footerLinks.map(({ section, links }) => (
@@ -182,43 +204,6 @@ export default function Footer({ hideLegalBar = false }: FooterProps) {
               </ul>
             </div>
           ))}
-
-          <div>
-            <h4 className="text-white font-semibold text-sm mb-5">{t('common.footer.sections.newsletter')}</h4>
-            <p className="text-xs text-gray-500 mb-3 font-light">
-              {t('common.footer.newsletter.desc')}
-            </p>
-            {newsletterDone ? (
-              <p className="flex items-center gap-2 text-xs text-vision-light">
-                <CheckCircle2 size={14} />
-                {t('common.footer.newsletter.success')}
-              </p>
-            ) : (
-              <form onSubmit={handleNewsletter} className="space-y-2">
-                <div className="flex flex-col sm:flex-row gap-2">
-                  <input
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder={t('common.footer.newsletter.placeholder')}
-                    className="flex-1 bg-white/5 border border-white/10 rounded-full px-4 py-2.5 text-xs text-white placeholder-gray-600 outline-none focus:border-white/20 transition-colors min-w-0"
-                  />
-                  <button
-                    type="submit"
-                    disabled={newsletterLoading}
-                    className="inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-white px-4 py-2.5 rounded-lg whitespace-nowrap bg-vision hover:bg-vision-dark transition-colors disabled:opacity-70"
-                  >
-                    {newsletterLoading ? <Loader2 size={14} className="animate-spin" /> : null}
-                    {t('common.footer.newsletter.subscribe')}
-                  </button>
-                </div>
-                {newsletterError && (
-                  <p className="text-[10px] text-red-400 leading-snug">{newsletterError}</p>
-                )}
-              </form>
-            )}
-          </div>
         </div>
       </div>
 

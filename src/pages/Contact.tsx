@@ -7,18 +7,10 @@ const Contact = () => {
 
   const contactMethods = [
     {
-      icon: Phone,
-      title: 'Telefon Desteği',
-      description: 'Uzmanlarımızla doğrudan görüşün',
-      contact: '0216 451 91 12',
-      availability: 'Pazartesi - Cuma, 09:00 - 18:00',
-      color: 'blue'
-    },
-    {
       icon: Mail,
       title: 'E-posta',
       description: 'Detaylı sorularınız için yazın',
-      contact: 'hello@hypevisionlab.com',
+      contact: 'info@hypevisionlab.com',
       availability: '7/24 aktif, 4 saat içinde yanıt',
       color: 'green'
     },
@@ -47,9 +39,9 @@ const Contact = () => {
   ];
 
   const departments = [
-    { name: 'Satış Ekibi', email: 'sales@hypevisionlab.com', description: 'Ürün bilgileri ve fiyatlandırma' },
-    { name: 'Teknik Destek', email: 'technical@hypevisionlab.com', description: 'Teknik sorular ve entegrasyon' },
-    { name: 'İş Geliştirme', email: 'hello@hypevisionlab.com', description: 'Ortaklık ve iş birliği' }
+    { name: 'Satış Ekibi', email: 'info@hypevisionlab.com', description: 'Ürün bilgileri ve fiyatlandırma' },
+    { name: 'Teknik Destek', email: 'info@hypevisionlab.com', description: 'Teknik sorular ve entegrasyon' },
+    { name: 'İş Geliştirme', email: 'info@hypevisionlab.com', description: 'Ortaklık ve iş birliği' }
   ];
 
   return (
@@ -359,10 +351,7 @@ const Contact = () => {
             Uzman ekibimizle görüşün ve işletmeniz için özel MES çözümü geliştirin
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+902164519112" className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-center inline-block">
-              Hemen Ara: 0216 451 91 12
-            </a>
-            <a href="mailto:hello@hypevisionlab.com" className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-200 font-semibold text-center inline-block">
+            <a href="mailto:info@hypevisionlab.com" className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-center inline-block">
               E-posta Gönder
             </a>
           </div>

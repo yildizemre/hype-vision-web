@@ -39,7 +39,7 @@ export default {
           heading: 'Veri sorumlusu',
           paragraphs: [
             'Hype Teknoloji — Yeni Riva Yolu, Beykoz, 34805, İstanbul, Türkiye',
-            'E-posta: info@hypevisionlab.com · Telefon: 0541 862 91 90',
+            'E-posta: info@hypevisionlab.com',
           ],
         },
         {
@@ -170,7 +170,7 @@ export default {
           id: 'iletisim',
           heading: 'İletişim',
           paragraphs: [
-            'Sorularınız için: info@hypevisionlab.com · 0541 862 91 90',
+            'Sorularınız için: info@hypevisionlab.com',
           ],
         },
       ],

@@ -109,7 +109,7 @@ export default function BlogPostPage() {
       </div>
 
       <main className="flex-1 max-w-3xl mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-14 w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8 sm:mb-10">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8 sm:mb-10">
           {post.results.map((r) => (
             <div key={r.label} className="panel-card rounded-xl p-4 text-center">
               <p className="text-lg sm:text-xl font-bold text-vision mb-0.5">{r.value}</p>

@@ -17,7 +17,6 @@ export default {
     openMenu: 'Open menu',
     closeMenu: 'Close menu',
     close: 'Close',
-    phone: '+90 541 862 91 90',
     panel: 'Panel',
   },
   footer: {
@@ -32,7 +31,6 @@ export default {
       city: 'Beykoz, 34805',
       country: 'Turkey',
     },
-    phone: '+90 541 862 91 90',
     email: 'info@hypevisionlab.com',
     sections: {
       product: 'Product',

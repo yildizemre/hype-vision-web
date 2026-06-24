@@ -2,7 +2,7 @@ import i18n from '../i18n';
 
 const CONTACT_INBOX = import.meta.env.VITE_CONTACT_EMAIL || 'info@hypevisionlab.com';
 const NEWSLETTER_INBOX =
-  import.meta.env.VITE_NEWSLETTER_EMAIL || 'emre.yildiz@hypevisionlab.com';
+  import.meta.env.VITE_NEWSLETTER_EMAIL || 'info@hypevisionlab.com';
 
 type FormsubmitResponse = {
   success?: string;

@@ -827,7 +827,6 @@ export default {
     noResults: 'Sonuç bulunamadı.',
     notFound: 'Cevabını bulamadınız mı?',
     email: 'info@hypevisionlab.com',
-    phone: '0541 862 91 90',
   },
   blog: {
     eyebrow: 'Vaka notları',

@@ -1,6 +1,6 @@
 import { useEffect, useMemo } from 'react';
 import { Link, useLocation, Navigate } from 'react-router-dom';
-import { Calendar, ChevronRight, Mail, Phone } from 'lucide-react';
+import { Calendar, ChevronRight, Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -262,16 +262,6 @@ export default function LegalPage() {
                   >
                     <Mail size={16} />
                     {t('legal.ui.sendEmail')}
-                  </a>
-                  <a
-                    href="tel:+905418629190"
-                    data-track="phone"
-                    data-track-location="legal"
-                    id="cta-phone-legal"
-                    className="inline-flex items-center justify-center gap-2 text-sm font-medium text-gray-300 px-5 py-3 rounded-lg border border-white/15 hover:border-vision/30 hover:text-white transition-colors"
-                  >
-                    <Phone size={16} />
-                    0541 862 91 90
                   </a>
                 </div>
               </div>

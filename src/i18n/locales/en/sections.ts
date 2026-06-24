@@ -824,7 +824,6 @@ export default {
     noResults: 'No results found.',
     notFound: 'Couldn’t find your answer?',
     email: 'info@hypevisionlab.com',
-    phone: '+90 541 862 91 90',
   },
   blog: {
     eyebrow: 'Case notes',

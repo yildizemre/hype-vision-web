@@ -15,7 +15,8 @@ export default {
     titleHighlight: '4 adımda',
     description:
       'Satış sonrası belirsizlik yok — her aşama net teslimat, ölçülebilir KPI ve yazılı pilot raporu ile kapanır.',
-    cta: 'Pilot planı iste',
+    cta: 'Pilot talep et',
+    ctaHint: 'Ücretsiz keşif görüşmesi ile 30 günlük pilot planınızı birlikte çıkaralım.',
     steps: [
       {
         step: '01',

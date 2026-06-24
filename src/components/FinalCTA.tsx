@@ -1,6 +1,5 @@
 import { useState, type FormEvent, type ReactNode } from 'react';
 import {
-  Phone,
   Mail,
   MapPin,
   ArrowRight,
@@ -123,16 +122,7 @@ export default function FinalCTA() {
                 ))}
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-3">
-                <a href="tel:+905418629190" data-track="phone" data-track-location="final_cta" id="cta-phone-final" className="flex items-center gap-3 p-4 rounded-xl bg-white/10 border border-white/15 hover:bg-white/15 transition-colors group">
-                  <div className="w-10 h-10 rounded-lg bg-vision flex items-center justify-center shrink-0">
-                    <Phone size={18} className="text-white" />
-                  </div>
-                  <div>
-                    <p className="text-[10px] uppercase tracking-wider text-white/50 font-semibold">{t('common.forms.contact.callNow')}</p>
-                    <p className="text-white font-semibold text-sm group-hover:text-vision-light transition-colors">0541 862 91 90</p>
-                  </div>
-                </a>
+              <div className="grid gap-3">
                 <a href="mailto:info@hypevisionlab.com?subject=Hype%20Vision%20Iletisim" data-track="email" data-track-location="final_cta" id="cta-email-final" className="flex items-center gap-3 p-4 rounded-xl bg-white/10 border border-white/15 hover:bg-white/15 transition-colors group">
                   <div className="w-10 h-10 rounded-lg bg-white/15 flex items-center justify-center shrink-0">
                     <Mail size={18} className="text-white" />

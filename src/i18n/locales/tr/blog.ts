@@ -28,8 +28,9 @@ export default {
         'Gıda üretim hattında yapay zeka ile boşta kalma (idle) takibi: anonim vaka notu, %18 idle azaltma, vardiya içi müdahale.',
       results: [
         { label: 'Idle azaltma', value: '%18' },
-        { label: 'Tespit süresi', value: 'Anlık' },
-        { label: 'Kurulum', value: '4 gün' },
+        { label: 'Müdahale', value: 'Vardiya içi' },
+        { label: 'Kurulum', value: '4 iş günü' },
+        { label: 'Kapasite kazancı', value: '~%6' },
       ],
       sections: [
         {
@@ -72,9 +73,10 @@ export default {
       metaDescription:
         'İSG KKD denetimi yapay zeka vaka notu: baret yelek tespiti, tehlikeli bölge ihlali, 7/24 otomatik alarm. Anonim fabrika örneği.',
       results: [
-        { label: 'İhlal görünürlüğü', value: '7/24' },
+        { label: 'Günlük ihlal', value: '−%52' },
         { label: 'Manuel tur', value: '−%40' },
-        { label: 'Kanıt arşivi', value: 'Otomatik' },
+        { label: 'Kurulum', value: '5 iş günü' },
+        { label: 'Alarm süresi', value: '<2 sn' },
       ],
       sections: [
         {
@@ -94,7 +96,7 @@ export default {
           paragraphs: [
             '8 mevcut kameraya İSG modülü bağlandı. Baret, yelek ve bölge ihlali modelleri tesis içi edge’de çalıştırıldı; görüntü dışarı çıkmadan analiz edildi.',
             'İhlal anında İSG sorumlusuna panel alarmı ve VMS popup gitti. Olay kartında zaman damgası ve kanıt karesi otomatik arşivlendi.',
-            'İlk 6 haftada günlük ihlal sayısı düştü — ekip davranış değişikliğini bilinçli olarak yorumlamıyoruz; ancak “görünmeyen ihlal” kavramı ortadan kalktı.',
+            'İlk 6 haftada günlük ihlal kayıtları %52 azaldı — ekip davranış değişikliğini bilinçli olarak yorumlamıyoruz; ancak “görünmeyen ihlal” kavramı ortadan kalktı.',
           ],
         },
         {
@@ -116,9 +118,10 @@ export default {
       metaDescription:
         'Kalite kontrol yapay zeka vaka notu: konveyör hattında hata tespiti, fire azaltma, anlık alarm. Anonim üretim tesisi.',
       results: [
-        { label: 'Fire trendi', value: '−%22' },
+        { label: 'Fire oranı', value: '−%22' },
         { label: 'Tespit', value: '0.2 sn' },
-        { label: 'Hat duruşu', value: 'Opsiyonel' },
+        { label: 'Kurulum', value: '4 iş günü' },
+        { label: 'Pilot süre', value: '8 hafta' },
       ],
       sections: [
         {
@@ -162,6 +165,7 @@ export default {
       results: [
         { label: 'Hat A fire', value: '−%31' },
         { label: 'Geri işleme', value: '−%45' },
+        { label: 'Kurulum', value: '5 iş günü' },
         { label: 'Pilot süre', value: '30 gün' },
       ],
       sections: [
@@ -211,8 +215,9 @@ export default {
       metaDescription:
         'Lojistik palet sayım vaka çalışması: sevkiyat sapması tespiti, nesne sayım modülü, %60 sevkiyat hatası azalması.',
       results: [
-        { label: 'Sapma tespiti', value: 'Anlık' },
         { label: 'Sevkiyat hatası', value: '−%60' },
+        { label: 'Kayıt arama', value: '40dk→3dk' },
+        { label: 'Kurulum', value: '3 iş günü' },
         { label: 'Kamera', value: 'Mevcut 3' },
       ],
       sections: [

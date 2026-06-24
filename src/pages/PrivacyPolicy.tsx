@@ -68,8 +68,8 @@ const PrivacyPolicy: React.FC = () => {
             </h2>
             <p>
               {isTr
-                ? 'KVKK ve ilgili mevzuat kapsamında, verilerinize erişim talep etme, düzeltilmesini veya silinmesini isteme hakkına sahipsiniz. Talepleriniz için bizimle iletişime geçebilirsiniz: hello@hypevisionlab.com'
-                : 'Under applicable data protection laws, you have the right to request access, correction or deletion of your data. You can contact us for any requests at: hello@hypevisionlab.com'}
+                ? 'KVKK ve ilgili mevzuat kapsamında, verilerinize erişim talep etme, düzeltilmesini veya silinmesini isteme hakkına sahipsiniz. Talepleriniz için bizimle iletişime geçebilirsiniz: info@hypevisionlab.com'
+                : 'Under applicable data protection laws, you have the right to request access, correction or deletion of your data. You can contact us for any requests at: info@hypevisionlab.com'}
             </p>
           </section>
         </div>

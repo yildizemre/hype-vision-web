@@ -58,12 +58,16 @@ export default function PilotTimeline() {
           </ol>
         </div>
 
-        <div className="text-center mt-12">
+        <div className="mt-12 sm:mt-14 flex flex-col items-center gap-4 px-4 py-8 rounded-2xl border border-vision/20 bg-vision/[0.06]">
+          <p className="text-sm text-gray-400 max-w-md text-center leading-relaxed">
+            {t('growth.pilotTimeline.ctaHint')}
+          </p>
           <a
             href="/#iletisim"
             data-track="contact_cta"
             data-track-location="pilot_timeline"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[#0A0A0A] px-7 py-3.5 rounded-lg bg-vision hover:bg-vision-light transition-colors"
+            id="cta-pilot-timeline"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-[#0A0A0A] px-8 py-3.5 rounded-lg bg-vision hover:bg-vision-light transition-colors shadow-lg shadow-vision/20"
           >
             {t('growth.pilotTimeline.cta')}
             <ArrowRight size={16} />

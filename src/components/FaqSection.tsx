@@ -129,16 +129,6 @@ export default function FaqSection() {
           >
             info@hypevisionlab.com
           </a>
-          {' · '}
-          <a
-            href="tel:+905418629190"
-            data-track="phone"
-            data-track-location="faq"
-            id="cta-phone-faq"
-            className="font-semibold text-vision hover:underline"
-          >
-            0541 862 91 90
-          </a>
         </p>
       </div>
     </section>

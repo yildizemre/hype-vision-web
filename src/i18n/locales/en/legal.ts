@@ -39,7 +39,7 @@ export default {
           heading: 'Data controller',
           paragraphs: [
             'Hype Technology — Yeni Riva Yolu, Beykoz, 34805, Istanbul, Turkey',
-            'Email: info@hypevisionlab.com · Phone: +90 541 862 91 90',
+            'Email: info@hypevisionlab.com',
           ],
         },
         {
@@ -170,7 +170,7 @@ export default {
           id: 'iletisim',
           heading: 'Contact',
           paragraphs: [
-            'For questions: info@hypevisionlab.com · +90 541 862 91 90',
+            'For questions: info@hypevisionlab.com',
           ],
         },
       ],

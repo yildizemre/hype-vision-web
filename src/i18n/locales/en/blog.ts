@@ -28,8 +28,9 @@ export default {
         'AI idle tracking on a food production line: anonymous case note, 18% idle reduction, intra-shift intervention.',
       results: [
         { label: 'Idle reduction', value: '18%' },
-        { label: 'Detection time', value: 'Instant' },
-        { label: 'Installation', value: '4 days' },
+        { label: 'Response', value: 'Within shift' },
+        { label: 'Installation', value: '4 business days' },
+        { label: 'Capacity gain', value: '~6%' },
       ],
       sections: [
         {
@@ -72,9 +73,10 @@ export default {
       metaDescription:
         'HSE PPE inspection AI case note: hard hat and vest detection, hazardous area violations, 24/7 automated alarms. Anonymous factory example.',
       results: [
-        { label: 'Violation visibility', value: '24/7' },
+        { label: 'Daily violations', value: '−52%' },
         { label: 'Manual rounds', value: '−40%' },
-        { label: 'Evidence archive', value: 'Automatic' },
+        { label: 'Installation', value: '5 business days' },
+        { label: 'Alarm latency', value: '<2 sec' },
       ],
       sections: [
         {
@@ -94,7 +96,7 @@ export default {
           paragraphs: [
             'The HSE module was connected to 8 existing cameras. Hard hat, vest, and zone violation models ran on on-site Edge; video was analyzed without leaving the facility.',
             'On violation, the HSE officer received a dashboard alarm and VMS popup. The event card automatically archived a timestamp and evidence frame.',
-            'Daily violation counts fell in the first 6 weeks — we do not attribute this solely to behavior change; however, the concept of “invisible violations” disappeared.',
+            'Daily violation records fell 52% in the first 6 weeks — we do not attribute this solely to behavior change; however, the concept of “invisible violations” disappeared.',
           ],
         },
         {
@@ -116,9 +118,10 @@ export default {
       metaDescription:
         'Quality control AI case note: defect detection on a conveyor line, scrap reduction, instant alarms. Anonymous production facility.',
       results: [
-        { label: 'Scrap trend', value: '−22%' },
+        { label: 'Scrap rate', value: '−22%' },
         { label: 'Detection', value: '0.2 s' },
-        { label: 'Line stop', value: 'Optional' },
+        { label: 'Installation', value: '4 business days' },
+        { label: 'Pilot duration', value: '8 weeks' },
       ],
       sections: [
         {
@@ -162,7 +165,8 @@ export default {
       results: [
         { label: 'Line A scrap', value: '−31%' },
         { label: 'Rework', value: '−45%' },
-        { label: 'Pilot', value: '30 days' },
+        { label: 'Installation', value: '5 business days' },
+        { label: 'Pilot duration', value: '30 days' },
       ],
       sections: [
         {
@@ -210,8 +214,9 @@ export default {
       metaDescription:
         'Logistics pallet counting case: shipment variance detection, object count module, 60% fewer shipping errors.',
       results: [
-        { label: 'Variance detection', value: 'Instant' },
         { label: 'Shipping errors', value: '−60%' },
+        { label: 'Footage search', value: '40m→3m' },
+        { label: 'Installation', value: '3 business days' },
         { label: 'Cameras', value: '3 existing' },
       ],
       sections: [

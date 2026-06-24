@@ -34,7 +34,6 @@ const organization = {
   },
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+90-541-862-9190',
     contactType: 'sales',
     email: 'info@hypevisionlab.com',
     availableLanguage: ['Turkish', 'English'],
@@ -60,7 +59,6 @@ const localBusiness = {
   name: 'Hype Vision — Hype Teknoloji',
   url: SITE_URL,
   image: `${SITE_URL}/og-image.png`,
-  telephone: '+90-541-862-9190',
   email: 'info@hypevisionlab.com',
   priceRange: '$$',
   address: organization.address,

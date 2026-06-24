@@ -52,10 +52,10 @@ export default function BlogSection() {
               </h3>
               <p className="text-sm text-gray-500 leading-relaxed mb-4 flex-1">{post.excerpt}</p>
               <div className="flex flex-wrap gap-2 mb-5">
-                {post.results.slice(0, 2).map((r) => (
+                {post.results.map((r) => (
                   <span
                     key={r.label}
-                    className="text-[10px] sm:text-xs font-medium px-2.5 py-1 rounded-md bg-gray-50 text-gray-600 border border-gray-100"
+                    className="text-[10px] sm:text-xs font-medium px-2.5 py-1 rounded-md bg-vision-50 text-gray-700 border border-vision/15"
                   >
                     {r.label}: <strong className="text-vision-dark">{r.value}</strong>
                   </span>
