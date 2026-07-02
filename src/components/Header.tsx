@@ -23,7 +23,7 @@ export default function Header({ variant = 'default' }: HeaderProps) {
     { label: t('common.header.nav.inspection'), href: '/#denetim' },
     { label: t('common.header.nav.about'), href: '/#hakkimizda' },
     { label: t('common.header.nav.faq'), href: '/#sss' },
-    { label: t('common.header.contact'), href: '/#iletisim' },
+    { label: t('common.header.contact'), href: '/iletisim' },
   ];
 
   useEffect(() => {

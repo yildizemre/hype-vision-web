@@ -1,3 +1,5 @@
+import { attributionToGaParams, getAttribution } from './attribution';
+
 export const COOKIE_CONSENT_KEY = 'hypevision-cookie-consent';
 
 export type CookieConsent = 'accepted' | 'rejected';
@@ -82,6 +84,7 @@ export function trackPageView(path: string): void {
       page_path: path,
       page_location: window.location.href,
       page_title: document.title,
+      ...attributionToGaParams(getAttribution()),
     });
   }
 }

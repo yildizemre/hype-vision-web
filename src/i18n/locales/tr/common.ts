@@ -211,4 +211,13 @@ export default {
     cameraIntegration: 'Kamera entegrasyonu',
     facilityScenario: 'Tesisinize özel senaryo',
   },
+  contactPage: {
+    metaTitle: 'İletişim Formu | Hype Vision',
+    metaDescription:
+      'Hype Vision iletişim formu — İSG, verimlilik, kalite ve güvenlik için keşif talebi. Mevcut kameralarınızla 7/24 otomatik denetim.',
+    eyebrow: 'İletişim',
+    title: 'Tesisiniz için birlikte planlayalım',
+    description:
+      'Zorunlu alanları doldurun; size en uygun senaryoyu birlikte seçelim. Ekibimiz en kısa sürede size dönüş yapar.',
+  },
 };

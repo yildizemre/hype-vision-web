@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 import LegalPage from './pages/LegalPage';
 import BlogPostPage from './pages/BlogPostPage';
 import SectorPage from './pages/SectorPage';
+import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/cerez-politikasi" element={<LegalPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/sektor/:slug" element={<SectorPage />} />
+        <Route path="/iletisim" element={<ContactPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>

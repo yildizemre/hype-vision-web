@@ -210,4 +210,13 @@ export default {
     cameraIntegration: 'Camera integration',
     facilityScenario: 'Scenario tailored to your facility',
   },
+  contactPage: {
+    metaTitle: 'Contact Form | Hype Vision',
+    metaDescription:
+      'Hype Vision contact form — request a discovery call for HSE, efficiency, quality, and security. 24/7 automated inspection with your existing cameras.',
+    eyebrow: 'Contact',
+    title: 'Let us plan together for your facility',
+    description:
+      'Fill in the required fields and we will help you choose the best scenario. Our team will get back to you shortly.',
+  },
 };

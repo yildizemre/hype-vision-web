@@ -63,7 +63,7 @@ export default function PilotTimeline() {
             {t('growth.pilotTimeline.ctaHint')}
           </p>
           <a
-            href="/#iletisim"
+            href="/iletisim"
             data-track="contact_cta"
             data-track-location="pilot_timeline"
             id="cta-pilot-timeline"

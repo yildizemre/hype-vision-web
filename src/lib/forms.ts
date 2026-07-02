@@ -1,4 +1,5 @@
 import i18n from '../i18n';
+import { attributionToFormFields, getAttribution } from './attribution';
 
 const CONTACT_INBOX = import.meta.env.VITE_CONTACT_EMAIL || 'info@hypevisionlab.com';
 const NEWSLETTER_INBOX =
@@ -63,6 +64,7 @@ export async function submitContactForm(data: ContactFormPayload) {
     'Ziyaretçi E-postası': data.email || i18n.t('common.forms.fields.notSpecified'),
     'İlgi Alanı': data.focus || i18n.t('common.forms.fields.notSpecified'),
     Not: data.message || '—',
+    ...attributionToFormFields(getAttribution()),
     _form: i18n.t('common.forms.contactForm'),
   });
 }

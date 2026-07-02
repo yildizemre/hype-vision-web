@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { applyStoredConsent, trackPageView } from '../lib/analytics';
+import { captureAndTrackAttribution } from '../lib/conversions';
 
 /** Uygulama açılışında kayıtlı çerez tercihini uygular (GA yalnızca onaylıysa). */
 export function AnalyticsBootstrap() {
@@ -16,6 +17,7 @@ export default function AnalyticsRouteTracker() {
   const { pathname, search } = useLocation();
 
   useEffect(() => {
+    captureAndTrackAttribution(pathname, search);
     trackPageView(pathname + search);
   }, [pathname, search]);
 
