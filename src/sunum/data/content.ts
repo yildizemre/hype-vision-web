@@ -712,22 +712,22 @@ export const videoDemos: VideoDemo[] = [
     ],
   },
   {
-    id: 'inofa-yangin',
+    id: 'uretim-sahasi-yangin',
     category: 'yangin',
-    title: 'Inofa Technology — Erken Yangın Algılama',
+    title: 'Üretim Sahası — Erken Yangın Algılama',
     subtitle: 'Üretim sahası alev/duman tespiti · VMS pop-up, siren ve yangın paneli entegrasyonu',
     driveFileId: '1bkranF4HlLb6cWUlOL3HWCDl_6nd9AHU',
     insights: [
       {
-        id: 'inofa-algilama',
+        id: 'uretim-sahasi-algilama',
         title: '1. Erken Yangın ve Duman Algılama',
         paragraphs: [
-          'Inofa Technology üretim sahası ve açık alanları bilgisayarlı görü ile 7/24 izlenir.',
+          'Üretim sahası ve açık alanları bilgisayarlı görü ile 7/24 izlenir.',
           'Alev kıvılcımı ve ilk duman belirtisi FIRE etiketiyle milisaniyeler içinde yakalanır; hatalı alarm filtresi güneş yansıması ve kaynak ışığını eler.',
         ],
       },
       {
-        id: 'inofa-vms',
+        id: 'uretim-sahasi-vms',
         title: '2. VMS Pop-Up ve Siren Geri Bildirimi',
         paragraphs: [
           'Yangın algılandığı anda VMS sistemine anlık event sinyali gönderilir; güvenlik merkezinde ilgili kamera canlı pop-up olarak açılır.',
@@ -735,10 +735,10 @@ export const videoDemos: VideoDemo[] = [
         ],
       },
       {
-        id: 'inofa-ozet',
+        id: 'uretim-sahasi-ozet',
         title: 'Müşteriye Özet Mesaj',
         paragraphs: [
-          'Inofa Technology sahasında yangın riskini sensör beklemeden yapay zeka kameralarıyla erken yakalıyoruz. VMS pop-up, siren ve yangın paneli geri bildirimiyle saniyeler içinde müdahale ve kanıtlı alarm yönetimi sağlıyoruz.',
+          'Üretim sahasında yangın riskini sensör beklemeden yapay zeka kameralarıyla erken yakalıyoruz. VMS pop-up, siren ve yangın paneli geri bildirimiyle saniyeler içinde müdahale ve kanıtlı alarm yönetimi sağlıyoruz.',
         ],
       },
     ],
