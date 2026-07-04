@@ -10,6 +10,7 @@ import BlogPostPage from './pages/BlogPostPage';
 import SectorPage from './pages/SectorPage';
 import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
+import SunumApp from './sunum/SunumApp';
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/sektor/:slug" element={<SectorPage />} />
         <Route path="/iletisim" element={<ContactPage />} />
+        <Route path="/sunum/*" element={<SunumApp />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>

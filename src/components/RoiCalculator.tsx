@@ -6,14 +6,69 @@ function formatCurrency(n: number) {
   return new Intl.NumberFormat('tr-TR', { maximumFractionDigits: 0 }).format(Math.round(n));
 }
 
+function clamp(n: number, min: number, max: number) {
+  if (!Number.isFinite(n)) return min;
+  return Math.min(max, Math.max(min, n));
+}
+
+const DEFAULTS = {
+  lines: 3,
+  personnel: 8,
+  defectRate: 3.2,
+  unitCost: 45,
+  hourlyRate: 120,
+} as const;
+
+type FieldKey = keyof typeof DEFAULTS;
+
+type FieldConfig = {
+  key: FieldKey;
+  label: string;
+  min: number;
+  max: number;
+  step: number;
+  suffix?: string;
+  prefix?: string;
+};
+
 export default function RoiCalculator() {
   const { t } = useTranslation();
-  const [lines, setLines] = useState(3);
-  const [personnel, setPersonnel] = useState(8);
-  const [defectRate, setDefectRate] = useState(3.2);
-  const [unitCost, setUnitCost] = useState(45);
-  const [hourlyRate, setHourlyRate] = useState(120);
+  const [lines, setLines] = useState(DEFAULTS.lines);
+  const [personnel, setPersonnel] = useState(DEFAULTS.personnel);
+  const [defectRate, setDefectRate] = useState(DEFAULTS.defectRate);
+  const [unitCost, setUnitCost] = useState(DEFAULTS.unitCost);
+  const [hourlyRate, setHourlyRate] = useState(DEFAULTS.hourlyRate);
   const [calculated, setCalculated] = useState(true);
+
+  const setters: Record<FieldKey, (n: number) => void> = {
+    lines: setLines,
+    personnel: setPersonnel,
+    defectRate: setDefectRate,
+    unitCost: setUnitCost,
+    hourlyRate: setHourlyRate,
+  };
+
+  const values: Record<FieldKey, number> = {
+    lines,
+    personnel,
+    defectRate,
+    unitCost,
+    hourlyRate,
+  };
+
+  const fields: FieldConfig[] = [
+    { key: 'lines', label: t('growth.roi.lines'), min: 1, max: 99, step: 1 },
+    { key: 'personnel', label: t('growth.roi.personnel'), min: 1, max: 200, step: 1 },
+    { key: 'defectRate', label: t('growth.roi.defectRate'), min: 0, max: 100, step: 0.1, suffix: '%' },
+    { key: 'unitCost', label: t('growth.roi.unitCost'), min: 0, max: 999999, step: 1, prefix: '₺' },
+    { key: 'hourlyRate', label: t('growth.roi.hourlyRate'), min: 0, max: 99999, step: 1, prefix: '₺' },
+  ];
+
+  const updateField = (key: FieldKey, raw: string, min: number, max: number) => {
+    const parsed = raw === '' ? min : Number(raw);
+    setters[key](clamp(parsed, min, max));
+    setCalculated(true);
+  };
 
   const results = useMemo(() => {
     const annualUnits = lines * personnel * 2000 * 250;
@@ -30,13 +85,14 @@ export default function RoiCalculator() {
     return { defectSavings, idleSavings, isgSavings, total };
   }, [lines, personnel, defectRate, unitCost, hourlyRate]);
 
-  const sliders = [
-    { key: 'lines', label: t('growth.roi.lines'), value: lines, min: 1, max: 12, step: 1, set: setLines },
-    { key: 'personnel', label: t('growth.roi.personnel'), value: personnel, min: 2, max: 40, step: 1, set: setPersonnel },
-    { key: 'defectRate', label: t('growth.roi.defectRate'), value: defectRate, min: 0.5, max: 15, step: 0.1, set: setDefectRate },
-    { key: 'unitCost', label: t('growth.roi.unitCost'), value: unitCost, min: 5, max: 500, step: 5, set: setUnitCost },
-    { key: 'hourlyRate', label: t('growth.roi.hourlyRate'), value: hourlyRate, min: 50, max: 400, step: 10, set: setHourlyRate },
-  ] as const;
+  const reset = () => {
+    setLines(DEFAULTS.lines);
+    setPersonnel(DEFAULTS.personnel);
+    setDefectRate(DEFAULTS.defectRate);
+    setUnitCost(DEFAULTS.unitCost);
+    setHourlyRate(DEFAULTS.hourlyRate);
+    setCalculated(true);
+  };
 
   return (
     <section
@@ -57,30 +113,37 @@ export default function RoiCalculator() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-          <div className="panel-card rounded-2xl p-6 sm:p-8 space-y-6">
-            {sliders.map((s) => (
-              <div key={s.key}>
-                <div className="flex justify-between items-baseline mb-2">
-                  <label htmlFor={`roi-${s.key}`} className="text-sm font-medium text-[#0A0A0A]">
-                    {s.label}
-                  </label>
-                  <span className="text-sm font-bold text-vision-dark tabular-nums">
-                    {s.key === 'defectRate' ? `%${s.value}` : s.value}
-                  </span>
+          <div className="panel-card rounded-2xl p-6 sm:p-8 space-y-4 sm:space-y-5">
+            {fields.map((field) => (
+              <div key={field.key}>
+                <label htmlFor={`roi-${field.key}`} className="block text-sm font-medium text-[#0A0A0A] mb-1.5">
+                  {field.label}
+                </label>
+                <div className="relative">
+                  {field.prefix ? (
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400 pointer-events-none">
+                      {field.prefix}
+                    </span>
+                  ) : null}
+                  <input
+                    id={`roi-${field.key}`}
+                    type="number"
+                    inputMode="decimal"
+                    min={field.min}
+                    max={field.max}
+                    step={field.step}
+                    value={values[field.key]}
+                    onChange={(e) => updateField(field.key, e.target.value, field.min, field.max)}
+                    className={`w-full rounded-xl border border-gray-200 bg-white py-2.5 text-sm text-[#0A0A0A] tabular-nums focus:outline-none focus:border-vision focus:ring-2 focus:ring-vision/15 transition-shadow ${
+                      field.prefix ? 'pl-8 pr-10' : field.suffix ? 'pl-3 pr-10' : 'px-3'
+                    }`}
+                  />
+                  {field.suffix ? (
+                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-gray-400 pointer-events-none">
+                      {field.suffix}
+                    </span>
+                  ) : null}
                 </div>
-                <input
-                  id={`roi-${s.key}`}
-                  type="range"
-                  min={s.min}
-                  max={s.max}
-                  step={s.step}
-                  value={s.value}
-                  onChange={(e) => {
-                    s.set(Number(e.target.value));
-                    setCalculated(true);
-                  }}
-                  className="w-full h-2 rounded-full appearance-none bg-vision-50 accent-vision cursor-pointer"
-                />
               </div>
             ))}
             <div className="flex flex-wrap gap-3 pt-2">
@@ -94,13 +157,7 @@ export default function RoiCalculator() {
               </button>
               <button
                 type="button"
-                onClick={() => {
-                  setLines(3);
-                  setPersonnel(8);
-                  setDefectRate(3.2);
-                  setUnitCost(45);
-                  setHourlyRate(120);
-                }}
+                onClick={reset}
                 className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 px-4 py-2.5 rounded-lg border border-gray-200 hover:bg-gray-50"
               >
                 <RotateCcw size={14} />

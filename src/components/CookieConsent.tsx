@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Cookie, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import {
@@ -12,6 +12,7 @@ import { useEffect, useState } from 'react';
 
 export default function CookieConsent() {
   const { t } = useTranslation();
+  const { pathname } = useLocation();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -36,7 +37,7 @@ export default function CookieConsent() {
     }
   };
 
-  if (!visible) return null;
+  if (pathname.startsWith('/sunum') || !visible) return null;
 
   return (
     <div
