@@ -8,7 +8,7 @@ type LanguageSwitcherProps = {
 
 export default function LanguageSwitcher({ variant = 'solid', className = '' }: LanguageSwitcherProps) {
   const { i18n } = useTranslation();
-  const current = (i18n.language === 'en' ? 'en' : 'tr') as SupportedLanguage;
+  const current = (['tr', 'en', 'ru'].includes(i18n.language) ? i18n.language : 'tr') as SupportedLanguage;
 
   const switchLang = (lang: SupportedLanguage) => {
     if (lang !== current) void setLanguage(lang);
@@ -21,6 +21,9 @@ export default function LanguageSwitcher({ variant = 'solid', className = '' }: 
   const activeSolid = 'text-vision-dark bg-vision/15';
   const inactiveSolid = 'text-gray-500 hover:text-vision-dark hover:bg-vision/10';
 
+  const ariaLabel =
+    current === 'tr' ? 'Dil seçimi' : current === 'ru' ? 'Выбор языка' : 'Language selection';
+
   return (
     <div
       className={`inline-flex items-center gap-0.5 rounded-lg border p-0.5 ${
@@ -29,9 +32,9 @@ export default function LanguageSwitcher({ variant = 'solid', className = '' }: 
           : 'border-vision/25 bg-white/80'
       } ${className}`}
       role="group"
-      aria-label={current === 'tr' ? 'Dil seçimi' : 'Language selection'}
+      aria-label={ariaLabel}
     >
-      {(['tr', 'en'] as const).map((lang) => {
+      {(['tr', 'en', 'ru'] as const).map((lang) => {
         const isActive = current === lang;
         return (
           <button
