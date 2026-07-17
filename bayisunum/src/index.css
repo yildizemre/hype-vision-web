@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --hv-vision: #00cadc;
+    --hv-vision-dark: #009bb0;
+    --hv-vision-light: #33d5e5;
+    --hv-tint: #e8f7f9;
+    --hv-tint-deep: #d4f1f4;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  body {
+    margin: 0;
+    background: var(--hv-tint);
+    color: #0a0a0a;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .hero-bg {
+    background: linear-gradient(135deg, #0a0a0a 0%, #051a1f 30%, #0c3d45 58%, #00a8b8 82%, #00cadc 100%);
+  }
+
+  .section-tint {
+    background: var(--hv-tint);
+  }
+
+  .section-tint-deep {
+    background: var(--hv-tint-deep);
+  }
+
+  .panel-card {
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(0, 160, 180, 0.08);
+    border: 1px solid rgba(0, 202, 220, 0.15);
+  }
+
+  .insight-active {
+    border-color: rgba(0, 202, 220, 0.45);
+    background: #e8f7f9;
+    box-shadow: 0 2px 8px rgba(0, 202, 220, 0.12);
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .pptx-stage > div:last-child {
+    line-height: 0;
+  }
+}
