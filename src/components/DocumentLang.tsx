@@ -5,7 +5,7 @@ export default function DocumentLang() {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    const lang = i18n.language === 'en' ? 'en' : 'tr';
+    const lang = ['tr', 'en', 'ru'].includes(i18n.language) ? i18n.language : 'tr';
     document.documentElement.lang = lang;
   }, [i18n.language]);
 

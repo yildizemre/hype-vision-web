@@ -22,8 +22,9 @@ export default function Header({ variant = 'default' }: HeaderProps) {
     { label: t('common.header.nav.product'), href: '/#urunler' },
     { label: t('common.header.nav.inspection'), href: '/#denetim' },
     { label: t('common.header.nav.about'), href: '/#hakkimizda' },
-    { label: t('common.header.nav.faq'), href: '/#sss' },
-    { label: t('common.header.contact'), href: '/iletisim' },
+    { label: t('common.header.nav.faq'), href: '/sss' },
+    { label: t('common.header.nav.catalog'), href: '/katalog', isRoute: true },
+    { label: t('common.header.contact'), href: '/iletisim', isRoute: true },
   ];
 
   useEffect(() => {
@@ -72,24 +73,43 @@ export default function Header({ variant = 'default' }: HeaderProps) {
               className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-5 lg:gap-8"
               aria-label={t('common.header.mainMenu')}
             >
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className={`group relative text-[13px] font-medium transition-colors ${
-                    onHero
-                      ? 'text-white/80 hover:text-white'
-                      : 'text-vision-dark hover:text-[#0A0A0A]'
-                  }`}
-                >
-                  {link.label}
-                  <span
-                    className={`absolute -bottom-1 left-0 h-0.5 w-0 group-hover:w-full transition-all duration-200 ${
-                      onHero ? 'bg-white' : 'bg-vision'
+              {navLinks.map((link) =>
+                link.isRoute ? (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className={`group relative text-[13px] font-medium transition-colors ${
+                      onHero
+                        ? 'text-white/80 hover:text-white'
+                        : 'text-vision-dark hover:text-[#0A0A0A]'
                     }`}
-                  />
-                </a>
-              ))}
+                  >
+                    {link.label}
+                    <span
+                      className={`absolute -bottom-1 left-0 h-0.5 w-0 group-hover:w-full transition-all duration-200 ${
+                        onHero ? 'bg-white' : 'bg-vision'
+                      }`}
+                    />
+                  </Link>
+                ) : (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className={`group relative text-[13px] font-medium transition-colors ${
+                      onHero
+                        ? 'text-white/80 hover:text-white'
+                        : 'text-vision-dark hover:text-[#0A0A0A]'
+                    }`}
+                  >
+                    {link.label}
+                    <span
+                      className={`absolute -bottom-1 left-0 h-0.5 w-0 group-hover:w-full transition-all duration-200 ${
+                        onHero ? 'bg-white' : 'bg-vision'
+                      }`}
+                    />
+                  </a>
+                )
+              )}
             </nav>
 
             <div className="relative z-10 flex items-center gap-2 sm:gap-3">
@@ -161,16 +181,27 @@ export default function Header({ variant = 'default' }: HeaderProps) {
             </button>
           </div>
           <nav className="flex-1 p-5 flex flex-col gap-1 bg-vision-50">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={closeMobile}
-                className="py-3 px-4 text-base font-medium text-[#0A0A0A] rounded-lg hover:bg-white/80"
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              link.isRoute ? (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  onClick={closeMobile}
+                  className="py-3 px-4 text-base font-medium text-[#0A0A0A] rounded-lg hover:bg-white/80"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={closeMobile}
+                  className="py-3 px-4 text-base font-medium text-[#0A0A0A] rounded-lg hover:bg-white/80"
+                >
+                  {link.label}
+                </a>
+              )
+            )}
           </nav>
           <div className="px-5 pb-4">
             <LanguageSwitcher variant="solid" />

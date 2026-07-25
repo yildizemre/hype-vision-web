@@ -60,7 +60,8 @@ export default function Footer({ hideLegalBar = false }: FooterProps) {
         ...sectorLinks.map((s) => ({ label: s.tag, href: `/sektor/${s.slug}` })),
         { label: t('common.footer.links.hseInspection'), href: '/#denetim' },
         { label: t('common.footer.links.qualityControl'), href: '/#denetim' },
-        { label: t('common.footer.links.faq'), href: '/#sss' },
+        { label: t('common.footer.links.faq'), href: '/sss' },
+        { label: t('common.footer.links.catalog'), href: '/katalog' },
       ],
     },
     {

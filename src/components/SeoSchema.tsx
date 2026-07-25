@@ -1,14 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import { SOCIAL_LINKS, SITE_URL } from '../data/legalContent';
-import { useAllFaqs } from '../i18n/content';
+import { CATALOG_FAQ } from '../data/catalogFaq';
+import { SITE_ADDRESS, SITE_BRAND } from '../data/siteConfig';
 
 const organization = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   '@id': `${SITE_URL}/#organization`,
-  name: 'Hype Vision',
-  legalName: 'Hype Teknoloji',
-  alternateName: ['HypeVisionLab', 'Hype Analytics AI'],
+  name: SITE_BRAND.name,
+  legalName: SITE_BRAND.legalName,
   url: SITE_URL,
   logo: {
     '@type': 'ImageObject',
@@ -22,21 +22,24 @@ const organization = {
   foundingDate: '2020',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Yeni Riva Yolu',
-    addressLocality: 'Beykoz',
-    addressRegion: 'İstanbul',
-    postalCode: '34805',
-    addressCountry: 'TR',
+    streetAddress: SITE_ADDRESS.street,
+    addressLocality: SITE_ADDRESS.city,
+    addressRegion: SITE_ADDRESS.region,
+    postalCode: SITE_ADDRESS.postalCode,
+    addressCountry: SITE_ADDRESS.country,
   },
   geo: {
     '@type': 'GeoCoordinates',
-    addressCountry: 'TR',
+    latitude: SITE_ADDRESS.latitude,
+    longitude: SITE_ADDRESS.longitude,
+    addressCountry: SITE_ADDRESS.country,
   },
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'sales',
-    email: 'info@hypevisionlab.com',
-    availableLanguage: ['Turkish', 'English'],
+    email: SITE_BRAND.email,
+    telephone: SITE_BRAND.phone,
+    availableLanguage: ['Turkish', 'English', 'Russian'],
     areaServed: 'TR',
   },
   sameAs: [SOCIAL_LINKS.facebook, SOCIAL_LINKS.instagram],
@@ -56,12 +59,14 @@ const localBusiness = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   '@id': `${SITE_URL}/#localbusiness`,
-  name: 'Hype Vision — Hype Teknoloji',
+  name: `${SITE_BRAND.name} — GTÜ Teknopark`,
   url: SITE_URL,
   image: `${SITE_URL}/og-image.png`,
-  email: 'info@hypevisionlab.com',
+  email: SITE_BRAND.email,
+  telephone: SITE_BRAND.phone,
   priceRange: '$$',
   address: organization.address,
+  geo: organization.geo,
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
@@ -153,9 +158,8 @@ function JsonLd({ data }: { data: object }) {
 
 export default function SeoSchema() {
   const { t, i18n } = useTranslation();
-  const allFaqs = useAllFaqs();
-  const faqPage = buildFaqPage(allFaqs);
-  const langCode = i18n.language === 'en' ? 'en-US' : 'tr-TR';
+  const faqPage = buildFaqPage(CATALOG_FAQ);
+  const langCode = i18n.language === 'en' ? 'en-US' : i18n.language === 'ru' ? 'ru-RU' : 'tr-TR';
 
   const webPage = {
     '@context': 'https://schema.org',

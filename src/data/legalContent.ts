@@ -44,7 +44,7 @@ export const legalPagesList: LegalPageData[] = [
     shortTitle: 'Gizlilik',
     Icon: Shield,
     metaDescription:
-      'Hype Vision (Hype Teknoloji) gizlilik politikası: kişisel verilerin toplanması, KVKK kapsamında haklarınız, veri güvenliği ve saklama süreleri. Beykoz, İstanbul.',
+      'Hype Vision gizlilik politikası: kişisel verilerin toplanması, KVKK kapsamında haklarınız, veri güvenliği ve saklama süreleri. GTÜ Teknopark, Gebze.',
     summary:
       'Kişisel verilerinizin nasıl toplandığını, işlendiğini ve korunduğunu KVKK kapsamında şeffaf biçimde açıklıyoruz.',
     lastUpdated: '3 Haziran 2026',
@@ -52,7 +52,7 @@ export const legalPagesList: LegalPageData[] = [
       {
         id: 'genel',
         paragraphs: [
-          'Bu Gizlilik Politikası, Hype Teknoloji (“Hype Vision”, “biz”) tarafından işletilen hypevisionlab.com web sitesi ve Hype Vision platformu kapsamında kişisel verilerinizin nasıl toplandığını, işlendiğini ve korunduğunu açıklar.',
+          'Bu Gizlilik Politikası, Hype Vision (“biz”) tarafından işletilen hypevisionlab.com web sitesi ve Hype Vision platformu kapsamında kişisel verilerinizin nasıl toplandığını, işlendiğini ve korunduğunu açıklar.',
           '6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) ve ilgili mevzuata uygun hareket ederiz.',
         ],
       },
@@ -60,7 +60,7 @@ export const legalPagesList: LegalPageData[] = [
         id: 'veri-sorumlusu',
         heading: 'Veri sorumlusu',
         paragraphs: [
-          'Hype Teknoloji — Yeni Riva Yolu, Beykoz, 34805, İstanbul, Türkiye',
+          'Hype Vision — GTÜ Teknopark, Hightech Binası, Kemal Nehrozoğlu Cd. 400. Sokak, 41480 Gebze/Kocaeli, Türkiye',
           'E-posta: info@hypevisionlab.com',
         ],
       },
@@ -130,7 +130,7 @@ export const legalPagesList: LegalPageData[] = [
     shortTitle: 'Hizmet',
     Icon: FileText,
     metaDescription:
-      'Hype Vision hizmet şartları: platform kullanım koşulları, kullanıcı yükümlülükleri, fikri mülkiyet, sorumluluk sınırları ve uygulanacak hukuk. Hype Teknoloji.',
+      'Hype Vision hizmet şartları: platform kullanım koşulları, kullanıcı yükümlülükleri, fikri mülkiyet, sorumluluk sınırları ve uygulanacak hukuk.',
     summary:
       'Hype Vision platformunun kullanımına ilişkin hak, yükümlülük ve sorumlulukları net biçimde tanımlar.',
     lastUpdated: '3 Haziran 2026',
@@ -138,7 +138,7 @@ export const legalPagesList: LegalPageData[] = [
       {
         id: 'genel',
         paragraphs: [
-          'Bu Hizmet Şartları, Hype Teknoloji tarafından sunulan Hype Vision web sitesi ve yapay zeka destekli görüntü analiz platformunun kullanımına ilişkin koşulları düzenler.',
+          'Bu Hizmet Şartları, Hype Vision tarafından sunulan web sitesi ve yapay zeka destekli görüntü analiz platformunun kullanımına ilişkin koşulları düzenler.',
           'Siteyi veya hizmeti kullanarak bu şartları kabul etmiş sayılırsınız.',
         ],
       },
@@ -163,7 +163,7 @@ export const legalPagesList: LegalPageData[] = [
         id: 'fikri-mulkiyet',
         heading: 'Fikri mülkiyet',
         paragraphs: [
-          'Hype Vision yazılımı, arayüzü, markası ve dokümantasyonu Hype Teknoloji’ye aittir. İzinsiz kopyalama, dağıtma veya tersine mühendislik yasaktır.',
+          'Hype Vision yazılımı, arayüzü, markası ve dokümantasyonu Hype Vision’a aittir. İzinsiz kopyalama, dağıtma veya tersine mühendislik yasaktır.',
         ],
       },
       {
@@ -283,4 +283,4 @@ export const HOME_TITLE =
   "Hype Vision | Endüstriyel Yapay Zeka — İSG, Kalite, Verimlilik (2020'den Beri)";
 
 export const HOME_DESCRIPTION =
-  "Hype Teknoloji — 2020'den beri endüstriyel AI. Mevcut IP kameralarınızla (RTSP/ONVIF) İSG/KKD analizi, kalite kontrol, personel verimliliği, OEE. Edge/Cloud, KVKK uyumlu. Beykoz, İstanbul.";
+  "Hype Vision — 2020'den beri endüstriyel AI. Mevcut IP kameralarınızla (RTSP/ONVIF) İSG/KKD analizi, kalite kontrol, personel verimliliği, OEE. Edge/Cloud, KVKK uyumlu. GTÜ Teknopark, Gebze.";

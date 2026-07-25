@@ -76,3 +76,24 @@ export async function submitNewsletter(email: string) {
     _form: i18n.t('common.forms.newsletterForm'),
   });
 }
+
+export type CatalogFormPayload = {
+  name: string;
+  company: string;
+  email: string;
+  phone: string;
+  address: string;
+};
+
+export async function submitCatalogDownload(data: CatalogFormPayload) {
+  return submitToFormsubmit(CONTACT_INBOX, {
+    _subject: `Katalog indirme talebi — ${data.company}`,
+    Ad_Soyad: data.name,
+    Firma: data.company,
+    'Ziyaretçi E-postası': data.email,
+    Telefon: data.phone,
+    Adres: data.address || '—',
+    _form: 'hypevisionlab.com katalog indirme',
+    ...attributionToFormFields(getAttribution()),
+  });
+}

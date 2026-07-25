@@ -13,7 +13,7 @@ export default {
     questionsDesc: 'Gizlilik veya hizmet koşulları hakkında bizimle iletişime geçin.',
     sendEmail: 'E-posta gönder',
     footerBarTitle: 'Yasal bilgilendirme',
-    titleSuffix: 'Hype Vision — Hype Teknoloji',
+    titleSuffix: 'Hype Vision',
     breadcrumbSeoLegal: 'Yasal',
     breadcrumbSeoHome: 'Ana Sayfa',
   },
@@ -22,7 +22,7 @@ export default {
       title: 'Gizlilik Politikası',
       shortTitle: 'Gizlilik',
       metaDescription:
-        'Hype Vision (Hype Teknoloji) gizlilik politikası: kişisel verilerin toplanması, KVKK kapsamında haklarınız, veri güvenliği ve saklama süreleri. Beykoz, İstanbul.',
+        'Hype Vision gizlilik politikası: kişisel verilerin toplanması, KVKK kapsamında haklarınız, veri güvenliği ve saklama süreleri. GTÜ Teknopark, Gebze.',
       summary:
         'Kişisel verilerinizin nasıl toplandığını, işlendiğini ve korunduğunu KVKK kapsamında şeffaf biçimde açıklıyoruz.',
       lastUpdated: '3 Haziran 2026',
@@ -30,7 +30,7 @@ export default {
         {
           id: 'genel',
           paragraphs: [
-            'Bu Gizlilik Politikası, Hype Teknoloji (“Hype Vision”, “biz”) tarafından işletilen hypevisionlab.com web sitesi ve Hype Vision platformu kapsamında kişisel verilerinizin nasıl toplandığını, işlendiğini ve korunduğunu açıklar.',
+            'Bu Gizlilik Politikası, Hype Vision (“biz”) tarafından işletilen hypevisionlab.com web sitesi ve Hype Vision platformu kapsamında kişisel verilerinizin nasıl toplandığını, işlendiğini ve korunduğunu açıklar.',
             '6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) ve ilgili mevzuata uygun hareket ederiz.',
           ],
         },
@@ -38,7 +38,7 @@ export default {
           id: 'veri-sorumlusu',
           heading: 'Veri sorumlusu',
           paragraphs: [
-            'Hype Teknoloji — Yeni Riva Yolu, Beykoz, 34805, İstanbul, Türkiye',
+            'Hype Vision — GTÜ Teknopark, Hightech Binası, Kemal Nehrozoğlu Cd. 400. Sokak, 41480 Gebze/Kocaeli, Türkiye',
             'E-posta: info@hypevisionlab.com',
           ],
         },
@@ -106,7 +106,7 @@ export default {
       title: 'Hizmet Şartları',
       shortTitle: 'Hizmet',
       metaDescription:
-        'Hype Vision hizmet şartları: platform kullanım koşulları, kullanıcı yükümlülükleri, fikri mülkiyet, sorumluluk sınırları ve uygulanacak hukuk. Hype Teknoloji.',
+        'Hype Vision hizmet şartları: platform kullanım koşulları, kullanıcı yükümlülükleri, fikri mülkiyet, sorumluluk sınırları ve uygulanacak hukuk. Hype Vision.',
       summary:
         'Hype Vision platformunun kullanımına ilişkin hak, yükümlülük ve sorumlulukları net biçimde tanımlar.',
       lastUpdated: '3 Haziran 2026',
@@ -114,7 +114,7 @@ export default {
         {
           id: 'genel',
           paragraphs: [
-            'Bu Hizmet Şartları, Hype Teknoloji tarafından sunulan Hype Vision web sitesi ve yapay zeka destekli görüntü analiz platformunun kullanımına ilişkin koşulları düzenler.',
+            'Bu Hizmet Şartları, Hype Vision tarafından sunulan Hype Vision web sitesi ve yapay zeka destekli görüntü analiz platformunun kullanımına ilişkin koşulları düzenler.',
             'Siteyi veya hizmeti kullanarak bu şartları kabul etmiş sayılırsınız.',
           ],
         },
@@ -139,7 +139,7 @@ export default {
           id: 'fikri-mulkiyet',
           heading: 'Fikri mülkiyet',
           paragraphs: [
-            'Hype Vision yazılımı, arayüzü, markası ve dokümantasyonu Hype Teknoloji’ye aittir. İzinsiz kopyalama, dağıtma veya tersine mühendislik yasaktır.',
+            'Hype Vision yazılımı, arayüzü, markası ve dokümantasyonu Hype Vision’ye aittir. İzinsiz kopyalama, dağıtma veya tersine mühendislik yasaktır.',
           ],
         },
         {

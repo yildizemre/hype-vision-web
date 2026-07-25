@@ -13,7 +13,7 @@ export default {
     questionsDesc: 'Contact us about privacy or terms of service.',
     sendEmail: 'Send email',
     footerBarTitle: 'Legal information',
-    titleSuffix: 'Hype Vision — Hype Technology',
+    titleSuffix: 'Hype Vision — Hype Vision',
     breadcrumbSeoLegal: 'Legal',
     breadcrumbSeoHome: 'Home',
   },
@@ -22,7 +22,7 @@ export default {
       title: 'Privacy Policy',
       shortTitle: 'Privacy',
       metaDescription:
-        'Hype Vision (Hype Technology) privacy policy: collection of personal data, your rights under KVKK, data security and retention periods. Beykoz, Istanbul.',
+        'Hype Vision privacy policy: collection of personal data, your rights under KVKK, data security and retention periods. GTÜ Teknopark, Gebze.',
       summary:
         'We explain transparently how your personal data is collected, processed, and protected under KVKK.',
       lastUpdated: '3 June 2026',
@@ -30,7 +30,7 @@ export default {
         {
           id: 'genel',
           paragraphs: [
-            'This Privacy Policy explains how your personal data is collected, processed, and protected on the hypevisionlab.com website and Hype Vision platform operated by Hype Technology (“Hype Vision”, “we”).',
+            'This Privacy Policy explains how your personal data is collected, processed, and protected on the hypevisionlab.com website and Hype Vision platform operated by Hype Vision (“Hype Vision”, “we”).',
             'We act in accordance with Law No. 6698 on the Protection of Personal Data (“KVKK”) and related legislation.',
           ],
         },
@@ -38,7 +38,7 @@ export default {
           id: 'veri-sorumlusu',
           heading: 'Data controller',
           paragraphs: [
-            'Hype Technology — Yeni Riva Yolu, Beykoz, 34805, Istanbul, Turkey',
+            'Hype Vision — GTÜ Teknopark, Hightech Building, Kemal Nehrozoğlu Cd. 400. Sokak, 41480 Gebze/Kocaeli, Turkey',
             'Email: info@hypevisionlab.com',
           ],
         },
@@ -106,7 +106,7 @@ export default {
       title: 'Terms of Service',
       shortTitle: 'Service',
       metaDescription:
-        'Hype Vision terms of service: platform usage conditions, user obligations, intellectual property, liability limits, and applicable law. Hype Technology.',
+        'Hype Vision terms of service: platform usage conditions, user obligations, intellectual property, liability limits, and applicable law. Hype Vision.',
       summary:
         'Clearly defines rights, obligations, and responsibilities regarding use of the Hype Vision platform.',
       lastUpdated: '3 June 2026',
@@ -114,7 +114,7 @@ export default {
         {
           id: 'genel',
           paragraphs: [
-            'These Terms of Service govern use of the Hype Vision website and AI-powered video analytics platform provided by Hype Technology.',
+            'These Terms of Service govern use of the Hype Vision website and AI-powered video analytics platform provided by Hype Vision.',
             'By using the site or service, you are deemed to accept these terms.',
           ],
         },
@@ -139,7 +139,7 @@ export default {
           id: 'fikri-mulkiyet',
           heading: 'Intellectual property',
           paragraphs: [
-            'Hype Vision software, interface, brand, and documentation belong to Hype Technology. Unauthorized copying, distribution, or reverse engineering is prohibited.',
+            'Hype Vision software, interface, brand, and documentation belong to Hype Vision. Unauthorized copying, distribution, or reverse engineering is prohibited.',
           ],
         },
         {

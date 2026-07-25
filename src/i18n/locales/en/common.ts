@@ -11,6 +11,7 @@ export default {
       inspection: 'Inspection',
       about: 'About',
       faq: 'FAQ',
+      catalog: 'Catalog',
     },
     contact: 'Contact',
     mainMenu: 'Main menu',
@@ -27,8 +28,8 @@ export default {
     facebookAria: 'Hype Vision Facebook',
     instagramAria: 'Hype Vision Instagram',
     address: {
-      street: 'Yeni Riva Yolu',
-      city: 'Beykoz, 34805',
+      street: 'GTÜ Teknopark, Hightech Building',
+      city: '41480 Gebze, Kocaeli',
       country: 'Turkey',
     },
     email: 'info@hypevisionlab.com',
@@ -47,6 +48,7 @@ export default {
       hseInspection: 'HSE Inspection',
       qualityControl: 'Quality Control',
       faq: 'FAQ',
+      catalog: 'Catalog',
       about: 'About',
       platformProcess: 'Platform Process',
       sectors: 'Sectors',
@@ -58,7 +60,7 @@ export default {
       subscribe: 'Subscribe',
       success: 'Your subscription request has been sent. Thank you!',
     },
-    copyright: 'Hype Vision · Hype Technology. All rights reserved.',
+    copyright: 'Hype Vision. All rights reserved.',
     legalLinks: 'Legal links',
   },
   cookie: {
@@ -128,7 +130,7 @@ export default {
       },
       callNow: 'Call now',
       emailLabel: 'Email',
-      location: 'Beykoz · Istanbul',
+      location: 'GTÜ Teknopark · Gebze',
       sectionTitle: 'Let’s plan together for your facility.',
       sectionDesc:
         'Fill out the form or call directly for HSE, efficiency, quality, or security. With your existing cameras — any brand.',
@@ -147,12 +149,10 @@ export default {
   seo: {
     homeTitle: 'Hype Vision | Industrial AI — HSE, Quality, Efficiency (Since 2020)',
     homeDescription:
-      'Hype Technology — industrial AI since 2020. HSE/PPE analysis, quality control, workforce efficiency, and OEE with your existing IP cameras (RTSP/ONVIF). Edge/Cloud, KVKK compliant. Beykoz, Istanbul.',
-    homeKeywords:
-      'industrial AI, IP camera AI, HSE inspection, PPE detection, quality control AI, workforce efficiency, idle time, OEE, ONVIF RTSP, Hikvision Dahua Axis integration, factory camera AI, edge image processing, Hype Vision, Hype Technology, Beykoz',
+      'Hype Vision — industrial AI since 2020. HSE/PPE analysis, quality control, workforce efficiency, and OEE with your existing IP cameras (RTSP/ONVIF). Edge/Cloud, KVKK compliant. GTÜ Teknopark, Gebze.',
     ogTitle: 'Hype Vision | Industrial AI — HSE, Quality, Efficiency',
     ogDescription:
-      'Hype Technology since 2020. 24/7 HSE, quality, and efficiency inspection with your existing cameras. Any brand.',
+      'Hype Vision since 2020. 24/7 HSE, quality, and efficiency inspection with your existing cameras. Any brand.',
     ogImageAlt: 'Hype Vision — Industrial AI, HSE, quality control, efficiency',
     twitterTitle: 'Hype Vision | Industrial AI Platform',
     twitterDescription:
@@ -195,7 +195,7 @@ export default {
     webPage: {
       name: 'Hype Vision | Industrial AI — HSE, Quality, Efficiency',
       description:
-        'Hype Technology since 2020. HSE analysis, quality control, and operational efficiency with existing IP cameras. Beykoz, Istanbul.',
+        'Hype Vision since 2020. HSE analysis, quality control, and operational efficiency with existing IP cameras. GTÜ Teknopark, Gebze.',
     },
     legalTitleSuffix: 'Hype Vision',
     blogTitleSuffix: 'Hype Vision',

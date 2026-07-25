@@ -11,6 +11,7 @@ export default {
       inspection: 'Инспекция',
       about: 'О нас',
       faq: 'FAQ',
+      catalog: 'Каталог',
     },
     contact: 'Контакты',
     mainMenu: 'Главное меню',
@@ -27,8 +28,8 @@ export default {
     facebookAria: 'Hype Vision Facebook',
     instagramAria: 'Hype Vision Instagram',
     address: {
-      street: 'Yeni Riva Yolu',
-      city: 'Бейкоз, 34805',
+      street: 'GTÜ Teknopark, Hightech Building',
+      city: '41480 Gebze, Kocaeli',
       country: 'Турция',
     },
     email: 'info@hypevisionlab.com',
@@ -47,6 +48,7 @@ export default {
       hseInspection: 'Инспекция ОТ',
       qualityControl: 'Контроль качества',
       faq: 'FAQ',
+      catalog: 'Каталог',
       about: 'О нас',
       platformProcess: 'Процесс платформы',
       sectors: 'Отрасли',
@@ -58,7 +60,7 @@ export default {
       subscribe: 'Подписаться',
       success: 'Запрос на подписку отправлен. Спасибо!',
     },
-    copyright: 'Hype Vision · Hype Technology. Все права защищены.',
+    copyright: 'Hype Vision. Все права защищены.',
     legalLinks: 'Юридические ссылки',
   },
   cookie: {
@@ -128,7 +130,7 @@ export default {
       },
       callNow: 'Позвонить сейчас',
       emailLabel: 'Email',
-      location: 'Бейкоз · Стамбул',
+      location: 'GTÜ Teknopark · Gebze',
       sectionTitle: 'Спланируем вместе для вашего предприятия.',
       sectionDesc:
         'Заполните форму или позвоните напрямую по вопросам ОТ, эффективности, качества или безопасности. С вашими существующими камерами — любого бренда.',
@@ -147,12 +149,10 @@ export default {
   seo: {
     homeTitle: 'Hype Vision | Промышленный ИИ — ОТ, качество, эффективность (с 2020)',
     homeDescription:
-      'Hype Technology — промышленный ИИ с 2020 года. Анализ ОТ/СИЗ, контроль качества, эффективность персонала и OEE с вашими существующими IP-камерами (RTSP/ONVIF). Edge/Cloud, соответствие KVKK. Бейкоз, Стамбул.',
-    homeKeywords:
-      'промышленный ИИ, IP-камера ИИ, инспекция ОТ, обнаружение СИЗ, контроль качества ИИ, эффективность персонала, простой, OEE, ONVIF RTSP, интеграция Hikvision Dahua Axis, ИИ для камер на заводе, edge обработка изображений, Hype Vision, Hype Technology, Beykoz',
+      'Hype Vision — промышленный ИИ с 2020 года. Анализ ОТ/СИЗ, контроль качества, эффективность персонала и OEE с вашими существующими IP-камерами (RTSP/ONVIF). Edge/Cloud, соответствие KVKK. GTÜ Teknopark, Gebze.',
     ogTitle: 'Hype Vision | Промышленный ИИ — ОТ, качество, эффективность',
     ogDescription:
-      'Hype Technology с 2020 года. Круглосуточная инспекция ОТ, качества и эффективности с вашими существующими камерами. Любой бренд.',
+      'Hype Vision с 2020 года. Круглосуточная инспекция ОТ, качества и эффективности с вашими существующими камерами. Любой бренд.',
     ogImageAlt: 'Hype Vision — промышленный ИИ, ОТ, контроль качества, эффективность',
     twitterTitle: 'Hype Vision | Платформа промышленного ИИ',
     twitterDescription:
@@ -195,7 +195,7 @@ export default {
     webPage: {
       name: 'Hype Vision | Промышленный ИИ — ОТ, качество, эффективность',
       description:
-        'Hype Technology с 2020 года. Анализ ОТ, контроль качества и операционная эффективность с существующими IP-камерами. Бейкоз, Стамбул.',
+        'Hype Vision с 2020 года. Анализ ОТ, контроль качества и операционная эффективность с существующими IP-камерами. GTÜ Teknopark, Gebze.',
     },
     legalTitleSuffix: 'Hype Vision',
     blogTitleSuffix: 'Hype Vision',

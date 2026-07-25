@@ -11,6 +11,7 @@ export default {
       inspection: 'Denetim',
       about: 'Hakkımızda',
       faq: 'SSS',
+      catalog: 'Katalog',
     },
     contact: 'İletişim',
     mainMenu: 'Ana menü',
@@ -28,8 +29,8 @@ export default {
     facebookAria: 'Hype Vision Facebook',
     instagramAria: 'Hype Vision Instagram',
     address: {
-      street: 'Yeni Riva Yolu',
-      city: 'Beykoz, 34805',
+      street: 'GTÜ Teknopark, Hightech Binası',
+      city: '41480 Gebze, Kocaeli',
       country: 'Türkiye',
     },
     email: 'info@hypevisionlab.com',
@@ -48,6 +49,7 @@ export default {
       hseInspection: 'İSG Denetimi',
       qualityControl: 'Kalite Kontrol',
       faq: 'SSS',
+      catalog: 'Katalog',
       about: 'Hakkımızda',
       platformProcess: 'Platform Süreci',
       sectors: 'Sektörler',
@@ -59,7 +61,7 @@ export default {
       subscribe: 'Abone Ol',
       success: 'Abonelik talebiniz iletildi. Teşekkürler!',
     },
-    copyright: 'Hype Vision · Hype Teknoloji. Tüm hakları saklıdır.',
+    copyright: 'Hype Vision. Tüm hakları saklıdır.',
     legalLinks: 'Yasal linkler',
   },
   cookie: {
@@ -129,7 +131,7 @@ export default {
       },
       callNow: 'Hemen arayın',
       emailLabel: 'E-posta',
-      location: 'Beykoz · İstanbul',
+      location: 'GTÜ Teknopark · Gebze',
       sectionTitle: 'Tesisiniz için birlikte planlayalım.',
       sectionDesc:
         'İSG, verimlilik, kalite veya güvenlik odağında bilgi almak için formu doldurun veya doğrudan arayın. Mevcut kameralarınızla — marka fark etmez.',
@@ -148,12 +150,10 @@ export default {
   seo: {
     homeTitle: "Hype Vision | Endüstriyel Yapay Zeka — İSG, Kalite, Verimlilik (2020'den Beri)",
     homeDescription:
-      "Hype Teknoloji — 2020'den beri endüstriyel AI. Mevcut IP kameralarınızla (RTSP/ONVIF) İSG/KKD analizi, kalite kontrol, personel verimliliği, OEE. Edge/Cloud, KVKK uyumlu. Beykoz, İstanbul.",
-    homeKeywords:
-      'endüstriyel yapay zeka, IP kamera yapay zeka, İSG denetimi, KKD tespiti, kalite kontrol AI, personel verimliliği, boşta kalma süresi, OEE, ONVIF RTSP, Hikvision Dahua Axis entegrasyon, fabrika kamera AI, Edge görüntü işleme, Hype Vision, Hype Teknoloji, Beykoz',
+      "Hype Vision — 2020'den beri endüstriyel AI. Mevcut IP kameralarınızla (RTSP/ONVIF) İSG/KKD analizi, kalite kontrol, personel verimliliği, OEE. Edge/Cloud, KVKK uyumlu. GTÜ Teknopark, Gebze.",
     ogTitle: 'Hype Vision | Endüstriyel Yapay Zeka — İSG, Kalite, Verimlilik',
     ogDescription:
-      "2020'den beri Hype Teknoloji. Mevcut kameralarınızla 7/24 İSG, kalite ve verimlilik denetimi. Marka fark etmez.",
+      "2020'den beri Hype Vision. Mevcut kameralarınızla 7/24 İSG, kalite ve verimlilik denetimi. Marka fark etmez.",
     ogImageAlt: 'Hype Vision — Endüstriyel yapay zeka, İSG, kalite kontrol, verimlilik',
     twitterTitle: 'Hype Vision | Endüstriyel Yapay Zeka Platformu',
     twitterDescription:
@@ -196,7 +196,7 @@ export default {
     webPage: {
       name: 'Hype Vision | Endüstriyel Yapay Zeka — İSG, Kalite, Verimlilik',
       description:
-        "2020'den beri Hype Teknoloji. Mevcut IP kameralarla İSG analizi, kalite kontrol ve operasyonel verimlilik. Beykoz, İstanbul.",
+      "2020'den beri Hype Vision. Mevcut IP kameralarla İSG analizi, kalite kontrol ve operasyonel verimlilik. GTÜ Teknopark, Gebze.",
     },
     legalTitleSuffix: 'Hype Vision',
     blogTitleSuffix: 'Hype Vision',
