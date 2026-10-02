@@ -25,13 +25,6 @@ export default function FaqPage() {
       'description',
       'Hype Vision endüstriyel yapay zeka SSS: kamera entegrasyonu, KVKK uyumu, Edge/Cloud mimari, doğruluk oranları, kurulum süresi ve pilot süreci.'
     );
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
-    }
-    canonical.href = `${SITE_URL}/sss`;
 
     const faqSchema = {
       '@context': 'https://schema.org',

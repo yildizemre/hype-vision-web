@@ -13,6 +13,9 @@ import CatalogPage from './pages/CatalogPage';
 import FaqPage from './pages/FaqPage';
 import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
+import BlogIndexPage from './pages/BlogIndexPage';
+import GoruntuIslemePage from './pages/GoruntuIslemePage';
+import SeoHead from './seo/SeoHead';
 import SunumApp from './sunum/SunumApp';
 import { MODULE_SLUGS, SEO_SECTOR_SLUGS } from './data/landingPages';
 
@@ -20,6 +23,7 @@ export default function App() {
   return (
     <>
       <DocumentLang />
+      <SeoHead />
       <AnalyticsBootstrap />
       <ScrollToTop />
       <AnalyticsRouteTracker />
@@ -32,6 +36,8 @@ export default function App() {
         <Route path="/gizlilik-politikasi" element={<LegalPage />} />
         <Route path="/hizmet-sartlari" element={<LegalPage />} />
         <Route path="/cerez-politikasi" element={<LegalPage />} />
+        <Route path="/goruntu-isleme" element={<GoruntuIslemePage />} />
+        <Route path="/blog" element={<BlogIndexPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
         {SEO_SECTOR_SLUGS.map((slug) => (
           <Route key={slug} path={`/sektor/${slug}`} element={<LandingPage />} />

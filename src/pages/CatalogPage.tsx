@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Download, Loader2, AlertCircle, FileText, CheckCircle2 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { SITE_URL } from '../data/legalContent';
 import { CATALOG_PDF_PATH } from '../data/siteConfig';
 import { submitCatalogDownload } from '../lib/forms';
 
@@ -33,13 +32,6 @@ export default function CatalogPage() {
       'description',
       'Hype Vision 21 sayfalık endüstriyel yapay zeka kataloğunu indirin. İSG, kalite kontrol, OEE ve KKD modülleri — teknik künyeler ve doğruluk aralıkları.'
     );
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
-    }
-    canonical.href = `${SITE_URL}/katalog`;
   }, []);
 
   const triggerDownload = () => {

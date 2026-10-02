@@ -1,75 +1,63 @@
-import { useEffect } from 'react';
-import { Link, useParams, Navigate } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Calendar, ChevronRight, Clock, Tag, ArrowLeft } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { SITE_URL } from '../data/legalContent';
 import { useBlogPost, useBlogPosts } from '../i18n/content';
-import { getHomeSeoStrings } from '../components/HomeSeo';
-
-function setMeta(name: string, content: string, attr: 'name' | 'property' = 'name') {
-  let el = document.querySelector(`meta[${attr}="${name}"]`) as HTMLMetaElement | null;
-  if (!el) {
-    el = document.createElement('meta');
-    el.setAttribute(attr, name);
-    document.head.appendChild(el);
-  }
-  el.content = content;
-}
+import GuidePage from './GuidePage';
+import NotFoundPage from './NotFoundPage';
+import { getGuide } from '../data/guides';
+import { URL_LANG, pathFor } from '../i18n/routing';
+import { breadcrumbSchema, usePageMeta } from '../seo/usePageMeta';
 
 export default function BlogPostPage() {
+  const { slug = '' } = useParams<{ slug: string }>();
+  const guide = URL_LANG === 'tr' ? getGuide(slug) : undefined;
+  if (guide) return <GuidePage guide={guide} />;
+  return <CaseNotePage slug={slug} />;
+}
+
+function CaseNotePage({ slug }: { slug: string }) {
   const { t } = useTranslation();
-  const { slug } = useParams<{ slug: string }>();
-  const post = useBlogPost(slug ?? '');
+  const post = useBlogPost(slug);
   const blogPosts = useBlogPosts();
+  const url = `${SITE_URL}${pathFor(`/blog/${slug}`, URL_LANG)}`;
 
-  useEffect(() => {
-    if (!post) return;
-    document.title = `${post.title} | ${t('blog.ui.titleSuffix')}`;
-    setMeta('description', post.metaDescription);
-    setMeta('og:title', post.title, 'property');
-    setMeta('og:description', post.metaDescription, 'property');
-    setMeta('og:url', `${SITE_URL}/blog/${post.slug}`, 'property');
+  usePageMeta({
+    title: post ? `${post.title} | ${t('blog.ui.titleSuffix')}` : 'Hype Vision',
+    description: post?.metaDescription ?? '',
+    ogType: 'article',
+    schemas: post
+      ? [
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            headline: post.title,
+            description: post.metaDescription,
+            datePublished: post.isoDate,
+            dateModified: post.isoDate,
+            inLanguage: URL_LANG,
+            image: `${SITE_URL}/og-image.png`,
+            mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+            author: { '@type': 'Organization', name: 'Hype Vision', url: SITE_URL },
+            publisher: {
+              '@type': 'Organization',
+              name: 'Hype Vision',
+              logo: { '@type': 'ImageObject', url: `${SITE_URL}/apple-touch-icon.png` },
+            },
+            url,
+          },
+          breadcrumbSchema([
+            { name: t('blog.ui.breadcrumbHome'), url: `${SITE_URL}${pathFor('/', URL_LANG)}` },
+            { name: 'Blog', url: `${SITE_URL}${pathFor('/blog', URL_LANG)}` },
+            { name: post.title, url },
+          ]),
+        ]
+      : undefined,
+  });
 
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
-    }
-    canonical.href = `${SITE_URL}/blog/${post.slug}`;
-
-    const schema = {
-      '@context': 'https://schema.org',
-      '@type': 'Article',
-      headline: post.title,
-      description: post.metaDescription,
-      datePublished: post.date,
-      author: { '@type': 'Organization', name: 'Hype Vision' },
-      publisher: { '@type': 'Organization', name: 'Hype Vision' },
-      url: `${SITE_URL}/blog/${post.slug}`,
-    };
-    const scriptId = 'blog-article-schema';
-    let script = document.getElementById(scriptId) as HTMLScriptElement | null;
-    if (!script) {
-      script = document.createElement('script');
-      script.id = scriptId;
-      script.type = 'application/ld+json';
-      document.head.appendChild(script);
-    }
-    script.textContent = JSON.stringify(schema);
-
-    return () => {
-      const home = getHomeSeoStrings(t);
-      document.title = home.title;
-      setMeta('description', home.description);
-      if (canonical) canonical.href = `${SITE_URL}/`;
-      document.getElementById(scriptId)?.remove();
-    };
-  }, [post, t]);
-
-  if (!post) return <Navigate to="/" replace />;
+  if (!post) return <NotFoundPage />;
 
   return (
     <div className="min-h-screen flex flex-col section-tint">
@@ -82,7 +70,7 @@ export default function BlogPostPage() {
               {t('blog.ui.breadcrumbHome')}
             </Link>
             <ChevronRight size={12} className="text-gray-600" aria-hidden />
-            <Link to="/#vaka-notlari" className="hover:text-vision-light transition-colors">
+            <Link to="/blog" className="hover:text-vision-light transition-colors">
               {t('blog.ui.breadcrumbBlog')}
             </Link>
             <ChevronRight size={12} className="text-gray-600" aria-hidden />
@@ -95,7 +83,7 @@ export default function BlogPostPage() {
             </span>
             <span className="inline-flex items-center gap-1.5">
               <Calendar size={12} />
-              {post.date}
+              <time dateTime={post.isoDate}>{post.date}</time>
             </span>
             <span className="inline-flex items-center gap-1.5">
               <Clock size={12} />
@@ -142,14 +130,14 @@ export default function BlogPostPage() {
 
         <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
           <Link
-            to="/#vaka-notlari"
+            to="/blog"
             className="inline-flex items-center justify-center gap-2 text-sm font-medium text-gray-600 hover:text-vision transition-colors"
           >
             <ArrowLeft size={16} />
             {t('blog.ui.allPosts')}
           </Link>
           <Link
-            to="/#iletisim"
+            to="/iletisim"
             data-track="contact_cta"
             data-track-location="blog"
             id="cta-contact-blog"

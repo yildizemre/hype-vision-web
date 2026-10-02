@@ -1,5 +1,8 @@
 import { useTranslation } from 'react-i18next';
-import { setLanguage, type SupportedLanguage } from '../i18n';
+import { useLocation } from 'react-router-dom';
+import { LANG_PREFIX, URL_LANG } from '../i18n/routing';
+import { LANG_KEY, type SupportedLanguage } from '../i18n';
+import { isTranslatedPath } from '../seo/routes';
 
 type LanguageSwitcherProps = {
   variant?: 'hero' | 'solid';
@@ -10,8 +13,18 @@ export default function LanguageSwitcher({ variant = 'solid', className = '' }: 
   const { i18n } = useTranslation();
   const current = (['tr', 'en', 'ru'].includes(i18n.language) ? i18n.language : 'tr') as SupportedLanguage;
 
-  const switchLang = (lang: SupportedLanguage) => {
-    if (lang !== current) void setLanguage(lang);
+  const location = useLocation();
+
+  // Çevirisi olmayan sayfada (TR'ye özel içerik) hedef dilin ana sayfasına git
+  const targetPath = isTranslatedPath(location.pathname) ? location.pathname : '/';
+  const hrefFor = (lang: SupportedLanguage) => `${LANG_PREFIX[lang]}${targetPath}${location.hash}`;
+
+  const rememberLang = (lang: SupportedLanguage) => {
+    try {
+      localStorage.setItem(LANG_KEY, lang);
+    } catch {
+      /* yok say */
+    }
   };
 
   const baseBtn =
@@ -37,10 +50,11 @@ export default function LanguageSwitcher({ variant = 'solid', className = '' }: 
       {(['tr', 'en', 'ru'] as const).map((lang) => {
         const isActive = current === lang;
         return (
-          <button
+          <a
             key={lang}
-            type="button"
-            onClick={() => switchLang(lang)}
+            href={hrefFor(lang)}
+            hrefLang={lang}
+            onClick={() => rememberLang(lang)}
             className={`${baseBtn} ${
               isActive
                 ? variant === 'hero'
@@ -50,10 +64,10 @@ export default function LanguageSwitcher({ variant = 'solid', className = '' }: 
                   ? inactiveHero
                   : inactiveSolid
             }`}
-            aria-pressed={isActive}
+            aria-current={isActive ? 'true' : undefined}
           >
             {lang.toUpperCase()}
-          </button>
+          </a>
         );
       })}
     </div>

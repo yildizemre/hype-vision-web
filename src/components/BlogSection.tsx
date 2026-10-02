@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Clock, Tag } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useBlogPosts } from '../i18n/content';
+import { GUIDES } from '../data/guides';
+import { URL_LANG } from '../i18n/routing';
 
 export default function BlogSection() {
   const { t } = useTranslation();
@@ -29,7 +31,31 @@ export default function BlogSection() {
               {t('sections.blog.description')}
             </p>
           </div>
+          <Link
+            to="/blog"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-vision hover:text-vision-dark shrink-0"
+          >
+            {URL_LANG === 'tr' ? 'Tüm yazılar' : URL_LANG === 'ru' ? 'Все статьи' : 'All posts'}
+            <ArrowRight size={14} />
+          </Link>
         </div>
+
+        {URL_LANG === 'tr' && (
+          <div className="mb-10">
+            <p className="text-xs font-bold uppercase tracking-widest text-vision-dark mb-4">Görüntü işleme rehberleri</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              {GUIDES.slice(0, 4).map((g) => (
+                <Link
+                  key={g.slug}
+                  to={`/blog/${g.slug}`}
+                  className="panel-card rounded-xl p-4 text-sm font-semibold text-[#0A0A0A] leading-snug hover:border-vision/25 hover:text-vision-dark transition-colors"
+                >
+                  {g.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {blogPosts.map((post) => (

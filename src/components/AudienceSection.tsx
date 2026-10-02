@@ -1,5 +1,6 @@
 import { Briefcase, HardHat, ScanEye, ArrowRight, Zap } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { localizeHref } from '../i18n/routing';
 
 type Audience = { role: string; pain: string; solution: string; action: string; tags: string[] };
 const audienceIcons = [Briefcase, HardHat, ScanEye];
@@ -80,7 +81,7 @@ export default function AudienceSection() {
 
         <div className="mt-10 text-center">
           <a
-            href="/#iletisim"
+            href={localizeHref('/#iletisim')}
             data-track="contact_cta"
             data-track-location="audience"
             className="inline-flex items-center gap-2 text-sm font-semibold text-[#0A0A0A] px-8 py-3.5 rounded-lg bg-white hover:bg-gray-100 transition-colors"

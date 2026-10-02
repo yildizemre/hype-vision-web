@@ -5,6 +5,8 @@ export type BlogPost = {
   sector: string;
   readTime: string;
   date: string;
+  /** ISO 8601 (schema.org için) */
+  isoDate?: string;
   metaDescription: string;
   results: { label: string; value: string }[];
   sections: { heading?: string; paragraphs: string[] }[];

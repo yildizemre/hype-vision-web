@@ -148,14 +148,14 @@ export default {
     mes: 'Üretim yürütme sistemi — hat durumu ve iş emirleri.',
   },
   seo: {
-    homeTitle: "Hype Vision | Endüstriyel Yapay Zeka — İSG, Kalite, Verimlilik (2020'den Beri)",
+    homeTitle: "Görüntü İşleme ve Endüstriyel Yapay Zeka | Kalite Kontrol, İSG, OEE — Hype Vision",
     homeDescription:
-      "Hype Vision — 2020'den beri endüstriyel AI. Mevcut IP kameralarınızla (RTSP/ONVIF) İSG/KKD analizi, kalite kontrol, personel verimliliği, OEE. Edge/Cloud, KVKK uyumlu. GTÜ Teknopark, Gebze.",
-    ogTitle: 'Hype Vision | Endüstriyel Yapay Zeka — İSG, Kalite, Verimlilik',
+      "Hype Vision: mevcut IP kameralarınızla yapay zeka destekli görüntü işleme. Kalite kontrol, İSG/KKD denetimi, OEE ve verimlilik analizi. Edge/Cloud, KVKK uyumlu. 2020'den beri GTÜ Teknopark Gebze.",
+    ogTitle: 'Hype Vision | Endüstriyel Görüntü İşleme ve Yapay Zeka',
     ogDescription:
       "2020'den beri Hype Vision. Mevcut kameralarınızla 7/24 İSG, kalite ve verimlilik denetimi. Marka fark etmez.",
     ogImageAlt: 'Hype Vision — Endüstriyel yapay zeka, İSG, kalite kontrol, verimlilik',
-    twitterTitle: 'Hype Vision | Endüstriyel Yapay Zeka Platformu',
+    twitterTitle: 'Hype Vision | Endüstriyel Görüntü İşleme Platformu',
     twitterDescription:
       "Mevcut IP kameralarla İSG analizi, kalite kontrol ve OEE. Edge/Cloud, KVKK uyumlu. 2020'den beri.",
     organization: {

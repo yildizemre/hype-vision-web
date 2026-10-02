@@ -1,5 +1,6 @@
 import { Camera, Brain, LayoutDashboard, Headphones, ArrowRight, TrendingUp, type LucideIcon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { localizeHref } from '../i18n/routing';
 
 type Outcome = { sector: string; metric: string; note: string };
 type Step = { step: string; title: string; desc: string };
@@ -22,7 +23,7 @@ export default function PlatformOverview() {
               {t('sections.platformOverview.title')} <span className="text-white/90">{t('sections.platformOverview.titleHighlight')}</span>
             </h2>
             <p className="text-sm sm:text-base text-white/80 leading-relaxed max-w-lg mb-6">{t('sections.platformOverview.description')}</p>
-            <a href="/#iletisim" data-track="contact_cta" data-track-location="platform" className="inline-flex items-center gap-2 text-sm font-semibold text-white bg-white/15 hover:bg-white/25 border border-white/25 px-6 py-3 rounded-lg transition-colors">
+            <a href={localizeHref('/#iletisim')} data-track="contact_cta" data-track-location="platform" className="inline-flex items-center gap-2 text-sm font-semibold text-white bg-white/15 hover:bg-white/25 border border-white/25 px-6 py-3 rounded-lg transition-colors">
               {t('sections.platformOverview.cta')}
               <ArrowRight size={16} />
             </a>

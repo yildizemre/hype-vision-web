@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Term, TERMS } from './TermTooltip';
+import { localizeHref } from '../i18n/routing';
 
 type Product = {
   id: string;
@@ -200,7 +201,7 @@ export default function CoreProducts() {
                 </li>
               ))}
             </ul>
-            <a href="/#iletisim" data-track="contact_cta" data-track-location="core_products" className="text-xs font-semibold text-vision-light hover:text-white flex items-center gap-1.5">
+            <a href={localizeHref('/#iletisim')} data-track="contact_cta" data-track-location="core_products" className="text-xs font-semibold text-vision-light hover:text-white flex items-center gap-1.5">
               {t('sections.coreProducts.integration.cta')} <ArrowRight size={14} />
             </a>
           </div>
@@ -222,7 +223,7 @@ export default function CoreProducts() {
         </div>
 
         <div className="mt-10 sm:mt-12 text-center">
-          <a href="/#iletisim" data-track="contact_cta" data-track-location="core_products" className="inline-flex items-center gap-2 text-sm font-semibold text-white px-8 py-3.5 rounded-lg bg-vision hover:bg-vision-dark transition-colors">
+          <a href={localizeHref('/#iletisim')} data-track="contact_cta" data-track-location="core_products" className="inline-flex items-center gap-2 text-sm font-semibold text-white px-8 py-3.5 rounded-lg bg-vision hover:bg-vision-dark transition-colors">
             {t('sections.coreProducts.contact')}
             <ArrowRight size={16} />
           </a>

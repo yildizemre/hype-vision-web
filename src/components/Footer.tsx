@@ -7,6 +7,7 @@ import { submitNewsletter } from '../lib/forms';
 import { trackLeadSubmit } from '../lib/conversions';
 import LegalFooterBar from './LegalFooterBar';
 import { useLegalNavLinks } from '../i18n/content';
+import { URL_LANG, localizeHref } from '../i18n/routing';
 
 const FOOTER_LOGO = '/hypefoooterlogo.png';
 
@@ -56,10 +57,11 @@ export default function Footer({ hideLegalBar = false }: FooterProps) {
     {
       section: t('common.footer.sections.solutions'),
       links: [
+        ...(URL_LANG === 'tr' ? [{ label: 'Endüstriyel Görüntü İşleme', href: '/goruntu-isleme' }] : []),
         { label: t('common.footer.links.whoFor'), href: '/#kimler-icin' },
         ...sectorLinks.map((s) => ({ label: s.tag, href: `/sektor/${s.slug}` })),
-        { label: t('common.footer.links.hseInspection'), href: '/#denetim' },
-        { label: t('common.footer.links.qualityControl'), href: '/#denetim' },
+        { label: t('common.footer.links.hseInspection'), href: URL_LANG === 'tr' ? '/kkd-kontrol-kamera-sistemi' : '/#denetim' },
+        { label: t('common.footer.links.qualityControl'), href: URL_LANG === 'tr' ? '/kalite-kontrol-goruntu-isleme' : '/#denetim' },
         { label: t('common.footer.links.faq'), href: '/sss' },
         { label: t('common.footer.links.catalog'), href: '/katalog' },
       ],
@@ -70,7 +72,7 @@ export default function Footer({ hideLegalBar = false }: FooterProps) {
         { label: t('common.footer.links.about'), href: '/#hakkimizda' },
         { label: t('common.footer.links.platformProcess'), href: '/#platform' },
         { label: t('common.footer.links.sectors'), href: '/#sektorler' },
-        { label: t('common.footer.links.caseNotes'), href: '/#vaka-notlari' },
+        { label: t('common.footer.links.caseNotes'), href: '/blog' },
         { label: t('common.footer.links.contact'), href: '/#iletisim' },
         ...legalNavLinks.map(({ title, href }) => ({ label: title, href })),
       ],
@@ -194,7 +196,7 @@ export default function Footer({ hideLegalBar = false }: FooterProps) {
                   ) : (
                     <li key={link.label}>
                       <a
-                        href={link.href}
+                        href={localizeHref(link.href)}
                         className="text-xs text-gray-500 hover:text-gray-300 transition-colors font-light"
                       >
                         {link.label}

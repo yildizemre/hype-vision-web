@@ -2,7 +2,7 @@ export default {
   hero: {
     ariaLabel: 'Ana tanıtım',
     badge: "2020'den beri · Mevcut kameralarınız · Marka fark etmez",
-    subtitle: 'Endüstriyel güvenlik ve operasyonel verimlilikte yeni standart',
+    subtitle: 'Yapay zeka destekli endüstriyel görüntü işleme — güvenlik ve verimlilikte yeni standart',
     titleLine1: 'Gerçek zamanlı',
     titleHighlight: 'İSG, kalite ve verimlilik',
     titleLine2: '— mevcut kameralarınızla.',

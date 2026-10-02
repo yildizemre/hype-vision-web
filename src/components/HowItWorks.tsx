@@ -1,5 +1,6 @@
 import { Camera, Brain, LayoutDashboard, BellRing, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { localizeHref } from '../i18n/routing';
 
 type FlowItem = { label: string; short: string; detail: string };
 type CardItem = { title: string; text: string; bold?: string; suffix?: string };
@@ -78,7 +79,7 @@ export default function HowItWorks() {
             <p className="text-sm text-gray-500">{t('sections.howItWorks.ctaDesc')}</p>
           </div>
           <a
-            href="/#iletisim"
+            href={localizeHref('/#iletisim')}
             data-track="contact_cta"
             data-track-location="how_it_works"
             className="shrink-0 inline-flex items-center gap-2 text-sm font-semibold text-white px-8 py-3.5 rounded-lg bg-vision hover:bg-vision-dark transition-colors"

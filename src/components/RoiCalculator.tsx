@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Calculator, ArrowRight, RotateCcw } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { localizeHref } from '../i18n/routing';
 
 function formatCurrency(n: number) {
   return new Intl.NumberFormat('tr-TR', { maximumFractionDigits: 0 }).format(Math.round(n));
@@ -197,7 +198,7 @@ export default function RoiCalculator() {
             </div>
             <p className="text-[11px] text-gray-500 leading-relaxed mb-6">{t('growth.roi.disclaimer')}</p>
             <a
-              href="/#iletisim"
+              href={localizeHref('/#iletisim')}
               data-track="contact_cta"
               data-track-location="roi_calculator"
               className="inline-flex items-center gap-2 text-sm font-semibold text-white px-6 py-3 rounded-lg bg-vision hover:bg-vision-dark transition-colors w-full sm:w-auto justify-center"

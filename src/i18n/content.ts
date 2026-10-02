@@ -22,6 +22,15 @@ export const BLOG_SLUGS = [
   'lojistik-palet-sayim-sapmasi',
 ] as const;
 
+/** Vaka notlarının makine-okunur yayın tarihleri */
+export const BLOG_ISO_DATES: Record<(typeof BLOG_SLUGS)[number], string> = {
+  'gida-hattinda-idle-azaltma': '2026-05-15',
+  'isg-kkd-ihlal-tespiti': '2026-05-02',
+  'kalite-kontrol-fire-azaltma': '2026-04-20',
+  'tekstil-hat-a-fire-dususu': '2026-05-28',
+  'lojistik-palet-sayim-sapmasi': '2026-05-10',
+};
+
 export const SECTOR_SLUGS = ['tekstil', 'otomotiv', 'gida', 'metal'] as const;
 export type SectorSlug = (typeof SECTOR_SLUGS)[number];
 
@@ -91,6 +100,7 @@ export function useBlogPosts(): BlogPost[] {
           sector: raw.sector,
           readTime: raw.readTime,
           date: raw.date,
+          isoDate: BLOG_ISO_DATES[slug],
           metaDescription: raw.metaDescription,
           results: raw.results ?? [],
           sections: raw.sections ?? [],

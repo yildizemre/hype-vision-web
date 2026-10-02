@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
-import { Link, Navigate, useParams } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import NotFoundPage from './NotFoundPage';
 import { ArrowRight, CheckCircle2, ChevronRight } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -19,25 +20,18 @@ function setMeta(name: string, content: string, attr: 'name' | 'property' = 'nam
 }
 
 export default function LandingPage() {
-  const { slug } = useParams<{ slug: string }>();
+  // Rotalar statik tanımlı (/:slug değil) — slug'ı yolun son parçasından al
+  const slug = useLocation().pathname.replace(/\/+$/, '').split('/').pop();
   const page = slug ? getLandingPage(slug) : undefined;
 
   useEffect(() => {
     if (!page) return;
-    document.title = `${page.title} | Hype Vision`;
+    document.title = page.title.includes('Hype Vision') ? page.title : `${page.title} | Hype Vision`;
     setMeta('description', page.metaDescription);
     setMeta('og:title', page.title, 'property');
     setMeta('og:description', page.metaDescription, 'property');
-    setMeta('og:url', `${SITE_URL}/${page.slug}`, 'property');
     setMeta('og:type', 'article', 'property');
 
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
-    }
-    canonical.href = `${SITE_URL}/${page.slug}`;
 
     const schema = {
       '@context': 'https://schema.org',
@@ -68,7 +62,7 @@ export default function LandingPage() {
     };
   }, [page]);
 
-  if (!page) return <Navigate to="/" replace />;
+  if (!page) return <NotFoundPage />;
 
   return (
     <div className="min-h-screen flex flex-col section-tint">

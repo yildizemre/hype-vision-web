@@ -1,5 +1,6 @@
 import { Search, Wrench, Activity, FileBarChart, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { localizeHref } from '../i18n/routing';
 
 const STEP_ICONS = [Search, Wrench, Activity, FileBarChart];
 
@@ -63,7 +64,7 @@ export default function PilotTimeline() {
             {t('growth.pilotTimeline.ctaHint')}
           </p>
           <a
-            href="/iletisim"
+            href={localizeHref('/iletisim')}
             data-track="contact_cta"
             data-track-location="pilot_timeline"
             id="cta-pilot-timeline"

@@ -8,7 +8,6 @@ import LegalSeo from '../components/LegalSeo';
 import LegalFooterBar from '../components/LegalFooterBar';
 import {
   headingToId,
-  SITE_URL,
   type LegalSection,
 } from '../data/legalContent';
 import { useLegalNavLinks, useLegalPage, useLegalPagesList } from '../i18n/content';
@@ -57,18 +56,10 @@ export default function LegalPage() {
     setMeta('description', page.metaDescription);
     setMeta('og:title', `${page.title} | ${t('common.seo.legalTitleSuffix')}`, 'property');
     setMeta('og:description', page.metaDescription, 'property');
-    setMeta('og:url', `${SITE_URL}/${page.slug}`, 'property');
     setMeta('og:type', 'website', 'property');
     setMeta('twitter:title', `${page.title} | ${t('common.seo.legalTitleSuffix')}`);
     setMeta('twitter:description', page.metaDescription);
 
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
-    }
-    canonical.href = `${SITE_URL}/${page.slug}`;
 
     return () => {
       const home = getHomeSeoStrings(t);
@@ -76,8 +67,6 @@ export default function LegalPage() {
       setMeta('description', home.description);
       setMeta('og:title', home.ogTitle, 'property');
       setMeta('og:description', home.ogDescription, 'property');
-      setMeta('og:url', `${SITE_URL}/`, 'property');
-      if (canonical) canonical.href = `${SITE_URL}/`;
     };
   }, [page, t]);
 

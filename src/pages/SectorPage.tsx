@@ -6,9 +6,9 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import TrustBadges from '../components/TrustBadges';
 import PilotTimeline from '../components/PilotTimeline';
-import { SITE_URL } from '../data/legalContent';
 import { useBlogPost, useSectorList, useSectorPage } from '../i18n/content';
 import { getHomeSeoStrings } from '../components/HomeSeo';
+import { localizeHref } from '../i18n/routing';
 
 function setMeta(name: string, content: string, attr: 'name' | 'property' = 'name') {
   let el = document.querySelector(`meta[${attr}="${name}"]`) as HTMLMetaElement | null;
@@ -33,21 +33,12 @@ export default function SectorPage() {
     setMeta('description', sector.metaDescription);
     setMeta('og:title', sector.title, 'property');
     setMeta('og:description', sector.metaDescription, 'property');
-    setMeta('og:url', `${SITE_URL}/sektor/${sector.slug}`, 'property');
 
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
-    }
-    canonical.href = `${SITE_URL}/sektor/${sector.slug}`;
 
     return () => {
       const home = getHomeSeoStrings(t);
       document.title = home.title;
       setMeta('description', home.description);
-      if (canonical) canonical.href = `${SITE_URL}/`;
     };
   }, [sector, t]);
 
@@ -84,7 +75,7 @@ export default function SectorPage() {
 
           <div className="flex flex-wrap gap-3">
             <a
-              href="/#iletisim"
+              href={localizeHref('/#iletisim')}
               data-track="contact_cta"
               data-track-location={`sector_${sector.slug}`}
               className="inline-flex items-center gap-2 text-sm font-semibold text-[#0A0A0A] px-6 py-3 rounded-lg bg-white hover:bg-gray-100 transition-colors"

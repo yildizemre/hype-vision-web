@@ -1,1 +1,10 @@
-/*    /index.html   200
+# Eski hash bağlantıları
+/vaka-notlari        /blog                 301
+
+# Sunum alanı istemci tarafında yönlendirilir (indekslenmez)
+/sunum/*             /index.html           200
+/en/sunum/*          /index.html           200
+/ru/sunum/*          /index.html           200
+
+# Prerender edilmemiş her adres gerçek 404 döner
+/*                   /404.html             404

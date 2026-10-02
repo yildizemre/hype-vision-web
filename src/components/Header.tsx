@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
+import { URL_LANG, localizeHref } from '../i18n/routing';
 
 /** Koyu / mavi hero üzerinde (footer logosu) */
 const LOGO_ON_HERO = '/hypefoooterlogo.png';
@@ -22,6 +23,8 @@ export default function Header({ variant = 'default' }: HeaderProps) {
     { label: t('common.header.nav.product'), href: '/#urunler' },
     { label: t('common.header.nav.inspection'), href: '/#denetim' },
     { label: t('common.header.nav.about'), href: '/#hakkimizda' },
+    ...(URL_LANG === 'tr' ? [{ label: 'Görüntü İşleme', href: '/goruntu-isleme', isRoute: true }] : []),
+    { label: URL_LANG === 'ru' ? 'Блог' : 'Blog', href: '/blog', isRoute: true },
     { label: t('common.header.nav.faq'), href: '/sss' },
     { label: t('common.header.nav.catalog'), href: '/katalog', isRoute: true },
     { label: t('common.header.contact'), href: '/iletisim', isRoute: true },
@@ -78,7 +81,7 @@ export default function Header({ variant = 'default' }: HeaderProps) {
                   <Link
                     key={link.label}
                     to={link.href}
-                    className={`group relative text-[13px] font-medium transition-colors ${
+                    className={`group relative whitespace-nowrap text-[13px] font-medium transition-colors ${
                       onHero
                         ? 'text-white/80 hover:text-white'
                         : 'text-vision-dark hover:text-[#0A0A0A]'
@@ -94,8 +97,8 @@ export default function Header({ variant = 'default' }: HeaderProps) {
                 ) : (
                   <a
                     key={link.label}
-                    href={link.href}
-                    className={`group relative text-[13px] font-medium transition-colors ${
+                    href={localizeHref(link.href)}
+                    className={`group relative whitespace-nowrap text-[13px] font-medium transition-colors ${
                       onHero
                         ? 'text-white/80 hover:text-white'
                         : 'text-vision-dark hover:text-[#0A0A0A]'
@@ -194,7 +197,7 @@ export default function Header({ variant = 'default' }: HeaderProps) {
               ) : (
                 <a
                   key={link.label}
-                  href={link.href}
+                  href={localizeHref(link.href)}
                   onClick={closeMobile}
                   className="py-3 px-4 text-base font-medium text-[#0A0A0A] rounded-lg hover:bg-white/80"
                 >

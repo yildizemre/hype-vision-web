@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Cpu, Car, Scissors, Factory, ArrowRight, type LucideIcon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { localizeHref } from '../i18n/routing';
 
 type SectorCase = {
   category: string;
@@ -99,7 +100,7 @@ export default function UseCases() {
             <p className="font-semibold text-[#0A0A0A] mb-1">{t('sections.useCases.ctaTitle')}</p>
             <p className="text-sm text-gray-600 max-w-lg">{t('sections.useCases.ctaDesc')}</p>
           </div>
-          <a href="/#iletisim" data-track="contact_cta" data-track-location="use_cases" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 text-sm font-semibold text-white px-8 py-3.5 rounded-lg bg-vision hover:bg-vision-dark transition-colors shrink-0">
+          <a href={localizeHref('/#iletisim')} data-track="contact_cta" data-track-location="use_cases" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 text-sm font-semibold text-white px-8 py-3.5 rounded-lg bg-vision hover:bg-vision-dark transition-colors shrink-0">
             {t('sections.useCases.contact')}
             <ArrowRight size={16} />
           </a>

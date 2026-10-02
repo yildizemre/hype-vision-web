@@ -3,9 +3,11 @@ import { Home, Mail, ArrowLeft } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { usePageMeta } from '../seo/usePageMeta';
 
 export default function NotFoundPage() {
   const { t } = useTranslation();
+  usePageMeta({ title: `${t('common.notFound.title')} | Hype Vision`, description: t('common.notFound.description') });
   return (
     <div className="min-h-screen flex flex-col section-tint">
       <Header variant="solid" />

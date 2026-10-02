@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { localizeHref } from '../i18n/routing';
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -99,7 +100,7 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
             <a
-              href="/#iletisim"
+              href={localizeHref('/#iletisim')}
               data-track="contact_cta"
               data-track-location="hero"
               id="cta-contact-hero"

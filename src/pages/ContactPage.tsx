@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
-import { SITE_URL } from '../data/legalContent';
 import { trackContactPageView } from '../lib/conversions';
 
 function setMeta(name: string, content: string, attr: 'name' | 'property' = 'name') {
@@ -28,22 +27,13 @@ export default function ContactPage() {
     setMeta('description', description);
     setMeta('og:title', title, 'property');
     setMeta('og:description', description, 'property');
-    setMeta('og:url', `${SITE_URL}/iletisim`, 'property');
 
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
-    }
-    canonical.href = `${SITE_URL}/iletisim`;
 
     trackContactPageView('/iletisim');
 
     return () => {
       document.title = t('common.seo.homeTitle');
       setMeta('description', t('common.seo.homeDescription'));
-      if (canonical) canonical.href = `${SITE_URL}/`;
     };
   }, [t]);
 
