@@ -74,9 +74,9 @@ print(f"Helmet detected: {result.helmet_detected}")`
       language: 'JavaScript',
       icon: '⚡',
       installation: 'npm install hypevisionlab-js',
-      example: `const Hype VisionLab = require('hypevisionlab-js');
+      example: `const HypeVisionLab = require('hypevisionlab-js');
 
-const client = new Hype VisionLab('your_api_key');
+const client = new HypeVisionLab('your_api_key');
 const result = await client.detectHelmet('image.jpg');
 console.log('Helmet detected:', result.helmet_detected);`
     },
@@ -84,15 +84,15 @@ console.log('Helmet detected:', result.helmet_detected);`
       language: 'Java',
       icon: '☕',
       installation: 'Maven: com.hypevisionlab:hypevisionlab-java',
-      example: `Hype VisionLabClient client = new Hype VisionLabClient("your_key");
+      example: `HypeVisionLabClient client = new HypeVisionLabClient("your_key");
 HelmetDetectionResult result = client.detectHelmet("image.jpg");
 System.out.println("Helmet: " + result.isHelmetDetected());`
     },
     {
       language: 'C#',
       icon: '🔷',
-      installation: 'NuGet: Hype VisionLab.SDK',
-      example: `var client = new Hype VisionLabClient("your_api_key");
+      installation: 'NuGet: HypeVisionLab.SDK',
+      example: `var client = new HypeVisionLabClient("your_api_key");
 var result = await client.DetectHelmetAsync("image.jpg");
 Console.WriteLine($"Helmet: {result.HelmetDetected}");`
     }
@@ -133,7 +133,7 @@ Console.WriteLine($"Helmet: {result.HelmetDetected}");`
             <div className="space-y-8">
               <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
                 <Camera className="h-4 w-4" />
-                <span>Hype VisionLab Image Processing API</span>
+                <span>HypeVisionLab Image Processing API</span>
               </div>
               
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
