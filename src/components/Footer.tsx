@@ -57,13 +57,38 @@ export default function Footer({ hideLegalBar = false }: FooterProps) {
     {
       section: t('common.footer.sections.solutions'),
       links: [
-        ...(URL_LANG === 'tr' ? [{ label: 'Endüstriyel Görüntü İşleme', href: '/goruntu-isleme' }] : []),
+        ...(URL_LANG === 'tr'
+          ? [
+              { label: 'Tüm çözümler', href: '/cozumler' },
+              { label: 'Endüstriyel Görüntü İşleme', href: '/endustriyel-goruntu-isleme' },
+              { label: 'CCTV Yapay Zeka', href: '/cctv-yapay-zeka' },
+              { label: 'Tüm sektörler', href: '/sektorler' },
+            ]
+          : URL_LANG === 'en'
+            ? [
+                { label: 'All solutions', href: '/solutions' },
+                { label: 'Industrial computer vision', href: '/industrial-computer-vision' },
+                { label: 'CCTV AI analytics', href: '/cctv-ai-analytics' },
+                { label: 'All industries', href: '/industries' },
+              ]
+            : []),
         { label: t('common.footer.links.whoFor'), href: '/#kimler-icin' },
         ...sectorLinks.map((s) => ({ label: s.tag, href: `/sektor/${s.slug}` })),
         { label: t('common.footer.links.hseInspection'), href: URL_LANG === 'tr' ? '/kkd-kontrol-kamera-sistemi' : '/#denetim' },
         { label: t('common.footer.links.qualityControl'), href: URL_LANG === 'tr' ? '/kalite-kontrol-goruntu-isleme' : '/#denetim' },
-        { label: t('common.footer.links.faq'), href: '/sss' },
-        { label: t('common.footer.links.catalog'), href: '/katalog' },
+        ...(URL_LANG === 'tr'
+          ? [
+              { label: 'Pilot süreci', href: '/pilot' },
+              { label: 'Kamera değerlendirmesi', href: '/kamera-degerlendirme' },
+              { label: t('common.footer.links.faq'), href: '/sss' },
+              { label: t('common.footer.links.catalog'), href: '/katalog' },
+            ]
+          : URL_LANG === 'en'
+            ? [
+                { label: 'Pilot projects', href: '/pilot' },
+                { label: 'Camera assessment', href: '/camera-assessment' },
+              ]
+            : []),
       ],
     },
     {
@@ -72,7 +97,9 @@ export default function Footer({ hideLegalBar = false }: FooterProps) {
         { label: t('common.footer.links.about'), href: '/#hakkimizda' },
         { label: t('common.footer.links.platformProcess'), href: '/#platform' },
         { label: t('common.footer.links.sectors'), href: '/#sektorler' },
-        { label: t('common.footer.links.caseNotes'), href: '/blog' },
+        { label: t('common.footer.links.caseNotes'), href: URL_LANG === 'tr' ? '/vaka-calismalari' : URL_LANG === 'en' ? '/case-studies' : '/blog' },
+        ...(URL_LANG === 'tr' ? [{ label: 'Blog', href: '/blog' }, { label: 'İş ortaklığı', href: '/is-ortakligi' }] : []),
+        ...(URL_LANG === 'en' ? [{ label: 'Resources', href: '/resources' }, { label: 'Partners', href: '/partners' }] : []),
         { label: t('common.footer.links.contact'), href: '/#iletisim' },
         ...legalNavLinks.map(({ title, href }) => ({ label: title, href })),
       ],

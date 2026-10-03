@@ -76,7 +76,7 @@ export const GUIDES_PART2: Guide[] = [
         a: 'Evet. Röle, Modbus/Ethernet-IP veya API üzerinden turnike kilitleme, siren ve makine interlock senaryoları kurulabilir.',
       },
     ],
-    related: ['/baret-tespit-sistemi', '/kkd-kontrol-kamera-sistemi', '/blog/isg-kkd-ihlal-tespiti'],
+    related: ['/baret-tespit-sistemi', '/kkd-kontrol-kamera-sistemi', '/vaka-calismalari/isg-kkd-ihlal-tespiti'],
   },
   {
     slug: 'oee-nasil-hesaplanir',
@@ -158,7 +158,7 @@ export const GUIDES_PART2: Guide[] = [
         a: 'Evet. PLC verisi olmayan makinelerde kamera, makinenin çalışma durumunu ve ürün çıkışını görsel olarak tespit ederek OEE hesaplayabilir.',
       },
     ],
-    related: ['/oee-takip-sistemi', '/personel-verimlilik-analizi-kamera', '/blog/gida-hattinda-idle-azaltma'],
+    related: ['/oee-takip-sistemi', '/personel-verimlilik-analizi-kamera', '/vaka-calismalari/gida-hattinda-idle-azaltma'],
   },
   {
     slug: 'kvkk-kamera-yapay-zeka',
@@ -223,7 +223,7 @@ export const GUIDES_PART2: Guide[] = [
         a: 'İhlal anonim olarak (bölge, zaman, ihlal tipi) raporlanabilir. Kişi eşleştirmesi gerekiyorsa turnike/kart verisi gibi mevcut sistemlerle sınırlı ve gerekçeli şekilde yapılmalıdır.',
       },
     ],
-    related: ['/kvkk-uyumlu-kamera-analitigi', '/blog/yapay-zeka-ile-is-guvenligi', '/goruntu-isleme'],
+    related: ['/kvkk-uyumlu-kamera-analitigi', '/blog/yapay-zeka-ile-is-guvenligi', '/endustriyel-goruntu-isleme'],
   },
   {
     slug: 'mevcut-ip-kamera-yapay-zeka',
@@ -281,6 +281,6 @@ export const GUIDES_PART2: Guide[] = [
         a: 'Çoğu NVR kanal bazlı RTSP akışı sunar; bu akışlar analiz için kullanılabilir. Bazı durumlarda doğrudan kameraya bağlanmak gecikmeyi azaltır.',
       },
     ],
-    related: ['/onvif-rtsp-yapay-zeka-entegrasyonu', '/blog/goruntu-isleme-nedir', '/goruntu-isleme'],
+    related: ['/onvif-rtsp-yapay-zeka-entegrasyonu', '/blog/goruntu-isleme-nedir', '/endustriyel-goruntu-isleme'],
   },
 ];

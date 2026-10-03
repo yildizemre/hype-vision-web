@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { SITE_URL } from '../data/legalContent';
-import { HREFLANG, LANGS, OG_LOCALE, URL_LANG, pathFor } from '../i18n/routing';
-import { getSeoRoute, normalizePath } from './routes';
+import { HREFLANG, LANGS, LANG_PREFIX, OG_LOCALE, URL_LANG } from '../i18n/routing';
+import { findCluster, toFullPath } from './routes';
 
 function upsert(selector: string, create: () => HTMLElement): HTMLElement {
   return document.head.querySelector(selector) ?? document.head.appendChild(create());
@@ -25,46 +25,42 @@ export default function SeoHead() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const path = normalizePath(pathname);
-    const route = getSeoRoute(path);
-    // Çevrilmemiş (TR'ye özel) sayfanın /en veya /ru kopyası → kanonik TR sürüm
-    const canonicalLang = route && !route.translated ? 'tr' : URL_LANG;
-    const canonicalUrl = `${SITE_URL}${pathFor(path, canonicalLang)}`;
+    const full = toFullPath(LANG_PREFIX[URL_LANG], pathname);
+    const cluster = findCluster(full);
+    const canonicalUrl = `${SITE_URL}${full}`;
 
     const canonical = upsert('link[rel="canonical"]', () => {
       const l = document.createElement('link');
       l.rel = 'canonical';
       return l;
     }) as HTMLLinkElement;
-    if (route) canonical.href = canonicalUrl;
+    if (cluster) canonical.href = canonicalUrl;
     else canonical.remove();
 
     document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach((n) => n.remove());
-    if (route?.translated) {
-      for (const lang of LANGS) {
+    const langs = cluster ? LANGS.filter((l) => cluster.urls[l]) : [];
+    if (langs.length > 1) {
+      for (const lang of langs) {
         const l = document.createElement('link');
         l.rel = 'alternate';
         l.hreflang = HREFLANG[lang];
-        l.href = `${SITE_URL}${pathFor(path, lang)}`;
+        l.href = `${SITE_URL}${cluster!.urls[lang]}`;
         document.head.appendChild(l);
       }
       const xd = document.createElement('link');
       xd.rel = 'alternate';
       xd.hreflang = 'x-default';
-      xd.href = `${SITE_URL}${pathFor(path, 'tr')}`;
+      xd.href = `${SITE_URL}${cluster!.urls.tr ?? cluster!.urls.en}`;
       document.head.appendChild(xd);
     }
 
     setMetaTag('property', 'og:url', canonicalUrl);
     setMetaTag('property', 'og:locale', OG_LOCALE[URL_LANG]);
-    // Bilinmeyen rota (404) ve sunum alanı indekslenmez
-    const indexable = Boolean(route) && !(route && !route.translated && URL_LANG !== 'tr');
+    // Kayıtlı olmayan yol (404, /sunum vb.) indekslenmez
     setMetaTag(
       'name',
       'robots',
-      indexable
-        ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-        : 'noindex, follow',
+      cluster ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' : 'noindex, follow',
     );
   }, [pathname]);
 

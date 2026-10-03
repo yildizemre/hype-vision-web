@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { useBlogPosts } from '../i18n/content';
 import { GUIDES } from '../data/guides';
 import { URL_LANG } from '../i18n/routing';
+import SmartLink from './kit/SmartLink';
+import { caseUrl } from '../content/cases';
 
 export default function BlogSection() {
   const { t } = useTranslation();
@@ -32,7 +34,7 @@ export default function BlogSection() {
             </p>
           </div>
           <Link
-            to="/blog"
+            to={URL_LANG === 'en' ? '/resources' : '/blog'}
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-vision hover:text-vision-dark shrink-0"
           >
             {URL_LANG === 'tr' ? 'Tüm yazılar' : URL_LANG === 'ru' ? 'Все статьи' : 'All posts'}
@@ -87,13 +89,13 @@ export default function BlogSection() {
                   </span>
                 ))}
               </div>
-              <Link
-                to={`/blog/${post.slug}`}
+              <SmartLink
+                href={caseUrl(post.slug, URL_LANG)}
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-vision hover:text-vision-dark transition-colors mt-auto"
               >
                 {t('sections.blog.readMore')}
                 <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
-              </Link>
+              </SmartLink>
             </article>
           ))}
         </div>

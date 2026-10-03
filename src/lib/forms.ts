@@ -97,3 +97,15 @@ export async function submitCatalogDownload(data: CatalogFormPayload) {
     ...attributionToFormFields(getAttribution()),
   });
 }
+
+export type LeadKind = 'camera_assessment' | 'pilot_request' | 'partner_request' | 'demo_request';
+
+/** Kamera değerlendirme / pilot / iş ortaklığı formları — tek FormSubmit kanalı */
+export async function submitLeadForm(kind: LeadKind, fields: Record<string, string>) {
+  return submitToFormsubmit(CONTACT_INBOX, {
+    _subject: `[${kind}] ${fields.Company || fields.Firma || fields.Name || ''}`.trim(),
+    ...fields,
+    _form: `hypevisionlab.com ${kind}`,
+    ...attributionToFormFields(getAttribution()),
+  });
+}

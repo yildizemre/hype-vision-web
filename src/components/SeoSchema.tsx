@@ -9,6 +9,7 @@ const organization = {
   '@id': `${SITE_URL}/#organization`,
   name: SITE_BRAND.name,
   legalName: SITE_BRAND.legalName,
+  alternateName: ['HypeVision', 'Hype Vision Lab'],
   url: SITE_URL,
   logo: {
     '@type': 'ImageObject',

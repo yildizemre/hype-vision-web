@@ -46,8 +46,8 @@ const SupportCenter = () => {
       title: 'Başlangıç',
       questions: [
         {
-          question: 'HypeVisionLab AI nasıl çalışır?',
-          answer: 'HypeVisionLab AI, gelişmiş computer vision ve machine learning teknolojileri kullanarak görüntüleri analiz eder ve güvenlik, kalite kontrol gibi alanlarda otomatik tespit yapar.'
+          question: 'Hype VisionLab AI nasıl çalışır?',
+          answer: 'Hype VisionLab AI, gelişmiş computer vision ve machine learning teknolojileri kullanarak görüntüleri analiz eder ve güvenlik, kalite kontrol gibi alanlarda otomatik tespit yapar.'
         },
         {
           question: 'Hangi sektörlerde kullanılabilir?',

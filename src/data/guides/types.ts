@@ -23,7 +23,13 @@ export type Guide = {
   metaTitle: string;
   metaDescription: string;
   excerpt: string;
-  category: 'Rehber' | 'Karşılaştırma' | 'Mevzuat' | 'Hesaplama';
+  category: string;
+  /** Varsayılan 'tr'. EN yazılar /en/resources/:slug altında yayınlanır */
+  lang?: 'tr' | 'en';
+  /** Diğer dildeki karşılığının tam yolu (hreflang) */
+  pair?: string;
+  /** Bu yazının desteklediği çözümler (iç linkleme) */
+  solutions?: string[];
   /** ISO 8601 yayın tarihi */
   isoDate: string;
   updated?: string;

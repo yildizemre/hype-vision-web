@@ -21,7 +21,7 @@ export const GUIDES_PART1: Guide[] = [
       },
       {
         type: 'p',
-        text: 'Bu rehberde görüntü işlemenin nasıl çalıştığını, klasik yöntemlerle derin öğrenme arasındaki farkı ve fabrikalarda hangi problemleri çözdüğünü sade bir dille anlatıyoruz. Doğrudan endüstriyel çözümlere bakmak isterseniz [endüstriyel görüntü işleme sistemleri](/goruntu-isleme) sayfamıza geçebilirsiniz.',
+        text: 'Bu rehberde görüntü işlemenin nasıl çalıştığını, klasik yöntemlerle derin öğrenme arasındaki farkı ve fabrikalarda hangi problemleri çözdüğünü sade bir dille anlatıyoruz. Doğrudan endüstriyel çözümlere bakmak isterseniz [endüstriyel görüntü işleme sistemleri](/endustriyel-goruntu-isleme) sayfamıza geçebilirsiniz.',
       },
       { type: 'h2', id: 'nasil-calisir', text: 'Görüntü işleme nasıl çalışır?' },
       {
@@ -116,7 +116,7 @@ export const GUIDES_PART1: Guide[] = [
         a: 'Uygulamaya ve saha koşullarına bağlıdır. Hype Vision sahada kalibrasyon sonrası örneğin baret tespitinde %96–98,6 aralığında doğruluk raporlar; kesin değer pilot ölçümüyle belirlenir.',
       },
     ],
-    related: ['/goruntu-isleme', '/blog/goruntu-isleme-firmasi-secimi', '/blog/goruntu-isleme-ile-kalite-kontrol'],
+    related: ['/endustriyel-goruntu-isleme', '/blog/goruntu-isleme-firmasi-secimi', '/blog/goruntu-isleme-ile-kalite-kontrol'],
   },
   {
     slug: 'goruntu-isleme-firmasi-secimi',
@@ -201,7 +201,7 @@ export const GUIDES_PART1: Guide[] = [
       { type: 'h2', id: 'hype-vision', text: 'Hype Vision bu kriterlerin neresinde?' },
       {
         type: 'p',
-        text: 'Hype Vision, 2020’den beri GTÜ Teknopark Gebze’de endüstriyel görüntü işleme geliştiren bir ekiptir. Mevcut IP kameralarla (marka bağımsız) çalışır; edge, cloud ve hibrit mimari sunar; İSG, kalite ve verimlilik modüllerini tek panelde toplar. Tüm modüller için [görüntü işleme çözümleri](/goruntu-isleme) sayfasına göz atabilirsiniz.',
+        text: 'Hype Vision, 2020’den beri GTÜ Teknopark Gebze’de endüstriyel görüntü işleme geliştiren bir ekiptir. Mevcut IP kameralarla (marka bağımsız) çalışır; edge, cloud ve hibrit mimari sunar; İSG, kalite ve verimlilik modüllerini tek panelde toplar. Tüm modüller için [görüntü işleme çözümleri](/endustriyel-goruntu-isleme) sayfasına göz atabilirsiniz.',
       },
       { type: 'cta' },
     ],
@@ -219,7 +219,7 @@ export const GUIDES_PART1: Guide[] = [
         a: 'İyi kurgulanmış bir pilotta başarı kriterleri baştan yazılır; kriter sağlanmazsa yaygınlaştırma kararı verilmez. Bu yüzden ölçülebilir hedefler pilot öncesi netleştirilmelidir.',
       },
     ],
-    related: ['/goruntu-isleme', '/blog/goruntu-isleme-nedir', '/blog/mevcut-ip-kamera-yapay-zeka'],
+    related: ['/endustriyel-goruntu-isleme', '/blog/goruntu-isleme-nedir', '/blog/mevcut-ip-kamera-yapay-zeka'],
   },
   {
     slug: 'goruntu-isleme-ile-kalite-kontrol',
@@ -278,7 +278,7 @@ export const GUIDES_PART1: Guide[] = [
       { type: 'h2', id: 'geri-donus', text: 'Geri dönüş (ROI) nasıl hesaplanır?' },
       {
         type: 'p',
-        text: 'Basit bir hesap: (önlenen fire adedi × birim maliyet) + (önlenen iade/şikâyet maliyeti) + (kontrole ayrılan iş gücünün başka işe kaydırılması). Bu toplamı yıllık sistem maliyetiyle kıyaslayın. Sahadan bir örnek için [konveyör hattında fire azaltma vaka notu](/blog/kalite-kontrol-fire-azaltma) yazımızı okuyabilirsiniz.',
+        text: 'Basit bir hesap: (önlenen fire adedi × birim maliyet) + (önlenen iade/şikâyet maliyeti) + (kontrole ayrılan iş gücünün başka işe kaydırılması). Bu toplamı yıllık sistem maliyetiyle kıyaslayın. Sahadan bir örnek için [konveyör hattında fire azaltma vaka notu](/vaka-calismalari/kalite-kontrol-fire-azaltma) yazımızı okuyabilirsiniz.',
       },
       {
         type: 'note',
@@ -353,7 +353,7 @@ export const GUIDES_PART1: Guide[] = [
       { type: 'h2', id: 'hibrit', text: 'En iyi sonuç: hibrit yaklaşım' },
       {
         type: 'p',
-        text: 'Pratikte en sağlam sistemler ikisini birleştirir: derin öğrenme “burada bir kusur var mı, nerede?” sorusunu yanıtlar; klasik görüntü işleme o bölgenin ölçüsünü, alanını ve konumunu hassas biçimde hesaplar. Hype Vision kalite modüllerinde de bu hibrit yaklaşım kullanılır. Bkz. [endüstriyel görüntü işleme sistemleri](/goruntu-isleme).',
+        text: 'Pratikte en sağlam sistemler ikisini birleştirir: derin öğrenme “burada bir kusur var mı, nerede?” sorusunu yanıtlar; klasik görüntü işleme o bölgenin ölçüsünü, alanını ve konumunu hassas biçimde hesaplar. Hype Vision kalite modüllerinde de bu hibrit yaklaşım kullanılır. Bkz. [endüstriyel görüntü işleme sistemleri](/endustriyel-goruntu-isleme).',
       },
       { type: 'cta' },
     ],
@@ -367,6 +367,6 @@ export const GUIDES_PART1: Guide[] = [
         a: 'Hayır. Sabit koşullarda basit bir ölçüm işi için kural tabanlı sistem daha hızlı, ucuz ve açıklanabilir olabilir. Derin öğrenme değişkenlik yüksek olduğunda öne çıkar.',
       },
     ],
-    related: ['/blog/goruntu-isleme-nedir', '/blog/goruntu-isleme-ile-kalite-kontrol', '/goruntu-isleme'],
+    related: ['/blog/goruntu-isleme-nedir', '/blog/goruntu-isleme-ile-kalite-kontrol', '/endustriyel-goruntu-isleme'],
   },
 ];

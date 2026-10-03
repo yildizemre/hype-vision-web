@@ -1,39 +1,30 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import tr from './locales/tr';
-import en from './locales/en';
-import ru from './locales/ru';
 import { URL_LANG } from './routing';
 
 export const LANG_KEY = 'hype-lang';
 export const supportedLanguages = ['tr', 'en', 'ru'] as const;
 export type SupportedLanguage = (typeof supportedLanguages)[number];
 
-/** Dil URL'den gelir (/en, /ru); localStorage yalnızca tercih kaydı içindir. */
-function getStoredLanguage(): SupportedLanguage {
-  return URL_LANG;
-}
+/** Yalnızca sayfanın dili (ve yedek olarak TR) yüklenir — diğer dillerin metinleri pakete girmez. */
+const loaders: Record<SupportedLanguage, () => Promise<{ default: Record<string, unknown> }>> = {
+  tr: () => import('./locales/tr'),
+  en: () => import('./locales/en'),
+  ru: () => import('./locales/ru'),
+};
 
-i18n.use(initReactI18next).init({
-  resources: {
-    tr: { translation: tr },
-    en: { translation: en },
-    ru: { translation: ru },
-  },
-  lng: getStoredLanguage(),
-  fallbackLng: 'tr',
-  supportedLngs: [...supportedLanguages],
-  interpolation: {
-    escapeValue: false,
-  },
-});
+export const i18nReady: Promise<void> = (async () => {
+  const langs: SupportedLanguage[] = URL_LANG === 'tr' ? ['tr'] : [URL_LANG, 'tr'];
+  const mods = await Promise.all(langs.map((l) => loaders[l]()));
+  await i18n.use(initReactI18next).init({
+    resources: Object.fromEntries(langs.map((l, i) => [l, { translation: mods[i].default }])),
+    lng: URL_LANG,
+    fallbackLng: 'tr',
+    supportedLngs: [...supportedLanguages],
+    interpolation: { escapeValue: false },
+  });
+})();
 
-export function setLanguage(lang: SupportedLanguage) {
-  localStorage.setItem(LANG_KEY, lang);
-  document.documentElement.lang = lang;
-  return i18n.changeLanguage(lang);
-}
-
-document.documentElement.lang = getStoredLanguage();
+document.documentElement.lang = URL_LANG;
 
 export default i18n;

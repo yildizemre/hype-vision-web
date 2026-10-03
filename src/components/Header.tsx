@@ -19,16 +19,35 @@ export default function Header({ variant = 'default' }: HeaderProps) {
   const { t } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const navLinks = [
-    { label: t('common.header.nav.product'), href: '/#urunler' },
-    { label: t('common.header.nav.inspection'), href: '/#denetim' },
-    { label: t('common.header.nav.about'), href: '/#hakkimizda' },
-    ...(URL_LANG === 'tr' ? [{ label: 'Görüntü İşleme', href: '/goruntu-isleme', isRoute: true }] : []),
-    { label: URL_LANG === 'ru' ? 'Блог' : 'Blog', href: '/blog', isRoute: true },
-    { label: t('common.header.nav.faq'), href: '/sss' },
-    { label: t('common.header.nav.catalog'), href: '/katalog', isRoute: true },
-    { label: t('common.header.contact'), href: '/iletisim', isRoute: true },
-  ];
+  // Dil bazlı menü: yalnızca o dilde var olan sayfalara bağlanır
+  const navLinks: { label: string; href: string; isRoute?: boolean }[] =
+    URL_LANG === 'tr'
+      ? [
+          { label: 'Çözümler', href: '/cozumler', isRoute: true },
+          { label: 'Sektörler', href: '/sektorler', isRoute: true },
+          { label: 'Görüntü İşleme', href: '/endustriyel-goruntu-isleme', isRoute: true },
+          { label: 'Vaka Çalışmaları', href: '/vaka-calismalari', isRoute: true },
+          { label: 'Blog', href: '/blog', isRoute: true },
+          { label: t('common.header.nav.catalog'), href: '/katalog', isRoute: true },
+          { label: t('common.header.contact'), href: '/iletisim', isRoute: true },
+        ]
+      : URL_LANG === 'en'
+        ? [
+            { label: 'Solutions', href: '/solutions', isRoute: true },
+            { label: 'Industries', href: '/industries', isRoute: true },
+            { label: 'Computer Vision', href: '/industrial-computer-vision', isRoute: true },
+            { label: 'Case Studies', href: '/case-studies', isRoute: true },
+            { label: 'Resources', href: '/resources', isRoute: true },
+            { label: 'Partners', href: '/partners', isRoute: true },
+            { label: t('common.header.contact'), href: '/iletisim', isRoute: true },
+          ]
+        : [
+            { label: t('common.header.nav.product'), href: '/#urunler' },
+            { label: t('common.header.nav.inspection'), href: '/#denetim' },
+            { label: t('common.header.nav.about'), href: '/#hakkimizda' },
+            { label: 'Блог', href: '/blog', isRoute: true },
+            { label: t('common.header.contact'), href: '/iletisim', isRoute: true },
+          ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 48);

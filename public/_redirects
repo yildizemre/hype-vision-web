@@ -1,10 +1,24 @@
-# Eski hash bağlantıları
-/vaka-notlari        /blog                 301
+# Kalıcı yönlendirmeler (301)
+/goruntu-isleme              /endustriyel-goruntu-isleme   301
+/cctv-yapay-zeka-analizi     /cctv-yapay-zeka              301
+/vaka-notlari                /vaka-calismalari             301
+/en/blog                     /en/resources                 301
+/en/solutions/cctv-ai-analytics  /en/cctv-ai-analytics     301
+/blog/gida-hattinda-idle-azaltma   /vaka-calismalari/gida-hattinda-idle-azaltma   301
+/en/blog/gida-hattinda-idle-azaltma   /en/case-studies/gida-hattinda-idle-azaltma   301
+/blog/isg-kkd-ihlal-tespiti   /vaka-calismalari/isg-kkd-ihlal-tespiti   301
+/en/blog/isg-kkd-ihlal-tespiti   /en/case-studies/isg-kkd-ihlal-tespiti   301
+/blog/kalite-kontrol-fire-azaltma   /vaka-calismalari/kalite-kontrol-fire-azaltma   301
+/en/blog/kalite-kontrol-fire-azaltma   /en/case-studies/kalite-kontrol-fire-azaltma   301
+/blog/tekstil-hat-a-fire-dususu   /vaka-calismalari/tekstil-hat-a-fire-dususu   301
+/en/blog/tekstil-hat-a-fire-dususu   /en/case-studies/tekstil-hat-a-fire-dususu   301
+/blog/lojistik-palet-sayim-sapmasi   /vaka-calismalari/lojistik-palet-sayim-sapmasi   301
+/en/blog/lojistik-palet-sayim-sapmasi   /en/case-studies/lojistik-palet-sayim-sapmasi   301
 
-# Sunum alanı istemci tarafında yönlendirilir (indekslenmez)
-/sunum/*             /index.html           200
-/en/sunum/*          /index.html           200
-/ru/sunum/*          /index.html           200
+# Sunum alanı istemci tarafında (indekslenmez)
+/sunum/*      /index.html   200
+/en/sunum/*   /index.html   200
+/ru/sunum/*   /index.html   200
 
-# Prerender edilmemiş her adres gerçek 404 döner
-/*                   /404.html             404
+# Prerender edilmemiş her adres gerçek 404
+/*   /404.html   404

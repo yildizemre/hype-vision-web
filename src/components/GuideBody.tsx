@@ -1,5 +1,5 @@
 import { Fragment, type ReactNode } from 'react';
-import { Link } from 'react-router-dom';
+import SmartLink from './kit/SmartLink';
 import { ArrowRight, Lightbulb } from 'lucide-react';
 import type { GuideBlock } from '../data/guides';
 
@@ -16,9 +16,9 @@ export function renderInline(text: string): ReactNode[] {
       const href = m[2];
       out.push(
         href.startsWith('/') ? (
-          <Link key={k++} to={href} className="text-vision-dark font-medium underline decoration-vision/40 underline-offset-2 hover:decoration-vision">
+          <SmartLink key={k++} href={href} className="text-vision-dark font-medium underline decoration-vision/40 underline-offset-2 hover:decoration-vision">
             {m[1]}
-          </Link>
+          </SmartLink>
         ) : (
           <a key={k++} href={href} rel="noopener" className="text-vision-dark underline">
             {m[1]}
@@ -40,7 +40,7 @@ export function renderInline(text: string): ReactNode[] {
 
 const pCls = 'text-[15px] sm:text-base text-gray-700 leading-relaxed';
 
-export default function GuideBody({ blocks, ctaDefault }: { blocks: GuideBlock[]; ctaDefault: string }) {
+export default function GuideBody({ blocks, ctaDefault, lang = 'tr' }: { blocks: GuideBlock[]; ctaDefault: string; lang?: 'tr' | 'en' }) {
   return (
     <>
       {blocks.map((b, i) => {
@@ -103,15 +103,15 @@ export default function GuideBody({ blocks, ctaDefault }: { blocks: GuideBlock[]
           case 'cta':
             return (
               <div key={i} className="rounded-2xl bg-[#0c2a30] p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
-                <p className="text-white text-base font-medium leading-relaxed">{b.text ?? ctaDefault}</p>
-                <Link
-                  to="/iletisim"
+                <p className="text-white text-base font-medium leading-relaxed">{b.text ?? (ctaDefault || (lang === 'en' ? 'Send us a few frames from your cameras and the problem you want to solve.' : 'Kameralarınızdan birkaç kare ve çözmek istediğiniz problemi gönderin.'))}</p>
+                <SmartLink
+                  href={lang === 'en' ? '/en/camera-assessment' : '/kamera-degerlendirme'}
                   data-track="contact_cta"
                   data-track-location="guide"
                   className="inline-flex items-center justify-center gap-2 shrink-0 text-sm font-semibold text-white px-6 py-3 rounded-lg bg-vision hover:bg-vision-dark transition-colors"
                 >
-                  Keşif görüşmesi planla <ArrowRight size={16} />
-                </Link>
+                  {lang === 'en' ? 'Evaluate your cameras' : 'Kameralarınızı değerlendirelim'} <ArrowRight size={16} />
+                </SmartLink>
               </div>
             );
           default:

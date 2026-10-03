@@ -1,11 +1,12 @@
-# Netlify: build sırasında her sayfa statik HTML'e çevrilir (SEO için şart).
+# Netlify: her sayfa build sırasında statik HTML'e çevrilir (SEO için şart).
+# Netlify ortamında Chrome başlatılamazsa build düşmesin diye repodaki hazır dist/ yayınlanır
+# (dist/ her commit öncesi `npm run build:prerender` ile lokalde güncellenir).
 [build]
-  command = "npm run build:prerender"
+  command = "npm run build:prerender || (echo 'UYARI: prerender basarisiz, repodaki hazir dist yayinlaniyor' && rm -rf dist && git checkout -- dist)"
   publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
-  # Puppeteer'ın indirdiği Chrome build önbelleğinde kalsın
   PUPPETEER_CACHE_DIR = "/opt/build/repo/node_modules/.cache/puppeteer"
 
 [[headers]]
@@ -18,3 +19,8 @@
   [headers.values]
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"

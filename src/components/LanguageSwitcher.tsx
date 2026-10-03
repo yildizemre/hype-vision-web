@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import { LANG_PREFIX, URL_LANG } from '../i18n/routing';
 import { LANG_KEY, type SupportedLanguage } from '../i18n';
-import { isTranslatedPath } from '../seo/routes';
+import { findCluster, toFullPath } from '../seo/routes';
 
 type LanguageSwitcherProps = {
   variant?: 'hero' | 'solid';
@@ -15,9 +15,12 @@ export default function LanguageSwitcher({ variant = 'solid', className = '' }: 
 
   const location = useLocation();
 
-  // Çevirisi olmayan sayfada (TR'ye özel içerik) hedef dilin ana sayfasına git
-  const targetPath = isTranslatedPath(location.pathname) ? location.pathname : '/';
-  const hrefFor = (lang: SupportedLanguage) => `${LANG_PREFIX[lang]}${targetPath}${location.hash}`;
+  // Sayfanın o dilde karşılığı varsa ona, yoksa o dilin ana sayfasına git
+  const cluster = findCluster(toFullPath(LANG_PREFIX[URL_LANG], location.pathname));
+  const hrefFor = (lang: SupportedLanguage) => {
+    const target = cluster?.urls[lang];
+    return target ? `${target}${location.hash}` : LANG_PREFIX[lang] ? `${LANG_PREFIX[lang]}/` : '/';
+  };
 
   const rememberLang = (lang: SupportedLanguage) => {
     try {

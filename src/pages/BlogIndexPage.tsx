@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom';
+import SmartLink from '../components/kit/SmartLink';
+import { caseUrl } from '../content/cases';
 import { ArrowRight, BookOpen, Clock, Tag } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { GUIDES } from '../data/guides';
+import { GUIDES, GUIDES_EN, guideUrl } from '../data/guides';
 import { SITE_URL } from '../data/legalContent';
 import { useBlogPosts } from '../i18n/content';
 import { URL_LANG, pathFor } from '../i18n/routing';
@@ -24,15 +25,15 @@ const COPY = {
     home: 'Ana sayfa',
   },
   en: {
-    title: 'Industrial AI & Computer Vision Blog | Hype Vision',
+    title: 'Resources: Industrial Computer Vision & CCTV AI Knowledge Centre | Hype Vision',
     description:
-      'Anonymous field case notes on computer vision for safety, quality control and productivity from the Hype Vision engineering team.',
-    eyebrow: 'Blog',
+      'Technical guides on industrial computer vision and CCTV AI analytics: RTSP/ONVIF, edge vs cloud, camera evaluation, accuracy, pilots, PPE detection, forklift safety and quality inspection.',
+    eyebrow: 'Resources',
     h1: 'Industrial computer vision',
-    h1b: 'case notes',
-    intro: 'Measured results from real deployments — customer names withheld, numbers kept.',
+    h1b: 'knowledge centre',
+    intro: 'Practical, vendor-neutral guides for HSE, operations and IT teams planning AI video analytics on existing cameras — plus anonymised case studies.',
     guides: 'Guides',
-    cases: 'Case notes',
+    cases: 'Case studies',
     read: 'Read',
     home: 'Home',
   },
@@ -54,8 +55,8 @@ const COPY = {
 export default function BlogIndexPage() {
   const c = COPY[URL_LANG];
   const posts = useBlogPosts();
-  const guides = URL_LANG === 'tr' ? GUIDES : [];
-  const url = `${SITE_URL}${pathFor('/blog', URL_LANG)}`;
+  const guides = URL_LANG === 'tr' ? GUIDES : URL_LANG === 'en' ? GUIDES_EN : [];
+  const url = `${SITE_URL}${URL_LANG === 'en' ? '/en/resources' : pathFor('/blog', URL_LANG)}`;
 
   usePageMeta({
     title: c.title,
@@ -74,13 +75,13 @@ export default function BlogIndexPage() {
             '@type': 'BlogPosting',
             headline: g.title,
             datePublished: g.isoDate,
-            url: `${SITE_URL}/blog/${g.slug}`,
+            url: `${SITE_URL}${guideUrl(g)}`,
           })),
           ...posts.map((p) => ({
             '@type': 'BlogPosting',
             headline: p.title,
             datePublished: p.isoDate,
-            url: `${SITE_URL}${pathFor(`/blog/${p.slug}`, URL_LANG)}`,
+            url: `${SITE_URL}${caseUrl(p.slug, URL_LANG)}`,
           })),
         ],
       },
@@ -124,12 +125,12 @@ export default function BlogIndexPage() {
                     </span>
                   </div>
                   <h3 className="text-base sm:text-lg font-semibold text-[#0A0A0A] leading-snug mb-2 group-hover:text-vision-dark">
-                    <Link to={`/blog/${g.slug}`}>{g.title}</Link>
+                    <SmartLink href={guideUrl(g)}>{g.title}</SmartLink>
                   </h3>
                   <p className="text-sm text-gray-500 leading-relaxed mb-4 flex-1">{g.excerpt}</p>
-                  <Link to={`/blog/${g.slug}`} className="inline-flex items-center gap-1.5 text-sm font-semibold text-vision hover:text-vision-dark">
+                  <SmartLink href={guideUrl(g)} className="inline-flex items-center gap-1.5 text-sm font-semibold text-vision hover:text-vision-dark">
                     {c.read} <ArrowRight size={14} />
-                  </Link>
+                  </SmartLink>
                 </article>
               ))}
             </div>
@@ -151,12 +152,12 @@ export default function BlogIndexPage() {
                   <span className="text-gray-400">{p.date}</span>
                 </div>
                 <h3 className="text-base sm:text-lg font-semibold text-[#0A0A0A] leading-snug mb-2 group-hover:text-vision-dark">
-                  <Link to={`/blog/${p.slug}`}>{p.title}</Link>
+                  <SmartLink href={caseUrl(p.slug, URL_LANG)}>{p.title}</SmartLink>
                 </h3>
                 <p className="text-sm text-gray-500 leading-relaxed mb-4 flex-1">{p.excerpt}</p>
-                <Link to={`/blog/${p.slug}`} className="inline-flex items-center gap-1.5 text-sm font-semibold text-vision hover:text-vision-dark">
+                <SmartLink href={caseUrl(p.slug, URL_LANG)} className="inline-flex items-center gap-1.5 text-sm font-semibold text-vision hover:text-vision-dark">
                   {c.read} <ArrowRight size={14} />
-                </Link>
+                </SmartLink>
               </article>
             ))}
           </div>

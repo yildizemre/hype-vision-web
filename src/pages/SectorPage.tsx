@@ -8,7 +8,7 @@ import TrustBadges from '../components/TrustBadges';
 import PilotTimeline from '../components/PilotTimeline';
 import { useBlogPost, useSectorList, useSectorPage } from '../i18n/content';
 import { getHomeSeoStrings } from '../components/HomeSeo';
-import { localizeHref } from '../i18n/routing';
+import { URL_LANG, localizeHref } from '../i18n/routing';
 
 function setMeta(name: string, content: string, attr: 'name' | 'property' = 'name') {
   let el = document.querySelector(`meta[${attr}="${name}"]`) as HTMLMetaElement | null;
@@ -148,7 +148,7 @@ export default function SectorPage() {
                   ))}
                 </div>
                 <Link
-                  to={`/blog/${casePost.slug}`}
+                  to={URL_LANG === 'ru' ? `/blog/${casePost.slug}` : URL_LANG === 'en' ? `/case-studies/${casePost.slug}` : `/vaka-calismalari/${casePost.slug}`}
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-vision hover:text-vision-dark"
                 >
                   {t('sections.blog.readMore')}
