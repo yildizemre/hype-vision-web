@@ -65,15 +65,9 @@ const localBusiness = {
   image: `${SITE_URL}/og-image.png`,
   email: SITE_BRAND.email,
   telephone: SITE_BRAND.phone,
-  priceRange: '$$',
+  // priceRange / openingHoursSpecification removed: no business source for them in the repo
   address: organization.address,
   geo: organization.geo,
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    opens: '09:00',
-    closes: '18:00',
-  },
   areaServed: {
     '@type': 'Country',
     name: 'Turkey',

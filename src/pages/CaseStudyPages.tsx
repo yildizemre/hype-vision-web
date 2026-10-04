@@ -38,8 +38,12 @@ export function CaseStudyPage() {
   }, [cs, slug]);
 
   usePageMeta({
-    title: post ? `${post.title} | ${l === 'en' ? 'Case study' : 'Vaka çalışması'} — Hype Vision` : 'Hype Vision',
-    description: post?.metaDescription ?? '',
+    title: post
+      ? cs?.seo?.[l]
+        ? `${cs.seo[l]!.title} | Hype Vision`
+        : `${post.title} | ${l === 'en' ? 'Case study' : 'Vaka çalışması'} — Hype Vision`
+      : 'Hype Vision',
+    description: cs?.seo?.[l]?.description ?? post?.metaDescription ?? '',
     ogType: 'article',
     schemas:
       cs && post
@@ -80,7 +84,8 @@ export function CaseStudyPage() {
   const solutions = cs.solutions
     .map(getSolution)
     .filter((s) => solutionUrl(s, l))
-    .map((s) => ({ title: solutionName(s, l), url: solutionUrl(s, l)! }));
+    .map((s) => ({ title: solutionName(s, l), url: solutionUrl(s, l)! }))
+    .concat(cs.extraLinks?.[l] ?? []);
   const assess = l === 'en' ? '/en/camera-assessment' : '/kamera-degerlendirme';
 
   return (

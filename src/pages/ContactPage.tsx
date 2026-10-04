@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { ChevronRight, Mail, MapPin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
 import { trackContactPageView } from '../lib/conversions';
+import HomeLink from '../components/kit/HomeLink';
 
 function setMeta(name: string, content: string, attr: 'name' | 'property' = 'name') {
   let el = document.querySelector(`meta[${attr}="${name}"]`) as HTMLMetaElement | null;
@@ -44,9 +44,9 @@ export default function ContactPage() {
       <div className="pt-16 lg:pt-[4.25rem] bg-[#0c2a30] border-b border-vision/15">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-14 text-center">
           <nav aria-label="Breadcrumb" className="flex flex-wrap items-center justify-center gap-1.5 text-xs text-gray-400 mb-5">
-            <Link to="/" className="hover:text-vision-light transition-colors">
+            <HomeLink className="hover:text-vision-light transition-colors">
               {t('blog.ui.breadcrumbHome')}
-            </Link>
+            </HomeLink>
             <ChevronRight size={12} className="text-gray-600" aria-hidden />
             <span className="text-vision-light font-medium">{t('common.contactPage.eyebrow')}</span>
           </nav>

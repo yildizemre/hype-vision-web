@@ -1,6 +1,7 @@
 import type { AnchorHTMLAttributes, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { LANG_PREFIX, URL_LANG } from '../../i18n/routing';
+import HomeLink from './HomeLink';
 
 /**
  * İçerik verisi tam yol tutar ("/en/solutions/x", "/baret-tespit-sistemi").
@@ -22,6 +23,8 @@ type Props = { href: string; children: ReactNode } & Omit<AnchorHTMLAttributes<H
 
 export default function SmartLink({ href, children, ...rest }: Props) {
   const to = routerPath(href);
+  // Language root: render "/en/" directly instead of the basename's "/en" (which redirects)
+  if (to === '/') return <HomeLink {...rest}>{children}</HomeLink>;
   if (to !== null) {
     return (
       <Link to={to} {...rest}>

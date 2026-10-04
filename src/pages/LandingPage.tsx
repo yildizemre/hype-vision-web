@@ -8,6 +8,7 @@ import TrustBadges from '../components/TrustBadges';
 import PilotTimeline from '../components/PilotTimeline';
 import { SITE_URL } from '../data/legalContent';
 import { getLandingPage } from '../data/landingPages';
+import HomeLink from '../components/kit/HomeLink';
 
 function setMeta(name: string, content: string, attr: 'name' | 'property' = 'name') {
   let el = document.querySelector(`meta[${attr}="${name}"]`) as HTMLMetaElement | null;
@@ -71,9 +72,9 @@ export default function LandingPage() {
       <div className="pt-16 lg:pt-[4.25rem] hero-bg border-b border-vision/15">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-16">
           <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-xs text-gray-400 mb-6">
-            <Link to="/" className="hover:text-white transition-colors">
+            <HomeLink className="hover:text-white transition-colors">
               Ana sayfa
-            </Link>
+            </HomeLink>
             <ChevronRight size={12} aria-hidden />
             <span className="text-gray-500">{page.type === 'sector' ? 'Sektör' : 'Modül'}</span>
             <ChevronRight size={12} aria-hidden />

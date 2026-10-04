@@ -10,6 +10,7 @@ import NotFoundPage from './NotFoundPage';
 import { getGuide } from '../data/guides';
 import { URL_LANG, pathFor } from '../i18n/routing';
 import { breadcrumbSchema, usePageMeta } from '../seo/usePageMeta';
+import HomeLink from '../components/kit/HomeLink';
 
 export default function BlogPostPage() {
   const { slug = '' } = useParams<{ slug: string }>();
@@ -66,9 +67,9 @@ function CaseNotePage({ slug }: { slug: string }) {
       <div className="pt-16 lg:pt-[4.25rem] bg-[#0c2a30] border-b border-vision/15">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-10 py-8 sm:py-12">
           <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-xs text-gray-400 mb-5">
-            <Link to="/" className="hover:text-vision-light transition-colors">
+            <HomeLink className="hover:text-vision-light transition-colors">
               {t('blog.ui.breadcrumbHome')}
-            </Link>
+            </HomeLink>
             <ChevronRight size={12} className="text-gray-600" aria-hidden />
             <Link to="/blog" className="hover:text-vision-light transition-colors">
               {t('blog.ui.breadcrumbBlog')}

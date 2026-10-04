@@ -12,6 +12,7 @@ import {
 } from '../data/legalContent';
 import { useLegalNavLinks, useLegalPage, useLegalPagesList } from '../i18n/content';
 import { getHomeSeoStrings } from '../components/HomeSeo';
+import HomeLink from '../components/kit/HomeLink';
 
 function sectionAnchor(section: LegalSection, index: number): string {
   if (section.id) return section.id;
@@ -83,9 +84,9 @@ export default function LegalPage() {
       <div className="pt-16 lg:pt-[4.25rem] bg-[#0c2a30] border-b border-vision/15">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-8 sm:py-12 lg:py-14">
           <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-xs text-gray-400 mb-5">
-            <Link to="/" className="hover:text-vision-light transition-colors">
+            <HomeLink className="hover:text-vision-light transition-colors">
               {t('legal.ui.breadcrumbHome')}
-            </Link>
+            </HomeLink>
             <ChevronRight size={12} className="text-gray-600 shrink-0" aria-hidden />
             <span className="text-gray-500">{t('legal.ui.breadcrumbLegal')}</span>
             <ChevronRight size={12} className="text-gray-600 shrink-0" aria-hidden />

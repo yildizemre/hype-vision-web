@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { usePageMeta } from '../seo/usePageMeta';
+import HomeLink from '../components/kit/HomeLink';
 
 export default function NotFoundPage() {
   const { t } = useTranslation();
@@ -23,13 +24,12 @@ export default function NotFoundPage() {
             {t('common.notFound.description')}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <Link
-              to="/"
+            <HomeLink
               className="inline-flex items-center justify-center gap-2 w-full sm:w-auto text-sm font-semibold text-white px-6 py-3.5 rounded-lg bg-vision hover:bg-vision-dark transition-colors"
             >
               <Home size={16} />
               {t('common.notFound.home')}
-            </Link>
+            </HomeLink>
             <Link
               to="/#iletisim"
               data-track="contact_cta"
@@ -41,13 +41,12 @@ export default function NotFoundPage() {
               {t('common.notFound.contact')}
             </Link>
           </div>
-          <Link
-            to="/"
+          <HomeLink
             className="inline-flex items-center gap-1.5 mt-8 text-xs text-gray-400 hover:text-vision transition-colors"
           >
             <ArrowLeft size={14} />
             {t('common.notFound.back')}
-          </Link>
+          </HomeLink>
         </div>
       </main>
       <Footer />

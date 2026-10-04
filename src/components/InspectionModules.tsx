@@ -10,7 +10,18 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { localizeHref } from '../i18n/routing';
+import { Link } from 'react-router-dom';
+import { URL_LANG, localizeHref } from '../i18n/routing';
+
+/** TR solution pages — direct crawl paths from the homepage to the main commercial pages. */
+const SOLUTION_LINKS = [
+  { label: 'Baret tespit sistemi', href: '/baret-tespit-sistemi' },
+  { label: 'KKD kontrol sistemi', href: '/kkd-kontrol-kamera-sistemi' },
+  { label: 'Forklift–yaya güvenliği', href: '/forklift-yaya-guvenlik-sistemi' },
+  { label: 'Düşme tespit sistemi', href: '/dusme-tespit-sistemi' },
+  { label: 'Görüntü işleme ile kalite kontrol', href: '/kalite-kontrol-goruntu-isleme' },
+  { label: 'ONVIF / RTSP yapay zeka entegrasyonu', href: '/onvif-rtsp-yapay-zeka-entegrasyonu' },
+];
 
 type Module = {
   Icon: LucideIcon;
@@ -159,6 +170,24 @@ export default function InspectionModules() {
             />
           ))}
         </div>
+
+        {URL_LANG === 'tr' && (
+          <nav aria-label="Çözüm sayfaları" className="mt-8 sm:mt-10">
+            <p className="text-xs font-semibold tracking-[0.15em] uppercase text-vision-dark mb-3">Çözüm sayfaları</p>
+            <ul className="flex flex-wrap gap-2">
+              {SOLUTION_LINKS.map((l) => (
+                <li key={l.href}>
+                  <Link
+                    to={l.href}
+                    className="inline-flex items-center text-sm text-[#0A0A0A] bg-white border border-vision/20 rounded-lg px-3.5 py-2 hover:border-vision hover:text-vision-dark transition-colors"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
 
         <div className="mt-10 sm:mt-14 p-6 sm:p-8 rounded-xl panel-card flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
           <div className="max-w-xl">

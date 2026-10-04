@@ -21,6 +21,10 @@ export type CaseStudy = {
   facts: Record<Lang, CaseFacts>;
   isoDate: string;
   todo: string[];
+  /** Extra related pages that are not SolutionIds (e.g. TR module landing pages) */
+  extraLinks?: Partial<Record<Lang, { title: string; url: string }[]>>;
+  /** SERP title/description; the on-page H1 stays the narrative title. Only facts already in the case text. */
+  seo?: Partial<Record<Lang, { title: string; description: string }>>;
 };
 
 const COMMON_TODO = [
@@ -53,6 +57,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     },
     isoDate: '2026-05-02',
     todo: [...COMMON_TODO, 'VMS popup entegrasyonunun hangi VMS ile yapıldığı'],
+    extraLinks: { tr: [{ title: 'Baret tespit sistemi', url: '/baret-tespit-sistemi' }] },
   },
   {
     slug: 'kalite-kontrol-fire-azaltma',
@@ -65,6 +70,14 @@ export const CASE_STUDIES: CaseStudy[] = [
     },
     isoDate: '2026-04-20',
     todo: [...COMMON_TODO, 'Kamera sayısı ve tipi', 'Kurulum tipi (edge / sunucu)'],
+    extraLinks: { tr: [{ title: 'Yüzey kusuru tespiti', url: '/yuzey-kusuru-tespiti' }] },
+    seo: {
+      tr: {
+        title: 'Görüntü İşleme ile Kalite Kontrol: Fire %22 Azaldı',
+        description:
+          'Beyaz eşya komponent hattında yüzey hataları kamera ile anında yakalandı; geç müdahaleden kaynaklanan hurda birikimi azaldı. 4 iş günü kurulum, 8 hafta pilot — vaka çalışması.',
+      },
+    },
   },
   {
     slug: 'tekstil-hat-a-fire-dususu',
@@ -77,6 +90,14 @@ export const CASE_STUDIES: CaseStudy[] = [
     },
     isoDate: '2026-05-28',
     todo: [...COMMON_TODO],
+    extraLinks: { tr: [{ title: 'Tekstil fabrikası için yapay zeka', url: '/sektor/tekstil-fabrikasi-yapay-zeka' }] },
+    seo: {
+      tr: {
+        title: 'Tekstil Kalite Kontrolü: Fire %31 Azaldı',
+        description:
+          'Konfeksiyon tesisinde dikiş sonrası paketleme hattında hatalı ürün kamera ile erken ayrıldı; hurda ve geri işleme azaldı. 4 mevcut IP kamera, 30 gün pilot — vaka çalışması.',
+      },
+    },
   },
   {
     slug: 'lojistik-palet-sayim-sapmasi',
@@ -89,6 +110,14 @@ export const CASE_STUDIES: CaseStudy[] = [
     },
     isoDate: '2026-05-10',
     todo: [...COMMON_TODO, 'Kurulum tipi (edge / sunucu)'],
+    extraLinks: { tr: [{ title: 'Depo ve lojistik kamera analizi', url: '/sektor/depo-lojistik-guvenlik' }] },
+    seo: {
+      tr: {
+        title: 'Kamera ile Palet Sayımı ve Sapma Tespiti',
+        description:
+          'Sevkiyat rampasında beklenen ve sayılan palet arasındaki fark mevcut 3 kamera ile anında yakalandı; sevkiyat hataları %60 azaldı. 3 iş günü kurulum — vaka çalışması.',
+      },
+    },
   },
 ];
 

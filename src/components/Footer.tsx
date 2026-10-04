@@ -8,6 +8,7 @@ import { trackLeadSubmit } from '../lib/conversions';
 import LegalFooterBar from './LegalFooterBar';
 import { useLegalNavLinks } from '../i18n/content';
 import { URL_LANG, localizeHref } from '../i18n/routing';
+import HomeLink from './kit/HomeLink';
 
 const FOOTER_LOGO = '/hypefoooterlogo.png';
 
@@ -74,8 +75,20 @@ export default function Footer({ hideLegalBar = false }: FooterProps) {
             : []),
         { label: t('common.footer.links.whoFor'), href: '/#kimler-icin' },
         ...sectorLinks.map((s) => ({ label: s.tag, href: `/sektor/${s.slug}` })),
-        { label: t('common.footer.links.hseInspection'), href: URL_LANG === 'tr' ? '/kkd-kontrol-kamera-sistemi' : '/#denetim' },
-        { label: t('common.footer.links.qualityControl'), href: URL_LANG === 'tr' ? '/kalite-kontrol-goruntu-isleme' : '/#denetim' },
+        // TR: direct, descriptive links to the primary commercial solution pages (crawl paths)
+        ...(URL_LANG === 'tr'
+          ? [
+              { label: 'Baret Tespit Sistemi', href: '/baret-tespit-sistemi' },
+              { label: 'KKD Kontrol Sistemi', href: '/kkd-kontrol-kamera-sistemi' },
+              { label: 'Forklift–Yaya Güvenliği', href: '/forklift-yaya-guvenlik-sistemi' },
+              { label: 'Düşme Tespit Sistemi', href: '/dusme-tespit-sistemi' },
+              { label: 'Görüntü İşleme ile Kalite Kontrol', href: '/kalite-kontrol-goruntu-isleme' },
+              { label: 'ONVIF / RTSP Yapay Zeka Entegrasyonu', href: '/onvif-rtsp-yapay-zeka-entegrasyonu' },
+            ]
+          : [
+              { label: t('common.footer.links.hseInspection'), href: '/#denetim' },
+              { label: t('common.footer.links.qualityControl'), href: '/#denetim' },
+            ]),
         ...(URL_LANG === 'tr'
           ? [
               { label: 'Pilot süreci', href: '/pilot' },
@@ -118,7 +131,7 @@ export default function Footer({ hideLegalBar = false }: FooterProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16 lg:py-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link to="/" className="inline-block mb-6" aria-label={t('common.brand.ariaLabel')}>
+            <HomeLink className="inline-block mb-6" aria-label={t('common.brand.ariaLabel')}>
               <img
                 src={FOOTER_LOGO}
                 alt={t('common.brand.alt')}
@@ -126,7 +139,7 @@ export default function Footer({ hideLegalBar = false }: FooterProps) {
                 height={48}
                 className="h-10 sm:h-12 w-auto object-contain"
               />
-            </Link>
+            </HomeLink>
             <p className="text-gray-500 text-sm font-light leading-relaxed mb-6 max-w-sm">
               {t('common.footer.description')}
             </p>

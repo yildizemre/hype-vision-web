@@ -9,6 +9,7 @@ import PilotTimeline from '../components/PilotTimeline';
 import { useBlogPost, useSectorList, useSectorPage } from '../i18n/content';
 import { getHomeSeoStrings } from '../components/HomeSeo';
 import { URL_LANG, localizeHref } from '../i18n/routing';
+import HomeLink from '../components/kit/HomeLink';
 
 function setMeta(name: string, content: string, attr: 'name' | 'property' = 'name') {
   let el = document.querySelector(`meta[${attr}="${name}"]`) as HTMLMetaElement | null;
@@ -53,9 +54,9 @@ export default function SectorPage() {
       <div className="pt-16 lg:pt-[4.25rem] hero-bg border-b border-vision/15">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-16">
           <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-xs text-gray-400 mb-6">
-            <Link to="/" className="hover:text-white transition-colors">
+            <HomeLink className="hover:text-white transition-colors">
               {t('sectors.ui.breadcrumbHome')}
-            </Link>
+            </HomeLink>
             <ChevronRight size={12} aria-hidden />
             <span className="text-gray-500">{t('sectors.ui.breadcrumbSectors')}</span>
             <ChevronRight size={12} aria-hidden />

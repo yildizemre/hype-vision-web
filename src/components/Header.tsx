@@ -4,6 +4,7 @@ import { X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import { URL_LANG, localizeHref } from '../i18n/routing';
+import HomeLink from './kit/HomeLink';
 
 /** Koyu / mavi hero üzerinde (footer logosu) */
 const LOGO_ON_HERO = '/hypefoooterlogo.png';
@@ -80,7 +81,7 @@ export default function Header({ variant = 'default' }: HeaderProps) {
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
           <div className="relative flex items-center justify-between h-16 lg:h-[4.25rem]">
-            <Link to="/" className="relative z-10 shrink-0" onClick={closeMobile} aria-label={t('common.brand.ariaLabel')}>
+            <HomeLink className="relative z-10 shrink-0" onClick={closeMobile} aria-label={t('common.brand.ariaLabel')}>
               <img
                 key={logoSrc}
                 src={logoSrc}
@@ -89,7 +90,7 @@ export default function Header({ variant = 'default' }: HeaderProps) {
                 height={44}
                 className="h-9 sm:h-10 w-auto object-contain transition-opacity duration-300"
               />
-            </Link>
+            </HomeLink>
 
             <nav
               className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-5 lg:gap-8"
