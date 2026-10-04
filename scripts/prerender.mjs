@@ -43,9 +43,16 @@ function createSpaServer() {
   });
 }
 
+/**
+ * "/x" → dist/x.html (Netlify serves it at /x with 200, no redirect to /x/).
+ * Writing dist/x/index.html made Netlify 301 every canonical "/x" to "/x/", so every
+ * sitemap/canonical URL was a redirect. Routes that end in "/" ("/", "/en/") keep index.html.
+ */
 function routeToFile(route) {
-  const clean = route.replace(/^\//, '').replace(/\/$/, '');
-  return clean ? path.join(dist, clean, 'index.html') : path.join(dist, 'index.html');
+  const clean = route.replace(/^\//, '');
+  if (!clean) return path.join(dist, 'index.html');
+  if (clean.endsWith('/')) return path.join(dist, clean, 'index.html');
+  return path.join(dist, `${clean}.html`);
 }
 
 async function renderTo(browser, url, outFile) {
