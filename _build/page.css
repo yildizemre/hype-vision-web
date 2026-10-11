@@ -59,3 +59,4 @@
 .tldr-g b{font-size:13px;font-weight:700;color:var(--acc);text-transform:uppercase;letter-spacing:.06em}
 .tldr-g p{font-size:15px;color:#2F3237;margin-top:4px}
 @media (max-width:900px){.tldr-g{grid-template-columns:1fr}}
+.rel3{grid-template-columns:repeat(3,1fr)}@media (max-width:900px){.rel3{grid-template-columns:1fr}}

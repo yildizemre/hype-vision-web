@@ -10380,10 +10380,531 @@
     "/en/solutions/visual-quality-inspection"
    ]
   },
-  "/baret-tespit-sistemi": null,
-  "/yuzey-kusuru-tespiti": null,
-  "/kvkk-uyumlu-kamera-analitigi": null,
-  "/onvif-rtsp-yapay-zeka-entegrasyonu": null,
+  "/baret-tespit-sistemi": {
+   "path": "/en/solutions/hard-hat-detection",
+   "title": "Hard Hat Detection System — 24/7 Automatic Monitoring",
+   "desc": "Detect personnel entering the site without wearing a hard hat using existing IP cameras and artificial intelligence: timestamped evidence frame, instant alerts, and shift-based reporting. Let’s evaluate your camera infrastructure together.",
+   "intro": [
+    "The Hype Vision hard hat detection module instantly identifies lack of hard hats by analysing live footage from your facility’s existing IP cameras (RTSP/ONVIF) using deep learning. In areas where human supervision is sample-based, AI monitors every frame; upon violation, the panel, mobile notification, or turnstile locking is triggered. Based in Bilişim Vadisi (Gebze), Hype Vision has delivered proven accuracy rates on industrial OHS projects since 2020. During shift changes with concentrated entry traffic, hard hat violations are among the most frequent OHS reports; automatic detection makes these violations instantly visible.",
+    "Accuracy: 96–98.6%"
+   ],
+   "specs": [
+    [
+     "Image processing occurs on an Edge server or a specified GPU unit; analysis is completed without video leaving the facility. This architecture is ideal in terms of KVKK (Turkish GDPR) compliance: raw footage is not stored unless necessary, only the violation event and evidence frame are recorded. Facial recognition is disabled by default; hard hat detection focuses on equipment absence without processing personal data.",
+     "The same principles apply in cloud or hybrid architectures. A central panel collects hard hat violation metrics from different locations; role-based access ensures only authorised users view reports. Data encryption, access logs, and retention policies are defined under contract."
+    ],
+    [
+     "Alarm delay in Edge setups ranges between 100–300 ms; response time under 1 second is targeted for critical OHS scenarios. The system can operate offline: analysis continues and data is stored locally even during internet outages, synchronising once connection is restored.",
+     "Hard hat colour (white, yellow, blue, red) and type are distinguished by the model; different hard hat rules may be defined per department."
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Why Automate Hard Hat Detection?",
+     "p": [
+      "Wearing a hard hat is legally mandatory in construction, metal, chemical, and heavy industry facilities; however, manual inspection during shift changes, heavy traffic, and expansive sites is unsustainable. Security personnel can check a limited number of staff per minute; AI simultaneously analyses dozens of frames per second. This difference prevents violations from going unnoticed and measurably reduces workplace accident risks.",
+      "Hype Vision’s hard hat detection system generates meaningful events instead of storing raw video: violation timestamp, camera ID, zone label, and evidence frame appear on the panel. OHS managers can instantly answer the question “who passed without a hard hat, when, and at which gate?” The module demonstrates 96–98.6% accuracy in catalogue data.",
+      "The system integrates with your existing infrastructure; no new cameras are required. It connects to any IP camera stream supporting Hikvision, Dahua, Axis, Bosch, or RTSP standards. Installation is planned by our engineering team in Bilişim Vadisi (Gebze) after site discovery; pilot calibration is performed with field data.",
+      "In pilot projects at organised industrial zones (OSB), hard hat violation rates may decrease by 40–60% within the first 90 days; targeted training and turnstile integration reinforce this impact."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Turnstile and Access Control Integration",
+     "p": [
+      "When a hard hat violation is detected, a turnstile locking scenario can be implemented via industrial protocols. Modbus TCP, Ethernet/IP, or digital I/O relay outputs enable automatic activation of turnstiles, barriers, or door controls. If staff attempt to pass without a hard hat, the system both triggers an alarm and blocks physical access; this dual-layer approach accelerates behavioural change.",
+      "Turnstile integration is optional. While warnings and reporting may suffice at some facilities, physical locking is preferred in high-risk areas such as high voltage, molten metal zones, or under cranes. Hype Vision supports both scenarios; your operational flow is analysed during the discovery meeting to determine optimal triggering points.",
+      "During integration, your existing access control system (card readers, biometrics, turnstile brand) remains intact. Hype Vision only generates violation signals; these are communicated to your turnstile controller via the defined protocol. False positive rates are minimised through testing scenarios after installation.",
+      "Digital output signals are sent to turnstile controllers like Özen, Gunnebo, etc., via Modbus/Ethernet/IP; your current access control infrastructure is preserved."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Installation Process and Pilot Package",
+     "p": [
+      "The Hype Vision installation process is composed of four phases: site survey and camera angle optimisation, module configuration, calibration, and commissioning. The standard hard hat module with 4–8 cameras is typically deployed within 1–3 working days. For medium-sized facilities, 1–2 weeks are planned; multi-location projects take 3–6 weeks.",
+      "You can test hard hat detection at a specific door or area with a 30-day pilot package. At pilot completion, accuracy, false positive/negative analysis, and ROI reports are provided. If satisfied, modules for PPE, restricted area, and forklift detection are added on the same infrastructure.",
+      "You may initiate a demo or discovery remotely via video conference or from our Bilişim Vadisi, Gebze office. Simply share your existing camera brand/model list; RTSP/ONVIF compatibility is verified during pre-assessment.",
+      "After installation, training is provided to your OHS team on the panel; notification channels including WhatsApp, Telegram, email, and SMS are configured."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Reporting and Continuous Improvement — Demo and Contact",
+     "p": [
+      "Daily, weekly, and shift-based hard hat violation counts are displayed on the panel. The zone heatmap shows gates or corridors with most violations; OHS teams can execute targeted training or physical adjustments. Data can be transferred to ERP, SAP, or BI tools via REST API.",
+      "Custom model training is available: field data for hard hat colour, type, or specific site conditions (dust, low light, reflective surfaces) is collected and used to fine-tune the model. This enhances accuracy in special scenarios where the standard model may be insufficient.",
+      "The Hype Vision hard hat detection system is not a standalone product; PPE compliance, restricted area, and forklift-pedestrian modules operate on the same platform. You manage all OHS metrics from a single panel and pay licence fees only for modules you use.",
+      "Violations are shown immediately in VMS popups on Milestone, Dahua SmartPSS, and Hikvision iVMS-4200 screens.",
+      "Since 2020, Hype Vision, headquartered in Bilişim Vadisi (Gebze), has completed numerous industrial AI and image processing projects. The hard hat detection module works modularly on the same RTSP/ONVIF camera infrastructure alongside OHS, quality, efficiency, and safety modules. Connect your existing Hikvision, Dahua, Axis, or other IP cameras to the AI layer without purchasing new cameras.",
+      "Edge-first architecture ensures KVKK (Turkish GDPR) technical compliance: raw video is not stored by default, facial recognition is off, only events and metrics are recorded. Alarm delay is within 100–300 ms; offline capability ensures analysis continues during network outages. Integration with ERP, SAP, MES, WMS, and BI tools is possible via REST API.",
+      "With the modular licence model, you only pay for the functions you use. The 30-day pilot package, discovery meeting, and post-installation training are included as standard services. Request a demo via contact form or phone; our Bilişim Vadisi, Gebze team will respond within 24 hours.",
+      "To evaluate the Hype Vision hard hat detection solution risk-free, request a 30-day pilot package or free discovery meeting. Live demos are available at our Hightech Building office in Bilişim Vadisi, Gebze; RTSP/ONVIF compatibility assessment is also possible via remote video meeting. Simply send your current IP camera brand/model list to info@hypevisionlab.com.",
+      "During discovery, your site layout, camera angles, lighting conditions, and operational flow are analysed. Architectural recommendations (Edge, Cloud, or hybrid), module selection, and installation timeline are clarified. At pilot completion, accuracy reports, false positive/negative analysis, and ROI projections are provided. There is no commitment if you are dissatisfied.",
+      "You can use the contact form, phone (+90 541 260 91 90), or email to schedule demo and discovery meetings. Connect your existing cameras to the AI layer with our industrial AI expertise since 2020; gather OHS, quality, and efficiency metrics on one panel without new camera investment.",
+      "Hype Vision serves industrial facilities across Turkey from its Bilişim Vadisi, Gebze headquarters. Download our catalogue PDF to review module details; receive site-specific architectural recommendations during the discovery meeting. Submit demo requests via the contact form — responses within 24 hours."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Applications",
+     "p": [],
+     "li": [
+      "Prevent unauthorised passage without hard hats at factory entrance turnstiles",
+      "Automatic monitoring at construction site entry gates",
+      "Access control to molten metal areas in metal and foundry facilities",
+      "Mandatory PPE zones in chemical and petrochemical plants",
+      "High-traffic entry points in ports and logistics yards",
+      "24/7 automatic reporting in multi-shift production facilities"
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Benefits",
+     "p": [
+      "Pilot process"
+     ],
+     "li": [
+      "Works with your existing IP cameras; no new investment required",
+      "Proven on-site performance with 96–98.6% accuracy",
+      "Physically prevents violations via turnstile locking",
+      "KVKK (Turkish GDPR) compliant Edge architecture; no raw video stored",
+      "Instant alerts: panel, mobile, VMS popup, email/SMS",
+      "Modular licensing: pay only for the hard hat module"
+     ],
+     "rows": [],
+     "cards": []
+    }
+   ],
+   "faq": []
+  },
+  "/yuzey-kusuru-tespiti": {
+   "path": "/en/solutions/surface-defect-detection",
+   "title": "Surface Defect Detection — scratches, deformation, stains",
+   "desc": "Surface defect detection: scratches, cracks, deformation, stains. Deep learning, existing IP cameras, 94%+ accuracy. Edge architecture. Hype Vision Bilişim Vadisi, Gebze.",
+   "intro": [
+    "The Hype Vision surface defect detection module detects visual defects such as scratches, cracks, deformation, stains and roughness on metal, plastic, glass and coated surfaces in real time from your existing IP cameras. Every part is automatically inspected on the production line or final inspection station; defective products are directed to the reject line. The module is the customised surface analysis layer of the quality control image processing infrastructure. Scratches and stains at the micron level may be missed by the human eye; artificial intelligence analyses every pixel with consistent criteria.",
+    "Accuracy: 94%+"
+   ],
+   "specs": [
+    [
+     "Defect types",
+     "Scratch, crack, deformation, stain, roughness"
+    ],
+    [
+     "Accuracy",
+     "94%+ (depending on surface type and lighting)"
+    ],
+    [
+     "Analysis",
+     "Anomaly detection, classification, localisation"
+    ],
+    [
+     "Protocols",
+     "RTSP, ONVIF, REST API, Modbus"
+    ],
+    [
+     "Lighting",
+     "Compatible with dome, bar, ring light"
+    ],
+    [
+     "Architecture",
+     "Edge · Cloud · Hybrid"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Why is surface defect detection done via image processing?",
+     "p": [
+      "Traditional surface inspection relies on the human eye; fatigue, distraction and subjective evaluation produce inconsistent results. Micron-level scratches and stains may go unnoticed. AI-supported image processing analyses every pixel with consistent criteria; defect size, location and type are reported objectively.",
+      "The Hype Vision surface module uses deep learning-based anomaly detection and classification. The model, trained with normal surface samples, identifies areas with deviations. Scratches, cracks, deformation and stains can be labelled as separate classes.",
+      "Metal casting, sheet metal, plastic injection, glass and coated parts require different lighting and camera configurations. The optimal setup is planned after a survey.",
+      "Defect location and size are reported with bounding boxes and segmentation masks.",
+      "Surface quality in the automotive supply chain demands zero defect tolerance; objective AI inspection ensures consistency."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Defect localisation and measurement",
+     "p": [
+      "Detected defects are marked on the image with bounding boxes or segmentation masks. Defect size (in mm), location and type are displayed on the panel. Quality engineers can analyse which process step produces the most defects.",
+      "Tolerance thresholds are defined for critical surfaces (automotive outer panels, white goods covers). Micro-defects below the threshold are classified as warnings, those above as rejects.",
+      "Custom model training defines defect types and tolerances specific to your facility. Field data is collected, annotated and used to fine-tune the model.",
+      "Dome, bar and ring light lighting is optimised after the survey.",
+      "Surface quality in the automotive supply chain demands zero defect tolerance; objective AI inspection ensures consistency."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Lighting and camera optimisation",
+     "p": [
+      "Surface defect detection is sensitive to lighting. Dome light, bar light or ring light minimise shadows and reflections. Lighting tests are conducted during the survey; industrial vision lighting is recommended if necessary.",
+      "Existing IP cameras suffice in most scenarios; additional cameras may be recommended for high resolution or special angles. All major industrial camera brands are supported via RTSP/ONVIF.",
+      "Exposure time and FPS are optimised according to line speed. High-speed lines may use strobe lighting or multi-camera scenarios.",
+      "Tolerance thresholds are defined for automotive outer panel and white goods cover scenarios.",
+      "Surface quality in the automotive supply chain demands zero defect tolerance; objective AI inspection ensures consistency."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Integration and reporting",
+     "p": [
+      "Defect counts, type distribution and reject rates are transferred to ERP, SAP or MES systems via REST API. The reject conveyor or sorting arm can be triggered via Modbus.",
+      "Daily, shift- and line-based defect reports are displayed on the panel. Trend analysis is used to target process improvements. Heat maps show the areas on the surface with defect concentration.",
+      "KVKK (Turkish GDPR) compliant Edge architecture processes product images without leaving the facility. Raw video is not stored.",
+      "A custom model is trained for your facility's specific defect profile.",
+      "Surface quality in the automotive supply chain demands zero defect tolerance; objective AI inspection ensures consistency."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Industry applications and pilot — demo and contact",
+     "p": [
+      "Applied at automotive suppliers for sheet metal scratch and deformation, white goods cover surface defects, and metal processing for weld seam and casting surface analysis. Our team in Bilişim Vadisi (Gebze) offers industry-specific demo scenarios.",
+      "A 30-day pilot package tests the module on a single station or line. At pilot completion, an accuracy, false positive analysis and ROI report is provided.",
+      "The Hype Vision surface defect module operates on the same platform as the quality control image processing and OEE tracking modules. Contact us for demo and survey.",
+      "Different model variants are available for metal casting, plastic injection and glass surfaces.",
+      "Surface quality in the automotive supply chain demands zero defect tolerance; objective AI inspection ensures consistency.",
+      "Since 2020, Hype Vision based in Bilişim Vadisi (Gebze) has completed numerous field projects in industrial AI and image processing. The surface defect detection module is not a standalone product; the HSE, quality, efficiency and safety modules all operate on the same RTSP/ONVIF camera infrastructure with modular licensing. Connect your existing Hikvision, Dahua, Axis or other IP cameras to the AI layer without purchasing new cameras.",
+      "Edge-first architecture provides technical compliance with KVKK (Turkish GDPR): raw video is not stored by default, face recognition is disabled, only events and metrics are recorded. Alarm latency ranges from 100–300 ms; offline operation ensures analysis continues even without internet. Integration with ERP, SAP, MES, WMS and BI tools is possible via REST API.",
+      "With the modular license model, you pay only for the functions you use. The 30-day pilot package, survey meeting and post-installation training are included as standard services. Request a demo via the contact form or phone; our Bilişim Vadisi, Gebze team will respond within 24 hours.",
+      "To evaluate Hype Vision's surface defect detection solution without risk, you can request a 30-day pilot package or a free survey meeting. A live demo is available at our office in Hightech Building, Bilişim Vadisi, Gebze; RTSP/ONVIF compatibility can also be assessed via remote video meeting. Simply send your existing IP camera brand/model list to info@hypevisionlab.com.",
+      "During the survey process, your field layout, camera angles, lighting conditions and operational flow are analysed. The architecture recommendation (Edge, Cloud or hybrid), module selection and installation schedule are specified. At pilot completion, an accuracy report, false positive/negative analysis and ROI projection are presented; there is no commitment if you are not satisfied.",
+      "You may use the contact form, phone (+90 541 260 91 90) or email for demo and survey discussions. Connect your existing cameras to the AI layer with our industrial AI experience since 2020; collect HSE, quality and efficiency metrics on a single panel without new camera investment.",
+      "Hype Vision serves industrial facilities across Turkey from our Bilişim Vadisi, Gebze centre. Download our catalogue PDF to examine module details; receive a site-specific architecture recommendation during the survey meeting. Submit the contact form to request a demo — responses within 24 hours."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Use cases",
+     "p": [],
+     "li": [
+      "Sheet metal part scratch and deformation detection",
+      "Plastic injection surface roughness analysis",
+      "Automotive outer panel paint and coating defect",
+      "Glass and ceramic surface crack detection",
+      "Casting part surface anomaly inspection",
+      "White goods cover and panel quality control"
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Benefits",
+     "p": [
+      "Pilot process"
+     ],
+     "li": [
+      "Scratch, crack, deformation in a single module",
+      "94%+ accuracy; can be improved with custom model",
+      "Defect localisation and size measurement",
+      "ERP/MES and reject line automation",
+      "Uses existing IP cameras; lighting consultancy provided",
+      "Objective, repeatable quality criteria"
+     ],
+     "rows": [],
+     "cards": []
+    }
+   ],
+   "faq": []
+  },
+  "/kvkk-uyumlu-kamera-analitigi": {
+   "path": "/en/solutions/privacy-compliant-video-analytics",
+   "title": "KVKK Compliant Camera Analytics — Edge Architecture, Data Minimisation",
+   "desc": "KVKK compliant industrial camera analytics: Edge architecture, no raw video storage, face recognition disabled. Event and metric focused. Hype Vision Bilişim Vadisi, Gebze.",
+   "intro": [
+    "The Hype Vision platform places the Personal Data Protection Law (KVKK (Turkish GDPR)) requirements at the core of its architectural design. Raw video is not stored unless absolutely necessary; artificial intelligence processes the image on the Edge server and only interpreted outputs (events, alarms, metrics, evidence frames) are recorded. Face recognition is disabled by default. The Edge-first approach developed in Bilişim Vadisi, Gebze enables KVKK compliant AI monitoring in industrial facilities. Data minimisation, purpose limitation, and Edge-first processing form the technical foundation for KVKK compliance; raw video is not stored by default."
+   ],
+   "specs": [
+    [
+     "Data Processing",
+     "Edge-first; video does not leave the facility"
+    ],
+    [
+     "Raw Video",
+     "Not stored by default"
+    ],
+    [
+     "Face Recognition",
+     "Disabled by default"
+    ],
+    [
+     "Stored Data",
+     "Event, alarm, metric, evidence frame"
+    ],
+    [
+     "Encryption",
+     "In transit and at rest; role-based access"
+    ],
+    [
+     "Architecture",
+     "Edge · Cloud · Hybrid (as per contract)"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Why is KVKK critical for industrial AI?",
+     "p": [
+      "Camera analytics in industrial facilities process images of personnel; this is subject to the Personal Data Protection Law (KVKK (Turkish GDPR)). Archiving raw video, face recognition, and data transfer outside the facility pose risks under KVKK. Hype Vision minimises these risks through architectural design: data minimisation, purpose limitation, and Edge processing principles are fundamental to the platform.",
+      "Law No. 6698 (KVKK) mandates that personal data is processed lawfully, fairly, and proportionately. Instead of storing raw video, Hype Vision generates events and metrics; the purpose of personal data processing is limited to Occupational Health and Safety (OHS) inspection, quality control, and productivity measurement.",
+      "Hype Vision assumes the role of data controller or processor as per the client contract. The disclosure notice, explicit consent, and data retention period are defined within the project scope.",
+      "A data processing agreement (DPA) is prepared for each project under Law No. 6698.",
+      "As data controller, we provide our clients with a KVKK compliance checklist and technical documentation."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Edge architecture and data minimisation",
+     "p": [
+      "In Edge architecture, footage is processed on a server or GPU unit within the facility; after analysis, the raw video stream is discarded. Only interpreted JSON/event data exits the facility. This approach complies with KVKK's data minimisation principle.",
+      "Evidence frames (snapshots) are only recorded at the moment of a violation or event; continuous recording is not performed. Retention periods are defined in the contract (e.g., 30–90 days); data is automatically deleted after this period.",
+      "The same principles apply in cloud or hybrid architectures. Data transmitted to the cloud is encrypted; access is restricted by role-based permissions. Data location (Turkey/EU) is determined according to client preference.",
+      "The retention period for evidence frames is specified in the contract; automatic deletion is enforced.",
+      "As data controller, we provide our clients with a KVKK compliance checklist and technical documentation."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Face recognition and identity detection",
+     "p": [
+      "Hype Vision does not use face recognition by default. Helmet detection focuses on equipment absence, personnel productivity on anonymised metrics, and restricted area modules on zone violations. Individual identity detection is not included in the platform’s standard modules.",
+      "Upon special request (e.g., integration with access control), a face recognition module may be deployed under a separate contract and with an explicit consent process. This scenario fully complies with KVKK disclosure and consent requirements.",
+      "Pose estimation and motion analysis do not identify individuals; they only classify body posture and activity. This presents a lower risk profile under KVKK.",
+      "Role-Based Access Control (RBAC) enables role-based access; an audit trail is maintained.",
+      "As data controller, we provide our clients with a KVKK compliance checklist and technical documentation."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Security, access, and audit",
+     "p": [
+      "Platform access is managed through Role-Based Access Control (RBAC). Each user has access only to authorised facilities, zones, and modules. Access logs are maintained, creating an audit trail.",
+      "Data is encrypted in transit and at rest. API communication is secured with TLS/HTTPS; disk encryption uses AES. Penetration testing and security assessments can be offered for enterprise projects.",
+      "In case of a data breach, notification procedures are defined within the contract. Hype Vision implements data security measures in accordance with KVKK Article 12.",
+      "Cloud data location is determined by client preference (Turkey/EU).",
+      "As data controller, we provide our clients with a KVKK compliance checklist and technical documentation."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Contracts, pilot projects and consulting — demo and contact",
+     "p": [
+      "For each project, a Data Processing Agreement (DPA) and KVKK compliance checklist are prepared. The client’s responsibilities as data controller are addressed as part of consulting services.",
+      "You can test your KVKK-compliant architecture risk-free with a 30-day pilot package. At the pilot’s conclusion, a data flow diagram and compliance report are provided.",
+      "The Hype Vision team in Bilişim Vadisi (Gebze) organises KVKK consulting and technical discovery meetings. Contact us for demos and enquiries.",
+      "Penetration testing is available for enterprise projects.",
+      "As data controller, we provide our clients with a KVKK compliance checklist and technical documentation.",
+      "Since 2020, Hype Vision, based in Bilişim Vadisi (Gebze), has completed dozens of industrial AI and image processing field projects. The KVKK-compliant camera analytics module is not a standalone product; the entire suite of OHS, quality, productivity, and security modules operates on the same RTSP/ONVIF camera infrastructure via modular licenses. Connect your existing Hikvision, Dahua, Axis, or other IP cameras to the AI layer without purchasing new cameras.",
+      "The Edge-first architecture ensures technical KVKK compliance: raw video is not stored by default, face recognition is disabled, and only events and metrics are recorded. Alarm latency ranges between 100–300 ms; offline operation is supported so analysis continues even if the internet connection is lost. Integration with ERP, SAP, MES, WMS, and BI tools is possible via REST API.",
+      "With a modular licensing model, you only pay for the functions you use. The 30-day pilot package, discovery meeting, and post-installation training are standard services. Request a demo via contact form or phone; expect a response from our Bilişim Vadisi, Gebze team within 24 hours.",
+      "To evaluate the Hype Vision KVKK compliant camera analytics solution risk-free, request a 30-day pilot package or a free discovery meeting. Live demos are available at our office in the Hightech Building at Bilişim Vadisi, Gebze; RTSP/ONVIF compatibility assessment can be conducted remotely via video meeting. Simply send your existing IP camera brand/model list to info@hypevisionlab.com.",
+      "During the discovery process, your site layout, camera angles, lighting conditions, and operational flows will be analysed. Architectural recommendations (Edge, Cloud, or hybrid), module selection, and installation schedule are clarified. At pilot completion, accuracy reports, false positive/negative analyses, and ROI projections are provided; no obligation if unsatisfied.",
+      "For demo and discovery meetings, please use the contact form, phone (+90 541 260 91 90), or email. Leverage our industrial AI experience since 2020 by connecting your existing cameras to the AI layer; consolidate OHS, quality, and productivity metrics on a single panel without new camera investments.",
+      "Hype Vision serves industrial facilities across Turkey from its Bilişim Vadisi, Gebze headquarters. Download our catalogue PDF to explore module details and receive tailored architectural recommendations during the discovery meeting. Submit a demo request via the contact form — we respond within 24 hours."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Use Cases",
+     "p": [],
+     "li": [
+      "Production facilities with high KVKK sensitivity",
+      "Anonymous metrics collection for personnel productivity",
+      "OHS inspection evidence archive (limited retention)",
+      "Edge-only architecture ensures data does not leave the facility",
+      "Multi-location KVKK compliant centralised panel",
+      "Data privacy requirements of food and pharmaceutical sectors"
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Benefits",
+     "p": [
+      "Pilot process"
+     ],
+     "li": [
+      "Edge-first architecture; video does not leave the facility",
+      "Raw video not stored by default",
+      "Face recognition disabled by default",
+      "Role-based access and audit trail",
+      "DPA and KVKK compliance consultancy",
+      "All modules operate on the same compliant infrastructure"
+     ],
+     "rows": [],
+     "cards": []
+    }
+   ],
+   "faq": []
+  },
+  "/onvif-rtsp-yapay-zeka-entegrasyonu": {
+   "path": "/en/solutions/onvif-rtsp-ai-integration",
+   "title": "ONVIF RTSP AI Integration — Brand Independent, Existing Cameras",
+   "desc": "Connect your Hikvision, Dahua, Axis, Bosch and other IP cameras to AI analytics without replacement. Brand-independent integration via ONVIF and RTSP; your NVR recordings remain unchanged.",
+   "intro": [
+    "Hype Vision connects existing IP cameras at your facility to the AI layer over standard protocols (RTSP, ONVIF). Hikvision, Dahua, Axis, Bosch, Hanwha, Uniview or any RTSP-compliant brand — no need to purchase new cameras. The platform developed in Bilişim Vadisi, Gebze has delivered brand-independent industrial camera integration since 2020. Mixed brand camera fleets, legacy NVR systems, and various resolutions unite under a single RTSP/ONVIF layer."
+   ],
+   "specs": [
+    [
+     "Protocols",
+     "RTSP, ONVIF Profile S/G/T"
+    ],
+    [
+     "Brands",
+     "Hikvision, Dahua, Axis, Bosch, Hanwha, Uniview+"
+    ],
+    [
+     "NVR Compatibility",
+     "NVR RTSP stream output supported"
+    ],
+    [
+     "Resolution",
+     "720p–4K (depending on module and GPU)"
+    ],
+    [
+     "FPS",
+     "5–30 FPS (depending on module requirements)"
+    ],
+    [
+     "Architecture",
+     "Edge · Cloud · Hybrid"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Why Brand-Independent Integration?",
+     "p": [
+      "Industrial facilities typically have camera infrastructures composed of different brands and models. Cameras added over time, various NVR systems and legacy devices complicate integration. Hype Vision operates over standard RTSP and ONVIF protocols; brand and model do not matter.",
+      "You do not need to purchase new cameras. After discovery, the existing camera list, RTSP URLs and ONVIF compatibility are verified. Only where necessary, resolution or angle optimisation may be recommended.",
+      "RTSP stream output via NVR is also supported. Direct camera connection or NVR proxy scenarios are defined after discovery.",
+      "ONVIF discovery enables automatic camera detection during the survey phase.",
+      "In camera upgrade projects, adding the AI layer while preserving existing infrastructure reduces total cost of ownership."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "RTSP and ONVIF Technical Details",
+     "p": [
+      "RTSP (Real Time Streaming Protocol) is the standard video streaming protocol for IP cameras. The Hype Vision Edge server obtains H.264/H.265 streams from RTSP URLs, decodes them and sends them to AI modules. A latency-optimised pipeline targets 100–300 ms processing time.",
+      "ONVIF (Open Network Video Interface Forum) is used for camera discovery, PTZ control and event subscription. Profile S (streaming), Profile G (recording) and Profile T (advanced streaming) are supported.",
+      "Camera authentication (digest, basic) and TLS streams (RTSPS) are configured according to security requirements. Factory network VLAN segmentation enables isolation.",
+      "RTSPS (TLS) streams are configured according to security requirements.",
+      "In camera upgrade projects, adding the AI layer while preserving existing infrastructure reduces total cost of ownership."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Supported Brands and NVR Integration",
+     "p": [
+      "Tested brands: Hikvision, Dahua, Axis, Bosch, Hanwha, Uniview, Honeywell, TP-Link and general IP/RTSP cameras. Brands not listed connect via RTSP or ONVIF.",
+      "RTSP stream output can be obtained from NVR systems (Hikvision, Dahua, Milestone, Genetec). VMS popup integration displays events on the VMS screen during alarms.",
+      "Industrial vision cameras (Basler, FLIR, Cognex RTSP output models) are also supported. High FPS or special resolution requirements are planned according to GPU capacity.",
+      "NVR proxy scenarios: direct camera or NVR RTSP output.",
+      "In camera upgrade projects, adding the AI layer while preserving existing infrastructure reduces total cost of ownership."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Installation Process and Survey",
+     "p": [
+      "During the survey phase, existing camera inventory, network topology and RTSP URL lists are collected. Automatic camera detection can be performed via ONVIF discovery. A compatibility report is provided.",
+      "Standard installations with 4–8 cameras complete within 1–3 working days. Medium-scale projects take 1–2 weeks; multi-location projects 3–6 weeks. Post-installation testing and calibration are included.",
+      "Our engineering team in Bilişim Vadisi (Gebze) performs remote or onsite surveys. Simply sharing your camera brand/model list is sufficient.",
+      "Industrial vision cameras (Basler, FLIR) with RTSP output models are supported.",
+      "In camera upgrade projects, adding the AI layer while preserving existing infrastructure reduces total cost of ownership."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "All Modules on a Single Infrastructure — Demo and Contact",
+     "p": [
+      "ONVIF/RTSP integration forms the foundation for all Hype Vision modules: Occupational Health and Safety (PPE, restricted areas, forklifts), quality control, OEE, personnel efficiency. Single camera infrastructure allows you to add desired modules with modular licensing.",
+      "6–12 cameras at 1080p are analysed in real-time on a single GPU Edge server. Scaling to dozens of cameras is possible with multi-GPU or cloud setups.",
+      "Contact us for demos and surveys. Our team in Bilişim Vadisi, Gebze is ready to connect your existing camera infrastructure to the AI layer.",
+      "6–12 cameras at 1080p on a single GPU; dozens of cameras scaling with multiple GPUs.",
+      "In camera upgrade projects, adding the AI layer while preserving existing infrastructure reduces total cost of ownership.",
+      "Established since 2020 in Bilişim Vadisi (Gebze), Hype Vision has completed dozens of field projects in industrial AI and image processing. The ONVIF RTSP AI integration module is not a standalone product; all OHS, quality, efficiency and security modules operate on the same RTSP/ONVIF camera infrastructure with modular licenses. Connect your existing Hikvision, Dahua, Axis or other IP cameras to the AI layer without new camera procurement.",
+      "The edge-first architecture ensures KVKK (Turkish GDPR) compliance at a technical level: raw video is not stored by default, facial recognition is disabled, only events and metrics are recorded. Alarm latency is in the 100–300 ms range; offline operation support ensures analysis continues even if the internet connection is lost. REST API enables integration with ERP, SAP, MES, WMS and BI tools.",
+      "With the modular licensing model, you pay only for the functions you use. A 30-day pilot package, survey meeting and post-installation training are included in the standard service. Request a demo via contact form or phone; you will receive a response from our Bilişim Vadisi, Gebze team within 24 hours.",
+      "To evaluate Hype Vision ONVIF RTSP AI integration risk-free, you may request a 30-day pilot package or a free survey meeting. A live demo is available at our office in the Hightech Building, Bilişim Vadisi, Gebze; remote video meetings for RTSP/ONVIF compatibility assessment are also possible. Just send your existing IP camera brand/model list to info@hypevisionlab.com.",
+      "During the survey process, site layout, camera angles, lighting conditions and operational flow are analysed. Architecture recommendation (Edge, Cloud or hybrid), module selection and installation schedule are clarified. At the pilot’s conclusion, accuracy reports, false positive/negative analyses and ROI projections are presented; there is no obligation if you are not satisfied.",
+      "For demo and survey meetings, you may use the contact form, phone (+90 541 260 91 90) or email. Leverage our industrial AI experience since 2020 to integrate your existing cameras to the AI layer; consolidate OHS, quality and efficiency metrics on a single panel without new camera investment.",
+      "Hype Vision serves industrial facilities nationwide from our Bilişim Vadisi, Gebze headquarters. Download our catalogue PDF to review module details and get site-specific architectural recommendations during the survey meeting. Submit a demo request via the contact form — responses are provided within 24 hours."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Applications",
+     "p": [],
+     "li": [
+      "AI layer on existing Hikvision/Dahua infrastructure",
+      "Single platform for mixed brand camera fleets",
+      "RTSP stream analysis via NVR",
+      "Legacy camera modernisation (no new cameras)",
+      "Multi-location centralised camera management",
+      "VMS (Milestone, Genetec) popup integration"
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Benefits",
+     "p": [
+      "Pilot process"
+     ],
+     "li": [
+      "Brand independent; RTSP/ONVIF standard protocols",
+      "No need for new cameras",
+      "Hikvision, Dahua, Axis, Bosch and 20+ brands",
+      "NVR and VMS integration",
+      "All AI modules on the same infrastructure",
+      "Standard installation within 1–3 working days"
+     ],
+     "rows": [],
+     "cards": []
+    }
+   ],
+   "faq": []
+  },
   "/cctv-yapay-zeka": {
    "path": "/en/cctv-ai-analytics",
    "title": "Adding AI analytics to existing CCTV cameras",
@@ -11585,8 +12106,284 @@
     "/en/sektor/tekstil"
    ]
   },
-  "/sektor/tekstil-fabrikasi-yapay-zeka": null,
-  "/sektor/gida-fabrikasi-kalite-kontrol": null,
+  "/sektor/tekstil-fabrikasi-yapay-zeka": {
+   "path": "/en/industries/textile-factory-ai",
+   "title": "Textile Factory Artificial Intelligence — From Sewing Line to Shipping",
+   "desc": "Textile factory artificial intelligence: sewing line OEE, PPE inspection, quality control, personnel efficiency. Existing IP cameras. Hype Vision, Bilişim Vadisi, Gebze.",
+   "intro": [
+    "Efficiency, PPE compliance, quality control and personnel activity must be managed simultaneously in textile factories’ sewing lines. Hype Vision analyses footage from your existing IP cameras (RTSP/ONVIF) to consolidate OEE, downtime, sewing line defects, and helmet/vest inspection into a single dashboard. Developed in Bilişim Vadisi, Gebze, this platform has been field-tested in the textile sector since 2020. From sewing line to packaging, OEE, quality, PPE and personnel metrics are combined on one platform; a specialised module package for textile operations."
+   ],
+   "specs": [
+    [
+     "Modules",
+     "OEE, personnel, quality, PPE, restricted areas"
+    ],
+    [
+     "Line types",
+     "Sewing, cutting, packaging, shipping"
+    ],
+    [
+     "Metrics",
+     "Cycle time, idle, reject rate, violation count"
+    ],
+    [
+     "Integration",
+     "ERP, MES, REST API"
+    ],
+    [
+     "Protocols",
+     "RTSP, ONVIF"
+    ],
+    [
+     "Architecture",
+     "Edge · KVKK (Turkish GDPR) compliant"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Digital Transformation in the Textile Sector",
+     "p": [
+      "Textile factories operate with intensive labour, multiple shifts, and rapid order cycles. Sewing line efficiency, quality consistency, and occupational health and safety (OHS) compliance directly affect operational costs. Traditional management receives reports only after shifts end, delaying issue detection. AI-supported camera analytics visualise events in real time.",
+      "Hype Vision’s textile package includes sewing line OEE monitoring, operator idle time analysis, seam/fabric defect detection, and PPE (helmet, vest) inspection. All modules connect to your existing IP cameras; new infrastructure investment is minimised.",
+      "Pilot and full-scale projects have been implemented in Turkey’s textile production regions (Istanbul, Bursa, Denizli, Gaziantep).",
+      "Field experience is established in the textile zones of Bursa, Denizli, Gaziantep, and Istanbul.",
+      "Quality and delivery time are competitive advantages in textile exports; real-time metric management supports this."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Sewing Line OEE and Personnel Efficiency",
+     "p": [
+      "Cycle time, downtime, and production count on the sewing line are measured by a camera-based OEE module. Active work and idle time per operator are reported by the personnel efficiency module. The average field rate is 84.2% active, 15.8% idle.",
+      "Shift comparison identifies which shift’s efficiency declines. Bottleneck detection by station optimises line balance. Data transfer to ERP and MES systems is possible via REST API.",
+      "Manual time-study is unnecessary; 24/7 automatic metric collection enables sustainable efficiency management.",
+      "Sewing line cycle time and operator idle metrics are used in shift comparisons.",
+      "Quality and delivery time are competitive advantages in textile exports; real-time metric management supports this."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Quality Control and Defect Detection",
+     "p": [
+      "Quality control modules are activated at sewing lines, fabric surfaces, and packaging points. OK/REJECT classification operates at 94.2% accuracy; seam defects, stains, colour deviations, and packaging defects are detected.",
+      "Custom model training enables defining defect types unique to your facility. Reject rates are reported by shift and line; quality engineers target process improvements.",
+      "The quality module automatically provides data to the OEE quality component, completing the OEE calculation in three dimensions (availability, performance, quality).",
+      "Seam defects and fabric stains are detected by the quality module with 94.2% OK/REJECT accuracy.",
+      "Quality and delivery time are competitive advantages in textile exports; real-time metric management supports this."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "OHS: PPE and Restricted Areas",
+     "p": [
+      "Helmet and vest inspection in cutting and sewing areas is conducted via the PPE module. Helmet detection achieves 96–98.6% accuracy; integration with turnstiles allows blocking passage upon violation.",
+      "Restricted areas such as machine fronts, blade cutting zones, and high stacking areas are monitored by the restricted area module. Region violations trigger alarms instantly with 97.8% accuracy.",
+      "KVKK (Turkish GDPR) compliant Edge architecture ensures no raw video storage; OHS inspections continue without personal data risks.",
+      "Cutting area helmet+vest PPE inspection with turnstile integration.",
+      "Quality and delivery time are competitive advantages in textile exports; real-time metric management supports this."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Installation, Pilot and Demo — Demo and Contact",
+     "p": [
+      "After discovery, line layout, camera positions, and module priorities are determined. The 30-day pilot package tests the OEE + personnel module on a single sewing line.",
+      "Hype Vision’s team at Bilişim Vadisi (Gebze) offers textile sector demo scenarios and reference projects. Simply share your existing camera infrastructure.",
+      "Contact us for a demo and discovery meeting. Take a step to transform your textile factory with artificial intelligence.",
+      "ERP integration combines order tracking and efficiency metrics.",
+      "Quality and delivery time are competitive advantages in textile exports; real-time metric management supports this.",
+      "Since 2020, Hype Vision at Bilişim Vadisi (Gebze) has completed numerous field projects in industrial AI and image processing. The textile factory AI module is not a standalone product; the full IHS, quality, efficiency and safety modules run modularly on the same RTSP/ONVIF camera infrastructure. Connect your existing Hikvision, Dahua, Axis or other IP cameras to the AI layer without purchasing new cameras.",
+      "Edge-first architecture ensures KVKK (Turkish GDPR) compliance at a technical level: raw video is not stored by default, face recognition is disabled, and only events and metrics are recorded. Alarm latency is in the 100–300 ms range; offline operation support allows analysis to continue even if the internet is interrupted. Integration with ERP, SAP, MES, WMS, and BI tools is possible via REST API.",
+      "The modular licensing model means you pay only for the functions you use. The 30-day pilot package, discovery meeting and post-installation training are included as standard. Request a demo via contact form or phone; receive a response from our Bilişim Vadisi, Gebze team within 24 hours.",
+      "You can evaluate Hype Vision’s textile factory AI solution risk-free with a 30-day pilot package or a free discovery meeting. Live demos are available at our Bilişim Vadisi, Gebze, Hightech Building office; RTSP/ONVIF compatibility assessment can be performed via remote video meeting. Simply send your existing IP camera brand/model list to info@hypevisionlab.com.",
+      "During the discovery process, your site layout, camera angles, lighting conditions and operational workflow are analysed. Architectural recommendations (Edge, Cloud or hybrid), module selection, and installation schedule are finalised. At pilot completion, an accuracy report, false positive/negative analysis and ROI projection are provided; there is no commitment if you are unsatisfied.",
+      "For demos and discovery discussions, please use the contact form, phone (+90 541 260 91 90) or email. Leverage our industrial AI experience since 2020 to connect your existing cameras to the AI layer; consolidate OHS, quality and efficiency metrics on one panel without new camera investment.",
+      "Hype Vision delivers services to industrial facilities across Turkey from its Bilişim Vadisi, Gebze headquarters. Download our PDF catalogue for module details and receive site-specific architectural recommendations during the discovery meeting. Submit a demo request via the contact form — response within 24 hours."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Use Cases",
+     "p": [],
+     "li": [
+      "Sewing line OEE and cycle time monitoring",
+      "Operator idle time and station analysis",
+      "Sewing line quality control OK/REJECT",
+      "Cutting area PPE (helmet, vest) inspection",
+      "Packaging line packaging defect detection",
+      "Multi-shift factory central panel"
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Benefits",
+     "p": [
+      "Pilot process"
+     ],
+     "li": [
+      "Module package specialised for the textile sector",
+      "Compatible with existing brand-independent IP cameras",
+      "OEE + quality + OHS on a single platform",
+      "KVKK (Turkish GDPR) compliant Edge architecture",
+      "ERP/MES integration",
+      "30-day pilot package"
+     ],
+     "rows": [],
+     "cards": []
+    }
+   ],
+   "faq": []
+  },
+  "/sektor/gida-fabrikasi-kalite-kontrol": {
+   "path": "/en/industries/food-factory-quality-control",
+   "title": "Food Factory Quality Control — Hygiene, Packaging, Foreign Object Detection",
+   "desc": "Food factory quality control: hygiene zone, packaging integrity, foreign object detection, PPE. Existing IP cameras, KVKK (Turkish GDPR) compliant. Hype Vision Bilişim Vadisi.",
+   "intro": [
+    "Hygiene standards, packaging integrity, and foreign object detection are the foundation of quality assurance in food production facilities. Hype Vision analyses footage from your existing IP cameras, integrating filling line defects, packaging errors, PPE violations in hygiene zones, and production line OEE on a single dashboard. Provides a data archive compliant with food safety regulations (HACCP, ISO 22000). Verifiable quality event archive for HACCP and ISO 22000 audits; hygiene zone PPE and packaging integrity displayed on the same panel."
+   ],
+   "specs": [
+    [
+     "Modules",
+     "Quality, PPE, OEE, restricted area, personnel"
+    ],
+    [
+     "Defect types",
+     "Packaging, seal, label, foreign object, stain"
+    ],
+    [
+     "Hygiene",
+     "Mask, glove, hairnet PPE inspection"
+    ],
+    [
+     "Accuracy",
+     "OK/REJECT 94.2%; PPE 96%+"
+    ],
+    [
+     "Integration",
+     "ERP, MES, REST API"
+    ],
+    [
+     "Architecture",
+     "Edge · KVKK compliant · HACCP compliant recording"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Image-Based Quality Control in the Food Sector",
+     "p": [
+      "Manual quality control in food factories cannot cover every product; defective packaging, missing seals or foreign objects may go unnoticed until they reach the customer. AI-powered image processing analyses every product on the conveyor belt in real time; defects are detected instantly and rejection mechanisms triggered.",
+      "Hype Vision food quality module: packaging integrity, label accuracy, seal inspection, colour deviation, and foreign object detection. OK/REJECT classification achieves an accuracy of 94.2%.",
+      "Different camera configurations are deployed on filling, packaging, and palletising lines. Our team at Bilişim Vadisi (Gebze) offers food industry demo scenarios.",
+      "Seal, label and packaging integrity on the filling line controlled with 94.2% OK/REJECT accuracy.",
+      "Food safety scandals irreparably damage brand value; 100% on-line control minimises risk."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Hygiene Zone and PPE Inspection",
+     "p": [
+      "In food production, hygiene zones (clean rooms, filling areas) require mandatory use of masks, gloves and hairnets. The PPE module detects missing equipment with over 96% accuracy. Alarms and optional zone lockdown are triggered instantly upon violations.",
+      "The restricted area module detects unauthorised entry beyond hygiene zones. Personnel flow routes are defined using ROIs.",
+      "KVKK compliant architecture ensures hygiene inspections continue without risking personal data. Evidence images are stored for a limited time only.",
+      "Mask, glove and hairnet PPE inspection in hygiene zones achieves over 96% accuracy.",
+      "Food safety scandals irreparably damage brand value; 100% on-line control minimises risk."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "OEE and Production Efficiency",
+     "p": [
+      "The OEE module measures availability, performance and quality components on filling and packaging lines. Downtime, cycle time and reject rates are reported in real time.",
+      "The personnel efficiency module analyses operator activity and idle time. Shift-based efficiency comparisons provide data for operations teams.",
+      "Integration with ERP, SAP and MES systems via REST API eliminates duplicate data entry.",
+      "Foreign object detection on conveyor belts uses a custom model.",
+      "Food safety scandals irreparably damage brand value; 100% on-line control minimises risk."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Regulatory Compliance and Data Archiving",
+     "p": [
+      "HACCP and ISO 22000 audits require verifiable records of quality events. Hype Vision creates an auditable archive including events, timestamps, and evidence images. Retention periods are configurable according to regulations and contracts.",
+      "Raw video is not stored in the edge architecture; only semantic quality events are recorded. Data integrity and access logs provide a full audit trail.",
+      "Food safety engineers can analyse reject trends, defect distribution and shift data from the dashboard.",
+      "Cold chain warehouse area security is managed by the restricted area module.",
+      "Food safety scandals irreparably damage brand value; 100% on-line control minimises risk."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Installation and Pilot Package — Demo and Contact",
+     "p": [
+      "After assessment, line speed, product type, lighting and camera angles are optimised. The 30-day pilot package tests the quality module on a single filling or packaging line.",
+      "Custom model training defines packaging types and defect profiles specific to your facility. At the pilot’s conclusion, accuracy and ROI reports are provided.",
+      "Start with a demo and assessment at our Bilişim Vadisi, Gebze office or via remote meeting.",
+      "The auditable event archive ensures regulatory compliance.",
+      "Food safety scandals irreparably damage brand value; 100% on-line control minimises risk.",
+      "Since 2020, Hype Vision, based in Bilişim Vadisi (Gebze), has completed dozens of industrial AI and image processing projects. The food factory quality control module is not a standalone product; all modules for occupational health and safety, quality, efficiency and security operate modularly on the same RTSP/ONVIF camera infrastructure. Connect your existing Hikvision, Dahua, Axis or other IP cameras to the AI layer without purchasing new cameras.",
+      "The edge-first architecture ensures KVKK compliance at the technical level: raw video is not stored by default, facial recognition is disabled, only events and metrics are recorded. Alarm latency ranges from 100–300 ms; offline operation support ensures analysis continues during internet outages. Integration with ERP, SAP, MES, WMS and BI tools is available via REST API.",
+      "With a modular licensing model, you pay only for the functions you use. The 30-day pilot package, assessment meeting and post-installation training are included as standard services. Request a demo via the contact form or phone; receive a reply within 24 hours from our Bilişim Vadisi, Gebze team.",
+      "Evaluate the Hype Vision food factory quality control solution risk-free with a 30-day pilot package or free assessment meeting. Live demos are available at our Bilişim Vadisi, Gebze Hightech Building office; RTSP/ONVIF compatibility assessments can also be done remotely via video meeting. Simply send your existing IP camera brand/model list to info@hypevisionlab.com.",
+      "During assessment, your site layout, camera angles, lighting conditions and operational flow are analysed. Architecture recommendations (Edge, Cloud or hybrid), module selection and installation schedule are finalized. At pilot completion, accuracy reports, false positive/negative analyses and ROI projections are delivered; no commitment if unsatisfied.",
+      "For demo and assessment appointments, use the contact form, phone (+90 541 260 91 90) or email. Leverage our industrial AI experience since 2020 to add AI layers to your existing cameras; consolidate occupational safety, quality and efficiency metrics on a single panel without new camera investment.",
+      "As Hype Vision, we serve industrial facilities across Turkey from our Bilişim Vadisi, Gebze headquarters. Download our catalogue PDF to explore module details and receive site-specific architecture advice during the assessment meeting. Submit your demo request via the contact form and receive a reply within 24 hours."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Applications",
+     "p": [],
+     "li": [
+      "Filling line packaging and seal inspection",
+      "Packaging line label and barcode verification",
+      "Hygiene zone mask and glove inspection",
+      "Conveyor belt foreign object detection",
+      "Cold chain warehouse area security",
+      "HACCP audit evidence archive"
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Benefits",
+     "p": [
+      "Pilot process"
+     ],
+     "li": [
+      "Food sector specific quality module",
+      "HACCP/ISO 22000 compliant event archive",
+      "PPE inspection with 96%+ accuracy",
+      "94.2% OK/REJECT packaging control",
+      "ERP/MES integration",
+      "KVKK compliant Edge architecture"
+     ],
+     "rows": [],
+     "cards": []
+    }
+   ],
+   "faq": []
+  },
   "/endustriyel-goruntu-isleme": {
    "path": "/en/industrial-computer-vision",
    "title": "Industrial computer vision and AI video analytics",
@@ -12030,7 +12827,107 @@
     "/en/sektor/tekstil"
    ]
   },
-  "/blog/yapay-zeka-ile-is-guvenligi": null,
+  "/blog/yapay-zeka-ile-is-guvenligi": {
+   "path": "/en/resources/ai-workplace-safety-ppe-danger-zones",
+   "title": "Workplace Safety with Artificial Intelligence: PPE and Hazardous Area Monitoring via Camera",
+   "desc": "Workplace safety through artificial intelligence and image processing: helmet, vest, PPE detection; restricted area, forklift-pedestrian, and fall detection. Preventive inspections under Law No. 6331.",
+   "intro": [
+    "Ways to shift OHS inspections from sample checks to 24/7 automated monitoring: which risks can be detected by cameras, how to set up installations, and what to consider?",
+    "Contents",
+    "Law No. 6331 on Occupational Health and Safety obliges employers to assess risks proactively and take preventative measures. However, site inspections mostly rely on OHS specialists’ rounds and observations. AI-powered camera systems extend inspections to every frame and shift; they issue alerts and record any violations immediately.",
+    "This article is for informational purposes only and does not constitute legal advice. For regulatory obligations, please consult your OHS professional and legal advisor."
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "Which OHS Risks Are Detected by Camera?",
+     "p": [],
+     "li": [],
+     "rows": [
+      [
+       "Risk",
+       "What Image Processing Does",
+       "Module"
+      ],
+      [
+       "Helmet Missing",
+       "Detects presence/absence of helmet per person; turnstile lock",
+       "Helmet Detection"
+      ],
+      [
+       "PPE Missing",
+       "Checks vest, glasses, gloves, mask",
+       "PPE Control"
+      ],
+      [
+       "Restricted/Dangerous Area",
+       "Monitors entry and duration in virtual zones",
+       "Restricted Area"
+      ],
+      [
+       "Forklift-Pedestrian Conflict",
+       "Alerts on distance and path intersection",
+       "Forklift-Pedestrian"
+      ],
+      [
+       "Fall / Immobility",
+       "Alarm for fallen or immobile persons",
+       "Fall Detection"
+      ]
+     ],
+     "cards": []
+    },
+    {
+     "h": "How Does The System Work?",
+     "p": [],
+     "li": [
+      "Live video is captured from existing IP cameras via RTSP/ONVIF.",
+      "An edge device uses a deep learning model to detect people and equipment.",
+      "Violations are determined based on area, duration, and shift rules.",
+      "Actions such as panel alerts, mobile notifications, sirens, flashers, or turnstile locks are triggered.",
+      "Violations are reported with photographic evidence; trend analysis identifies training needs."
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "What Are the Benefits for Preventative OHS?",
+     "p": [],
+     "li": [
+      "Continuous monitoring: every frame is observed, including night and weekend shifts.",
+      "Near-miss visibility: violations that do not lead to accidents are recorded, enabling data-driven risk assessment.",
+      "Behavioural change: instant alerts ensure rules are genuinely followed.",
+      "Reporting: trend reports by area, shift, and violation type simplify inspection and training planning."
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Employee Privacy and KVKK (Turkish GDPR)",
+     "p": [
+      "The purpose of camera analytics for OHS is to detect violations, not individuals. It is possible to operate without facial recognition, process footage on-site, and limit retention periods. For details, please refer to our factory camera analytics and KVKK guide.",
+      "Let’s plan a measured OHS pilot campaign starting with your two or three highest-risk zones."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Does artificial intelligence replace the OHS specialist?",
+     "a": "No. The system serves as the expert’s eyes and ears, automating detection and reporting. Risk assessment, training, and corrective action decisions remain with the OHS professional."
+    },
+    {
+     "q": "Does helmet detection work at night or in low light?",
+     "a": "Yes, provided the camera’s night vision (IR) quality is sufficient. Night footage is tested during the discovery phase to verify accuracy."
+    },
+    {
+     "q": "Can turnstiles or machinery be stopped immediately upon a violation?",
+     "a": "Yes. Scenarios for turnstile locking, sirens, and machine interlock can be configured via relay, Modbus/Ethernet-IP, or API."
+    }
+   ]
+  },
   "/blog": {
    "path": "/en/resources",
    "title": "Industrial computer vision knowledge centre",
@@ -12312,7 +13209,173 @@
     "/en/solutions/production-line-monitoring"
    ]
   },
-  "/blog/yapay-zeka-ile-uretim-kalite-kontrolu": null,
+  "/blog/yapay-zeka-ile-uretim-kalite-kontrolu": {
+   "path": "/en/resources/ai-production-quality-control",
+   "title": "Production Quality Control with Artificial Intelligence and Hype Vision Solutions",
+   "desc": "Production quality control processes with artificial intelligence, the advantages of image processing, and workplace safety solutions with the Hype Vision video analytics platform.",
+   "intro": [
+    "Production quality control processes with artificial intelligence, the advantages of image processing, and workplace safety solutions with the Hype Vision video analytics platform.",
+    "Contents",
+    "Quality control in production processes is a critical point for both product quality and workplace safety. Controls conducted by traditional methods are time-consuming, prone to error, and costly. Therefore, production quality control with artificial intelligence is increasingly important and is leading digital transformation in factories."
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "Challenges and Importance in Production Quality Control",
+     "p": [
+      "Traditional quality control methods mostly rely on human observation. This increases the risk of error, reduces efficiency, and makes maintaining standards difficult, especially in busy production environments. In critical areas such as workplace safety, violations may lead to accidents and significant costs. For example, if risks such as the absence of personal protective equipment (PPE) or proximity of pedestrians to forklifts are not detected in advance, accidents become inevitable.",
+      "According to SGK 2023 statistics, a significant portion of workplace accidents are preventable, highlighting the necessity for technological improvements.",
+      "Concrete Example: In an automotive parts manufacturing facility, small surface defects were missed during manual quality control, resulting in defective products being sent to the customer. This error led to customer dissatisfaction and rework costs on the production line. AI-supported image processing systems can greatly reduce such errors."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Traditional Methods vs. Image Processing in Quality Control",
+     "p": [
+      "In traditional methods, quality control is typically performed through manual measurement, observation, and inspections. These processes are labour-intensive and time-consuming. Moreover, due to the human factor, it is difficult to maintain continuous and objective control.",
+      "On the other hand, image processing techniques and AI-powered video analytics platforms provide real-time and continuous monitoring of the production line via cameras. Thus, both quality and workplace safety issues can be supervised automatically, continuously, and in compliance with standards.",
+      "Step-by-step Comparison:"
+     ],
+     "li": [
+      "Manual Control: Operators inspect products at intervals and perform physical measurements to detect defects.",
+      "AI-Supported Control: Camera images are analysed in real time, abnormalities are automatically detected and reported.",
+      "Advantages: Fault detection time is shortened, human errors are reduced, continuous and objective oversight is ensured."
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "How Does the Hype Vision AI Video Analytics Platform Work?",
+     "p": [
+      "Hype Vision operates using your existing IP cameras, eliminating the need for additional hardware. With RTSP and ONVIF compatibility, it ensures easy integration. The platform analyses video footage through AI algorithms to automatically detect PPE usage, pedestrian proximity to forklifts, hazardous area violations, and production quality controls.",
+      "It offers integration with ERP systems to facilitate data management and accelerate process control. During installation, key criteria such as camera angles, lighting conditions, and KVKK (Turkish GDPR) compliance are carefully considered. Detailed installation steps are tested and optimised through pilot projects to ensure efficient results on site.",
+      "Field Scenario: In a food production facility, the Hype Vision platform detected faulty packaging and labelling errors in real time. Thanks to system alerts, defective products were removed from the production line, leading to a significant reduction in customer complaints."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Installation and Key Considerations",
+     "p": [],
+     "li": [
+      "Camera Angles: Selecting the correct angles reduces false detections. For detailed information, please refer to our camera angle article.",
+      "Lighting: Insufficient or excessive lighting decreases image quality and affects AI accuracy.",
+      "KVKK Compliant Analytics: Camera analytics compliant with KVKK (Turkish GDPR) is essential for personal data protection.",
+      "Area Coverage: Critical production and workplace safety points must be fully covered by cameras.",
+      "Pilot Process: The system performance should be tested under field conditions through a small-scale pilot application before full installation."
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "How to Plan a Pilot Process?",
+     "p": [
+      "To successfully plan a pilot process for AI-based production quality control, the following steps should be followed:",
+      "Checklist:"
+     ],
+     "li": [
+      "Goal Setting: Define clearly which quality and workplace safety criteria will be monitored.",
+      "Camera and Area Selection: Identify critical production points, set up existing or new cameras accordingly.",
+      "Data Collection: Collect and analyse data from the system over a specific period.",
+      "Performance Evaluation: Field experts verify the accuracy and consistency of AI detections.",
+      "Improvement: Optimise camera angles, lighting, and algorithm parameters.",
+      "General Implementation: After successful completion of the pilot, roll out across the entire production line.",
+      "Are the target quality and safety standards defined?",
+      "Have critical areas and cameras been identified?",
+      "Is the data collection duration and method planned?",
+      "Have AI detections been compared against field observations?",
+      "Is a feedback mechanism established for improvements?",
+      "Have results been reported and shared?"
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Measurable Benefits and Outcomes",
+     "p": [
+      "AI-supported quality control applications reduce product defects, decrease scrap rates, and significantly improve workplace safety. Human error is minimised, and processes are accelerated. Video analytics platforms like Hype Vision provide these benefits cost-effectively using existing IP camera infrastructure.",
+      "Thanks to this technology, businesses can both raise quality standards and increase customer satisfaction, whilst also reducing workplace accidents and labour costs."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Common Mistakes and Recommended Solutions",
+     "p": [
+      "Common mistakes encountered in AI-based production quality control projects and recommendations to prevent them:"
+     ],
+     "li": [
+      "Insufficient Camera Coverage: Failing to fully monitor critical areas leads to inaccurate detections. Solution: Camera placement should be planned based on detailed field analysis.",
+      "Lighting Issues: Poor lighting conditions reduce AI performance. Solution: Lighting should be optimized and additional illumination used if necessary.",
+      "Data Privacy Violations: Non-compliance with KVKK rules results in legal problems. Solution: Use KVKK-compliant solutions and educate personnel.",
+      "Inadequate Training and Awareness: Incorrect system use by operators lowers performance. Solution: Organise training programmes and provide user support."
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Future Trends in AI-Based Production Quality Control",
+     "p": [
+      "As AI technologies rapidly evolve, new trends are emerging in production quality control. These include more precise image analysis based on deep learning, multi-sensor integration, and real-time automated decision support systems.",
+      "Concrete Example: In electronic device manufacturing, AI-powered sensor fusion analyses both image and vibration data, allowing production defects to be detected at much earlier stages. This enables faulty products to be separated from the production line, resulting in substantial cost savings.",
+      "These advancements make it possible to approach zero-defect production targets while raising workplace safety standards to a higher level."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Tips for Success in AI Production Quality Control Applications",
+     "p": [],
+     "li": [
+      "Form a Cross-Functional Team: Collaboration between quality, IT, production, and workplace safety teams enhances application success.",
+      "Prioritise Data Quality: Clean and accurate camera images and sensor data directly impact AI performance.",
+      "Continuous Monitoring and Updates: AI models should be regularly updated and adapted to new production conditions.",
+      "Staff Training: Provide regular training and support to ensure operators use the system effectively.",
+      "Generate Performance Reports: Regular analyses should measure and report the system’s contribution to business processes."
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Conclusion and Recommendations",
+     "p": [
+      "Supporting quality control processes with artificial intelligence in production areas creates a competitive advantage in both quality and workplace safety. Hype Vision is a natural solution partner with its video analytics platform offering easy installation and high integration potential using existing IP cameras.",
+      "For more detailed information and a free preliminary camera suitability assessment, please click here.",
+      "Let’s discover the right image processing setup for your facility together during an exploratory meeting."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "How does AI ensure quality control?",
+     "a": "AI analyses camera footage to instantly detect defective products, PPE violations, or hazardous conditions."
+    },
+    {
+     "q": "Can existing IP cameras be used?",
+     "a": "Yes, Hype Vision works compatibly with existing IP cameras and does not require additional hardware."
+    },
+    {
+     "q": "How is KVKK compliance ensured?",
+     "a": "By choosing camera analytics solutions compliant with data privacy and KVKK (Turkish GDPR) regulations."
+    },
+    {
+     "q": "What should be considered during installation?",
+     "a": "Correct camera angles, appropriate lighting, and selection of areas are key factors to consider during installation."
+    },
+    {
+     "q": "Is ERP integration possible?",
+     "a": "Yes, Hype Vision facilitates ERP system integration to streamline data management."
+    }
+   ]
+  },
   "/vaka-calismalari/gida-hattinda-idle-azaltma": {
    "path": "/en/case-studies/gida-hattinda-idle-azaltma",
    "title": "How idle time on a food production line was reduced by 18%",
@@ -12435,7 +13498,62 @@
     "/en/case-studies/tekstil-hat-a-fire-dususu"
    ]
   },
-  "/blog/onvif-nedir": null,
+  "/blog/onvif-nedir": {
+   "path": "/en/resources/what-is-onvif",
+   "title": "What is ONVIF? Using Different Brand Cameras in a Single System",
+   "desc": "What is ONVIF, and what is its purpose? ONVIF profiles, its relation to RTSP, using different brand cameras together, and its significance for artificial intelligence analytics.",
+   "intro": [
+    "We have explained what the ONVIF standard is, how it differs from RTSP, and its role in brand-independent image processing projects.",
+    "Contents",
+    "ONVIF (Open Network Video Interface Forum) is an industry standard established to enable IP video devices from different manufacturers to recognise each other and work together via a common interface. Thanks to ONVIF, a system can discover different brand cameras using the same method, obtain their streaming addresses, and manage basic settings."
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "Difference Between ONVIF and RTSP",
+     "p": [
+      "RTSP is a protocol for transporting video; ONVIF, on the other hand, is a standard for device discovery and configuration. In practice, the camera’s RTSP address is obtained via ONVIF, and the video stream is received with RTSP. For more details, see: What is RTSP?"
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "ONVIF Profiles",
+     "p": [
+      "Which profiles a device supports should be checked according to the manufacturer’s declaration and the ONVIF compliance list."
+     ],
+     "li": [
+      "Profile S: Basic video streaming and configuration; the most common profile.",
+      "Profile T: Advanced video streaming (e.g., H.265) and event management.",
+      "Profile G: Recording on the device and access to recordings.",
+      "Profile M: Analytic metadata and events."
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Significance for Artificial Intelligence Analytics",
+     "p": [
+      "In the field, cameras from different years and various brands are often found. Support for ONVIF and RTSP facilitates the use of this diverse infrastructure on a single analytic platform. Hype Vision connects to existing cameras through these standards. See also ONVIF/RTSP artificial intelligence integration.",
+      "Let’s determine the right image processing setup for your facility during a discovery meeting."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Can a camera without ONVIF support be used?",
+     "a": "Usually yes, if it provides an RTSP stream; ONVIF only facilitates discovery and configuration."
+    },
+    {
+     "q": "Does ONVIF compatibility mean all features will work?",
+     "a": "No. Compatibility is limited to certain profiles; manufacturer-specific features may fall outside ONVIF."
+    }
+   ]
+  },
   "/sss": null,
   "/vaka-calismalari/tekstil-hat-a-fire-dususu": {
    "path": "/en/case-studies/tekstil-hat-a-fire-dususu",
@@ -12648,7 +13766,83 @@
     }
    ]
   },
-  "/blog/kamera-acisi-neden-onemli": null,
+  "/blog/kamera-acisi-neden-onemli": {
+   "path": "/en/resources/why-camera-angle-matters",
+   "title": "Why Is Camera Angle Important in Artificial Intelligence Camera Projects?",
+   "desc": "The impact of camera angle, height, distance and lens choice on detection performance in image processing and AI camera projects; recommendations based on scenarios.",
+   "intro": [
+    "The same model, the same camera; different angle. We explained with examples how detection performance is often determined during installation.",
+    "Contents",
+    "One of the factors that affects performance in image processing projects more than the model itself is what the camera sees, from which angle and at what distance."
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "Angle According to Scenario",
+     "p": [],
+     "li": [],
+     "rows": [
+      [
+       "Scenario",
+       "Recommended View",
+       "To Avoid"
+      ],
+      [
+       "PPE / helmet",
+       "Oblique from above, with the person sufficiently large in frame",
+       "Directly above or viewed from too far away"
+      ],
+      [
+       "People counting",
+       "From above or perpendicular at the entrance",
+       "Side view of doorway, angle overlapping crowd"
+      ],
+      [
+       "Fall detection",
+       "Side or oblique, whole body visible",
+       "Areas behind shelves or machines"
+      ],
+      [
+       "Forklift-pedestrian",
+       "Wide angle showing entire passage",
+       "Position leaving blind spot out of frame"
+      ],
+      [
+       "Product counting",
+       "Perpendicular to flow",
+       "Angle where products overlap"
+      ]
+     ],
+     "cards": []
+    },
+    {
+     "h": "Distance and Pixel Density",
+     "p": [
+      "The number of pixels occupied by the object to be detected in the image is critical. For events at person level, 1080p at medium distance is often sufficient, whereas glasses, gloves or small defects require closer framing or higher resolution."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Light and Environment",
+     "p": [
+      "Backlighting (windows, doors), reflections, steam and dust reduce performance. IR quality should also be checked separately for night conditions.",
+      "Therefore, Hype Vision always performs a camera assessment first in every project. For the camera suitability checklist: are existing IP cameras sufficient?",
+      "Let’s determine the right image processing setup for your facility together during a discovery meeting."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Is it enough to just slightly adjust the existing camera?",
+     "a": "Most of the time, yes. A small angle change can significantly improve performance without purchasing a new camera; however, security recording needs should also be considered."
+    }
+   ]
+  },
   "/vaka-calismalari/isg-kkd-ihlal-tespiti": {
    "path": "/en/case-studies/isg-kkd-ihlal-tespiti",
    "title": "PPE violations on an assembly line: a 24/7 automated inspection case",
@@ -12740,7 +13934,103 @@
     "/en/solutions/restricted-area-monitoring"
    ]
   },
-  "/blog/goruntu-isleme-firmasi-secimi": null,
+  "/blog/goruntu-isleme-firmasi-secimi": {
+   "path": "/en/resources/choosing-a-computer-vision-company-10-criteria",
+   "title": "Image Processing Companies: 10 Criteria for Choosing the Right Company",
+   "desc": "What to look for when selecting an image processing company? A checklist of 10 criteria including field references, existing camera compatibility, edge/cloud, KVKK (Turkish GDPR), pilot process, and cost.",
+   "intro": [
+    "A practical checklist of 10 items you can use to compare proposals when choosing an industrial image processing company.",
+    "Contents",
+    "A production manager searching for “image processing companies” in Turkey encounters a wide range of players, from machine vision integrators to AI startups. Proposals may appear similar at first glance, but installation time, hidden hardware costs, and real-world accuracy can vary significantly. The following 10 criteria will help you weigh proposals on an equal footing."
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "10 Criteria for Choosing an Image Processing Company",
+     "p": [
+      "### 1. Proven Accuracy in the Field",
+      "Not laboratory accuracy, but the accuracy under your lighting and camera angle is what matters. Request measured results from similar sites and the post-pilot validation method from the company.",
+      "### 2. Compatibility with Existing Cameras",
+      "A brand-independent solution supporting RTSP/ONVIF can eliminate the need for new camera investments. For proposals stating “You must purchase our camera,” calculate the total cost separately. See ONVIF/RTSP AI integration.",
+      "### 3. Edge, Cloud, or Hybrid Option",
+      "If images must not leave the facility, analysis should be possible on-site (edge). A central cloud panel offers advantages for multi-location setups. A good company offers both.",
+      "### 4. KVKK (Turkish GDPR) and Data Security",
+      "The personal data processing inventory, retention period, masking/anonymisation, and access permissions must be clear. See KVKK compliant camera analytics.",
+      "### 5. Short and Measurable Pilot",
+      "Instead of projects lasting months, request a pilot of 1–2 or just a few weeks with predefined success criteria. Success metrics: accuracy, false alarm rate, alarm delay, and operational impact.",
+      "### 6. Ready Modules + Custom Model Flexibility",
+      "Ready modules like helmet, PPE, and restricted area provide a fast start; custom model training should be possible for defects unique to your product.",
+      "### 7. Integration (ERP, MES, PLC, turnstile)",
+      "Detection results should not remain only on screen; they must trigger on-site systems such as REST API, Modbus/Ethernet-IP, turnstiles, or sirens.",
+      "### 8. False Alarm Management",
+      "A system that produces too many alarms is quickly ignored. Verify that rules based on zone, time threshold, and shift can be defined.",
+      "### 9. Local Support and Turkish Interface",
+      "A team able to visit the site, provide Turkish reporting and training, is critical for rapid calibration in the initial months.",
+      "### 10. Transparent Total Cost of Ownership",
+      "License, hardware, installation, maintenance and model update costs should be listed separately. Calculate ROI including scrap, downtime, and accident costs."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Proposal Comparison Table",
+     "p": [],
+     "li": [],
+     "rows": [
+      [
+       "Question",
+       "Why is it important?"
+      ],
+      [
+       "Does it work with my existing cameras?",
+       "Determines hardware cost"
+      ],
+      [
+       "What is the pilot duration and success criteria?",
+       "Limits risk"
+      ],
+      [
+       "Do images leave the facility?",
+       "KVKK (Turkish GDPR) and information security"
+      ],
+      [
+       "How is the false alarm rate measured?",
+       "Determines field usability of the system"
+      ],
+      [
+       "Which systems does it integrate with?",
+       "Ensures detection triggers action"
+      ]
+     ],
+     "cards": []
+    },
+    {
+     "h": "Where Does Hype Vision Stand Regarding These Criteria?",
+     "p": [
+      "Hype Vision has been a team developing industrial image processing in Bilişim Vadisi, Gebze since 2020. It works with existing IP cameras (brand-independent); offers edge, cloud, and hybrid architectures; consolidates İSG, quality, and efficiency modules into a single panel. You can review all modules on the image processing solutions page.",
+      "Let’s identify the right image processing setup for your facility together during a discovery meeting."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "How long does it take to deploy an image processing project?",
+     "a": "Pilots with ready modules (PPE, helmet, restricted area) are typically set up within days. Projects requiring custom defect detection model training may take a few weeks including data collection."
+    },
+    {
+     "q": "What affects the price of an image processing system?",
+     "a": "The price depends on the number of cameras, modules, edge hardware requirements, custom model training, and integration scope. Using existing cameras can significantly reduce costs."
+    },
+    {
+     "q": "What happens if the pilot fails?",
+     "a": "In a well-structured pilot, success criteria are defined upfront; if criteria are not met, the decision to deploy widely will not be made. Therefore, measurable goals must be clarified before the pilot."
+    }
+   ]
+  },
   "/blog/goruntu-isleme-dogruluk-olcumu": {
    "path": "/en/resources/measuring-accuracy-false-positives-negatives",
    "title": "How Is Accuracy Measured in Computer Vision? False Positives and False Negatives",
@@ -12846,8 +14136,216 @@
     "/en/solutions/visual-quality-inspection"
    ]
   },
-  "/blog/goruntu-isleme-nedir": null,
-  "/blog/makine-gorme-ve-derin-ogrenme": null,
+  "/blog/goruntu-isleme-nedir": {
+   "path": "/en/resources/what-is-computer-vision",
+   "title": "What is Image Processing? How Does It Work and Where is It Used in Industry?",
+   "desc": "What is image processing and how does it work? Steps of image processing from classical algorithms to artificial intelligence, industrial applications, hardware requirements, and example projects.",
+   "intro": [
+    "We explained the fundamentals of image processing, its relationship with artificial intelligence, and real use cases ranging from quality control in factories to occupational safety—all in one article.",
+    "Contents",
+    "Image processing is the analysis of digital images from cameras or sensors by a computer to convert them into meaningful information. Cleaning noise from a photo or sorting out a scratched part on a production line within seconds are both image processing. Today, when we say “image processing,” we mostly mean AI-supported computer vision: the machine recognising, counting, measuring objects in images, and making decisions.",
+    "In this guide, we explain in simple terms how image processing works, the difference between classical methods and deep learning, and the problems it solves in factories. If you want to see industrial solutions directly, you can visit our industrial image processing systems page."
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "How Does Image Processing Work?",
+     "p": [
+      "A digital image is a matrix composed of pixels, each carrying colour and brightness values. The image processing system works on this matrix step by step:"
+     ],
+     "li": [
+      "Image acquisition: IP camera, industrial camera, or smartphone captures the image. IP cameras supporting RTSP/ONVIF are commonly used in factories.",
+      "Preprocessing: Noise reduction, contrast enhancement, perspective correction, and resizing are performed.",
+      "Feature extraction: Edges, colour regions, textures, or representations learned by the network in deep learning are extracted.",
+      "Analysis and decision: Object detection (is there a helmet?), classification (is the part defective?), segmentation (what is the area of the stain?) or tracking (where is the forklift going?) are carried out.",
+      "Action: The result is sent back to the field as an alarm, report, PLC signal, turnstile lock, or ERP record."
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Difference Between Classical Image Processing and Artificial Intelligence",
+     "p": [
+      "Classical image processing relies on rules written manually by engineers: “if the number of pixels within this colour range exceeds the threshold, count as a defect”. It is still very effective on lines with fixed lighting, fixed angles, and uniform products. However, rules break down as the environment changes.",
+      "Deep learning-based image processing learns its own rules from thousands of sample images. It can generalise despite changes in lighting, angle, clothing colour, or product variation. Therefore, it has become the standard for “rule-defying” problems such as occupational safety, human behaviour, and variable surface defects. For a detailed comparison, please see our machine vision and deep learning article."
+     ],
+     "li": [],
+     "rows": [
+      [
+       "Criterion",
+       "Classical Image Processing",
+       "Artificial Intelligence (Deep Learning)"
+      ],
+      [
+       "Installation Logic",
+       "Manually written rules and thresholds",
+       "Learning from labelled samples"
+      ],
+      [
+       "Changing Environment",
+       "Sensitive, requires frequent adjustment",
+       "Robust, generalises well"
+      ],
+      [
+       "Suitable Tasks",
+       "Measurement, barcode, fixed-position inspection",
+       "Defect detection, human/PPE, behaviour, counting"
+      ],
+      [
+       "Hardware",
+       "Industrial camera + controlled lighting",
+       "Existing IP cameras + edge GPU/NPU"
+      ]
+     ],
+     "cards": []
+    },
+    {
+     "h": "Industrial Applications of Image Processing",
+     "p": [
+      "### 1. Quality Control and Defect Detection",
+      "Scratches, stains, cracks, missing assemblies, incorrect labels or colour deviations are detected at production speed. Defective products are separated before reaching the customer, reducing scrap rates and return costs. See quality control with image processing and surface defect detection.",
+      "### 2. Occupational Health and Safety (OHS)",
+      "Deficiencies in PPE such as helmets, vests, goggles, and gloves; entry into restricted areas, forklift-pedestrian proximity, and fall incidents are monitored 24/7. Every frame is checked in the field where human supervision is only sampled. See helmet detection system, PPE control, forklift-pedestrian safety.",
+      "### 3. Productivity and OEE",
+      "Line stops, cycle times, station occupancy, and idle times are automatically measured from the camera to provide real-time dashboards instead of end-of-shift Excel sheets. See OEE tracking system and workforce productivity analysis.",
+      "### 4. Logistics, Counting and Traceability",
+      "Counting pallets, boxes, vehicles; ramp occupancy and shipment verification are performed. Counting data is transferred to WMS/ERP systems via API. See warehouse and logistics safety."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "What Hardware is Required for Image Processing?",
+     "p": [
+      "For many applications, buying new cameras is unnecessary. Existing IP cameras at the facility (mostly 1080p, 15–25 FPS) are sufficient for OHS and productivity analysis. For quality control stations searching for micron-level defects, industrial cameras and controlled lighting may be required. Analysis can be performed on an edge device within the facility (without sending images outside) or in the cloud. Details: Are existing IP cameras sufficient for artificial intelligence?"
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "How Does an Image Processing Project Progress?",
+     "p": [
+      "Let’s discover together in the initial meeting which problem image processing can solve in your facility."
+     ],
+     "li": [
+      "Discovery: Problem, target metric and camera positions are determined together.",
+      "Data and model: Sample images are collected from the field; a pre-trained model is calibrated or a custom model is trained.",
+      "Pilot: A few weeks of trial measurements are carried out on 1–2 lines or areas.",
+      "Deployment: Alarm rules, reports, and ERP/MES integration extend the solution to the entire facility."
+     ],
+     "rows": [],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Is image processing the same as artificial intelligence?",
+     "a": "No. Image processing is the general term for extracting information from images; artificial intelligence (particularly deep learning) is the most powerful current method of doing this. Classical, rule-based image processing is still used."
+    },
+    {
+     "q": "Which programming language is used for image processing?",
+     "a": "The most common language is Python, using libraries like OpenCV, PyTorch, and TensorFlow. For real-time industrial systems, C++ and optimized inference engines are also used for performance."
+    },
+    {
+     "q": "Is buying new cameras necessary to set up an image processing system?",
+     "a": "For most OHS and productivity applications, it is not; existing IP cameras supporting RTSP/ONVIF are sufficient. Industrial cameras may be recommended at quality stations searching for very small defects."
+    },
+    {
+     "q": "What is the accuracy of industrial image processing systems?",
+     "a": "It depends on the application and field conditions. Hype Vision reports accuracy between 96% and 98.6% for helmet detection after on-site calibration; exact values are determined with pilot measurements."
+    }
+   ]
+  },
+  "/blog/makine-gorme-ve-derin-ogrenme": {
+   "path": "/en/resources/machine-vision-vs-deep-learning",
+   "title": "Machine Vision or Deep Learning? A Comparison of Classical Image Processing and Artificial Intelligence",
+   "desc": "Differences, advantages, costs, and guidance on choosing between classical machine vision and deep learning-based image processing for your project.",
+   "intro": [
+    "We compared rule-based machine vision and AI-based image processing in terms of cost, flexibility and accuracy.",
+    "Contents",
+    "The term “machine vision” has long been used for systems consisting of industrial cameras, controlled lighting and rule-based software. With the maturity of deep learning, it has become possible to approach the same problems with artificial intelligence. But which is the right choice, and when?"
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "When is classical machine vision sufficient?",
+     "p": [],
+     "li": [
+      "When the part is always in the same position and lighting conditions",
+      "When precise dimensional measurement (micron level) is required",
+      "When performing standard reading tasks such as barcode, Data Matrix, OCR",
+      "When defect definitions can be precisely converted into rules (e.g. “hole present/absent”)"
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "When is deep learning indispensable?",
+     "p": [],
+     "li": [
+      "When defects vary greatly in shape, size and texture (natural materials, fabric, casting)",
+      "When the environment is uncontrolled: varying daylight, different camera angles",
+      "When human and behaviour analysis is required: PPE, falls, restricted areas, forklift-pedestrian interactions",
+      "When large areas are monitored using existing IP cameras"
+     ],
+     "rows": [
+      [
+       "",
+       "Machine vision (rule-based)",
+       "Deep learning"
+      ],
+      [
+       "Development",
+       "Engineer writes rules",
+       "Learns from labelled data"
+      ],
+      [
+       "New product/variant",
+       "Reprogramming",
+       "Retraining with new examples"
+      ],
+      [
+       "Environmental tolerance",
+       "Low",
+       "High"
+      ],
+      [
+       "Explainability",
+       "High (rules are clear)",
+       "Medium (with visual explanation tools)"
+      ],
+      [
+       "Typical hardware",
+       "Industrial camera + lighting + PC",
+       "IP/industrial camera + edge GPU/NPU"
+      ]
+     ],
+     "cards": []
+    },
+    {
+     "h": "Best results: hybrid approach",
+     "p": [
+      "In practice, the most robust systems combine both: deep learning answers the question “Is there a defect here, and where?”; classical image processing then precisely measures the area, dimensions and location of that region. This hybrid approach is also employed in Hype Vision quality modules. See industrial image processing systems.",
+      "Let’s discover the right image processing setup for your facility together in a consultation meeting."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Are machine vision and computer vision the same?",
+     "a": "They are closely related concepts. Machine vision generally refers to industrial applications and hardware, while computer vision refers to the broader scientific field of algorithms that interpret images."
+    },
+    {
+     "q": "Is deep learning always more accurate?",
+     "a": "No. For simple measurements under consistent conditions, rule-based systems can be faster, cheaper and more explainable. Deep learning excels when variability is high."
+    }
+   ]
+  },
   "/blog/forklift-yaya-carpisma-riski-yapay-zeka": {
    "path": "/en/resources/forklift-safety-computer-vision",
    "title": "Forklift Safety with Computer Vision: Monitoring Pedestrian Interaction Risk",
@@ -13399,7 +14897,80 @@
     "/en/solutions/restricted-area-monitoring"
    ]
   },
-  "/blog/kvkk-kamera-yapay-zeka": null,
+  "/blog/kvkk-kamera-yapay-zeka": {
+   "path": "/en/resources/ai-camera-analytics-privacy-compliance",
+   "title": "AI Camera Analytics and KVKK Compliance in Factories: A Compliance Guide",
+   "desc": "How to establish AI-powered camera analytics in the workplace in compliance with KVKK? Illumination, data minimisation, edge processing, masking, retention periods, and access permissions.",
+   "intro": [
+    "We have summarised the key considerations for camera analytics projects under Law No. 6698 on the Protection of Personal Data (KVKK) with a practical checklist.",
+    "If individuals can be recognised in camera footage, such footage qualifies as personal data under the Law No. 6698 on the Protection of Personal Data (KVKK). Adding AI analytics changes the purpose and method of data processing, requiring a reassessment of the compliance framework. The good news: with the right architecture, it is possible to achieve both occupational safety/productivity goals and protect privacy.",
+    "This article is for general informational purposes and does not constitute legal advice. For assessments specific to your organisation, please consult your KVKK (Turkish GDPR) advisor."
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "Compliance checklist",
+     "p": [],
+     "li": [
+      "Purpose and legal basis: The purpose of the analytics (e.g. occupational safety, quality) must be defined in writing and linked to the processing conditions.",
+      "Illumination: Employees should be informed about the camera analytics, its purpose, and duration; visible notifications should be placed in monitored areas.",
+      "Data minimisation: Data not essential for the purpose should not be processed; for example, facial recognition should not be used for occupational safety.",
+      "On-site (edge) processing: Images can be analysed within the facility without leaving it, transferring only event metadata.",
+      "Masking/anonymisation: Faces and identity details may be blurred in reports.",
+      "Retention period: Separate, brief, and justified retention periods should be established for raw footage and event records.",
+      "Access rights: Role-based restrictions and logging should control who can view which footage.",
+      "VERBIS and inventory: The personal data processing inventory and, if necessary, VERBIS registration should be updated."
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Privacy-focused architectural example",
+     "p": [
+      "Hype Vision supports this approach by default. For more details: KVKK-compliant camera analytics.",
+      "Let us collaboratively determine the correct image processing setup for your facility in an exploratory meeting."
+     ],
+     "li": [],
+     "rows": [
+      [
+       "Layer",
+       "Application"
+      ],
+      [
+       "Camera",
+       "Existing IP camera, no changes"
+      ],
+      [
+       "Edge analysis",
+       "Images processed within the facility, no internet connection"
+      ],
+      [
+       "Event recording",
+       "Short masked clip/frame only of the violation moment"
+      ],
+      [
+       "Panel",
+       "Role-based access, processing logs"
+      ],
+      [
+       "Retention",
+       "Automatic deletion policy"
+      ]
+     ],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Is explicit consent required for camera analytics for occupational safety?",
+     "a": "Different legal bases may apply depending on the situation; as the validity of explicit consent in the employer-employee relationship can be debatable, evaluation should be conducted together with a KVKK (Turkish GDPR) advisor."
+    },
+    {
+     "q": "Can individual-based violation reports be obtained without facial recognition?",
+     "a": "Violations can be reported anonymously (region, time, violation type). If individual matching is necessary, it should be limited to and justified by existing systems such as turnstile/card data."
+    }
+   ]
+  },
   "/blog/cctv-ile-baret-tespiti": {
    "path": "/en/resources/ppe-detection-with-existing-cctv",
    "title": "PPE Detection with Existing CCTV: How It Works and What to Plan For",
@@ -15257,6 +16828,469 @@
    "path": "/en/case-studies/400-camera-zone-based-ppe-monitoring",
    "date": "2026-10-12",
    "links": []
+  },
+  "/blog/goruntu-isleme-maliyeti-neye-baglidir": {
+   "path": "/en/resources/computer-vision-system-cost-factors",
+   "title": "What Determines the Cost of Machine Vision / AI Camera Systems in Factories?",
+   "desc": "Cost factors of a machine vision project: number of cameras, modules, hardware, integration, and licence model.",
+   "intro": [
+    "There are five factors that determine the cost: number of cameras to be analysed, selected modules, processing hardware (edge server), integration requirements (ERP, PLC, "
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "What Determines the Cost of Machine Vision / AI Camera Systems in Factories?",
+     "p": [
+      "Short answer: There are five factors that determine the cost: number of cameras to be analysed, selected modules, processing hardware (edge server), integration needs (ERP, PLC, VMS), and the licence model. Using existing cameras significantly reduces the cost compared to purchasing new cameras."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Cost Components",
+     "p": [],
+     "li": [
+      "Number of cameras: determines licence and hardware scale",
+      "Modules: off-the-shelf modules or custom project models",
+      "Hardware: on-premise edge server or cloud",
+      "Integration: alarm channels, ERP/MES, turnstile/PLC",
+      "Support and maintenance: calibration, updates"
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Choices That Reduce Costs",
+     "p": [
+      "Starting with existing cameras, running a pilot with 1–2 modules that provide the clearest feedback initially, and running multiple analytics on the same camera all reduce the total cost. At Hype Vision, modules are licensed separately; you only pay for the modules you use."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Why is the price not listed on the website?",
+     "a": "Since it varies based on the number of cameras, modules and integration, a precise quote is provided after discovery. You can contact info@hypevisionlab.com for a pilot."
+    }
+   ]
+  },
+  "/blog/goruntu-isleme-projesi-ne-kadar-surer": {
+   "path": "/en/resources/how-long-does-a-computer-vision-project-take",
+   "title": "How Long Does an Image Processing Project Take?",
+   "desc": "Discovery, installation, pilot and deployment durations in industrial image processing / AI camera projects.",
+   "intro": [
+    "In a typical project using existing cameras, discovery takes 1–2 days, installation 3–5 days, and site-specific calibration and pilot 2–4 weeks. Thus, initial measured results"
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "How Long Does an Image Processing Project Take?",
+     "p": [
+      "Short answer: In a typical project using existing cameras, discovery takes 1–2 days, installation 3–5 days, and site-specific calibration and pilot 2–4 weeks. Therefore, the first measured results are obtained within about a month; deployment is completed in a few weeks depending on the number of cameras."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Step-by-Step Process",
+     "p": [],
+     "li": [
+      "Discovery (1–2 days): cameras, priority risks, target KPIs",
+      "Installation (3–5 days): edge server, stream connection, zones and rules",
+      "Calibration and pilot (2–4 weeks): model adjustment with site data, accuracy measurement",
+      "Reporting and deployment: measured results, ROI summary, expansion to other cameras"
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Situations That Extend Duration",
+     "p": [
+      "The need for new cameras or lighting, unready network infrastructure, and project-specific new model training (e.g. custom product defect) extend the duration. Ready-made modules (PPE, forklift, counting) are the fastest to deploy."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "How does the timeline change for large facilities with 200+ cameras?",
+     "a": "The pilot phase remains the same; deployment is carried out in stages. For example, in a mining facility with 200+ cameras, over 20 modules have been deployed gradually."
+    }
+   ]
+  },
+  "/blog/kkd-kontrolu-icin-hangi-kamera-gerekir": {
+   "path": "/en/resources/which-camera-for-ppe-detection",
+   "title": "Which Camera is Required for PPE Inspection in Factories?",
+   "desc": "Camera resolution, angle, distance and lighting requirements for detecting helmets, vests, gloves, and safety shoes; evaluating whether existing cameras are adequate.",
+   "intro": [
+    "In most factories, existing 2–4 MP IP cameras are sufficient for helmet and vest detection. The person's upper torso should be clearly visible, and the camera should not be positioned directly overhead."
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "Which Camera is Required for PPE Inspection in Factories?",
+     "p": [
+      "Short answer: In most factories, existing 2–4 MP IP cameras are sufficient for detecting helmets and vests. The person's upper torso must be clearly visible, and the camera should not be positioned directly overhead. For smaller equipment such as gloves and safety shoes, it is recommended to place the camera near the entrance gate and at a lower height."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Resolution and Distance",
+     "p": [
+      "For helmets and vests, it is sufficient that the person appears approximately 80–100 pixels tall in the image. A 4 MP camera typically meets this condition up to distances of 10–15 metres."
+     ],
+     "li": [
+      "Helmet / vest: 2–4 MP, 10–15 m",
+      "Gloves / shoes: 4 MP+, 3–6 m, entrance point",
+      "Face shield / welding mask: close angle"
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Angle and Lighting",
+     "p": [
+      "Cameras positioned directly overhead can see helmets clearly but vests and gloves are difficult to detect; an angle of 30–45° is ideal. Strong backlighting (from doors or windows) creates a silhouette effect, so the camera orientation should be chosen accordingly."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Are Existing Cameras Adequate?",
+     "p": [
+      "During the survey phase, several frames are taken from each camera to assess suitability. In practice, most PPE projects start using existing security cameras without purchasing new ones. Example: area-based PPE inspection with 400 cameras."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Does PPE detection work on night shifts?",
+     "a": "Yes, if the area is sufficiently lit. Since colour information is lost in IR mode, vest detection may become challenging and this is evaluated during the survey."
+    }
+   ]
+  },
+  "/blog/turkiye-goruntu-isleme-firmalari-nasil-secilir": {
+   "path": "/en/resources/how-to-choose-a-computer-vision-company-in-turkey",
+   "title": "How to Choose an Image Processing Company in Turkey? 2026 Comparison Guide",
+   "desc": "Nine criteria to consider when selecting an image processing / AI camera company for your factory, comparison of company types, and questions to ask when obtaining quotes.",
+   "intro": [
+    "Who should you contact for an image processing project? A brief guide with company types, 9 selection criteria, comparison table, and questions for proposals."
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "How to Choose an Image Processing Company in Turkey? 2026 Comparison Guide",
+     "p": [
+      "Short answer: The three most important criteria when selecting an image processing company for a factory in Turkey are whether it works with your existing cameras, if they can show measured results from a project similar to your site, and whether data processing is done on-premise. Do not decide without seeing accuracy on your own camera through a short paid or free pilot."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Types of Image Processing Companies",
+     "p": [
+      "Companies providing services referred to as \"image processing\" in the market are divided into four groups. Each suits different needs:"
+     ],
+     "li": [],
+     "rows": [
+      [
+       "Company Type",
+       "Strength",
+       "Weakness",
+       "Suitable For"
+      ],
+      [
+       "Foreign Video Analytics Platforms",
+       "Ready-made, wide module catalogue",
+       "Difficult Turkish support and onsite visits, cloud dependency, foreign exchange costs",
+       "Corporations requiring standard installation across many countries"
+      ],
+      [
+       "Built-in Analytics of Smart Camera Manufacturers",
+       "Inside the camera, easy installation",
+       "Requires purchase of new camera, limited rules, brand dependency",
+       "New facilities installing cameras from scratch"
+      ],
+      [
+       "Classic Machine Vision Integrators",
+       "Micron-level quality control on production line",
+       "Weak in broad scenarios like H&S, efficiency, logistics; each station requires separate project",
+       "Those with a single quality station problem"
+      ],
+      [
+       "Local Industrial AI Platforms (e.g. Hype Vision)",
+       "Works with existing cameras, onsite support, H&S + efficiency + quality on a single platform, on-premise",
+       "Global multi-country support network may be limited",
+       "Manufacturing, warehouse, and logistics facilities in Turkey"
+      ]
+     ],
+     "cards": []
+    },
+    {
+     "h": "9 Criteria for Selection",
+     "p": [],
+     "li": [
+      "Compatibility with existing cameras: Can it connect brand-independently via RTSP/ONVIF? Requiring new cameras multiplies costs.",
+      "Field-verified references: Is there a case study close to your sector with shared real accuracy range?",
+      "Pilot: Is a 2–4 week pilot offered with a single camera and module, with a written accuracy report at the end?",
+      "On-premise option: Can image data be processed locally on your server without leaving the facility?",
+      "KVKK (Turkish GDPR): Can analysis be done without facial recognition or personal data? Are the data classes of modules clearly stated?",
+      "Scope: Are H&S, efficiency, quality, and logistics offered on the same platform, or are they separate products?",
+      "Integration: Can alarms be sent to VMS, ERP/MES, PLC/relays, WhatsApp/SMS?",
+      "Local team: Is there an engineering team available to come onsite for calibration and maintenance?",
+      "Scalability: Can the system grow from 10 cameras to 400 cameras using the same structure?"
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Questions to Ask When Requesting Quotations",
+     "p": [],
+     "li": [
+      "What is the accuracy range measured in similar sites for this module? How was it measured?",
+      "What camera resolution and angle are needed; which of our existing cameras are suitable?",
+      "How is hardware (edge server) sizing determined for how many cameras?",
+      "How do you reduce the false alarm rate?",
+      "What is delivered at the end of the pilot?"
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "About Hype Vision",
+     "p": [
+      "Since 2020, Hype Vision, based in Bilişim Vadisi (Gebze), develops industrial image processing and AI solutions operating on existing IP cameras. It runs over 100 ready modules (PPE, forklift–pedestrian, fall, fire/smoke, OEE, counting, quality control) on-premise and has onsite experience with deployments up to 400 cameras. For examples, see the case studies page and for modules, see the solutions page."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "How can I reach companies doing image processing in Turkey?",
+     "a": "First clarify your problem (e.g. PPE violation, counting, quality) and the number of cameras; then request quotes from 2–3 companies that support your existing cameras and offer pilots. You can contact Hype Vision at info@hypevisionlab.com or +90 541 260 91 90."
+    },
+    {
+     "q": "Do I need to buy new cameras for an image processing project?",
+     "a": "Usually not for H&S, efficiency, and logistics scenarios; existing IP cameras with RTSP/ONVIF support suffice. Industrial cameras and lighting may be needed for micron-level quality control."
+    },
+    {
+     "q": "How long does a pilot last?",
+     "a": "A typical pilot lasts 2–4 weeks: discovery, setup, site-specific calibration, and a report with measured results."
+    }
+   ]
+  },
+  "/blog/yapay-zeka-ile-kkd-tespiti-dusme-algilama-yangin-algilama": {
+   "path": "/en/resources/ai-ppe-fall-and-fire-detection",
+   "title": "PPE Detection, Fall and Fire Detection with Artificial Intelligence",
+   "desc": "Innovative methods and installation stages in occupational safety with artificial intelligence solutions for PPE detection, fall detection, and fire detection.",
+   "intro": [
+    "Innovative methods and installation stages in occupational safety with artificial intelligence solutions for PPE detection, fall detection, and fire detection."
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "PPE Detection, Fall and Fire Detection with Artificial Intelligence",
+     "p": [
+      "With advancing technology, AI-powered video analytics solutions are becoming prominent in the field of occupational safety. New methods have been developed for rapid and accurate response in critical areas such as AI-based PPE detection, fall detection, and fire detection. The importance of these technologies is increasingly recognised by factory managers, occupational safety experts, and production-quality managers."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Challenges and Importance in Occupational Safety",
+     "p": [
+      "Workplace accidents present significant risks to the safety of employees in production areas. Failure to properly monitor PPE (Personal Protective Equipment) usage, falls, and fire risks results in both material and moral damages. Social Security Institution (SGK) statistics indicate the necessity to increase preventive measures to avoid negligence leading to work accidents.",
+      "To better understand the fundamental problems experienced in occupational safety, typical scenarios from the field can be examined. For instance, frequent issues include workers on a production line not wearing helmets or gloves, inadequate precautions in areas with high fall risk, or insufficient early warning systems for fire. Such shortcomings negatively impact both employee health and the reputation of the business.",
+      "Field Scenario: A worker in a warehouse attempts to reach high shelves without proper PPE. Simultaneously, the floor is slippery, increasing the risk of falling, and the early warning system for fire hazards is inactive. This situation creates a chain reaction risk of an accident."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Traditional Methods and AI-Based Image Processing",
+     "p": [
+      "While traditional inspection methods are limited to manual observation and reporting, AI-powered video analysis systems provide real-time and objective data. Situations missed by traditional methods are instantly detected and recorded by artificial intelligence.",
+      "Let us examine the disadvantages of traditional methods compared to AI-based systems step by step:",
+      "AI-based image processing addresses these shortcomings as follows:",
+      "Field Scenario: While PPE violations in a workplace were detected through weekly inspections using old methods, the new AI system identifies violations instantly and enables immediate intervention, thereby minimising risks."
+     ],
+     "li": [
+      "Manual Inspection: Dependent on human factors, risks may be overlooked.",
+      "Delayed Intervention: Hazard situations are not detected instantly, potentially increasing damage.",
+      "Lack of Data: Detailed event records are not kept, preventing analysis.",
+      "Real-Time Monitoring: Provides continuous and uninterrupted control.",
+      "Automatic Alarm: Sends instant notifications to authorities in risk situations.",
+      "Detailed Record Keeping: All incidents are recorded and can be used for subsequent analysis."
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "How Does the AI Video Analytics Platform Work?",
+     "p": [
+      "AI video analytics platforms operating through existing IP cameras analyse PPE usage, falls, and fire incidents. Through image processing algorithms, live footage obtained from cameras is transferred to the system via RTSP/ONVIF standards. AI models detect hazards here and send alarms to the responsible personnel.",
+      "The step-by-step working process is as follows:",
+      "Checklist:"
+     ],
+     "li": [
+      "Image Capture: IP cameras capture live footage in high quality.",
+      "Data Transfer: Footage is transmitted to the video analytics platform via RTSP/ONVIF protocols.",
+      "Algorithm Processing: AI models recognise the presence of PPE, fall motions, or fire indicators such as smoke and flames.",
+      "Event Detection: The system immediately triggers an alarm and notifies relevant persons in hazardous situations.",
+      "Reporting and Analysis: Detected events are recorded in detail and used for performance tracking and improvements.",
+      "Correct positioning of IP cameras",
+      "Support for RTSP/ONVIF protocols",
+      "Regular updates of AI algorithms",
+      "Active and accurate functioning of alarm and notification systems",
+      "Detailed recording and reporting of events"
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Considerations During Installation",
+     "p": [
+      "Field Scenario: In a production facility, the fall detection system issued false alarms due to incorrect camera angles. After re-adjusting the camera angles and completing personnel training, system performance improved significantly."
+     ],
+     "li": [
+      "Camera angle and placement: Suitable positions and angles must be selected to fully monitor hazardous areas. For detailed information, you can refer here.",
+      "Proper lighting conditions: Image quality directly affects AI analysis success.",
+      "KVKK compliance: Solutions must comply with KVKK (Turkish GDPR) regulations for personal data protection.",
+      "Integration of existing IP cameras: RTSP and ONVIF protocols should be supported (details provided).",
+      "Infrastructure and Hardware Compatibility: Network infrastructure and processing power must meet system requirements.",
+      "Personnel Training: Users must be properly trained after system installation."
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Measurable Benefits",
+     "p": [
+      "AI video analytics systems enhance occupational safety levels by preventing workplace accidents. Automated detection of PPE and hazard violations improves process management. Furthermore, ERP integration facilitates data monitoring, enables rapid intervention, and increases operational efficiency.",
+      "To make these benefits more concrete, a checklist can be created:"
+     ],
+     "li": [
+      "PPE Compliance Monitoring: Continuous supervision of employees' protective equipment usage.",
+      "Fall Detection: Immediate identification of risky movements enabling prompt intervention.",
+      "Early Fire Warning: Detection of smoke and flames allowing rapid evacuation and response.",
+      "Data Integration: Process optimisation with data transfer to ERP and occupational safety systems.",
+      "Reporting and Analysis: Regular monitoring and improvement of occupational safety performance."
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Common Mistakes and Recommendations",
+     "p": [
+      "There are some common errors encountered in AI-based PPE detection, fall detection, and fire detection systems. These errors can reduce system performance and increase safety risks."
+     ],
+     "li": [
+      "Incorrect Camera Placement: Hazard areas are not fully monitored, risks may be overlooked. Solution: Conduct a detailed environmental analysis before installation and determine appropriate camera angles.",
+      "Insufficient Lighting: Poor image quality prevents accurate AI analysis. Solution: Increase lighting or prefer night-vision cameras.",
+      "Neglecting KVKK Regulations: Personal data is not protected, leading to legal issues. Solution: Choose KVKK (Turkish GDPR) compliant solutions and enforce strict access controls.",
+      "Lack of Training: Personnel cannot use the system correctly, increasing false alarms. Solution: Provide comprehensive user training and support.",
+      "Integration Issues: Incompatibility with existing systems causes data loss. Solution: Prefer RTSP/ONVIF-supported and compatible platforms."
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "How to Plan the Pilot Process?",
+     "p": [
+      "The success of AI-based occupational safety solutions starts with a properly planned pilot process. Pilot implementation is critical for testing and improving the system in a real environment.",
+      "Field Scenario: In a production facility, the fall detection system was tested on a small area during the pilot phase to measure its performance, followed by comprehensive training and system enhancements before being rolled out across the entire facility."
+     ],
+     "li": [
+      "Needs Analysis: Identify the business’s high-risk areas and priority requirements.",
+      "Hardware Selection: Determine suitable IP cameras and infrastructure.",
+      "Software Installation: Integrate the video analytics platform.",
+      "Personnel Training: Inform and train users about the system.",
+      "Testing and Monitoring: Track system performance during the pilot, identify issues.",
+      "Evaluation and Improvement: Make adjustments based on feedback.",
+      "General Deployment: After successful pilot completion, implement across all facilities."
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Extra: Best Practices for AI-Based PPE and Fall Detection",
+     "p": [
+      "The effectiveness of AI-based systems depends not only on technological infrastructure but also on correct application and continuous improvement. Here are some recommendations for successful implementation:"
+     ],
+     "li": [
+      "Employee Engagement: Organise briefing sessions and training to facilitate personnel adaptation to the system.",
+      "Periodic System Checks: Regular testing of camera and software performance.",
+      "Multi-Sensor Integration: Support image analytics with sensors for temperature, smoke, and motion.",
+      "Data Security: Implement strong encryption and access control mechanisms for collected data.",
+      "Performance Reports: Analyse system efficiency and occupational safety status through regular reports."
+     ],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Conclusion",
+     "p": [
+      "Modern video analytic solutions for AI-based PPE detection, fall detection, and fire detection enhance occupational safety culture and minimise risks. These platforms offer integrated solutions via existing IP cameras, simplifying installation and management. You can start with a free camera suitability preliminary assessment at your facility."
+     ],
+     "li": [],
+     "rows": [],
+     "cards": []
+    },
+    {
+     "h": "Frequently Asked Questions",
+     "p": [
+      "For detailed information and other solutions, please visit our solutions page and blog."
+     ],
+     "li": [
+      "How do AI video analytics systems work?They receive image data from existing IP cameras and analyse it using AI algorithms.",
+      "Why is PPE detection important?It helps reduce workplace accidents by monitoring employees' use of personal protective equipment.",
+      "Is it difficult to install a fall detection system?It can be easily implemented by integrating with existing systems using appropriate cameras and environment.",
+      "Why is camera angle important?Correct angles ensure clear monitoring of hazard areas; incorrect angles reduce detection success.",
+      "How is KVKK compliance ensured?Processing is performed only with authorised access and permissions to protect personal data confidentiality."
+     ],
+     "rows": [],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "How do AI video analytics systems work?",
+     "a": "They receive image data from existing IP cameras and analyse it using AI algorithms."
+    },
+    {
+     "q": "Why is PPE detection important?",
+     "a": "It helps reduce workplace accidents by monitoring employees' use of personal protective equipment."
+    },
+    {
+     "q": "Is it difficult to install a fall detection system?",
+     "a": "It can be easily implemented by integrating with existing systems using appropriate cameras and environment."
+    },
+    {
+     "q": "Why is camera angle important?",
+     "a": "Correct angles ensure clear monitoring of hazard areas; incorrect angles reduce detection success."
+    },
+    {
+     "q": "How is KVKK compliance ensured?",
+     "a": "Processing is performed only with authorised access and permissions to protect personal data confidentiality."
+    }
+   ]
   }
  }
 }

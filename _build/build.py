@@ -15,6 +15,7 @@ def load_mod(name):
     spec = importlib.util.spec_from_file_location(name, os.path.join(ROOT, "_build", name + ".py"))
     m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m); return m
 I18N = load_mod("i18n")
+SX = load_mod("seo_extra")
 EN_OF = I18N.en_map(D)                       # TR yolu -> EN yolu
 TR_OF = {v: k for k, v in EN_OF.items()}     # EN yolu -> TR yolu
 U = I18N.UI
@@ -241,16 +242,16 @@ def shell(title, desc, body, path, lang="tr", faq=None, crumbs=None, kind="page"
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{E(title)} — Hype Vision</title>
-<meta name="description" content="{E(desc)}">
+<title>{E(SX.short_title(title))} | Hype Vision</title>
+<meta name="description" content="{E(SX.short_desc(desc))}">
 <link rel="canonical" href="{SITE}{path}">
 {hl}
 <meta property="og:type" content="{'article' if kind in ('blog','case') else 'website'}">
 <meta property="og:site_name" content="Hype Vision">
 <meta property="og:locale" content="{ogl}">
 <meta property="og:url" content="{SITE}{path}">
-<meta property="og:title" content="{E(title)}">
-<meta property="og:description" content="{E(desc)}">
+<meta property="og:title" content="{E(SX.short_title(title, 70))}">
+<meta property="og:description" content="{E(SX.short_desc(desc, 200))}">
 <meta property="og:image" content="{img}">
 <meta property="og:image:secure_url" content="{img}">
 <meta property="og:image:type" content="image/jpeg">
@@ -363,6 +364,7 @@ def detail(p, kind, lang="tr", img_key=None):
 {short_box(p, kind, lang)}
 {specs}
 <div class="wrap" style="margin-top:50px">{secs}</div>
+{SX.related_box(path, kind, lang, REL)}
 {faq_html(p['faq'], lang)}
 {cta(lang)}"""
     return shell(p["title"], p["desc"], body, path, lang, faq=p["faq"] or None, crumbs=crumbs, kind=kind, image=im, date=p.get("date"))
@@ -443,6 +445,12 @@ def faq_all(lang):
     write(path, shell(t, s, body, path, lang, faq=items, crumbs=[(u["home"], h), (t, slash(path))]))
     return len(items)
 
+REL = {"titles": {}, "cases": [p["path"] for p in CASES], "tr_of": TR_OF}
+for _p in SOLS + SECS + CASES + BLOGS + [EG]:
+    _e = en_page(_p["path"])
+    REL["titles"][_p["path"]] = (SX.short_title(_p["title"], 70), SX.short_title(_e["title"], 70) if _e else "", EN_OF.get(_p["path"]) if _e else "")
+for _tr, _en in list(EN_OF.items()):
+    REL["tr_of"][_en] = _tr
 # ================================================================== ÜRETİM
 miss = build_en_home()
 P["tr"], P["en"] = parts("tr"), parts("en")
@@ -489,6 +497,14 @@ def fix_file(f):
         if not os.path.exists(os.path.join(ROOT, sm.lstrip("/"))): return tag
         return tag.replace(f'src="{src}"', f'src="{src}" srcset="{sm} 720w, {src} 1600w" sizes="(max-width: 760px) 100vw, 50vw"', 1)
     s2 = re.sub(r'<img\b[^>]*\bsrc="(/?img/[^"]+?\.webp)"[^>]*>', _ss, s2)
+    s2 = SX.fill_alts(s2, lang)
+    # ilk görsel hariç tüm görseller tembel yüklensin
+    _n = [0]
+    def _lazy(m):
+        tag = m.group(0); _n[0] += 1
+        if _n[0] <= 2 or 'loading=' in tag or 'fetchpriority' in tag: return tag
+        return tag.replace('<img ', '<img loading="lazy" decoding="async" ', 1)
+    s2 = re.sub(r'<img\b[^>]*>', _lazy, s2)
     # eski siteyle aynı URL politikası: iç linklerde sonda / yok (/ ve /en/ hariç)
     s2 = re.sub(r'href="(/(?!en/["#])[^"#?]*?[^/"#?])/(#[^"]*)?"', lambda m: f'href="{m.group(1)}{m.group(2) or ""}"', s2)
     if s2 != s: open(f, "w", encoding="utf-8").write(s2); return 1
