@@ -202,7 +202,7 @@ PAGE_CSS = open(os.path.join(ROOT, "_build", "page.css"), encoding="utf-8").read
 
 ORG = {"@type": "Organization", "@id": SITE + "/#org", "name": "Hype Vision", "legalName": "Hype Teknoloji", "alternateName": "HypeVision",
        "url": SITE + "/", "logo": SITE + "/img/logo-dark.png", "email": "info@hypevisionlab.com", "telephone": "+90 541 260 91 90",
-       "foundingDate": "2020", "sameAs": ["https://www.instagram.com/hypevisionlab/", "https://www.linkedin.com/company/hypevisionlab"],
+       "foundingDate": "2020", "sameAs": ["https://www.instagram.com/hypevisionlab/", "https://www.linkedin.com/company/hypevisionlab", "https://www.wikidata.org/wiki/Q141702105"],
        "address": {"@type": "PostalAddress", "streetAddress": "Bilişim Vadisi, Muallimköy, Deniz Cd. No:143-5", "addressLocality": "Gebze",
                    "addressRegion": "Kocaeli", "postalCode": "41400", "addressCountry": "TR"}}
 
