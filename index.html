@@ -1,69 +1,833 @@
 <!doctype html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<head>
+<meta charset="utf-8">
+<script>/* varsayılan dil İngilizce: TR seçilmediyse ana sayfadan /en/'e */(function(){try{if(location.pathname==='/'&&!/(^|; )hv_tr=1/.test(document.cookie)&&!/[?&]lang=tr/.test(location.search))location.replace('/en/'+location.hash)}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hype Vision — Kameralarınız için Yapay Zekâ</title>
+<meta name="description" content="Hype Vision, mevcut kameralarınızı yapay zekâ ile sahanızı anlayan bir sisteme dönüştürür. Anlık uyarılar, asistan ile sorgulanabilir veri, yönetim içgörüleri.">
+<!--seo-->
+<link rel="canonical" href="https://hypevisionlab.com/">
+<link rel="alternate" hreflang="tr" href="https://hypevisionlab.com/">
+<link rel="alternate" hreflang="en" href="https://hypevisionlab.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://hypevisionlab.com/en/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hype Vision">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:url" content="https://hypevisionlab.com/">
+<meta property="og:title" content="Hype Vision — Kameralarınız için Yapay Zekâ">
+<meta property="og:description" content="Mevcut kameralarınızla 7/24 İSG, kalite ve verimlilik denetimi. Marka fark etmez, KVKK uyumlu.">
+<meta property="og:image" content="https://hypevisionlab.com/img/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["Organization", "ProfessionalService"], "@id": "https://hypevisionlab.com/#org", "name": "Hype Vision", "legalName": "Hype Teknoloji", "alternateName": "HypeVision", "url": "https://hypevisionlab.com/", "logo": "https://hypevisionlab.com/img/logo-dark.png", "image": "https://hypevisionlab.com/img/og-image.png", "email": "info@hypevisionlab.com", "telephone": "+90 541 260 91 90", "foundingDate": "2020", "areaServed": "TR", "sameAs": ["https://www.instagram.com/hypevisionlab/", "https://www.linkedin.com/company/hypevisionlab"], "address": {"@type": "PostalAddress", "streetAddress": "Bilişim Vadisi, Muallimköy, Deniz Cd. No:143-5", "addressLocality": "Gebze", "addressRegion": "Kocaeli", "postalCode": "41400", "addressCountry": "TR"}, "geo": {"@type": "GeoCoordinates", "latitude": 40.8166, "longitude": 29.5133}}, {"@type": "SoftwareApplication", "name": "Hype Vision", "applicationCategory": "BusinessApplication", "operatingSystem": "Web, Linux (edge)", "description": "Mevcut IP kameralar üzerinde çalışan endüstriyel görüntü işleme ve yapay zekâ video analitiği platformu: İSG/KKD, verimlilik, kalite kontrol.", "publisher": {"@id": "https://hypevisionlab.com/#org"}}, {"@type": "WebSite", "@id": "https://hypevisionlab.com/#site", "url": "https://hypevisionlab.com/", "name": "Hype Vision", "inLanguage": ["tr-TR", "en"], "publisher": {"@id": "https://hypevisionlab.com/#org"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Görüntü işleme kurmak için yeni kamera gerekir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Çoğu İSG ve operasyon senaryosunda hayır; RTSP/ONVIF destekli mevcut IP kameralar kullanılır. Mikron seviyesinde kusur aranan kalite istasyonlarında endüstriyel kamera önerilebilir."}}, {"@type": "Question", "name": "Makine görmesi ile görüntü işleme arasındaki fark nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Makine görmesi genellikle özel endüstriyel kamera ve kontrollü ışıkla çalışan kural tabanlı kontrol sistemlerini ifade eder. Görüntü işleme daha geniş bir alandır; sanayide bugün çoğunlukla genel CCTV görüntüsünde ve değişken koşullarda da çalışan derin öğrenme modellerini kapsar."}}, {"@type": "Question", "name": "Sahada GPU gerekir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Tesis içi işlemede uygun hızlandırıcıya sahip bir edge cihaz kullanılır. Donanım keşif aşamasında kamera sayısı ve analitiklere göre boyutlandırılır."}}, {"@type": "Question", "name": "Görüntüler tesis dışına çıkıyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Edge mimaride hayır; görüntüler tesis içinde işlenir, yalnızca olay verisi panele aktarılır."}}, {"@type": "Question", "name": "Hype Vision mevcut CCTV kameralarla çalışabilir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Projelerin çoğunda evet. RTSP veya ONVIF akışı veren kamera ve NVR’ler markadan bağımsız bağlanabilir. Her kameranın görüşü pilot öncesinde uygunluk açısından kontrol edilir."}}, {"@type": "Question", "name": "Kameralarımızı değiştirmemiz gerekir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Güvenlik ve operasyon senaryolarında genellikle hayır. Bazı görüşler yeniden konumlandırma veya ek kamera gerektirebilir. Görsel kalite kontrol çoğu zaman özel kamera ve aydınlatma ister."}}, {"@type": "Question", "name": "Sistem tesis içinde (on-premise) çalışabilir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Analiz ağınızdaki edge donanımda çalışır; görüntü yerelde işlenir."}}, {"@type": "Question", "name": "Görüntü buluta gönderilmeden çalışabilir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Tesis içi kurulumda görüntü sahada kalır; yalnızca olay verisi ve istenirse kısa kanıt görüntüleri saklanır."}}]}]}</script>
+<!--/seo-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF; --bg2:#F5F5F3; --card:#F4F4F2; --card2:#FFFFFF; --line:#E5E5E1;
+  --ink:#1D1E20; --mute:#7C7F84; --dim:#A3A6AA;
+  --acc:#1FC8D6; --pill:#C9F2EE; --pillInk:#0F2A2C; --vio:#9B7BFF; --amb:#F5C451; --red:#FF6B6B;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Figtree',system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1360px,100% - 40px);margin-inline:auto}
+.h{font-size:clamp(26px,2.6vw,38px);line-height:1.12;letter-spacing:-.02em;font-weight:600}
+.h span{display:block;color:var(--mute)}
+section{padding:110px 0 0}
 
-    <title>Görüntü İşleme ve Endüstriyel Yapay Zeka | Kalite Kontrol, İSG, OEE — Hype Vision</title>
-    <meta
-      name="description"
-      content="Hype Vision: mevcut IP kameralarınızla yapay zeka destekli görüntü işleme. Kalite kontrol, İSG/KKD denetimi, OEE ve verimlilik analizi. Edge/Cloud, KVKK uyumlu. 2020&#39;den beri GTÜ Teknopark Gebze."
-    />
-    <meta name="author" content="Hype Vision" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <link rel="canonical" href="https://hypevisionlab.com/" />
+/* nav */
+.hvnav{position:fixed;top:14px;left:0;right:0;z-index:60;pointer-events:none}
+.hvbar{pointer-events:auto;width:min(1360px,100% - 28px);margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 10px 0 22px;border-radius:99px;background:rgba(255,255,255,.72);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);box-shadow:inset 0 0 0 1px rgba(0,0,0,.06),0 10px 30px -10px rgba(0,0,0,.15);transition:background .3s}
+.hvnav.scrolled .hvbar{background:rgba(255,255,255,.9)}
+.hvbar .brand{display:flex;align-items:center;flex:none}
+.hvbar .brand img{height:24px!important;width:auto!important;max-width:140px}
+.hvlinks{display:flex;gap:4px;margin-right:auto;margin-left:26px}
+.hvlinks a{font-size:14px;font-weight:600;color:#3B3E43;padding:9px 14px;border-radius:99px;transition:.2s}
+.hvlinks a:hover,.hvlinks a.on{background:rgba(0,0,0,.05);color:#000}
+.hvcta{display:flex;align-items:center;gap:4px;background:var(--pill);border-radius:99px;padding:4px;flex:none}
+.hvcta a{font-size:14px;font-weight:600;color:var(--pillInk);padding:10px 18px;border-radius:99px;white-space:nowrap}
+.hvcta a.d{background:#1D1E20;color:#fff}
+.hvcta a.d:hover{background:#000}
+.hvburger{display:none;width:44px;height:44px;border-radius:50%;border:0;background:rgba(0,0,0,.06);color:#1D1E20;font-size:18px;cursor:pointer}
+.hvmenu{pointer-events:auto;display:none;width:min(1360px,100% - 28px);margin:8px auto 0;background:rgba(255,255,255,.98);border-radius:18px;padding:8px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.07)}
+.hvmenu a{display:block;padding:14px 16px;font-weight:600;border-radius:10px}
+.hvmenu a:hover{background:rgba(0,0,0,.04)}
+.hvnav.open .hvmenu{display:block}
+@media (max-width:860px){.hvlinks{display:none}.hvcta a:first-child{display:none}.hvburger{display:block}.hvbar{padding-left:18px}}
+.pillg{display:flex;align-items:center;background:var(--pill);border-radius:99px;padding:4px}
+.pillg a{font-size:14px;font-weight:600;color:var(--pillInk);padding:9px 18px;border-radius:99px}
+.pillg a.d{background:#1D1E20;color:#fff}
 
-    <meta name="geo.region" content="TR-41" />
-    <meta name="geo.placename" content="Gebze, Kocaeli" />
-    <meta name="geo.position" content="40.7984;29.4303" />
-    <meta name="ICBM" content="40.7984, 29.4303" />
+/* hero */
+.hero{padding-top:140px}
+.hero .h{font-size:clamp(30px,3.2vw,46px);margin-bottom:46px}
+.stage{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:16/8;min-height:460px}
+.stage>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.08) translate(-1%,-1%)}}
+.stage::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.35),transparent 55%)}
+.ui{position:absolute;z-index:2;background:rgba(24,25,27,.9);backdrop-filter:blur(14px);border-radius:6px;color:#fff;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.ask{left:3%;top:6%;width:min(360px,44%);padding:18px 20px}
+.ask .t{display:flex;gap:10px;align-items:center;font-size:15px;color:#D9DADC}
+.ask .t i{width:24px;height:24px;border-radius:6px;background:#fff url(/img/logo-icon.png) center/72% no-repeat;display:block}
+.ask p{font-size:clamp(16px,1.5vw,20px);margin-top:12px;line-height:1.35;min-height:2.7em}
+.ask p::after{content:"▍";color:var(--acc);animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.chart{left:3%;top:calc(6% + 150px);width:min(360px,44%);padding:14px 16px 12px}
+.chart b{font-weight:600;font-size:15px}
+.bars{display:flex;align-items:end;gap:6px;height:90px;margin-top:12px;border-bottom:1px solid #3a3c40}
+.bars i{flex:1;background:linear-gradient(180deg,var(--acc),rgba(31,200,214,.25));border-radius:3px 3px 0 0;transform-origin:bottom;animation:grow 1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes grow{from{transform:scaleY(0)}}
+.chart .ax{display:flex;justify-content:space-between;font-size:10px;color:var(--mute);margin-top:6px}
+.ans{left:3%;top:calc(6% + 318px);padding:10px 14px;font-size:13px;color:#C8CACD}
+.ans b{color:var(--acc);font-weight:600}
+.det{position:absolute;z-index:2;border:2px solid var(--acc);border-radius:4px;box-shadow:0 0 0 1px rgba(0,0,0,.2)}
+.det span{position:absolute;top:-24px;left:-2px;background:var(--acc);color:#062022;font-size:11px;font-weight:700;padding:3px 7px;border-radius:3px;white-space:nowrap}
+@media (max-width:760px){.stage{aspect-ratio:auto;min-height:620px}.ask,.chart,.ans{width:auto;right:3%}.chart{top:180px}.ans{top:330px}.det{display:none}}
 
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Hype Vision" />
-    <meta property="og:url" content="https://hypevisionlab.com/" />
-    <meta property="og:title" content="Hype Vision | Endüstriyel Görüntü İşleme ve Yapay Zeka" />
-    <meta
-      property="og:description"
-      content="2020'den beri Hype Vision. Mevcut kameralarınızla 7/24 İSG, kalite ve verimlilik denetimi. Marka fark etmez."
-    />
-    <meta property="og:image" content="https://hypevisionlab.com/og-image.png" />
-    <meta property="og:image:secure_url" content="https://hypevisionlab.com/og-image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Hype Vision — Endüstriyel yapay zeka, İSG, kalite kontrol, verimlilik" />
-    <meta property="og:locale" content="tr_TR" />
-    <meta property="og:locale:alternate" content="en_US" />
+/* logos */
+.mq{overflow:hidden;margin-top:36px;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq .t{display:flex;gap:10px;width:max-content;animation:mq 36s linear infinite}
+.mq .t div{width:200px;height:104px;border-radius:6px;background:#fff;box-shadow:inset 0 0 0 1px var(--line);display:flex;align-items:center;justify-content:center;gap:8px;padding:22px;flex:none}
+.mq .t div img{max-height:46px;max-width:150px;width:auto;height:auto;object-fit:contain}
+.mq .t div b{font-weight:800;font-size:20px;color:#E20015;letter-spacing:.02em}
+@keyframes mq{to{transform:translateX(-50%)}}
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Hype Vision | Endüstriyel Görüntü İşleme Platformu" />
-    <meta
-      name="twitter:description"
-      content="Mevcut IP kameralarla İSG analizi, kalite kontrol ve OEE. Edge/Cloud, KVKK uyumlu. 2020'den beri."
-    />
-    <meta name="twitter:image" content="https://hypevisionlab.com/og-image.png" />
+/* assistant */
+.as-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap}
+.as-head p{color:var(--mute);max-width:46ch;font-size:15px}
+.app{margin-top:40px;display:grid;grid-template-columns:300px 1fr;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 1px 0 rgba(0,0,0,.04),0 30px 80px -30px rgba(20,30,40,.28),0 0 0 1px var(--line);min-height:600px}
+.side{background:#F7F7F5;border-right:1px solid var(--line);padding:22px 18px;display:flex;flex-direction:column;gap:6px}
+.side .me{display:flex;gap:10px;align-items:center;padding:6px 8px 18px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.side .me i{width:34px;height:34px;border-radius:9px;background:#fff url(/img/logo-icon.png) center/70% no-repeat;box-shadow:inset 0 0 0 1px var(--line);display:block}
+.side .me b{font-size:15px;font-weight:700;display:block;line-height:1.1}
+.side .me small{font-size:12px;color:var(--mute)}
+.side .lb{font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--dim);text-transform:uppercase;padding:4px 8px 6px}
+.qbtn{all:unset;cursor:pointer;display:flex;gap:10px;align-items:flex-start;padding:11px 10px;border-radius:9px;font-size:14px;line-height:1.35;color:#3B3E43;transition:.2s}
+.qbtn:hover{background:#EDEDEA}
+.qbtn.on{background:#fff;box-shadow:0 0 0 1px var(--line),0 4px 14px -6px rgba(0,0,0,.15);color:var(--ink);font-weight:600}
+.qbtn span{flex:none;width:22px;height:22px;border-radius:6px;background:#E8E8E4;display:grid;place-items:center;font-size:12px}
+.qbtn.on span{background:var(--pill)}
+.side .src{margin-top:auto;padding:14px 8px 0;border-top:1px solid var(--line);font-size:12px;color:var(--mute);display:flex;gap:8px;align-items:center}
+.side .src i{width:8px;height:8px;border-radius:50%;background:#2BB673;box-shadow:0 0 0 3px rgba(43,182,115,.18)}
+.conv{display:flex;flex-direction:column;min-width:0}
+.conv .top{display:flex;justify-content:space-between;align-items:center;padding:16px 26px;border-bottom:1px solid var(--line);font-size:13px;color:var(--mute)}
+.conv .top b{color:var(--ink);font-weight:600}
+.msgs{flex:1;padding:26px;display:flex;flex-direction:column;gap:18px;overflow:hidden}
+.u{align-self:flex-end;background:var(--ink);color:#fff;padding:12px 16px;border-radius:14px 14px 4px 14px;font-size:15px;max-width:78%;animation:pop .35s both}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.98)}}
+.bot{display:flex;gap:12px;align-items:flex-start;animation:pop .35s both}
+.bot>i{flex:none;width:30px;height:30px;border-radius:9px;background:#fff url(/img/logo-icon.png) center/70% no-repeat;box-shadow:inset 0 0 0 1px var(--line)}
+.bot .body{flex:1;min-width:0}
+.think{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--mute);padding-top:6px}
+.think em{font-style:normal;display:flex;gap:4px}
+.think em b{width:6px;height:6px;border-radius:50%;background:var(--mute);animation:ty 1s infinite}
+.think em b:nth-child(2){animation-delay:.15s}.think em b:nth-child(3){animation-delay:.3s}
+@keyframes ty{50%{opacity:.25;transform:translateY(-3px)}}
+.steps{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.steps span{font-size:12px;color:var(--mute);background:#F4F4F2;border-radius:99px;padding:4px 10px;animation:pop .3s both}
+.steps span::before{content:"✓ ";color:#2BB673;font-weight:700}
+.ttl{font-size:17px;font-weight:700;letter-spacing:-.01em}
+.sum{color:#4A4D52;font-size:15px;margin-top:4px}
+.kp{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.kp div{border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.kp small{font-size:12px;color:var(--mute);display:block}
+.kp b{font-size:22px;font-weight:700;letter-spacing:-.02em}
+.kp em{font-style:normal;font-size:11px;font-weight:700;padding:2px 6px;border-radius:4px;margin-left:6px;vertical-align:3px}
+.kp .g{background:rgba(43,182,115,.12);color:#1C8A55}.kp .r{background:rgba(229,72,77,.1);color:#C7363B}
+.row2{display:grid;grid-template-columns:1.1fr 1fr;gap:8px;margin-top:8px}
+.cht{border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.cht small{font-size:12px;color:var(--mute)}
+.cb{display:flex;align-items:end;gap:6px;height:96px;margin-top:10px}
+.cb div{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%;justify-content:flex-end}
+.cb i{width:100%;border-radius:4px 4px 0 0;background:linear-gradient(180deg,var(--acc),rgba(31,200,214,.3));transform-origin:bottom;animation:grow .8s cubic-bezier(.2,.8,.2,1) both}
+.cb i.hi{background:linear-gradient(180deg,#F08A4B,rgba(240,138,75,.3))}
+@keyframes grow{from{transform:scaleY(0)}}
+.cb span{font-size:10px;color:var(--mute)}
+.ev{border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.ev small{font-size:12px;color:var(--mute)}
+.ev .th{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
+.ev .th div{position:relative;aspect-ratio:4/3;border-radius:6px;overflow:hidden;animation:pop .4s both}
+.ev .th img{width:100%;height:100%;object-fit:cover}
+.ev .th span{position:absolute;left:4px;bottom:4px;background:rgba(0,0,0,.65);color:#fff;font-size:9px;padding:1px 5px;border-radius:3px}
+.fl{display:flex;align-items:center;gap:12px;margin-top:10px;border:1px solid var(--line);border-radius:10px;padding:10px 12px;max-width:360px}
+.fl .ic{width:34px;height:40px;border-radius:5px;background:#FDECEC;color:#C7363B;font-size:10px;font-weight:800;display:grid;place-items:center}
+.fl .ic.x{background:#E7F6EE;color:#1C8A55}
+.fl b{font-size:14px;font-weight:600;display:block}
+.fl small{font-size:12px;color:var(--mute)}
+.fl .dl{margin-left:auto;width:32px;height:32px;border-radius:8px;background:#F4F4F2;display:grid;place-items:center}
+.inp{margin:0 26px 22px;display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:12px;padding:8px 8px 8px 16px;font-size:15px;color:var(--dim)}
+.inp span{flex:1}
+.inp b{width:36px;height:36px;border-radius:9px;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:16px}
+.fade{animation:pop .4s both}
+@media (max-width:960px){.app{grid-template-columns:1fr}.side{border-right:0;border-bottom:1px solid var(--line)}.side .src{display:none}.row2,.kp{grid-template-columns:1fr}}
 
-    <link rel="icon" href="/favicon.ico" sizes="48x48" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#00cadc" />
-    <meta name="msapplication-TileColor" content="#0c2a30" />
-    <meta name="application-name" content="Hype Vision" />
-    <meta name="apple-mobile-web-app-title" content="Hype Vision" />
+/* how */
+.how3{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:40px}
+.how3 .im{aspect-ratio:3/2;border-radius:6px;overflow:hidden}
+.how3 .im img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.how3>div:hover .im img{transform:scale(1.04)}
+.how3 h4{font-size:22px;font-weight:600;margin-top:18px;letter-spacing:-.01em}
+.how3 .k{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--acc);text-transform:uppercase}
+.how3 p{color:var(--mute);font-size:14px;margin-top:8px;max-width:44ch}
+@media (max-width:860px){.how3{grid-template-columns:1fr;gap:34px}.how3 .im{aspect-ratio:16/10}}
 
-    <link rel="preload" href="/1.avif" as="image" type="image/avif" fetchpriority="high" />
+/* transparency */
+.tr{position:relative;margin-top:40px;border-radius:10px;overflow:hidden;aspect-ratio:16/9;max-height:760px;width:100%}
+.tr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s,transform 6s linear;transform:scale(1.04)}
+.tr img.on{opacity:1;transform:scale(1)}
+.tabs{position:absolute;left:20px;top:20px;z-index:2;width:min(300px,calc(100% - 40px));background:rgba(32,33,36,.92);backdrop-filter:blur(12px);border-radius:8px;padding:8px}
+.tab{display:flex;gap:12px;padding:12px;border-radius:6px;cursor:pointer;position:relative}
+.tab .n{flex:none;width:24px;height:24px;border-radius:50%;background:#3A3C40;font-size:11px;display:grid;place-items:center;font-weight:700;color:var(--mute)}
+.tab b{font-size:14px;font-weight:600;color:var(--mute)}
+.tab p{font-size:12px;color:var(--mute);max-height:0;overflow:hidden;transition:max-height .4s}
+.tab.on{background:#2C2E31}.tab.on .n{background:var(--acc);color:#062022}.tab.on b{color:#fff}.tab.on p{max-height:80px;margin-top:4px}
+.tab .pr{position:absolute;left:12px;right:12px;bottom:0;height:2px;background:#3A3C40;display:none}
+.tab.on .pr{display:block}
+.tab .pr i{display:block;height:100%;background:var(--acc);width:0}
+.tab.on .pr i{animation:prog 6s linear forwards}
+@keyframes prog{to{width:100%}}
+.tr .tag{position:absolute;z-index:2;right:20px;bottom:20px;background:rgba(32,33,36,.92);padding:12px 16px;border-radius:8px;font-size:13px;display:flex;gap:10px;align-items:center}
+.tr .tag i{width:8px;height:8px;border-radius:50%;background:var(--red);animation:bl 1s infinite}
+@media (max-width:760px){.tr{aspect-ratio:3/4}}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+/* bento */
+.bento{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:40px}
+.bx{background:var(--bg2);border-radius:8px;overflow:hidden;position:relative;min-height:440px;display:flex;flex-direction:column}
+.bx .tx{padding:30px 32px 0;position:relative;z-index:2}
+.bx h4{font-size:22px;font-weight:600;letter-spacing:-.01em}
+.bx p{color:var(--mute);font-size:14px;margin-top:8px;max-width:46ch}
+.bx .ph{position:absolute;inset:0}
+.bx .ph img{width:100%;height:100%;object-fit:cover}
+.bx.photo .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,16,18,.85) 0%,rgba(15,16,18,.35) 40%,transparent 70%)}
+.bx.photo h4{color:#fff}.bx.photo p{color:#D5D7DA}
+.nt{position:absolute;z-index:3;background:rgba(240,240,238,.9);backdrop-filter:blur(10px);color:#1D1E20;border-radius:8px;padding:10px 14px;display:flex;gap:12px;align-items:center;font-size:13px;box-shadow:0 10px 30px rgba(0,0,0,.25);min-width:240px}
+.nt .r{background:#1D1E20;color:#fff;font-size:11px;font-weight:700;padding:3px 7px;border-radius:4px}
+.nt b{font-weight:600}.nt small{margin-left:auto;color:#6a6d72}
+.nt .tx2{display:flex;flex-direction:column}
+.mini{margin:26px 32px 32px;display:grid;grid-template-columns:1fr 1fr;gap:8px;position:relative;z-index:2}
+.mc{background:#fff;box-shadow:inset 0 0 0 1px var(--line);border-radius:6px;padding:14px}
+.mc small{color:var(--mute);font-size:12px;display:flex;gap:6px;align-items:center}
+.mc b{display:block;font-size:22px;font-weight:600;margin-top:4px}
+.mc em{font-style:normal;font-size:11px;font-weight:700;padding:2px 6px;border-radius:4px;margin-left:6px}
+.up{background:rgba(31,200,214,.15);color:var(--acc)}.dn{background:rgba(255,107,107,.15);color:var(--red)}
+.tl{display:flex;height:34px;border-radius:4px;overflow:hidden;margin-top:10px;gap:2px}
+.tl i{display:block}
+@media (max-width:860px){.bento{grid-template-columns:1fr}.bx{min-height:420px}}
+
+/* sectors */
+.secs{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:40px}
+.sc{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:3/4}
+.sc img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.sc:hover img{transform:scale(1.06)}
+.sc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.8))}
+.sc div{position:absolute;left:16px;right:16px;bottom:14px;z-index:1}
+.sc b{font-size:18px;font-weight:600;color:#fff}
+.sc p{font-size:13px;color:#C9CBCE}
+@media (max-width:900px){.secs{grid-template-columns:1fr 1fr}.sc:first-child{grid-column:span 2;aspect-ratio:16/10}}
+
+/* privacy + cta */
+.pr3{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:40px}
+.pr3 div{background:var(--bg2);border-radius:8px;padding:28px}
+.pr3 b{font-size:40px;font-weight:600;letter-spacing:-.03em;display:block;color:var(--acc)}
+.pr3 h5{font-size:17px;font-weight:600;margin-top:10px}
+.pr3 p{color:var(--mute);font-size:14px;margin-top:6px}
+@media (max-width:760px){.pr3{grid-template-columns:1fr}}
+.cta{margin-top:110px;border-radius:10px;overflow:hidden;position:relative;min-height:440px;display:flex;align-items:flex-end}
+.cta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cta::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,21,23,.92),rgba(20,21,23,.35))}
+.cta .in{position:relative;z-index:1;padding:50px}
+.cta .h{font-size:clamp(30px,3.4vw,50px);color:#fff}.cta .h span{color:#B8BBBF}
+.cta .pillg{display:inline-flex;margin-top:28px}
+footer{margin-top:110px;border-top:1px solid var(--line);padding:50px 0 40px;color:var(--mute);font-size:14px}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+footer img{height:24px}
+footer h6{color:var(--ink);font-size:14px;font-weight:600;margin-bottom:12px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a:hover{color:var(--ink)}
+.fb{margin-top:40px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:var(--dim)}
+@media (max-width:760px){.fg{grid-template-columns:1fr 1fr}}
+
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.rep{opacity:1;transform:none}}
+
+/* sectors detail */
+.secs2{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:40px}
+.s2{border-radius:8px;overflow:hidden;background:var(--bg2);display:flex;flex-direction:column}
+.s2 .im{aspect-ratio:16/10;overflow:hidden;position:relative}
+.s2 .im img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.s2:hover .im img{transform:scale(1.05)}
+.s2 .bd{padding:22px 24px 26px;display:flex;flex-direction:column;flex:1}
+.s2 h4{font-size:20px;font-weight:600;letter-spacing:-.01em}
+.s2 p{color:var(--mute);font-size:14px;margin-top:6px}
+.s2 ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.s2 li{font-size:12px;font-weight:600;background:#fff;box-shadow:inset 0 0 0 1px var(--line);padding:5px 10px;border-radius:99px}
+.s2 a.more{margin-top:auto;padding-top:18px;font-size:14px;font-weight:600;color:var(--ink)}
+.s2 a.more:hover{color:var(--acc)}
+@media (max-width:960px){.secs2{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.secs2{grid-template-columns:1fr}}
+
+/* blog */
+.bl-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.bl-head a{font-size:14px;font-weight:600;padding:10px 0;border-bottom:1px solid var(--line)}
+.blog{display:grid;grid-template-columns:1.3fr 1fr;gap:6px;margin-top:40px}
+.bf{border-radius:8px;overflow:hidden;position:relative;min-height:480px;display:flex;align-items:flex-end;color:#fff}
+.bf img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.bf:hover img{transform:scale(1.04)}
+.bf::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(10,11,12,.85))}
+.bf .tx{position:relative;z-index:1;padding:30px}
+.tagb{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:99px;background:var(--pill);color:var(--pillInk)}
+.bf h4{font-size:clamp(22px,2.2vw,30px);font-weight:600;line-height:1.2;margin-top:12px;max-width:26ch}
+.bf p{color:#D2D4D7;font-size:14px;margin-top:8px;max-width:52ch}
+.bl{display:flex;flex-direction:column;gap:6px}
+.bi{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center;background:var(--bg2);border-radius:8px;padding:10px;transition:background .2s}
+.bi:hover{background:#EDEDEA}
+.bi img{width:120px;height:84px;object-fit:cover;border-radius:6px}
+.bi b{display:block;font-size:15px;font-weight:600;line-height:1.3;margin-top:6px}
+.bi small{font-size:12px;color:var(--mute)}
+@media (max-width:900px){.blog{grid-template-columns:1fr}.bf{min-height:380px}}
+
+/* contact */
+.ct{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:40px}
+.cform{background:var(--bg2);border-radius:8px;padding:32px;display:grid;gap:12px;align-content:start}
+.cform .r2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cform label{font-size:12px;font-weight:600;color:var(--mute);display:grid;gap:6px}
+.cform input,.cform select,.cform textarea{font:inherit;font-size:15px;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:8px;padding:12px 14px;outline:none;transition:border-color .2s,box-shadow .2s}
+.cform textarea{min-height:120px;resize:vertical}
+.cform input:focus,.cform select:focus,.cform textarea:focus{border-color:var(--acc);box-shadow:0 0 0 3px rgba(31,200,214,.15)}
+.cform button{font:inherit;font-weight:600;font-size:15px;border:0;cursor:pointer;background:var(--ink);color:#fff;border-radius:99px;padding:14px 22px;justify-self:start;transition:background .2s}
+.cform button:hover{background:#000}
+.cform .kv{font-size:12px;color:var(--mute)}
+.cinfo{display:grid;grid-template-rows:auto 1fr;gap:6px}
+.cards4{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.cards4 .ci:nth-child(5){grid-column:span 2}
+.ci{background:var(--bg2);border-radius:8px;padding:20px 22px}
+.ci small{font-size:12px;font-weight:600;color:var(--mute);display:block}
+.ci a,.ci span{font-size:15px;font-weight:600;display:block;margin-top:4px}
+.ci a:hover{color:var(--acc)}
+.map{border-radius:8px;overflow:hidden;min-height:300px;background:var(--bg2)}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;filter:grayscale(.2)}
+@media (max-width:900px){.ct{grid-template-columns:1fr}.cform .r2{grid-template-columns:1fr}}
+
+/* instagram */
+.ig-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.ig-user{display:flex;align-items:center;gap:12px}
+.ig-user .av{width:52px;height:52px;border-radius:50%;padding:2px;background:conic-gradient(#F58529,#DD2A7B,#8134AF,#515BD4,#F58529)}
+.ig-user .av img{width:100%;height:100%;border-radius:50%;background:#fff;object-fit:contain;padding:8px;border:2px solid #fff}
+.ig-user b{font-size:16px;font-weight:700;display:block}
+.ig-user small{font-size:13px;color:var(--mute)}
+.ig-ctl{display:flex;gap:8px;align-items:center}
+.ig-ctl button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:18px;cursor:pointer;transition:.2s}
+.ig-ctl button:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ig-ctl a{font-size:14px;font-weight:600;padding:12px 18px;border-radius:99px;background:var(--ink);color:#fff;margin-left:6px}
+.ig-track{display:flex;gap:6px;margin-top:30px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
+.ig-track::-webkit-scrollbar{display:none}
+.igp{flex:0 0 calc((100% - 24px)/5);aspect-ratio:9/14!important;scroll-snap-align:start;position:relative;aspect-ratio:1;border-radius:8px;overflow:hidden;background:var(--bg2)}
+.igp img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.igp:hover img{transform:scale(1.06)}
+.igp::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,0);transition:background .3s}
+.igp:hover::after{background:rgba(0,0,0,.25)}
+.igp .ty{position:absolute;top:10px;right:10px;z-index:1;width:28px;height:28px;border-radius:50%;background:rgba(0,0,0,.45);color:#fff;display:grid;place-items:center;font-size:12px}
+.igp .dt{position:absolute;left:10px;bottom:10px;z-index:1;font-size:12px;font-weight:600;color:#fff;background:rgba(0,0,0,.45);padding:4px 9px;border-radius:99px;opacity:0;transform:translateY(6px);transition:.3s}
+.igp:hover .dt{opacity:1;transform:none}
+@media (max-width:900px){.igp{flex-basis:calc((100% - 6px)/2)}}
+@media (max-width:560px){.igp{flex-basis:80%}}
+
+/* teton-style split glass nav */
+.hvbar{background:none!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;padding:0!important;height:auto!important;align-items:center}
+.hvleft{display:flex;align-items:center;height:56px;padding:0 10px 0 20px;border-radius:12px;background:rgba(236,236,234,.55);backdrop-filter:blur(22px) saturate(1.6);-webkit-backdrop-filter:blur(22px) saturate(1.6);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35),0 8px 24px -12px rgba(0,0,0,.18)}
+.hvleft .hvlinks{margin-left:22px;margin-right:0}
+.hvleft .hvlinks a{color:#1D1E20}
+.hvleft .hvlinks a:hover{background:rgba(255,255,255,.45)}
+.hvcta{box-shadow:0 8px 24px -12px rgba(0,0,0,.25)}
+.hvburger{background:rgba(236,236,234,.7);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+@media (max-width:860px){.hvleft{padding-right:16px}}
+
+.hfaq{margin-top:30px;border-top:1px solid var(--line)}
+.hfaq details{border-bottom:1px solid var(--line)}
+.hfaq summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;font-size:17px;font-weight:600;position:relative}
+.hfaq summary::-webkit-details-marker{display:none}
+.hfaq summary::after{content:"+";position:absolute;right:6px;top:18px;font-size:24px;font-weight:400;transition:transform .25s}
+.hfaq details[open] summary::after{transform:rotate(45deg)}
+.hfaq details p{color:#4A4D52;padding:0 40px 22px 0;max-width:80ch}
+
+/* lang */
+.hvlang{pointer-events:auto;margin-left:auto;margin-right:8px;font-size:13px;font-weight:700;letter-spacing:.04em;height:44px;min-width:44px;padding:0 12px;border-radius:12px;display:grid;place-items:center;background:rgba(236,236,234,.6);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+.hvlang:hover{background:#fff}
+/* vaka */
+.vks{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:40px}
+.vk{background:var(--bg2);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+.vk:hover{transform:translateY(-3px);box-shadow:0 20px 40px -24px rgba(0,0,0,.3)}
+.vk .im{position:relative;aspect-ratio:4/3;overflow:hidden}.vk .im img{width:100%;height:100%;object-fit:cover}
+.vk .im b{position:absolute;left:12px;bottom:12px;background:#fff;border-radius:8px;padding:6px 10px;font-size:20px;font-weight:700;letter-spacing:-.02em}
+.vk .bd{padding:16px 18px 20px}
+.vk small{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)}
+.vk h4{font-size:16px;font-weight:600;line-height:1.3;margin-top:6px}
+.vk p{font-size:13px;color:var(--mute);margin-top:6px}
+@media (max-width:1100px){.vks{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:700px){.vks{grid-template-columns:1fr 1fr}}
+/* footer */
+footer.hvf{background:#141516;color:#9C9FA4;margin-top:110px;padding:70px 0 30px;border:0;font-size:14px}
+.hvf .fg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr;gap:34px}
+.hvf .fb1 img{height:27px;width:auto}
+.hvf .fb1 p{margin-top:16px;max-width:36ch;line-height:1.55}
+.hvf address{font-style:normal;margin-top:16px;line-height:1.6}
+.hvf .fc a{color:#fff;font-weight:600}
+.hvf h6{color:#fff;font-size:14px;font-weight:600;margin-bottom:14px}
+.hvf ul{list-style:none;display:grid;gap:9px}
+.hvf a:hover{color:#fff}
+.nl{margin-top:22px}
+.nl label{display:block;font-size:12px;color:#7D8086;margin-bottom:8px}
+.nl div{display:flex;gap:6px;background:#232427;border-radius:99px;padding:4px;max-width:360px}
+.nl input{flex:1;min-width:0;background:none;border:0;outline:none;color:#fff;font:inherit;padding:0 14px}
+.nl button{border:0;cursor:pointer;font:inherit;font-weight:600;background:var(--pill);color:var(--pillInk);border-radius:99px;padding:10px 16px}
+.nl .msg,.cform .msg{display:block;font-size:13px;margin-top:8px}
+.fbot{border-top:1px solid #2A2B2F;margin-top:50px;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#6E7177}
+.fbot span:last-child{display:flex;gap:18px;flex-wrap:wrap}
+@media (max-width:1000px){.hvf .fg{grid-template-columns:1fr 1fr}.hvf .fb1{grid-column:1/-1}}
+
+.twin{position:relative;margin-top:40px;border-radius:12px;overflow:hidden;background:#1D1E20}
+.twin img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.twin-tx{position:absolute;right:20px;top:20px;max-width:380px;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-radius:12px;padding:20px 22px;box-shadow:0 20px 40px rgba(0,0,0,.25)}
+.twin-tx b{display:block;font-size:19px;font-weight:600;line-height:1.25;margin-top:10px;letter-spacing:-.01em}
+.twin-tx p{font-size:14px;color:var(--mute);margin-top:6px}
+.twin+.bento{margin-top:6px}
+@media (max-width:760px){.twin-tx{position:static;max-width:none;border-radius:0}}
+
+.ck-bar{position:fixed;left:16px;right:16px;bottom:16px;z-index:80;max-width:560px;margin-left:auto;background:#fff;color:var(--ink);border-radius:14px;padding:16px 18px;box-shadow:0 20px 50px -10px rgba(0,0,0,.3),0 0 0 1px var(--line);display:flex;gap:16px;align-items:center;flex-wrap:wrap;font-size:14px}
+.ck-bar[hidden]{display:none}
+.ck-bar p{flex:1;min-width:220px;color:#4A4D52}.ck-bar a{text-decoration:underline;color:var(--ink)}
+.ck-bar div{display:flex;gap:8px}
+.ck-bar button{font:inherit;font-weight:600;border:0;cursor:pointer;border-radius:99px;padding:10px 16px;background:var(--bg2);color:var(--ink)}
+.ck-bar button.ok{background:var(--ink);color:#fff}
+
+.hvpanel{pointer-events:auto;margin-left:auto;margin-right:6px;font-size:13px;font-weight:600;height:44px;padding:0 14px;border-radius:12px;display:flex;align-items:center;gap:6px;background:rgba(236,236,234,.6);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+.hvpanel::before{content:"";width:7px;height:7px;border-radius:50%;background:#2BB673}
+.hvpanel:hover{background:#fff}
+.hvpanel+.hvlang{margin-left:0}
+@media (max-width:900px){.igp{flex-basis:calc((100% - 6px)/2)!important}}
+@media (max-width:860px){.hvpanel{display:none}}
+@media (max-width:760px){
+ .hero{padding-top:110px}
+ .stage{aspect-ratio:4/5;min-height:0}
+ .stage .chart,.stage .det{display:none}
+ .ask{left:12px;right:12px;top:12px;width:auto;padding:12px 14px}
+ .ask p{font-size:15px;min-height:2.6em;margin-top:8px}
+ .ans{left:12px;right:12px;top:auto;bottom:12px;width:auto;font-size:13px}
+ .hvleft{height:52px;padding:0 14px}
+ .hvleft .brand img{height:20px!important}
+ .hvcta a.d{padding:9px 14px;font-size:13px}
+ .hvlang,.hvburger{height:44px}
+ .hvcta{display:none}
+ .hvmenu a.mdemo{background:var(--ink);color:#fff;text-align:center;margin-top:6px}
+}
+
+/* nav v2 */
+.hvpanel{display:none!important}
+.hvlinks{align-items:center}
+.hvlinks a,.hvdd-t{white-space:nowrap}
+.hvdd{position:relative}
+.hvdd-t{font:inherit;font-size:14px;font-weight:600;color:#1D1E20;background:none;border:0;cursor:pointer;padding:9px 14px;border-radius:99px;display:flex;gap:6px;align-items:center}
+.hvdd-t::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px)}
+.hvdd-t:hover,.hvdd:focus-within .hvdd-t{background:rgba(255,255,255,.45)}
+.hvdd-m{position:absolute;top:calc(100% + 10px);left:0;min-width:210px;background:#F3F4F2;backdrop-filter:blur(18px);border-radius:12px;padding:8px;box-shadow:0 20px 40px -12px rgba(0,0,0,.2),inset 0 0 0 1px rgba(0,0,0,.04);opacity:0;visibility:hidden;transform:translateY(-4px);transition:.18s}
+.hvdd-m::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+.hvdd:hover .hvdd-m,.hvdd:focus-within .hvdd-m{opacity:1;visibility:visible;transform:none}
+.hvdd-m a{display:block;padding:10px 14px;border-radius:8px;font-size:15px;font-weight:500;color:#1D1E20}
+.hvdd-m a:hover{background:rgba(0,0,0,.05)}
+.hvlang{display:flex!important;gap:2px;padding:4px!important;margin-left:auto}
+.hvlang span{padding:6px 9px;border-radius:9px;color:#8E9196;font-size:12px;font-weight:700}
+.hvlang span.on{background:#fff;color:#1D1E20;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.hvcta{margin-left:8px}
+.hvcta a{padding:11px 20px}
+.hvmenu a.mdemo{background:#1D1E20;color:#fff;text-align:center;margin-top:6px}
+@media (min-width:861px){.hvmenu a.mdemo{display:none}}
+@media (max-width:1100px) and (min-width:861px){.hvlinks a,.hvdd-t{padding:9px 10px}}
+</style>
+</head>
+<body>
+
+<header class="hvnav" id="nav">
+  <div class="hvbar">
+    <div class="hvleft"><a class="brand" href="/"><img src="hypevisionlogo.webp" alt="Hype Vision" width="135" height="24"></a>
+    <nav class="hvlinks"><a href="/cozumler">Çözümler</a><a href="/sektorler">Sektörler</a><a href="/vaka-calismalari">Vakalar</a><a href="/blog">Blog</a>
+      <div class="hvdd"><button type="button" class="hvdd-t">Şirket</button><div class="hvdd-m"><a href="/hakkimizda">Hakkımızda</a><a href="/is-ortakligi">İş ortaklığı</a><a href="/kariyer">Kariyer</a><a href="/sss">SSS</a><a href="/katalog">Katalog</a><a href="#iletisim">İletişim</a><a href="/yasal">Yasal</a></div></div>
+    </nav></div>
+    <a class="hvlang" href="/en/" hreflang="en" aria-label="Language"><span class="on">TR</span><span>EN</span></a>
+    <div class="hvcta"><a href="https://panel.hypevisionlab.com/" target="_blank" rel="noopener">Giriş yap</a><a class="d" href="#iletisim">Demo talep et</a></div>
+    <button class="hvburger" id="burger" aria-label="Menü">☰</button>
+  </div>
+  <nav class="hvmenu"><a href="/cozumler">Çözümler</a><a href="/sektorler">Sektörler</a><a href="/vaka-calismalari">Vakalar</a><a href="/blog">Blog</a><a href="/hakkimizda">Hakkımızda</a><a href="/is-ortakligi">İş ortaklığı</a><a href="/kariyer">Kariyer</a><a href="/sss">SSS</a><a href="/katalog">Katalog</a><a href="#iletisim">İletişim</a><a href="https://panel.hypevisionlab.com/" target="_blank" rel="noopener">Giriş yap</a><a class="mdemo" href="#iletisim">Demo talep et</a></nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <h1 class="h rv">Yapay zekânın gücü, kameralarınızda.<span>Sahanızı daha güvenli ve verimli yönetin.</span></h1>
+    <div class="stage rv">
+      <img src="img/08-kkd.webp" alt="Üretim alanında çalışan personel">
+      <div class="det" style="left:39%;top:20%;width:19%;height:62%"><span>KKD ✓ Baret · Yelek</span></div>
+      <div class="ui ask"><div class="t"><i></i>Hype Asistan'a sorun</div><p id="typed"></p></div>
+      <div class="ui chart"><b>KKD Uyum Skoru</b><div class="bars" id="bars"></div><div class="ax"><span>Oca</span><span>Şub</span><span>Mar</span><span>Nis</span><span>May</span><span>Haz</span></div></div>
+      <div class="ui ans" id="ans">Uyum son 6 ayda <b>%71 → %96</b>'ya yükseldi</div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:110px">
+  <div class="wrap">
+    <h2 class="h rv">Mevcut altyapınızla çalışır<span>Yeni kamera yok. Kablolama yok. Kurulum günler içinde.</span></h2>
+  </div>
+  <div class="mq"><div class="t" id="mq"></div></div>
+</section>
+
+<section id="urun">
+  <div class="wrap">
+    <div class="as-head">
+      <h2 class="h rv">Hype Asistan<span>Sahanıza soru sorun, cevabı kanıtıyla gelsin.</span></h2>
+      <p class="rv">Tesisinize dair her şeyi doğal dille sorun. Asistan, kameralardan gelen gerçek veriyi tarar; rakamı, grafiği, olayın görüntüsünü ve indirilebilir raporu tek cevapta getirir.</p>
+    </div>
+    <div class="app rv" id="app">
+      <aside class="side">
+        <div class="me"><i></i><div><b>Hype Asistan</b><small>Gebze Tesisi · 38 kamera</small></div></div>
+        <div class="lb">Örnek sorular</div>
+        <div id="qs"></div>
+        <div class="src"><i></i>Canlı veri · son güncelleme <span id="upd">şimdi</span></div>
+      </aside>
+      <div class="conv">
+        <div class="top"><span><b>Yeni sohbet</b> · Operasyon</span><span>KVKK · kimliksiz veri</span></div>
+        <div class="msgs" id="msgs"></div>
+        <div class="inp"><span id="ph">Bir soru sorun…</span><b>↑</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="teknoloji">
+  <div class="wrap">
+    <h2 class="h rv">Üç göz, tek yapay zekâ<span>Sabit kamera, robot köpek ve drone — hepsi aynı platformda.</span></h2>
+    <div class="how3">
+      <div class="rv"><div class="im"><img src="img/det-forklift.webp" alt="CCTV kamera görüntüsünde tespit" loading="lazy"></div><h4>Sabit Kameralar</h4><div class="k">01 · CCTV</div><p>Tesisteki mevcut IP kameralar 7/24 izler: KKD, forklift–yaya mesafesi, yasaklı alan ve hat duruşu anında tespit edilir. Yeni kamera ya da kablolama gerekmez.</p></div>
+      <div class="rv"><div class="im"><img src="img/robot-kopek.webp" alt="Hype Vision robot köpek" loading="lazy"></div><h4>Robot Köpek</h4><div class="k">02 · Mobil devriye</div><p>Sabit kameranın görmediği koridor ve proses alanlarında planlı devriye. Üzerindeki kamera ve LiDAR görüntüyü aynı yapay zekâ katmanına aktarır; kör nokta kalmaz.</p></div>
+      <div class="rv"><div class="im"><img src="img/drone.webp" alt="Hype Vision drone" loading="lazy"></div><h4>Drone</h4><div class="k">03 · Havadan denetim</div><p>Geniş sahalar, tank çiftlikleri ve yüksek yapılar için hızlı tarama. Drone görüntüsü sabit kameralarla birlikte tek panelde analiz edilir, olaylar haritada işaretlenir.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="h rv">Gerçek zamanlı şeffaflık<span>tek istasyondan tüm tesislere kadar</span></h2>
+    <div class="tr rv" id="tr">
+      <img src="img/det-cnc.webp" class="on" alt="">
+      <img src="img/det-hat.webp" alt="">
+      <img src="img/det-kusbakisi.webp" alt="">
+      <div class="tabs" id="tabs">
+        <div class="tab on"><span class="n">01</span><div><b>İstasyon</b><p>Her istasyonun doluluk, çevrim süresi ve güvenlik durumu saniye saniye.</p></div><span class="pr"><i></i></span></div>
+        <div class="tab"><span class="n">02</span><div><b>Tesis Geneli</b><p>Tüm hat ve bölgeler tek ekranda; ısı haritası ve canlı alarm akışı.</p></div><span class="pr"><i></i></span></div>
+        <div class="tab"><span class="n">03</span><div><b>Şirket Geneli</b><p>Tesisleri kıyaslayın, en iyi uygulamayı tüm sahalara yayın.</p></div><span class="pr"><i></i></span></div>
+      </div>
+      <div class="tag"><i></i><span id="trtag">CNC-04 · Aktif · Çevrim 2 dk 14 sn</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="h rv">Neler yapmanıza yardım ederiz<span>fabrikanızın dijital ikizi, tek ekranda</span></h2>
+    <div class="twin rv"><img src="img/dijital-ikiz.webp" alt="Hype Vision dijital fabrika: personel verimliliği, düşme tespiti ve ürün kontrolü" loading="lazy">
+      <div class="twin-tx"><span class="tagb">Dijital fabrika</span><b>Sahadaki her olay, fabrikanızın canlı haritasında.</b><p>Kameralardan gelen tespitler tesisinizin dijital ikizine işlenir: kim nerede verimli, nerede biri düştü, hangi ürün kontrolden geçti — hepsi aynı haritada.</p></div></div>
+    <div class="bento">
+      <div class="bx photo rv">
+        <div class="ph"><img src="img/det-forklift.webp" alt="" loading="lazy"></div>
+        <div class="tx"><h4>Saha ekiplerini güçlendirin</h4><p>Anlık uyarılar, tek dokunuşla onay ve hızlı önceliklendirme. Ekip daha erken müdahale eder, daha az evrak doldurur.</p></div>
+        <div class="nt" style="right:24px;bottom:96px"><span class="r">Bölge C</span><div class="tx2"><b>Forklift – yaya mesafesi</b>Kritik yakınlaşma</div><small>14:21</small></div>
+        <div class="nt" style="right:44px;bottom:32px"><span class="r">Hat 2</span><div class="tx2"><b>Baret eksik</b>Kaynak alanına giriş</div><small>14:19</small></div>
+      </div>
+      <div class="bx rv">
+        <div class="tx"><h4>Detaylı veri analizi</h4><p>İstasyon, hat ve vardiya bazında performans. Panelimizde inceleyin ya da kendi sistemlerinize aktarın.</p></div>
+        <div class="mini">
+          <div class="mc"><small>Hat Verimi</small><b>%87<em class="up">↑ 6%</em></b></div>
+          <div class="mc"><small>Boşta Kalma</small><b>42 dk<em class="up">↓ 18%</em></b></div>
+          <div class="mc"><small>KKD Uyum</small><b>%96<em class="up">↑ 4%</em></b></div>
+          <div class="mc"><small>Açık Alarm</small><b>3<em class="dn">↑ 1</em></b></div>
+          <div class="mc" style="grid-column:span 2"><small>İstasyon 3 · bugün</small><div class="tl"><i style="flex:5;background:var(--acc)"></i><i style="flex:1;background:var(--amb)"></i><i style="flex:3;background:var(--acc)"></i><i style="flex:1;background:var(--red)"></i><i style="flex:4;background:var(--acc)"></i><i style="flex:2;background:#3A3C40"></i></div></div>
+        </div>
+      </div>
+      <div class="bx rv">
+        <div class="tx"><h4>Riskleri önceden görün</h4><p>Sürekli sinyaller trende ve risk işaretine dönüşür. Sistem küçük değişimleri ilk fark eden olur, sorun büyümeden harekete geçirir.</p></div>
+        <div class="mini">
+          <div class="mc" style="grid-column:span 2"><small>Ramak kala olaylar · son 8 hafta</small><div class="bars" style="height:110px;border:0">
+            <i style="height:30%"></i><i style="height:42%"></i><i style="height:38%"></i><i style="height:55%"></i><i style="height:68%;background:linear-gradient(180deg,var(--amb),rgba(245,196,81,.25))"></i><i style="height:80%;background:linear-gradient(180deg,var(--red),rgba(255,107,107,.25))"></i><i style="height:52%"></i><i style="height:34%"></i></div></div>
+          <div class="mc" style="grid-column:span 2"><small>⚠ Depo B koridorunda forklift yakınlaşmaları 2 haftadır artıyor — rota düzenlemesi önerilir.</small></div>
+        </div>
+      </div>
+      <div class="bx photo rv">
+        <div class="ph"><img src="img/d/kumes1.webp" alt="" loading="lazy"></div>
+        <div class="tx"><h4>Sayın, ölçün, kanıtlayın</h4><p>Üretimden sevkiyata her adet ve her saniye kayıt altında. Tahmin yerine gerçek sayı; tartışma yerine görüntülü kanıt.</p></div>
+        <div class="nt" style="right:24px;bottom:32px"><span class="r">K2</span><div class="tx2"><b>Bugün 41.280 adet</b>Dünden %3 fazla</div><small>canlı</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sektorler">
+  <div class="wrap">
+    <div class="bl-head"><h2 class="h rv">Her sektörde aynı platform<span>farklı sahalar, farklı problemler</span></h2><a class="rv" href="/sektorler">Tüm sektörler →</a></div>
+    <div class="secs2">
+      <div class="s2 rv"><div class="im"><img src="img/sektor/imalat.webp" alt="" loading="lazy"></div><div class="bd"><h4>İmalat ve Fabrikalar</h4><p>Mevcut kameralar üzerinde tek bir video analitiği katmanı: iş güvenliği, üretim görünürlüğü ve kalite.</p><ul><li>KKD uyumu</li><li>Forklift–yaya</li><li>Hat duruşu</li><li>Kalite kontrol</li></ul><a class="more" href="/sektor/imalat">Sektör sayfası →</a></div></div>
+      <div class="s2 rv"><div class="im"><img src="img/sektor/tekstil.webp" alt="" loading="lazy"></div><div class="bd"><h4>Tekstil</h4><p>Bant ve istasyon bazında adet sayımı, boşta kalma ve fire takibi; vardiya sonunu beklemeden.</p><ul><li>Bant verimi</li><li>Adet sayımı</li><li>Fire analizi</li></ul><a class="more" href="/sektor/tekstil">Sektör sayfası →</a></div></div>
+      <div class="s2 rv"><div class="im"><img src="img/sektor/gida.webp" alt="" loading="lazy"></div><div class="bd"><h4>Gıda ve Tarım</h4><p>Konveyörde sayım ve sınıflandırma, hijyen uyumu ve hat boşta kalma süresinin ölçülmesi.</p><ul><li>Ürün sayımı</li><li>Sınıflandırma</li><li>Hijyen</li></ul><a class="more" href="/sektor/gida">Sektör sayfası →</a></div></div>
+      <div class="s2 rv"><div class="im"><img src="img/d/yasaklialan.webp" alt="" loading="lazy"></div><div class="bd"><h4>Kimya ve Proses Tesisleri</h4><p>Tehlikeli bölge, KKD ve 5S denetimi; patlayıcı ortamlarda bile mevcut kameralarla 7/24 kanıtlı takip.</p><ul><li>Yasaklı alan</li><li>KKD uyumu</li><li>Sızıntı & duman</li></ul><a class="more" href="/sektorler">Sektör sayfası →</a></div></div>
+      <div class="s2 rv"><div class="im"><img src="img/sektor/restoran.webp" alt="" loading="lazy"></div><div class="bd"><h4>Restoran ve Yiyecek-İçecek</h4><p>Her şubede tutarlı hijyen, hizmet hızı ve prosedür: varsayılmadan, ölçülerek.</p><ul><li>Servis süresi</li><li>Hijyen</li><li>Kasa kontrolü</li></ul><a class="more" href="/sektor/restoran">Sektör sayfası →</a></div></div>
+      <div class="s2 rv"><div class="im"><img src="img/sektor/lojistik.webp" alt="" loading="lazy"></div><div class="bd"><h4>Lojistik ve Depo</h4><p>Palet ve koli sayımı, rampa süreleri, forklift rotaları ve sevkiyat için görüntülü kanıt arşivi.</p><ul><li>Palet sayımı</li><li>Dock süresi</li><li>Delil arşivi</li></ul><a class="more" href="/sektor/depo-lojistik-guvenlik">Sektör sayfası →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="gizlilik">
+  <div class="wrap">
+    <h2 class="h rv">Gizlilik tasarımın merkezinde<span>kim olduğunu değil, ne olduğunu görürüz</span></h2>
+    <div class="pr3">
+      <div class="rv"><b>%98</b><h5>Kimliksiz modül</h5><p>Modüllerimizin neredeyse tamamı kişiyi tanımadan; bölge, nesne ve hareketle çalışır.</p></div>
+      <div class="rv"><b>0</b><h5>Tesisten çıkan görüntü</h5><p>Yerinde kurulumda görüntü binanızdan hiç çıkmaz; tüm işleme yerel sunucuda yapılır.</p></div>
+      <div class="rv"><b>KVKK</b><h5>Uyumlu tasarım</h5><p>Her modülün veri sınıfını baştan açıkça paylaşırız; sürpriz yükümlülük olmaz.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="vaka">
+  <div class="wrap">
+    <div class="bl-head"><h2 class="h rv">Vaka çalışmaları<span>sahadan ölçülmüş sonuçlar</span></h2><a class="rv" href="/vaka-calismalari">Tüm vakalar →</a></div>
+    <div class="vks"><a class="vk rv" href="/vaka-calismalari/maden-tesisi-harman-stok-forklift-kkd"><div class="im"><img src="img/vaka/harman-1.webp" alt="" loading="lazy"><b>200+</b></div><div class="bd"><small>Vaka çalışması</small><h4>Maden tesisinde 200+ kamera, 20+ modül: harman stokta ürün tipi, forklift süresi ve KKD tek platformda</h4><p>Büyük bir maden ve kimyasal üretim tesisinde 200&#x27;den fazla mevcut kamera on-premise olarak yapay zekâya bağlandı; harman stokta ürün tipi bö…</p></div></a><a class="vk rv" href="/vaka-calismalari/400-kamera-alan-bazli-kkd-denetimi"><div class="im"><img src="img/vaka/kkd-depo.webp" alt="" loading="lazy"></div><div class="bd"><small>Vaka çalışması</small><h4>400 kamerada alan bazlı KKD denetimi: baret, yelek, iş ayakkabısı ve eldiven</h4><p>Büyük bir üretim ve depolama tesisinde 400 kamera üzerinde baret ve yelek denetimi devreye alındı; giriş kapılarında iş ayakkabısı ve eldive…</p></div></a><a class="vk rv" href="/vaka-calismalari/kaynak-atolyesi-uretim-dijitallestirme"><div class="im"><img src="img/vaka/kaynak-1.webp" alt="" loading="lazy"></div><div class="bd"><small>Vaka çalışması</small><h4>Kaynak atölyesinde üretimin dijitalleştirilmesi: her parçanın kaynak ve taşlama süresi artık ölçülüyor</h4><p>Boru ve flanş kaynak istasyonunda mevcut IP kamera ile kaynak süresi, taşlama süresi, parça başı çevrim süresi, çıkan iş adedi ve KKD uyumu …</p></div></a><a class="vk rv" href="/vaka-calismalari/tekstil-hat-a-fire-dususu"><div class="im"><img src="img/vaka/tekstil-bant.webp" alt="" loading="lazy"></div><div class="bd"><small>Vaka çalışması</small><h4>Konfeksiyon fabrikasında dikim, ütü ve paketleme dijitalleşti: bant bant sayım ve darboğaz analizi</h4><p>Bir hazır giyim tesisinde mevcut kameralarla dikim, ütü-kalite kontrol ve paketleme istasyonlarında adet sayımı, parça başı çevrim süresi, i…</p></div></a><a class="vk rv" href="/vaka-calismalari/tir-yukleme-sevkiyat-sayimi"><div class="im"><img src="img/vaka/tir-1.webp" alt="" loading="lazy"></div><div class="bd"><small>Vaka çalışması</small><h4>TIR yükleme rampasında otomatik sevkiyat sayımı: her yük, her araç kayıt altında</h4><p>Yükleme rampasını gören mevcut kamerayla TIR dorsesi ve forklift otomatik algılandı; dorseye giren ürünler sayıldı, sevkiyat adedi ve görünt…</p></div></a><a class="vk rv" href="/vaka-calismalari/fuar-ziyaretci-yogunluk-analizi"><div class="im"><img src="img/vaka/fuar-1.webp" alt="" loading="lazy"></div><div class="bd"><small>Vaka çalışması</small><h4>Fuar alanında ziyaretçi yoğunluğu ve koridor analizi: hangi stant, kaç kişi, ne kadar süre?</h4><p>Uluslararası bir fuarda mevcut kameralarla koridor, stant önü, oturma ve bekleme bölgelerinde anlık ve toplam ziyaretçi sayısı, maksimum yoğ…</p></div></a></div>
+  </div>
+</section>
+
+<section id="sss">
+  <div class="wrap">
+    <div class="bl-head"><h2 class="h rv">Sık sorulan sorular<span>kamera, kurulum ve veri gizliliği</span></h2><a class="rv" href="/sss">Tüm sorular →</a></div>
+    <div class="hfaq rv"><details><summary>Görüntü işleme kurmak için yeni kamera gerekir mi?</summary><p>Çoğu İSG ve operasyon senaryosunda hayır; RTSP/ONVIF destekli mevcut IP kameralar kullanılır. Mikron seviyesinde kusur aranan kalite istasyonlarında endüstriyel kamera önerilebilir.</p></details><details><summary>Makine görmesi ile görüntü işleme arasındaki fark nedir?</summary><p>Makine görmesi genellikle özel endüstriyel kamera ve kontrollü ışıkla çalışan kural tabanlı kontrol sistemlerini ifade eder. Görüntü işleme daha geniş bir alandır; sanayide bugün çoğunlukla genel CCTV görüntüsünde ve değişken koşullarda da çalışan derin öğrenme modellerini kapsar.</p></details><details><summary>Sahada GPU gerekir mi?</summary><p>Tesis içi işlemede uygun hızlandırıcıya sahip bir edge cihaz kullanılır. Donanım keşif aşamasında kamera sayısı ve analitiklere göre boyutlandırılır.</p></details><details><summary>Görüntüler tesis dışına çıkıyor mu?</summary><p>Edge mimaride hayır; görüntüler tesis içinde işlenir, yalnızca olay verisi panele aktarılır.</p></details><details><summary>Hype Vision mevcut CCTV kameralarla çalışabilir mi?</summary><p>Projelerin çoğunda evet. RTSP veya ONVIF akışı veren kamera ve NVR’ler markadan bağımsız bağlanabilir. Her kameranın görüşü pilot öncesinde uygunluk açısından kontrol edilir.</p></details><details><summary>Kameralarımızı değiştirmemiz gerekir mi?</summary><p>Güvenlik ve operasyon senaryolarında genellikle hayır. Bazı görüşler yeniden konumlandırma veya ek kamera gerektirebilir. Görsel kalite kontrol çoğu zaman özel kamera ve aydınlatma ister.</p></details><details><summary>Sistem tesis içinde (on-premise) çalışabilir mi?</summary><p>Evet. Analiz ağınızdaki edge donanımda çalışır; görüntü yerelde işlenir.</p></details><details><summary>Görüntü buluta gönderilmeden çalışabilir mi?</summary><p>Evet. Tesis içi kurulumda görüntü sahada kalır; yalnızca olay verisi ve istenirse kısa kanıt görüntüleri saklanır.</p></details></div>
+  </div>
+</section>
+
+<section id="blog">
+  <div class="wrap">
+    <div class="bl-head"><h2 class="h rv">Rehberler ve blog<span>görüntü işlemeyi sahada uygulayanlar için</span></h2><a class="rv" href="/blog">Tüm yazılar →</a></div>
+    <div class="blog">
+      <a class="bf rv" href="/blog/yapay-zeka-ile-is-guvenligi"><img src="img/det-kkd.webp" alt="" loading="lazy"><div class="tx"><span class="tagb">Rehber · İSG</span><h4>Yapay Zeka ile İş Güvenliği: Kamera ile KKD ve Tehlikeli Alan Denetimi</h4><p>Baret, yelek ve tehlikeli bölge ihlallerinin mevcut kameralarla 7/24 nasıl denetlendiğini adım adım anlatıyoruz.</p></div></a>
+      <div class="bl">
+        <a class="bi rv" href="/blog/mevcut-ip-kamera-yapay-zeka"><img src="img/01-kusbakisi.webp" alt="" loading="lazy"><div><small>Altyapı</small><b>Mevcut IP kameralar yapay zeka için yeterli mi?</b></div></a>
+        <a class="bi rv" href="/blog/oee-nasil-hesaplanir"><img src="img/05-uretim-hatti.webp" alt="" loading="lazy"><div><small>Verimlilik</small><b>OEE nasıl hesaplanır? Kamera ile otomatik OEE takibi</b></div></a>
+        <a class="bi rv" href="/blog/kvkk-kamera-yapay-zeka"><img src="img/00-genel.webp" alt="" loading="lazy"><div><small>KVKK</small><b>Fabrikada yapay zeka kamera analitiği ve KVKK: uyum rehberi</b></div></a>
+        <a class="bi rv" href="/blog/forklift-yaya-carpisma-riski-yapay-zeka"><img src="img/04-forklift.webp" alt="" loading="lazy"><div><small>İSG</small><b>Forklift–yaya çarpışma riski yapay zeka ile nasıl izlenir?</b></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap" id="pilot">
+  <div class="cta rv">
+    <img src="img/00-genel.webp" alt="">
+    <div class="in">
+      <h2 class="h">Sahanızda iki haftada görün.<span>Bir kamera, bir modül, gerçek veri.</span></h2>
+      <div class="pillg"><a href="#iletisim">İletişim</a><a class="d" href="#iletisim">Demo talep et</a></div>
+    </div>
+  </div>
+</div>
+
+<section id="iletisim">
+  <div class="wrap">
+    <h2 class="h rv">İletişim<span>keşif görüşmesi için bize yazın, aynı gün dönelim</span></h2>
+    <div class="ct">
+      <form class="cform rv" data-form="contact">
+        <input type="hidden" name="_subject" value="Hype Vision web sitesi — yeni talep">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none">
+        <div class="r2"><label>Ad Soyad<input name="ad" required></label><label>Şirket<input name="sirket"></label></div>
+        <div class="r2"><label>E-posta<input type="email" name="email" required></label><label>Telefon<input type="tel" name="telefon"></label></div>
+        <label>İlgilendiğiniz alan<select name="alan"><option>İş sağlığı ve güvenliği</option><option>Verimlilik / OEE</option><option>Kalite kontrol</option><option>Lojistik ve depo</option><option>Diğer</option></select></label>
+        <label>Mesajınız<textarea name="mesaj" placeholder="Tesisiniz, kamera sayısı ve çözmek istediğiniz problem…"></textarea></label>
+        <button type="submit">Gönder →</button>
+        <span class="msg" aria-live="polite"></span><span class="kv">Bilgileriniz yalnızca size dönüş yapmak için kullanılır. <a href="/gizlilik-politikasi" style="text-decoration:underline">Gizlilik Politikası</a></span>
+      </form>
+      <div class="cinfo">
+        <div class="cards4">
+          <div class="ci rv"><small>E-posta</small><a href="mailto:info@hypevisionlab.com">info@hypevisionlab.com</a></div>
+          <div class="ci rv"><small>Telefon</small><a href="tel:+905412609190">+90 541 260 91 90</a></div>
+          <div class="ci rv"><small>Adres</small><span>Bilişim Vadisi, Muallimköy, Deniz Cd. No:143-5<br>41400 Gebze / Kocaeli</span></div>
+          <div class="ci rv"><small>LinkedIn</small><a href="https://www.linkedin.com/company/hypevisionlab" target="_blank" rel="noopener">/company/hypevisionlab</a></div>
+          <div class="ci rv"><small>Instagram</small><a href="https://www.instagram.com/hypevisionlab/" target="_blank" rel="noopener">@hypevisionlab</a></div>
+        </div>
+        <div class="map rv"><iframe title="Hype Vision konum" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Bili%C5%9Fim+Vadisi+Gebze+Kocaeli&z=15&output=embed"></iframe></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="instagram" style="padding-bottom:20px">
+  <div class="wrap">
+    <div class="ig-head">
+      <div class="ig-user rv"><span class="av"><img src="hypevisionlogo.webp" alt=""></span><div><b>@hypevisionlab</b><small>Sahadan son videolar</small></div></div>
+      <div class="ig-ctl rv"><button id="igPrev" aria-label="Önceki">←</button><button id="igNext" aria-label="Sonraki">→</button><a href="https://www.instagram.com/hypevisionlab/" target="_blank" rel="noopener">Takip et</a></div>
+    </div>
+    <div class="ig-track rv" id="igTrack">
+      <a class="igp" href="https://www.instagram.com/hypevisionlab/reel/DbFZNTgKdnJ/" target="_blank" rel="noopener"><img src="img/ig/p2.jpg" alt="Hype Vision Instagram video" loading="lazy"><span class="ty">▶</span><span class="dt">21 Temmuz 2026</span></a>
+      <a class="igp" href="https://www.instagram.com/hypevisionlab/reel/Da-M9lGKjnd/" target="_blank" rel="noopener"><img src="img/ig/p3.jpg" alt="Hype Vision Instagram video" loading="lazy"><span class="ty">▶</span><span class="dt">19 Temmuz 2026</span></a>
+      <a class="igp" href="https://www.instagram.com/hypevisionlab/reel/DadvWMbqbbU/" target="_blank" rel="noopener"><img src="img/ig/p4.jpg" alt="Hype Vision Instagram video" loading="lazy"><span class="ty">▶</span><span class="dt">6 Temmuz 2026</span></a>
+      <a class="igp" href="https://www.instagram.com/hypevisionlab/reel/DacVOQBqVt1/" target="_blank" rel="noopener"><img src="img/ig/v4.jpg" alt="Hype Vision Instagram video" loading="lazy"><span class="ty">▶</span><span class="dt">6 Temmuz 2026</span></a>
+      <a class="igp" href="https://www.instagram.com/hypevisionlab/reel/DabBgYWqgOa/" target="_blank" rel="noopener"><img src="img/ig/v5.jpg" alt="Hype Vision Instagram video" loading="lazy"><span class="ty">▶</span><span class="dt">5 Temmuz 2026</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="hvf">
+  <div class="wrap">
+    <div class="fg">
+      <div class="fb1"><img src="/img/logo-white.png" alt="Hype Vision" width="150" height="27">
+        <p>İnsan denetimini yapay zekâya devrederek İSG, verimlilik, kalite ve güvenlikte ölçülebilir sonuç üretiyoruz.</p>
+        <address>Bilişim Vadisi, Muallimköy, Deniz Cd. No:143-5<br>41400 Gebze, Kocaeli, Türkiye</address>
+        <p class="fc"><a href="mailto:info@hypevisionlab.com">info@hypevisionlab.com</a><br><a href="tel:+905412609190">+90 541 260 91 90</a></p>
+        <form class="nl" data-form="newsletter"><label for="nl-mail">Bülten · Endüstriyel AI ve akıllı üretim güncellemeleri</label>
+          <div><input id="nl-mail" type="email" name="email" placeholder="E-posta adresiniz" required><button type="submit">Abone ol</button></div><span class="msg" aria-live="polite"></span></form>
+      </div>
+      <div><h6>Ürün</h6><ul><li><a href="https://panel.hypevisionlab.com/" target="_blank" rel="noopener">Panel girişi (Dashboard)</a></li><li><a href="/#urun">Hype Asistan</a></li><li><a href="/#teknoloji">Kamera entegrasyonu</a></li><li><a href="/cozumler">Denetim modülleri</a></li><li><a href="/onvif-rtsp-yapay-zeka-entegrasyonu">ONVIF / RTSP entegrasyonu</a></li><li><a href="/cctv-yapay-zeka">CCTV yapay zeka</a></li><li><a href="/#iletisim">İletişim</a></li></ul></div>
+      <div><h6>Çözümler</h6><ul><li><a href="/cozumler">Tüm çözümler</a></li><li><a href="/baret-tespit-sistemi">Baret tespit sistemi</a></li><li><a href="/kkd-kontrol-kamera-sistemi">KKD kontrol sistemi</a></li><li><a href="/forklift-yaya-guvenlik-sistemi">Forklift–yaya güvenliği</a></li><li><a href="/dusme-tespit-sistemi">Düşme tespit sistemi</a></li><li><a href="/kalite-kontrol-goruntu-isleme">Kalite kontrol</a></li><li><a href="/endustriyel-goruntu-isleme">Endüstriyel görüntü işleme</a></li></ul></div>
+      <div><h6>Sektörler</h6><ul><li><a href="/sektorler">Tüm sektörler</a></li><li><a href="/sektor/imalat">İmalat</a></li><li><a href="/sektor/tekstil">Tekstil</a></li><li><a href="/sektor/otomotiv">Otomotiv</a></li><li><a href="/sektor/gida">Gıda</a></li><li><a href="/sektor/metal">Metal</a></li><li><a href="/sektor/depo-lojistik-guvenlik">Lojistik</a></li></ul></div>
+      <div><h6>Kurumsal</h6><ul><li><a href="/hakkimizda">Hakkımızda</a></li><li><a href="/vaka-calismalari">Vaka çalışmaları</a></li><li><a href="/blog">Blog</a></li><li><a href="/is-ortakligi">İş ortaklığı</a></li><li><a href="/kariyer">Kariyer</a></li><li><a href="/katalog">Ürün kataloğu (PDF)</a></li><li><a href="/sss">SSS</a></li><li><a href="/yasal">Yasal</a></li></ul></div>
+    </div>
+    <div class="fbot"><span>© 2026 Hype Teknoloji · Hype Vision</span><span><a href="/gizlilik-politikasi">Gizlilik Politikası</a><a href="/hizmet-sartlari">Hizmet Şartları</a><a href="/cerez-politikasi">Çerez Politikası</a><a href="https://www.instagram.com/hypevisionlab/" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/company/hypevisionlab" target="_blank" rel="noopener">LinkedIn</a></span></div>
+  </div>
+  <div class="ck-bar" id="ckBar" hidden><p>Deneyiminizi iyileştirmek ve site trafiğini anonim olarak analiz etmek için çerez kullanıyoruz. <a href="/cerez-politikasi">Çerez Politikası</a></p><div><button type="button" data-ck="rejected">Reddet</button><button type="button" data-ck="accepted" class="ok">Kabul et</button></div></div>
+  <script>
+  /* çerez onayı + GA4 (eski siteyle aynı anahtar ve ayarlar) */
+  (function(){var K='hypevision-cookie-consent',ID='G-87Z95JWRRM',bar=document.getElementById('ckBar');
+  function ga(){if(window.__ga)return;window.__ga=1;window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};
+    gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'});
+    var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id='+ID;document.head.appendChild(s);
+    gtag('js',new Date());gtag('config',ID,{anonymize_ip:true,allow_google_signals:false,allow_ad_personalization_signals:false});}
+  var v=null;try{v=localStorage.getItem(K)}catch(e){}
+  if(v==='accepted')ga();else if(v!=='rejected')bar.hidden=false;
+  bar.addEventListener('click',function(e){var b=e.target.closest('[data-ck]');if(!b)return;try{localStorage.setItem(K,b.dataset.ck)}catch(_){}bar.hidden=true;if(b.dataset.ck==='accepted')ga();});
+  window.hvTrack=function(n,p){if(window.gtag&&window.__ga)gtag('event',n,p||{})};})();
+  </script>
+</footer>
+
+<script>
+/* hero typing */
+const QS=['Bu hafta Hat 2\'de kaç KKD ihlali oldu?','Son 6 ayda baret uyumu nasıl değişti?','Hangi vardiyada boşta kalma en yüksek?'];
+const typed=document.getElementById('typed'),bars=document.getElementById('bars'),ans=document.getElementById('ans');
+const DATA=[[52,48,61,58,66,71,74,80,83,88,92,96],[71,74,72,79,83,85,88,90,91,93,95,96],[40,55,38,62,47,70,52,66,44,58,61,49]];
+const ANS=['Bu hafta <b>7 ihlal</b> — geçen haftaya göre %40 az','Uyum son 6 ayda <b>%71 → %96</b>\'ya yükseldi','En yüksek boşta kalma: <b>gece vardiyası, 58 dk</b>'];
+let qi=0;
+function drawBars(d){bars.innerHTML=d.map((v,i)=>`<i style="height:${v}%;animation-delay:${i*40}ms"></i>`).join('')}
+function run(){const q=QS[qi];typed.textContent='';ans.style.opacity=0;ans.innerHTML='&nbsp;';let c=0;
+  const iv=setInterval(()=>{typed.textContent=q.slice(0,++c);if(c>=q.length){clearInterval(iv);drawBars(DATA[qi]);setTimeout(()=>{ans.innerHTML=ANS[qi];ans.style.opacity=1},700);qi=(qi+1)%QS.length;setTimeout(run,5200)}},38)}
+ans.style.transition='opacity .5s';drawBars(DATA[1]);run();
+
+/* marquee */
+const MQ=['hikvision.svg','dahua.svg','axis.svg','bosch.svg','hanwha.svg','uniview.png','honeywell.svg','panasonic.svg','milestone.png'];
+const mq=document.getElementById('mq');mq.innerHTML=(MQ.concat(MQ)).map(f=>`<div><img src="img/brand/${f}" alt="${f.split('.')[0]}" loading="lazy">${f==='bosch.svg'?'<b>BOSCH</b>':''}</div>`).join('');
+
+/* assistant */
+const QA=[
+ {q:'Ocak ayındaki KKD ihlallerinin raporunu hazırla',ic:'🦺',st:['38 kamera tarandı','1.240 saat görüntü','46 olay eşleşti'],
+  t:'Ocak ayı KKD ihlal raporu hazır',s:'İhlaller ay boyunca düzenli azaldı; en riskli alan hâlâ Kaynak Holü C.',
+  k:[['Toplam ihlal','46','↓ 32%','g'],['En sık eksik','Baret','28 olay',''],['Riskli bölge','Kaynak C','19 olay','r']],
+  c:{l:'Haftalık ihlal',d:[['1.H',16],['2.H',13],['3.H',10],['4.H',7]],hi:0},
+  e:[['img/08-kkd.webp','14:02'],['img/d/baretmaske.webp','09:41'],['img/d/yasaklialan.webp','16:18']],
+  f:['KKD_Ocak_Raporu.pdf','12 sayfa · 2,4 MB','PDF']},
+ {q:'Bu hafta hangi hat en çok boşta kaldı?',ic:'⏱',st:['6 hat analiz edildi','istasyon doluluğu','vardiya kırılımı'],
+  t:'En çok boşta kalan hat: Hat 3',s:'Hat 3 bu hafta toplam 4 sa 12 dk boşta kaldı; kayıp çoğunlukla gece vardiyasında.',
+  k:[['Hat 3 boşta','4s 12dk','↑ 18%','r'],['Ortalama hat','1s 40dk','',''],['Kayıp vardiya','Gece','%64','']],
+  c:{l:'Hat bazında boşta kalma (dk)',d:[['H1',70],['H2',95],['H3',252],['H4',60],['H5',88],['H6',41]],hi:2},
+  e:[['img/05-uretim-hatti.webp','02:14'],['img/d/dikim-bant1.webp','03:40'],['img/06-cnc-istasyon.webp','01:22']],
+  f:['Bosta_Kalma_Haftalik.xlsx','6 hat · vardiya detaylı','XLS']},
+ {q:'Forklift yakınlaşmaları nerede artıyor?',ic:'🚧',st:['depo kameraları','mesafe olayları','8 haftalık trend'],
+  t:'Depo B koridorunda belirgin artış',s:'Son 2 haftada yakınlaşmalar %40 arttı. Yoğunluk 10:00–12:00 arası sevkiyat saatlerinde.',
+  k:[['Bu hafta','14 olay','↑ 40%','r'],['En kritik','1,1 m','B koridoru',''],['Öneri','Rota','tek yön','g']],
+  c:{l:'Haftalık yakınlaşma olayı',d:[['1',6],['2',7],['3',5],['4',8],['5',10],['6',14]],hi:5},
+  e:[['img/det-forklift.webp','10:42'],['img/04-forklift.webp','11:05'],['img/01-kusbakisi.webp','11:30']],
+  f:['Depo_B_Rota_Onerisi.pdf','Isı haritası + öneri','PDF']},
+ {q:'Dünkü yumurta sayımını kümes bazında ver',ic:'🥚',st:['4 konveyör hattı','sınıflandırma','dünle kıyas'],
+  t:'Dün toplam 41.280 yumurta sayıldı',s:'Kümes-2 en yüksek payı aldı; Kümes-4 akşam saatlerinde 22 dk kesinti yaşadı.',
+  k:[['Toplam','41.280','↑ 3%','g'],['Lider kümes','K2','%31',''],['Kesinti','22 dk','K4','r']],
+  c:{l:'Kümes bazında adet (bin)',d:[['K1',9.8],['K2',12.8],['K3',10.4],['K4',8.3]],hi:3},
+  e:[['img/d/kumes1.webp','18:20'],['img/d/kumes2.webp','18:42'],['img/d/kumes1.webp','19:05']],
+  f:['Kumes_Sayim_Dun.xlsx','4 kümes · saatlik','XLS']},
+];
+const qsEl=document.getElementById('qs'),msgs=document.getElementById('msgs'),ph=document.getElementById('ph');
+QA.forEach((x,i)=>{const b=document.createElement('button');b.className='qbtn';b.innerHTML=`<span>${x.ic}</span>${x.q}`;b.onclick=()=>{auto=false;ask(i)};qsEl.appendChild(b)});
+let busy=false,auto=true,cur=-1,timers=[];
+const T=(f,ms)=>timers.push(setTimeout(f,ms));
+function ask(i){timers.forEach(clearTimeout);timers=[];cur=i;const x=QA[i];
+  [...qsEl.children].forEach((b,j)=>b.classList.toggle('on',j===i));
+  msgs.innerHTML='';ph.textContent='';let c=0;
+  const typeIv=setInterval(()=>{ph.textContent=x.q.slice(0,++c);if(c>=x.q.length){clearInterval(typeIv);send()}},22);timers.push(typeIv);
+  function send(){ph.textContent='Bir soru sorun…';
+    msgs.insertAdjacentHTML('beforeend',`<div class="u">${x.q}</div><div class="bot"><i></i><div class="body" id="bb"><div class="think">Kamera verisi taranıyor <em><b></b><b></b><b></b></em></div><div class="steps" id="stp"></div></div></div>`);
+    const stp=document.getElementById('stp');
+    x.st.forEach((s,j)=>T(()=>stp.insertAdjacentHTML('beforeend',`<span>${s}</span>`),300+j*350));
+    T(()=>{const bb=document.getElementById('bb');bb.querySelector('.think').remove();
+      const mx=Math.max(...x.c.d.map(d=>d[1]));
+      bb.insertAdjacentHTML('beforeend',`<div class="fade"><div class="ttl">${x.t}</div><div class="sum">${x.s}</div>
+       <div class="kp">${x.k.map(k=>`<div><small>${k[0]}</small><b>${k[1]}</b>${k[2]?`<em class="${k[3]}">${k[2]}</em>`:''}</div>`).join('')}</div>
+       <div class="row2"><div class="cht"><small>${x.c.l}</small><div class="cb">${x.c.d.map((d,j)=>`<div><i class="${j===x.c.hi?'hi':''}" style="height:${d[1]/mx*80}%;animation-delay:${j*60}ms"></i><span>${d[0]}</span></div>`).join('')}</div></div>
+       <div class="ev"><small>Kanıt görüntüleri</small><div class="th">${x.e.map((e,j)=>`<div style="animation-delay:${j*90}ms"><img src="${e[0]}" alt=""><span>${e[1]}</span></div>`).join('')}</div></div></div>
+       <div class="fl"><span class="ic ${x.f[2]==='XLS'?'x':''}">${x.f[2]}</span><div><b>${x.f[0]}</b><small>${x.f[1]}</small></div><span class="dl">↓</span></div></div>`);
+      if(auto)T(()=>ask((cur+1)%QA.length),7000);
+    },1600);
+  }
+}
+let started=false;
+new IntersectionObserver(es=>{if(es[0].isIntersecting&&!started){started=true;ask(0)}},{threshold:.3}).observe(document.getElementById('app'));
+
+/* transparency tabs */
+const tabs=[...document.querySelectorAll('.tab')],timgs=[...document.querySelectorAll('#tr img')],tt=document.getElementById('trtag');
+const TAGS=['CNC-04 · Aktif · Çevrim 2 dk 14 sn','Tesis · 38 kamera · 2 açık alarm','3 tesis · bu hafta uyum %94'];
+let ti=0,tmr;
+function setTab(i){ti=i;tabs.forEach((t,j)=>{t.classList.toggle('on',j===i);const p=t.querySelector('.pr i');p.style.animation='none';p.offsetWidth;p.style.animation=''});timgs.forEach((m,j)=>m.classList.toggle('on',j===i));tt.textContent=TAGS[i];clearTimeout(tmr);tmr=setTimeout(()=>setTab((ti+1)%3),6000)}
+tabs.forEach((t,i)=>t.onclick=()=>setTab(i));setTab(0);
+
+
+/* instagram slider */
+const igT=document.getElementById('igTrack');
+const igStep=()=>igT.querySelector('.igp').getBoundingClientRect().width+6;
+document.getElementById('igPrev').onclick=()=>igT.scrollBy({left:-igStep()});
+document.getElementById('igNext').onclick=()=>igT.scrollBy({left:igStep()});
+
+
+/* forms (FormSubmit AJAX — eski siteyle aynı akış) */
+document.querySelectorAll('form[data-form]').forEach(f=>f.addEventListener('submit',async e=>{
+  e.preventDefault();const msg=f.querySelector('.msg'),btn=f.querySelector('button');const L=document.documentElement.lang==='en';
+  const kind=f.dataset.form;const data=Object.fromEntries(new FormData(f).entries());if(data._honey)return;
+  const payload={_captcha:'false',_template:'table',_subject:kind==='newsletter'?(L?'Newsletter signup':'Bülten aboneliği'):(L?'Website contact: ':'Web sitesi iletişim: ')+(data.sirket||data.ad||''),_form:kind,sayfa:location.pathname,...data};
+  btn.disabled=true;msg.textContent=L?'Sending…':'Gönderiliyor…';msg.style.color='';
+  try{const r=await fetch('https://formsubmit.co/ajax/info@hypevisionlab.com',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(payload)});
+    const j=await r.json();if(r.ok&&String(j.success)==='true'){msg.textContent=kind==='newsletter'?(L?'Thanks, you are subscribed.':'Teşekkürler, aboneliğiniz alındı.'):(L?'Thanks! We will get back to you shortly.':'Teşekkürler! En kısa sürede dönüş yapacağız.');msg.style.color='#1C8A55';f.reset();window.hvTrack&&hvTrack(kind==='newsletter'?'newsletter_signup':'contact_submit',{form:kind})}
+    else throw 0}catch(_){msg.textContent=L?'Could not send. Please email info@hypevisionlab.com.':'Gönderilemedi. Lütfen info@hypevisionlab.com adresine yazın.';msg.style.color='#C7363B'}
+  btn.disabled=false}));
+
+
+/* dil değişince aynı yerde kal */
+document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{document.cookie=document.documentElement.lang==='en'?'hv_tr=1;path=/;max-age=31536000;samesite=lax':'hv_tr=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
+(()=>{try{const s=JSON.parse(sessionStorage.getItem('hvScroll')||'null');if(!s)return;sessionStorage.removeItem('hvScroll');document.documentElement.style.scrollBehavior='auto';const go=()=>scrollTo(0,Math.round(s.r*Math.max(1,document.documentElement.scrollHeight-innerHeight)));go();addEventListener('load',go,{once:true});setTimeout(()=>{document.documentElement.style.scrollBehavior=''},800)}catch(_){}})();
+
+/* misc */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20),{passive:true});
+document.getElementById('burger').onclick=()=>nav.classList.toggle('open');
+nav.querySelectorAll('.hvmenu a').forEach(a=>a.onclick=()=>nav.classList.remove('open'));
+</script>
+</body>
 </html>
