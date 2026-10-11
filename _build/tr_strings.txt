@@ -1,0 +1,255 @@
+html
+Hype Vision — Kameralarınız için Yapay Zekâ
+Çözümler
+Sektörler
+Blog
+Şirket
+SSS
+İletişim
+EN
+Demo talep et
+☰
+Yapay zekânın gücü, kameralarınızda.
+Sahanızı daha güvenli ve verimli yönetin.
+KKD ✓ Baret · Yelek
+Hype Asistan'a sorun
+KKD Uyum Skoru
+Oca
+Şub
+Mar
+Nis
+May
+Haz
+Uyum son 6 ayda
+%71 → %96
+'ya yükseldi
+Mevcut altyapınızla çalışır
+Yeni kamera yok. Kablolama yok. Kurulum günler içinde.
+Hype Asistan
+Sahanıza soru sorun, cevabı kanıtıyla gelsin.
+Tesisinize dair her şeyi doğal dille sorun. Asistan, kameralardan gelen gerçek veriyi tarar; rakamı, grafiği, olayın görüntüsünü ve indirilebilir raporu tek cevapta getirir.
+Gebze Tesisi · 38 kamera
+Örnek sorular
+Canlı veri · son güncelleme
+şimdi
+Yeni sohbet
+· Operasyon
+KVKK · kimliksiz veri
+Bir soru sorun…
+↑
+Hype Vision nasıl çalışır
+Sahadaki ekibe yol gösteren, yönetime karar verdiren tek platform
+Otonom Devriye
+Robot köpek
+Sabit kameranın görmediği koridor ve proses alanlarında planlı devriye. Üzerindeki kamera ve LiDAR ile görüntüyü aynı yapay zekâ katmanına aktarır; kör nokta kalmaz.
+Saha Araçları
+Anlık uyarı
+İhlal anında doğru kişiye fotoğraflı bildirim: panel, mobil, SMS, WhatsApp veya siren. Ekip hızlı müdahale eder, her olay kayıt altına alınır.
+Havadan Denetim
+Drone
+Geniş sahalar, tank çiftlikleri ve yüksek yapılar için hızlı tarama. Drone görüntüsü sabit kameralarla birlikte tek panelde analiz edilir, olaylar haritada işaretlenir.
+Gerçek zamanlı şeffaflık
+tek istasyondan tüm tesislere kadar
+01
+İstasyon
+Her istasyonun doluluk, çevrim süresi ve güvenlik durumu saniye saniye.
+02
+Tesis Geneli
+Tüm hat ve bölgeler tek ekranda; ısı haritası ve canlı alarm akışı.
+03
+Şirket Geneli
+Tesisleri kıyaslayın, en iyi uygulamayı tüm sahalara yayın.
+CNC-04 · Aktif · Çevrim 2 dk 14 sn
+Neler yapmanıza yardım ederiz
+Saha ekiplerini güçlendirin
+Anlık uyarılar, tek dokunuşla onay ve hızlı önceliklendirme. Ekip daha erken müdahale eder, daha az evrak doldurur.
+Bölge C
+Forklift – yaya mesafesi
+Kritik yakınlaşma
+14:21
+Hat 2
+Baret eksik
+Kaynak alanına giriş
+14:19
+Detaylı veri analizi
+İstasyon, hat ve vardiya bazında performans. Panelimizde inceleyin ya da kendi sistemlerinize aktarın.
+Hat Verimi
+%87
+↑ 6%
+Boşta Kalma
+42 dk
+↓ 18%
+KKD Uyum
+%96
+↑ 4%
+Açık Alarm
+3
+↑ 1
+İstasyon 3 · bugün
+Riskleri önceden görün
+Sürekli sinyaller trende ve risk işaretine dönüşür. Sistem küçük değişimleri ilk fark eden olur, sorun büyümeden harekete geçirir.
+Ramak kala olaylar · son 8 hafta
+⚠ Depo B koridorunda forklift yakınlaşmaları 2 haftadır artıyor — rota düzenlemesi önerilir.
+Sayın, ölçün, kanıtlayın
+Üretimden sevkiyata her adet ve her saniye kayıt altında. Tahmin yerine gerçek sayı; tartışma yerine görüntülü kanıt.
+K2
+Bugün 41.280 adet
+Dünden %3 fazla
+canlı
+Her sektörde aynı platform
+farklı sahalar, farklı problemler
+Tüm sektörler →
+İmalat ve Fabrikalar
+Mevcut kameralar üzerinde tek bir video analitiği katmanı: iş güvenliği, üretim görünürlüğü ve kalite.
+KKD uyumu
+Forklift–yaya
+Hat duruşu
+Kalite kontrol
+Sektör sayfası →
+Tekstil
+Bant ve istasyon bazında adet sayımı, boşta kalma ve fire takibi; vardiya sonunu beklemeden.
+Bant verimi
+Adet sayımı
+Fire analizi
+Gıda ve Tarım
+Konveyörde sayım ve sınıflandırma, hijyen uyumu ve hat boşta kalma süresinin ölçülmesi.
+Ürün sayımı
+Sınıflandırma
+Hijyen
+Kimya ve Proses Tesisleri
+Tehlikeli bölge, KKD ve 5S denetimi; patlayıcı ortamlarda bile mevcut kameralarla 7/24 kanıtlı takip.
+Yasaklı alan
+Sızıntı & duman
+Restoran ve Yiyecek-İçecek
+Her şubede tutarlı hijyen, hizmet hızı ve prosedür: varsayılmadan, ölçülerek.
+Servis süresi
+Kasa kontrolü
+Lojistik ve Depo
+Palet ve koli sayımı, rampa süreleri, forklift rotaları ve sevkiyat için görüntülü kanıt arşivi.
+Palet sayımı
+Dock süresi
+Delil arşivi
+Gizlilik tasarımın merkezinde
+kim olduğunu değil, ne olduğunu görürüz
+%98
+Kimliksiz modül
+Modüllerimizin neredeyse tamamı kişiyi tanımadan; bölge, nesne ve hareketle çalışır.
+0
+Tesisten çıkan görüntü
+Yerinde kurulumda görüntü binanızdan hiç çıkmaz; tüm işleme yerel sunucuda yapılır.
+KVKK
+Uyumlu tasarım
+Her modülün veri sınıfını baştan açıkça paylaşırız; sürpriz yükümlülük olmaz.
+Vaka çalışmaları
+sahadan ölçülmüş sonuçlar
+Tüm vakalar →
+%18
+Vaka çalışması
+Gıda üretim hattında boşta kalma süresi nasıl %18 azaltıldı?
+Gıda üretim hattında yapay zeka ile boşta kalma (idle) takibi: anonim vaka notu, %18 idle azaltma, vardiya içi müdahale.…
+%31
+Hat A paketlemede fire oranı %31 nasıl düştü?
+Konfeksiyon tesisinde dikiş sonrası paketleme hattında hatalı ürün kamera ile erken ayrıldı; hurda ve geri işleme azaldı. 4 mevcut IP kamera…
+%60
+Sevkiyat rampasında palet sayım sapması: anlık alarm vakası
+Sevkiyat rampasında beklenen ve sayılan palet arasındaki fark mevcut 3 kamera ile anında yakalandı; sevkiyat hataları %60 azaldı. 3 iş günü …
+Montaj hattında KKD ihlalleri: 7/24 otomatik denetim vakası
+İSG KKD denetimi yapay zeka vaka notu: baret yelek tespiti, tehlikeli bölge ihlali, 7/24 otomatik alarm. Anonim fabrika örneği.…
+Konveyör hattında erken hata tespiti ile fire oranı düşüşü
+Beyaz eşya komponent hattında yüzey hataları kamera ile anında yakalandı; geç müdahaleden kaynaklanan hurda birikimi azaldı. 4 iş günü kurul…
+Sık sorulan sorular
+kamera, kurulum ve veri gizliliği
+Tüm sorular →
+Görüntü işleme kurmak için yeni kamera gerekir mi?
+Çoğu İSG ve operasyon senaryosunda hayır; RTSP/ONVIF destekli mevcut IP kameralar kullanılır. Mikron seviyesinde kusur aranan kalite istasyonlarında endüstriyel kamera önerilebilir.
+Makine görmesi ile görüntü işleme arasındaki fark nedir?
+Makine görmesi genellikle özel endüstriyel kamera ve kontrollü ışıkla çalışan kural tabanlı kontrol sistemlerini ifade eder. Görüntü işleme daha geniş bir alandır; sanayide bugün çoğunlukla genel CCTV görüntüsünde ve değişken koşullarda da çalışan derin öğrenme modellerini kapsar.
+Sahada GPU gerekir mi?
+Tesis içi işlemede uygun hızlandırıcıya sahip bir edge cihaz kullanılır. Donanım keşif aşamasında kamera sayısı ve analitiklere göre boyutlandırılır.
+Görüntüler tesis dışına çıkıyor mu?
+Edge mimaride hayır; görüntüler tesis içinde işlenir, yalnızca olay verisi panele aktarılır.
+Hype Vision mevcut CCTV kameralarla çalışabilir mi?
+Projelerin çoğunda evet. RTSP veya ONVIF akışı veren kamera ve NVR’ler markadan bağımsız bağlanabilir. Her kameranın görüşü pilot öncesinde uygunluk açısından kontrol edilir.
+Kameralarımızı değiştirmemiz gerekir mi?
+Güvenlik ve operasyon senaryolarında genellikle hayır. Bazı görüşler yeniden konumlandırma veya ek kamera gerektirebilir. Görsel kalite kontrol çoğu zaman özel kamera ve aydınlatma ister.
+Sistem tesis içinde (on-premise) çalışabilir mi?
+Evet. Analiz ağınızdaki edge donanımda çalışır; görüntü yerelde işlenir.
+Görüntü buluta gönderilmeden çalışabilir mi?
+Evet. Tesis içi kurulumda görüntü sahada kalır; yalnızca olay verisi ve istenirse kısa kanıt görüntüleri saklanır.
+Rehberler ve blog
+görüntü işlemeyi sahada uygulayanlar için
+Tüm yazılar →
+Rehber · İSG
+Yapay Zeka ile İş Güvenliği: Kamera ile KKD ve Tehlikeli Alan Denetimi
+Baret, yelek ve tehlikeli bölge ihlallerinin mevcut kameralarla 7/24 nasıl denetlendiğini adım adım anlatıyoruz.
+Altyapı
+Mevcut IP kameralar yapay zeka için yeterli mi?
+Verimlilik
+OEE nasıl hesaplanır? Kamera ile otomatik OEE takibi
+Fabrikada yapay zeka kamera analitiği ve KVKK: uyum rehberi
+İSG
+Forklift–yaya çarpışma riski yapay zeka ile nasıl izlenir?
+Sahanızda iki haftada görün.
+Bir kamera, bir modül, gerçek veri.
+keşif görüşmesi için bize yazın, aynı gün dönelim
+Ad Soyad
+E-posta
+Telefon
+İlgilendiğiniz alan
+İş sağlığı ve güvenliği
+Verimlilik / OEE
+Lojistik ve depo
+Diğer
+Mesajınız
+Gönder →
+Bilgileriniz yalnızca size dönüş yapmak için kullanılır.
+Gizlilik Politikası
+info@hypevisionlab.com
++90 541 260 91 90
+Adres
+GTÜ Teknopark, Hightech Binası
+41480 Gebze / Kocaeli
+Instagram
+@hypevisionlab
+Sahadan son paylaşımlar
+←
+→
+Takip et
+▣
+9 Ekim 2026
+▶
+21 Temmuz 2026
+19 Temmuz 2026
+6 Temmuz 2026
+İnsan denetimini yapay zekâya devrederek İSG, verimlilik, kalite ve güvenlikte ölçülebilir sonuç üretiyoruz.
+41480 Gebze, Kocaeli, Türkiye
+Bülten · Endüstriyel AI ve akıllı üretim güncellemeleri
+Abone ol
+Ürün
+Kamera entegrasyonu
+Denetim modülleri
+ONVIF / RTSP entegrasyonu
+CCTV yapay zeka
+Tüm çözümler
+Baret tespit sistemi
+KKD kontrol sistemi
+Forklift–yaya güvenliği
+Düşme tespit sistemi
+Endüstriyel görüntü işleme
+Tüm sektörler
+İmalat
+Otomotiv
+Gıda
+Metal
+Lojistik
+Kurumsal
+Hakkımızda
+İş ortaklığı
+Kariyer
+Yasal
+© 2026 Hype Teknoloji · Hype Vision
+Hizmet Şartları
+Çerez Politikası
+PH:Tesisiniz, kamera sayısı ve çözmek istediğiniz problem…
+PH:E-posta adresiniz
+META:Hype Vision, mevcut kameralarınızı yapay zekâ ile sahanızı anlayan bir sisteme dönüştürür. Anlık uyarılar, asistan ile sorgulanabilir veri, yönetim içgörüleri.
