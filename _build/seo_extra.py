@@ -69,6 +69,9 @@ def _key(src):
 
 def fill_alts(html, lang):
     i = 0 if lang == "tr" else 1
+    if lang == "en":  # TR'den kopyalanmış alt metinlerini İngilizceye çevir
+        html = re.sub(r'(<img[^>]*?\ssrc="([^"]+)"[^>]*?\salt=")([^"]*)(")', lambda m: m.group(1) + ALT.get(_key(m.group(2)), (None, m.group(3)))[1] + m.group(4), html)
+        html = re.sub(r'(<img[^>]*?\salt=")([^"]*)("[^>]*?\ssrc="([^"]+)")', lambda m: m.group(1) + ALT.get(_key(m.group(4)), (None, m.group(2)))[1] + m.group(3), html)
     def rep(m):
         tag = m.group(0)
         src = re.search(r'\bsrc="([^"]+)"', tag)

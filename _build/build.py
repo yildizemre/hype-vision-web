@@ -495,8 +495,10 @@ def fix_file(f):
         if "srcset=" in tag: return tag
         sm = src[:-5] + "-sm.webp"
         if not os.path.exists(os.path.join(ROOT, sm.lstrip("/"))): return tag
-        return tag.replace(f'src="{src}"', f'src="{src}" srcset="{sm} 720w, {src} 1600w" sizes="(max-width: 760px) 100vw, 50vw"', 1)
+        _a = lambda x: x if x.startswith('/') else '/' + x
+        return tag.replace(f'src="{src}"', f'src="{src}" srcset="{_a(sm)} 720w, {_a(src)} 1600w" sizes="(max-width: 760px) 100vw, 50vw"', 1)
     s2 = re.sub(r'<img\b[^>]*\bsrc="(/?img/[^"]+?\.webp)"[^>]*>', _ss, s2)
+    s2 = re.sub(r'srcset="([^"]+)"', lambda m: 'srcset="' + ', '.join(('/' + x.strip() if x.strip().startswith('img/') else x.strip()) for x in m.group(1).split(',')) + '"', s2)
     s2 = SX.fill_alts(s2, lang)
     # ilk görsel hariç tüm görseller tembel yüklensin
     _n = [0]
@@ -627,3 +629,4 @@ open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8").write(llms)
 
 print("EN ana sayfa: tüm metinler çevrildi" if not miss else f"UYARI — EN ana sayfada çevrilmeyen {len(miss)} metin (i18n.py T sözlüğüne ekleyin): " + " | ".join(miss[:12]))
 print(f"sayfa: {len(seen)} (sitemap) | eski link düzeltilen dosya: {cnt}")
+exec(open(os.path.join(ROOT, "_build", "check_imgs.py"), encoding="utf-8").read())
