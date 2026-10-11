@@ -95,7 +95,7 @@ section{padding:110px 0 0}
 .ans b{color:var(--acc);font-weight:600}
 .det{position:absolute;z-index:2;border:2px solid var(--acc);border-radius:4px;box-shadow:0 0 0 1px rgba(0,0,0,.2)}
 .det span{position:absolute;top:-24px;left:-2px;background:var(--acc);color:#062022;font-size:11px;font-weight:700;padding:3px 7px;border-radius:3px;white-space:nowrap}
-@media (max-width:760px){.stage{aspect-ratio:auto;min-height:620px}.ask,.chart,.ans{width:auto;right:3%}.chart{top:180px}.ans{top:330px}.det{display:none}}
+@media (max-width:760px){.stage{aspect-ratio:auto;min-height:620px}.ask,.chart,.ans{width:auto;right:3%}.chart{top:180px}.ans{top:330px}}
 
 /* logos */
 .mq{overflow:hidden;margin-top:36px;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
@@ -423,7 +423,9 @@ footer.hvf{background:#141516;color:#9C9FA4;margin-top:110px;padding:70px 0 30px
 @media (max-width:760px){
  .hero{padding-top:110px}
  .stage{aspect-ratio:4/5;min-height:0}
- .stage .chart,.stage .det{display:none}
+ .stage .chart{display:none}
+ .det span{top:auto;bottom:-24px}
+ .stage .ans{bottom:40px}
  .ask{left:12px;right:12px;top:12px;width:auto;padding:12px 14px}
  .ask p{font-size:15px;min-height:2.6em;margin-top:8px}
  .ans{left:12px;right:12px;top:auto;bottom:12px;width:auto;font-size:13px}
@@ -640,6 +642,14 @@ document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{
 /* Instagram: son 5 video lead panelinden (yoksa sayfadaki hazır liste kalır) */
 (async()=>{try{const t=document.getElementById('igTrack');if(!t)return;const r=await fetch('https://lead.hypevisionlab.com/api/public/ig-reels',{cache:'no-store'});if(!r.ok)return;const j=await r.json();if(!j.items||!j.items.length)return;
 const L=document.documentElement.lang==='en'?'en-GB':'tr-TR';t.innerHTML=j.items.map(i=>'<a class="igp" href="'+i.url+'" target="_blank" rel="noopener"><img src="'+i.thumb+'" alt="Hype Vision Instagram video" loading="lazy" referrerpolicy="no-referrer"><span class="ty">▶</span><span class="dt">'+new Date(i.date).toLocaleDateString(L,{day:'numeric',month:'long',year:'numeric'})+'</span></a>').join('')}catch(_){}})();
+
+
+/* tespit kutusu: görselin gerçekten görünen (kırpılmış) kısmına göre konumlan */
+(()=>{const st=document.querySelector('.stage'),im=st&&st.querySelector('img'),d=st&&st.querySelector('.det[data-box]');if(!d)return;
+const [x,y,w,h]=d.dataset.box.split(',').map(Number);
+function place(){const W=st.clientWidth,H=st.clientHeight,iw=im.naturalWidth||1600,ih=im.naturalHeight||900,s=Math.max(W/iw,H/ih),dw=iw*s,dh=ih*s,ox=(W-dw)/2,oy=(H-dh)/2;
+d.style.left=(ox+x*dw)+'px';d.style.top=(oy+y*dh)+'px';d.style.width=(w*dw)+'px';d.style.height=(h*dh)+'px'}
+im.complete?place():im.addEventListener('load',place);addEventListener('resize',place,{passive:true})})();
 
 /* dil değişince aynı yerde kal */
 document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{var _toTr=document.documentElement.lang==='en';document.cookie=(_toTr?'hv_tr':'hv_en')+'=1;path=/;max-age=31536000;samesite=lax';document.cookie=(_toTr?'hv_en':'hv_tr')+'=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
