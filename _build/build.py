@@ -53,7 +53,7 @@ BLOGS = sorted([p for p in PAGES if p["path"].startswith("/blog/")], key=lambda 
 CASES = [p for p in PAGES if p["path"].startswith("/vaka-calismalari/")]
 EG = next(p for p in D["extra"] if p["path"] == "/endustriyel-goruntu-isleme")
 COMPANY = ["/hakkimizda", "/kariyer", "/yasal", "/is-ortakligi", "/gizlilik-politikasi", "/hizmet-sartlari", "/cerez-politikasi"]
-TR_LOCAL = {p["path"] for p in SOLS + SECS + PAGES} | {"/", "/cozumler", "/sektorler", "/sss", "/endustriyel-goruntu-isleme", "/blog", "/vaka-calismalari"} | set(COMPANY) | {"/katalog"}
+TR_LOCAL = {p["path"] for p in SOLS + SECS + PAGES} | {"/", "/cozumler", "/sektorler", "/sss", "/endustriyel-goruntu-isleme", "/blog", "/vaka-calismalari"} | set(COMPANY) | {"/katalog", "/ig"}
 # EN'de üretilecek sayfalar: TR karşılığı olan ve İngilizce metni bulunanlar + sabit dizin/şirket sayfaları
 def en_page(tr):
     pg = D.get("en", {}).get(tr)
@@ -471,6 +471,7 @@ ctx = {"E": E, "shell": shell, "write": write, "cta": cta, "faq_html": faq_html,
 load_mod("pages_extra").run(ctx, "tr")
 load_mod("pages_extra").run(ctx, "en")
 load_mod("katalog").run(ctx, "tr"); load_mod("katalog").run(ctx, "en")
+load_mod("ig").run(ctx, "tr"); load_mod("ig").run(ctx, "en")
 
 # ------------------------------------------------------------------ eski siteye giden <a> linklerini temizle
 def fix_file(f):
@@ -498,7 +499,7 @@ cnt = sum(fix_file(f) for f in glob.glob(os.path.join(ROOT, "**", "*.html"), rec
 today = datetime.date.today().isoformat()
 seen, urls = set(), []
 for loc, tr, en in SITEMAP:
-    if loc in seen or loc == "/404/": continue
+    if loc in seen or loc in ("/404/", "/404", "/ig", "/en/ig"): continue
     seen.add(loc)
     alts = f'<xhtml:link rel="alternate" hreflang="tr" href="{SITE}{tr}"/><xhtml:link rel="alternate" hreflang="en" href="{SITE}{en}"/>' if tr and en else ""
     urls.append(f"<url><loc>{SITE}{loc}</loc><lastmod>{today}</lastmod>{alts}</url>")

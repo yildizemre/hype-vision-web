@@ -4,7 +4,7 @@
 FIXED = {
     "/": "/en/", "/cozumler": "/en/solutions", "/sektorler": "/en/industries", "/blog": "/en/resources",
     "/vaka-calismalari": "/en/case-studies", "/sss": "/en/faq", "/hakkimizda": "/en/about", "/kariyer": "/en/careers",
-    "/yasal": "/en/legal", "/katalog": "/en/catalog", "/is-ortakligi": "/en/partners", "/gizlilik-politikasi": "/en/privacy-policy",
+    "/yasal": "/en/legal", "/katalog": "/en/catalog", "/ig": "/en/ig", "/is-ortakligi": "/en/partners", "/gizlilik-politikasi": "/en/privacy-policy",
     "/hizmet-sartlari": "/en/terms-of-service", "/cerez-politikasi": "/en/cookie-policy",
     "/sektor/tekstil": "/en/industries/textile", "/sektor/otomotiv": "/en/industries/automotive",
     "/sektor/gida": "/en/industries/food", "/sektor/metal": "/en/industries/metal",
