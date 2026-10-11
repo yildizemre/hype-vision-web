@@ -1,0 +1,60 @@
+{
+ "slug": "goruntu-isleme-maliyeti-neye-baglidir",
+ "title": "Fabrikada görüntü işleme / yapay zekâ kamera sistemi maliyeti neye bağlıdır?",
+ "metaDescription": "Görüntü işleme projesinin maliyetini belirleyen kalemler: kamera sayısı, modüller, donanım, entegrasyon ve lisans modeli.",
+ "excerpt": "Maliyeti belirleyen beş kalem vardır: analiz edilecek kamera sayısı, seçilen modüller, işleme donanımı (edge sunucu), entegrasyon ihtiyacı (ERP, PLC, ",
+ "isoDate": "2026-10-12",
+ "readMinutes": 4,
+ "keywords": [
+  "görüntü işleme maliyeti",
+  "yapay zeka kamera sistemi fiyatı",
+  "kkd kamera sistemi fiyat"
+ ],
+ "blocks": [
+  {
+   "type": "p",
+   "text": "**Kısa cevap:** Maliyeti belirleyen beş kalem vardır: analiz edilecek kamera sayısı, seçilen modüller, işleme donanımı (edge sunucu), entegrasyon ihtiyacı (ERP, PLC, VMS) ve lisans modeli. Mevcut kameraların kullanılması, yeni kamera alımına göre maliyeti ciddi şekilde düşürür."
+  },
+  {
+   "type": "h2",
+   "text": "Maliyet kalemleri",
+   "id": "goruntu-isleme-maliy1"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Kamera sayısı: lisans ve donanım boyutunu belirler",
+    "Modüller: hazır modül mü, projeye özel model mi",
+    "Donanım: tesis içi edge sunucu ya da bulut",
+    "Entegrasyon: alarm kanalları, ERP/MES, turnike/PLC",
+    "Destek ve bakım: kalibrasyon, güncelleme"
+   ]
+  },
+  {
+   "type": "h2",
+   "text": "Maliyeti düşüren seçimler",
+   "id": "goruntu-isleme-maliy3"
+  },
+  {
+   "type": "p",
+   "text": "Mevcut kameralarla başlamak, önce en net geri dönüşü olan 1–2 modülle pilot yapmak ve aynı kameradan birden fazla analitiği çalıştırmak toplam maliyeti düşürür. Hype Vision'da modüller ayrı ayrı lisanslanır; yalnızca kullandığınız modül için ödeme yaparsınız."
+  },
+  {
+   "type": "cta"
+  }
+ ],
+ "faq": [
+  {
+   "q": "Fiyat neden sitede yazmıyor?",
+   "a": "Kamera sayısı, modül ve entegrasyona göre değiştiği için keşif sonrası net teklif verilir. Pilot için info@hypevisionlab.com'a yazabilirsiniz."
+  }
+ ],
+ "related": [
+  "/cozumler",
+  "/vaka-calismalari"
+ ],
+ "category": "Rehber",
+ "lang": "tr",
+ "metaTitle": "Fabrikada görüntü işleme / yapay zekâ kamera sistemi maliyet",
+ "solutions": []
+}

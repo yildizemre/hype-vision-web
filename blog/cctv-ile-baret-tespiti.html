@@ -536,6 +536,11 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 .figs img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
 .figs figcaption{font-size:13px;color:var(--mute);padding:10px 14px}
 @media (max-width:700px){.figs{grid-template-columns:1fr}}
+.tldr{margin-top:22px;background:var(--bg2);border-radius:14px;padding:22px 24px;box-shadow:inset 0 0 0 1px var(--line)}
+.tldr-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:12px}
+.tldr-g b{font-size:13px;font-weight:700;color:var(--acc);text-transform:uppercase;letter-spacing:.06em}
+.tldr-g p{font-size:15px;color:#2F3237;margin-top:4px}
+@media (max-width:900px){.tldr-g{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -558,6 +563,7 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 <div class="intro"><p>Baret ve KKD tespit sisteminin nasıl çalıştığını, kurulumda nelere dikkat edileceğini ve sık yapılan hataları anlattık.</p><p>Baret ve KKD tespit sistemi , kamera görüntüsündeki kişileri bulup tanımlı bölgede gerekli koruyucu ekipmanı (baret, yelek, gözlük vb.) takıp takmadıklarını kontrol eden ve eksiklik olduğunda alarm üreten bir görüntü işleme uygulamasıdır.</p><div class="pillg"><a href="/#iletisim">İletişim</a><a class="d" href="/#iletisim">Demo talep et</a></div></div></div>
 <div class="pimg rv"><img src="/img/det-kkd.webp" srcset="/img/det-kkd-sm.webp 720w, /img/det-kkd.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="CCTV ile Baret Tespiti Nasıl Yapılır? Kurulum, Kurallar ve Dikkat Edilecekler"></div>
 </div>
+
 
 <div class="wrap" style="margin-top:50px"><div class="sec2 rv"><h2>KKD tespit sistemi nasıl çalışır?</h2><div class="c"><ul class="ck"><li>Kameranın RTSP akışı okunur.</li><li>Model her karede kişileri tespit eder.</li><li>Her kişi için baret, yelek gibi ekipmanlar sınıflandırılır.</li><li>Bölge ve süre kuralı uygulanır: ör. “pres alanında 5 saniyeden uzun baretsiz”.</li><li>Olay, kanıt karesiyle panele ve bildirim kanallarına gönderilir.</li></ul></div></div><div class="sec2 rv"><h2>Kural tasarımı neden önemli?</h2><div class="c"><p>Her alan aynı kuralı gerektirmez: ofis koridorunda baret zorunlu değildir, pres alanında zorunludur. Süre eşiği, kişinin baretini takarken alarm üretilmesini önler. Kurallar İSG ekibiyle birlikte yazılmalıdır.</p></div></div><div class="sec2 rv"><h2>Kamera gereksinimleri</h2><div class="c"><p>Kişinin kadrajda yeterince büyük göründüğü, yukarıdan çapraz bakan kameralar en iyi sonucu verir. Gözlük ve eldiven gibi küçük ekipmanlar daha yakın kadraj ister. Ayrıntılar: kamera açısı neden önemli?</p></div></div><div class="sec2 rv"><h2>Alarmdan aksiyona</h2><div class="c"><p>Alarmlar vardiya amirine bildirim olarak gidebilir, sahadaki siren veya ekranı tetikleyebilir ya da turnike girişinde kapının açılmasını engelleyebilir. Raporlar bölge ve vardiya bazında trendleri gösterir.</p></div></div><div class="sec2 rv"><h2>Mahremiyet</h2><div class="c"><p>Sistem kişiyi değil ihlali tespit eder; yüz tanıma kullanılmaz. Ayrıntılar: KVKK rehberi .</p><p>Modül sayfaları: baret tespit sistemi ve KKD kontrol kamera sistemi .</p><p>Tesisiniz için doğru görüntü işleme kurgusunu keşif görüşmesinde birlikte çıkaralım.</p></div></div></div>
 <div class="wrap" style="margin-top:70px"><h2 class="h rv">Sık sorulan sorular</h2><div class="faq rv"><details><summary>Baret rengi önemli mi?</summary><p>Model farklı renkleri tanıyacak şekilde eğitilebilir; sahadaki baret tipleri pilot öncesinde kontrol edilir.</p></details><details><summary>Şapka veya kapüşon baret sanılır mı?</summary><p>Benzer görünümler yanlış sınıflandırmaya yol açabilir; bu durumlar pilotta ölçülür ve model sahaya göre kalibre edilir.</p></details></div></div>

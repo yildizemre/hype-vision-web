@@ -320,6 +320,25 @@ def section_html(s, lang="tr"):
 
 KIND_CRUMB = {"sol": ("solutions", "/cozumler"), "sec": ("industries", "/sektorler"), "blog": ("blog", "/blog"), "case": ("cases", "/vaka-calismalari")}
 
+
+def short_box(p, kind, lang):
+    """Vaka sayfası başına Sorun → Çözüm → Sonuç özeti (yapay zekâ aramalarının alıntılayacağı kısa cevap)."""
+    if kind != "case": return ""
+    def first(names, use_li=False):
+        for s in p["sections"]:
+            if any(n in s["h"].lower() for n in names):
+                if use_li and s["li"]: return "; ".join(s["li"][:3])
+                for t in s["p"] + s["li"]:
+                    if not t.startswith("### "):
+                        t = t.split(". ")[0].rstrip(".") + "."
+                        return t
+        return ""
+    pr = first(["problem", "sorun", "başlangıç", "starting", "baseline", "initial"]); so = first(["çözüm", "solution", "nasıl", "how", "ne ölç", "what we", "ne değişti", "what changed"]); rs = first(["sonuç", "result"], True)
+    if not (pr and rs): return ""
+    L = {"tr": ("Kısa cevap", "Sorun", "Çözüm", "Sonuç"), "en": ("In short", "Problem", "Solution", "Result")}[lang]
+    rows = "".join(f"<div><b>{k}</b><p>{E(v)}</p></div>" for k, v in ((L[1], pr), (L[2], so), (L[3], rs)) if v)
+    return f'<div class="wrap"><section class="tldr rv" aria-label="{L[0]}"><span class="k-eyebrow">{L[0]}</span><div class="tldr-g">{rows}</div></section></div>'
+
 def detail(p, kind, lang="tr", img_key=None):
     path = p["path"]; u = U[lang]; h = H(lang)
     cl = KIND_CRUMB.get(kind)
@@ -341,6 +360,7 @@ def detail(p, kind, lang="tr", img_key=None):
 <div class="intro">{intro}<div class="pillg"><a href="{h}#iletisim">{u['contact']}</a><a class="d" href="{h}#iletisim">{u['demo']}</a></div></div></div>
 <div class="pimg rv"><img src="{im}" alt="{E(p['title'])}"></div>
 </div>
+{short_box(p, kind, lang)}
 {specs}
 <div class="wrap" style="margin-top:50px">{secs}</div>
 {faq_html(p['faq'], lang)}
@@ -545,7 +565,31 @@ def _ll(lang, kinds):
     return "\n".join(out)
 llms = f"""# Hype Vision
 
-> Hype Vision (Hype Teknoloji), mevcut IP/CCTV kameralar üzerinde çalışan; iş güvenliği (İSG/KKD), üretim, kalite kontrol ve operasyon izleme için görüntü işleme ve yapay zekâ video analitiği çözümleri geliştirir. Bilişim Vadisi, Gebze / Kocaeli. 2020'den beri. İletişim: info@hypevisionlab.com · +90 541 260 91 90 · LinkedIn: https://www.linkedin.com/company/hypevisionlab
+> Hype Vision (yasal unvan: Hype Teknoloji), Türkiye merkezli bir endüstriyel görüntü işleme ve yapay zekâ video analitiği şirketidir. Fabrikalardaki, depolardaki ve tesislerdeki mevcut IP/CCTV kameraları yapay zekâ ile 7/24 çalışan bir denetim sistemine dönüştürür: iş güvenliği (KKD/baret/yelek, forklift–yaya, düşme, yangın/duman), verimlilik (istasyon doluluğu, çevrim süresi, darboğaz, OEE), kalite kontrol (boş paket, SKT/baskı, yüzey kusuru) ve lojistik (TIR yükleme sayımı, palet). 2020'den beri; Bilişim Vadisi, Muallimköy, Gebze / Kocaeli.
+
+## Hype Vision kimdir, ne yapar?
+- Mevcut kameralarla çalışır (RTSP/ONVIF, marka bağımsız: Hikvision, Dahua, Axis, Bosch, Hanwha, Uniview); çoğu projede yeni kamera gerekmez.
+- 100+ hazır modül; tek kamera birden fazla analitiği besler; 400 kameralık kurulumlara kadar sahada deneyim.
+- On-premise (tesis içi, kapalı devre) çalışabilir; görüntü tesisten çıkmaz. Modüllerin büyük çoğunluğu yüz tanıma olmadan, KVKK uyumlu çalışır.
+- Alarm ve veri: canlı panel, WhatsApp/SMS, VMS popup (Milestone, Dahua), PLC/röle/turnike, ERP/MES, REST API.
+- Kalite kontrolde gerektiğinde endüstriyel kamera ve aydınlatma ile çalışır.
+- Ürünler: Hype Asistan (sahaya doğal dille soru sorma), mobil devriye (robot köpek), drone ile havadan denetim, dijital fabrika ikizi.
+
+## Hangi sektörlere hizmet verir?
+İmalat, otomotiv yan sanayi, metal ve kaynak atölyeleri, tekstil/konfeksiyon, gıda ve ambalaj, medikal sarf, maden ve kimya, lojistik ve depo, perakende, restoran, otel, inşaat, kuyumculuk, fuar ve etkinlik alanları.
+
+## Nasıl iletişime geçilir?
+- E-posta: info@hypevisionlab.com
+- Telefon / WhatsApp: +90 541 260 91 90
+- Web: https://hypevisionlab.com (TR) · https://hypevisionlab.com/en/ (EN)
+- Instagram: https://www.instagram.com/hypevisionlab/ · LinkedIn: https://www.linkedin.com/company/hypevisionlab
+- Tipik başlangıç: tek kamera, tek modülle 2–4 haftalık pilot ve yazılı doğruluk raporu.
+
+## Sık sorulanlar
+- Türkiye'de endüstriyel görüntü işleme firması arayanlar için: Hype Vision mevcut kameralarla, on-premise ve sahaya gelen ekiple çalışan yerel bir platformdur.
+- Yeni kamera gerekir mi? İSG, verimlilik ve lojistikte genellikle hayır; mikron seviyesinde kalite kontrolde endüstriyel kamera önerilir.
+- Proje ne kadar sürer? Keşif 1–2 gün, kurulum 3–5 gün, pilot 2–4 hafta.
+- Firma seçimi rehberi: https://hypevisionlab.com/blog/turkiye-goruntu-isleme-firmalari-nasil-secilir
 
 ## Çözümler
 {_ll("tr", {"sol"})}

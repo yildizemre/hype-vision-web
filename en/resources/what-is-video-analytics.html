@@ -536,6 +536,11 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 .figs img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
 .figs figcaption{font-size:13px;color:var(--mute);padding:10px 14px}
 @media (max-width:700px){.figs{grid-template-columns:1fr}}
+.tldr{margin-top:22px;background:var(--bg2);border-radius:14px;padding:22px 24px;box-shadow:inset 0 0 0 1px var(--line)}
+.tldr-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:12px}
+.tldr-g b{font-size:13px;font-weight:700;color:var(--acc);text-transform:uppercase;letter-spacing:.06em}
+.tldr-g p{font-size:15px;color:#2F3237;margin-top:4px}
+@media (max-width:900px){.tldr-g{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -558,6 +563,7 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 <div class="intro"><p>A plain-language explanation of video analytics and what changed with deep learning.</p><p>Video analytics is software that automatically analyses camera footage and produces events, counts and metrics, so that important situations are noticed as they happen rather than found later in recordings.</p><div class="pillg"><a href="/en/#iletisim">Contact</a><a class="d" href="/en/#iletisim">Book a demo</a></div></div></div>
 <div class="pimg rv"><img src="/img/06-cnc-istasyon.webp" srcset="/img/06-cnc-istasyon-sm.webp 720w, /img/06-cnc-istasyon.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="What Is Video Analytics? From Motion Detection to AI Event Detection"></div>
 </div>
+
 
 <div class="wrap" style="margin-top:50px"><div class="sec2 rv"><h2>Motion detection vs AI analytics</h2><div class="c"><p>Older analytics mostly reacted to pixel changes: moving trees, shadows and lighting changes all triggered alerts. AI-based analytics recognises what is in the image — a person, a forklift, smoke — so rules can be meaningful (“a person in this zone after 22:00”) and false alarms drop.</p></div></div><div class="sec2 rv"><h2>Typical events</h2><div class="c"><ul class="ck"><li>Zone entry, dwell time and line crossing</li><li>Counting people, vehicles or objects</li><li>Missing PPE, falls, fire and smoke</li><li>Queue length and occupancy</li></ul></div></div><div class="sec2 rv"><h2>Where it is used</h2><div class="c"><p>In factories for workplace safety and production monitoring ; in warehouses for forklift safety and counting; in retail and banking for people counting and queue analytics .</p></div></div><div class="sec2 rv"><h2>Limitations</h2><div class="c"><p>Video analytics only sees what the camera sees. Angle, distance, lighting and occlusion set the limits, so each project should include camera evaluation and accuracy measurement on real footage.</p><p>Not sure what is feasible on your site? Send a few camera frames and your use case.</p></div></div><div class="sec2 rv"><h2>Frequently asked questions</h2><div class="c"><p>No. A VMS records and manages video; video analytics interprets it and generates events. They work side by side.</p><p>Related pages</p><p>Related solutions</p><p>More resources</p><p>What Are RTSP and ONVIF? Connecting IP Cameras to AI Video Analytics</p><p>The two standards that make it possible to add AI analytics to mixed-brand camera estates — explained without jargon.</p><p>Edge vs Cloud Video Analytics: What Is On-Premise Video Analytics?</p><p>Where should video be processed? A practical comparison for plants, warehouses and multi-site operations.</p><p>Planning AI Video Analytics Architecture for 50–100 Cameras</p><p>Going from one pilot camera to a site-wide deployment: the architecture decisions that drive cost and reliability.</p></div></div></div>
 <div class="wrap" style="margin-top:70px"><h2 class="h rv">Frequently asked questions</h2><div class="faq rv"><details><summary>Is video analytics the same as a VMS?</summary><p>No. A VMS records and manages video; video analytics interprets it and generates events. They work side by side.</p></details></div></div>

@@ -536,6 +536,11 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 .figs img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
 .figs figcaption{font-size:13px;color:var(--mute);padding:10px 14px}
 @media (max-width:700px){.figs{grid-template-columns:1fr}}
+.tldr{margin-top:22px;background:var(--bg2);border-radius:14px;padding:22px 24px;box-shadow:inset 0 0 0 1px var(--line)}
+.tldr-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:12px}
+.tldr-g b{font-size:13px;font-weight:700;color:var(--acc);text-transform:uppercase;letter-spacing:.06em}
+.tldr-g p{font-size:15px;color:#2F3237;margin-top:4px}
+@media (max-width:900px){.tldr-g{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -558,6 +563,7 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 <div class="intro"><p>Her hafta değişen sahalarda KKD uyumu ve yasak bölge alarmları.</p><p>İnşaat sahaları sürekli değişir, çok sayıda taşeron barındırır ve iş makineleri yayalarla aynı alanda hareket eder. Saha İSG ekibi her alanı gün boyu izleyemez.</p><p>Kamera analitiği sürekli KKD ve yasak bölge izlemesi sağlar; saha geliştikçe bölgeler yeniden çizilebilir.</p><div class="pillg"><a href="/#iletisim">İletişim</a><a class="d" href="/#iletisim">Demo talep et</a></div></div></div>
 <div class="pimg rv"><img src="/img/sektor/insaat.webp" srcset="/img/sektor/insaat-sm.webp 720w, /img/sektor/insaat.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="İnşaat sahaları için yapay zeka destekli İSG izleme"></div>
 </div>
+
 
 <div class="wrap" style="margin-top:50px"><div class="sec2 rv"><h2>Kullanım senaryoları</h2><div class="c"><div class="cards"><a class="cd" href="/kkd-kontrol-kamera-sistemi"><b>KKD Tespit ve Kontrol Sistemi</b><span>Saha girişlerinde ve çalışma alanlarında baret ve yelek uyumu.</span><i>İncele →</i></a><a class="cd" href="/yasakli-alan-ihlal-tespiti"><b>Yasaklı Alan İhlal Tespiti</b><span>Vinç, ekskavatör ve kenar çevresinde yasak bölgeler.</span><i>İncele →</i></a><a class="cd" href="/dusme-tespit-sistemi"><b>Düşme Tespit Sistemi</b><span>Düşme alarmı.</span><i>İncele →</i></a><a class="cd" href="/yangin-duman-tespiti"><b>Yangın ve Duman Tespiti</b><span>Depolama ve sıcak çalışma alanlarında erken uyarı.</span><i>İncele →</i></a></div></div></div><div class="sec2 rv"><h2>Dikkat edilmesi gerekenler</h2><div class="c"><ul class="ck"><li>Saha kameraları bağlantı planlaması gerektirebilir (4G/5G veya saha ağı); sahada edge işleme bant genişliği ihtiyacını azaltır.</li><li>Saha yerleşimi değiştikçe bölgeler gözden geçirilmelidir.</li></ul></div></div></div>
 <div class="wrap" style="margin-top:70px"><h2 class="h rv">Sık sorulan sorular</h2><div class="faq rv"><details><summary>Sabit ağ altyapısı olmayan sahalarda çalışır mı?</summary><p>Sahadaki kamera bağlantısına bağlıdır. Edge işleme bant genişliği ihtiyacını azaltır; bağlantı keşif aşamasında değerlendirilir.</p></details></div></div>

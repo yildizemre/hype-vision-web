@@ -536,6 +536,11 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 .figs img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
 .figs figcaption{font-size:13px;color:var(--mute);padding:10px 14px}
 @media (max-width:700px){.figs{grid-template-columns:1fr}}
+.tldr{margin-top:22px;background:var(--bg2);border-radius:14px;padding:22px 24px;box-shadow:inset 0 0 0 1px var(--line)}
+.tldr-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:12px}
+.tldr-g b{font-size:13px;font-weight:700;color:var(--acc);text-transform:uppercase;letter-spacing:.06em}
+.tldr-g p{font-size:15px;color:#2F3237;margin-top:4px}
+@media (max-width:900px){.tldr-g{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -558,6 +563,7 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 <div class="intro"><p>Anonim otomotiv yan sanayi tesisi — baret ve yelek ihlalleri anında tespit; manuel devriye yükü azaldı, dijital kanıt arşivi oluştu.</p><div class="pillg"><a href="/#iletisim">İletişim</a><a class="d" href="/#iletisim">Demo talep et</a></div></div></div>
 <div class="pimg rv"><img src="/img/det-kkd.webp" srcset="/img/det-kkd-sm.webp 720w, /img/det-kkd.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="Montaj hattında KKD ihlalleri: 7/24 otomatik denetim vakası"></div>
 </div>
+<div class="wrap"><section class="tldr rv" aria-label="Kısa cevap"><span class="k-eyebrow">Kısa cevap</span><div class="tldr-g"><div><b>Sorun</b><p>Tehlikeli bölge sınırında baret/yelek eksikliği en sık ihlal tipiydi.</p></div><div><b>Çözüm</b><p>8 mevcut kameraya İSG modülü bağlandı.</p></div><div><b>Sonuç</b><p>−%52.</p></div></div></section></div>
 
 <div class="wrap" style="margin-top:50px"><div class="sec2 rv"><h2>Raporlanan sonuçlar</h2><div class="c"><p>−%52</p><p>Günlük ihlal</p><p>−%40</p><p>Manuel tur</p><p>5 iş günü</p><p>Kurulum</p><p>&lt;2 sn</p><p>Alarm süresi</p><p>Otomotiv yan sanayi tedarikçisi olan bu tesis (anonim), montaj ve depo alanlarında İSG denetimini örneklemeli saha turları ve kağıt checklist ile yürütüyordu. Kritik ihlaller vardiya dışı saatlerde veya kör noktalarda kaçırılabiliyordu.</p></div></div><div class="sec2 rv"><h2>Sorun</h2><div class="c"><p>Tehlikeli bölge sınırında baret/yelek eksikliği en sık ihlal tipiydi. Denetim ekibi günde 2 tur atsa bile 7/24 kapsama mümkün değildi.</p><p>İş kazası sonrası “o an kamerada ne vardı?” sorusuna cevap bulmak saatler sürebiliyordu.</p></div></div><div class="sec2 rv"><h2>Çözüm</h2><div class="c"><p>8 mevcut kameraya İSG modülü bağlandı. Baret, yelek ve bölge ihlali modelleri tesis içi edge’de çalıştırıldı; görüntü dışarı çıkmadan analiz edildi.</p><p>İhlal anında İSG sorumlusuna panel alarmı ve VMS popup gitti. Olay kartında zaman damgası ve kanıt karesi otomatik arşivlendi.</p><p>İlk 6 haftada günlük ihlal kayıtları %52 azaldı — ekip davranış değişikliğini bilinçli olarak yorumlamıyoruz; ancak “görünmeyen ihlal” kavramı ortadan kalktı.</p></div></div><div class="sec2 rv"><h2>Operasyonel etki</h2><div class="c"><p>Manuel saha turu sıklığı %40 azaltıldı; ekip önleyici aksiyonlara zaman ayırdı.</p><p>Denetim dosyaları için dijital kanıt arşivi oluştu — Excel listeleri yerine olay bazlı görüntü.</p><p>* Müşteri adı ve tesis detayları gizlilik nedeniyle paylaşılmamaktadır. Sonuçlar tesis koşullarına göre değişebilir.</p><p>Mevcut IP kamera / NVR</p><p>RTSP / ONVIF akışı</p><p>Tesis içi edge cihaz</p><p>Yapay zeka + kurallar; görüntü yerelde</p><p>Olaylar</p><p>Zaman, kamera, bölge, kanıt karesi</p><p>Panel, alarm, API</p><p>Bildirim, röle, REST/webhook</p><p>İlgili çözümler</p><p>Diğer vaka çalışmaları</p></div></div></div>
 

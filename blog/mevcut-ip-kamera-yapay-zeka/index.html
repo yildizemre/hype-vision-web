@@ -536,6 +536,11 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 .figs img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
 .figs figcaption{font-size:13px;color:var(--mute);padding:10px 14px}
 @media (max-width:700px){.figs{grid-template-columns:1fr}}
+.tldr{margin-top:22px;background:var(--bg2);border-radius:14px;padding:22px 24px;box-shadow:inset 0 0 0 1px var(--line)}
+.tldr-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:12px}
+.tldr-g b{font-size:13px;font-weight:700;color:var(--acc);text-transform:uppercase;letter-spacing:.06em}
+.tldr-g p{font-size:15px;color:#2F3237;margin-top:4px}
+@media (max-width:900px){.tldr-g{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -558,6 +563,7 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 <div class="intro"><p>Yeni kamera yatırımı yapmadan önce okuyun: mevcut güvenlik kameralarınızın yapay zeka analitiği için uygun olup olmadığını nasıl anlarsınız?</p><p>Görüntü işleme projelerinde en sık sorulan soru: “Yeni kamera almamız gerekiyor mu?” Çoğu İSG, güvenlik ve verimlilik uygulamasında cevap hayır . Tesislerdeki güvenlik kameraları yapay zeka analitiği için çoğu zaman yeterlidir; sadece birkaç kriteri kontrol etmek gerekir.</p><div class="pillg"><a href="/#iletisim">İletişim</a><a class="d" href="/#iletisim">Demo talep et</a></div></div></div>
 <div class="pimg rv"><img src="/img/01-kusbakisi.webp" srcset="/img/01-kusbakisi-sm.webp 720w, /img/01-kusbakisi.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="Mevcut IP Kameralar Yapay Zeka İçin Yeterli mi? Çözünürlük, FPS ve Açı Rehberi"></div>
 </div>
+
 
 <div class="wrap" style="margin-top:50px"><div class="sec2 rv"><h2>Kontrol edilmesi gereken 6 kriter</h2><div class="c"><div class="tbl"><table><tr><th>Kriter</th><th>Genellikle yeterli</th><th>Dikkat</th></tr><tr><td>Protokol</td><td>RTSP veya ONVIF desteği</td><td>Sadece kayıt cihazına kapalı sistemler</td></tr><tr><td>Çözünürlük</td><td>1080p (2 MP) ve üzeri</td><td>Küçük nesne/uzak mesafe için 4 MP+</td></tr><tr><td>Kare hızı</td><td>10–25 FPS</td><td>Hızlı hareket (forklift, konveyör) için yüksek FPS</td></tr><tr><td>Açı</td><td>Hedefi yukarıdan-çapraz gören konum</td><td>Tam tepeden bakış KKD tespitini zorlaştırabilir</td></tr><tr><td>Işık / gece</td><td>İyi IR veya ortam aydınlatması</td><td>Ters ışık ve parlama</td></tr><tr><td>Ağ</td><td>Kamera ile analiz cihazı aynı yerel ağda</td><td>Bant genişliği ve VLAN ayarları</td></tr></table></div></div></div><div class="sec2 rv"><h2>Ne zaman yeni kamera gerekir?</h2><div class="c"><ul class="ck"><li>Mikron/milimetre seviyesinde yüzey kusuru aranan kalite istasyonları</li><li>Çok hızlı akan hatlarda hareket bulanıklığı (global shutter ihtiyacı)</li><li>Hedef alanı hiç görmeyen ya da çok uzaktan gören konumlar</li></ul></div></div><div class="sec2 rv"><h2>Hızlı uygunluk testi</h2><div class="c"><p>Keşif aşamasında her kameradan kısa örnek kayıt alınır ve model bu görüntüler üzerinde çalıştırılır. Böylece “kamera uygun mu?” sorusu tahminle değil ölçümle cevaplanır. Marka bağımsız entegrasyon için: ONVIF/RTSP yapay zeka entegrasyonu .</p><p>Kamera listenizi gönderin, hangi kameraların hangi modüle uygun olduğunu birlikte çıkaralım.</p></div></div></div>
 <div class="wrap" style="margin-top:70px"><h2 class="h rv">Sık sorulan sorular</h2><div class="faq rv"><details><summary>Hikvision, Dahua, Axis gibi farklı marka kameralar birlikte kullanılabilir mi?</summary><p>Evet. RTSP/ONVIF destekleyen kameralar marka fark etmeksizin aynı platformda analiz edilebilir.</p></details><details><summary>NVR/DVR üzerinden görüntü almak mümkün mü?</summary><p>Çoğu NVR kanal bazlı RTSP akışı sunar; bu akışlar analiz için kullanılabilir. Bazı durumlarda doğrudan kameraya bağlanmak gecikmeyi azaltır.</p></details></div></div>

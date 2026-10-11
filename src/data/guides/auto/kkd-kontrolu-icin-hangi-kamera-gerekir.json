@@ -1,0 +1,71 @@
+{
+ "slug": "kkd-kontrolu-icin-hangi-kamera-gerekir",
+ "title": "Fabrikada KKD kontrolü için hangi kamera gerekir?",
+ "metaDescription": "Baret, yelek, eldiven ve iş ayakkabısı tespiti için kamera çözünürlüğü, açı, mesafe ve ışık gereksinimleri; mevcut kameraların yeterli olup olmadığı.",
+ "excerpt": "Çoğu fabrikada mevcut 2–4 MP IP kameralar baret ve yelek tespiti için yeterlidir. Kişinin üst gövdesi net görünmeli, kamera çok tepeden (dik) bakmamal",
+ "isoDate": "2026-10-12",
+ "readMinutes": 4,
+ "keywords": [
+  "kkd kontrol kamerası",
+  "baret tespit kamerası",
+  "kkd tespiti için kamera"
+ ],
+ "blocks": [
+  {
+   "type": "p",
+   "text": "**Kısa cevap:** Çoğu fabrikada mevcut 2–4 MP IP kameralar baret ve yelek tespiti için yeterlidir. Kişinin üst gövdesi net görünmeli, kamera çok tepeden (dik) bakmamalıdır. Eldiven ve iş ayakkabısı gibi küçük donanımlar için kameranın giriş kapısına yakın ve daha alçak konumlanması önerilir."
+  },
+  {
+   "type": "h2",
+   "text": "Çözünürlük ve mesafe",
+   "id": "kkd-kontrolu-icin-ha1"
+  },
+  {
+   "type": "p",
+   "text": "Baret ve yelek için kişinin görüntüde yaklaşık 80–100 piksel yükseklikte görünmesi yeterlidir. 4 MP bir kamera tipik olarak 10–15 metreye kadar bu koşulu sağlar."
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Baret / yelek: 2–4 MP, 10–15 m",
+    "Eldiven / ayakkabı: 4 MP+, 3–6 m, giriş noktası",
+    "Yüz siperi / kaynak maskesi: yakın açı"
+   ]
+  },
+  {
+   "type": "h2",
+   "text": "Açı ve ışık",
+   "id": "kkd-kontrolu-icin-ha4"
+  },
+  {
+   "type": "p",
+   "text": "Tepeden dik bakan kameralarda baret görünür ama yelek ve eldiven zor seçilir; 30–45° açı idealdir. Arkadan gelen güçlü ışık (kapı, pencere) siluet etkisi yaratır, kamera yönü buna göre seçilmelidir."
+  },
+  {
+   "type": "h2",
+   "text": "Mevcut kameralar yeterli mi?",
+   "id": "kkd-kontrolu-icin-ha6"
+  },
+  {
+   "type": "p",
+   "text": "Keşif aşamasında her kameradan birkaç kare alınıp uygunluk değerlendirilir. Pratikte KKD projelerinin çoğu yeni kamera almadan, mevcut güvenlik kameralarıyla başlar. Örnek: [400 kamerada alan bazlı KKD denetimi](/vaka-calismalari/400-kamera-alan-bazli-kkd-denetimi)."
+  },
+  {
+   "type": "cta"
+  }
+ ],
+ "faq": [
+  {
+   "q": "Gece vardiyasında KKD tespiti çalışır mı?",
+   "a": "Alan yeterince aydınlatılmışsa evet. IR modda renk bilgisi kaybolduğu için yelek tespiti zorlaşabilir; keşifte değerlendirilir."
+  }
+ ],
+ "related": [
+  "/cozumler",
+  "/vaka-calismalari"
+ ],
+ "category": "Rehber",
+ "lang": "tr",
+ "metaTitle": "Fabrikada KKD kontrolü için hangi kamera gerekir?",
+ "solutions": []
+}

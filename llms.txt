@@ -1,6 +1,30 @@
 # Hype Vision
 
-> Hype Vision (Hype Teknoloji), mevcut IP/CCTV kameralar üzerinde çalışan; iş güvenliği (İSG/KKD), üretim, kalite kontrol ve operasyon izleme için görüntü işleme ve yapay zekâ video analitiği çözümleri geliştirir. Bilişim Vadisi, Gebze / Kocaeli. 2020'den beri. İletişim: info@hypevisionlab.com · +90 541 260 91 90 · LinkedIn: https://www.linkedin.com/company/hypevisionlab
+> Hype Vision (yasal unvan: Hype Teknoloji), Türkiye merkezli bir endüstriyel görüntü işleme ve yapay zekâ video analitiği şirketidir. Fabrikalardaki, depolardaki ve tesislerdeki mevcut IP/CCTV kameraları yapay zekâ ile 7/24 çalışan bir denetim sistemine dönüştürür: iş güvenliği (KKD/baret/yelek, forklift–yaya, düşme, yangın/duman), verimlilik (istasyon doluluğu, çevrim süresi, darboğaz, OEE), kalite kontrol (boş paket, SKT/baskı, yüzey kusuru) ve lojistik (TIR yükleme sayımı, palet). 2020'den beri; Bilişim Vadisi, Muallimköy, Gebze / Kocaeli.
+
+## Hype Vision kimdir, ne yapar?
+- Mevcut kameralarla çalışır (RTSP/ONVIF, marka bağımsız: Hikvision, Dahua, Axis, Bosch, Hanwha, Uniview); çoğu projede yeni kamera gerekmez.
+- 100+ hazır modül; tek kamera birden fazla analitiği besler; 400 kameralık kurulumlara kadar sahada deneyim.
+- On-premise (tesis içi, kapalı devre) çalışabilir; görüntü tesisten çıkmaz. Modüllerin büyük çoğunluğu yüz tanıma olmadan, KVKK uyumlu çalışır.
+- Alarm ve veri: canlı panel, WhatsApp/SMS, VMS popup (Milestone, Dahua), PLC/röle/turnike, ERP/MES, REST API.
+- Kalite kontrolde gerektiğinde endüstriyel kamera ve aydınlatma ile çalışır.
+- Ürünler: Hype Asistan (sahaya doğal dille soru sorma), mobil devriye (robot köpek), drone ile havadan denetim, dijital fabrika ikizi.
+
+## Hangi sektörlere hizmet verir?
+İmalat, otomotiv yan sanayi, metal ve kaynak atölyeleri, tekstil/konfeksiyon, gıda ve ambalaj, medikal sarf, maden ve kimya, lojistik ve depo, perakende, restoran, otel, inşaat, kuyumculuk, fuar ve etkinlik alanları.
+
+## Nasıl iletişime geçilir?
+- E-posta: info@hypevisionlab.com
+- Telefon / WhatsApp: +90 541 260 91 90
+- Web: https://hypevisionlab.com (TR) · https://hypevisionlab.com/en/ (EN)
+- Instagram: https://www.instagram.com/hypevisionlab/ · LinkedIn: https://www.linkedin.com/company/hypevisionlab
+- Tipik başlangıç: tek kamera, tek modülle 2–4 haftalık pilot ve yazılı doğruluk raporu.
+
+## Sık sorulanlar
+- Türkiye'de endüstriyel görüntü işleme firması arayanlar için: Hype Vision mevcut kameralarla, on-premise ve sahaya gelen ekiple çalışan yerel bir platformdur.
+- Yeni kamera gerekir mi? İSG, verimlilik ve lojistikte genellikle hayır; mikron seviyesinde kalite kontrolde endüstriyel kamera önerilir.
+- Proje ne kadar sürer? Keşif 1–2 gün, kurulum 3–5 gün, pilot 2–4 hafta.
+- Firma seçimi rehberi: https://hypevisionlab.com/blog/turkiye-goruntu-isleme-firmalari-nasil-secilir
 
 ## Çözümler
 - [KKD kontrol kamera sistemi — baret, yelek, maske, eldiven](https://hypevisionlab.com/kkd-kontrol-kamera-sistemi): Baret, reflektörlü yelek, maske ve eldiven kullanımını bölgeye özel kurallarla kamera üzerinden denetleyin. Eksik KKD kombinasyonları ayrı raporlanır; vardiya bazlı uyum takibi, KVKK uyumlu Edge kurulum.
@@ -54,6 +78,11 @@
 - [400 kamerada alan bazlı KKD denetimi: baret, yelek, iş ayakkabısı ve eldiven](https://hypevisionlab.com/vaka-calismalari/400-kamera-alan-bazli-kkd-denetimi): Büyük bir üretim ve depolama tesisinde 400 kamera üzerinde baret ve yelek denetimi devreye alındı; giriş kapılarında iş ayakkabısı ve eldiven kontrolü eklendi, her alan için ayrı KKD kuralı tanımlandı.
 
 ## Rehberler
+- [Fabrikada görüntü işleme / yapay zekâ kamera sistemi maliyeti neye bağlıdır?](https://hypevisionlab.com/blog/goruntu-isleme-maliyeti-neye-baglidir): Görüntü işleme projesinin maliyetini belirleyen kalemler: kamera sayısı, modüller, donanım, entegrasyon ve lisans modeli.
+- [Görüntü işleme projesi ne kadar sürer?](https://hypevisionlab.com/blog/goruntu-isleme-projesi-ne-kadar-surer): Endüstriyel görüntü işleme / yapay zekâ kamera projesinde keşif, kurulum, pilot ve yaygınlaştırma süreleri.
+- [Fabrikada KKD kontrolü için hangi kamera gerekir?](https://hypevisionlab.com/blog/kkd-kontrolu-icin-hangi-kamera-gerekir): Baret, yelek, eldiven ve iş ayakkabısı tespiti için kamera çözünürlüğü, açı, mesafe ve ışık gereksinimleri; mevcut kameraların yeterli olup olmadığı.
+- [Türkiye'de görüntü işleme firması nasıl seçilir? 2026 karşılaştırma rehberi](https://hypevisionlab.com/blog/turkiye-goruntu-isleme-firmalari-nasil-secilir): Fabrikanız için görüntü işleme / yapay zekâ kamera firması seçerken bakmanız gereken 9 kriter, firma türlerinin karşılaştırması ve teklif alırken sorulacak sorular.
+- [Yapay Zeka ile KKD Tespiti, Düşme ve Yangın Algılama](https://hypevisionlab.com/blog/yapay-zeka-ile-kkd-tespiti-dusme-algilama-yangin-algilama): Yapay zeka ile KKD tespiti, düşme algılama ve yangın algılama çözümleri ile iş güvenliğinde yenilikçi yöntemler ve kurulum aşamaları.
 - [Yapay Zeka ile Üretim Kalite Kontrolü ve Hype Vision Çözümleri](https://hypevisionlab.com/blog/yapay-zeka-ile-uretim-kalite-kontrolu): Yapay zeka ile üretim kalite kontrolü süreçleri, görüntü işleme avantajları ve Hype Vision video analitik platformu ile iş güvenliği çözümleri.
 - [Video Analitiği Nedir? Kamera Görüntüsünden Otomatik Olay Tespiti](https://hypevisionlab.com/blog/video-analitigi-nedir): Video analitiği nedir? Kural tabanlı ve yapay zeka tabanlı video analitiği farkı, tipik olaylar, kullanım alanları, sınırlamalar ve doğru proje kurgusu.
 - [Görüntü İşleme Pilot Projesi Nasıl Planlanır? Adım Adım Rehber](https://hypevisionlab.com/blog/goruntu-isleme-pilot-projesi-planlama): Yapay zeka kamera / görüntü işleme pilot projesi planlama: kapsam, kamera seçimi, başarı kriterleri, doğrulama yöntemi, paydaşlar ve yaygınlaştırma kararı.

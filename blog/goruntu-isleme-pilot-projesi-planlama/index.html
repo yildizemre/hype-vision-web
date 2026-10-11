@@ -536,6 +536,11 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 .figs img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
 .figs figcaption{font-size:13px;color:var(--mute);padding:10px 14px}
 @media (max-width:700px){.figs{grid-template-columns:1fr}}
+.tldr{margin-top:22px;background:var(--bg2);border-radius:14px;padding:22px 24px;box-shadow:inset 0 0 0 1px var(--line)}
+.tldr-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:12px}
+.tldr-g b{font-size:13px;font-weight:700;color:var(--acc);text-transform:uppercase;letter-spacing:.06em}
+.tldr-g p{font-size:15px;color:#2F3237;margin-top:4px}
+@media (max-width:900px){.tldr-g{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -558,6 +563,7 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 <div class="intro"><p>Pilotun “güzel bir demo”da kalmaması için kapsamdan başarı kriterine kadar planlanması gerekenleri sıraladık.</p><p>Görüntü işleme projelerinin çoğu bir pilotla başlar. İyi kurgulanmış bir pilot, yaygınlaştırma kararını veriyle verir; kötü kurgulanmış bir pilot ise “güzel demo” olarak kalır.</p><div class="pillg"><a href="/#iletisim">İletişim</a><a class="d" href="/#iletisim">Demo talep et</a></div></div></div>
 <div class="pimg rv"><img src="/img/06-cnc-istasyon.webp" srcset="/img/06-cnc-istasyon-sm.webp 720w, /img/06-cnc-istasyon.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="Görüntü İşleme Pilot Projesi Nasıl Planlanır? Adım Adım Rehber"></div>
 </div>
+
 
 <div class="wrap" style="margin-top:50px"><div class="sec2 rv"><h2>1. Kapsamı daraltın</h2><div class="c"><p>Bir veya iki senaryo ve az sayıda kamera seçin. Senaryonun sahibi (İSG, üretim, kalite) belli olmalı ve sonucu önemsemelidir.</p></div></div><div class="sec2 rv"><h2>2. Başarı kriterlerini önceden yazın</h2><div class="c"><ul class="ck"><li>Ölçülecek olaylar ve tanımları (ör. “baretsiz kişi bölgede 5 saniyeden fazla”)</li><li>Kabul edilebilir yanlış alarm ve kaçırılan olay seviyesi</li><li>Alarmın kime, hangi kanaldan, ne kadar sürede ulaşacağı</li><li>Operasyonel etki göstergesi (ör. ihlal sayısındaki değişim)</li></ul></div></div><div class="sec2 rv"><h2>3. Kameraları önceden değerlendirin</h2><div class="c"><p>Pilot başlamadan aday kameralardan örnek görüntü alınır. Uygun olmayan açılar baştan elenir veya düzeltilir. Bkz. kamera değerlendirmesi .</p></div></div><div class="sec2 rv"><h2>4. Doğrulama yöntemini belirleyin</h2><div class="c"><p>Sonuçlar, insan tarafından işaretlenmiş görüntülerle karşılaştırılmalı ve kamera bazında raporlanmalıdır. Ayrıntılar: doğruluk nasıl ölçülür?</p></div></div><div class="sec2 rv"><h2>5. Paydaşları erken dahil edin</h2><div class="c"><p>BT (ağ, güvenlik), İSG, üretim, insan kaynakları ve gerekiyorsa hukuk/KVKK sorumlusu pilot başlamadan bilgilendirilmelidir.</p></div></div><div class="sec2 rv"><h2>6. Yaygınlaştırma kararını veriyle verin</h2><div class="c"><p>Pilot raporu; sonuçları, sınırlamaları, gereken kamera değişikliklerini ve yaygınlaştırma maliyetini içermelidir. Hype Vision’ın pilot akışını pilot sayfasında anlattık.</p><p>Tesisiniz için doğru görüntü işleme kurgusunu keşif görüşmesinde birlikte çıkaralım.</p></div></div></div>
 <div class="wrap" style="margin-top:70px"><h2 class="h rv">Sık sorulan sorular</h2><div class="faq rv"><details><summary>Pilot ne kadar sürmeli?</summary><p>Senaryonun olay sıklığına bağlıdır: anlamlı bir ölçüm için yeterli sayıda olayın gözlenebileceği kadar. Nadir olaylar daha uzun süre gerektirir.</p></details><details><summary>Pilot için kaç kamera yeterli?</summary><p>Senaryoyu temsil eden farklı koşulları (ışık, açı, yoğunluk) kapsayacak kadar; genellikle az sayıda iyi seçilmiş kamera.</p></details></div></div>

@@ -536,6 +536,11 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 .figs img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
 .figs figcaption{font-size:13px;color:var(--mute);padding:10px 14px}
 @media (max-width:700px){.figs{grid-template-columns:1fr}}
+.tldr{margin-top:22px;background:var(--bg2);border-radius:14px;padding:22px 24px;box-shadow:inset 0 0 0 1px var(--line)}
+.tldr-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:12px}
+.tldr-g b{font-size:13px;font-weight:700;color:var(--acc);text-transform:uppercase;letter-spacing:.06em}
+.tldr-g p{font-size:15px;color:#2F3237;margin-top:4px}
+@media (max-width:900px){.tldr-g{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -558,6 +563,7 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 <div class="intro"><p>Anonymous automotive supplier — hard hat and vest violations detected instantly; manual patrol load reduced and a digital evidence archive created.</p><div class="pillg"><a href="/en/#iletisim">Contact</a><a class="d" href="/en/#iletisim">Book a demo</a></div></div></div>
 <div class="pimg rv"><img src="/img/det-kkd.webp" srcset="/img/det-kkd-sm.webp 720w, /img/det-kkd.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="PPE violations on an assembly line: a 24/7 automated inspection case"></div>
 </div>
+<div class="wrap"><section class="tldr rv" aria-label="In short"><span class="k-eyebrow">In short</span><div class="tldr-g"><div><b>Problem</b><p>Missing hard hat/vest at hazardous zone boundaries was the most common violation type.</p></div><div><b>Solution</b><p>The HSE module was connected to 8 existing cameras.</p></div><div><b>Result</b><p>−52%.</p></div></div></section></div>
 
 <div class="wrap" style="margin-top:50px"><div class="sec2 rv"><h2>Reported results</h2><div class="c"><p>−52%</p><p>Daily violations</p><p>−40%</p><p>Manual rounds</p><p>5 business days</p><p>Installation</p><p>&lt;2 sec</p><p>Alarm latency</p><p>This facility (anonymous), an automotive supplier, ran HSE inspections in assembly and warehouse areas through sample floor tours and paper checklists. Critical violations could be missed after hours or in blind spots.</p></div></div><div class="sec2 rv"><h2>Problem</h2><div class="c"><p>Missing hard hat/vest at hazardous zone boundaries was the most common violation type. Even with two daily rounds, 24/7 coverage was impossible.</p><p>After an incident, answering “what was on camera at that moment?” could take hours.</p></div></div><div class="sec2 rv"><h2>Solution</h2><div class="c"><p>The HSE module was connected to 8 existing cameras. Hard hat, vest, and zone violation models ran on on-site Edge; video was analyzed without leaving the facility.</p><p>On violation, the HSE officer received a dashboard alarm and VMS popup. The event card automatically archived a timestamp and evidence frame.</p><p>Daily violation records fell 52% in the first 6 weeks — we do not attribute this solely to behavior change; however, the concept of “invisible violations” disappeared.</p></div></div><div class="sec2 rv"><h2>Operational impact</h2><div class="c"><p>Manual floor tour frequency was reduced by 40%; the team had time for preventive actions.</p><p>A digital evidence archive formed for audit files — event-based images instead of Excel lists.</p><p>* Customer name and facility details are not shared for confidentiality. Results may vary by facility conditions.</p><p>Existing IP cameras / NVR</p><p>RTSP / ONVIF streams</p><p>Edge device on-site</p><p>AI models + rules; video stays local</p><p>Events</p><p>Time, camera, zone, evidence frame</p><p>Dashboard, alerts, API</p><p>Notifications, relays, REST/webhook</p><p>Related solutions</p><p>Other case studies</p></div></div><div class="sec2 rv"><h2>Start with the cameras you already have</h2><div class="c"><p>Send us a few frames from your cameras and the problem you want to solve. We will tell you honestly what is feasible.</p></div></div></div>
 

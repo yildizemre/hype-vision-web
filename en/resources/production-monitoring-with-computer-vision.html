@@ -536,6 +536,11 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 .figs img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
 .figs figcaption{font-size:13px;color:var(--mute);padding:10px 14px}
 @media (max-width:700px){.figs{grid-template-columns:1fr}}
+.tldr{margin-top:22px;background:var(--bg2);border-radius:14px;padding:22px 24px;box-shadow:inset 0 0 0 1px var(--line)}
+.tldr-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:12px}
+.tldr-g b{font-size:13px;font-weight:700;color:var(--acc);text-transform:uppercase;letter-spacing:.06em}
+.tldr-g p{font-size:15px;color:#2F3237;margin-top:4px}
+@media (max-width:900px){.tldr-g{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -558,6 +563,7 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 <div class="intro"><p>Camera-based production monitoring for lines where manual logs miss the short stops.</p><p>OEE = Availability × Performance × Quality. Manual data collection usually captures long stops but misses short ones, which makes performance losses invisible. Cameras can measure what actually happens at each station.</p><div class="pillg"><a href="/en/#iletisim">Contact</a><a class="d" href="/en/#iletisim">Book a demo</a></div></div></div>
 <div class="pimg rv"><img src="/img/det-hat.webp" srcset="/img/det-hat-sm.webp 720w, /img/det-hat.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="Production Monitoring with Computer Vision: Downtime, Cycle Time and OEE"></div>
 </div>
+
 
 <div class="wrap" style="margin-top:50px"><div class="sec2 rv"><h2>What cameras can measure</h2><div class="c"><ul class="ck"><li>Running and stopped intervals, including micro-stops</li><li>Cycle time per unit or batch</li><li>Output counts per station and shift</li><li>Station staffed or unattended</li></ul></div></div><div class="sec2 rv"><h2>Older machines without PLC data</h2><div class="c"><p>Where machines have no accessible data interface, camera-based measurement provides running state and output without wiring or retrofitting controllers.</p></div></div><div class="sec2 rv"><h2>Feeding OEE</h2><div class="c"><p>Camera data covers availability and performance directly. Quality usually comes from inspection results or existing systems and can be combined via API.</p><p>Solution pages: production line monitoring , product counting and workstation analytics .</p><p>Not sure what is feasible on your site? Send a few camera frames and your use case.</p></div></div><div class="sec2 rv"><h2>Frequently asked questions</h2><div class="c"><p>Cameras show when and where a stop happened; reason codes may still come from operators or existing systems.</p><p>Related pages</p><p>Related solutions</p><p>More resources</p><p>What Are RTSP and ONVIF? Connecting IP Cameras to AI Video Analytics</p><p>The two standards that make it possible to add AI analytics to mixed-brand camera estates — explained without jargon.</p><p>Edge vs Cloud Video Analytics: What Is On-Premise Video Analytics?</p><p>Where should video be processed? A practical comparison for plants, warehouses and multi-site operations.</p><p>Planning AI Video Analytics Architecture for 50–100 Cameras</p><p>Going from one pilot camera to a site-wide deployment: the architecture decisions that drive cost and reliability.</p></div></div></div>
 <div class="wrap" style="margin-top:70px"><h2 class="h rv">Frequently asked questions</h2><div class="faq rv"><details><summary>Do stop reasons come from the cameras?</summary><p>Cameras show when and where a stop happened; reason codes may still come from operators or existing systems.</p></details></div></div>

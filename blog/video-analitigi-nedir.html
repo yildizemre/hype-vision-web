@@ -536,6 +536,11 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 .figs img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
 .figs figcaption{font-size:13px;color:var(--mute);padding:10px 14px}
 @media (max-width:700px){.figs{grid-template-columns:1fr}}
+.tldr{margin-top:22px;background:var(--bg2);border-radius:14px;padding:22px 24px;box-shadow:inset 0 0 0 1px var(--line)}
+.tldr-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:12px}
+.tldr-g b{font-size:13px;font-weight:700;color:var(--acc);text-transform:uppercase;letter-spacing:.06em}
+.tldr-g p{font-size:15px;color:#2F3237;margin-top:4px}
+@media (max-width:900px){.tldr-g{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -558,6 +563,7 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 <div class="intro"><p>Video analitiğinin ne olduğunu, klasik hareket algılamadan farkını ve sahada nasıl kullanıldığını açıkladık.</p><p>Video analitiği , kamera görüntüsünün yazılım tarafından otomatik olarak analiz edilip olay, sayım ve metrik üretilmesidir. Amaç, kayıtları sonradan izlemek yerine önemli olanı anında fark etmektir.</p><div class="pillg"><a href="/#iletisim">İletişim</a><a class="d" href="/#iletisim">Demo talep et</a></div></div></div>
 <div class="pimg rv"><img src="/img/06-cnc-istasyon.webp" srcset="/img/06-cnc-istasyon-sm.webp 720w, /img/06-cnc-istasyon.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="Video Analitiği Nedir? Kamera Görüntüsünden Otomatik Olay Tespiti"></div>
 </div>
+
 
 <div class="wrap" style="margin-top:50px"><div class="sec2 rv"><h2>Klasik video analitiği ile yapay zeka farkı</h2><div class="c"><p>Eski nesil analitikler çoğunlukla piksel değişimine (hareket algılama) dayanır; ağaç sallanması, gölge veya ışık değişimi de alarm üretir. Yapay zeka tabanlı analitik ise görüntüdeki nesneyi tanır: kişi mi, forklift mi, duman mı? Böylece kurallar “bu bölgede kişi var” gibi anlamlı hale gelir ve yanlış alarm azalır.</p></div></div><div class="sec2 rv"><h2>Tipik olaylar</h2><div class="c"><ul class="ck"><li>Bölgeye giriş, bölgede bekleme, çizgi geçişi</li><li>Kişi, araç veya nesne sayımı</li><li>KKD eksikliği, düşme, yangın/duman</li><li>Kuyruk uzunluğu ve yoğunluk</li></ul></div></div><div class="sec2 rv"><h2>Nerelerde kullanılır?</h2><div class="c"><p>Fabrikalarda iş güvenliği ve üretim takibi ; depolarda forklift güvenliği ve sayım; perakende ve bankalarda kişi sayma ve kuyruk analizi .</p></div></div><div class="sec2 rv"><h2>Sınırlamalar</h2><div class="c"><p>Video analitiği kameranın gördüğüyle sınırlıdır. Açı, mesafe, ışık ve görüş engelleri performansı belirler; bu yüzden her projede kamera açısı ve kendi görüntüleriniz üzerinde doğruluk ölçümü yapılmalıdır.</p><p>Tesisiniz için doğru görüntü işleme kurgusunu keşif görüşmesinde birlikte çıkaralım.</p></div></div></div>
 <div class="wrap" style="margin-top:70px"><h2 class="h rv">Sık sorulan sorular</h2><div class="faq rv"><details><summary>Video analitiği ile VMS aynı şey mi?</summary><p>Hayır. VMS görüntüyü kaydeder ve yönetir; video analitiği görüntüyü yorumlayıp olay üretir. İkisi birlikte çalışabilir.</p></details><details><summary>Akıllı kamera almak gerekir mi?</summary><p>Gerekmez. Analitik, mevcut kameraların akışlarını okuyan ayrı bir sunucu veya edge cihazda çalışabilir.</p></details></div></div>

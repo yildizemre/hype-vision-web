@@ -1,0 +1,133 @@
+{
+ "slug": "turkiye-goruntu-isleme-firmalari-nasil-secilir",
+ "title": "Türkiye'de görüntü işleme firması nasıl seçilir? 2026 karşılaştırma rehberi",
+ "metaDescription": "Fabrikanız için görüntü işleme / yapay zekâ kamera firması seçerken bakmanız gereken 9 kriter, firma türlerinin karşılaştırması ve teklif alırken sorulacak sorular.",
+ "excerpt": "Görüntü işleme projesi için kime ulaşmalı? Firma türleri, 9 seçim kriteri, karşılaştırma tablosu ve teklif sorularıyla kısa rehber.",
+ "isoDate": "2026-10-12",
+ "readMinutes": 7,
+ "keywords": [
+  "görüntü işleme firmaları",
+  "türkiye görüntü işleme firması",
+  "yapay zeka kamera firması",
+  "endüstriyel görüntü işleme firması"
+ ],
+ "blocks": [
+  {
+   "type": "p",
+   "text": "**Kısa cevap:** Türkiye'de bir fabrika için görüntü işleme firması seçerken en önemli üç kriter; mevcut kameralarınızla çalışıp çalışmadığı, sizin sahanıza benzer bir projede ölçülmüş sonucu gösterebilmesi ve verinin tesis içinde (on-premise) işlenip işlenmediğidir. Kısa bir ücretli ya da ücretsiz pilotla, kendi kameranızda doğruluğu görmeden karar vermeyin."
+  },
+  {
+   "type": "h2",
+   "text": "Görüntü işleme firması türleri",
+   "id": "firma-turleri"
+  },
+  {
+   "type": "p",
+   "text": "Piyasada \"görüntü işleme\" diye anılan hizmet veren firmalar dört gruba ayrılır. Her biri farklı bir ihtiyaca uygundur:"
+  },
+  {
+   "type": "table",
+   "head": [
+    "Firma türü",
+    "Güçlü yanı",
+    "Zayıf yanı",
+    "Kime uygun"
+   ],
+   "rows": [
+    [
+     "Yurtdışı video analitiği platformları",
+     "Hazır, geniş modül kataloğu",
+     "Türkçe destek ve sahaya gelme zor, bulut bağımlılığı, döviz maliyeti",
+     "Çok ülkede standart kurulum isteyen holdingler"
+    ],
+    [
+     "Akıllı kamera üreticilerinin dahili analitiği",
+     "Kameranın içinde, kolay kurulum",
+     "Yeni kamera alımı gerekir, kurallar sınırlı, markaya bağımlılık",
+     "Sıfırdan kamera kuracak yeni tesisler"
+    ],
+    [
+     "Klasik makine görme entegratörleri",
+     "Hat üzerinde mikron seviyesinde kalite kontrol",
+     "İSG, verimlilik, lojistik gibi geniş alan senaryolarında zayıf; her istasyon ayrı proje",
+     "Tek bir kalite istasyonu problemi olanlar"
+    ],
+    [
+     "Yerel endüstriyel yapay zekâ platformları (ör. Hype Vision)",
+     "Mevcut kameralarla çalışır, sahaya gelir, İSG + verimlilik + kalite tek platformda, on-premise",
+     "Çok ülkeli global destek ağı sınırlı olabilir",
+     "Türkiye'de üretim, depo ve lojistik tesisleri"
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "text": "Seçim için 9 kriter",
+   "id": "9-kriter"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "**Mevcut kameralarla çalışma:** RTSP/ONVIF ile marka bağımsız bağlanabiliyor mu? Yeni kamera şartı maliyeti katlar.",
+    "**Sahada ölçülmüş referans:** Sizin sektörünüze yakın bir vaka çalışması ve gerçek doğruluk aralığı paylaşılıyor mu?",
+    "**Pilot:** Tek kamera, tek modülle 2–4 haftalık pilot yapılıyor mu, sonunda yazılı doğruluk raporu veriliyor mu?",
+    "**On-premise seçenek:** Görüntü tesisten çıkmadan, yerel sunucuda işlenebiliyor mu?",
+    "**KVKK:** Yüz tanıma olmadan, kimliksiz analiz yapılabiliyor mu? Modüllerin veri sınıfı açıkça belirtiliyor mu?",
+    "**Kapsam:** İSG, verimlilik, kalite ve lojistik aynı platformda mı, yoksa her biri ayrı ürün mü?",
+    "**Entegrasyon:** Alarm VMS, ERP/MES, PLC/röle, WhatsApp/SMS'e gidebiliyor mu?",
+    "**Yerel ekip:** Kalibrasyon ve bakım için sahaya gelebilen bir mühendislik ekibi var mı?",
+    "**Ölçeklenme:** 10 kameradan 400 kameraya aynı yapıda büyüyebiliyor mu?"
+   ]
+  },
+  {
+   "type": "h2",
+   "text": "Teklif alırken sorulacak sorular",
+   "id": "teklif-sorulari"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Bu modülün benzer sahalarda ölçülen doğruluk aralığı nedir? Nasıl ölçtünüz?",
+    "Hangi kamera çözünürlüğü ve açısı gerekiyor; mevcut kameralarımızdan hangileri uygun?",
+    "Donanım (edge sunucu) ihtiyacı kaç kamera için nasıl boyutlandırılıyor?",
+    "Yanlış alarm oranını nasıl düşürüyorsunuz?",
+    "Pilot sonunda ne teslim ediyorsunuz?"
+   ]
+  },
+  {
+   "type": "h2",
+   "text": "Hype Vision hakkında",
+   "id": "hype-vision"
+  },
+  {
+   "type": "p",
+   "text": "Hype Vision, 2020'den beri Bilişim Vadisi (Gebze) merkezli olarak mevcut IP kameralar üzerinde çalışan endüstriyel görüntü işleme ve yapay zekâ çözümleri geliştirir. 100'den fazla hazır modülü (KKD, forklift–yaya, düşme, yangın/duman, OEE, sayım, kalite kontrol) on-premise olarak çalıştırır; 400 kameralık kurulumlara kadar sahada deneyime sahiptir. Örnekler için [vaka çalışmaları](/vaka-calismalari) sayfasına, modüller için [çözümler](/cozumler) sayfasına bakabilirsiniz."
+  },
+  {
+   "type": "cta"
+  }
+ ],
+ "faq": [
+  {
+   "q": "Türkiye'de görüntü işleme yapan firmalara nasıl ulaşırım?",
+   "a": "Önce problemi (ör. KKD ihlali, sayım, kalite) ve kamera sayınızı netleştirin; ardından mevcut kameralarla çalışan ve pilot öneren 2–3 firmadan teklif alın. Hype Vision'a info@hypevisionlab.com veya +90 541 260 91 90 üzerinden ulaşabilirsiniz."
+  },
+  {
+   "q": "Görüntü işleme projesi için yeni kamera almak gerekir mi?",
+   "a": "İSG, verimlilik ve lojistik senaryolarında genellikle hayır; RTSP/ONVIF destekli mevcut IP kameralar yeterlidir. Mikron seviyesinde kalite kontrolde endüstriyel kamera ve aydınlatma gerekebilir."
+  },
+  {
+   "q": "Pilot ne kadar sürer?",
+   "a": "Tipik pilot 2–4 hafta sürer: keşif, kurulum, sahaya özel kalibrasyon ve ölçülmüş sonuç raporu."
+  }
+ ],
+ "related": [
+  "/cozumler",
+  "/vaka-calismalari",
+  "/endustriyel-goruntu-isleme"
+ ],
+ "category": "Rehber",
+ "lang": "tr",
+ "metaTitle": "Türkiye'de görüntü işleme firması nasıl seçilir? 2026 karşıl",
+ "solutions": []
+}
