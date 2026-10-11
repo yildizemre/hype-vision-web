@@ -469,6 +469,16 @@ main,section,footer{max-width:100vw;overflow-x:clip}
 @media (max-width:960px){.conv{height:600px}.side{max-height:none}}
 .app,.conv,.msgs{contain:layout}
 html{overflow-anchor:none}
+
+/* sohbet butonu */
+.hvchat{position:fixed;right:20px;bottom:20px;z-index:70;display:flex;align-items:center;gap:12px;padding:8px 18px 8px 8px;border-radius:99px;background:rgba(29,30,32,.92);color:#fff;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 16px 40px -12px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.08);transition:transform .25s,box-shadow .25s}
+.hvchat:hover{transform:translateY(-2px);box-shadow:0 22px 50px -12px rgba(0,0,0,.5),inset 0 0 0 1px rgba(255,255,255,.12)}
+.hvchat-ic{position:relative;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--pill);color:var(--pillInk)}
+.hvchat-ic i{position:absolute;right:1px;top:1px;width:10px;height:10px;border-radius:50%;background:#2BB673;box-shadow:0 0 0 2px #1D1E20}
+.hvchat-tx b{display:block;font-size:14px;font-weight:600;line-height:1.2}
+.hvchat-tx small{display:block;font-size:11px;color:#A3A6AA}
+@media (max-width:760px){.hvchat{right:14px;bottom:14px;padding:6px}.hvchat-tx{display:none}.hvchat-ic{width:50px;height:50px}}
+body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 </style>
 <style>.pg{padding-top:130px}
 .crumb{font-size:13px;color:var(--mute);display:flex;gap:8px;flex-wrap:wrap}
@@ -634,6 +644,7 @@ html{overflow-anchor:none}
 <div class="pillg"><a href="/en/#iletisim">Contact</a><a class="d" href="/en/#iletisim">Book a demo</a></div></div></div></div>
 </main>
 <footer class="hvf">
+<a aria-label="WhatsApp" class="hvchat" href="https://wa.me/905412609190?text=Hello%2C%20I%27d%20like%20to%20get%20more%20information." id="hvChat" rel="noopener" target="_blank"><span class="hvchat-ic"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20"><path d="M21 12a8.5 8.5 0 0 1-12.3 7.6L4 21l1.4-4.5A8.5 8.5 0 1 1 21 12z"></path><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01" stroke-width="2.6"></path></svg><i></i></span><span class="hvchat-tx"><b>Chat with us</b><small>We usually reply within minutes</small></span></a>
 <div class="wrap">
 <div class="fg">
 <div class="fb1"><img alt="Hype Vision" height="27" src="/img/logo-white.png" width="150"/>

@@ -28,6 +28,7 @@ UI = {  # build.py şablon metinleri
 }
 
 T = {
+"Bize yazın": "Chat with us", "Genelde birkaç dakikada dönüyoruz": "We usually reply within minutes",
 "Katalog": "Catalogue", "Ürün kataloğu (PDF)": "Product catalogue (PDF)",
 "Giriş yap": "Log in", "Hakkımızda": "About us", "Vakalar": "Case studies",
 "Panel": "Dashboard", "Panel girişi": "Dashboard login", "Panel girişi (Dashboard)": "Dashboard login", "Sahadan son videolar": "Latest videos from the field", "5 Temmuz 2026": "5 Jul 2026",

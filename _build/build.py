@@ -165,7 +165,8 @@ def build_en_home():
             if norm(b) == "/": a["href"] = "/en/"; continue
             if b.startswith("/#"): a["href"] = "/en/" + b[1:]; continue
             a["href"] = link(b, "en") or "/en/#iletisim"
-    out = str(soup).replace('<span class="on">TR</span><span>EN</span>', '<span>TR</span><span class="on">EN</span>')
+    WA_EN = ('https://wa.me/905412609190?text=Merhaba%2C%20bilgi%20almak%20istiyorum.', 'https://wa.me/905412609190?text=Hello%2C%20I%27d%20like%20to%20get%20more%20information.')
+    out = str(soup).replace(WA_EN[0], WA_EN[1]).replace('https://wa.me/905412609190?text=Merhaba%2C%20bilgi%20almak%20istiyorum.', 'https://wa.me/905412609190?text=Hello%2C%20I%27d%20like%20to%20get%20more%20information.').replace('<span class="on">TR</span><span>EN</span>', '<span>TR</span><span class="on">EN</span>')
     out = re.sub(r"<script>/\* varsayılan dil.*?</script>", "", out, flags=re.S)
     for a, b in I18N.JS: out = out.replace(a, b)
     out = re.sub(r"const QA=\[.*?\n\];", lambda m: I18N.QA_EN, out, count=1, flags=re.S)
