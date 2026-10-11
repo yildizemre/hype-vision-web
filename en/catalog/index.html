@@ -15,7 +15,12 @@
 <meta property="og:url" content="https://hypevisionlab.com/en/catalog">
 <meta property="og:title" content="Product catalogue">
 <meta property="og:description" content="A 21-page catalogue with module data sheets, accuracy ranges, technical requirements and 16 FAQs. Safety, quality control, workforce productivity and ONVIF/RTSP integration in one document.">
-<meta property="og:image" content="https://hypevisionlab.com/img/og-image.png">
+<meta property="og:image" content="https://hypevisionlab.com/img/og-en.jpg">
+<meta property="og:image:secure_url" content="https://hypevisionlab.com/img/og-en.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://hypevisionlab.com/img/og-en.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -546,7 +551,7 @@ main,section,footer{max-width:100vw;overflow-x:clip}
 .kf .msg{font-size:13px}.kf p.q{font-size:13px;color:var(--mute)}.kf p.q a{color:var(--ink);text-decoration:underline}
 @media (max-width:900px){.kt{grid-template-columns:1fr}.kf{position:static}}</style><div class="wrap"><div class="crumb rv"><a href="/en/">Home</a> / <span>Product catalogue</span></div>
 <div class="kt"><div class="rv"><div class="k-eyebrow">Product catalogue</div><h1>Industrial AI solutions catalogue</h1><p class="l">A 21-page catalogue with module data sheets, accuracy ranges, technical requirements and 16 FAQs. Safety, quality control, workforce productivity and ONVIF/RTSP integration in one document.</p>
-<ul><li>PPE, hard hat, danger zone and forklift–pedestrian modules</li><li>Quality control OK/NOK and surface defect detection</li><li>OEE, idle time and workforce productivity KPIs</li><li>Edge / cloud architecture and privacy compliance guide</li></ul><div class="cover"><img src="/img/dijital-ikiz.webp" alt=""></div><p class="ft">Bilişim Vadisi (IT Valley), Gebze · Hype Vision · industrial AI since 2020</p></div>
+<ul><li>PPE, hard hat, danger zone and forklift–pedestrian modules</li><li>Quality control OK/NOK and surface defect detection</li><li>OEE, idle time and workforce productivity KPIs</li><li>Edge / cloud architecture and privacy compliance guide</li></ul><div class="cover"><img src="/img/dijital-ikiz.webp" srcset="/img/dijital-ikiz-sm.webp 720w, /img/dijital-ikiz.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt=""></div><p class="ft">Bilişim Vadisi (IT Valley), Gebze · Hype Vision · industrial AI since 2020</p></div>
 <form class="kf rv" id="katForm"><h3>Fill in the form to download the catalogue</h3><small>Your details are only used for your catalogue request.</small><label>Full name *<input name="ad" type="text" required></label><label>Company *<input name="firma" type="text" required></label><label>Email *<input name="email" type="email" required></label><label>Phone *<input name="telefon" type="tel" required></label><label>Address<input name="adres" type="text"></label><input type="text" name="_honey" style="display:none">
 <button type="submit">Download catalogue →</button><span class="msg" aria-live="polite"></span><p class="q">Questions? See the <a href="/en/faq">FAQ</a> or <a href="/en/#iletisim">contact us directly</a>.</p></form></div></div><script>document.getElementById('katForm').addEventListener('submit',async e=>{e.preventDefault();const f=e.target,m=f.querySelector('.msg'),d=Object.fromEntries(new FormData(f));if(d._honey)return;f.querySelector('button').disabled=true;
 let ok=false;try{const r=await fetch('https://formsubmit.co/ajax/info@hypevisionlab.com',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({_captcha:'false',_template:'table',_subject:'Catalogue download request — '+(d.firma||''),_form:'katalog',...d})});ok=r.ok}catch(_){}
@@ -602,11 +607,16 @@ document.querySelectorAll('form[data-form]').forEach(f=>f.addEventListener('subm
 
 
 /* dil değişince aynı yerde kal */
-document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{document.cookie=document.documentElement.lang==='en'?'hv_tr=1;path=/;max-age=31536000;samesite=lax':'hv_tr=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
+document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{var _toTr=document.documentElement.lang==='en';document.cookie=(_toTr?'hv_tr':'hv_en')+'=1;path=/;max-age=31536000;samesite=lax';document.cookie=(_toTr?'hv_en':'hv_tr')+'=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
 (()=>{try{const s=JSON.parse(sessionStorage.getItem('hvScroll')||'null');if(!s)return;sessionStorage.removeItem('hvScroll');document.documentElement.style.scrollBehavior='auto';const go=()=>scrollTo(0,Math.round(s.r*Math.max(1,document.documentElement.scrollHeight-innerHeight)));go();addEventListener('load',go,{once:true});setTimeout(()=>{document.documentElement.style.scrollBehavior=''},800)}catch(_){}})();
 
+
+/* Instagram: son 5 video lead panelinden (yoksa sayfadaki hazır liste kalır) */
+(async()=>{try{const t=document.getElementById('igTrack');if(!t)return;const r=await fetch('https://lead.hypevisionlab.com/api/public/ig-reels',{cache:'no-store'});if(!r.ok)return;const j=await r.json();if(!j.items||!j.items.length)return;
+const L=document.documentElement.lang==='en'?'en-GB':'tr-TR';t.innerHTML=j.items.map(i=>'<a class="igp" href="'+i.url+'" target="_blank" rel="noopener"><img src="'+i.thumb+'" alt="Hype Vision Instagram video" loading="lazy" referrerpolicy="no-referrer"><span class="ty">▶</span><span class="dt">'+new Date(i.date).toLocaleDateString(L,{day:'numeric',month:'long',year:'numeric'})+'</span></a>').join('')}catch(_){}})();
+
 /* dil değişince aynı yerde kal */
-document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{document.cookie=document.documentElement.lang==='en'?'hv_tr=1;path=/;max-age=31536000;samesite=lax':'hv_tr=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
+document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{var _toTr=document.documentElement.lang==='en';document.cookie=(_toTr?'hv_tr':'hv_en')+'=1;path=/;max-age=31536000;samesite=lax';document.cookie=(_toTr?'hv_en':'hv_tr')+'=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
 (()=>{try{const s=JSON.parse(sessionStorage.getItem('hvScroll')||'null');if(!s)return;sessionStorage.removeItem('hvScroll');document.documentElement.style.scrollBehavior='auto';const go=()=>scrollTo(0,Math.round(s.r*Math.max(1,document.documentElement.scrollHeight-innerHeight)));go();addEventListener('load',go,{once:true});setTimeout(()=>{document.documentElement.style.scrollBehavior=''},800)}catch(_){}})();
 </script>
 </body>

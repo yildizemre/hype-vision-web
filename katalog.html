@@ -15,7 +15,12 @@
 <meta property="og:url" content="https://hypevisionlab.com/katalog">
 <meta property="og:title" content="Ürün kataloğu">
 <meta property="og:description" content="21 sayfalık katalog; modül künyeleri, doğruluk aralıkları, teknik gereksinimler ve 16 sık sorulan soruyu içerir. İSG, kalite kontrol, personel verimliliği ve ONVIF/RTSP entegrasyonu tek dokümanda.">
-<meta property="og:image" content="https://hypevisionlab.com/img/og-image.png">
+<meta property="og:image" content="https://hypevisionlab.com/img/og-tr.jpg">
+<meta property="og:image:secure_url" content="https://hypevisionlab.com/img/og-tr.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://hypevisionlab.com/img/og-tr.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -546,7 +551,7 @@ main,section,footer{max-width:100vw;overflow-x:clip}
 .kf .msg{font-size:13px}.kf p.q{font-size:13px;color:var(--mute)}.kf p.q a{color:var(--ink);text-decoration:underline}
 @media (max-width:900px){.kt{grid-template-columns:1fr}.kf{position:static}}</style><div class="wrap"><div class="crumb rv"><a href="/">Ana sayfa</a> / <span>Ürün kataloğu</span></div>
 <div class="kt"><div class="rv"><div class="k-eyebrow">Ürün kataloğu</div><h1>Endüstriyel yapay zekâ çözümleri kataloğu</h1><p class="l">21 sayfalık katalog; modül künyeleri, doğruluk aralıkları, teknik gereksinimler ve 16 sık sorulan soruyu içerir. İSG, kalite kontrol, personel verimliliği ve ONVIF/RTSP entegrasyonu tek dokümanda.</p>
-<ul><li>KKD, baret, tehlikeli bölge ve forklift–yaya modülleri</li><li>Kalite kontrol OK/RED ve yüzey kusuru tespiti</li><li>OEE, boşta kalma ve personel verimliliği KPI&#x27;ları</li><li>Edge / cloud mimari ve KVKK uyum rehberi</li></ul><div class="cover"><img src="/img/dijital-ikiz.webp" alt=""></div><p class="ft">Bilişim Vadisi, Gebze · Hype Vision · 2020'den beri endüstriyel yapay zekâ</p></div>
+<ul><li>KKD, baret, tehlikeli bölge ve forklift–yaya modülleri</li><li>Kalite kontrol OK/RED ve yüzey kusuru tespiti</li><li>OEE, boşta kalma ve personel verimliliği KPI&#x27;ları</li><li>Edge / cloud mimari ve KVKK uyum rehberi</li></ul><div class="cover"><img src="/img/dijital-ikiz.webp" srcset="/img/dijital-ikiz-sm.webp 720w, /img/dijital-ikiz.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt=""></div><p class="ft">Bilişim Vadisi, Gebze · Hype Vision · 2020'den beri endüstriyel yapay zekâ</p></div>
 <form class="kf rv" id="katForm"><h3>Kataloğu indirmek için formu doldurun</h3><small>Bilgileriniz yalnızca katalog talebiniz için kullanılır.</small><label>Ad soyad *<input name="ad" type="text" required></label><label>Firma / şirket *<input name="firma" type="text" required></label><label>E-posta *<input name="email" type="email" required></label><label>Telefon *<input name="telefon" type="tel" required></label><label>Adres<input name="adres" type="text"></label><input type="text" name="_honey" style="display:none">
 <button type="submit">Kataloğu indir →</button><span class="msg" aria-live="polite"></span><p class="q">Sorularınız mı var? <a href="/sss">SSS sayfasına</a> göz atın veya <a href="/#iletisim">doğrudan iletişime geçin</a>.</p></form></div></div><script>document.getElementById('katForm').addEventListener('submit',async e=>{e.preventDefault();const f=e.target,m=f.querySelector('.msg'),d=Object.fromEntries(new FormData(f));if(d._honey)return;f.querySelector('button').disabled=true;
 let ok=false;try{const r=await fetch('https://formsubmit.co/ajax/info@hypevisionlab.com',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({_captcha:'false',_template:'table',_subject:'Katalog indirme talebi — '+(d.firma||''),_form:'katalog',...d})});ok=r.ok}catch(_){}
@@ -602,11 +607,16 @@ document.querySelectorAll('form[data-form]').forEach(f=>f.addEventListener('subm
 
 
 /* dil değişince aynı yerde kal */
-document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{document.cookie=document.documentElement.lang==='en'?'hv_tr=1;path=/;max-age=31536000;samesite=lax':'hv_tr=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
+document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{var _toTr=document.documentElement.lang==='en';document.cookie=(_toTr?'hv_tr':'hv_en')+'=1;path=/;max-age=31536000;samesite=lax';document.cookie=(_toTr?'hv_en':'hv_tr')+'=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
 (()=>{try{const s=JSON.parse(sessionStorage.getItem('hvScroll')||'null');if(!s)return;sessionStorage.removeItem('hvScroll');document.documentElement.style.scrollBehavior='auto';const go=()=>scrollTo(0,Math.round(s.r*Math.max(1,document.documentElement.scrollHeight-innerHeight)));go();addEventListener('load',go,{once:true});setTimeout(()=>{document.documentElement.style.scrollBehavior=''},800)}catch(_){}})();
 
+
+/* Instagram: son 5 video lead panelinden (yoksa sayfadaki hazır liste kalır) */
+(async()=>{try{const t=document.getElementById('igTrack');if(!t)return;const r=await fetch('https://lead.hypevisionlab.com/api/public/ig-reels',{cache:'no-store'});if(!r.ok)return;const j=await r.json();if(!j.items||!j.items.length)return;
+const L=document.documentElement.lang==='en'?'en-GB':'tr-TR';t.innerHTML=j.items.map(i=>'<a class="igp" href="'+i.url+'" target="_blank" rel="noopener"><img src="'+i.thumb+'" alt="Hype Vision Instagram video" loading="lazy" referrerpolicy="no-referrer"><span class="ty">▶</span><span class="dt">'+new Date(i.date).toLocaleDateString(L,{day:'numeric',month:'long',year:'numeric'})+'</span></a>').join('')}catch(_){}})();
+
 /* dil değişince aynı yerde kal */
-document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{document.cookie=document.documentElement.lang==='en'?'hv_tr=1;path=/;max-age=31536000;samesite=lax':'hv_tr=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
+document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{var _toTr=document.documentElement.lang==='en';document.cookie=(_toTr?'hv_tr':'hv_en')+'=1;path=/;max-age=31536000;samesite=lax';document.cookie=(_toTr?'hv_en':'hv_tr')+'=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
 (()=>{try{const s=JSON.parse(sessionStorage.getItem('hvScroll')||'null');if(!s)return;sessionStorage.removeItem('hvScroll');document.documentElement.style.scrollBehavior='auto';const go=()=>scrollTo(0,Math.round(s.r*Math.max(1,document.documentElement.scrollHeight-innerHeight)));go();addEventListener('load',go,{once:true});setTimeout(()=>{document.documentElement.style.scrollBehavior=''},800)}catch(_){}})();
 </script>
 </body>

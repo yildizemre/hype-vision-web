@@ -15,7 +15,12 @@
 <meta property="og:url" content="https://hypevisionlab.com/en/industries/retail">
 <meta property="og:title" content="Retail video analytics on existing CCTV">
 <meta property="og:description" content="Use existing store CCTV for people counting, queue alerts, occupancy and dwell-time analytics, plus back-of-house safety — processed on-premise without identifying shoppers.">
-<meta property="og:image" content="https://hypevisionlab.com/img/sektor/perakende.webp">
+<meta property="og:image" content="https://hypevisionlab.com/img/og-en.jpg">
+<meta property="og:image:secure_url" content="https://hypevisionlab.com/img/og-en.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://hypevisionlab.com/img/og-en.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -534,12 +539,12 @@ main,section,footer{max-width:100vw;overflow-x:clip}
 <div class="crumb rv"><a href="/en/">Home</a> / <a href="/en/industries">Industries</a> / <span>Retail video analytics on existing CCTV</span></div>
 <div class="ph rv"><h1>Retail video analytics on existing CCTV<span>Use existing store CCTV for people counting, queue alerts, occupancy and dwell-time analytics, plus back-of-house safety — processed on-premise without identifying shoppers.</span></h1>
 <div class="intro"><p>Footfall, queues and space usage from the cameras already in your stores — without identifying shoppers.</p><p>Store cameras are installed for loss prevention, but they also capture how customers move through the store and when service points are overloaded.</p><p>Analytics turns this into footfall, queue and occupancy data for operations, and adds safety monitoring for back-of-house areas.</p><div class="pillg"><a href="/en/#iletisim">Contact</a><a class="d" href="/en/#iletisim">Book a demo</a></div></div></div>
-<div class="pimg rv"><img src="/img/sektor/perakende.webp" alt="Retail video analytics on existing CCTV"></div>
+<div class="pimg rv"><img src="/img/sektor/perakende.webp" srcset="/img/sektor/perakende-sm.webp 720w, /img/sektor/perakende.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="Retail video analytics on existing CCTV"></div>
 </div>
 
 <div class="wrap" style="margin-top:50px"><div class="sec2 rv"><h2>Use cases</h2><div class="c"><div class="cards"><a class="cd" href="/en/solutions/people-counting"><b>People Counting</b><span>Entrance counts as the basis for conversion and staffing.</span><i>Explore →</i></a><a class="cd" href="/en/solutions/queue-analytics"><b>Queue Analytics</b><span>Alerts when checkout queues exceed a threshold.</span><i>Explore →</i></a><a class="cd" href="/en/solutions/occupancy-analytics"><b>Occupancy &amp; Density Analytics</b><span>Heatmaps and dwell time for layout and promotions.</span><i>Explore →</i></a><a class="cd" href="/en/solutions/forklift-pedestrian-detection"><b>Forklift–Pedestrian Detection</b><span>Safety in stockrooms and receiving areas.</span><i>Explore →</i></a><a class="cd" href="/en/solutions/fall-detection"><b>Fall Detection</b><span>Alerts for falls in aisles and public areas.</span><i>Explore →</i></a></div></div></div><div class="sec2 rv"><h2>Things to consider</h2><div class="c"><ul class="ck"><li>Shopper privacy: counting and occupancy do not require identification.</li><li>Entrance counting may need a camera angle different from security cameras.</li></ul></div></div><div class="sec2 rv"><h2>Frequently asked questions</h2><div class="c"><p>No. It counts and measures movement anonymously.</p></div></div><div class="sec2 rv"><h2>Start with the cameras you already have</h2><div class="c"><p>Send us a few frames from your cameras and the problem you want to solve. We will tell you honestly what is feasible.</p></div></div></div>
 <div class="wrap" style="margin-top:70px"><h2 class="h rv">Frequently asked questions</h2><div class="faq rv"><details><summary>Does it identify customers?</summary><p>No. It counts and measures movement anonymously.</p></details></div></div>
-<div class="wrap endcta"><div class="cta rv"><img src="/img/det-kusbakisi.webp" alt=""><div class="in">
+<div class="wrap endcta"><div class="cta rv"><img src="/img/det-kusbakisi.webp" srcset="/img/det-kusbakisi-sm.webp 720w, /img/det-kusbakisi.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt=""><div class="in">
 <h2 class="h">See it on your site in two weeks.<span>One camera, one module, real data.</span></h2>
 <div class="pillg"><a href="/en/#iletisim">Contact</a><a class="d" href="/en/#iletisim">Book a demo</a></div></div></div></div>
 </main>
@@ -592,11 +597,16 @@ document.querySelectorAll('form[data-form]').forEach(f=>f.addEventListener('subm
 
 
 /* dil değişince aynı yerde kal */
-document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{document.cookie=document.documentElement.lang==='en'?'hv_tr=1;path=/;max-age=31536000;samesite=lax':'hv_tr=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
+document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{var _toTr=document.documentElement.lang==='en';document.cookie=(_toTr?'hv_tr':'hv_en')+'=1;path=/;max-age=31536000;samesite=lax';document.cookie=(_toTr?'hv_en':'hv_tr')+'=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
 (()=>{try{const s=JSON.parse(sessionStorage.getItem('hvScroll')||'null');if(!s)return;sessionStorage.removeItem('hvScroll');document.documentElement.style.scrollBehavior='auto';const go=()=>scrollTo(0,Math.round(s.r*Math.max(1,document.documentElement.scrollHeight-innerHeight)));go();addEventListener('load',go,{once:true});setTimeout(()=>{document.documentElement.style.scrollBehavior=''},800)}catch(_){}})();
 
+
+/* Instagram: son 5 video lead panelinden (yoksa sayfadaki hazır liste kalır) */
+(async()=>{try{const t=document.getElementById('igTrack');if(!t)return;const r=await fetch('https://lead.hypevisionlab.com/api/public/ig-reels',{cache:'no-store'});if(!r.ok)return;const j=await r.json();if(!j.items||!j.items.length)return;
+const L=document.documentElement.lang==='en'?'en-GB':'tr-TR';t.innerHTML=j.items.map(i=>'<a class="igp" href="'+i.url+'" target="_blank" rel="noopener"><img src="'+i.thumb+'" alt="Hype Vision Instagram video" loading="lazy" referrerpolicy="no-referrer"><span class="ty">▶</span><span class="dt">'+new Date(i.date).toLocaleDateString(L,{day:'numeric',month:'long',year:'numeric'})+'</span></a>').join('')}catch(_){}})();
+
 /* dil değişince aynı yerde kal */
-document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{document.cookie=document.documentElement.lang==='en'?'hv_tr=1;path=/;max-age=31536000;samesite=lax':'hv_tr=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
+document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{var _toTr=document.documentElement.lang==='en';document.cookie=(_toTr?'hv_tr':'hv_en')+'=1;path=/;max-age=31536000;samesite=lax';document.cookie=(_toTr?'hv_en':'hv_tr')+'=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
 (()=>{try{const s=JSON.parse(sessionStorage.getItem('hvScroll')||'null');if(!s)return;sessionStorage.removeItem('hvScroll');document.documentElement.style.scrollBehavior='auto';const go=()=>scrollTo(0,Math.round(s.r*Math.max(1,document.documentElement.scrollHeight-innerHeight)));go();addEventListener('load',go,{once:true});setTimeout(()=>{document.documentElement.style.scrollBehavior=''},800)}catch(_){}})();
 </script>
 </body>

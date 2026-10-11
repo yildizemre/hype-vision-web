@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
-<script>/* varsayılan dil İngilizce: TR seçilmediyse ana sayfadan /en/'e */(function(){try{if(location.pathname==='/'&&!/(^|; )hv_tr=1/.test(document.cookie)&&!/[?&]lang=tr/.test(location.search))location.replace('/en/'+location.hash)}catch(e){}})();</script>
+<script>/* varsayılan dil: seçilmiş dil çerezi, yoksa tarayıcı dili (tr → TR, diğerleri → EN) */(function(){try{if(location.pathname!=='/'||/[?&]lang=tr/.test(location.search))return;var c=document.cookie;if(/(^|; )hv_tr=1/.test(c))return;var en=/(^|; )hv_en=1/.test(c);var tr=(navigator.languages||[navigator.language||'']).some(function(l){return /^tr\b/i.test(l)});if(en||!tr)location.replace('/en/'+location.hash)}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Hype Vision — Kameralarınız için Yapay Zekâ</title>
 <meta name="description" content="Hype Vision, mevcut kameralarınızı yapay zekâ ile sahanızı anlayan bir sisteme dönüştürür. Anlık uyarılar, asistan ile sorgulanabilir veri, yönetim içgörüleri.">
@@ -16,8 +16,12 @@
 <meta property="og:locale" content="tr_TR">
 <meta property="og:url" content="https://hypevisionlab.com/">
 <meta property="og:title" content="Hype Vision — Kameralarınız için Yapay Zekâ">
-<meta property="og:description" content="Mevcut kameralarınızla 7/24 İSG, kalite ve verimlilik denetimi. Marka fark etmez, KVKK uyumlu.">
-<meta property="og:image" content="https://hypevisionlab.com/img/og-image.png">
+<meta property="og:description" content="Yapay zekânın gücü, kameralarınızda. Mevcut kameralarınızla 7/24 İSG, kalite ve verimlilik denetimi — marka fark etmez, KVKK uyumlu.">
+<meta property="og:image" content="https://hypevisionlab.com/img/og-tr.jpg">
+<meta property="og:image:secure_url" content="https://hypevisionlab.com/img/og-tr.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Hype Vision — Yapay zekânın gücü, kameralarınızda">
+<meta name="twitter:image" content="https://hypevisionlab.com/img/og-tr.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#ffffff">
@@ -483,7 +487,7 @@ main,section,footer{max-width:100vw;overflow-x:clip}
   <div class="wrap">
     <h1 class="h rv">Yapay zekânın gücü, kameralarınızda.<span>Sahanızı daha güvenli ve verimli yönetin.</span></h1>
     <div class="stage rv">
-      <img src="img/08-kkd.webp" alt="Üretim alanında çalışan personel">
+      <img src="img/08-kkd.webp" srcset="img/08-kkd-sm.webp 720w, img/08-kkd.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="Üretim alanında çalışan personel">
       <div class="det" style="left:39%;top:20%;width:19%;height:62%"><span>KKD ✓ Baret · Yelek</span></div>
       <div class="ui ask"><div class="t"><i></i>Hype Asistan'a sorun</div><p id="typed"></p></div>
       <div class="ui chart"><b>KKD Uyum Skoru</b><div class="bars" id="bars"></div><div class="ax"><span>Oca</span><span>Şub</span><span>Mar</span><span>Nis</span><span>May</span><span>Haz</span></div></div>
@@ -525,9 +529,9 @@ main,section,footer{max-width:100vw;overflow-x:clip}
   <div class="wrap">
     <h2 class="h rv">Üç göz, tek yapay zekâ<span>Sabit kamera, robot köpek ve drone — hepsi aynı platformda.</span></h2>
     <div class="how3">
-      <div class="rv"><div class="im"><img src="img/det-forklift.webp" alt="CCTV kamera görüntüsünde tespit" loading="lazy"></div><h4>Sabit Kameralar</h4><div class="k">01 · CCTV</div><p>Tesisteki mevcut IP kameralar 7/24 izler: KKD, forklift–yaya mesafesi, yasaklı alan ve hat duruşu anında tespit edilir. Yeni kamera ya da kablolama gerekmez.</p></div>
-      <div class="rv"><div class="im"><img src="img/robot-kopek.webp" alt="Hype Vision robot köpek" loading="lazy"></div><h4>Robot Köpek</h4><div class="k">02 · Mobil devriye</div><p>Sabit kameranın görmediği koridor ve proses alanlarında planlı devriye. Üzerindeki kamera ve LiDAR görüntüyü aynı yapay zekâ katmanına aktarır; kör nokta kalmaz.</p></div>
-      <div class="rv"><div class="im"><img src="img/drone.webp" alt="Hype Vision drone" loading="lazy"></div><h4>Drone</h4><div class="k">03 · Havadan denetim</div><p>Geniş sahalar, tank çiftlikleri ve yüksek yapılar için hızlı tarama. Drone görüntüsü sabit kameralarla birlikte tek panelde analiz edilir, olaylar haritada işaretlenir.</p></div>
+      <div class="rv"><div class="im"><img src="img/det-forklift.webp" srcset="img/det-forklift-sm.webp 720w, img/det-forklift.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="CCTV kamera görüntüsünde tespit" loading="lazy"></div><h4>Sabit Kameralar</h4><div class="k">01 · CCTV</div><p>Tesisteki mevcut IP kameralar 7/24 izler: KKD, forklift–yaya mesafesi, yasaklı alan ve hat duruşu anında tespit edilir. Yeni kamera ya da kablolama gerekmez.</p></div>
+      <div class="rv"><div class="im"><img src="img/robot-kopek.webp" srcset="img/robot-kopek-sm.webp 720w, img/robot-kopek.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="Hype Vision robot köpek" loading="lazy"></div><h4>Robot Köpek</h4><div class="k">02 · Mobil devriye</div><p>Sabit kameranın görmediği koridor ve proses alanlarında planlı devriye. Üzerindeki kamera ve LiDAR görüntüyü aynı yapay zekâ katmanına aktarır; kör nokta kalmaz.</p></div>
+      <div class="rv"><div class="im"><img src="img/drone.webp" srcset="img/drone-sm.webp 720w, img/drone.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="Hype Vision drone" loading="lazy"></div><h4>Drone</h4><div class="k">03 · Havadan denetim</div><p>Geniş sahalar, tank çiftlikleri ve yüksek yapılar için hızlı tarama. Drone görüntüsü sabit kameralarla birlikte tek panelde analiz edilir, olaylar haritada işaretlenir.</p></div>
     </div>
   </div>
 </section>
@@ -536,9 +540,9 @@ main,section,footer{max-width:100vw;overflow-x:clip}
   <div class="wrap">
     <h2 class="h rv">Gerçek zamanlı şeffaflık<span>tek istasyondan tüm tesislere kadar</span></h2>
     <div class="tr rv" id="tr">
-      <img src="img/det-cnc.webp" class="on" alt="">
-      <img src="img/det-hat.webp" alt="">
-      <img src="img/det-kusbakisi.webp" alt="">
+      <img src="img/det-cnc.webp" srcset="img/det-cnc-sm.webp 720w, img/det-cnc.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" class="on" alt="">
+      <img src="img/det-hat.webp" srcset="img/det-hat-sm.webp 720w, img/det-hat.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="">
+      <img src="img/det-kusbakisi.webp" srcset="img/det-kusbakisi-sm.webp 720w, img/det-kusbakisi.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="">
       <div class="tabs" id="tabs">
         <div class="tab on"><span class="n">01</span><div><b>İstasyon</b><p>Her istasyonun doluluk, çevrim süresi ve güvenlik durumu saniye saniye.</p></div><span class="pr"><i></i></span></div>
         <div class="tab"><span class="n">02</span><div><b>Tesis Geneli</b><p>Tüm hat ve bölgeler tek ekranda; ısı haritası ve canlı alarm akışı.</p></div><span class="pr"><i></i></span></div>
@@ -552,11 +556,11 @@ main,section,footer{max-width:100vw;overflow-x:clip}
 <section>
   <div class="wrap">
     <h2 class="h rv">Neler yapmanıza yardım ederiz<span>fabrikanızın dijital ikizi, tek ekranda</span></h2>
-    <div class="twin rv"><img src="img/dijital-ikiz.webp" alt="Hype Vision dijital fabrika: personel verimliliği, düşme tespiti ve ürün kontrolü" loading="lazy">
+    <div class="twin rv"><img src="img/dijital-ikiz.webp" srcset="img/dijital-ikiz-sm.webp 720w, img/dijital-ikiz.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="Hype Vision dijital fabrika: personel verimliliği, düşme tespiti ve ürün kontrolü" loading="lazy">
       <div class="twin-tx"><span class="tagb">Dijital fabrika</span><b>Sahadaki her olay, fabrikanızın canlı haritasında.</b><p>Kameralardan gelen tespitler tesisinizin dijital ikizine işlenir: kim nerede verimli, nerede biri düştü, hangi ürün kontrolden geçti — hepsi aynı haritada.</p></div></div>
     <div class="bento">
       <div class="bx photo rv">
-        <div class="ph"><img src="img/det-forklift.webp" alt="" loading="lazy"></div>
+        <div class="ph"><img src="img/det-forklift.webp" srcset="img/det-forklift-sm.webp 720w, img/det-forklift.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="" loading="lazy"></div>
         <div class="tx"><h4>Saha ekiplerini güçlendirin</h4><p>Anlık uyarılar, tek dokunuşla onay ve hızlı önceliklendirme. Ekip daha erken müdahale eder, daha az evrak doldurur.</p></div>
         <div class="nt" style="right:24px;bottom:96px"><span class="r">Bölge C</span><div class="tx2"><b>Forklift – yaya mesafesi</b>Kritik yakınlaşma</div><small>14:21</small></div>
         <div class="nt" style="right:44px;bottom:32px"><span class="r">Hat 2</span><div class="tx2"><b>Baret eksik</b>Kaynak alanına giriş</div><small>14:19</small></div>
@@ -580,7 +584,7 @@ main,section,footer{max-width:100vw;overflow-x:clip}
         </div>
       </div>
       <div class="bx photo rv">
-        <div class="ph"><img src="img/d/kumes1.webp" alt="" loading="lazy"></div>
+        <div class="ph"><img src="img/d/kumes1.webp" srcset="img/d/kumes1-sm.webp 720w, img/d/kumes1.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="" loading="lazy"></div>
         <div class="tx"><h4>Sayın, ölçün, kanıtlayın</h4><p>Üretimden sevkiyata her adet ve her saniye kayıt altında. Tahmin yerine gerçek sayı; tartışma yerine görüntülü kanıt.</p></div>
         <div class="nt" style="right:24px;bottom:32px"><span class="r">K2</span><div class="tx2"><b>Bugün 41.280 adet</b>Dünden %3 fazla</div><small>canlı</small></div>
       </div>
@@ -592,12 +596,12 @@ main,section,footer{max-width:100vw;overflow-x:clip}
   <div class="wrap">
     <div class="bl-head"><h2 class="h rv">Her sektörde aynı platform<span>farklı sahalar, farklı problemler</span></h2><a class="rv" href="/sektorler">Tüm sektörler →</a></div>
     <div class="secs2">
-      <div class="s2 rv"><div class="im"><img src="img/sektor/imalat.webp" alt="" loading="lazy"></div><div class="bd"><h4>İmalat ve Fabrikalar</h4><p>Mevcut kameralar üzerinde tek bir video analitiği katmanı: iş güvenliği, üretim görünürlüğü ve kalite.</p><ul><li>KKD uyumu</li><li>Forklift–yaya</li><li>Hat duruşu</li><li>Kalite kontrol</li></ul><a class="more" href="/sektor/imalat">Sektör sayfası →</a></div></div>
-      <div class="s2 rv"><div class="im"><img src="img/sektor/tekstil.webp" alt="" loading="lazy"></div><div class="bd"><h4>Tekstil</h4><p>Bant ve istasyon bazında adet sayımı, boşta kalma ve fire takibi; vardiya sonunu beklemeden.</p><ul><li>Bant verimi</li><li>Adet sayımı</li><li>Fire analizi</li></ul><a class="more" href="/sektor/tekstil">Sektör sayfası →</a></div></div>
-      <div class="s2 rv"><div class="im"><img src="img/sektor/gida.webp" alt="" loading="lazy"></div><div class="bd"><h4>Gıda ve Tarım</h4><p>Konveyörde sayım ve sınıflandırma, hijyen uyumu ve hat boşta kalma süresinin ölçülmesi.</p><ul><li>Ürün sayımı</li><li>Sınıflandırma</li><li>Hijyen</li></ul><a class="more" href="/sektor/gida">Sektör sayfası →</a></div></div>
-      <div class="s2 rv"><div class="im"><img src="img/d/yasaklialan.webp" alt="" loading="lazy"></div><div class="bd"><h4>Kimya ve Proses Tesisleri</h4><p>Tehlikeli bölge, KKD ve 5S denetimi; patlayıcı ortamlarda bile mevcut kameralarla 7/24 kanıtlı takip.</p><ul><li>Yasaklı alan</li><li>KKD uyumu</li><li>Sızıntı & duman</li></ul><a class="more" href="/sektorler">Sektör sayfası →</a></div></div>
-      <div class="s2 rv"><div class="im"><img src="img/sektor/restoran.webp" alt="" loading="lazy"></div><div class="bd"><h4>Restoran ve Yiyecek-İçecek</h4><p>Her şubede tutarlı hijyen, hizmet hızı ve prosedür: varsayılmadan, ölçülerek.</p><ul><li>Servis süresi</li><li>Hijyen</li><li>Kasa kontrolü</li></ul><a class="more" href="/sektor/restoran">Sektör sayfası →</a></div></div>
-      <div class="s2 rv"><div class="im"><img src="img/sektor/lojistik.webp" alt="" loading="lazy"></div><div class="bd"><h4>Lojistik ve Depo</h4><p>Palet ve koli sayımı, rampa süreleri, forklift rotaları ve sevkiyat için görüntülü kanıt arşivi.</p><ul><li>Palet sayımı</li><li>Dock süresi</li><li>Delil arşivi</li></ul><a class="more" href="/sektor/depo-lojistik-guvenlik">Sektör sayfası →</a></div></div>
+      <div class="s2 rv"><div class="im"><img src="img/sektor/imalat.webp" srcset="img/sektor/imalat-sm.webp 720w, img/sektor/imalat.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="" loading="lazy"></div><div class="bd"><h4>İmalat ve Fabrikalar</h4><p>Mevcut kameralar üzerinde tek bir video analitiği katmanı: iş güvenliği, üretim görünürlüğü ve kalite.</p><ul><li>KKD uyumu</li><li>Forklift–yaya</li><li>Hat duruşu</li><li>Kalite kontrol</li></ul><a class="more" href="/sektor/imalat">Sektör sayfası →</a></div></div>
+      <div class="s2 rv"><div class="im"><img src="img/sektor/tekstil.webp" srcset="img/sektor/tekstil-sm.webp 720w, img/sektor/tekstil.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="" loading="lazy"></div><div class="bd"><h4>Tekstil</h4><p>Bant ve istasyon bazında adet sayımı, boşta kalma ve fire takibi; vardiya sonunu beklemeden.</p><ul><li>Bant verimi</li><li>Adet sayımı</li><li>Fire analizi</li></ul><a class="more" href="/sektor/tekstil">Sektör sayfası →</a></div></div>
+      <div class="s2 rv"><div class="im"><img src="img/sektor/gida.webp" srcset="img/sektor/gida-sm.webp 720w, img/sektor/gida.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="" loading="lazy"></div><div class="bd"><h4>Gıda ve Tarım</h4><p>Konveyörde sayım ve sınıflandırma, hijyen uyumu ve hat boşta kalma süresinin ölçülmesi.</p><ul><li>Ürün sayımı</li><li>Sınıflandırma</li><li>Hijyen</li></ul><a class="more" href="/sektor/gida">Sektör sayfası →</a></div></div>
+      <div class="s2 rv"><div class="im"><img src="img/d/yasaklialan.webp" srcset="img/d/yasaklialan-sm.webp 720w, img/d/yasaklialan.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="" loading="lazy"></div><div class="bd"><h4>Kimya ve Proses Tesisleri</h4><p>Tehlikeli bölge, KKD ve 5S denetimi; patlayıcı ortamlarda bile mevcut kameralarla 7/24 kanıtlı takip.</p><ul><li>Yasaklı alan</li><li>KKD uyumu</li><li>Sızıntı & duman</li></ul><a class="more" href="/sektorler">Sektör sayfası →</a></div></div>
+      <div class="s2 rv"><div class="im"><img src="img/sektor/restoran.webp" srcset="img/sektor/restoran-sm.webp 720w, img/sektor/restoran.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="" loading="lazy"></div><div class="bd"><h4>Restoran ve Yiyecek-İçecek</h4><p>Her şubede tutarlı hijyen, hizmet hızı ve prosedür: varsayılmadan, ölçülerek.</p><ul><li>Servis süresi</li><li>Hijyen</li><li>Kasa kontrolü</li></ul><a class="more" href="/sektor/restoran">Sektör sayfası →</a></div></div>
+      <div class="s2 rv"><div class="im"><img src="img/sektor/lojistik.webp" srcset="img/sektor/lojistik-sm.webp 720w, img/sektor/lojistik.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="" loading="lazy"></div><div class="bd"><h4>Lojistik ve Depo</h4><p>Palet ve koli sayımı, rampa süreleri, forklift rotaları ve sevkiyat için görüntülü kanıt arşivi.</p><ul><li>Palet sayımı</li><li>Dock süresi</li><li>Delil arşivi</li></ul><a class="more" href="/sektor/depo-lojistik-guvenlik">Sektör sayfası →</a></div></div>
     </div>
   </div>
 </section>
@@ -616,7 +620,7 @@ main,section,footer{max-width:100vw;overflow-x:clip}
 <section id="vaka">
   <div class="wrap">
     <div class="bl-head"><h2 class="h rv">Vaka çalışmaları<span>sahadan ölçülmüş sonuçlar</span></h2><a class="rv" href="/vaka-calismalari">Tüm vakalar →</a></div>
-    <div class="vks"><a class="vk rv" href="/vaka-calismalari/maden-tesisi-harman-stok-forklift-kkd"><div class="im"><img src="img/vaka/harman-1.webp" alt="" loading="lazy"><b>200+</b></div><div class="bd"><small>Vaka çalışması</small><h4>Maden tesisinde 200+ kamera, 20+ modül: harman stokta ürün tipi, forklift süresi ve KKD tek platformda</h4><p>Büyük bir maden ve kimyasal üretim tesisinde 200&#x27;den fazla mevcut kamera on-premise olarak yapay zekâya bağlandı; harman stokta ürün tipi bö…</p></div></a><a class="vk rv" href="/vaka-calismalari/400-kamera-alan-bazli-kkd-denetimi"><div class="im"><img src="img/vaka/kkd-depo.webp" alt="" loading="lazy"></div><div class="bd"><small>Vaka çalışması</small><h4>400 kamerada alan bazlı KKD denetimi: baret, yelek, iş ayakkabısı ve eldiven</h4><p>Büyük bir üretim ve depolama tesisinde 400 kamera üzerinde baret ve yelek denetimi devreye alındı; giriş kapılarında iş ayakkabısı ve eldive…</p></div></a><a class="vk rv" href="/vaka-calismalari/kaynak-atolyesi-uretim-dijitallestirme"><div class="im"><img src="img/vaka/kaynak-1.webp" alt="" loading="lazy"></div><div class="bd"><small>Vaka çalışması</small><h4>Kaynak atölyesinde üretimin dijitalleştirilmesi: her parçanın kaynak ve taşlama süresi artık ölçülüyor</h4><p>Boru ve flanş kaynak istasyonunda mevcut IP kamera ile kaynak süresi, taşlama süresi, parça başı çevrim süresi, çıkan iş adedi ve KKD uyumu …</p></div></a><a class="vk rv" href="/vaka-calismalari/tekstil-hat-a-fire-dususu"><div class="im"><img src="img/vaka/tekstil-bant.webp" alt="" loading="lazy"></div><div class="bd"><small>Vaka çalışması</small><h4>Konfeksiyon fabrikasında dikim, ütü ve paketleme dijitalleşti: bant bant sayım ve darboğaz analizi</h4><p>Bir hazır giyim tesisinde mevcut kameralarla dikim, ütü-kalite kontrol ve paketleme istasyonlarında adet sayımı, parça başı çevrim süresi, i…</p></div></a><a class="vk rv" href="/vaka-calismalari/tir-yukleme-sevkiyat-sayimi"><div class="im"><img src="img/vaka/tir-1.webp" alt="" loading="lazy"></div><div class="bd"><small>Vaka çalışması</small><h4>TIR yükleme rampasında otomatik sevkiyat sayımı: her yük, her araç kayıt altında</h4><p>Yükleme rampasını gören mevcut kamerayla TIR dorsesi ve forklift otomatik algılandı; dorseye giren ürünler sayıldı, sevkiyat adedi ve görünt…</p></div></a><a class="vk rv" href="/vaka-calismalari/fuar-ziyaretci-yogunluk-analizi"><div class="im"><img src="img/vaka/fuar-1.webp" alt="" loading="lazy"></div><div class="bd"><small>Vaka çalışması</small><h4>Fuar alanında ziyaretçi yoğunluğu ve koridor analizi: hangi stant, kaç kişi, ne kadar süre?</h4><p>Uluslararası bir fuarda mevcut kameralarla koridor, stant önü, oturma ve bekleme bölgelerinde anlık ve toplam ziyaretçi sayısı, maksimum yoğ…</p></div></a></div>
+    <div class="vks"><a class="vk rv" href="/vaka-calismalari/maden-tesisi-harman-stok-forklift-kkd"><div class="im"><img src="img/vaka/harman-1.webp" srcset="img/vaka/harman-1-sm.webp 720w, img/vaka/harman-1.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="" loading="lazy"><b>200+</b></div><div class="bd"><small>Vaka çalışması</small><h4>Maden tesisinde 200+ kamera, 20+ modül: harman stokta ürün tipi, forklift süresi ve KKD tek platformda</h4><p>Büyük bir maden ve kimyasal üretim tesisinde 200&#x27;den fazla mevcut kamera on-premise olarak yapay zekâya bağlandı; harman stokta ürün tipi bö…</p></div></a><a class="vk rv" href="/vaka-calismalari/400-kamera-alan-bazli-kkd-denetimi"><div class="im"><img src="img/vaka/kkd-depo.webp" srcset="img/vaka/kkd-depo-sm.webp 720w, img/vaka/kkd-depo.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="" loading="lazy"></div><div class="bd"><small>Vaka çalışması</small><h4>400 kamerada alan bazlı KKD denetimi: baret, yelek, iş ayakkabısı ve eldiven</h4><p>Büyük bir üretim ve depolama tesisinde 400 kamera üzerinde baret ve yelek denetimi devreye alındı; giriş kapılarında iş ayakkabısı ve eldive…</p></div></a><a class="vk rv" href="/vaka-calismalari/kaynak-atolyesi-uretim-dijitallestirme"><div class="im"><img src="img/vaka/kaynak-1.webp" srcset="img/vaka/kaynak-1-sm.webp 720w, img/vaka/kaynak-1.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="" loading="lazy"></div><div class="bd"><small>Vaka çalışması</small><h4>Kaynak atölyesinde üretimin dijitalleştirilmesi: her parçanın kaynak ve taşlama süresi artık ölçülüyor</h4><p>Boru ve flanş kaynak istasyonunda mevcut IP kamera ile kaynak süresi, taşlama süresi, parça başı çevrim süresi, çıkan iş adedi ve KKD uyumu …</p></div></a><a class="vk rv" href="/vaka-calismalari/tekstil-hat-a-fire-dususu"><div class="im"><img src="img/vaka/tekstil-bant.webp" srcset="img/vaka/tekstil-bant-sm.webp 720w, img/vaka/tekstil-bant.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="" loading="lazy"></div><div class="bd"><small>Vaka çalışması</small><h4>Konfeksiyon fabrikasında dikim, ütü ve paketleme dijitalleşti: bant bant sayım ve darboğaz analizi</h4><p>Bir hazır giyim tesisinde mevcut kameralarla dikim, ütü-kalite kontrol ve paketleme istasyonlarında adet sayımı, parça başı çevrim süresi, i…</p></div></a><a class="vk rv" href="/vaka-calismalari/tir-yukleme-sevkiyat-sayimi"><div class="im"><img src="img/vaka/tir-1.webp" srcset="img/vaka/tir-1-sm.webp 720w, img/vaka/tir-1.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="" loading="lazy"></div><div class="bd"><small>Vaka çalışması</small><h4>TIR yükleme rampasında otomatik sevkiyat sayımı: her yük, her araç kayıt altında</h4><p>Yükleme rampasını gören mevcut kamerayla TIR dorsesi ve forklift otomatik algılandı; dorseye giren ürünler sayıldı, sevkiyat adedi ve görünt…</p></div></a><a class="vk rv" href="/vaka-calismalari/fuar-ziyaretci-yogunluk-analizi"><div class="im"><img src="img/vaka/fuar-1.webp" srcset="img/vaka/fuar-1-sm.webp 720w, img/vaka/fuar-1.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="" loading="lazy"></div><div class="bd"><small>Vaka çalışması</small><h4>Fuar alanında ziyaretçi yoğunluğu ve koridor analizi: hangi stant, kaç kişi, ne kadar süre?</h4><p>Uluslararası bir fuarda mevcut kameralarla koridor, stant önü, oturma ve bekleme bölgelerinde anlık ve toplam ziyaretçi sayısı, maksimum yoğ…</p></div></a></div>
   </div>
 </section>
 
@@ -631,12 +635,12 @@ main,section,footer{max-width:100vw;overflow-x:clip}
   <div class="wrap">
     <div class="bl-head"><h2 class="h rv">Rehberler ve blog<span>görüntü işlemeyi sahada uygulayanlar için</span></h2><a class="rv" href="/blog">Tüm yazılar →</a></div>
     <div class="blog">
-      <a class="bf rv" href="/blog/yapay-zeka-ile-is-guvenligi"><img src="img/det-kkd.webp" alt="" loading="lazy"><div class="tx"><span class="tagb">Rehber · İSG</span><h4>Yapay Zeka ile İş Güvenliği: Kamera ile KKD ve Tehlikeli Alan Denetimi</h4><p>Baret, yelek ve tehlikeli bölge ihlallerinin mevcut kameralarla 7/24 nasıl denetlendiğini adım adım anlatıyoruz.</p></div></a>
+      <a class="bf rv" href="/blog/yapay-zeka-ile-is-guvenligi"><img src="img/det-kkd.webp" srcset="img/det-kkd-sm.webp 720w, img/det-kkd.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="" loading="lazy"><div class="tx"><span class="tagb">Rehber · İSG</span><h4>Yapay Zeka ile İş Güvenliği: Kamera ile KKD ve Tehlikeli Alan Denetimi</h4><p>Baret, yelek ve tehlikeli bölge ihlallerinin mevcut kameralarla 7/24 nasıl denetlendiğini adım adım anlatıyoruz.</p></div></a>
       <div class="bl">
-        <a class="bi rv" href="/blog/mevcut-ip-kamera-yapay-zeka"><img src="img/01-kusbakisi.webp" alt="" loading="lazy"><div><small>Altyapı</small><b>Mevcut IP kameralar yapay zeka için yeterli mi?</b></div></a>
-        <a class="bi rv" href="/blog/oee-nasil-hesaplanir"><img src="img/05-uretim-hatti.webp" alt="" loading="lazy"><div><small>Verimlilik</small><b>OEE nasıl hesaplanır? Kamera ile otomatik OEE takibi</b></div></a>
-        <a class="bi rv" href="/blog/kvkk-kamera-yapay-zeka"><img src="img/00-genel.webp" alt="" loading="lazy"><div><small>KVKK</small><b>Fabrikada yapay zeka kamera analitiği ve KVKK: uyum rehberi</b></div></a>
-        <a class="bi rv" href="/blog/forklift-yaya-carpisma-riski-yapay-zeka"><img src="img/04-forklift.webp" alt="" loading="lazy"><div><small>İSG</small><b>Forklift–yaya çarpışma riski yapay zeka ile nasıl izlenir?</b></div></a>
+        <a class="bi rv" href="/blog/mevcut-ip-kamera-yapay-zeka"><img src="img/01-kusbakisi.webp" srcset="img/01-kusbakisi-sm.webp 720w, img/01-kusbakisi.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="" loading="lazy"><div><small>Altyapı</small><b>Mevcut IP kameralar yapay zeka için yeterli mi?</b></div></a>
+        <a class="bi rv" href="/blog/oee-nasil-hesaplanir"><img src="img/05-uretim-hatti.webp" srcset="img/05-uretim-hatti-sm.webp 720w, img/05-uretim-hatti.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="" loading="lazy"><div><small>Verimlilik</small><b>OEE nasıl hesaplanır? Kamera ile otomatik OEE takibi</b></div></a>
+        <a class="bi rv" href="/blog/kvkk-kamera-yapay-zeka"><img src="img/00-genel.webp" srcset="img/00-genel-sm.webp 720w, img/00-genel.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="" loading="lazy"><div><small>KVKK</small><b>Fabrikada yapay zeka kamera analitiği ve KVKK: uyum rehberi</b></div></a>
+        <a class="bi rv" href="/blog/forklift-yaya-carpisma-riski-yapay-zeka"><img src="img/04-forklift.webp" srcset="img/04-forklift-sm.webp 720w, img/04-forklift.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="" loading="lazy"><div><small>İSG</small><b>Forklift–yaya çarpışma riski yapay zeka ile nasıl izlenir?</b></div></a>
       </div>
     </div>
   </div>
@@ -644,7 +648,7 @@ main,section,footer{max-width:100vw;overflow-x:clip}
 
 <div class="wrap" id="pilot">
   <div class="cta rv">
-    <img src="img/00-genel.webp" alt="">
+    <img src="img/00-genel.webp" srcset="img/00-genel-sm.webp 720w, img/00-genel.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="">
     <div class="in">
       <h2 class="h">Sahanızda iki haftada görün.<span>Bir kamera, bir modül, gerçek veri.</span></h2>
       <div class="pillg"><a href="#iletisim">İletişim</a><a class="d" href="#iletisim">Demo talep et</a></div>
@@ -827,8 +831,13 @@ document.querySelectorAll('form[data-form]').forEach(f=>f.addEventListener('subm
 
 
 /* dil değişince aynı yerde kal */
-document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{document.cookie=document.documentElement.lang==='en'?'hv_tr=1;path=/;max-age=31536000;samesite=lax':'hv_tr=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
+document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{var _toTr=document.documentElement.lang==='en';document.cookie=(_toTr?'hv_tr':'hv_en')+'=1;path=/;max-age=31536000;samesite=lax';document.cookie=(_toTr?'hv_en':'hv_tr')+'=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
 (()=>{try{const s=JSON.parse(sessionStorage.getItem('hvScroll')||'null');if(!s)return;sessionStorage.removeItem('hvScroll');document.documentElement.style.scrollBehavior='auto';const go=()=>scrollTo(0,Math.round(s.r*Math.max(1,document.documentElement.scrollHeight-innerHeight)));go();addEventListener('load',go,{once:true});setTimeout(()=>{document.documentElement.style.scrollBehavior=''},800)}catch(_){}})();
+
+
+/* Instagram: son 5 video lead panelinden (yoksa sayfadaki hazır liste kalır) */
+(async()=>{try{const t=document.getElementById('igTrack');if(!t)return;const r=await fetch('https://lead.hypevisionlab.com/api/public/ig-reels',{cache:'no-store'});if(!r.ok)return;const j=await r.json();if(!j.items||!j.items.length)return;
+const L=document.documentElement.lang==='en'?'en-GB':'tr-TR';t.innerHTML=j.items.map(i=>'<a class="igp" href="'+i.url+'" target="_blank" rel="noopener"><img src="'+i.thumb+'" alt="Hype Vision Instagram video" loading="lazy" referrerpolicy="no-referrer"><span class="ty">▶</span><span class="dt">'+new Date(i.date).toLocaleDateString(L,{day:'numeric',month:'long',year:'numeric'})+'</span></a>').join('')}catch(_){}})();
 
 /* misc */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});

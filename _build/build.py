@@ -136,7 +136,7 @@ def build_en_home():
         t = s.strip()
         if not t: continue
         if t in I18N.T: s.replace_with(s.replace(t, I18N.T[t]))
-        elif re.search(r"[çğıöşüÇĞİÖŞÜ]", t): miss.append(t)
+        elif re.search(r"[çğıöşüÇĞİÖŞÜ]", t) and not s.find_parent(class_=["vk", "hfaq"]) and "Bilişim Vadisi" not in t: miss.append(t)
     for el in soup.find_all(attrs={"placeholder": True}):
         el["placeholder"] = I18N.T.get("PH:" + el["placeholder"], el["placeholder"])
     md = soup.find("meta", attrs={"name": "description"})
@@ -173,6 +173,7 @@ def build_en_home():
     out = out.replace("Uyum son 6 ayda", "Compliance rose").replace("'ya yükseldi", "")
     S = "https://hypevisionlab.com"
     out = out.replace(f'<link rel="canonical" href="{S}/">', f'<link rel="canonical" href="{S}/en/">')
+    out = out.replace("/img/og-tr.jpg", "/img/og-en.jpg").replace("Yapay zekânın gücü, kameralarınızda.", "The power of AI, in your cameras.")
     out = out.replace('<meta property="og:locale" content="tr_TR">', '<meta property="og:locale" content="en_US">').replace(f'<meta property="og:url" content="{S}/">', f'<meta property="og:url" content="{S}/en/">')
     out = out.replace('content="Hype Vision — Kameralarınız için Yapay Zekâ"', 'content="Hype Vision — AI for Your Existing Cameras"')
     out = out.replace('content="Mevcut kameralarınızla 7/24 İSG, kalite ve verimlilik denetimi. Marka fark etmez, KVKK uyumlu."', 'content="24/7 safety, quality and productivity monitoring with the cameras you already have. Brand-agnostic and privacy-compliant."')
@@ -217,7 +218,7 @@ def shell(title, desc, body, path, lang="tr", faq=None, crumbs=None, kind="page"
     SITEMAP.append((path, tr_url if (tr_url and en_url) else None, en_url if (tr_url and en_url) else None))
     if path != "/404": LLMS.append((lang, title, path, desc, kind))
     header = pp["header"].replace('class="hvlang" href="/en/"', f'class="hvlang" href="{alt or "/en/"}"').replace('class="hvlang" href="/"', f'class="hvlang" href="{alt or "/"}"')
-    img = SITE + (image or "/img/og-image.png")
+    img = SITE + ("/img/og-tr.jpg" if lang == "tr" else "/img/og-en.jpg")
     graph = [ORG, {"@type": "WebPage", "@id": SITE + path, "url": SITE + path, "name": title, "description": desc, "inLanguage": "tr-TR" if lang == "tr" else "en", "isPartOf": {"@id": SITE + "/#site"}}]
     if crumbs:
         graph.append({"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": SITE + u} for i, (n, u) in enumerate(crumbs)]})
@@ -250,6 +251,11 @@ def shell(title, desc, body, path, lang="tr", faq=None, crumbs=None, kind="page"
 <meta property="og:title" content="{E(title)}">
 <meta property="og:description" content="{E(desc)}">
 <meta property="og:image" content="{img}">
+<meta property="og:image:secure_url" content="{img}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="{img}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -453,6 +459,14 @@ def fix_file(f):
         t = link(m.group(2) or "/", lang)
         return m.group(1) + (t if t else (H(lang) + "#iletisim")) + '"'
     s2 = re.sub(r'(<a\b[^>]*?\bhref=")https://hypevisionlab\.com(/[^"]*)?"', rep, s)
+    # mobil için küçük görsel: -sm.webp varsa srcset ekle
+    def _ss(m):
+        tag, src = m.group(0), m.group(1)
+        if "srcset=" in tag: return tag
+        sm = src[:-5] + "-sm.webp"
+        if not os.path.exists(os.path.join(ROOT, sm.lstrip("/"))): return tag
+        return tag.replace(f'src="{src}"', f'src="{src}" srcset="{sm} 720w, {src} 1600w" sizes="(max-width: 760px) 100vw, 50vw"', 1)
+    s2 = re.sub(r'<img\b[^>]*\bsrc="(/?img/[^"]+?\.webp)"[^>]*>', _ss, s2)
     # eski siteyle aynı URL politikası: iç linklerde sonda / yok (/ ve /en/ hariç)
     s2 = re.sub(r'href="(/(?!en/["#])[^"#?]*?[^/"#?])/(#[^"]*)?"', lambda m: f'href="{m.group(1)}{m.group(2) or ""}"', s2)
     if s2 != s: open(f, "w", encoding="utf-8").write(s2); return 1
@@ -474,9 +488,11 @@ REDIR = """# Müşteri sunumu (eski React uygulaması, şifreli)
 /sunum/*    /sunum-app.html   200
 /en/sunum/*  /sunum-app.html  200
 
-# Varsayılan dil İngilizce: TR seçen (hv_tr çerezi) ana sayfada kalır
+# Dil: seçilmiş dil çerezi, yoksa tarayıcı dili (Türkçe → TR ana sayfa, diğerleri → /en/)
 /   /index.html   200!   Cookie=hv_tr
-/   /en/   302
+/   /en/          302!   Cookie=hv_en
+/   /index.html   200!   Language=tr
+/   /en/          302
 
 # Eski adresler (301) — eski sitenin _redirects kuralları + bu sürümde kaldırılan sayfalar
 /goruntu-isleme              /endustriyel-goruntu-isleme   301
@@ -509,6 +525,7 @@ REDIR = """# Müşteri sunumu (eski React uygulaması, şifreli)
 /ru/*                        /en                           301
 /_build/*                    /404.html                      404
 /src/*                       /404.html                      404
+/panel/*                     /404.html                      404
 /content.json                /404.html                      404
 """
 open(os.path.join(ROOT, "_redirects"), "w", encoding="utf-8").write(REDIR)
@@ -546,5 +563,5 @@ llms = f"""# Hype Vision
 """
 open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8").write(llms)
 
-print(f"EN ana sayfa: çevrilmeyen {len(miss)} metin" + (": " + " | ".join(miss[:12]) if miss else ""))
+print("EN ana sayfa: tüm metinler çevrildi" if not miss else f"UYARI — EN ana sayfada çevrilmeyen {len(miss)} metin (i18n.py T sözlüğüne ekleyin): " + " | ".join(miss[:12]))
 print(f"sayfa: {len(seen)} (sitemap) | eski link düzeltilen dosya: {cnt}")

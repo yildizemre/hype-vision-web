@@ -15,7 +15,12 @@
 <meta property="og:url" content="https://hypevisionlab.com/en/terms-of-service">
 <meta property="og:title" content="Terms of Service">
 <meta property="og:description" content="The rights, obligations and responsibilities that apply to using the Hype Vision platform.">
-<meta property="og:image" content="https://hypevisionlab.com/img/og-image.png">
+<meta property="og:image" content="https://hypevisionlab.com/img/og-en.jpg">
+<meta property="og:image:secure_url" content="https://hypevisionlab.com/img/og-en.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://hypevisionlab.com/img/og-en.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -668,11 +673,16 @@ document.querySelectorAll('form[data-form]').forEach(f=>f.addEventListener('subm
 
 
 /* dil değişince aynı yerde kal */
-document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{document.cookie=document.documentElement.lang==='en'?'hv_tr=1;path=/;max-age=31536000;samesite=lax':'hv_tr=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
+document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{var _toTr=document.documentElement.lang==='en';document.cookie=(_toTr?'hv_tr':'hv_en')+'=1;path=/;max-age=31536000;samesite=lax';document.cookie=(_toTr?'hv_en':'hv_tr')+'=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
 (()=>{try{const s=JSON.parse(sessionStorage.getItem('hvScroll')||'null');if(!s)return;sessionStorage.removeItem('hvScroll');document.documentElement.style.scrollBehavior='auto';const go=()=>scrollTo(0,Math.round(s.r*Math.max(1,document.documentElement.scrollHeight-innerHeight)));go();addEventListener('load',go,{once:true});setTimeout(()=>{document.documentElement.style.scrollBehavior=''},800)}catch(_){}})();
 
+
+/* Instagram: son 5 video lead panelinden (yoksa sayfadaki hazır liste kalır) */
+(async()=>{try{const t=document.getElementById('igTrack');if(!t)return;const r=await fetch('https://lead.hypevisionlab.com/api/public/ig-reels',{cache:'no-store'});if(!r.ok)return;const j=await r.json();if(!j.items||!j.items.length)return;
+const L=document.documentElement.lang==='en'?'en-GB':'tr-TR';t.innerHTML=j.items.map(i=>'<a class="igp" href="'+i.url+'" target="_blank" rel="noopener"><img src="'+i.thumb+'" alt="Hype Vision Instagram video" loading="lazy" referrerpolicy="no-referrer"><span class="ty">▶</span><span class="dt">'+new Date(i.date).toLocaleDateString(L,{day:'numeric',month:'long',year:'numeric'})+'</span></a>').join('')}catch(_){}})();
+
 /* dil değişince aynı yerde kal */
-document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{document.cookie=document.documentElement.lang==='en'?'hv_tr=1;path=/;max-age=31536000;samesite=lax':'hv_tr=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
+document.querySelectorAll('.hvlang').forEach(a=>a.addEventListener('click',()=>{var _toTr=document.documentElement.lang==='en';document.cookie=(_toTr?'hv_tr':'hv_en')+'=1;path=/;max-age=31536000;samesite=lax';document.cookie=(_toTr?'hv_en':'hv_tr')+'=;path=/;max-age=0';try{sessionStorage.setItem('hvScroll',JSON.stringify({y:scrollY,r:scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)}))}catch(_){}}));
 (()=>{try{const s=JSON.parse(sessionStorage.getItem('hvScroll')||'null');if(!s)return;sessionStorage.removeItem('hvScroll');document.documentElement.style.scrollBehavior='auto';const go=()=>scrollTo(0,Math.round(s.r*Math.max(1,document.documentElement.scrollHeight-innerHeight)));go();addEventListener('load',go,{once:true});setTimeout(()=>{document.documentElement.style.scrollBehavior=''},800)}catch(_){}})();
 </script>
 </body>

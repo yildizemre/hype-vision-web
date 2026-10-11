@@ -3,9 +3,11 @@
 /sunum/*    /sunum-app.html   200
 /en/sunum/*  /sunum-app.html  200
 
-# Varsayılan dil İngilizce: TR seçen (hv_tr çerezi) ana sayfada kalır
+# Dil: seçilmiş dil çerezi, yoksa tarayıcı dili (Türkçe → TR ana sayfa, diğerleri → /en/)
 /   /index.html   200!   Cookie=hv_tr
-/   /en/   302
+/   /en/          302!   Cookie=hv_en
+/   /index.html   200!   Language=tr
+/   /en/          302
 
 # Eski adresler (301) — eski sitenin _redirects kuralları + bu sürümde kaldırılan sayfalar
 /goruntu-isleme              /endustriyel-goruntu-isleme   301
@@ -38,4 +40,5 @@
 /ru/*                        /en                           301
 /_build/*                    /404.html                      404
 /src/*                       /404.html                      404
+/panel/*                     /404.html                      404
 /content.json                /404.html                      404
