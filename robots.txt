@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /_build/
+Disallow: /sunum
+Disallow: /en/sunum
 
 Sitemap: https://hypevisionlab.com/sitemap.xml

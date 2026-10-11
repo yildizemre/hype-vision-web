@@ -1,3 +1,8 @@
+# Müşteri sunumu (eski React uygulaması, şifreli)
+/sunum      /sunum-app.html   200
+/sunum/*    /sunum-app.html   200
+/en/sunum/*  /sunum-app.html  200
+
 # Varsayılan dil İngilizce: TR seçen (hv_tr çerezi) ana sayfada kalır
 /   /index.html   200!   Cookie=hv_tr
 /   /en/   302

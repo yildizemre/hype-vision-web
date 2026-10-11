@@ -468,8 +468,13 @@ for loc, tr, en in SITEMAP:
     alts = f'<xhtml:link rel="alternate" hreflang="tr" href="{SITE}{tr}"/><xhtml:link rel="alternate" hreflang="en" href="{SITE}{en}"/>' if tr and en else ""
     urls.append(f"<url><loc>{SITE}{loc}</loc><lastmod>{today}</lastmod>{alts}</url>")
 open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(urls) + "\n</urlset>\n")
-open(os.path.join(ROOT, "robots.txt"), "w", encoding="utf-8").write(f"User-agent: *\nAllow: /\nDisallow: /_build/\n\nSitemap: {SITE}/sitemap.xml\n")
-REDIR = """# Varsayılan dil İngilizce: TR seçen (hv_tr çerezi) ana sayfada kalır
+open(os.path.join(ROOT, "robots.txt"), "w", encoding="utf-8").write(f"User-agent: *\nAllow: /\nDisallow: /_build/\nDisallow: /sunum\nDisallow: /en/sunum\n\nSitemap: {SITE}/sitemap.xml\n")
+REDIR = """# Müşteri sunumu (eski React uygulaması, şifreli)
+/sunum      /sunum-app.html   200
+/sunum/*    /sunum-app.html   200
+/en/sunum/*  /sunum-app.html  200
+
+# Varsayılan dil İngilizce: TR seçen (hv_tr çerezi) ana sayfada kalır
 /   /index.html   200!   Cookie=hv_tr
 /   /en/   302
 
