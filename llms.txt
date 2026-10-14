@@ -91,6 +91,7 @@
 - [400 kamerada alan bazlı KKD denetimi: baret, yelek, iş ayakkabısı ve eldiven](https://hypevisionlab.com/vaka-calismalari/400-kamera-alan-bazli-kkd-denetimi): Büyük bir üretim ve depolama tesisinde 400 kamera üzerinde baret ve yelek denetimi devreye alındı; giriş kapılarında iş ayakkabısı ve eldiven kontrolü eklendi, her alan için ayrı KKD kuralı tanımlandı.
 
 ## Rehberler
+- [Yapay Zeka ile Endüstriyel Güvenlik ve Verimlilik](https://hypevisionlab.com/blog/yapay-zeka-ile-uretim-kalite-kontrolu-2): Endüstriyel tesislerde IP kamera ve yapay zekâ analitiği kullanımı ile güvenlik ve verimlilikte devrim. Kurulum, avantajlar ve dikkat edilmesi gerekenler burada.
 - [Fabrikada görüntü işleme / yapay zekâ kamera sistemi maliyeti neye bağlıdır?](https://hypevisionlab.com/blog/goruntu-isleme-maliyeti-neye-baglidir): Görüntü işleme projesinin maliyetini belirleyen kalemler: kamera sayısı, modüller, donanım, entegrasyon ve lisans modeli.
 - [Görüntü işleme projesi ne kadar sürer?](https://hypevisionlab.com/blog/goruntu-isleme-projesi-ne-kadar-surer): Endüstriyel görüntü işleme / yapay zekâ kamera projesinde keşif, kurulum, pilot ve yaygınlaştırma süreleri.
 - [Fabrikada KKD kontrolü için hangi kamera gerekir?](https://hypevisionlab.com/blog/kkd-kontrolu-icin-hangi-kamera-gerekir): Baret, yelek, eldiven ve iş ayakkabısı tespiti için kamera çözünürlüğü, açı, mesafe ve ışık gereksinimleri; mevcut kameraların yeterli olup olmadığı.

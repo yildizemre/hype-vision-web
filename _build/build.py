@@ -507,6 +507,7 @@ def fix_file(f):
     s2 = re.sub(r'<img\b[^>]*\bsrc="(/?img/[^"]+?\.webp)"[^>]*>', _ss, s2)
     s2 = re.sub(r'srcset="([^"]+)"', lambda m: 'srcset="' + ', '.join(('/' + x.strip() if x.strip().startswith('img/') else x.strip()) for x in m.group(1).split(',')) + '"', s2)
     s2 = SX.fill_alts(s2, lang)
+    if '/hvt.js' not in s2 and '</body>' in s2: s2 = s2.replace('</body>', '<script src="/hvt.js" defer></script></body>', 1)
     # ilk görsel hariç tüm görseller tembel yüklensin
     _n = [0]
     def _lazy(m):
