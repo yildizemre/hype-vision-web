@@ -28,6 +28,7 @@ UI = {  # build.py şablon metinleri
 }
 
 T = {
+"Telefonunuzu bırakın, biz arayalım": "Leave your phone number, we'll call you", "Adınız": "Your name", "Firma": "Company", "Telefon (05xx…)": "Phone", "Beni arayın": "Call me",
 "Mevzuat rehberi": "Compliance guide", "Bölgeler": "Regions", "İSG & KVKK mevzuatı": "Safety & privacy compliance", "Bölgeler ve OSB'ler": "Regions & industrial zones",
 "Yapay Zekâ ile Görüntü İşleme ve İSG Çözümleri | Hype Vision": "AI Computer Vision for Industrial Safety & Quality | Hype Vision",
 "META:Hype Vision, mevcut güvenlik kameralarınızı yapay zekâ ile akıllandırır. Fabrikalarda İSG, KKD tespiti, kalite kontrol ve üretim verimliliğini analiz edin.": "Hype Vision makes your existing security cameras smart with AI. Analyse safety, PPE compliance, quality control and production efficiency in your factory.",

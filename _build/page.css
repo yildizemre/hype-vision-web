@@ -85,3 +85,7 @@
 .badge{display:inline-block;font-size:12px;font-weight:700;padding:3px 9px;border-radius:99px;background:var(--pill);color:var(--pillInk)}
 .badge.w{background:#FFF3D6;color:#7A5200}
 @media (max-width:900px){.pre{grid-template-columns:1fr}.hubl,.tm{grid-template-columns:1fr}.tool .row,.kpi4{grid-template-columns:1fr 1fr}}
+.hvcb{display:grid;gap:8px;background:#1F2023;border-radius:14px;padding:16px}.hvcb b{font-size:15px}
+.hvcb input{font:inherit;font-size:15px;background:#fff;color:#1D1E20;border:0;border-radius:10px;padding:12px 14px}
+.hvcb button{font:inherit;font-weight:700;background:var(--pill);color:var(--pillInk);border:0;border-radius:99px;padding:13px;cursor:pointer}.hvcb button:disabled{opacity:.6}
+.hvcb-msg{color:#FFB4A8;min-height:0}.hvcb-ok{color:#fff;font-weight:600;padding:8px 2px}

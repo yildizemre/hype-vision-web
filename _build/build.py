@@ -191,6 +191,7 @@ def build_en_home():
     if egen and egen["faq"]:
         out = re.sub(r'\{"@type": "FAQPage".*?\]\}\]\}', lambda m: json.dumps({"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in egen["faq"]]}, ensure_ascii=False) + "]}", out, count=1, flags=re.S)
     os.makedirs(os.path.join(ROOT, "en"), exist_ok=True)
+    for _a, _b in (('placeholder="Adınız"', 'placeholder="Your name"'), ('placeholder="Firma"', 'placeholder="Company"'), ('placeholder="Telefon (05xx…)"', 'placeholder="Phone number"')): out = out.replace(_a, _b)
     open(os.path.join(ROOT, "en", "index.html"), "w", encoding="utf-8").write(out)
     return miss
 
