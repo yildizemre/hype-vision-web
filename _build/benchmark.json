@@ -1,0 +1,56 @@
+{
+ "measured": false,
+ "date": "",
+ "method": "Yöntem: Her ölçümde model sürümü, girdi çözünürlüğü, GPU, sürücü/TensorRT sürümü, toplu işlem boyutu ve video çözme (decode) dahil uçtan uca kare/sn ile ortalama gecikme raporlanır. Değerler Hype Vision laboratuvarında ölçüldükçe tabloya eklenir.",
+ "calc_note": "Hesaplayıcıdaki GPU başına kapasite değerleri planlama içindir (tek RTX 4090 sınıfı GPU, 640 px girdi, video çözme dahil, temkinli varsayım). Kesin donanım; pilot sırasında sizin kameralarınız ve modülleriniz üzerinde ölçülerek belirlenir.",
+ "calc_models": [
+  {
+   "name": "Hype-Model-N (edge, hızlı)",
+   "fps": 800
+  },
+  {
+   "name": "Hype-Model-S (dengeli)",
+   "fps": 500
+  },
+  {
+   "name": "Hype-Model-M (yüksek doğruluk)",
+   "fps": 250
+  },
+  {
+   "name": "Hype-Model-L (en yüksek doğruluk)",
+   "fps": 120
+  }
+ ],
+ "rows": [
+  {
+   "model": "Hype-Model-N",
+   "task": "Kişi / KKD tespiti",
+   "input": "640 px",
+   "gpu": "RTX 4090"
+  },
+  {
+   "model": "Hype-Model-S",
+   "task": "Kişi / KKD / araç",
+   "input": "640 px",
+   "gpu": "RTX 4090"
+  },
+  {
+   "model": "Hype-Model-M",
+   "task": "Çok sınıflı tespit",
+   "input": "640 px",
+   "gpu": "RTX 4090"
+  },
+  {
+   "model": "Hype-Model-L",
+   "task": "Kalite / küçük nesne",
+   "input": "1280 px",
+   "gpu": "RTX 4090"
+  },
+  {
+   "model": "Hype-Model-N",
+   "task": "Edge cihaz",
+   "input": "640 px",
+   "gpu": "Jetson Orin"
+  }
+ ]
+}

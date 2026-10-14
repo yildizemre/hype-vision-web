@@ -28,6 +28,14 @@ UI = {  # build.py şablon metinleri
 }
 
 T = {
+"Yapay Zekâ ile Görüntü İşleme ve İSG Çözümleri | Hype Vision": "AI Computer Vision for Industrial Safety & Quality | Hype Vision",
+"META:Hype Vision, mevcut güvenlik kameralarınızı yapay zekâ ile akıllandırır. Fabrikalarda İSG, KKD tespiti, kalite kontrol ve üretim verimliliğini analiz edin.": "Hype Vision makes your existing security cameras smart with AI. Analyse safety, PPE compliance, quality control and production efficiency in your factory.",
+"Kaynaklar": "Resources", "Teknik merkez": "Technical hub", "Kameram uygun mu?": "Is my camera compatible?", "Uygulama atlası": "Application atlas", "Entegrasyonlar": "Integrations", "GPU hesaplayıcı": "GPU calculator", "Sözlük": "Glossary",
+"Yapay zekâ destekli görüntü işleme ile fabrikanızı akıllandırın.": "Make your factory smarter with AI-powered computer vision.", "Mevcut kameralarınızla İSG, kalite kontrol ve verimlilik.": "Safety, quality control and productivity with your existing cameras.",
+"Ücretsiz · 15 dakika": "Free · 15 minutes", "Fabrikanızda yapay zekâ ile neleri tespit edebiliriz?": "What can AI detect in your factory?",
+"Mevcut güvenlik kameralarınız üzerinden yapılabilecek İSG, kalite kontrol ve üretim analizlerini birlikte değerlendirelim.": "Let's review together which safety, quality and production analytics your existing cameras can deliver.",
+"15 dakikalık ücretsiz teknik görüşme": "Free 15-minute technical call", "Kamera altyapısı ön değerlendirmesi": "Camera infrastructure pre-assessment", "Uygulanabilir yapay zekâ senaryoları": "Feasible AI scenarios",
+"Ön analiz talep et →": "Request a free pre-assessment →", "WhatsApp'tan yazın": "Chat on WhatsApp", "Teknik merkez ": "Technical hub ",
 "Bize yazın": "Chat with us", "Genelde birkaç dakikada dönüyoruz": "We usually reply within minutes",
 "Katalog": "Catalogue", "Ürün kataloğu (PDF)": "Product catalogue (PDF)",
 "Giriş yap": "Log in", "Hakkımızda": "About us", "Vakalar": "Case studies",
@@ -137,7 +145,7 @@ T = {
 "İş ortaklığı": "Partners", "Kariyer": "Careers", "Yasal": "Legal", "Hizmet Şartları": "Terms of Service", "Çerez Politikası": "Cookie Policy",
 "PH:Tesisiniz, kamera sayısı ve çözmek istediğiniz problem…": "Your facility, number of cameras and the problem you want to solve…",
 "PH:E-posta adresiniz": "Your email address",
-"META:Hype Vision, mevcut kameralarınızı yapay zekâ ile sahanızı anlayan bir sisteme dönüştürür. Anlık uyarılar, asistan ile sorgulanabilir veri, yönetim içgörüleri.": "Hype Vision turns your existing cameras into an AI system that understands your site: real-time alerts, data you can query with an assistant, and management insights.",
+"META:__old__ yapay zekâ ile sahanızı anlayan bir sisteme dönüştürür. Anlık uyarılar, asistan ile sorgulanabilir veri, yönetim içgörüleri.": "Hype Vision turns your existing cameras into an AI system that understands your site: real-time alerts, data you can query with an assistant, and management insights.",
 }
 
 # Ana sayfa JS veri blokları (TR -> EN, sırayla birebir değiştirilir)

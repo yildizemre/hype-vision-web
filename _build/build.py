@@ -167,6 +167,10 @@ def build_en_home():
             if b.startswith("/#"): a["href"] = "/en/" + b[1:]; continue
             a["href"] = link(b, "en") or "/en/#iletisim"
     WA_EN = ('https://wa.me/905412609190?text=Merhaba%2C%20bilgi%20almak%20istiyorum.', 'https://wa.me/905412609190?text=Hello%2C%20I%27d%20like%20to%20get%20more%20information.')
+    S_ = "https://hypevisionlab.com"
+    for tag in soup.find_all("link", rel="canonical"): tag["href"] = S_ + "/en/"
+    for tag in soup.find_all("meta", property="og:url"): tag["content"] = S_ + "/en/"
+    for tag in soup.find_all("meta", property="og:locale"): tag["content"] = "en_US"
     out = str(soup).replace(WA_EN[0], WA_EN[1]).replace('https://wa.me/905412609190?text=Merhaba%2C%20bilgi%20almak%20istiyorum.', 'https://wa.me/905412609190?text=Hello%2C%20I%27d%20like%20to%20get%20more%20information.').replace('<span class="on">TR</span><span>EN</span>', '<span>TR</span><span class="on">EN</span>')
     out = re.sub(r"<script>/\* varsayılan dil.*?</script>", "", out, flags=re.S)
     for a, b in I18N.JS: out = out.replace(a, b)
@@ -177,7 +181,7 @@ def build_en_home():
     out = out.replace(f'<link rel="canonical" href="{S}/">', f'<link rel="canonical" href="{S}/en/">')
     out = out.replace("/img/og-tr.jpg", "/img/og-en.jpg").replace("Yapay zekânın gücü, kameralarınızda.", "The power of AI, in your cameras.")
     out = out.replace('<meta property="og:locale" content="tr_TR">', '<meta property="og:locale" content="en_US">').replace(f'<meta property="og:url" content="{S}/">', f'<meta property="og:url" content="{S}/en/">')
-    out = out.replace('content="Hype Vision — Kameralarınız için Yapay Zekâ"', 'content="Hype Vision — AI for Your Existing Cameras"')
+    out = out.replace('content="Yapay Zekâ ile Görüntü İşleme ve İSG Çözümleri | Hype Vision"', 'content="AI Computer Vision for Industrial Safety & Quality | Hype Vision"')
     out = out.replace('content="Mevcut kameralarınızla 7/24 İSG, kalite ve verimlilik denetimi. Marka fark etmez, KVKK uyumlu."', 'content="24/7 safety, quality and productivity monitoring with the cameras you already have. Brand-agnostic and privacy-compliant."')
     if egen and egen["faq"]:
         out = re.sub(r'\{"@type": "FAQPage".*?\]\}\]\}', lambda m: json.dumps({"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in egen["faq"]]}, ensure_ascii=False) + "]}", out, count=1, flags=re.S)
@@ -216,7 +220,7 @@ def shell(title, desc, body, path, lang="tr", faq=None, crumbs=None, kind="page"
     tr_url, en_url = (path, alt) if lang == "tr" else (alt, path)
     hl = ""
     if tr_url and en_url:
-        hl = f'<link rel="alternate" hreflang="tr" href="{SITE}{tr_url}">\n<link rel="alternate" hreflang="en" href="{SITE}{en_url}">\n<link rel="alternate" hreflang="x-default" href="{SITE}{en_url}">'
+        hl = f'<link rel="alternate" hreflang="tr" href="{SITE}{tr_url}">\n<link rel="alternate" hreflang="en" href="{SITE}{en_url}">\n<link rel="alternate" hreflang="x-default" href="{SITE}{tr_url}">'
     SITEMAP.append((path, tr_url if (tr_url and en_url) else None, en_url if (tr_url and en_url) else None))
     if path != "/404": LLMS.append((lang, title, path, desc, kind))
     header = pp["header"].replace('class="hvlang" href="/en/"', f'class="hvlang" href="{alt or "/en/"}"').replace('class="hvlang" href="/"', f'class="hvlang" href="{alt or "/"}"')
@@ -290,6 +294,7 @@ def H(lang):  # ana sayfa kökü
     return "/" if lang == "tr" else "/en/"
 
 def cta(lang="tr"):
+    if lang == "tr": return load_mod("hub").PRE
     u = U[lang]; h = H(lang)
     return f"""<div class="wrap endcta"><div class="cta rv"><img src="/img/det-kusbakisi.webp" alt=""><div class="in">
 <h2 class="h">{u['cta_h']}<span>{u['cta_s']}</span></h2>
@@ -480,6 +485,8 @@ load_mod("pages_extra").run(ctx, "tr")
 load_mod("pages_extra").run(ctx, "en")
 load_mod("katalog").run(ctx, "tr"); load_mod("katalog").run(ctx, "en")
 load_mod("ig").run(ctx, "tr"); load_mod("ig").run(ctx, "en")
+ctx["ROOT"] = ROOT
+HUB = load_mod("hub"); HUB_PATHS = HUB.run(ctx)
 
 # ------------------------------------------------------------------ eski siteye giden <a> linklerini temizle
 def fix_file(f):
@@ -529,10 +536,7 @@ REDIR = """# Müşteri sunumu (eski React uygulaması, şifreli)
 /en/sunum/*  /sunum-app.html  200
 
 # Dil: seçilmiş dil çerezi, yoksa tarayıcı dili (Türkçe → TR ana sayfa, diğerleri → /en/)
-/   /index.html   200!   Cookie=hv_tr
 /   /en/          302!   Cookie=hv_en
-/   /index.html   200!   Language=tr
-/   /en/          302
 
 # Eski adresler (301) — eski sitenin _redirects kuralları + bu sürümde kaldırılan sayfalar
 /goruntu-isleme              /endustriyel-goruntu-isleme   301
@@ -630,3 +634,4 @@ open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8").write(llms)
 print("EN ana sayfa: tüm metinler çevrildi" if not miss else f"UYARI — EN ana sayfada çevrilmeyen {len(miss)} metin (i18n.py T sözlüğüne ekleyin): " + " | ".join(miss[:12]))
 print(f"sayfa: {len(seen)} (sitemap) | eski link düzeltilen dosya: {cnt}")
 exec(open(os.path.join(ROOT, "_build", "check_imgs.py"), encoding="utf-8").read())
+exec(open(os.path.join(ROOT, "_build", "check_canon.py"), encoding="utf-8").read())

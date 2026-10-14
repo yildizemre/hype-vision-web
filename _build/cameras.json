@@ -1,0 +1,232 @@
+{
+ "brands": [
+  "Hikvision",
+  "Dahua",
+  "Axis",
+  "Uniview",
+  "Hanwha Vision",
+  "Bosch",
+  "Diğer (ONVIF)"
+ ],
+ "brandInfo": {
+  "Hikvision": {
+   "rtsp": "rtsp://kullanıcı:şifre@IP:554/Streaming/Channels/101 (ana) · /102 (alt)"
+  },
+  "Dahua": {
+   "rtsp": "rtsp://kullanıcı:şifre@IP:554/cam/realmonitor?channel=1&amp;subtype=0 (ana) · subtype=1 (alt)"
+  },
+  "Axis": {
+   "rtsp": "rtsp://kullanıcı:şifre@IP/axis-media/media.amp (parametre ile çözünürlük/fps)"
+  },
+  "Uniview": {
+   "rtsp": "rtsp://kullanıcı:şifre@IP:554/unicast/c1/s0/live (ana) · s1 (alt)"
+  },
+  "Hanwha Vision": {
+   "rtsp": "rtsp://kullanıcı:şifre@IP/profileN/media.smp (profil numarasına göre)"
+  },
+  "Bosch": {
+   "rtsp": "rtsp://kullanıcı:şifre@IP/?inst=1 (akış numarasına göre)"
+  },
+  "Diğer (ONVIF)": {
+   "rtsp": "ONVIF GetStreamUri ile otomatik alınır"
+  }
+ },
+ "families": [
+  {
+   "brand": "Hikvision",
+   "family": "DS-2CD1 (Value)",
+   "type": "Bullet / Dome / Turret",
+   "prefixes": [
+    "DS-2CD1"
+   ],
+   "onvif": true,
+   "tested": false,
+   "default": true
+  },
+  {
+   "brand": "Hikvision",
+   "family": "DS-2CD2 (Pro / AcuSense)",
+   "type": "Bullet / Dome / Turret",
+   "prefixes": [
+    "DS-2CD2"
+   ],
+   "onvif": true,
+   "tested": false,
+   "default": false
+  },
+  {
+   "brand": "Hikvision",
+   "family": "DS-2CD3 / DS-2CD5 (Pro / Ultra)",
+   "type": "Bullet / Dome / Box",
+   "prefixes": [
+    "DS-2CD3",
+    "DS-2CD5"
+   ],
+   "onvif": true,
+   "tested": false,
+   "default": false
+  },
+  {
+   "brand": "Hikvision",
+   "family": "iDS-2CD7 (DeepinView)",
+   "type": "Bullet / Dome",
+   "prefixes": [
+    "IDS-2CD7",
+    "DS-2CD7"
+   ],
+   "onvif": true,
+   "tested": false,
+   "default": false
+  },
+  {
+   "brand": "Hikvision",
+   "family": "DS-2DE / DS-2DF (PTZ)",
+   "type": "PTZ",
+   "prefixes": [
+    "DS-2DE",
+    "DS-2DF"
+   ],
+   "onvif": true,
+   "tested": false,
+   "default": false
+  },
+  {
+   "brand": "Dahua",
+   "family": "IPC-HFW (Bullet)",
+   "type": "Bullet",
+   "prefixes": [
+    "IPC-HFW",
+    "DH-IPC-HFW"
+   ],
+   "onvif": true,
+   "tested": false,
+   "default": true
+  },
+  {
+   "brand": "Dahua",
+   "family": "IPC-HDW (Eyeball / Turret)",
+   "type": "Turret",
+   "prefixes": [
+    "IPC-HDW",
+    "DH-IPC-HDW"
+   ],
+   "onvif": true,
+   "tested": false,
+   "default": false
+  },
+  {
+   "brand": "Dahua",
+   "family": "IPC-HDBW (Dome)",
+   "type": "Dome",
+   "prefixes": [
+    "IPC-HDBW",
+    "DH-IPC-HDBW"
+   ],
+   "onvif": true,
+   "tested": false,
+   "default": false
+  },
+  {
+   "brand": "Dahua",
+   "family": "SD (PTZ)",
+   "type": "PTZ",
+   "prefixes": [
+    "SD",
+    "DH-SD"
+   ],
+   "onvif": true,
+   "tested": false,
+   "default": false
+  },
+  {
+   "brand": "Axis",
+   "family": "M serisi (kompakt)",
+   "type": "Dome / Bullet / Box",
+   "prefixes": [
+    "M"
+   ],
+   "onvif": true,
+   "tested": false,
+   "default": true
+  },
+  {
+   "brand": "Axis",
+   "family": "P serisi (performans)",
+   "type": "Dome / Bullet / Box",
+   "prefixes": [
+    "P"
+   ],
+   "onvif": true,
+   "tested": false,
+   "default": false
+  },
+  {
+   "brand": "Axis",
+   "family": "Q serisi (gelişmiş)",
+   "type": "Bullet / PTZ / Box",
+   "prefixes": [
+    "Q"
+   ],
+   "onvif": true,
+   "tested": false,
+   "default": false
+  },
+  {
+   "brand": "Uniview",
+   "family": "IPC2 / IPC3",
+   "type": "Bullet / Dome / Turret",
+   "prefixes": [
+    "IPC2",
+    "IPC3"
+   ],
+   "onvif": true,
+   "tested": false,
+   "default": true
+  },
+  {
+   "brand": "Hanwha Vision",
+   "family": "X / Q / P serisi",
+   "type": "Bullet / Dome",
+   "prefixes": [
+    "XNO",
+    "XNV",
+    "XND",
+    "QNO",
+    "QNV",
+    "QND",
+    "PNO",
+    "PNV",
+    "PND"
+   ],
+   "onvif": true,
+   "tested": false,
+   "default": true
+  },
+  {
+   "brand": "Bosch",
+   "family": "FLEXIDOME / DINION",
+   "type": "Dome / Box / Bullet",
+   "prefixes": [
+    "NDE",
+    "NBE",
+    "NDI",
+    "NBN",
+    "NDV"
+   ],
+   "onvif": true,
+   "tested": false,
+   "default": true
+  },
+  {
+   "brand": "Diğer (ONVIF)",
+   "family": "ONVIF Profile S uyumlu IP kameralar",
+   "type": "Tüm türler",
+   "prefixes": [
+    ""
+   ],
+   "onvif": true,
+   "tested": false,
+   "default": true
+  }
+ ]
+}

@@ -4,10 +4,7 @@
 /en/sunum/*  /sunum-app.html  200
 
 # Dil: seçilmiş dil çerezi, yoksa tarayıcı dili (Türkçe → TR ana sayfa, diğerleri → /en/)
-/   /index.html   200!   Cookie=hv_tr
 /   /en/          302!   Cookie=hv_en
-/   /index.html   200!   Language=tr
-/   /en/          302
 
 # Eski adresler (301) — eski sitenin _redirects kuralları + bu sürümde kaldırılan sayfalar
 /goruntu-isleme              /endustriyel-goruntu-isleme   301
