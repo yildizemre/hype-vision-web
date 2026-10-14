@@ -63,9 +63,11 @@ ALT = {
  "duman": ("Açık alanda erken duman tespiti", "Early outdoor smoke detection"),
  "gida-idle": ("Gıda paketleme hattında aktif, boşta ve mola durumu takibi", "Active, idle and break tracking on a food packaging line"),
 }
+REV = {}  # imgseo: SEO dosya adı -> ALT anahtarı
 def _key(src):
     n = os.path.splitext(os.path.basename(src.split("?")[0]))[0]
-    return n[:-3] if n.endswith("-sm") else n
+    n = n[:-3] if n.endswith("-sm") else n
+    return REV.get(n, n)
 
 def fill_alts(html, lang):
     i = 0 if lang == "tr" else 1

@@ -10,6 +10,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://hypevisionlab.com"
 E = html.escape
 D = json.load(open(os.path.join(ROOT, "content.json"), encoding="utf-8"))
+# ek SSS (gen2: "Kullanıcılar şunları da sordu") -> çözüm/sektör sayfalarına eklenir
+for _g in ("solutions", "sectors"):
+    for _p in D[_g]:
+        _x = D.get("faqx", {}).get(_p["path"])
+        if _x: _p["faq"] = (_p.get("faq") or []) + [f for f in _x if f.get("q") not in {g.get("q") for g in (_p.get("faq") or [])}]
 
 def load_mod(name):
     spec = importlib.util.spec_from_file_location(name, os.path.join(ROOT, "_build", name + ".py"))
@@ -489,6 +494,7 @@ ctx["ROOT"] = ROOT
 HUB = load_mod("hub"); HUB_PATHS = HUB.run(ctx)
 
 # ------------------------------------------------------------------ eski siteye giden <a> linklerini temizle
+IMGSEO = load_mod("imgseo"); IMGSEO.SX = SX; IMGSEO._names()
 def fix_file(f):
     s = open(f, encoding="utf-8").read()
     lang = "en" if re.search(r'<html lang="en"', s) else "tr"
@@ -507,6 +513,7 @@ def fix_file(f):
     s2 = re.sub(r'<img\b[^>]*\bsrc="(/?img/[^"]+?\.webp)"[^>]*>', _ss, s2)
     s2 = re.sub(r'srcset="([^"]+)"', lambda m: 'srcset="' + ', '.join(('/' + x.strip() if x.strip().startswith('img/') else x.strip()) for x in m.group(1).split(',')) + '"', s2)
     s2 = SX.fill_alts(s2, lang)
+    s2 = IMGSEO.rewrite(s2, ROOT)
     if '/hvt.js' not in s2 and '</body>' in s2: s2 = s2.replace('</body>', '<script src="/hvt.js" defer></script></body>', 1)
     # ilk görsel hariç tüm görseller tembel yüklensin
     _n = [0]
@@ -530,7 +537,8 @@ for loc, tr, en in SITEMAP:
     alts = f'<xhtml:link rel="alternate" hreflang="tr" href="{SITE}{tr}"/><xhtml:link rel="alternate" hreflang="en" href="{SITE}{en}"/>' if tr and en else ""
     urls.append(f"<url><loc>{SITE}{loc}</loc><lastmod>{today}</lastmod>{alts}</url>")
 open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(urls) + "\n</urlset>\n")
-open(os.path.join(ROOT, "robots.txt"), "w", encoding="utf-8").write(f"User-agent: *\nAllow: /\nDisallow: /_build/\nDisallow: /sunum\nDisallow: /en/sunum\n\nSitemap: {SITE}/sitemap.xml\n")
+open(os.path.join(ROOT, "robots.txt"), "w", encoding="utf-8").write(f"User-agent: *\nAllow: /\nDisallow: /_build/\nDisallow: /sunum\nDisallow: /en/sunum\n\nSitemap: {SITE}/sitemap.xml\nSitemap: {SITE}/sitemap-images.xml\n")
+print("görsel sitemap sayfa:", IMGSEO.sitemap(ROOT, SITE))
 REDIR = """# Müşteri sunumu (eski React uygulaması, şifreli)
 /sunum      /sunum-app.html   200
 /sunum/*    /sunum-app.html   200
@@ -567,7 +575,17 @@ REDIR = """# Müşteri sunumu (eski React uygulaması, şifreli)
 /en/gizlilik-politikasi      /en/privacy-policy            301
 /en/hizmet-sartlari          /en/terms-of-service          301
 /en/cerez-politikasi         /en/cookie-policy             301
+/ru                          /en                           301
 /ru/*                        /en                           301
+/camera-assessment           /kamera-uyumluluk             301
+/case-studies                /vaka-calismalari             301
+/industries                  /sektorler                    301
+/partners                    /is-ortakligi                 301
+/resources                   /blog                         301
+/solutions                   /cozumler                     301
+/solutions/cctv-ai-analytics /cctv-yapay-zeka              301
+/iletisim                    /#iletisim                     301
+/en/iletisim                 /en/#iletisim                  301
 /_build/*                    /404.html                      404
 /src/*                       /404.html                      404
 /panel/*                     /404.html                      404

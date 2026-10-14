@@ -28,6 +28,7 @@ UI = {  # build.py şablon metinleri
 }
 
 T = {
+"Mevzuat rehberi": "Compliance guide", "Bölgeler": "Regions", "İSG & KVKK mevzuatı": "Safety & privacy compliance", "Bölgeler ve OSB'ler": "Regions & industrial zones",
 "Yapay Zekâ ile Görüntü İşleme ve İSG Çözümleri | Hype Vision": "AI Computer Vision for Industrial Safety & Quality | Hype Vision",
 "META:Hype Vision, mevcut güvenlik kameralarınızı yapay zekâ ile akıllandırır. Fabrikalarda İSG, KKD tespiti, kalite kontrol ve üretim verimliliğini analiz edin.": "Hype Vision makes your existing security cameras smart with AI. Analyse safety, PPE compliance, quality control and production efficiency in your factory.",
 "Kaynaklar": "Resources", "Teknik merkez": "Technical hub", "Kameram uygun mu?": "Is my camera compatible?", "Uygulama atlası": "Application atlas", "Entegrasyonlar": "Integrations", "GPU hesaplayıcı": "GPU calculator", "Sözlük": "Glossary",

@@ -5,3 +5,4 @@ Disallow: /sunum
 Disallow: /en/sunum
 
 Sitemap: https://hypevisionlab.com/sitemap.xml
+Sitemap: https://hypevisionlab.com/sitemap-images.xml
