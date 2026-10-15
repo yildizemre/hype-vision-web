@@ -161,6 +161,18 @@ def build_en_home():
             box.append(BeautifulSoup(f"<details><summary>{E(f['q'])}</summary><p>{E(f['a'])}</p></details>", "html.parser"))
     # linkler
     BLOG_FIX = {"/blog/yapay-zeka-ile-is-guvenligi": "/blog/cctv-ile-baret-tespiti", "/blog/kvkk-kamera-yapay-zeka": "/blog/edge-ai-ve-cloud-ai-farki"}
+    # EN'de henüz çevrilmemiş TR-only araçlar: ölü/yanlış dil linki yerine menüden tamamen kaldır (eksik sayfa izlenimi oluşmasın)
+    EN_DROP = {"/teknik-merkez", "/kamera-uyumluluk", "/uygulamalar", "/entegrasyon", "/benchmark", "/sozluk", "/karsilastirma", "/cctv-sorun-cozumleri", "/bolge", "/mevzuat"}
+    for a in list(soup.find_all("a", href=True)):
+        if norm(a["href"]) in EN_DROP and not a.find("img"): a.decompose()
+    # içi boşalan Kaynaklar açılır menüsünü doğrudan Resources linkine çevir
+    for dd in soup.select(".hvdd"):
+        menu = dd.select_one(".hvdd-m"); btn = dd.select_one(".hvdd-t")
+        if menu and btn and btn.get_text(strip=True) in ("Resources", "Kaynaklar"):
+            links = menu.find_all("a")
+            if len(links) <= 1:
+                na = soup.new_tag("a", href=(links[0]["href"] if links else "/en/resources")); na.string = "Resources"
+                dd.replace_with(na)
     for a in soup.find_all("a", href=True):
         h = a["href"]
         if h.startswith("#"): continue
@@ -182,6 +194,7 @@ def build_en_home():
     out = re.sub(r"const QA=\[.*?\n\];", lambda m: I18N.QA_EN, out, count=1, flags=re.S)
     out = out.replace('src="img/', 'src="/img/').replace("'img/", "'/img/").replace('src="hypevisionlogo', 'src="/hypevisionlogo')
     out = out.replace("Uyum son 6 ayda", "Compliance rose").replace("'ya yükseldi", "")
+    out = out.replace("%71 → %96", "71% → 96%")  # EN sayı formatı: yüzde işareti sondadır
     S = "https://hypevisionlab.com"
     out = out.replace(f'<link rel="canonical" href="{S}/">', f'<link rel="canonical" href="{S}/en/">')
     out = out.replace("/img/og-tr.jpg", "/img/og-en.jpg").replace("Yapay zekânın gücü, kameralarınızda.", "The power of AI, in your cameras.")

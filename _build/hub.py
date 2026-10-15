@@ -98,7 +98,7 @@ def run(c):
     TM = [("/uygulamalar", "Uygulama ve kusur atlası", "95 somut problem: kumaş deliği, boya kusuru, eksik parça, KKD…"),
           ("/entegrasyon", "Kamera ve VMS entegrasyonları", "Hikvision, Dahua, Axis, NVR, Milestone, Nx Witness."),
           ("/kamera-uyumluluk", "Kameranız yapay zekâya uygun mu?", "Marka ve model kodu ile ön kontrol aracı."),
-          ("/benchmark", "Hype-Model GPU hesaplayıcı", "Kaç kamera, kaç GPU, hangi Hype-Model boyutu?"),
+          ("/benchmark", "GPU kapasite tahmin aracı", "Kaç kamera, kaç GPU, hangi Hype-Model boyutu?"),
           ("/karsilastirma", "Karşılaştırmalar", "Kamera içi AI mı, merkezi sunucu mu?"),
           ("/cctv-sorun-cozumleri", "CCTV sorun çözümleri", "RTSP, ONVIF, H.265, NVR akış sorunları."),
           ("/mevzuat", "İSG ve KVKK mevzuat rehberi", "6331, KVKK, KKD, risk değerlendirmesi, İSG kurulu."),
@@ -139,21 +139,32 @@ r.innerHTML='<table>'+rows.map(x=>'<tr><td>'+x[0]+'</td><td>'+x[1]+'</td></tr>')
     BM = json.load(open(os.path.join(c["ROOT"], "_build", "benchmark.json"), encoding="utf-8"))
     def cell(v): return "—" if v in (None, "") else E(str(v))
     trs = "".join(f'<tr><td><b>{E(r["model"])}</b><br><small>{E(r.get("task",""))}</small></td><td>{cell(r.get("input"))}</td><td>{cell(r.get("gpu"))}</td><td>{cell(r.get("fps"))}</td><td>{cell(r.get("latency_ms"))}</td><td>{cell(r.get("vram_gb"))}</td></tr>' for r in BM["rows"])
-    status = '<span class="badge">Ölçüm tarihi: ' + E(BM["date"]) + '</span>' if BM.get("measured") else '<span class="badge w">Ölçümler yayınlanmayı bekliyor</span>'
-    body = f"""{CSS}<div class="wrap"><div class="crumb rv"><a href="/">Ana sayfa</a> / <a href="/teknik-merkez">Teknik merkez</a> / <span>Benchmark</span></div>
-<div class="ph rv"><h1>Hype-Model GPU benchmark ve kapasite hesaplayıcı<span>100 kameraya kaç GPU gerekir? Kamera sayısı, analiz sıklığı ve model boyutuna göre kapasiteyi hesaplayın.</span></h1>
-<div class="intro"><p>Hype-Model, Hype Vision'ın endüstriyel görüntü işleme model ailesidir: Hype-Model-N (edge), -S, -M ve -L (yüksek doğruluk). Aşağıdaki hesaplayıcı varsayımları açıkça gösterir; değerleri kendi sahanıza göre değiştirebilirsiniz.</p></div></div>
+    measured = BM.get("measured")
+    # Gerçek ölçüm yoksa sayfa bir "kapasite tahmin aracı"dır; boş benchmark tablosu öne çıkarılmaz.
+    if measured:
+        title = "Hype-Model GPU benchmark ve kapasite hesaplayıcı"
+        desc = "100 kameraya kaç GPU gerekir? Hype-Model ailesi için ölçülmüş kare/sn, gecikme ve VRAM değerleriyle kapasite hesaplayıcı."
+        h1 = "Hype-Model GPU benchmark ve kapasite hesaplayıcı<span>100 kameraya kaç GPU gerekir? Ölçülmüş değerlerle kamera sayısı, analiz sıklığı ve GPU kapasitesini planlayın.</span>"
+        table = f'<h2 class="h rv" style="margin-top:50px">Ölçüm tablosu <span class="badge">Ölçüm tarihi: {E(BM["date"])}</span><span>model · donanım · test tarihi ve sürümüyle</span></h2>\n<div class="tbl rv" style="margin-top:16px"><table><tr><th>Model</th><th>Girdi</th><th>GPU</th><th>Kare/sn</th><th>Gecikme (ms)</th><th>VRAM (GB)</th></tr>{trs}</table></div>\n<p style="font-size:13px;color:var(--mute);margin-top:10px">{E(BM["method"])}</p>'
+    else:
+        title = "GPU kapasite tahmin aracı — Hype-Model için kaç GPU?"
+        desc = "100 kameraya kaç GPU gerekir? Kamera sayısı, analiz sıklığı ve Hype-Model boyutuna göre GPU ihtiyacını planlamak için ücretsiz tahmin aracı."
+        h1 = "GPU kapasite tahmin aracı<span>100 kameraya kaç GPU gerekir? Kamera sayısı, analiz sıklığı ve model boyutuna göre GPU ihtiyacını tahmin edin.</span>"
+        table = ('<h2 class="h rv" style="margin-top:50px">Bu değerler nasıl hesaplanıyor?<span>planlama varsayımları, saha ölçümü değil</span></h2>'
+                 '<div class="tbl rv" style="margin-top:16px;padding:22px 24px;background:var(--bg2);border-radius:14px"><p style="margin:0 0 10px">Yukarıdaki sonuçlar, tek RTX 4090 sınıfı bir GPU üzerinde 640 px girdi ve video çözme dahil, temkinli bir planlama varsayımına dayanır. Kesin kare/sn, gecikme ve VRAM değerleri modele, girdi çözünürlüğüne, sürücü/TensorRT sürümüne ve kameralarınızın kodlamasına göre değişir.</p>'
+                 '<p style="margin:0;color:var(--mute);font-size:14px">Hype-Model ailesinin sahada ölçülmüş benchmark sonuçları (kare/sn · gecikme · VRAM), metodolojisiyle birlikte hazırlanıyor ve tamamlandığında burada yayımlanacak. O zamana kadar bu araç yalnızca planlama amaçlıdır; kesin donanım, pilot sırasında sizin kameralarınız ve modülleriniz üzerinde ölçülerek belirlenir.</p></div>')
+    body = f"""{CSS}<div class="wrap"><div class="crumb rv"><a href="/">Ana sayfa</a> / <a href="/teknik-merkez">Teknik merkez</a> / <span>GPU kapasite aracı</span></div>
+<div class="ph rv"><h1>{h1}</h1>
+<div class="intro"><p>Hype-Model, Hype Vision'ın endüstriyel görüntü işleme model ailesidir: Hype-Model-N (edge), -S, -M ve -L (yüksek doğruluk). Aşağıdaki araç varsayımları açıkça gösterir; değerleri kendi sahanıza göre değiştirebilirsiniz.</p></div></div>
 <div class="tool rv"><div class="row">
 <label>Kamera sayısı<input id="g1" type="number" value="100" min="1"></label>
 <label>Kamera başına analiz (kare/sn)<input id="g2" type="number" value="5" min="1" step="1"></label>
 <label>Model<select id="g3">{''.join(f'<option value="{m["fps"]}">{E(m["name"])}</option>' for m in BM["calc_models"])}</select></label>
 <label>Hedef GPU kullanımı (%)<input id="g4" type="number" value="70" min="30" max="95"></label></div>
-<div class="kpi4"><div><b id="o1">—</b><small>Toplam kare/sn ihtiyacı</small></div><div><b id="o2">—</b><small>GPU başına kapasite (kare/sn)</small></div><div><b id="o3">—</b><small>Gereken GPU sayısı</small></div><div><b id="o4">—</b><small>GPU başına kamera</small></div></div>
+<div class="kpi4"><div><b id="o1">—</b><small>Toplam kare/sn ihtiyacı</small></div><div><b id="o2">—</b><small>GPU başına kapasite (kare/sn)</small></div><div><b id="o3">—</b><small>Gereken GPU sayısı (tahmini)</small></div><div><b id="o4">—</b><small>GPU başına kamera</small></div></div>
 <p style="font-size:13px;color:var(--mute);margin-top:12px">{E(BM["calc_note"])}</p></div>
-<h2 class="h rv" style="margin-top:50px">Ölçüm tablosu {status}<span>model · donanım · test tarihi ve sürümüyle</span></h2>
-<div class="tbl rv" style="margin-top:16px"><table><tr><th>Model</th><th>Girdi</th><th>GPU</th><th>Kare/sn</th><th>Gecikme (ms)</th><th>VRAM (GB)</th></tr>{trs}</table></div>
-<p style="font-size:13px;color:var(--mute);margin-top:10px">{E(BM["method"])}</p></div>
+{table}</div>
 <script>function g(){{const c=+g1.value,f=+g2.value,cap=+g3.value*(+g4.value/100),need=c*f,n=Math.max(1,Math.ceil(need/cap));o1.textContent=need.toLocaleString('tr-TR');o2.textContent=Math.round(cap).toLocaleString('tr-TR');o3.textContent=n;o4.textContent=Math.floor(cap/f)}}
 ['g1','g2','g3','g4'].forEach(i=>document.getElementById(i).addEventListener('input',g));g();</script>{PRE}"""
-    write("/benchmark", shell("Hype-Model GPU benchmark ve kapasite hesaplayıcı", "100 kameraya kaç GPU gerekir? Hype-Model ailesi için kamera sayısı, analiz sıklığı ve GPU kapasitesi hesaplayıcı ve ölçüm tablosu.", body, "/benchmark", "tr", crumbs=[("Ana sayfa", "/"), ("Teknik merkez", "/teknik-merkez"), ("Benchmark", "/benchmark")]))
+    write("/benchmark", shell(title, desc, body, "/benchmark", "tr", crumbs=[("Ana sayfa", "/"), ("Teknik merkez", "/teknik-merkez"), ("GPU kapasite aracı", "/benchmark")]))
     return [p["path"] for p in G] + [v[0] for v in HUBS.values()] + ["/teknik-merkez", "/kamera-uyumluluk", "/benchmark"]
