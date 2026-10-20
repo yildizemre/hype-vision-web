@@ -165,6 +165,9 @@ def build_en_home():
     EN_DROP = {"/teknik-merkez", "/kamera-uyumluluk", "/uygulamalar", "/entegrasyon", "/benchmark", "/sozluk", "/karsilastirma", "/cctv-sorun-cozumleri", "/bolge", "/mevzuat"}
     for a in list(soup.find_all("a", href=True)):
         if norm(a["href"]) in EN_DROP and not a.find("img"): a.decompose()
+    # ana sayfadaki çözüm link ızgarası: EN'de karşılığı olmayan çözümü gösterme (ölü /en/#iletisim linki olmasın)
+    for a in list(soup.select(".sollinks a[href]")):
+        if not link(norm(a["href"]), "en"): a.decompose()
     # içi boşalan Kaynaklar açılır menüsünü doğrudan Resources linkine çevir
     for dd in soup.select(".hvdd"):
         menu = dd.select_one(".hvdd-m"); btn = dd.select_one(".hvdd-t")
@@ -664,7 +667,8 @@ llms = f"""# Hype Vision
 """
 open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8").write(llms)
 
-print("EN ana sayfa: tüm metinler çevrildi" if not miss else f"UYARI — EN ana sayfada çevrilmeyen {len(miss)} metin (i18n.py T sözlüğüne ekleyin): " + " | ".join(miss[:12]))
+_msg = "EN ana sayfa: tum metinler cevrildi" if not miss else f"UYARI - EN ana sayfada cevrilmeyen {len(miss)} metin (i18n.py T sozluguna ekleyin): " + " | ".join(miss[:12])
+print(_msg.encode("ascii", "replace").decode("ascii"))
 print(f"sayfa: {len(seen)} (sitemap) | eski link düzeltilen dosya: {cnt}")
 exec(open(os.path.join(ROOT, "_build", "check_imgs.py"), encoding="utf-8").read())
 exec(open(os.path.join(ROOT, "_build", "check_canon.py"), encoding="utf-8").read())

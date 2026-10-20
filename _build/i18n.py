@@ -28,6 +28,8 @@ UI = {  # build.py şablon metinleri
 }
 
 T = {
+"Tüm çözümler": "All solutions", "mevcut kameralarınızla neleri tespit edebiliriz": "what we can detect with your existing cameras", "Hepsini gör →": "See all →",
+"KKD / baret tespiti": "PPE / hard-hat detection", "Forklift–yaya güvenliği": "Forklift–pedestrian safety", "Yasaklı alan ihlali": "Restricted-area violation", "Düşme tespiti": "Fall detection", "Yangın ve duman tespiti": "Fire and smoke detection", "Kalite kontrol": "Quality control", "Yüzey kusuru tespiti": "Surface-defect detection", "Ürün sayımı": "Product counting", "Kişi sayma": "People counting", "Kuyruk analizi": "Queue analytics", "Yoğunluk analizi": "Occupancy analytics", "Nesne takibi": "Object tracking", "Anomali tespiti": "Anomaly detection", "OEE takibi": "OEE tracking", "Personel verimliliği": "Workforce productivity", "Baret tespiti": "Hard-hat detection", "ONVIF / RTSP entegrasyonu": "ONVIF / RTSP integration", "KVKK uyumlu analitik": "Privacy-compliant analytics", "CCTV'ye yapay zekâ": "AI for CCTV",
 "Telefonunuzu bırakın, biz arayalım": "Leave your phone number, we'll call you", "Adınız": "Your name", "Firma": "Company", "Telefon (05xx…)": "Phone", "Beni arayın": "Call me",
 "Mevzuat rehberi": "Compliance guide", "Bölgeler": "Regions", "İSG & KVKK mevzuatı": "Safety & privacy compliance", "Bölgeler ve OSB'ler": "Regions & industrial zones",
 "Yapay Zekâ ile Görüntü İşleme ve İSG Çözümleri | Hype Vision": "AI Computer Vision for Industrial Safety & Quality | Hype Vision",
