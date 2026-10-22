@@ -603,6 +603,8 @@ REDIR = """# Müşteri sunumu (eski React uygulaması, şifreli)
 /solutions/cctv-ai-analytics /cctv-yapay-zeka              301
 /iletisim                    /#iletisim                     301
 /en/iletisim                 /en/#iletisim                  301
+/vaka-calismalari/maden-tesisi-harman-stok-forklift-kkd   /vaka-calismalari   301
+/en/case-studies/mining-plant-stockyard-forklift-ppe      /en/case-studies    301
 /_build/*                    /404.html                      404
 /src/*                       /404.html                      404
 /panel/*                     /404.html                      404

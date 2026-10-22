@@ -12,7 +12,7 @@ T = {"tr": dict(path="/ig", t="Instagram'dan hoş geldiniz", h="Kameranız zaten
   wa="Chat on WhatsApp", wam="Hello, I found you on Instagram and would like more information.", demo="Request a free demo",
   k="3 examples from the field", more="All case studies →", trust=["200+ camera deployments", "On-premise · GDPR-friendly", "IT Valley, Gebze"],
   reels="Our videos", home="/en/", cases="/en/case-studies")}
-CASES = [("harman", "/img/vaka/harman-1.webp", "200+ kamera · 20+ modül", "200+ cameras · 20+ modules"),
+CASES = [("tir-yukleme", "/img/vaka/tir-1.webp", "TIR yükleme sayımı", "Truck loading count"),
          ("400-kamera", "/img/vaka/kkd-depo.webp", "400 kamerada KKD", "PPE on 400 cameras"),
          ("kaynak", "/img/vaka/kaynak-1.webp", "Kaynak süresi ölçümü", "Welding time measured")]
 REELS = [("DbFZNTgKdnJ", "p2.jpg"), ("Da-M9lGKjnd", "p3.jpg"), ("DadvWMbqbbU", "p4.jpg")]

@@ -1,0 +1,428 @@
+import type { Solution } from './types';
+
+/** Üretim ve operasyon çözümleri */
+export const OPS_SOLUTIONS: Solution[] = [
+  {
+    id: 'production-line-monitoring',
+    group: 'production',
+    urls: { tr: '/oee-takip-sistemi', en: '/en/solutions/production-line-monitoring' },
+    industries: ['manufacturing', 'jewelry-manufacturing'],
+    related: ['product-counting', 'workforce-analytics', 'visual-quality-inspection'],
+    en: {
+      name: 'Production Line Monitoring',
+      metaTitle: 'Production Line Monitoring with Computer Vision | Downtime & OEE — Hype Vision',
+      metaDescription:
+        'Measure line running time, stops, cycle times and output from existing cameras — including older machines without PLC data. Shift dashboards and downtime analysis.',
+      h1: 'Production line monitoring with computer vision',
+      lead: 'See when a line is running, stopped or slowed down — and why — without waiting for end-of-shift reports or wiring every machine.',
+      definition:
+        'Production line monitoring with computer vision uses cameras to observe machines, stations and product flow, and derives operational metrics such as running/stopped state, cycle time, output count and downtime.',
+      problem: [
+        'Many plants still collect downtime and output data by hand. Short stops of one or two minutes rarely make it into the log, so performance losses stay hidden and OEE figures look better on paper than on the floor.',
+        'Older machines often have no accessible PLC data, which makes automated measurement expensive.',
+      ],
+      howItWorks: [
+        'Cameras covering stations, conveyors or machine outputs are connected over RTSP/ONVIF.',
+        'Models detect product flow, machine activity and operator presence per station.',
+        'Events are converted into running/stopped intervals, cycle times and counts.',
+        'Shift dashboards show availability, performance indicators and downtime by station.',
+      ],
+      events: ['Line or station stop, including micro-stops', 'Cycle time per unit or batch', 'Output count per station and shift', 'Station unattended while the line is running'],
+      scenarios: ['Assembly and packing lines', 'Older machines without PLC connectivity', 'Bottleneck analysis across stations', 'Shift handover reporting'],
+      cameraNotes: ['The product flow or machine output must be visible in frame.', 'Higher frame rates are needed for fast lines; this is checked during camera assessment.'],
+      integrations: ['REST API / webhook to MES or ERP', 'Export of shift reports', 'Dashboard for supervisors and management'],
+      limitations: [
+        'Camera-derived metrics are as good as the view of the process; hidden steps need additional cameras or data sources.',
+        'Reason codes for stops may still need operator input or integration with existing systems.',
+      ],
+      faq: [
+        { q: 'Can you calculate OEE from cameras?', a: 'Cameras can provide running time, counts and cycle times, which cover availability and performance. Quality usually comes from inspection results or existing systems and can be combined via integration.' },
+        { q: 'Do we need to connect to our PLCs?', a: 'No, but it is possible. Camera-based measurement works without PLC access, which is useful for older equipment.' },
+      ],
+    },
+  },
+  {
+    id: 'product-counting',
+    group: 'production',
+    urls: { tr: '/urun-sayimi', en: '/en/solutions/product-counting' },
+    industries: ['manufacturing', 'logistics', 'jewelry-manufacturing', 'retail'],
+    related: ['production-line-monitoring', 'object-tracking', 'workforce-analytics'],
+    en: {
+      name: 'Product Counting',
+      metaTitle: 'AI Product Counting with Cameras | Conveyor, Pallet & Box Counting — Hype Vision',
+      metaDescription:
+        'Count products, boxes, pallets or vehicles from existing camera views. Line output by shift, dock loading counts and discrepancy reporting with evidence clips.',
+      h1: 'Product, box and pallet counting with cameras',
+      lead: 'Turn camera views of conveyors, stations and docks into reliable counts — per shift, per line, per shipment.',
+      definition:
+        'Camera-based product counting detects and tracks individual items crossing a defined line or area in a video stream and counts them, producing output and flow data without additional sensors.',
+      problem: [
+        'Manual counts and end-of-shift tallies are slow and error-prone. Discrepancies between produced, packed and shipped quantities are often found days later, when it is hard to see where they came from.',
+      ],
+      howItWorks: [
+        'A counting line or zone is defined on the camera view.',
+        'Items are detected and tracked so that each one is counted once.',
+        'Counts are aggregated by time, station, shift or shipment.',
+        'Discrepancies against targets or orders can be flagged with clips for review.',
+      ],
+      events: ['Item count per line, station or shift', 'Throughput per hour', 'Count discrepancy against a target or order', 'Loading progress at docks'],
+      scenarios: ['Conveyor output', 'Packing and palletising stations', 'Dock loading and unloading', 'Workstation output in labour-intensive processes'],
+      cameraNotes: ['Items should be separable in the image; heavy overlap on conveyors reduces accuracy.', 'A view perpendicular to the flow usually gives the most reliable counts.'],
+      integrations: ['REST API / webhook to MES, ERP or WMS', 'Shift report exports', 'Dashboard'],
+      limitations: ['Stacked or fully overlapping items may need a different camera angle or process change.', 'Count accuracy is validated against manual counts during the pilot.'],
+      faq: [
+        { q: 'Can it count different product types separately?', a: 'If the product types are visually distinguishable, a model can be trained to classify them. Feasibility is assessed on sample footage.' },
+        { q: 'How is counting accuracy checked?', a: 'Camera counts are compared to manual or system counts over defined periods in the pilot, and the difference is reported per camera.' },
+      ],
+    },
+    tr: {
+      name: 'Ürün Sayımı',
+      metaTitle: 'Kamera ile Ürün Sayımı | Konveyör, Koli ve Palet Sayımı — Hype Vision',
+      metaDescription:
+        'Mevcut kameralarla ürün, koli, palet veya araç sayımı. Vardiya bazlı hat çıktısı, rampa yükleme sayımı ve kanıt görüntülü sapma raporu.',
+      h1: 'Kamera ile ürün, koli ve palet sayımı',
+      lead: 'Konveyör, istasyon ve rampa görüntülerini güvenilir sayımlara dönüştürün: vardiya, hat ve sevkiyat bazında.',
+      definition:
+        'Kamera ile ürün sayımı, video akışında tanımlı bir çizgiyi veya alanı geçen her nesneyi tespit edip takip ederek sayan; ek sensör olmadan çıktı ve akış verisi üreten bir görüntü işleme uygulamasıdır.',
+      problem: [
+        'Elle sayım ve vardiya sonu toplamları yavaş ve hataya açıktır. Üretilen, paketlenen ve sevk edilen miktarlar arasındaki farklar çoğu zaman günler sonra fark edilir; kaynağını bulmak zorlaşır.',
+      ],
+      howItWorks: [
+        'Kamera görüntüsü üzerinde bir sayım çizgisi veya alanı tanımlanır.',
+        'Her ürün tespit edilip takip edilir, böylece bir kez sayılır.',
+        'Sayımlar zaman, istasyon, vardiya veya sevkiyat bazında toplanır.',
+        'Hedef veya siparişe göre sapmalar, inceleme için görüntüyle işaretlenir.',
+      ],
+      events: ['Hat, istasyon veya vardiya bazında adet', 'Saatlik akış hızı', 'Hedef veya siparişe göre sayım sapması', 'Rampada yükleme ilerlemesi'],
+      scenarios: ['Konveyör çıkışı', 'Paketleme ve paletleme istasyonları', 'Rampa yükleme ve boşaltma', 'Emek yoğun süreçlerde istasyon çıktısı'],
+      cameraNotes: ['Ürünlerin görüntüde ayrışabilmesi gerekir; konveyörde yoğun üst üste binme doğruluğu düşürür.', 'Akışa dik bakan bir açı genellikle en güvenilir sayımı verir.'],
+      integrations: ['REST API / webhook ile MES, ERP veya WMS', 'Vardiya raporu dışa aktarımı', 'Panel'],
+      limitations: ['Üst üste yığılmış ürünler farklı kamera açısı veya süreç değişikliği gerektirebilir.', 'Sayım doğruluğu pilot sırasında elle sayımla karşılaştırılarak doğrulanır.'],
+      faq: [
+        { q: 'Farklı ürün tiplerini ayrı sayabilir mi?', a: 'Ürün tipleri görsel olarak ayırt edilebiliyorsa model bunları sınıflandıracak şekilde eğitilebilir. Uygunluk örnek görüntüler üzerinde değerlendirilir.' },
+        { q: 'Sayım doğruluğu nasıl kontrol edilir?', a: 'Pilotta belirli dönemler boyunca kamera sayımı elle veya sistem sayımıyla karşılaştırılır; fark kamera bazında raporlanır.' },
+      ],
+    },
+  },
+  {
+    id: 'visual-quality-inspection',
+    group: 'production',
+    urls: { tr: '/kalite-kontrol-goruntu-isleme', en: '/en/solutions/visual-quality-inspection' },
+    industries: ['manufacturing', 'jewelry-manufacturing'],
+    related: ['production-line-monitoring', 'anomaly-detection', 'product-counting'],
+    en: {
+      name: 'Visual Quality Inspection',
+      metaTitle: 'AI Visual Quality Inspection | Defect Detection on Production Lines — Hype Vision',
+      metaDescription:
+        'AI-based visual inspection for surface defects, assembly errors, labels and print. Camera and lighting assessment, custom model training, validation and line integration.',
+      h1: 'AI visual quality inspection for production lines',
+      lead: 'Inspect every unit at line speed for visible defects — and keep an image record of each decision.',
+      definition:
+        'AI visual quality inspection uses cameras and deep-learning models to detect visible defects such as scratches, dents, missing components or wrong labels on products, and to classify units as OK or not OK.',
+      problem: [
+        'Manual visual inspection is sampled, tiring and inconsistent between shifts. Escaped defects lead to customer complaints and returns; over-rejection creates unnecessary scrap.',
+        'Rule-based machine vision works well for fixed, repeatable checks but struggles with natural variation in materials, lighting and product variants.',
+      ],
+      howItWorks: [
+        'Defect types are defined with your quality team and sample images are collected.',
+        'Camera position, optics and lighting are selected for the smallest defect that matters.',
+        'A model is trained and validated on images it has not seen before.',
+        'Results are connected to the line: reject signals, operator alerts and records in MES/ERP.',
+      ],
+      events: ['Surface defects (scratches, dents, stains, cracks)', 'Assembly errors (missing or misplaced parts)', 'Label and print errors', 'Defect trends by line, product and shift'],
+      scenarios: ['End-of-line inspection', 'In-process inspection after critical steps', 'Incoming goods inspection', 'High-variation products such as textiles, castings or natural materials'],
+      cameraNotes: [
+        'Unlike safety use cases, inspection often needs dedicated industrial cameras and controlled lighting.',
+        'The required resolution follows from the smallest defect size and the field of view.',
+      ],
+      integrations: ['PLC signals for rejection', 'REST API to MES/ERP', 'Image archive for traceability'],
+      limitations: [
+        'Defects that are not visible to the camera (internal, behind surfaces) cannot be detected.',
+        'Rare defects may need anomaly-detection approaches and more validation time.',
+        'Escape and false-reject rates are measured separately; both matter.',
+      ],
+      faq: [
+        { q: 'How many defect images do we need?', a: 'It depends on the defect type and variation. Common defects may need hundreds of examples; for rare defects, anomaly detection trained on good parts is often used.' },
+        { q: 'Can it keep up with our line speed?', a: 'Line speed is measured during discovery and camera, triggering and edge hardware are chosen accordingly.' },
+      ],
+    },
+  },
+  {
+    id: 'workforce-analytics',
+    group: 'operations',
+    urls: { tr: '/personel-verimlilik-analizi-kamera', en: '/en/solutions/workforce-analytics' },
+    industries: ['manufacturing', 'logistics', 'restaurants', 'retail', 'jewelry-manufacturing'],
+    related: ['production-line-monitoring', 'occupancy-analytics', 'product-counting'],
+    en: {
+      name: 'Workforce & Station Analytics',
+      metaTitle: 'Workforce & Workstation Analytics with CCTV (Privacy-First) — Hype Vision',
+      metaDescription:
+        'Measure station occupancy, active versus idle time and bottlenecks from existing cameras — at process level, without face recognition. Shift dashboards for operations teams.',
+      h1: 'Workstation and workforce analytics from existing cameras',
+      lead: 'Understand how stations are actually used — occupancy, active time, waiting time and bottlenecks — at process level.',
+      definition:
+        'Workforce or workstation analytics uses computer vision to measure whether stations are staffed and active, how long tasks take and where work waits, producing process-level productivity data.',
+      problem: [
+        'Labour-intensive processes are usually managed with targets and end-of-day output. Where time is lost — waiting for material, unstaffed stations, uneven workloads — stays invisible.',
+      ],
+      howItWorks: [
+        'Stations are defined as zones on camera views.',
+        'Presence and activity are detected per station over time.',
+        'Active, idle and unstaffed intervals are aggregated per station and shift.',
+        'Bottlenecks and imbalances are shown on dashboards for supervisors.',
+      ],
+      events: ['Station staffed / unstaffed', 'Active versus idle time', 'Task or cycle durations', 'Bottlenecks between stations'],
+      scenarios: ['Sewing, ironing and packing stations', 'Kitting and assembly cells', 'Kitchen and service stations', 'Warehouse pick and pack'],
+      cameraNotes: ['Each station should be clearly visible; one camera can often cover several stations.'],
+      integrations: ['Dashboards and shift reports', 'REST API for ERP/MES or HR-independent process reporting'],
+      limitations: [
+        'Workplace monitoring has legal and employee-relations implications. Deployments should be designed with HR, works councils where applicable and data-protection advisers.',
+        'Process-level reporting is recommended over individual-level monitoring. No face recognition is used.',
+      ],
+      faq: [
+        { q: 'Is this individual employee monitoring?', a: 'The recommended setup reports at station and process level. Individual-level use must be assessed with your legal and HR teams and local regulations such as GDPR or KVKK.' },
+        { q: 'What do supervisors see?', a: 'Station-level dashboards: occupancy, active and idle time, and bottlenecks per shift.' },
+      ],
+    },
+  },
+  {
+    id: 'queue-analytics',
+    group: 'operations',
+    urls: { tr: '/kuyruk-analizi', en: '/en/solutions/queue-analytics' },
+    industries: ['banking', 'retail', 'restaurants', 'hospitality'],
+    related: ['people-counting', 'occupancy-analytics', 'workforce-analytics'],
+    todo: ['Kuyruk analizi modülünün ürün kataloğunda yer aldığı ve sahada kullanıldığı ekip tarafından doğrulanmalı'],
+    en: {
+      name: 'Queue Analytics',
+      metaTitle: 'Queue Analytics with CCTV | Queue Length & Waiting Time — Hype Vision',
+      metaDescription:
+        'Measure queue length and estimated waiting time from existing cameras at counters, checkouts and service points. Alerts when thresholds are exceeded and staffing insights.',
+      h1: 'Queue length and waiting-time analytics',
+      lead: 'Know when queues build up at counters and checkouts, and react before customers leave.',
+      definition:
+        'Queue analytics uses cameras to count people in a defined queue area and estimate how long they wait, providing real-time alerts and historical data for staffing decisions.',
+      problem: ['Long queues cost sales and customer satisfaction, but branch and store managers often learn about them from complaints rather than data.'],
+      howItWorks: [
+        'Queue areas are defined on camera views at counters or checkouts.',
+        'People in the area are detected and tracked over time.',
+        'Queue length and estimated waiting time are calculated continuously.',
+        'Threshold alerts and hourly patterns support staffing decisions.',
+      ],
+      events: ['Queue length above threshold', 'Estimated waiting time', 'Hourly and daily queue patterns', 'Open counters versus queue load'],
+      scenarios: ['Bank branches', 'Supermarket checkouts', 'Restaurant order counters', 'Hotel receptions and service desks'],
+      cameraNotes: ['A view covering the whole queue area is needed; overhead or angled views both work if people are separable.'],
+      integrations: ['Dashboard and alerts', 'REST API for workforce-management or BI tools'],
+      limitations: ['Very dense crowds reduce counting accuracy.', 'No identification of individuals is required or performed.'],
+      faq: [
+        { q: 'Can it alert staff to open another counter?', a: 'Yes, threshold-based alerts can be sent to managers or displayed on a dashboard.' },
+        { q: 'Does it recognise customers?', a: 'No. It counts people in an area; it does not identify them.' },
+      ],
+    },
+    tr: {
+      name: 'Kuyruk Analizi',
+      metaTitle: 'Kamera ile Kuyruk Analizi | Kuyruk Uzunluğu ve Bekleme Süresi — Hype Vision',
+      metaDescription:
+        'Gişe, kasa ve hizmet noktalarında mevcut kameralarla kuyruk uzunluğu ve tahmini bekleme süresi ölçümü; eşik aşıldığında alarm ve personel planlama verisi.',
+      h1: 'Kamera ile kuyruk uzunluğu ve bekleme süresi analizi',
+      lead: 'Gişe ve kasalarda kuyruğun ne zaman uzadığını bilin; müşteri vazgeçmeden önlem alın.',
+      definition:
+        'Kuyruk analizi, tanımlı bir bekleme alanındaki kişi sayısını kamerayla ölçen ve bekleme süresini tahmin eden; anlık alarm ve personel planlaması için geçmiş veri sunan bir görüntü analitiği uygulamasıdır.',
+      problem: ['Uzun kuyruklar satış ve memnuniyet kaybettirir; ancak şube ve mağaza yöneticileri bunu çoğu zaman veriden değil şikâyetlerden öğrenir.'],
+      howItWorks: [
+        'Gişe veya kasa önündeki kuyruk alanları kamera görüntüsünde tanımlanır.',
+        'Alandaki kişiler tespit edilir ve zaman içinde takip edilir.',
+        'Kuyruk uzunluğu ve tahmini bekleme süresi sürekli hesaplanır.',
+        'Eşik alarmları ve saatlik desenler personel kararlarını destekler.',
+      ],
+      events: ['Eşiği aşan kuyruk uzunluğu', 'Tahmini bekleme süresi', 'Saatlik ve günlük kuyruk desenleri', 'Açık gişe sayısına göre kuyruk yükü'],
+      scenarios: ['Banka şubeleri', 'Market kasaları', 'Restoran sipariş noktaları', 'Otel resepsiyonu ve hizmet masaları'],
+      cameraNotes: ['Kuyruk alanının tamamını gören bir açı gerekir; kişiler ayrışabiliyorsa tepeden veya çapraz açı kullanılabilir.'],
+      integrations: ['Panel ve alarmlar', 'Personel planlama veya BI araçları için REST API'],
+      limitations: ['Çok yoğun kalabalıkta sayım doğruluğu düşer.', 'Kişi kimliği tespit edilmez ve gerekmez.'],
+      faq: [
+        { q: 'Yeni gişe açılması için personeli uyarabilir mi?', a: 'Evet, eşik tabanlı alarmlar yöneticilere iletilebilir veya panelde gösterilebilir.' },
+        { q: 'Müşterileri tanıyor mu?', a: 'Hayır. Alandaki kişileri sayar; kimlik tespiti yapmaz.' },
+      ],
+    },
+  },
+  {
+    id: 'people-counting',
+    group: 'operations',
+    urls: { tr: '/kisi-sayma', en: '/en/solutions/people-counting' },
+    industries: ['retail', 'banking', 'hospitality', 'restaurants', 'manufacturing'],
+    related: ['occupancy-analytics', 'queue-analytics', 'restricted-area-monitoring'],
+    en: {
+      name: 'People Counting',
+      metaTitle: 'People Counting with Existing CCTV Cameras | Footfall Analytics — Hype Vision',
+      metaDescription:
+        'Count people entering and leaving stores, branches, facilities or zones using existing CCTV. In/out counts, footfall trends and occupancy inputs, without identifying individuals.',
+      h1: 'People counting with existing CCTV cameras',
+      lead: 'Accurate in/out counts for entrances and zones, using cameras you already have.',
+      definition:
+        'Camera-based people counting detects and tracks people crossing a virtual line at an entrance or zone boundary and counts them in each direction, providing footfall and occupancy data.',
+      problem: ['Footfall data is the basis for conversion rates, staffing and space planning — but dedicated counters at every door are costly, and manual counts do not scale.'],
+      howItWorks: ['A counting line is defined at each entrance or zone boundary.', 'People are detected and tracked across the line.', 'Directional counts are aggregated per hour, day and location.', 'Counts feed occupancy calculations and reports.'],
+      events: ['Entries and exits per door', 'Footfall by hour and day', 'Zone-to-zone movement counts', 'Inputs for occupancy limits'],
+      scenarios: ['Store and branch entrances', 'Hotel lobbies and restaurants', 'Factory gates and canteens', 'Event and exhibition areas'],
+      cameraNotes: ['Overhead or steep angled views at entrances give the most reliable counts.', 'Existing security cameras may need a different angle for doorway counting.'],
+      integrations: ['Dashboard and exports', 'REST API to POS, BI or building systems'],
+      limitations: ['Groups walking very close together can reduce accuracy; this is validated against manual counts.', 'No identification of individuals is performed.'],
+      faq: [
+        { q: 'Can we use our security cameras for counting?', a: 'Often yes, if the camera covers the entrance at a usable angle. If not, repositioning or adding a camera at the door is recommended.' },
+        { q: 'Does it store personal data?', a: 'Counting does not require identifying anyone. Retention of video and event data is configured with your data-protection requirements.' },
+      ],
+    },
+    tr: {
+      name: 'Kişi Sayma',
+      metaTitle: 'Mevcut Kameralarla Kişi Sayma | Giriş-Çıkış Sayımı — Hype Vision',
+      metaDescription:
+        'Mağaza, şube, tesis veya bölge giriş-çıkışlarında mevcut CCTV ile kişi sayımı. Yönlü sayım, ziyaretçi trendleri ve doluluk verisi; kimlik tespiti olmadan.',
+      h1: 'Mevcut CCTV kameralarla kişi sayma',
+      lead: 'Girişler ve bölgeler için güvenilir giriş-çıkış sayımı, zaten sahip olduğunuz kameralarla.',
+      definition:
+        'Kamera ile kişi sayma, bir giriş veya bölge sınırına çizilen sanal çizgiyi geçen kişileri tespit edip takip ederek iki yönde sayan ve ziyaretçi/doluluk verisi üreten bir görüntü analitiği uygulamasıdır.',
+      problem: ['Ziyaretçi verisi dönüşüm oranı, personel ve alan planlamasının temelidir; ancak her kapıya ayrı sayaç pahalıdır, elle sayım ise ölçeklenmez.'],
+      howItWorks: ['Her girişe veya bölge sınırına sayım çizgisi tanımlanır.', 'Kişiler tespit edilir ve çizgiyi geçişleri takip edilir.', 'Yönlü sayımlar saat, gün ve lokasyon bazında toplanır.', 'Sayımlar doluluk hesabına ve raporlara aktarılır.'],
+      events: ['Kapı bazında giriş ve çıkış', 'Saatlik ve günlük ziyaretçi', 'Bölgeler arası geçiş sayıları', 'Doluluk limiti için girdi'],
+      scenarios: ['Mağaza ve şube girişleri', 'Otel lobileri ve restoranlar', 'Fabrika kapıları ve yemekhaneler', 'Etkinlik ve fuar alanları'],
+      cameraNotes: ['Girişlerde tepeden veya dik açılı bakış en güvenilir sayımı verir.', 'Mevcut güvenlik kameraları kapı sayımı için farklı bir açı gerektirebilir.'],
+      integrations: ['Panel ve dışa aktarım', 'POS, BI veya bina sistemleri için REST API'],
+      limitations: ['Çok yakın yürüyen gruplar doğruluğu düşürebilir; bu elle sayımla doğrulanır.', 'Kimlik tespiti yapılmaz.'],
+      faq: [
+        { q: 'Güvenlik kameralarımızı sayım için kullanabilir miyiz?', a: 'Kamera girişi uygun bir açıdan görüyorsa çoğu zaman evet. Görmüyorsa kapıya açı değişikliği veya ek kamera önerilir.' },
+        { q: 'Kişisel veri saklanıyor mu?', a: 'Sayım için kimlik tespiti gerekmez. Video ve olay verisinin saklama süresi KVKK gereksinimlerinize göre ayarlanır.' },
+      ],
+    },
+  },
+  {
+    id: 'occupancy-analytics',
+    group: 'operations',
+    urls: { tr: '/yogunluk-analizi', en: '/en/solutions/occupancy-analytics' },
+    industries: ['retail', 'hospitality', 'restaurants', 'banking', 'manufacturing'],
+    related: ['people-counting', 'queue-analytics', 'workforce-analytics'],
+    en: {
+      name: 'Occupancy & Density Analytics',
+      metaTitle: 'Occupancy & Crowd Density Analytics with CCTV — Hype Vision',
+      metaDescription:
+        'Measure how many people are in a space or zone, how long they stay and which areas are busiest. Heatmaps, dwell time and capacity alerts from existing CCTV.',
+      h1: 'Occupancy, density and dwell-time analytics',
+      lead: 'See how spaces are actually used: live occupancy, busy zones, dwell time and capacity alerts.',
+      definition:
+        'Occupancy analytics estimates the number of people in a space or zone from camera footage and combines it with dwell time and movement data to show how areas are used over time.',
+      problem: ['Space, staffing and safety decisions are often based on assumptions about how busy an area is. Without measurement, overcrowding and under-used space both go unnoticed.'],
+      howItWorks: ['Zones are defined on camera views.', 'People are detected and counted per zone.', 'Dwell time and heatmaps are calculated over time.', 'Alerts fire when occupancy exceeds configured limits.'],
+      events: ['Live occupancy per zone', 'Capacity limit exceeded', 'Average dwell time', 'Heatmaps of busy areas'],
+      scenarios: ['Store layouts and promotions', 'Restaurants and lobbies', 'Canteens and break areas', 'Assembly points and exhibition halls'],
+      cameraNotes: ['Wide views with limited occlusion work best; dense crowds reduce counting precision.'],
+      integrations: ['Dashboard and reports', 'REST API to BI or building-management systems'],
+      limitations: ['Density estimates in very crowded scenes are approximate.', 'No identification of individuals is performed.'],
+      faq: [{ q: 'Can occupancy be combined across several cameras?', a: 'Yes, zones from multiple cameras can be aggregated, provided overlapping views are configured to avoid double counting.' }],
+    },
+    tr: {
+      name: 'Yoğunluk Analizi',
+      metaTitle: 'Kamera ile Yoğunluk ve Doluluk Analizi | Isı Haritası — Hype Vision',
+      metaDescription:
+        'Bir alanda kaç kişi olduğunu, ne kadar kaldıklarını ve en yoğun bölgeleri mevcut CCTV ile ölçün. Isı haritası, bekleme süresi ve kapasite alarmları.',
+      h1: 'Yoğunluk, doluluk ve bekleme süresi analizi',
+      lead: 'Alanların gerçekte nasıl kullanıldığını görün: anlık doluluk, yoğun bölgeler, kalma süresi ve kapasite alarmları.',
+      definition:
+        'Yoğunluk (doluluk) analizi, kamera görüntüsünden bir alan veya bölgedeki kişi sayısını tahmin eden ve bunu kalma süresi ile hareket verisiyle birleştirerek alan kullanımını gösteren bir görüntü analitiği uygulamasıdır.',
+      problem: ['Alan, personel ve güvenlik kararları çoğu zaman bir alanın ne kadar yoğun olduğuna dair varsayımlara dayanır. Ölçüm olmadan hem aşırı kalabalık hem de atıl alanlar fark edilmez.'],
+      howItWorks: ['Kamera görüntülerinde bölgeler tanımlanır.', 'Kişiler bölge bazında tespit edilip sayılır.', 'Kalma süresi ve ısı haritaları zaman içinde hesaplanır.', 'Doluluk tanımlı limiti aştığında alarm üretilir.'],
+      events: ['Bölge bazında anlık doluluk', 'Kapasite limiti aşımı', 'Ortalama kalma süresi', 'Yoğun alan ısı haritaları'],
+      scenarios: ['Mağaza yerleşimi ve kampanyalar', 'Restoran ve lobiler', 'Yemekhane ve dinlenme alanları', 'Toplanma alanları ve fuar holleri'],
+      cameraNotes: ['Örtüşmenin az olduğu geniş açılar en iyi sonucu verir; çok yoğun kalabalıkta sayım hassasiyeti düşer.'],
+      integrations: ['Panel ve raporlar', 'BI veya bina yönetim sistemleri için REST API'],
+      limitations: ['Çok kalabalık sahnelerde yoğunluk tahmini yaklaşıktır.', 'Kimlik tespiti yapılmaz.'],
+      faq: [{ q: 'Birden fazla kameranın doluluğu birleştirilebilir mi?', a: 'Evet; çift sayımı önlemek için örtüşen görüş alanları yapılandırılarak bölgeler birleştirilebilir.' }],
+    },
+  },
+  {
+    id: 'object-tracking',
+    group: 'operations',
+    urls: { tr: '/nesne-takibi', en: '/en/solutions/object-tracking' },
+    industries: ['logistics', 'manufacturing', 'jewelry-manufacturing'],
+    related: ['product-counting', 'forklift-pedestrian-detection', 'anomaly-detection'],
+    todo: ['Nesne takibinde hangi nesne sınıflarının hazır, hangilerinin özel eğitim gerektirdiği ekip tarafından netleştirilmeli'],
+    en: {
+      name: 'Object Tracking',
+      metaTitle: 'Object & Vehicle Tracking with CCTV | Movement and Dwell Analytics — Hype Vision',
+      metaDescription:
+        'Track vehicles, pallets, carts or products through camera views: routes, dwell times, dock occupancy and process timing from existing CCTV.',
+      h1: 'Object and vehicle tracking across camera views',
+      lead: 'Follow vehicles, carts, pallets or products through a process and measure where they wait and how long each step takes.',
+      definition:
+        'Object tracking assigns a consistent identity to each detected object across video frames, so its path, dwell time and transitions between zones can be measured.',
+      problem: ['Logistics and production processes lose time in transitions — trucks waiting at docks, carts parked between stations, material waiting for the next step. These delays are hard to measure manually.'],
+      howItWorks: ['Objects of interest are detected in each frame.', 'A tracker links detections into trajectories.', 'Zone entry, exit and dwell time are calculated.', 'Process timings and exceptions are reported.'],
+      events: ['Vehicle arrival and departure at docks', 'Dwell time per zone', 'Route and zone transitions', 'Objects left in a zone longer than allowed'],
+      scenarios: ['Truck and dock management', 'Internal logistics between stations', 'Material flow in workshops', 'Yard monitoring'],
+      cameraNotes: ['Tracking across multiple cameras requires planned overlap or handover zones.'],
+      integrations: ['REST API to WMS, TMS or MES', 'Dashboard and reports'],
+      limitations: ['Long occlusions can break tracks; re-identification across cameras is evaluated per project.', 'Custom object classes require training data.'],
+      faq: [{ q: 'Can it read licence plates?', a: 'Licence plate recognition is a separate capability and is evaluated per project; contact us with your requirement.' }],
+    },
+    tr: {
+      name: 'Nesne Takibi',
+      metaTitle: 'Kamera ile Nesne ve Araç Takibi | Hareket ve Bekleme Analizi — Hype Vision',
+      metaDescription:
+        'Araç, palet, araba veya ürünleri kamera görüntüleri boyunca takip edin: rota, bekleme süresi, rampa doluluğu ve süreç zamanlaması, mevcut CCTV ile.',
+      h1: 'Kamera ile nesne ve araç takibi',
+      lead: 'Araçları, arabaları, paletleri veya ürünleri süreç boyunca izleyin; nerede beklediklerini ve her adımın ne kadar sürdüğünü ölçün.',
+      definition:
+        'Nesne takibi, tespit edilen her nesneye video kareleri boyunca tutarlı bir kimlik atayarak izlediği yolu, kalma süresini ve bölgeler arası geçişini ölçen bir görüntü işleme tekniğidir.',
+      problem: ['Lojistik ve üretim süreçleri geçişlerde zaman kaybeder: rampada bekleyen tır, istasyonlar arasında bekleyen araba, sonraki adımı bekleyen malzeme. Bu gecikmeleri elle ölçmek zordur.'],
+      howItWorks: ['İlgilenilen nesneler her karede tespit edilir.', 'Takip algoritması tespitleri rotalara bağlar.', 'Bölge giriş-çıkışı ve kalma süresi hesaplanır.', 'Süreç süreleri ve istisnalar raporlanır.'],
+      events: ['Rampada araç varışı ve ayrılışı', 'Bölge bazında kalma süresi', 'Rota ve bölge geçişleri', 'İzin verilenden uzun süre bekleyen nesneler'],
+      scenarios: ['Tır ve rampa yönetimi', 'İstasyonlar arası iç lojistik', 'Atölyede malzeme akışı', 'Saha izleme'],
+      cameraNotes: ['Birden fazla kamera arasında takip için planlı örtüşme veya devir bölgeleri gerekir.'],
+      integrations: ['WMS, TMS veya MES için REST API', 'Panel ve raporlar'],
+      limitations: ['Uzun süreli kapanmalar takibi koparabilir; kameralar arası yeniden tanıma proje bazında değerlendirilir.', 'Özel nesne sınıfları eğitim verisi gerektirir.'],
+      faq: [{ q: 'Plaka okuyabilir mi?', a: 'Plaka tanıma ayrı bir yetenektir ve proje bazında değerlendirilir; ihtiyacınızı bize iletin.' }],
+    },
+  },
+  {
+    id: 'anomaly-detection',
+    group: 'operations',
+    urls: { tr: '/anomali-tespiti', en: '/en/solutions/anomaly-detection' },
+    industries: ['manufacturing', 'banking', 'jewelry-manufacturing', 'restaurants', 'logistics'],
+    related: ['visual-quality-inspection', 'restricted-area-monitoring', 'object-tracking'],
+    todo: ['Anomali tespiti kapsamı (hangi senaryolar hazır, hangileri proje bazlı) ekip tarafından doğrulanmalı'],
+    en: {
+      name: 'Anomaly Detection',
+      metaTitle: 'Video Anomaly Detection for Operations & Quality — Hype Vision',
+      metaDescription:
+        'Detect deviations from normal visual patterns — unusual product appearance, unexpected activity in a zone, process steps out of order — using computer vision on existing cameras.',
+      h1: 'Visual anomaly detection for operations and quality',
+      lead: 'Flag what does not look normal — on products, in processes or in areas — when every possible problem cannot be defined in advance.',
+      definition:
+        'Visual anomaly detection learns what "normal" looks like from images or video and flags frames, products or events that deviate from that pattern, which is useful when defects or incidents are rare or varied.',
+      problem: ['Many problems are rare and different each time. Collecting enough examples of every defect or incident to train a classic model is impractical.'],
+      howItWorks: ['Normal footage or images are collected for a process or product.', 'A model learns the normal visual pattern.', 'Deviations are scored and flagged above a threshold.', 'Flagged cases are reviewed and used to refine the model or create dedicated detectors.'],
+      events: ['Unusual product appearance', 'Activity in a zone at an unusual time or pattern', 'Process steps skipped or out of order', 'Objects present where they should not be'],
+      scenarios: ['Quality inspection for rare defects', 'Process compliance in workshops', 'After-hours activity in sensitive areas', 'Cash-handling and back-office procedures'],
+      cameraNotes: ['Stable camera positions and consistent lighting make "normal" easier to learn.'],
+      integrations: ['Review queue in the dashboard', 'REST API / webhook for follow-up workflows'],
+      limitations: ['Anomaly scores need human review in early stages; thresholds are tuned to balance alerts and misses.', 'Not every anomaly is a problem — context rules are usually needed.'],
+      faq: [{ q: 'How is this different from defect detection?', a: 'Defect detection recognises known defect types. Anomaly detection flags anything that differs from normal, which helps with rare or new problems but needs review.' }],
+    },
+    tr: {
+      name: 'Anomali Tespiti',
+      metaTitle: 'Görüntü İşleme ile Anomali Tespiti | Operasyon ve Kalite — Hype Vision',
+      metaDescription:
+        'Normal görsel desenden sapmaları tespit edin: ürünlerde alışılmadık görünüm, bölgede beklenmeyen hareket, sırası bozulan süreç adımları; mevcut kameralarla.',
+      h1: 'Operasyon ve kalite için görsel anomali tespiti',
+      lead: 'Tüm olası sorunlar önceden tanımlanamadığında, normal görünmeyeni işaretleyin: üründe, süreçte veya alanda.',
+      definition:
+        'Görsel anomali tespiti, görüntü veya videodan “normal”in neye benzediğini öğrenen ve bu desenden sapan kare, ürün veya olayları işaretleyen bir yapay zeka yaklaşımıdır; nadir ve değişken sorunlarda kullanışlıdır.',
+      problem: ['Birçok sorun nadirdir ve her seferinde farklı görünür. Klasik model eğitmek için her kusur veya olaydan yeterli örnek toplamak pratik değildir.'],
+      howItWorks: ['Süreç veya ürün için normal görüntüler toplanır.', 'Model normal görsel deseni öğrenir.', 'Sapmalar puanlanır ve eşiğin üzerindekiler işaretlenir.', 'İşaretlenen vakalar incelenir; model iyileştirilir veya özel dedektörler oluşturulur.'],
+      events: ['Üründe alışılmadık görünüm', 'Bölgede olağandışı saatte veya desende hareket', 'Atlanan veya sırası bozulan süreç adımları', 'Olmaması gereken yerde nesne'],
+      scenarios: ['Nadir kusurlar için kalite kontrol', 'Atölyelerde süreç uyumu', 'Hassas alanlarda mesai dışı hareket', 'Kasa ve arka ofis prosedürleri'],
+      cameraNotes: ['Sabit kamera konumu ve tutarlı ışık, “normal”in öğrenilmesini kolaylaştırır.'],
+      integrations: ['Panelde inceleme kuyruğu', 'Takip iş akışları için REST API / webhook'],
+      limitations: ['İlk aşamalarda anomali puanları insan incelemesi gerektirir; eşikler alarm ve kaçırma dengesine göre ayarlanır.', 'Her anomali sorun değildir; genellikle bağlam kuralları gerekir.'],
+      faq: [{ q: 'Kusur tespitinden farkı ne?', a: 'Kusur tespiti bilinen kusur tiplerini tanır. Anomali tespiti normalden farklı her şeyi işaretler; nadir ve yeni sorunlarda işe yarar ama inceleme gerektirir.' }],
+    },
+  },
+];

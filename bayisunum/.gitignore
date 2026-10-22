@@ -1,0 +1,6 @@
+node_modules
+dist
+._pptx_extract
+._temp.pptx.zip
+.DS_Store
+*.pptx

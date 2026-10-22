@@ -1,0 +1,2230 @@
+[
+  {
+    "path": "meta.isg.label",
+    "text": "İSG"
+  },
+  {
+    "path": "meta.isg.title",
+    "text": "İş güvenliği demoları"
+  },
+  {
+    "path": "meta.isg.description",
+    "text": "KKD uyumu, tehlikeli bölge ihlali ve dijital kanıt arşivi — sahadan gerçek kayıtlar ve teknik çıkarımlar."
+  },
+  {
+    "path": "meta.yangin.label",
+    "text": "YANGIN"
+  },
+  {
+    "path": "meta.yangin.title",
+    "text": "Erken yangın algılama ve afet yönetimi"
+  },
+  {
+    "path": "meta.yangin.description",
+    "text": "10x10 piksel alev tespiti, yangın paneli entegrasyonu, çok kanallı alarm ve itfaiye yönlendirme — klasik sensörlerden önce."
+  },
+  {
+    "path": "meta.verimlilik.label",
+    "text": "VERİMLİLİK"
+  },
+  {
+    "path": "meta.verimlilik.title",
+    "text": "Üretim ve operasyon demoları"
+  },
+  {
+    "path": "meta.verimlilik.description",
+    "text": "OEE, hat duruşu, döngü süresi, personel ve ürün takibi — ölçülebilir verimlilik metrikleriyle saha kanıtı."
+  },
+  {
+    "path": "meta.custom.label",
+    "text": "CUSTOM"
+  },
+  {
+    "path": "meta.custom.title",
+    "text": "Özel proje demoları"
+  },
+  {
+    "path": "meta.custom.description",
+    "text": "Müşteriye özel pilot kurulumlar, entegrasyon senaryoları ve sektöre özel görüntü işleme çözümleri."
+  },
+  {
+    "path": "deck.mes.title",
+    "text": "MES Çözümü"
+  },
+  {
+    "path": "deck.mes.subtitle",
+    "text": "Üretim yürütme, OEE, hat verimliliği ve operasyonel görünürlük"
+  },
+  {
+    "path": "deck.mes.tag",
+    "text": "MES"
+  },
+  {
+    "path": "deck.mes.slide1.title",
+    "text": "Giriş"
+  },
+  {
+    "path": "deck.mes.slide1.subtitle",
+    "text": "Hype Vision MES platformu"
+  },
+  {
+    "path": "deck.mes.slide2.title",
+    "text": "Sorun"
+  },
+  {
+    "path": "deck.mes.slide2.subtitle",
+    "text": "Manuel takip ve gecikmeli veri"
+  },
+  {
+    "path": "deck.mes.slide3.title",
+    "text": "Çözüm mimarisi"
+  },
+  {
+    "path": "deck.mes.slide3.subtitle",
+    "text": "Edge + mevcut kameralar"
+  },
+  {
+    "path": "deck.mes.slide4.title",
+    "text": "Modüller"
+  },
+  {
+    "path": "deck.mes.slide4.subtitle",
+    "text": "OEE, idle, kalite, alarm"
+  },
+  {
+    "path": "deck.mes.slide5.title",
+    "text": "Canlı panel"
+  },
+  {
+    "path": "deck.mes.slide5.subtitle",
+    "text": "Vardiya bazlı KPI"
+  },
+  {
+    "path": "deck.mes.slide6.title",
+    "text": "Entegrasyon"
+  },
+  {
+    "path": "deck.mes.slide6.subtitle",
+    "text": "ERP / MES API"
+  },
+  {
+    "path": "deck.mes.slide7.title",
+    "text": "Pilot süreci"
+  },
+  {
+    "path": "deck.mes.slide7.subtitle",
+    "text": "Keşif → kurulum → rapor"
+  },
+  {
+    "path": "deck.mes.slide8.title",
+    "text": "Sonuç"
+  },
+  {
+    "path": "deck.mes.slide8.subtitle",
+    "text": "Ölçülebilir verimlilik kazancı"
+  },
+  {
+    "path": "deck.isg.title",
+    "text": "İSG Denetimi"
+  },
+  {
+    "path": "deck.isg.subtitle",
+    "text": "KKD, tehlikeli bölge, yangın ve dijital kanıt arşivi"
+  },
+  {
+    "path": "deck.isg.tag",
+    "text": "İSG"
+  },
+  {
+    "path": "deck.isg.slide1.title",
+    "text": "Slayt 1"
+  },
+  {
+    "path": "deck.isg.slide1.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "deck.isg.slide2.title",
+    "text": "Slayt 2"
+  },
+  {
+    "path": "deck.isg.slide2.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "deck.isg.slide3.title",
+    "text": "Slayt 3"
+  },
+  {
+    "path": "deck.isg.slide3.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "deck.isg.slide4.title",
+    "text": "Slayt 4"
+  },
+  {
+    "path": "deck.isg.slide4.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "deck.isg.slide5.title",
+    "text": "Slayt 5"
+  },
+  {
+    "path": "deck.isg.slide5.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "deck.isg.slide6.title",
+    "text": "Slayt 6"
+  },
+  {
+    "path": "deck.isg.slide6.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "deck.isg.slide7.title",
+    "text": "Slayt 7"
+  },
+  {
+    "path": "deck.isg.slide7.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "deck.isg.slide8.title",
+    "text": "Slayt 8"
+  },
+  {
+    "path": "deck.isg.slide8.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "deck.isg.slide9.title",
+    "text": "Slayt 9"
+  },
+  {
+    "path": "deck.isg.slide9.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "deck.isg.slide10.title",
+    "text": "Slayt 10"
+  },
+  {
+    "path": "deck.isg.slide10.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "deck.isg.slide11.title",
+    "text": "Slayt 11"
+  },
+  {
+    "path": "deck.isg.slide11.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "deck.isg.slide12.title",
+    "text": "Slayt 12"
+  },
+  {
+    "path": "deck.isg.slide12.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "deck.isg.slide13.title",
+    "text": "Slayt 13"
+  },
+  {
+    "path": "deck.isg.slide13.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "deck.isg.slide14.title",
+    "text": "Slayt 14"
+  },
+  {
+    "path": "deck.isg.slide14.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "deck.isg.slide15.title",
+    "text": "Slayt 15"
+  },
+  {
+    "path": "deck.isg.slide15.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "deck.isg.slide16.title",
+    "text": "Slayt 16"
+  },
+  {
+    "path": "deck.isg.slide16.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "deck.isg.slide17.title",
+    "text": "Slayt 17"
+  },
+  {
+    "path": "deck.isg.slide17.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "deck.isg.slide18.title",
+    "text": "Slayt 18"
+  },
+  {
+    "path": "deck.isg.slide18.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "deck.isg.slide19.title",
+    "text": "Slayt 19"
+  },
+  {
+    "path": "deck.isg.slide19.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "deck.isg.slide20.title",
+    "text": "Slayt 20"
+  },
+  {
+    "path": "deck.isg.slide20.subtitle",
+    "text": "İSG çözüm sunumu"
+  },
+  {
+    "path": "rampa-takip.title",
+    "text": "Araç Algılama ve Rampa Takibi"
+  },
+  {
+    "path": "rampa-takip.subtitle",
+    "text": "Lojistik rampasında araç varışı, bekleme süresi, personel ve ürün sayımı"
+  },
+  {
+    "path": "rampa-takip.arac-algilama.title",
+    "text": "1. Araç Algılama ve Rampa Takibi"
+  },
+  {
+    "path": "rampa-takip.arac-algilama.p0",
+    "text": "Yöntem: Görseldeki sarı çizgilerle belirlenmiş alan (ROI — Region of Interest) yükleme bölgesini temsil eder. Araç bu sınıra girdiğinde sistem \"Araç Geldi\" lojistiğini tetikler."
+  },
+  {
+    "path": "rampa-takip.arac-algilama.p1",
+    "text": "Kaç dakika durdu? Araç sarı alana girdiği an sistem zaman damgası (Tbaşlangıç) alır. Araç alandan ayrıldığında (Tbitiş) süresi ölçülerek Toplam Kalış Süresi otomatik hesaplanır."
+  },
+  {
+    "path": "rampa-takip.personel-sayim.title",
+    "text": "2. Personel ve Ürün Sayımı (Sayaç: 18)"
+  },
+  {
+    "path": "rampa-takip.personel-sayim.p0",
+    "text": "Personel tespiti: Sistem personeli yeşil kutu (bounding box) içerisine alarak %86 doğruluk oranıyla (Person: 86%) anlık olarak takip etmektedir."
+  },
+  {
+    "path": "rampa-takip.personel-sayim.p1",
+    "text": "Kaç tane ürün koydu? Ekranın alt orta kısmındaki \"SAYAÇ: 18\" ibaresinden anlaşılacağı üzere, personel o ana kadar kamyona tam 18 adet ürün yüklemiştir. Sağ üst köşede güncel olarak ÜRÜN #18 takibi yapılmaktadır."
+  },
+  {
+    "path": "rampa-takip.dongu-suresi.title",
+    "text": "3. Ürün Başına İşlem Süresi (Döngü Süresi)"
+  },
+  {
+    "path": "rampa-takip.dongu-suresi.p0",
+    "text": "Sol üstteki \"ÜRÜN ZAMANLARI\" tablosuna göre her bir ürünün yüklenme hızı milisaniye hassasiyetinde ölçülmektedir."
+  },
+  {
+    "path": "rampa-takip.dongu-suresi.p1",
+    "text": "Şu an yüklenmekte olan 18. ürün için geçen net süre 0.84 saniye olarak ölçülmüştür. Bu veri, operasyonel verimlilik ve personel performans analizi için kritik bir metriktir."
+  },
+  {
+    "path": "rampa-takip.tamamlandi.title",
+    "text": "4. Yükleme Ne Zaman Tamamlandı?"
+  },
+  {
+    "path": "rampa-takip.tamamlandi.p0",
+    "text": "Personel ürün koymayı bıraktığında (sayaç artışı durduğunda) ve araç sarı çizgili güvenli bölgeyi terk ettiğinde sistem yükleme sürecini \"Tamamlandı\" olarak işaretler."
+  },
+  {
+    "path": "rampa-takip.tamamlandi.p1",
+    "text": "Kesin bitiş saati veritabanına kaydedilir; sevkiyat mutabakatı ve lojistik raporlama için dijital kanıt oluşur."
+  },
+  {
+    "path": "tekstil-dikim-verimlilik.title",
+    "text": "Tekstil Dikim Hattı — Personel Davranış ve Varlık Takibi"
+  },
+  {
+    "path": "tekstil-dikim-verimlilik.subtitle",
+    "text": "Dikiş dikme vs. dikilmeyen süre · alanda bulunmama ve istasyon doluluk analizi"
+  },
+  {
+    "path": "tekstil-dikim-verimlilik.dikim-varlik.title",
+    "text": "1. Personel Davranış ve Varlık Takibi (Oturma / Ayakta Kalma)"
+  },
+  {
+    "path": "tekstil-dikim-verimlilik.dikim-varlik.p0",
+    "text": "Alanda bulunmama süresi (absenteeism): Operatörlerin istasyon başında fiziksel olarak bulunmadığı süreler anlık loglanır — örn. alt istasyonda 123 sn, sol üst istasyonda 155 sn. Malzeme tedarik aksamaları, hat dengeleme problemleri ve mola dışı istasyon terki bu veriyle analiz edilir."
+  },
+  {
+    "path": "tekstil-dikim-verimlilik.dikim-varlik.p1",
+    "text": "İstasyon başı toplam süre: Operatörlerin dikim masasında geçirdiği toplam süre (ör. 98 ve 66 sn) ölçülerek hat doluluk performansı hesaplanır."
+  },
+  {
+    "path": "tekstil-dikim-verimlilik.dikim-operasyon.title",
+    "text": "2. İstasyon ve Operasyon Verimliliği (Dikiş Dikme vs. Dikmeme Süresi)"
+  },
+  {
+    "path": "tekstil-dikim-verimlilik.dikim-operasyon.p0",
+    "text": "Dikiş dikme süresi (katma değerli zaman): Operatörün kumaşı iğnenin altına yerleştirip makineyi aktif çalıştırdığı net üretim süresi (ör. alt istasyonda 6 sn, sağ istasyonda 104 sn) — doğrudan OEE performans puanını belirler."
+  },
+  {
+    "path": "tekstil-dikim-verimlilik.dikim-operasyon.p1",
+    "text": "Dikiş dikilmeyen süre (katma değersiz / boşta kalma): Personel masada oturduğu halde makinenin çalışmadığı süre (ör. alt istasyonda 215 sn, sağ istasyonda 117 sn) — kumaş katlama, parça eşleştirme, ip değişimi gibi mikro-kayıp süreçleri deşifre eder."
+  },
+  {
+    "path": "tekstil-dikim-verimlilik.dikim-darbogaz.title",
+    "text": "3. Proje Çıkarımları ve Darboğaz Analizi"
+  },
+  {
+    "path": "tekstil-dikim-verimlilik.dikim-darbogaz.p0",
+    "text": "İstasyonlar arası denge kaybı: Sağ istasyon dikiş sürecinde uzun süre aktif kalırken (104 sn), sol taraftaki istasyonların düşük dikim süreleri (6 ve 1 sn) hat üzerinde operasyonel dengesizlik ve darboğaz arkası bekleme sinyali verir."
+  },
+  {
+    "path": "tekstil-dikim-verimlilik.dikim-darbogaz.p1",
+    "text": "Ergonomi ve iş süreci optimizasyonu: Pose Estimation ile oturuş ergonomisi ve el hareketleri izlenir; yüksek dikilmeyen süreleri düşürmek için ön hazırlık aparatları veya lojistik destek personeli önerilir."
+  },
+  {
+    "path": "tekstil-dikim-verimlilik.dikim-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "tekstil-dikim-verimlilik.dikim-ozet.p0",
+    "text": "Tekstil dikim hattında performansı tahmini standart sürelerle değil, makine ve personelin saniye bazlı dijital etkileşimiyle ölçüyoruz. Operatörlerin ne kadar süre dikiş diktiğini (104 sn), ne kadar boşta kaldığını (215 sn) ve istasyon dışına çıktığını (155 sn) anlık analiz ederek konfeksiyon hatlarındaki gizli zaman kayıplarını ortadan kaldırıyoruz."
+  },
+  {
+    "path": "utu-paketleme-verimlilik.title",
+    "text": "Ütü ve Paketleme İstasyonları — Sayım ve Verimlilik Analizi"
+  },
+  {
+    "path": "utu-paketleme-verimlilik.subtitle",
+    "text": "Otomatik sayaç · ütü yapma vs. boşta kalma süresi ve darboğaz tespiti"
+  },
+  {
+    "path": "utu-paketleme-verimlilik.utu-sayim.title",
+    "text": "1. Ütü ve Paketleme İstasyonları Sayım Mekanizması"
+  },
+  {
+    "path": "utu-paketleme-verimlilik.utu-sayim.p0",
+    "text": "Yapay zeka modeli her ütü masasından çıkan ve paketlemeye gönderilen bitmiş ürünleri insan hatasından arındırılmış şekilde tek tek sayar."
+  },
+  {
+    "path": "utu-paketleme-verimlilik.utu-sayim.p1",
+    "text": "İstasyon çıktı takibi: Üst istasyon Sayım: 98, sağ alt Sayım: 104, sol alt Sayım: 1 — gün/vardiya sonunda hangi masanın kaç adet ürünü ütüleyip paketlemeye hazır hale getirdiği net belgelenir."
+  },
+  {
+    "path": "utu-paketleme-verimlilik.utu-sure.title",
+    "text": "2. Ütüleme Süresi vs. Boşta Kalma Süresi Analizi"
+  },
+  {
+    "path": "utu-paketleme-verimlilik.utu-sure.p0",
+    "text": "Ütü yapma süresi (active ironing time): Operatörün fiziksel olarak ürünü ütülediği katma değerli süre (ör. sağ altta 66 sn) — ürün başına standart ütüleme KPI uyumluluğunu ölçer."
+  },
+  {
+    "path": "utu-paketleme-verimlilik.utu-sure.p1",
+    "text": "Ütü yapılmayan süre (idle / hazırlık): Personel masada olduğu halde ütünün çalışmadığı süre (ör. sağ altta 117 sn) — askıdan alma, serme, katlama ve poşete yerleştirme gibi ara süreçlerin zaman kaybını gösterir."
+  },
+  {
+    "path": "utu-paketleme-verimlilik.utu-darbogaz.title",
+    "text": "3. Hat Darboğaz ve Devamsızlık Analizi"
+  },
+  {
+    "path": "utu-paketleme-verimlilik.utu-darbogaz.p0",
+    "text": "Alanda bulunulmayan süre: Operatörlerin istasyonu terk ettiği veya lojistik beklediği süreler ölçülür (üst istasyonda 155 sn, sol altta 123 sn)."
+  },
+  {
+    "path": "utu-paketleme-verimlilik.utu-darbogaz.p1",
+    "text": "Darboğaz çıkarımı: Sol alt istasyonun sadece 1 ürün yapması ve 123 sn alanda bulunmaması, dikimhaneden/yıkamadan ürün gelmediğini veya ciddi hat dengeleme problemi olduğunu kanıtlar."
+  },
+  {
+    "path": "utu-paketleme-verimlilik.utu-aksiyon.title",
+    "text": "4. Süreç Optimizasyonu İçin Aksiyon Planı"
+  },
+  {
+    "path": "utu-paketleme-verimlilik.utu-aksiyon.p0",
+    "text": "Ütü/paketleme ayrımı: Ütü yapılmayan süreleri düşürmek için ütü biten ürünün direkt arkadaki paketleme personeline aktarılacağı akış bandı tasarımı kurgulanmalıdır."
+  },
+  {
+    "path": "utu-paketleme-verimlilik.utu-aksiyon.p1",
+    "text": "Besleme yönetimi: Düşük sayımlı masaların boşta kalmasını engellemek için dikimden çıkan ürünlerin masalara homojen dağıtılacağı ara stok (WIP) yönetim modeli planlanmalıdır."
+  },
+  {
+    "path": "utu-paketleme-verimlilik.utu-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "utu-paketleme-verimlilik.utu-ozet.p0",
+    "text": "Ütü ve paketleme hattında her masanın çıktısını, ütüleme süresini ve boşta kalma oranını saniye bazında ölçüyoruz. Düşük sayımlı istasyonları ve tedarik zinciri kopukluklarını anında tespit ederek hat dengeleme ve WIP yönetimi kararlarını veriyle destekliyoruz."
+  },
+  {
+    "path": "tekstil-kpi-dikim.title",
+    "text": "Dijital Tekstil Hattı — Dikiş Süreleri ve KPI Başarı Analizi"
+  },
+  {
+    "path": "tekstil-kpi-dikim.subtitle",
+    "text": "İstasyon bazlı OEE · cycle time uyumu, idle time ve absenteeism skoru"
+  },
+  {
+    "path": "tekstil-kpi-dikim.kpi-karsilastirma.title",
+    "text": "1. İstasyon Bazlı KPI ve Performans Karşılaştırması"
+  },
+  {
+    "path": "tekstil-kpi-dikim.kpi-karsilastirma.p0",
+    "text": "Masa 1 (yüksek KPI %90.4): Operatör 420 dk alanda, 380 dk aktif dikiş, 40 dk boşta kalma; ürün başına 3.1 dk ortalama süre ile hedef KPI'a yakın verimlilik."
+  },
+  {
+    "path": "tekstil-kpi-dikim.kpi-karsilastirma.p1",
+    "text": "Masa 2 (geliştirilmesi gereken %82.9): 410 dk alanda, 340 dk aktif dikiş, 70 dk boşta kalma; ürün başına 3.5 dk ile KPI hedefinin altında."
+  },
+  {
+    "path": "tekstil-kpi-dikim.kpi-metrikler.title",
+    "text": "2. Dikiş Süreçlerinde Takip Edilen Temel KPI Metrikleri"
+  },
+  {
+    "path": "tekstil-kpi-dikim.kpi-metrikler.p0",
+    "text": "OEE (Toplam Ekipman/İstasyon Etkinliği): Aktif çalışma süresi / toplam süre formülüyle masanın vardiya boyunca ne kadar efektif kullanıldığı ölçülür."
+  },
+  {
+    "path": "tekstil-kpi-dikim.kpi-metrikler.p1",
+    "text": "Çevrim süresi standart uyumu: Ürün başına harcanan sürenin fabrika reçete süresine yakınlığı; kayıp zaman oranı (idle time rate) ve devamsızlık/hat terk skoru (Pose ile absenteeism) raporlanır."
+  },
+  {
+    "path": "tekstil-kpi-dikim.kpi-aksiyon.title",
+    "text": "3. KPI Çıktılarına Göre Süreç Planlama ve Aksiyon Yönetimi"
+  },
+  {
+    "path": "tekstil-kpi-dikim.kpi-aksiyon.p0",
+    "text": "Nokta atışı eğitim: Masa 2 işlem süresi (3.5 dk) Masa 1'den (3.1 dk) uzun — dikiş tekniği veya parça yerleştirmede destek/eğitim ihtiyacı sinyali."
+  },
+  {
+    "path": "tekstil-kpi-dikim.kpi-aksiyon.p1",
+    "text": "Darboğaz önleme ve teşvik: %90 verimlilik barajını aşan istasyonlar teşvik sistemine dahil edilir; geride kalan masaların 70 dk boşta kalma nedeni (malzeme, arıza) logdan incelenerek hat duruşları önlenir."
+  },
+  {
+    "path": "tekstil-kpi-dikim.kpi-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "tekstil-kpi-dikim.kpi-ozet.p0",
+    "text": "Tekstil hatlarında verimliliği subjektif gözlemlerle değil, yapay zekanın ürettiği gerçek zamanlı KPI karneleriyle yönetiyoruz. Net dikiş süreleri ve boşta kalma dakikalarını anlık analiz ederek hedef KPI uyumlarını (Masa 1: %90.4 vs Masa 2: %82.9) nesnel raporluyor ve hat dengeleme kararlarını tamamen veri odaklı alıyoruz."
+  },
+  {
+    "path": "turnike-ihlal.title",
+    "text": "Turnike Entegrasyonu ve Kaçak Geçiş Önleme"
+  },
+  {
+    "path": "turnike-ihlal.subtitle",
+    "text": "Kart okuyucu logları + kamera görüntüsü hibrit entegrasyonu — ihlal yönetimi ve akıllı eşleştirme"
+  },
+  {
+    "path": "turnike-ihlal.kartli-gecis.title",
+    "text": "1. Kartlı Geçiş ve Validasyon (Normal Akış)"
+  },
+  {
+    "path": "turnike-ihlal.kartli-gecis.p0",
+    "text": "Senaryo: Personel veya ziyaretçi kartını okutur, turnike açılır ve geçiş tamamlanır."
+  },
+  {
+    "path": "turnike-ihlal.kartli-gecis.p1",
+    "text": "Sistem tepkisi: Kart okuma logu ile kameradaki kişi eşleştiği için sistem arka planda yeşil ışık yakar; herhangi bir ihlal kaydı oluşturulmaz, süreç sorunsuz onaylanır."
+  },
+  {
+    "path": "turnike-ihlal.kacak-gecis.title",
+    "text": "2. Kaçak Geçiş Algılama ve Dijital Eşkal Kaydı"
+  },
+  {
+    "path": "turnike-ihlal.kacak-gecis.p0",
+    "text": "Senaryo: Bir kişi kart okutmadan turnikeden atlayarak veya arkadaki turnikeden (ör. ID: 4 veya ID: 12) kaçak geçiş yapar."
+  },
+  {
+    "path": "turnike-ihlal.kacak-gecis.p1",
+    "text": "Sistem tepkisi: Donanımdan \"kart okundu\" sinyali gelmeden turnike bölgesinde dinamik insan hareketi algılandığı anda \"İhlal Eden Giriş Durumu\" mekanizması tetiklenir."
+  },
+  {
+    "path": "turnike-ihlal.kacak-gecis.p2",
+    "text": "Kaçak geçiş yapan şahsın yüz biyometrisi, kıyafet renkleri ve fiziksel ayırt edici özellikleri yapay zeka tarafından çıkarılarak Kara Liste / İhlal Havuzu veri tabanına anlık kaydedilir."
+  },
+  {
+    "path": "turnike-ihlal.akilli-eslestirme.title",
+    "text": "3. Akıllı Eşleştirme ve Uyarı Mekanizması"
+  },
+  {
+    "path": "turnike-ihlal.akilli-eslestirme.p0",
+    "text": "Yakalama senaryosu: Kaçak geçiş yapan kişi, bir sonraki sefer (akşam çıkışında veya ertesi gün) kendi kartını turnikeye bastığında sistem devreye girer."
+  },
+  {
+    "path": "turnike-ihlal.akilli-eslestirme.p1",
+    "text": "Eşleştirme ve blokaj: Kartın basıldığı andaki canlı kamera görüntüsü, havuzdaki kaçak geçiş eşkal verisiyle saniyeler içinde eşleştirilir."
+  },
+  {
+    "path": "turnike-ihlal.akilli-eslestirme.p2",
+    "text": "Uyarı bildirimi: Güvenlik birimleri ve İK / Operasyon paneline anlık uyarı düşer — \"Bu personel daha önce kaçak geçiş ihlali yapmıştır, kartını iptal edin/askıya alın\" bildirimi tetiklenir."
+  },
+  {
+    "path": "turnike-ihlal.ozet-mesaj.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "turnike-ihlal.ozet-mesaj.p0",
+    "text": "Sadece turnikeyi açan değil, turnikeyi bypass eden kişileri de takip ediyoruz. Sistemimiz, kart basma sinyali ile görsel doğrulamayı hibrit olarak işleyerek kaçak geçiş yapanların eşkalini hafızaya alır ve ilk kartlı işlemde personelin kartını otomatik olarak bloke edecek uyarı mekanizmasını tetikler."
+  },
+  {
+    "path": "akaryakit-analitik.title",
+    "text": "Akaryakıt İstasyonu Video Analitik & Market Yönlendirme"
+  },
+  {
+    "path": "akaryakit-analitik.subtitle",
+    "text": "Plaka tanıma, iskelet takibi ve nesne etkileşimi — hizmet süreleri + cross-selling"
+  },
+  {
+    "path": "akaryakit-analitik.operasyonel-metrikler.title",
+    "text": "1. Temel Operasyonel Metrikler"
+  },
+  {
+    "path": "akaryakit-analitik.operasyonel-metrikler.p0",
+    "text": "Toplam kaç araç geldi? İstasyon alanına giren ve pompalara yanaşan her araç car ve licence_plate (plaka tanıma) modelleriyle tekil olarak sayılır. Günlük, saatlik ve rampa bazlı (ör. POMPA 1-2) toplam araç hacmi raporlanır."
+  },
+  {
+    "path": "akaryakit-analitik.operasyonel-metrikler.p1",
+    "text": "Hizmet süresi: Aracın pompa önündeki sarı çizgili ROI alanına girdiği an giriş zaman damgası alınır. Dolum bitip araç ayrıldığında çıkış damgası alınır. Fark Net Hizmet Süresi olarak kaydedilir — hangi pompalarda darboğaz olduğu canlı haritalanır."
+  },
+  {
+    "path": "akaryakit-analitik.ilk-temas.title",
+    "text": "2. Personel – Müşteri İlk Temas Süresi"
+  },
+  {
+    "path": "akaryakit-analitik.ilk-temas.p0",
+    "text": "Sistem mantığı: Pompa yanındaki personel iskelet takibi (Pose Estimation) modeliyle izlenir — görselde person 0.81 ve person 0.92 etiketleri aktif."
+  },
+  {
+    "path": "akaryakit-analitik.ilk-temas.p1",
+    "text": "İlk temas ölçümü: Aracın durduğu an ile personelin iskelet koordinatlarının araca veya depo kapağına yaklaştığı (kesiştiği) ilk an arasındaki süre hesaplanır."
+  },
+  {
+    "path": "akaryakit-analitik.ilk-temas.p2",
+    "text": "Amaç: Müşterinin istasyona girdikten sonra kaç saniye bekletildiğini tespit etmek ve hizmet kalitesini (SLA) standartlaştırmak."
+  },
+  {
+    "path": "akaryakit-analitik.cam-kaput.title",
+    "text": "3. Cam Silme ve Kaput Açma Algılama"
+  },
+  {
+    "path": "akaryakit-analitik.cam-kaput.p0",
+    "text": "Kaç aracın camı silindi? Personelin kol ve gövde iskelet hareketleri, ön cam bölgesinde (yeşil kutu — front cam alanı) belirli süre git-gel hareketi sergilediğinde sistem bunu \"Cam Silme Aktivitesi\" olarak loglar."
+  },
+  {
+    "path": "akaryakit-analitik.cam-kaput.p1",
+    "text": "Kaç aracın kaputu açıldı? Aracın ön kısmında dikey geometri değişimi (kaputun yukarı kalkması) ve personelin motor gövdesine eğilmesiyle \"Kaput Açıldı / Yağ-Su Kontrolü Yapılıyor\" aksiyonu tetiklenir."
+  },
+  {
+    "path": "akaryakit-analitik.market-yonlendirme.title",
+    "text": "4. Market Yönlendirme Mekanizması (Cross-Selling)"
+  },
+  {
+    "path": "akaryakit-analitik.market-yonlendirme.p0",
+    "text": "Aktif bekleme optimizasyonu: Akaryakıt dolumu ortalama 1,5–3 dakika sürer. Dolum başladıktan ve personel teması onaylandıktan sonra müşterinin boşta bekleme süresi hesaplanır."
+  },
+  {
+    "path": "akaryakit-analitik.market-yonlendirme.p1",
+    "text": "Hedefli kampanya: Cam silindi algılanırsa pompa ekranına veya sadakat uygulamasına \"Cam suyunuzu yenilediniz mi? Markette 2 al 1 öde!\" tetiklenir. Kaput açıldıysa araç tipine göre \"Antifriz ve motor yağlarında %20 indirim\" yönlendirmesi yapılır."
+  },
+  {
+    "path": "akaryakit-analitik.market-yonlendirme.p2",
+    "text": "Süre bazlı tetikleme: Araç 90 saniyeden uzun bekliyorsa sürücü ekranına \"Sıcak bir kahve mola ister misiniz?\" görseli basılarak müşteri markete yönlendirilir."
+  },
+  {
+    "path": "akaryakit-analitik.akaryakit-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "akaryakit-analitik.akaryakit-ozet.p0",
+    "text": "Kameralarımız sadece akaryakıt satışını izlemiyor; personelin müşteriye ilk dokunuş anından cam silme faaliyetine kadar tüm operasyonu anlamlandırıyor. Amacımız, dolum esnasındaki 2 dakikalık pasif bekleme süresini yapay zeka tetiklemeli kampanyalarla dinamik olarak market içi satışa dönüştürmek."
+  },
+  {
+    "path": "okey-kalite.title",
+    "text": "Okey Taşı Kalite Kontrol ve Otomatik Ayıklama"
+  },
+  {
+    "path": "okey-kalite.subtitle",
+    "text": "Geometrik kusur + ters-düz analizi, röle tetiklemesi ve paketleme verimliliği"
+  },
+  {
+    "path": "okey-kalite.kalite-analizi.title",
+    "text": "1. Kalite Kontrol ve Ters-Düz Analizi"
+  },
+  {
+    "path": "okey-kalite.kalite-analizi.p0",
+    "text": "Doğru konum (yeşil kutu): Parmakla gösterilen bölgedeki taş yeşil bounding box ile işaretlenir — \"Doğru Yüzey/Düz\" veya kusursuz ürün standardına uygun."
+  },
+  {
+    "path": "okey-kalite.kalite-analizi.p1",
+    "text": "Hatalı/ters ürün (kırmızı kutular): Alt kanallardan geçen taşlar kırmızı bounding box (Arka/Hatalı) olarak algılanır. Ters dönme, kalıp hataları, renk veya mikron düzeyindeki geometrik kusurlar anında yakalanır."
+  },
+  {
+    "path": "okey-kalite.role-tetikleme.title",
+    "text": "2. Röle Tetiklemesi ile Hattan Atma"
+  },
+  {
+    "path": "okey-kalite.role-tetikleme.p0",
+    "text": "Gerçek zamanlı haberleşme: Model kırmızı kutuyla hata algıladığı anda endüstriyel protokoller üzerinden PLC hattına veya röle kartına tetikleme sinyali gönderir."
+  },
+  {
+    "path": "okey-kalite.role-tetikleme.p1",
+    "text": "Fiziksel ayıklama: Tetiklenen röle, hava pistonunu veya mekanik iticiyi milisaniyeler içinde çalıştırarak hatalı taşı bandından dışarı atar. Paketleme aşamasına sadece %100 kusursuz taşlar gider."
+  },
+  {
+    "path": "okey-kalite.paketleme-oee.title",
+    "text": "3. Paketleme Verimliliği ve Döngü Süresi"
+  },
+  {
+    "path": "okey-kalite.paketleme-oee.p0",
+    "text": "Paketleme verimliliği (OEE): Hatalı ürünlerin paketleme hattına girmesi engellenir; makine duruş-kalkış süreleri minimuma iner. Bant akış hızı optimize edilerek üretim verimliliği maksimize edilir."
+  },
+  {
+    "path": "okey-kalite.paketleme-oee.p1",
+    "text": "Döngü süresi: Taşların banttaki hızı ve iki taş arası geçiş süreleri anlık ölçülür. Bant hızı stabilizasyonu ve makine performans takibi bu metrikle sağlanır."
+  },
+  {
+    "path": "okey-kalite.dijital-sayac.title",
+    "text": "4. Dijital Sayaç — Bugün Kaç Taş Paketledim?"
+  },
+  {
+    "path": "okey-kalite.dijital-sayac.p0",
+    "text": "Üretim adet takibi: Yeşil kutu olarak onaylanan ve hattan atılmadan paketleme alanına ulaşan her taş \"+1 Başarılı Ürün\" olarak yazılır."
+  },
+  {
+    "path": "okey-kalite.dijital-sayac.p1",
+    "text": "Canlı dashboard: Operatör paneline ve ERP sistemine anlık basılan veriler — bugün toplam üretilen taş, başarıyla paketlenen sayı (set bazlı), hattan atılan defolu/ters taş ve fire oranı."
+  },
+  {
+    "path": "okey-kalite.okey-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "okey-kalite.okey-ozet.p0",
+    "text": "Geliştirdiğimiz yapay zeka modeli sadece hata tespit etmekle kalmıyor; röle entegrasyonu sayesinde hatalı veya ters dönmüş okey taşlarını milisaniyeler içinde hattan fiziksel olarak dışarı fırlatıyor. Böylece paketleme hattına sadece %100 kusursuz ürünlerin girmesini sağlayarak paketleme verimliliğini artırıyor ve gün sonunda kaç adet kusursuz taş paketlendiğini canlı olarak raporluyoruz."
+  },
+  {
+    "path": "ifm-giris.title",
+    "text": "İFM Fuar Merkezi — Giriş Turnikeleri"
+  },
+  {
+    "path": "ifm-giris.subtitle",
+    "text": "Ana giriş hattı demografik analiz · giriş sayacı, yaş ve cinsiyet dağılımı"
+  },
+  {
+    "path": "ifm-giris.ifm-giris-sayac.title",
+    "text": "1. Kaç Kişi Girdi? (Giriş Sayıcı)"
+  },
+  {
+    "path": "ifm-giris.ifm-giris-sayac.p0",
+    "text": "image_853484 kamerası ana giriş kapısındaki turnikeleri (Giriş Hattı — kırmızı çizgi) ve kayıt masası alanını gerçek zamanlı tarar."
+  },
+  {
+    "path": "ifm-giris.ifm-giris-sayac.p1",
+    "text": "Kırmızı tetikleme çizgisinden geçiş yapan tekil ziyaretçiler anlık sayılır. Sol üstteki \"GİRİŞ ANALİZİ\" tablosuna göre hattan başarıyla geçen toplam giriş canlı raporlanır."
+  },
+  {
+    "path": "ifm-giris.ifm-giris-demo.title",
+    "text": "2. Yaş ve Cinsiyet Dağılımı"
+  },
+  {
+    "path": "ifm-giris.ifm-giris-demo.p0",
+    "text": "Yapay zeka modeli turnikeden geçen kişilerin yüz ve fiziksel özelliklerini işleyerek anlık yaş grubu tahmini ve cinsiyet ayrımı yapar."
+  },
+  {
+    "path": "ifm-giris.ifm-giris-demo.p1",
+    "text": "Cinsiyet dağılımı: Erkek / Kadın sayıları canlı güncellenir. Kayıt masası kuyruğundaki ziyaretçiler turnikeye yaklaştıkça veriye eklenir."
+  },
+  {
+    "path": "ifm-giris.ifm-giris-demo.p2",
+    "text": "Yaş tahmini: Ziyaretçiler hedef odaklı segmentlere ayrılır — örn. 26–35 Yetişkin, 31 Yaş, 34 Yaş gibi doğrudan etiketleme."
+  },
+  {
+    "path": "ifm-giris.ifm-giris-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "ifm-giris.ifm-giris-ozet.p0",
+    "text": "Fuar girişinde sadece kaç kişi geldiğini değil; kimin geldiğini — yaş ve cinsiyet dağılımını — anlık ölçüyoruz. Bu veri stant performansıyla birleştirildiğinde katılımcı firmalara demografik ziyaretçi profili sunulur."
+  },
+  {
+    "path": "ifm-hall.title",
+    "text": "İFM Fuar Merkezi — Hall 1 Yoğunluk Analizi"
+  },
+  {
+    "path": "ifm-hall.subtitle",
+    "text": "Alan bazlı bulunma süresi (dwell time) ve stand trafiği · 5 ROI bölgesi"
+  },
+  {
+    "path": "ifm-hall.ifm-hall-dwell.title",
+    "text": "3. Alanlarda Toplam Bulunma Süreleri"
+  },
+  {
+    "path": "ifm-hall.ifm-hall-dwell.p0",
+    "text": "image_8534e7 kamerası fuar alanını (Hall 1) 5 farklı alt bölgeye (ROI) ayırarak ziyaretçi davranışlarını analiz eder."
+  },
+  {
+    "path": "ifm-hall.ifm-hall-dwell.p1",
+    "text": "Bölge 1 ve 3 (koridor/geçiş): Bulunma süresi düşük — stantlar arası geçiş alanı olarak kullanıldığı doğrulanır."
+  },
+  {
+    "path": "ifm-hall.ifm-hall-dwell.p2",
+    "text": "Bölge 4 ve 5 (stant içi görüşme/ürün sergileme): Masalarda oturma veya ürün inceleme (ör. Can-am araçları) süresi maksimuma çıkar — stand ilgi çekiciliği ölçülür."
+  },
+  {
+    "path": "ifm-hall.ifm-hall-trafik.title",
+    "text": "4. Ziyaret Sayısı (Stand Trafiği / Heatmap)"
+  },
+  {
+    "path": "ifm-hall.ifm-hall-trafik.p0",
+    "text": "Her bölgenin poligon alanı, içinden geçen veya belirli sürenin üzerinde vakit geçiren tekil kişi sayısıyla Ziyaret Skoru üretir."
+  },
+  {
+    "path": "ifm-hall.ifm-hall-trafik.p1",
+    "text": "Isı haritası mantığına göre Borusan Oto ve Can-am stantlarının kesişimindeki ana ağırlama alanı (Bölge 4) en yüksek ziyaret trafiğini alan bölge olarak kaydedilir."
+  },
+  {
+    "path": "ifm-hall.ifm-hall-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "ifm-hall.ifm-hall-ozet.p0",
+    "text": "Fuar alanına giren ziyaretçinin hangi standın önünde kaç dakika vakit geçirdiğini uçtan uca ölçüyoruz. Girişteki demografik veri ile stant içi yoğunluk verilerini birleştirerek, katılımcı firmalara hangi yaş grubunun hangi ürüne daha çok ilgi gösterdiğini raporlayan akıllı fuar analitiği sunuyoruz."
+  },
+  {
+    "path": "ifm-prestige.title",
+    "text": "İFM Fuar Merkezi — Prestige Alan Analizi"
+  },
+  {
+    "path": "ifm-prestige.subtitle",
+    "text": "Prestige salonu canlı ziyaretçi akışı ve alan performans kaydı"
+  },
+  {
+    "path": "ifm-prestige.ifm-prestige-genel.title",
+    "text": "Prestige Salonu Canlı İzleme"
+  },
+  {
+    "path": "ifm-prestige.ifm-prestige-genel.p0",
+    "text": "Prestige alanındaki kamera akışı; ziyaretçi giriş-çıkış, alan içi dolaşım ve yoğunluk değişimlerini gerçek zamanlı kaydeder."
+  },
+  {
+    "path": "ifm-prestige.ifm-prestige-genel.p1",
+    "text": "Giriş turnikelerinden gelen demografik veri ile salon içi davranış metrikleri aynı panelde birleştirilir."
+  },
+  {
+    "path": "ifm-prestige.ifm-prestige-metrik.title",
+    "text": "Operasyonel Metrikler"
+  },
+  {
+    "path": "ifm-prestige.ifm-prestige-metrik.p0",
+    "text": "Alan bazlı ziyaretçi sayısı, ortalama kalış süresi ve saatlik yoğunluk grafikleri katılımcı firmalara raporlanır."
+  },
+  {
+    "path": "ifm-prestige.ifm-prestige-metrik.p1",
+    "text": "Hangi saat aralığında hangi bölgenin daha fazla ilgi gördüğü canlı dashboard üzerinden izlenir."
+  },
+  {
+    "path": "ifm-prestige.ifm-prestige-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "ifm-prestige.ifm-prestige-ozet.p0",
+    "text": "İstanbul Fuar Merkezi genelinde girişten stant içine kadar uçtan uca analitik sunuyoruz: kaç kişi geldi, kim geldi, hangi standda ne kadar kaldı — hepsi tek platformda."
+  },
+  {
+    "path": "migros-kasa-fraud.title",
+    "text": "Migros Kasa — Müşteri Yok & Fraud Tespiti"
+  },
+  {
+    "path": "migros-kasa-fraud.subtitle",
+    "text": "Kasa bölgesi varlık analizi · hayalet işlem ve şüpheli iade/kasa açma alarmı"
+  },
+  {
+    "path": "migros-kasa-fraud.migros-kasa-bolge.title",
+    "text": "1. Kasa Bölgesi ve Müşteri Varlık Analizi"
+  },
+  {
+    "path": "migros-kasa-fraud.migros-kasa-bolge.p0",
+    "text": "Senaryo A — Müşteri yok: Kamera, KASA BÖLGESİ poligonunu tarar; alanda kimse yoksa \"MÜŞTERİ YOK\" etiketi basılır. Bu esnada POS \"KASA AÇIK\" tetiklenirse nakit çekmecesi açılır veya iade girilmeye çalışılır."
+  },
+  {
+    "path": "migros-kasa-fraud.migros-kasa-bolge.p1",
+    "text": "Senaryo B — Normal akış: Kasa önünde müşteri belirdiğinde \"MÜŞTERİ VAR Count: 1\" ile sayaç güncellenir ve POS üzerindeki normal işlem akışı onaylanır."
+  },
+  {
+    "path": "migros-kasa-fraud.migros-fraud-hayalet.title",
+    "text": "2. Fraud & Kaçak Geçiş — Hayalet İşlem"
+  },
+  {
+    "path": "migros-kasa-fraud.migros-fraud-hayalet.p0",
+    "text": "Kasa önünde \"MÜŞTERİ YOK\" sinyali varken aşağıdaki işlemlerden biri yapıldığında sistem alarm durumuna geçer:"
+  },
+  {
+    "path": "migros-kasa-fraud.migros-fraud-hayalet.p1",
+    "text": "Müşterisiz kasa açma / nakit çekmecesini tetikleme"
+  },
+  {
+    "path": "migros-kasa-fraud.migros-fraud-hayalet.p2",
+    "text": "Şüpheli iade veya iptal işlemleri geçme"
+  },
+  {
+    "path": "migros-kasa-fraud.migros-fraud-hayalet.p3",
+    "text": "Boş fiş / sepet sıfırlama hareketleri"
+  },
+  {
+    "path": "migros-kasa-sap.title",
+    "text": "Migros Kasa — SAP Fraud Video Kanıt"
+  },
+  {
+    "path": "migros-kasa-sap.subtitle",
+    "text": "POS log çapraz kontrolü · SAP kayıp-kaçak modülüne otomatik video clip"
+  },
+  {
+    "path": "migros-kasa-sap.migros-sap-eslestirme.title",
+    "text": "3. SAP Entegrasyonu ve Otomatik Video Kanıt"
+  },
+  {
+    "path": "migros-kasa-sap.migros-sap-eslestirme.p0",
+    "text": "Anlık eşleşme: Kamerada \"Müşteri Yok\" tespiti ile POS logundaki \"İade/Kasa Açma\" event zaman damgası milisaniyeler içinde çapraz kontrol edilir."
+  },
+  {
+    "path": "migros-kasa-sap.migros-sap-eslestirme.p1",
+    "text": "SAP Fraud ekibine bildirim: Şüpheli eşleşme algılandığında SAP ERP / Kayıp Kaçak Yönetimi modülüne otomatik ihlal kaydı açılır."
+  },
+  {
+    "path": "migros-kasa-sap.migros-sap-eslestirme.p2",
+    "text": "Video kaydı: İhlal anının 5 saniye öncesi ve sonrasını içeren clip, SAP fraud kaydına link veya medya eki olarak basılır — denetim ekibi manuel kamera taraması yapmadan kanıtı görür."
+  },
+  {
+    "path": "migros-kasa-sap.migros-sap-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "migros-kasa-sap.migros-sap-ozet.p0",
+    "text": "Sistemimiz sayesinde kasadaki nakit hareketlerini sadece loglarla değil, gözle de doğruluyoruz. Kasa önünde fiziksel müşteri yokken yapılan her türlü iade, iptal veya çekmece açma işlemini anında yakalıyor; ihlal anının video kaydını SAP Fraud ekibinin ekranına kanıt olarak otomatik gönderiyoruz."
+  },
+  {
+    "path": "yangin-erken-algilama.title",
+    "text": "Erken Aşama Yangın Algılama ve Afet Yönetimi"
+  },
+  {
+    "path": "yangin-erken-algilama.subtitle",
+    "text": "10x10 piksel alev tespiti · yangın paneli, omnichannel alarm ve itfaiye entegrasyonu"
+  },
+  {
+    "path": "yangin-erken-algilama.yangin-erken-teshis.title",
+    "text": "1. Ultra Erken Teşhis (10×10 Piksel)"
+  },
+  {
+    "path": "yangin-erken-algilama.yangin-erken-teshis.p0",
+    "text": "Konvansiyonel sensörlerden önce tespit: Duman veya ısının fiziksel sensörlere ulaşmasını beklemez. Kamera kadrajındaki 10×10 piksel büyüklüğündeki alev kıvılcımı veya ilk duman belirtisi (FIRE etiketli kırmızı kutu) milisaniyeler içinde yakalanır."
+  },
+  {
+    "path": "yangin-erken-algilama.yangin-erken-teshis.p1",
+    "text": "Hatalı alarm filtresi: Kaynak ışığı, güneş yansıması veya iş makinesi farları gibi etkenler elenir; sadece gerçek tehditlerde alarm tetiklenir."
+  },
+  {
+    "path": "yangin-erken-algilama.yangin-entegrasyon.title",
+    "text": "2. Donanım ve Sistem Entegrasyonları"
+  },
+  {
+    "path": "yangin-erken-algilama.yangin-entegrasyon.p0",
+    "text": "Yangın ihbar paneli: Alev algılandığında kuru kontak röleler veya endüstriyel protokoller üzerinden fiziksel yangın paneline sinyal gönderilir, siren çalışır."
+  },
+  {
+    "path": "yangin-erken-algilama.yangin-entegrasyon.p1",
+    "text": "Çok kanallı bildirim: Yangının konumu, saati ve canlı kamera görüntüsü mobil uygulama, web arayüzü, SMS ve Telegram/WhatsApp botları ile kriz yönetimine iletilir."
+  },
+  {
+    "path": "yangin-erken-algilama.yangin-entegrasyon.p2",
+    "text": "İtfaiye entegrasyonu: Doğrulanan alarmlarda yerel itfaiye merkezine (112) konum ve yangın büyüklük verisiyle otomatik çağrı/veri paketi düşer."
+  },
+  {
+    "path": "yangin-erken-algilama.yangin-afet-yonetim.title",
+    "text": "3. Akıllı Afet ve Tahliye Yönetimi"
+  },
+  {
+    "path": "yangin-erken-algilama.yangin-afet-yonetim.p0",
+    "text": "İçeride kaç kişi kaldı? Giriş-çıkış kameraları ve turnike entegrasyonlarıyla yangın anında içeride kalan personel/ziyaretçi sayısı dijital tespit edilir."
+  },
+  {
+    "path": "yangin-erken-algilama.yangin-afet-yonetim.p1",
+    "text": "Eş zamanlı bilgi akışı: Yangının yayılma hızı, yönü ve devre dışı kalan kameralar canlı panelde güncellenir."
+  },
+  {
+    "path": "yangin-erken-algilama.yangin-afet-yonetim.p2",
+    "text": "İtfaiye için akıllı giriş haritası: Yangın merkez üssü kırmızı gösterilir; içeride kalanların kümelendiği noktalar ve temiz koridorlar analiz edilerek en güvenli müdahale rotası canlı çizilir."
+  },
+  {
+    "path": "yangin-erken-algilama.yangin-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "yangin-erken-algilama.yangin-ozet.p0",
+    "text": "Biz sadece yangını algılamıyoruz; yangın anında kaosu yönetiyoruz. Klasik dedektörler dumanı hissedene kadar kameramız 10×10 piksellik alevi yakalayıp sireni çalıyor, yangın panellerini tetikliyor. Kriz anında içeride kaç kişi kaldığını ve itfaiyenin hangi kapıdan girmesi gerektiğini canlı harita üzerinde gösteren dinamik bir afet yönetim ekosistemi sunuyoruz."
+  },
+  {
+    "path": "gratis-yangin-vms.title",
+    "text": "Gratis Fabrika — Açık Alan Yangın Algılama"
+  },
+  {
+    "path": "gratis-yangin-vms.subtitle",
+    "text": "Dış saha alev/duman tespiti · Milestone VMS canlı pop-up entegrasyonu"
+  },
+  {
+    "path": "gratis-yangin-vms.gratis-algilama.title",
+    "text": "1. Açık Alan Yangın Algılama"
+  },
+  {
+    "path": "gratis-yangin-vms.gratis-algilama.p0",
+    "text": "Gratis fabrika dış sahası ve açık depolama alanları bilgisayarlı görü ile 7/24 taranır."
+  },
+  {
+    "path": "gratis-yangin-vms.gratis-algilama.p1",
+    "text": "Klasik sensörlerin ulaşamadığı açık alanlarda alev ve duman belirtisi milisaniyeler içinde FIRE etiketiyle yakalanır; hatalı alarm filtresi güneş yansıması ve kaynak ışığını eler."
+  },
+  {
+    "path": "gratis-yangin-vms.gratis-milestone.title",
+    "text": "2. Milestone VMS Entegrasyonu ve Pop-Up"
+  },
+  {
+    "path": "gratis-yangin-vms.gratis-milestone.p0",
+    "text": "Yangın algılandığı anda Milestone VMS sistemine anlık event sinyali gönderilir."
+  },
+  {
+    "path": "gratis-yangin-vms.gratis-milestone.p1",
+    "text": "Güvenlik ve İSG monitör merkezinde ihlal kamerasının canlı görüntüsü otomatik pop-up olarak büyür ve sesli uyarı verir — operatör yüzlerce kamerayı taramadan doğrudan olaya odaklanır."
+  },
+  {
+    "path": "gratis-yangin-vms.gratis-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "gratis-yangin-vms.gratis-ozet.p0",
+    "text": "Gratis fabrikasında açık alan yangın riskini sensör beklemeden kamerayla yakalıyoruz. Algılama anında Milestone VMS üzerinden güvenlik ekranına canlı pop-up düşürerek saniyeler içinde müdahale imkânı sağlıyoruz."
+  },
+  {
+    "path": "bursa-mobilya-yangin.title",
+    "text": "Bursa Mobilya Fabrikası — Açık Alan Yangın"
+  },
+  {
+    "path": "bursa-mobilya-yangin.subtitle",
+    "text": "Dış saha alev/duman tespiti · VMS pop-up ve yangın paneli entegrasyonu"
+  },
+  {
+    "path": "bursa-mobilya-yangin.bursa-algilama.title",
+    "text": "1. Açık Alan Ultra Erken Teşhis"
+  },
+  {
+    "path": "bursa-mobilya-yangin.bursa-algilama.p0",
+    "text": "Bursa mobilya fabrikası dış sahası, açık depo ve yükleme alanları bilgisayarlı görü ile kesintisiz izlenir."
+  },
+  {
+    "path": "bursa-mobilya-yangin.bursa-algilama.p1",
+    "text": "Klasik duman dedektörlerinin ulaşamadığı açık alanlarda 10×10 piksel hassasiyetinde alev kıvılcımı ve ilk duman belirtisi FIRE etiketiyle milisaniyeler içinde yakalanır."
+  },
+  {
+    "path": "bursa-mobilya-yangin.bursa-vms.title",
+    "text": "2. VMS Pop-Up ve Siren Geri Bildirimi"
+  },
+  {
+    "path": "bursa-mobilya-yangin.bursa-vms.p0",
+    "text": "Yangın algılandığı anda VMS (Milestone / NX Witness vb.) sistemine anlık event sinyali gönderilir."
+  },
+  {
+    "path": "bursa-mobilya-yangin.bursa-vms.p1",
+    "text": "Güvenlik monitör merkezinde ilgili kamera görüntüsü otomatik pop-up olarak açılır; sesli siren ve yangın ihbar paneli eş zamanlı tetiklenir."
+  },
+  {
+    "path": "bursa-mobilya-yangin.bursa-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "bursa-mobilya-yangin.bursa-ozet.p0",
+    "text": "Bursa mobilya fabrikasında açık alan yangın riskini sensör beklemeden kamerayla yakalıyoruz. Algılama anında VMS pop-up, siren ve yangın paneli geri bildirimiyle saniyeler içinde müdahale sağlanır."
+  },
+  {
+    "path": "metro-istanbul-yangin.title",
+    "text": "Metro İstanbul Depoları — Açık Alan Yangın"
+  },
+  {
+    "path": "metro-istanbul-yangin.subtitle",
+    "text": "Lojistik depo dış saha tespiti · VMS pop-up, siren ve çok kanallı alarm"
+  },
+  {
+    "path": "metro-istanbul-yangin.metro-yangin-alg.title",
+    "text": "1. Depo Açık Alan Yangın Algılama"
+  },
+  {
+    "path": "metro-istanbul-yangin.metro-yangin-alg.p0",
+    "text": "Metro İstanbul depo ve lojistik sahalarının açık alanları 7/24 bilgisayarlı görü ile taranır."
+  },
+  {
+    "path": "metro-istanbul-yangin.metro-yangin-alg.p1",
+    "text": "Ahşap, karton ve yanıcı malzeme bulunan dış sahalarda alev ve duman belirtisi dedektör beklemeden anında tespit edilir; hatalı alarm filtresi güneş ve refleksiyon kaynaklarını eler."
+  },
+  {
+    "path": "metro-istanbul-yangin.metro-yangin-vms.title",
+    "text": "2. VMS Pop-Up ve Siren Geri Bildirimi"
+  },
+  {
+    "path": "metro-istanbul-yangin.metro-yangin-vms.p0",
+    "text": "Yangın algılandığı anda VMS sistemine event gönderilir; güvenlik merkezinde ilgili kamera canlı pop-up olarak büyür."
+  },
+  {
+    "path": "metro-istanbul-yangin.metro-yangin-vms.p1",
+    "text": "Sesli siren, yangın ihbar paneli ve mobil push bildirim eş zamanlı tetiklenir — operatör ve saha ekibi saniyeler içinde bilgilendirilir."
+  },
+  {
+    "path": "metro-istanbul-yangin.metro-yangin-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "metro-istanbul-yangin.metro-yangin-ozet.p0",
+    "text": "Metro İstanbul depolarında açık alan yangın riskini yapay zeka kameralarıyla erken yakalıyoruz. VMS pop-up, siren ve yangın paneli geri bildirimiyle kriz anında hızlı müdahale ve kanıtlı alarm yönetimi sağlıyoruz."
+  },
+  {
+    "path": "inofa-yangin.title",
+    "text": "Inofa Technology — Erken Yangın Algılama"
+  },
+  {
+    "path": "inofa-yangin.subtitle",
+    "text": "Üretim sahası alev/duman tespiti · VMS pop-up, siren ve yangın paneli entegrasyonu"
+  },
+  {
+    "path": "inofa-yangin.inofa-algilama.title",
+    "text": "1. Erken Yangın ve Duman Algılama"
+  },
+  {
+    "path": "inofa-yangin.inofa-algilama.p0",
+    "text": "Inofa Technology üretim sahası ve açık alanları bilgisayarlı görü ile 7/24 izlenir."
+  },
+  {
+    "path": "inofa-yangin.inofa-algilama.p1",
+    "text": "Alev kıvılcımı ve ilk duman belirtisi FIRE etiketiyle milisaniyeler içinde yakalanır; hatalı alarm filtresi güneş yansıması ve kaynak ışığını eler."
+  },
+  {
+    "path": "inofa-yangin.inofa-vms.title",
+    "text": "2. VMS Pop-Up ve Siren Geri Bildirimi"
+  },
+  {
+    "path": "inofa-yangin.inofa-vms.p0",
+    "text": "Yangın algılandığı anda VMS sistemine anlık event sinyali gönderilir; güvenlik merkezinde ilgili kamera canlı pop-up olarak açılır."
+  },
+  {
+    "path": "inofa-yangin.inofa-vms.p1",
+    "text": "Sesli siren, yangın ihbar paneli ve mobil push bildirim eş zamanlı tetiklenir — operatör yüzlerce kamerayı taramadan doğrudan olaya odaklanır."
+  },
+  {
+    "path": "inofa-yangin.inofa-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "inofa-yangin.inofa-ozet.p0",
+    "text": "Inofa Technology sahasında yangın riskini sensör beklemeden yapay zeka kameralarıyla erken yakalıyoruz. VMS pop-up, siren ve yangın paneli geri bildirimiyle saniyeler içinde müdahale ve kanıtlı alarm yönetimi sağlıyoruz."
+  },
+  {
+    "path": "duman-erken-algilama.title",
+    "text": "Erken Duman Algılama — VMS Pop-Up ve Sesli Bildirim"
+  },
+  {
+    "path": "duman-erken-algilama.subtitle",
+    "text": "İlk duman belirtisi tespiti · VMS canlı pop-up ve sesli alarm entegrasyonu"
+  },
+  {
+    "path": "duman-erken-algilama.duman-alg.title",
+    "text": "1. Erken Duman Algılama"
+  },
+  {
+    "path": "duman-erken-algilama.duman-alg.p0",
+    "text": "Üretim ve depo alanları bilgisayarlı görü ile 7/24 taranır; alev çıkmadan önce ilk duman belirtisi milisaniyeler içinde yakalanır."
+  },
+  {
+    "path": "duman-erken-algilama.duman-alg.p1",
+    "text": "Klasik duman dedektörlerinin ulaşamadığı yüksek tavanlı veya açık sahalarda yapay zeka modeli dumanı FIRE/SMOKE etiketiyle işaretler; hatalı alarm filtresi buhar ve toz kaynaklarını eler."
+  },
+  {
+    "path": "duman-erken-algilama.duman-vms.title",
+    "text": "2. VMS Pop-Up ve Sesli Bildirim"
+  },
+  {
+    "path": "duman-erken-algilama.duman-vms.p0",
+    "text": "Duman algılandığı anda VMS sistemine anlık event sinyali gönderilir; güvenlik merkezinde ilgili kamera canlı pop-up olarak büyür."
+  },
+  {
+    "path": "duman-erken-algilama.duman-vms.p1",
+    "text": "Sesli siren ve yangın ihbar paneli eş zamanlı tetiklenir — operatör yüzlerce kamerayı taramadan doğrudan olay noktasına odaklanır."
+  },
+  {
+    "path": "duman-erken-algilama.duman-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "duman-erken-algilama.duman-ozet.p0",
+    "text": "Yangın çıkmadan önce dumanı yakalıyoruz. Algılama anında VMS üzerinden canlı pop-up ve sesli bildirim düşürerek saniyeler içinde müdahale imkânı sağlıyoruz."
+  },
+  {
+    "path": "khan-palet-dijital.title",
+    "text": "Palet Üretim & Tamir Hattı Dijital İkiz"
+  },
+  {
+    "path": "khan-palet-dijital.subtitle",
+    "text": "Khan Palet — palet sayımı, tamir aksiyon tanıma ve personel verimlilik analizi"
+  },
+  {
+    "path": "khan-palet-dijital.palet-metrikler.title",
+    "text": "1. Üretim ve Tamir Metrikleri"
+  },
+  {
+    "path": "khan-palet-dijital.palet-metrikler.p0",
+    "text": "Hattan geçen toplam palet: Ana konveyör hattında \"TOPLAM PALET SAYIMI: 140\" gibi her palet tekil olarak sayılır."
+  },
+  {
+    "path": "khan-palet-dijital.palet-metrikler.p1",
+    "text": "Tamir edilen vs. edilmeyen: Tamir masalarında çivi çakma, tahta değiştirme gibi aktiviteler Aksiyon Tanıma ile izlenir. Sağlam hatta gidenler \"Tamir Edildi\", hurda hattına ayrılanlar \"Tamir Edilmedi / Hurda\" olarak etiketlenir."
+  },
+  {
+    "path": "khan-palet-dijital.palet-personel.title",
+    "text": "2. Akıllı Personel Verimlilik Analizi"
+  },
+  {
+    "path": "khan-palet-dijital.palet-personel.p0",
+    "text": "Yasal mola entegrasyonu: Yemek ve tuvalet molaları shift/takvim entegrasyonu ile otomatik düşülür."
+  },
+  {
+    "path": "khan-palet-dijital.palet-personel.p1",
+    "text": "Boşta kalma (idle): Personel masada palete uzun süre dokunmuyorsa veya masada palet yoksa \"Malzeme Bekleme / Operasyonel Duraksama\" kaydedilir."
+  },
+  {
+    "path": "khan-palet-dijital.palet-personel.p2",
+    "text": "Masayı terk etme: Tanımlı molalar haricinde ROI dışına çıkış süreleri milisaniye hassasiyetinde biriktirilir. Gün, hafta, ay, yıl bazında OEE skoru çıkarılır."
+  },
+  {
+    "path": "khan-palet-dijital.palet-dijital-ikiz.title",
+    "text": "3. Fabrikanın Dijital Paneli"
+  },
+  {
+    "path": "khan-palet-dijital.palet-dijital-ikiz.p0",
+    "text": "Dijital ikiz ekranı: Tüm masaların anlık durumu tek panelde — Masa 1: Aktif, Masa 2: 15 dk boşta, Hat 3: Sıkışma."
+  },
+  {
+    "path": "khan-palet-dijital.palet-dijital-ikiz.p1",
+    "text": "Stratejik aksiyon: Yüksek boşta kalma \"tembellik\" mi yoksa \"hattın gerisinden palet gelmemesi\" mi — sistem otomatik analiz eder, yönetim hat dengesini yeniden kurgular."
+  },
+  {
+    "path": "khan-palet-dijital.palet-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "khan-palet-dijital.palet-ozet.p0",
+    "text": "Khan Palet fabrikasında üretimi tamamen dijitalleştiriyoruz. Kameralarımız sadece hattan geçen 140 paleti saymıyor; personelin masadaki her hareketini analiz ederek yasal molalar dışındaki görünmez duraksamaları gün, hafta, yıl bazında raporluyor. Fabrikanın dijital ikizini çıkararak yönetimin şeffaf ve veri odaklı aksiyon almasını sağlıyoruz."
+  },
+  {
+    "path": "metro-araba-takip.title",
+    "text": "Metro Market — Alışveriş Arabası Takip & VMS"
+  },
+  {
+    "path": "metro-araba-takip.subtitle",
+    "text": "grocery_cart algılama · ROI sınır ihlali ve VMS canlı pop-up entegrasyonu"
+  },
+  {
+    "path": "metro-araba-takip.metro-algilama.title",
+    "text": "1. Nesne Algılama ve Sınır İhlal Tespiti"
+  },
+  {
+    "path": "metro-araba-takip.metro-algilama.p0",
+    "text": "Market arabası algılama: Müşterinin sürdüğü alışveriş arabası yapay zeka tarafından grocery_cart olarak etiketlenip yeşil bounding box içine alınır."
+  },
+  {
+    "path": "metro-araba-takip.metro-algilama.p1",
+    "text": "Bölge sınırı (ROI): Otopark dış çıkış hatları veya arabaların çıkarılmasının yasak olduğu kritik bölgeler dijital çizgilerle sınırlanır. Araba bu çizgileri geçtiği an ihlal mekanizması çalışır."
+  },
+  {
+    "path": "metro-araba-takip.metro-vms.title",
+    "text": "2. VMS Entegrasyonu ve Canlı Pop-Up"
+  },
+  {
+    "path": "metro-araba-takip.metro-vms.p0",
+    "text": "Anlık alarm: Market arabasının otopark sınırı dışına çıkarıldığı veya sahipsiz şekilde araç yollarına terk edildiği algılandığında VMS (Milestone, NX Witness vb.) sistemine event sinyali gönderilir."
+  },
+  {
+    "path": "metro-araba-takip.metro-vms.p1",
+    "text": "Canlı pop-up: Güvenlik odası monitöründe ihlal kamerasının görüntüsü otomatik pop-up olarak büyür ve sesli uyarı verir — operatör yüzlerce kamerayı taramadan doğrudan olaya odaklanır."
+  },
+  {
+    "path": "metro-araba-takip.metro-operasyon.title",
+    "text": "3. Operasyonel Faydalar"
+  },
+  {
+    "path": "metro-araba-takip.metro-operasyon.p0",
+    "text": "Mobil bildirim: Sahipsiz veya dışarı kaçırılmaya çalışılan arabaların konumu otopark görevlilerinin el terminallerine bildirim olarak düşer."
+  },
+  {
+    "path": "metro-araba-takip.metro-operasyon.p1",
+    "text": "Kayıp ve hasar maliyeti: Arabaların çalınması, çevre araçlara çarpması veya trafiği tıkaması veri odaklı önlenir."
+  },
+  {
+    "path": "metro-araba-takip.metro-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "metro-araba-takip.metro-ozet.p0",
+    "text": "Metro Market otoparkında alışveriş arabalarını başıboş bırakmıyoruz. Kameralarımız market arabalarını anlık takip ediyor; sınır dışına çıkma veya araca çarpma riski doğduğunda VMS üzerinden güvenlik ekranlarına canlı pop-up uyarısı düşürerek saha ekiplerinin saniyeler içinde müdahale etmesini sağlıyoruz."
+  },
+  {
+    "path": "sleepy-kalite-kontrol.title",
+    "text": "Sleepy Paketleme Hattı — Baskı Doğrulama"
+  },
+  {
+    "path": "sleepy-kalite-kontrol.subtitle",
+    "text": "OCR/OCV etiket kontrolü · silinme/kusur algılama ve PLC hattan atma"
+  },
+  {
+    "path": "sleepy-kalite-kontrol.sleepy-ocr.title",
+    "text": "1. Etiket ve Baskı Doğruluğu Kontrolü"
+  },
+  {
+    "path": "sleepy-kalite-kontrol.sleepy-ocr.p0",
+    "text": "OCR & OCV: ROI içindeki paket yüzeyindeki tüm yazılar (üretim tarihi, SKT, gramaj, barkod) optik karakter doğrulama ile taranır."
+  },
+  {
+    "path": "sleepy-kalite-kontrol.sleepy-ocr.p1",
+    "text": "Karakter kontrolü: Harf ve sayıların şablona uygunluğu, doğru konumda (hizada) basılıp basılmadığı anlık kontrol edilir."
+  },
+  {
+    "path": "sleepy-kalite-kontrol.sleepy-kusur.title",
+    "text": "2. Silinme ve Kusur Algılama"
+  },
+  {
+    "path": "sleepy-kalite-kontrol.sleepy-kusur.p0",
+    "text": "Silinmiş/eksik karakter: Inkjet tıkanma veya kayma nedeniyle sayı/harf silinmesi, eksik çıkması veya silik basılması milisaniyeler içinde yakalanır."
+  },
+  {
+    "path": "sleepy-kalite-kontrol.sleepy-kusur.p1",
+    "text": "Geometrik hata: Paket kaynak noktalarında kayma veya baskıda yırtılma/büzüşme piksel düzeyinde doğrulanır."
+  },
+  {
+    "path": "sleepy-kalite-kontrol.sleepy-plc.title",
+    "text": "3. PLC Tetiklemesi ve Hattan Atma"
+  },
+  {
+    "path": "sleepy-kalite-kontrol.sleepy-plc.p0",
+    "text": "Röle/PLC: Yazısı silinmiş, eksik veya hatalı paket algılandığında fabrika PLC sistemine anlık sinyal gönderilir."
+  },
+  {
+    "path": "sleepy-kalite-kontrol.sleepy-plc.p1",
+    "text": "Ejector: Hatalı Sleepy paketi pnomatik fırlatıcı ile bandından dışarı atılır — hatalı ürünlerin kutulanması ve rafa gitmesi engellenir."
+  },
+  {
+    "path": "sleepy-kalite-kontrol.sleepy-dashboard.title",
+    "text": "4. Verimlilik ve Raporlama"
+  },
+  {
+    "path": "sleepy-kalite-kontrol.sleepy-dashboard.p0",
+    "text": "Bugün kaç paket kontrol edildi? Hattan geçen kusursuz ürünler tek tek sayılır."
+  },
+  {
+    "path": "sleepy-kalite-kontrol.sleepy-dashboard.p1",
+    "text": "Fire analizi: Gün sonunda baskı hatası nedeniyle hattan atılan paket sayısı raporlanır; inkjet yazıcı bakım zamanı öngörücü bakımla tespit edilir."
+  },
+  {
+    "path": "sleepy-kalite-kontrol.sleepy-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "sleepy-kalite-kontrol.sleepy-ozet.p0",
+    "text": "Sleepy üretim hattında gözden hiçbir kusuru kaçırmıyoruz. Yüksek hızda akan paketlerin üzerindeki sayı ve harfleri anlık tarıyor; en ufak silinme, kayma veya eksik baskıda PLC tetiklemesiyle hatalı paketi hattan fırlatıyoruz. Paketleme verimliliğini %100'e çıkararak rafa sadece kusursuz ürünlerin gitmesini sağlıyoruz."
+  },
+  {
+    "path": "ankara-seker-cuval.title",
+    "text": "Ankara Şeker — Konveyör Çuval Sayımı & OEE"
+  },
+  {
+    "path": "ankara-seker-cuval.subtitle",
+    "text": "Türkşeker paketleme hattı · sack counter, SPM ve mikro-duraksama analizi"
+  },
+  {
+    "path": "ankara-seker-cuval.seker-sayim.title",
+    "text": "1. Nesne Algılama ve Akıllı Sayım"
+  },
+  {
+    "path": "ankara-seker-cuval.seker-sayim.p0",
+    "text": "Çuval sayıcı: Hattan geçen her Türkşeker çuvalı yapay zeka tarafından tekil olarak sayılır — SACK COUNTER TOTAL arayüzünde canlı güncellenir."
+  },
+  {
+    "path": "ankara-seker-cuval.seker-sayim.p1",
+    "text": "Tetikleme noktaları (ROI): Alt kısımdaki yeşil ve kırmızı poligon çizgileri çuvalların geçiş yönünü, hızını ve hattan başarıyla çıkışını doğrular. Sarı kesikli kutu çuvalın tam geçiş anını yakalar."
+  },
+  {
+    "path": "ankara-seker-cuval.seker-oee.title",
+    "text": "2. Hat Verimliliği ve Kapasite (OEE)"
+  },
+  {
+    "path": "ankara-seker-cuval.seker-oee.p0",
+    "text": "Dakika başına çuval (SPM): Hattın anlık akış hızı ölçülür; planlanan hedef ile gerçekleşen hız kıyaslanarak performans skoru hesaplanır."
+  },
+  {
+    "path": "ankara-seker-cuval.seker-oee.p1",
+    "text": "Mikro-duraksama: Bant çalışırken belirli süre (ör. 2 dk) kontrol hatlarından çuval geçmezse \"Besleme Kesintisi\" veya \"Paketleme Arızası\" kaydedilir."
+  },
+  {
+    "path": "ankara-seker-cuval.seker-oee.p2",
+    "text": "Vardiya karşılaştırması: Farklı konveyör hatlarının verimlilik oranları gün, hafta ve vardiya bazında karşılaştırılır; darboğaz noktaları raporlanır."
+  },
+  {
+    "path": "ankara-seker-cuval.seker-erp.title",
+    "text": "3. ERP/SAP Entegrasyonu ve Alarmlar"
+  },
+  {
+    "path": "ankara-seker-cuval.seker-erp.p0",
+    "text": "Depo ve stok: Sayılan her çuval anlık olarak ERP/SAP stok yönetimine işlenir — üretim ile depo girişi arasında mutabakat sağlanır."
+  },
+  {
+    "path": "ankara-seker-cuval.seker-erp.p1",
+    "text": "Anormallik alarmları: Çuvalların üst üste binmesi, bantta sıkışma veya hat durması durumunda operatör ekranlarına anlık uyarı gönderilir."
+  },
+  {
+    "path": "ankara-seker-cuval.seker-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "ankara-seker-cuval.seker-ozet.p0",
+    "text": "Ankara Şeker fabrikasında konveyör hatlarını tamamen akıllı hale getiriyoruz. Kameralarımız hatlardan geçen çuvalları milisaniyeler içinde tek tek sayıp dijitalleştirirken; kontrol bölgeleri sayesinde dakika başına çuval akış hızını (SPM) ve mikro-duraksamaları analiz ederek hat verimliliğini gerçek zamanlı raporluyoruz."
+  },
+  {
+    "path": "bim-forklift-yolcu.title",
+    "text": "BİM Dağıtım — Yetkisiz Araç Üstü Yolcu Tespiti"
+  },
+  {
+    "path": "bim-forklift-yolcu.subtitle",
+    "text": "Transpalet/forklift üzerinde personel · Person on forklift alarmı ve canlı pop-up"
+  },
+  {
+    "path": "bim-forklift-yolcu.bim-ihlal-analiz.title",
+    "text": "1. Yapay Zeka Tabanlı İhlal Analizi"
+  },
+  {
+    "path": "bim-forklift-yolcu.bim-ihlal-analiz.p0",
+    "text": "Araç üstü insan algılama: Hareket halindeki iş makinesi ve üzerindeki insan eş zamanlı analiz edilir — kırmızı kutuda Person on forklift etiketi tetiklenir."
+  },
+  {
+    "path": "bim-forklift-yolcu.bim-ihlal-analiz.p1",
+    "text": "Kritik etiketleme: Sadece yan yana yürüyen iki nesne değil; insanın makinenin gövdesine/basamağına biniş pozisyonunda olduğu ayırt edilerek ihlal kaydedilir."
+  },
+  {
+    "path": "bim-forklift-yolcu.bim-uyari.title",
+    "text": "2. Anlık Bilgilendirme ve Uyarı"
+  },
+  {
+    "path": "bim-forklift-yolcu.bim-uyari.p0",
+    "text": "Pop-up merkez alarmı: İhlal algılandığı anda depo İSG uzmanı veya vardiya amirinin paneline canlı kamera görüntüsüyle kırmızı pop-up düşer."
+  },
+  {
+    "path": "bim-forklift-yolcu.bim-uyari.p1",
+    "text": "Saha bilgi akışı: Lokasyon (ör. BİM Dağıtım Merkezi — Blok C, Koridor 4) ve araç/operatör bilgisi Telegram, WhatsApp veya mobil İSG uygulaması ile push bildirim olarak iletilir."
+  },
+  {
+    "path": "bim-forklift-yolcu.bim-katki.title",
+    "text": "3. Operasyonel ve İSG Katkıları"
+  },
+  {
+    "path": "bim-forklift-yolcu.bim-katki.p0",
+    "text": "Düşme ve ezilme riski: Transpalet/forklift hareket halindeyken basamaktan düşme, devrilme veya yük altında kalma riskleri oluşma aşamasında engellenir."
+  },
+  {
+    "path": "bim-forklift-yolcu.bim-katki.p1",
+    "text": "Sicil yönetimi: Kural ihlalini mükerrer yapan operatör/personel dijital raporlanır — yaptırım ve nokta atışı eğitimler için kesin kanıt oluşur."
+  },
+  {
+    "path": "bim-forklift-yolcu.bim-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "bim-forklift-yolcu.bim-ozet.p0",
+    "text": "BİM lojistik depolarında iş makinelerinin amacı dışında ve güvensiz kullanımını yapay zeka ile engelliyoruz. Transpalet veya forklift üzerine binen, basamakta yetkisiz seyahat eden personeli Person on forklift uyarısıyla yakalıyor; amirlerin ekranına canlı pop-up düşürerek tehlikeli hareketlerin önüne geçiyoruz."
+  },
+  {
+    "path": "donas-kacak-siparis.title",
+    "text": "Donas — Kayıp Önleme ve Kaçak Sipariş Tespiti"
+  },
+  {
+    "path": "donas-kacak-siparis.subtitle",
+    "text": "Izgara dürüm sayımı · POS çapraz kontrol ve hayalet ürün fraud alarmı"
+  },
+  {
+    "path": "donas-kacak-siparis.donas-sayim.title",
+    "text": "1. Izgara ve Üretim Hattı Ürün Sayımı"
+  },
+  {
+    "path": "donas-kacak-siparis.donas-sayim.p0",
+    "text": "Gerçek zamanlı nesne takibi: Tezgah kamerası ızgaraya giren ve bandan geçen dürümleri tek tek etiketler — örn. 496 id'li (mavi) ve 497 id'li (kırmızı) dürüm benzersiz ID ile anlık takip edilir."
+  },
+  {
+    "path": "donas-kacak-siparis.donas-sayim.p1",
+    "text": "Net çıktı: Gün boyunca tezgahtan geçen toplam net dürüm sayısı insan hatasından bağımsız dijital mutfak loguna kaydedilir."
+  },
+  {
+    "path": "donas-kacak-siparis.donas-fraud.title",
+    "text": "2. POS Çapraz Kontrol ve Kaçak Satış"
+  },
+  {
+    "path": "donas-kacak-siparis.donas-fraud.p0",
+    "text": "Hayalet ürün algılama: Her geçen dürüm için o zaman diliminde kasadan açılmış aktif adisyon/sipariş aranır."
+  },
+  {
+    "path": "donas-kacak-siparis.donas-fraud.p1",
+    "text": "Kayıt dışı satış ihlali: Tezgahta dürüm üretilip paketlenirken kasada fiş/adisyon yoksa \"Kayıt Dışı Ürün / Fraud\" alarmı üretilir — nakit elden alım senaryosu açığa çıkar."
+  },
+  {
+    "path": "donas-kacak-siparis.donas-video-kanit.title",
+    "text": "3. Otomatik Video Kanıt ve Yönetim Bildirimi"
+  },
+  {
+    "path": "donas-kacak-siparis.donas-video-kanit.p0",
+    "text": "Zaman damgası eşleşmesi: İhlal anı (kasada hareket yokken mutfakta paketleme) tespit edildiği saniyede ihlal logu açılır."
+  },
+  {
+    "path": "donas-kacak-siparis.donas-video-kanit.p1",
+    "text": "Merkez denetim: Şüpheli kaydın öncesi ve sonrasını içeren video clip şube yönetim paneline veya merkez iç denetim ekibine kanıt olarak düşer."
+  },
+  {
+    "path": "donas-kacak-siparis.donas-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "donas-kacak-siparis.donas-ozet.p0",
+    "text": "Donas şubelerinde kaçak ve kayıt dışı satış dönemini yapay zeka ile kapatıyoruz. Izgardan geçen her dürümü benzersiz ID ile sayarken POS kasa logları ile anlık çapraz kontrol yapıyoruz. Kasaya girilmeden üretilen her hayalet dürümü saniyesinde yakalayıp video kanıtıyla iç denetim paneline raporluyoruz."
+  },
+  {
+    "path": "yuk-asansor-transpalet.title",
+    "text": "Yük Asansörleri — Akıllı Koruma ve Otomatik Donanım Kilitleme"
+  },
+  {
+    "path": "yuk-asansor-transpalet.subtitle",
+    "text": "Transpalet ROI algılama · Ethernet I/O röle ile asansör güç kesme ve kilit modu"
+  },
+  {
+    "path": "yuk-asansor-transpalet.asansor-roi.title",
+    "text": "1. Bölge Tabanlı Transpalet Algılama (ROI Control)"
+  },
+  {
+    "path": "yuk-asansor-transpalet.asansor-roi.p0",
+    "text": "Asansör kapısının önündeki kritik hol, kırmızı poligon çizgileriyle çevrili sanal kontrol bölgesi (ROI) olarak tanımlanır."
+  },
+  {
+    "path": "yuk-asansor-transpalet.asansor-roi.p1",
+    "text": "Kırmızı alana akülü istif makinesi veya transpalet girdiğinde yapay zeka nesneyi milisaniyeler içinde teşhis eder; arayüzde \"TRANSPALET TESPİT EDİLDİ\" uyarısı anında belirir."
+  },
+  {
+    "path": "yuk-asansor-transpalet.asansor-relay.title",
+    "text": "2. Donanımsal Müdahale — Güç Kesme ve Kilit Modu"
+  },
+  {
+    "path": "yuk-asansor-transpalet.asansor-relay.p0",
+    "text": "Transpalet algılandığı anda panodaki kontrolör, asansör kumanda panosuna bağlı Ethernet I/O röle modülüne sinyal gönderir."
+  },
+  {
+    "path": "yuk-asansor-transpalet.asansor-relay.p1",
+    "text": "Ana kontaktör veya kapı motorlarının gücü kesilir; asansör Kilit/Emniyet moduna alınır — kapılar açılmaz, hareket durur ve transpalet zorlasa bile kabine giremez."
+  },
+  {
+    "path": "yuk-asansor-transpalet.asansor-popup.title",
+    "text": "3. Pop-Up Bilgilendirme ve Operasyonel Raporlama"
+  },
+  {
+    "path": "yuk-asansor-transpalet.asansor-popup.p0",
+    "text": "Kabin/kat önü operasyon ekranlarına ve merkez izleme paneline anlık sesli ve görsel pop-up ihlal bildirimi düşer."
+  },
+  {
+    "path": "yuk-asansor-transpalet.asansor-popup.p1",
+    "text": "İhlal görsel kanıtı (clip) ve zaman damgası İSG ve tesis yönetimine otomatik raporlanır."
+  },
+  {
+    "path": "yuk-asansor-transpalet.asansor-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "yuk-asansor-transpalet.asansor-ozet.p0",
+    "text": "Depolardaki yük asansörlerinin transpaletler tarafından kırılıp dökülmesini yapay zeka ile tamamen engelliyoruz. Kırmızı bölgeye transpalet girdiği anda TRANSPALET TESPİT EDİLDİ alarmı basılıyor ve röle modülü üzerinden asansörün gücü kesilerek kapılar kilitleniyor — yüksek maliyetli hasarların önüne geçiyoruz."
+  },
+  {
+    "path": "aemot-bobin-sarim.title",
+    "text": "Elektrikli Motor Üretimi — Akıllı Bobin Sarım ve Paketleme Hattı"
+  },
+  {
+    "path": "aemot-bobin-sarim.subtitle",
+    "text": "Üst açı Pose Estimation · sarım/paketleme ROI, döngü süresi ve OEE raporlama"
+  },
+  {
+    "path": "aemot-bobin-sarim.aemot-roi-pose.title",
+    "text": "1. Sarım ve Paketleme Alanı Bazlı İşlem Akışı (ROI & Pose Estimation)"
+  },
+  {
+    "path": "aemot-bobin-sarim.aemot-roi-pose.p0",
+    "text": "Üst açı kameralarıyla operatörler mavi iskelet çizgileriyle anlık izlenir; personelin masada oturması değil, elleriyle aktif montaj/sarım yapıp yapmadığı ayırt edilir."
+  },
+  {
+    "path": "aemot-bobin-sarim.aemot-roi-pose.p1",
+    "text": "Masa üzerinde iki operasyonel alan tanımlanır: Sarım Alanı (turuncu kutu) bobin sarım işlemleri ve sayaç takibi; Paketleme Alanı (yeşil kutu) sarımı biten bobinlerin toplandığı son istasyon."
+  },
+  {
+    "path": "aemot-bobin-sarim.aemot-metrikler.title",
+    "text": "2. Üretim ve Performans Takip Metrikleri"
+  },
+  {
+    "path": "aemot-bobin-sarim.aemot-metrikler.p0",
+    "text": "Toplam üretim adedi: Her personelin tamamladığı ürünler gerçek zamanlı sayılır; gün/vardiya sonunda hat bazlı toplam çıktı otomatik netleşir."
+  },
+  {
+    "path": "aemot-bobin-sarim.aemot-metrikler.p1",
+    "text": "Döngü süresi (cycle time): Bobinin sarım alanına girişi ile paketleme alanına aktarılması arasındaki süre saniye bazında ölçülür; her bobinin sarım süresi tekil loglanır."
+  },
+  {
+    "path": "aemot-bobin-sarim.aemot-metrikler.p2",
+    "text": "Personel varlık süresi: Operatörün iskeletinin çalışma sandalyesinde aktif algılandığı toplam süre vardiya boyunca ölçülür."
+  },
+  {
+    "path": "aemot-bobin-sarim.aemot-durum.title",
+    "text": "3. Masa / İstasyon Zaman ve Durum Analizleri"
+  },
+  {
+    "path": "aemot-bobin-sarim.aemot-durum.p0",
+    "text": "Aktif çalışma süresi: Personelin sarım/paketleme alanlarında montaj, sarım veya taşıma hareketi gerçekleştirdiği verimli süre."
+  },
+  {
+    "path": "aemot-bobin-sarim.aemot-durum.p1",
+    "text": "Boşta kalma (idle): Personel masada oturduğu halde fiziksel işlem yapmadığı mikro-kayıp süreler — malzeme bekleme, duraksama."
+  },
+  {
+    "path": "aemot-bobin-sarim.aemot-durum.p2",
+    "text": "İstasyon terk (absenteeism): Personelin istasyonu tamamen bıraktığı, iskelet algılamasının sıfıra düştüğü süreler."
+  },
+  {
+    "path": "aemot-bobin-sarim.aemot-rapor.title",
+    "text": "4. Günlük / Vardiya Bazlı Üretim Karnesi"
+  },
+  {
+    "path": "aemot-bobin-sarim.aemot-rapor.p0",
+    "text": "Sistem gün veya vardiya sonunda istasyon/operatör bazlı otomatik rapor üretir: personel varlık süresi, aktif çalışma, boşta kalma, toplam çıktı (adet), bobin başına ortalama sarım süresi ve istasyon verimlilik skoru (OEE)."
+  },
+  {
+    "path": "aemot-bobin-sarim.aemot-rapor.p1",
+    "text": "Örnek çıktı: İstasyon 1 — 420 dk varlık, 380 dk aktif, 40 dk boşta, 120 adet, 3.1 dk/bobin, %90.4 OEE; İstasyon 2 — 410 dk varlık, 340 dk aktif, 70 dk boşta."
+  },
+  {
+    "path": "aemot-bobin-sarim.aemot-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "aemot-bobin-sarim.aemot-ozet.p0",
+    "text": "Elektrikli motor üretim hattında verimliliği tahminlerle değil, yapay zekanın milisaniyelik verileriyle ölçüyoruz. Üst açıdan personelin iskelet hareketlerini ve sarım/paketleme alanlarını anlık analiz ediyor; hangi bobinin kaç dakikada sarıldığını, personelin ne kadar aktif çalıştığını ve hatların hangi dakikalarda boşta kaldığını otomatik raporlayarak günlük ve vardiya bazlı üretim karnelerini insan inisiyatifinden bağımsız çıkarıyoruz."
+  },
+  {
+    "path": "konveyor-montaj-darbogaz.title",
+    "text": "Konveyör Montaj Hattı — Akıllı Darboğaz ve Verimlilik Analizi"
+  },
+  {
+    "path": "konveyor-montaj-darbogaz.subtitle",
+    "text": "Motor ID takibi · personel-ürün etkileşim süresi, idle time ve gecikme alarmı"
+  },
+  {
+    "path": "konveyor-montaj-darbogaz.konveyor-cycle.title",
+    "text": "1. Ürün Tabanlı İzleme ve Döngü Süresi (Cycle Time) Takibi"
+  },
+  {
+    "path": "konveyor-montaj-darbogaz.konveyor-cycle.p0",
+    "text": "Konveyör bandı üzerindeki her elektrikli motor benzersiz ID ile takip edilir — M-1, M-2, M-3, M-4, M-5, M-6 gibi etiketlerle hat akışı milisaniyeler içinde izlenir."
+  },
+  {
+    "path": "konveyor-montaj-darbogaz.konveyor-cycle.p1",
+    "text": "Her motorun üzerinde o ana kadar geçirdiği sürenin hedef süreye oranı anlık verimlilik yüzdesi olarak basılır (ör. M-1 %54, M-2 %75, M-4 %76, M-5 %55)."
+  },
+  {
+    "path": "konveyor-montaj-darbogaz.konveyor-personel.title",
+    "text": "2. Personel — Ürün Etkileşim Analizi"
+  },
+  {
+    "path": "konveyor-montaj-darbogaz.konveyor-personel.p0",
+    "text": "Montaj hattındaki personellerin el hareketleri ve konumları analiz edilerek iş gücü dağılımı ölçülür."
+  },
+  {
+    "path": "konveyor-montaj-darbogaz.konveyor-personel.p1",
+    "text": "Nokta atışı operasyon süresi: Ortadaki personelin M-3 ile ilgileniyor | 8.9 sn, sağdaki personelin M-5 ile ilgileniyor | 2.0 sn gibi eşleştirmeler saniye bazında loglanır; el pratikliği ve standart süre uyumu (KPI) raporlanır."
+  },
+  {
+    "path": "konveyor-montaj-darbogaz.konveyor-idle.title",
+    "text": "3. Boşta Kalma (Idle Time) ve Darboğaz Tespiti"
+  },
+  {
+    "path": "konveyor-montaj-darbogaz.konveyor-idle.p0",
+    "text": "İstasyon dışı takip: Personel montaj alanından uzaklaştığında \"P-4 istasyon dışı\" gibi loglar üretilir; operasyona dahil olmayan süreler boşta kalma olarak kaydedilir."
+  },
+  {
+    "path": "konveyor-montaj-darbogaz.konveyor-idle.p1",
+    "text": "Darboğaz analizi: Montajı biten motor önündeki hattan dolayı ilerleyemiyorsa sistem bunu hattın tıkanma noktası olarak işaretler."
+  },
+  {
+    "path": "konveyor-montaj-darbogaz.konveyor-alarm.title",
+    "text": "4. Proaktif Geri Bildirim — Hatta Fazla Kalma / Gecikme Uyarıları"
+  },
+  {
+    "path": "konveyor-montaj-darbogaz.konveyor-alarm.p0",
+    "text": "Motor tanımlı maksimum çevrim süresini (ör. 45 sn) aşarsa anormallik alarmı tetiklenir; istasyon akıllı ekranına veya kule lambasına sarı/kırmızı uyarı düşer."
+  },
+  {
+    "path": "konveyor-montaj-darbogaz.konveyor-alarm.p1",
+    "text": "Vardiya amirine \"Hat 2, İstasyon 3'te M-3 motoru 12 saniyedir gecikmede\" şeklinde pop-up / mobil bildirim gönderilerek duruş maliyeti yaşanmadan müdahale sağlanır."
+  },
+  {
+    "path": "konveyor-montaj-darbogaz.konveyor-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "konveyor-montaj-darbogaz.konveyor-ozet.p0",
+    "text": "Montaj hattındaki tıkanmaları ve gizli zaman kayıplarını yapay zeka ile görünür kılıyoruz. Hattan geçen her motoru ve personeli anlık eşleştirerek hangi personelin hangi motorla kaç saniye ilgilendiğini ve kimlerin istasyon dışında kaldığını milisaniyeler içinde analiz ediyoruz. Ürün hatta normalden fazla durduğunda otomatik geri bildirim üreterek darboğazları büyümeden çözmemizi sağlıyoruz."
+  },
+  {
+    "path": "masa-pose-verimlilik.title",
+    "text": "Manuel Montaj İstasyonları — Pose Tabanlı Verimlilik Analizi"
+  },
+  {
+    "path": "masa-pose-verimlilik.subtitle",
+    "text": "Otomatik sayaç · cycle time, doluluk oranı ve darboğaz haritalama"
+  },
+  {
+    "path": "masa-pose-verimlilik.masa-sayac.title",
+    "text": "1. Personel Verimliliği ve Sayaç Takibi"
+  },
+  {
+    "path": "masa-pose-verimlilik.masa-sayac.p0",
+    "text": "Yapay zeka modeli her personelin tamamladığı ürün sayısını otomatik sayar — Masa 1: 44 adet, Masa 2: 41 adet gibi net çıktılar insan hatasından arındırılmış şekilde gösterilir."
+  },
+  {
+    "path": "masa-pose-verimlilik.masa-sayac.p1",
+    "text": "Aynı istasyon veya farklı vardiyalarda personel performansı objektif verilerle kıyaslanır; örneğin Masa 1'in Masa 2'den %7,3 daha verimli çalıştığı tespit edilerek nokta atışı eğitim ihtiyaçları belirlenir."
+  },
+  {
+    "path": "masa-pose-verimlilik.masa-cycle.title",
+    "text": "2. İstasyon Verimliliği ve Ürün Başına Zaman Analizi"
+  },
+  {
+    "path": "masa-pose-verimlilik.masa-cycle.p0",
+    "text": "Sayaç tablosundaki \"Süre\" verisi (ör. 2.1s) her ürünün istasyonda geçirdiği net işlem süresini milisaniye hassasiyetinde ölçer; ürün bazlı standardizasyon sağlanır."
+  },
+  {
+    "path": "masa-pose-verimlilik.masa-cycle.p1",
+    "text": "Pose Estimation ile personelin aktif montaj hareketi gerçekleştirdiği süre (\"Aktif 2.1s\", \"DOLU\" etiketi) ölçülür; istasyonda bulunup boşta kalınan mikro-kayıp zamanlar tespit edilir."
+  },
+  {
+    "path": "masa-pose-verimlilik.masa-darbogaz.title",
+    "text": "3. Darboğaz Analizi ve Süreç Planlaması"
+  },
+  {
+    "path": "masa-pose-verimlilik.masa-darbogaz.p0",
+    "text": "Farklı istasyonların anlık verimlilik skorları karşılaştırılır (%100 DOLU vs %80 DOLU) — hattın nerede yavaşladığı ve darboğazın nerede oluştuğu anlık haritalanır."
+  },
+  {
+    "path": "masa-pose-verimlilik.masa-darbogaz.p1",
+    "text": "Masa 1 işlem süresi istikrarlı şekilde daha uzunsa takviye personel veya operasyon kaydırma gibi dinamik süreç planlama kararlarıyla hat dengelenir."
+  },
+  {
+    "path": "masa-pose-verimlilik.masa-kayip.title",
+    "text": "4. Kayıp Zaman Analizi ve Boşta Kalma Tespiti"
+  },
+  {
+    "path": "masa-pose-verimlilik.masa-kayip.p0",
+    "text": "\"Aktif\" süre ile döngü süresi arasındaki fark mikro-duraklamaları, malzeme bekleme ve ergonomik sıkıntıları işaret eder."
+  },
+  {
+    "path": "masa-pose-verimlilik.masa-kayip.p1",
+    "text": "Personelin iskelet algılamasının kesildiği ve istasyonun \"BOŞ\" kaldığı süreler otomatik kaydedilir; mola harici duruşlar ve lojistik eksiklikler veri odaklı analiz edilir."
+  },
+  {
+    "path": "masa-pose-verimlilik.masa-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "masa-pose-verimlilik.masa-ozet.p0",
+    "text": "Manuel operasyonları tamamen şeffaf hale getiriyoruz. Her personelin kaç ürün yaptığını (Masa 1: 44 adet), her üründe kaç saniye geçirdiğini (Süre: 2.1s) ve istasyonların hangi dakikalarda darboğaz oluşturduğunu saniyeler bazında analiz ediyoruz. Görünmez kayıp zamanları ortadan kaldırarak üretim verimliliğini %100 doluluk oranına ulaştırmayı hedefliyoruz."
+  },
+  {
+    "path": "hat-poka-yoke-etiket.title",
+    "text": "Akıllı Hat Üretim Takibi ve Proses Doğrulama (Poka-Yoke)"
+  },
+  {
+    "path": "hat-poka-yoke-etiket.subtitle",
+    "text": "Ürün sayımı · etiketleme proses kontrolü ve operatör HMI uyarısı"
+  },
+  {
+    "path": "hat-poka-yoke-etiket.poka-sayim.title",
+    "text": "1. Gelen Ürün Sayımı ve Giriş Takibi"
+  },
+  {
+    "path": "hat-poka-yoke-etiket.poka-sayim.p0",
+    "text": "Ana konveyör bandından personelin önüne gelen her yarı mamul/ürün yapay zeka tarafından tekil algılanır ve dijital üretim sayacına işlenir."
+  },
+  {
+    "path": "hat-poka-yoke-etiket.poka-sayim.p1",
+    "text": "Mavi ve sarı poligon ROI alanları ürünün işlem gördüğü montaj ve etiketleme istasyonunu temsil eder; ürün bu alana girdiği an süreç takibi başlar."
+  },
+  {
+    "path": "hat-poka-yoke-etiket.poka-proses.title",
+    "text": "2. Proses Doğrulama ve Eksik Etiket (Hata) Tespiti"
+  },
+  {
+    "path": "hat-poka-yoke-etiket.poka-proses.p0",
+    "text": "Adım 1 — Algılama: Ürün masaya gelir. Adım 2 — Proses kontrolü: Operatörün etiket yapıştırma hareketi ve ürün üzerinde barkod/etiket nesnesinin belirip belirmediği anlık taranır."
+  },
+  {
+    "path": "hat-poka-yoke-etiket.poka-proses.p1",
+    "text": "Adım 3 — Çıkış kontrolü: Ürün işlem sonrası arkadaki çıkış bandına doğru hareket ettirilir; eksik etiket saniyesinde tespit edilir."
+  },
+  {
+    "path": "hat-poka-yoke-etiket.poka-uyari.title",
+    "text": "3. Operatör Ekranı Anlık Uyarısı — \"Etiketi Unuttun!\""
+  },
+  {
+    "path": "hat-poka-yoke-etiket.poka-uyari.p0",
+    "text": "Personel ürünü etiketlemeden arkadaki hatta koymaya çalışırsa operatörün önündeki HMI paneline \"UYARI: ETİKET EKSİK / ETİKETİ UNUTTUN!\" flaş uyarısı düşer."
+  },
+  {
+    "path": "hat-poka-yoke-etiket.poka-uyari.p1",
+    "text": "Opsiyonel istasyon kilitleme: Çıkış bandı motoru Ethernet I/O rölesi ile durdurulabilir; etiket yapıştırılıp yapay zeka yeşil onay verene kadar hatalı ürünün çıkışına izin verilmez."
+  },
+  {
+    "path": "hat-poka-yoke-etiket.poka-rapor.title",
+    "text": "4. Operasyonel Çıkarımlar ve Kalite Katkısı"
+  },
+  {
+    "path": "hat-poka-yoke-etiket.poka-rapor.p0",
+    "text": "Sıfır hatalı sevkiyat: Montajı veya etiketi eksik hiçbir ürün paketleme aşamasına geçemez."
+  },
+  {
+    "path": "hat-poka-yoke-etiket.poka-rapor.p1",
+    "text": "Gün sonu raporlama: Hangi istasyonda kaç ürün etiketlendiği ve kaç kez etiket unutma uyarısı tetiklendiği loglanarak operatör odaklanma ve hata eğilimleri dijitalleştirilir."
+  },
+  {
+    "path": "hat-poka-yoke-etiket.poka-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "hat-poka-yoke-etiket.poka-ozet.p0",
+    "text": "Üretim hattında insan hatasına bağlı kalite kusurlarını yapay zeka ile sıfıra indiriyoruz. Hattan gelen ürünleri sayarken personelin etiket yapıştırma prosesini anlık denetliyoruz. Operatör etiketi yapıştırmadan ürünü arkaya sevk etmeye çalıştığı anda önündeki ekrana \"Etiketi Unuttun!\" uyarısı basarak hatalı ürünün istasyondan çıkmasını anında engelliyoruz."
+  },
+  {
+    "path": "tir-yukleme-sayim.title",
+    "text": "Akıllı Sevkiyat Alanı — Tır Yükleme ve Forklift Ürün Sayımı"
+  },
+  {
+    "path": "tir-yukleme-sayim.subtitle",
+    "text": "ROI zone palet sayımı · yükleme çevrim süresi ve rampa darboğaz analizi"
+  },
+  {
+    "path": "tir-yukleme-sayim.tir-roi-sayim.title",
+    "text": "1. Dinamik ROI Zone ile Otomatik Palet/Ürün Sayımı"
+  },
+  {
+    "path": "tir-yukleme-sayim.tir-roi-sayim.p0",
+    "text": "Tır kasası girişine tanımlanan sarı ROI ZONE, sistemin ana kontrol merkezidir; forklift veya transpaletin yükü içeriye bırakıp bırakmadığı ürün varlığı ve hareket analiziyle doğrulanır."
+  },
+  {
+    "path": "tir-yukleme-sayim.tir-roi-sayim.p1",
+    "text": "Sağ üst köşedeki dijital sayaç tır bazlı yükleme başladığı an gerçek zamanlı güncellenir; her onaylı palet insan eliyle çetele tutulmadan otomatik işlenir."
+  },
+  {
+    "path": "tir-yukleme-sayim.tir-darbogaz.title",
+    "text": "2. Sevkiyat Hattı Darboğaz ve Kayıp Zaman Analizi"
+  },
+  {
+    "path": "tir-yukleme-sayim.tir-darbogaz.p0",
+    "text": "Tır yükleme çevrim süresi: Tırın rampaya yanaştığı andan yüklemenin bittiği ana kadar geçen toplam süre ölçülür."
+  },
+  {
+    "path": "tir-yukleme-sayim.tir-darbogaz.p1",
+    "text": "Forklift besleme frekansı: İki palet yüklemesi arasındaki bekleme süreleri hesaplanır — rampa önünde sıra varsa \"Rampa Darboğazı\", tır içinde uzun bekleme varsa \"Depo İçi Lojistik Besleme Darboğazı\" teşhisi konur."
+  },
+  {
+    "path": "tir-yukleme-sayim.tir-poka-yoke.title",
+    "text": "3. Süreç Planlaması ve Poka-Yoke Çıkarımları"
+  },
+  {
+    "path": "tir-yukleme-sayim.tir-poka-yoke.p0",
+    "text": "WMS entegrasyonu ile o tıra yüklenmemesi gereken farklı barkodlu palet rampaya getirildiğinde forklift operatörü hata yapmadan önce uyarılır."
+  },
+  {
+    "path": "tir-yukleme-sayim.tir-poka-yoke.p1",
+    "text": "Üretim/paketleme hızı ile sevkiyat hızı anlık kıyaslanır; rampada ürün yığılmasını engellemek için forklift operatörü görevlendirmeleri dinamik optimize edilir."
+  },
+  {
+    "path": "tir-yukleme-sayim.tir-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "tir-yukleme-sayim.tir-ozet.p0",
+    "text": "Üretim sahasındaki yapay zeka takibini tır yükleme rampalarıyla taçlandırarak lojistik süreçleri %100 şeffaf hale getiriyoruz. ROI ZONE sayesinde forkliftlerin içeriye bıraktığı her ürünü otomatik sayıyor; hangi tırın kaç dakikada yüklendiğini ve forkliftlerin rampa önünde ne kadar boşta beklediğini saniye saniye analiz ederek sevkiyat darboğazlarını ortadan kaldırıyoruz."
+  },
+  {
+    "path": "cummins-motor-yabanci-nesne.title",
+    "text": "Cummins Motor Test İstasyonu — Akıllı Yabancı Nesne Önleme"
+  },
+  {
+    "path": "cummins-motor-yabanci-nesne.subtitle",
+    "text": "Bez/karton algılama · PLC interlocking ile test kilitleme ve güvenli başlatma"
+  },
+  {
+    "path": "cummins-motor-yabanci-nesne.cummins-alg.title",
+    "text": "1. Yapay Zeka Tabanlı Yabancı Nesne Algılama"
+  },
+  {
+    "path": "cummins-motor-yabanci-nesne.cummins-alg.p0",
+    "text": "Motorun test standındaki konumu kameralar tarafından taranan ana kontrol bölgesine (ROI) alınır."
+  },
+  {
+    "path": "cummins-motor-yabanci-nesne.cummins-alg.p1",
+    "text": "Model motor bileşenleri dışındaki anomalileri tespit eder; unutulan endüstriyel bezler, temizlik kağıtları veya ambalaj kartonları anında yüksek doğrulukla yakalanır."
+  },
+  {
+    "path": "cummins-motor-yabanci-nesne.cummins-plc.title",
+    "text": "2. PLC Entegrasyonu ile Enerji Kesme (Interlocking)"
+  },
+  {
+    "path": "cummins-motor-yabanci-nesne.cummins-plc.p0",
+    "text": "Yabancı nesne algılandığında PROFINET / Modbus TCP üzerinden PLC'ye YABANCI_MADDE_IHLAL = 1 sinyali gönderilir; test standı güç beslemesi kesilir veya başlatma rölesi kilitlenir."
+  },
+  {
+    "path": "cummins-motor-yabanci-nesne.cummins-plc.p1",
+    "text": "HMI panelde \"UYARI: MOTOR ÜSTÜNDE BEZ/KARTON UNUTULDU - LÜTFEN TEMİZLEYİN\" uyarısı flaş şeklinde yanıp söner — operatör ne yaparsa yapsın test başlatılamaz."
+  },
+  {
+    "path": "cummins-motor-yabanci-nesne.cummins-temizlik.title",
+    "text": "3. Güvenli Başlatma Mantığı"
+  },
+  {
+    "path": "cummins-motor-yabanci-nesne.cummins-temizlik.p0",
+    "text": "Operatör motor üstündeki yabancı nesneyi fiziksel olarak alıp alanı temizleyene kadar sistem blokajı kaldırmaz."
+  },
+  {
+    "path": "cummins-motor-yabanci-nesne.cummins-temizlik.p1",
+    "text": "Nesne kaldırıldığında yapay zeka motor yüzeyinin temiz olduğunu onaylar ve PLC'ye TEST_IZIN = 1 sinyali basarak testin güvenle başlamasını sağlar."
+  },
+  {
+    "path": "cummins-motor-yabanci-nesne.cummins-kpi.title",
+    "text": "4. Süreç ve Kalite İyileştirme Katkısı"
+  },
+  {
+    "path": "cummins-motor-yabanci-nesne.cummins-kpi.p0",
+    "text": "Yüksek sıcaklık veya hareketli parçalarla temas edebilecek yanıcı maddeler test öncesi %100 elenir — sıfır yangın ve mekanik hasar riski."
+  },
+  {
+    "path": "cummins-motor-yabanci-nesne.cummins-kpi.p1",
+    "text": "Hangi vardiyada veya motor tipinde daha çok bez/karton unutulduğu loglanarak montaj hattındaki ön hazırlık süreçleri revize edilir."
+  },
+  {
+    "path": "cummins-motor-yabanci-nesne.cummins-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "cummins-motor-yabanci-nesne.cummins-ozet.p0",
+    "text": "Cummins motor test hattında insan hatasına bağlı yangın ve hasar risklerini yapay zeka ile sıfıra indiriyoruz. Test öncesinde motor üstünü tarayarak unutulan bez, kağıt veya kartonları anında teşhis ediyor; yabancı madde kaldığı sürece PLC entegrasyonu ile test gücünü keserek alan tamamen temizlenene kadar testi donanımsal olarak bloke ediyoruz."
+  },
+  {
+    "path": "isg-kkd-uyum.title",
+    "text": "KKD Uyum Denetimi — Güvenli Geçiş"
+  },
+  {
+    "path": "isg-kkd-uyum.subtitle",
+    "text": "Baret, maske ve gözlük algılama · yeşil onay senaryoları"
+  },
+  {
+    "path": "isg-kkd-uyum.isg-guvenli-gecis.title",
+    "text": "1. Güvenli Geçiş ve Tam KKD Uyumu"
+  },
+  {
+    "path": "isg-kkd-uyum.isg-guvenli-gecis.p0",
+    "text": "Baret ve maske/gözlük algılama: Bareti doğru şekilde takan personel yapay zeka tarafından anlık tespit edilir."
+  },
+  {
+    "path": "isg-kkd-uyum.isg-guvenli-gecis.p1",
+    "text": "Sistem tepkisi: Gerekli donanımları tam olan personelin geçişine izin verilir, ekranda yeşil onay işareti belirir ve İSG loglarına \"Uyumlu Geçiş\" olarak kaydedilir."
+  },
+  {
+    "path": "isg-kkd-uyum.isg-ihlal-alarm.title",
+    "text": "2. İhlal Algılama ve Anlık Alarm"
+  },
+  {
+    "path": "isg-kkd-uyum.isg-ihlal-alarm.p0",
+    "text": "Baretsiz/eksik ekipmanla geçiş: Sahaya baretsiz giriş yapan veya koridorda baretini çıkaran personeller yakalanır."
+  },
+  {
+    "path": "isg-kkd-uyum.isg-ihlal-alarm.p1",
+    "text": "Sistem tepkisi: Baret eksikliği algılandığı anda ekranda kırmızı ünlem (ihlal/tehlike) simgesi tetiklenir. Personelin altına kırmızı kutu açılarak ihlal türü etiketlenir."
+  },
+  {
+    "path": "isg-kkd-entegrasyon.title",
+    "text": "KKD Denetimi — Turnike Entegrasyonu"
+  },
+  {
+    "path": "isg-kkd-entegrasyon.subtitle",
+    "text": "Anlık bildirim, turnike kilidi ve geriye dönük İSG raporlama"
+  },
+  {
+    "path": "isg-kkd-entegrasyon.isg-entegrasyon.title",
+    "text": "3. Entegrasyon ve Yaptırım Senaryoları"
+  },
+  {
+    "path": "isg-kkd-entegrasyon.isg-entegrasyon.p0",
+    "text": "Anlık bildirim: İhlal algılandığı an vardiya amirine, İSG uzmanına veya merkez güvenlik paneline personelin fotoğrafı ve lokasyon bilgisiyle push notification gönderilir."
+  },
+  {
+    "path": "isg-kkd-entegrasyon.isg-entegrasyon.p1",
+    "text": "Turnike ve kapı kilit entegrasyonu: Personel baretini veya yeleğini giymediği sürece turnike fiziksel olarak açılmaz — eksiksiz girişler %100 engellenir."
+  },
+  {
+    "path": "isg-kkd-entegrasyon.isg-entegrasyon.p2",
+    "text": "Geriye dönük raporlama: Hangi departmanın veya personelin aylık bazda ne kadar İSG ihlali yaptığı dijital raporlanarak eğitim planlaması için veri sağlar."
+  },
+  {
+    "path": "isg-kkd-entegrasyon.isg-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "isg-kkd-entegrasyon.isg-ozet.p0",
+    "text": "İSG denetimlerini kağıt formlardan çıkarıp anlık otomasyona dönüştürüyoruz. Kameralarımız sahaya giren personelin baret, yelek ve diğer KKD ekipmanlarını milisaniyeler içinde kontrol ediyor; ihlal durumunda turnikeleri kilitleyip İSG uzmanına anlık görsel bildirim göndererek iş kazalarını gerçekleşmeden önlüyor."
+  },
+  {
+    "path": "isg-forklift-mesafe.title",
+    "text": "Forklift Akıllı Mesafe Takip ve Hız Sınırlandırma"
+  },
+  {
+    "path": "isg-forklift-mesafe.subtitle",
+    "text": "Kör nokta analizi · kaplumbağa modu ECU entegrasyonu ve near-miss raporlama"
+  },
+  {
+    "path": "isg-forklift-mesafe.forklift-zonlar.title",
+    "text": "1. Dinamik Güvenlik Bölgeleri"
+  },
+  {
+    "path": "isg-forklift-mesafe.forklift-zonlar.p0",
+    "text": "Yeşil alan (güvenli): Yayanın forklifte güvenli mesafede olduğu durum."
+  },
+  {
+    "path": "isg-forklift-mesafe.forklift-zonlar.p1",
+    "text": "Sarı alan (yakın tehdit): Yayanın araca yaklaşmaya başladığı kritik sınır."
+  },
+  {
+    "path": "isg-forklift-mesafe.forklift-zonlar.p2",
+    "text": "Kırmızı ihlal alanı (tehlike zonu): İnsan veya engelin forkliftin ani durma mesafesinin / kör noktasının içine girdiği kritik bölge — kırmızı şeffaf kutu ile işaretlenir."
+  },
+  {
+    "path": "isg-forklift-mesafe.forklift-kaplumbaga.title",
+    "text": "2. Otomatik Kaplumbağa Modu (Speed Limiter)"
+  },
+  {
+    "path": "isg-forklift-mesafe.forklift-kaplumbaga.p0",
+    "text": "CAN-Bus / ECU entegrasyonu: Kırmızı bölgede insan algılandığında forklift ECU veya hız valflerine doğrudan sinyal gönderilir."
+  },
+  {
+    "path": "isg-forklift-mesafe.forklift-kaplumbaga.p1",
+    "text": "Hız sabitleme: Operatör gaza bassa bile araç otomatik kaplumbağa moduna (ör. maks. 5 km/s) alınır — yayanın kaçması için zaman kazanılır, çarpışma şiddeti minimize edilir."
+  },
+  {
+    "path": "isg-forklift-mesafe.forklift-uyari.title",
+    "text": "3. Pop-Up ve Sesli Bildirim"
+  },
+  {
+    "path": "isg-forklift-mesafe.forklift-uyari.p0",
+    "text": "Kabin içi canlı ekran: Operatör ekranına anlık pop-up düşer; kör noktadaki insan kırmızı uyarı simgeleriyle gösterilir."
+  },
+  {
+    "path": "isg-forklift-mesafe.forklift-uyari.p1",
+    "text": "Akustik siren/buzzer: Görsel uyarıya ek olarak kabin içi ve harici sirenler tetiklenerek operatör ve yaya yüksek sesle uyarılır."
+  },
+  {
+    "path": "isg-forklift-mesafe.forklift-rapor.title",
+    "text": "4. İSG Raporlama ve Güzergah Optimizasyonu"
+  },
+  {
+    "path": "isg-forklift-mesafe.forklift-rapor.p0",
+    "text": "Near-miss logları: Kıl payı atlatılan tüm kaplumbağa modu tetiklenmeleri konum ve kamera kaydıyla İSG paneline raporlanır."
+  },
+  {
+    "path": "isg-forklift-mesafe.forklift-rapor.p1",
+    "text": "Yoğunluk haritası: Forklift-insan karşılaşmalarının en çok yaşandığı koridorlar tespit edilerek yaya yolları yeniden tasarlanır."
+  },
+  {
+    "path": "isg-forklift-mesafe.forklift-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "isg-forklift-mesafe.forklift-ozet.p0",
+    "text": "Forklift kazalarını operatörün dikkatine bırakmıyoruz; forklifti yapay zeka ile yönetiyoruz. Kör noktaya yaya girdiğinde kabin içine sesli ve görsel pop-up düşürüyor, aracı otomatik kaplumbağa moduna alarak hızını mekanik olarak kesiyoruz. Kazaları daha yaşanmadan donanımsal olarak engelliyoruz."
+  },
+  {
+    "path": "isg-makine-uzuv-koruma.title",
+    "text": "Hareketli Makine Hatları — Akıllı Uzuv Koruma ve Donanımsal Acil Stop"
+  },
+  {
+    "path": "isg-makine-uzuv-koruma.subtitle",
+    "text": "Pose Estimation iskelet takibi · Ethernet I/O röle ile mekanik güç kesme"
+  },
+  {
+    "path": "isg-makine-uzuv-koruma.makine-pose.title",
+    "text": "1. Pose Estimation (İskelet Takibi) ve Risk Analizi"
+  },
+  {
+    "path": "isg-makine-uzuv-koruma.makine-pose.p0",
+    "text": "Kamera açısındaki personel, yapay zeka modeli tarafından el, bilek, dirsek ve omuz gibi kritik eklem noktalarıyla eş zamanlı haritalandırılır. Renkli iskelet çizgileri modelin milisaniyelik hassasiyetle takip ettiğini gösterir."
+  },
+  {
+    "path": "isg-makine-uzuv-koruma.makine-pose.p1",
+    "text": "Makinenin dönen veya sıkıştırma yapan en tehlikeli bölümü (ör. sarıcı ayırma bölgesi) sisteme sanal koruma kalkanı olarak kırmızı şeffaf ROI kutusu ile tanımlanır."
+  },
+  {
+    "path": "isg-makine-uzuv-koruma.makine-relay.title",
+    "text": "2. Donanımsal Müdahale — Ethernet I/O Röle Entegrasyonu"
+  },
+  {
+    "path": "isg-makine-uzuv-koruma.makine-relay.p0",
+    "text": "Personelin el veya bilek eklem noktası kırmızı risk bölgesini ihlal ettiğinde (MAKİNE İHLAL DURUMU) yapay zeka anında algılar."
+  },
+  {
+    "path": "isg-makine-uzuv-koruma.makine-relay.p1",
+    "text": "Algılama anında yerel ağ üzerinden makine panosundaki Ethernet I/O röle modülüne dijital sinyal (Modbus TCP/IP vb.) gönderilir; röle devresi açılarak ana güç/kontaktör kesilir ve makine Acil Stop moduna geçer."
+  },
+  {
+    "path": "isg-makine-uzuv-koruma.makine-panel.title",
+    "text": "3. Yönetim Paneli ve İSG Loglama"
+  },
+  {
+    "path": "isg-makine-uzuv-koruma.makine-panel.p0",
+    "text": "İhlal anında fabrika kontrol merkezindeki dijital ekrana kırmızı \"MAKİNE İHLAL DURUMU\" uyarısı düşer; görsel kanıt anlık olarak sunulur."
+  },
+  {
+    "path": "isg-makine-uzuv-koruma.makine-panel.p1",
+    "text": "Donanımsal stop ile sonuçlanan veya kıl payı atlatılan (near-miss) tüm ihlaller, personelin iskelet görüntüsü ve zaman damgasıyla İSG veri tabanına kaydedilir."
+  },
+  {
+    "path": "isg-makine-uzuv-koruma.makine-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "isg-makine-uzuv-koruma.makine-ozet.p0",
+    "text": "Ağır sanayide uzuv ve can kayıplarının önüne geçmek için yapay zekayı makinenin sigortası yapıyoruz. Kameralarımız personelin el ve kol hareketlerini Pose Estimation ile milimetrik izliyor; el tehlikeli kırmızı alana girdiği anda Ethernet I/O röle modülü üzerinden makinenin elektriğini milisaniyeler içinde keserek üretimi donanımsal olarak durduruyoruz."
+  },
+  {
+    "path": "tekirdag-kagit-yasak-alan.title",
+    "text": "Tekirdağ Kağıt Fabrikası — Yasak Alan ve Donanımsal Güç Kesme"
+  },
+  {
+    "path": "tekirdag-kagit-yasak-alan.subtitle",
+    "text": "Tehlikeli bölge ihlali algılama · Ethernet I/O röle ile anında makine durdurma"
+  },
+  {
+    "path": "tekirdag-kagit-yasak-alan.tekirdag-roi.title",
+    "text": "1. Yasak Alan (ROI) Tanımı ve İhlal Algılama"
+  },
+  {
+    "path": "tekirdag-kagit-yasak-alan.tekirdag-roi.p0",
+    "text": "Makinenin dönen veya sıkıştırma yapan tehlikeli bölümü sisteme kırmızı şeffaf koruma alanı (ROI) olarak tanımlanır."
+  },
+  {
+    "path": "tekirdag-kagit-yasak-alan.tekirdag-roi.p1",
+    "text": "Belirlenen alana insan girdiğinde — ayağının ucu bile risk sınırını geçse — yapay zeka anında ihlal algılar ve \"YASAK HAREKET\" uyarısı üretir."
+  },
+  {
+    "path": "tekirdag-kagit-yasak-alan.tekirdag-relay.title",
+    "text": "2. Ethernet I/O Röle ile Donanımsal Güç Kesme"
+  },
+  {
+    "path": "tekirdag-kagit-yasak-alan.tekirdag-relay.p0",
+    "text": "İhlal algılandığı anda yerel ağ üzerinden makine panosundaki Ethernet I/O röle modülüne dijital sinyal gönderilir."
+  },
+  {
+    "path": "tekirdag-kagit-yasak-alan.tekirdag-relay.p1",
+    "text": "Röle devresi milisaniyeler içinde açılarak ana güç/kontaktör kesilir; makine operatörü mekanizmaya kaptırmadan önce donanımsal olarak durdurulur."
+  },
+  {
+    "path": "tekirdag-kagit-yasak-alan.tekirdag-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "tekirdag-kagit-yasak-alan.tekirdag-ozet.p0",
+    "text": "Tekirdağ kağıt fabrikasında tehlikeli makine bölgelerini yapay zeka kameralarıyla koruyoruz. Personel yasak alana ayak ucuyla bile girse Ethernet I/O röle modülü üzerinden makinenin gücünü anında keserek iş kazasını mekanik olarak engelliyoruz."
+  },
+  {
+    "path": "eae-test-plc-isg.title",
+    "text": "EAE Test Ortamı — İSG Güvenlik ve PLC Entegrasyonu"
+  },
+  {
+    "path": "eae-test-plc-isg.subtitle",
+    "text": "Kapı durum analizi · kabin içi Pose takibi ve donanımsal test kilitleme"
+  },
+  {
+    "path": "eae-test-plc-isg.eae-kapi.title",
+    "text": "1. Kapı Durum Analizi (Proses Giriş Kilidi)"
+  },
+  {
+    "path": "eae-test-plc-isg.eae-kapi.p0",
+    "text": "Test odasının kapısı kameralar tarafından anlık izlenir; açık/kapalı durumu nesne algılama modelleriyle saniyelik doğrulanır."
+  },
+  {
+    "path": "eae-test-plc-isg.eae-kapi.p1",
+    "text": "Testin başlaması için ilk zorunlu koşul (Condition 1), kapının tam olarak KAPALI konumda olduğunun yapay zeka tarafından onaylanmasıdır."
+  },
+  {
+    "path": "eae-test-plc-isg.eae-pose.title",
+    "text": "2. Kabin İçi İnsan Varlığı Takibi (Pose & Alan İhlal Algılama)"
+  },
+  {
+    "path": "eae-test-plc-isg.eae-pose.p0",
+    "text": "Test odası içi kırmızı güvenlik poligonu (ROI Zone) ile çevrelenir; sadece kapının kapanması test başlatmak için yeterli değildir."
+  },
+  {
+    "path": "eae-test-plc-isg.eae-pose.p1",
+    "text": "Personel iskelet analiziyle en küçük el/kol hareketine kadar taranır; arkası dönük veya loş ışıkta bile varlık %100 doğrulukla algılanır."
+  },
+  {
+    "path": "eae-test-plc-isg.eae-plc.title",
+    "text": "3. PLC Entegrasyonu ve Test Kilitleme (Interlocking)"
+  },
+  {
+    "path": "eae-test-plc-isg.eae-plc.p0",
+    "text": "Kapı kapalı olsa bile oda içinde insan algılandığında PLC'ye KABIN_DOLU = 1 sinyali gönderilir; test kontaktörleri/güç röleleri kilitlenir — Start düğmesine basılsa bile test başlatılamaz."
+  },
+  {
+    "path": "eae-test-plc-isg.eae-plc.p1",
+    "text": "HMI ekranında \"UYARI: İÇERİDE PERSONEL VAR - TEST BAŞLATILAMAZ!\" uyarısı gösterilir. Personel çıkıp alan BOŞ raporlandığında PLC kilidi kaldırılır (TEST_IZIN = 1)."
+  },
+  {
+    "path": "eae-test-plc-isg.eae-rapor.title",
+    "text": "4. İSG Raporlama ve Dijital Karne"
+  },
+  {
+    "path": "eae-test-plc-isg.eae-rapor.p0",
+    "text": "İçeride insan varken kaç kez test başlatma girişiminde bulunulduğu tarih, saat ve görsel kanıtla İSG veri tabanına kaydedilir."
+  },
+  {
+    "path": "eae-test-plc-isg.eae-rapor.p1",
+    "text": "Near-miss (ramak kala) raporları otomatik beslenir; yüksek gerilim/test odalarında sıfır kaza hedefi donanımsal olarak desteklenir."
+  },
+  {
+    "path": "eae-test-plc-isg.eae-ozet.title",
+    "text": "Müşteriye Özet Mesaj"
+  },
+  {
+    "path": "eae-test-plc-isg.eae-ozet.p0",
+    "text": "EAE test ortamında iş güvenliğini yapay zeka ve PLC'nin kusursuz iş birliğiyle yönetiyoruz. Test kapısının kapandığını doğruladıktan sonra kabin içinde personel olup olmadığını Pose Estimation ile anlık denetliyor; içeride insan varken testin başlamasını PLC entegrasyonu ile donanımsal olarak engelliyoruz."
+  }
+]

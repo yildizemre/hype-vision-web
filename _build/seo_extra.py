@@ -85,15 +85,15 @@ def fill_alts(html, lang):
 
 # ---------------------------------------------------------------- 3) ilgili sayfalar
 TOPICS = [
- (r"kkd|baret|ppe|is-guvenligi|isg|helmet|400-kamera", ["/kkd-kontrol-kamera-sistemi", "/baret-tespit-sistemi", "/yasakli-alan-ihlal-tespiti"], ["400-kamera", "harman", "isg-kkd"]),
- (r"forklift|depo|lojistik|tir-|truck|palet|stockyard|harman", ["/forklift-yaya-guvenlik-sistemi", "/urun-sayimi", "/nesne-takibi"], ["tir-yukleme", "harman", "400-kamera"]),
+ (r"kkd|baret|ppe|is-guvenligi|isg|helmet|400-kamera", ["/kkd-kontrol-kamera-sistemi", "/baret-tespit-sistemi", "/yasakli-alan-ihlal-tespiti"], ["400-kamera", "isg-kkd"]),
+ (r"forklift|depo|lojistik|tir-|truck|palet|stockyard", ["/forklift-yaya-guvenlik-sistemi", "/urun-sayimi", "/nesne-takibi"], ["tir-yukleme", "400-kamera"]),
  (r"kalite|yuzey|fire|medikal|medical|mendil|wipes|ambalaj|packag|quality|anomali", ["/kalite-kontrol-goruntu-isleme", "/yuzey-kusuru-tespiti", "/anomali-tespiti"], ["medikal", "islak-mendil", "paketleme"]),
  (r"oee|verimlilik|personel|darbogaz|bottleneck|tekstil|textile|kaynak|welding|idle|productiv", ["/oee-takip-sistemi", "/personel-verimlilik-analizi-kamera", "/urun-sayimi"], ["tekstil", "kaynak", "paketleme-hatti", "gida-hattinda"]),
  (r"yangin|duman|fire-smoke|smoke", ["/yangin-duman-tespiti", "/dusme-tespit-sistemi"], ["acik-alan-duman"]),
  (r"yogunluk|fuar|fair|kisi-sayma|kuyruk|occupancy|queue|perakende|retail", ["/yogunluk-analizi", "/kisi-sayma", "/kuyruk-analizi"], ["fuar"]),
- (r"onvif|rtsp|cctv|kamera-acisi|ip-kamera|camera|mimari|edge", ["/onvif-rtsp-yapay-zeka-entegrasyonu", "/cctv-yapay-zeka", "/endustriyel-goruntu-isleme"], ["400-kamera", "harman"]),
+ (r"onvif|rtsp|cctv|kamera-acisi|ip-kamera|camera|mimari|edge", ["/onvif-rtsp-yapay-zeka-entegrasyonu", "/cctv-yapay-zeka", "/endustriyel-goruntu-isleme"], ["400-kamera", "tir-yukleme"]),
  (r"kvkk|gizlilik|privacy|gdpr", ["/kvkk-uyumlu-kamera-analitigi", "/cctv-yapay-zeka"], ["fuar", "400-kamera"]),
- (r"goruntu-isleme|computer-vision|makine|firma|maliyet|ne-kadar|pilot|video-analitigi|nedir", ["/endustriyel-goruntu-isleme", "/kalite-kontrol-goruntu-isleme", "/kkd-kontrol-kamera-sistemi"], ["harman", "medikal", "tekstil"]),
+ (r"goruntu-isleme|computer-vision|makine|firma|maliyet|ne-kadar|pilot|video-analitigi|nedir", ["/endustriyel-goruntu-isleme", "/kalite-kontrol-goruntu-isleme", "/kkd-kontrol-kamera-sistemi"], ["400-kamera", "medikal", "tekstil"]),
 ]
 LBL = {"tr": ("İlgili çözümler", "İlgili vaka çalışmaları", "İncele →"), "en": ("Related solutions", "Related case studies", "Explore →")}
 
