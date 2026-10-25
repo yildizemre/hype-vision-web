@@ -3,7 +3,7 @@ import re, json, html, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 E = html.escape
 ORDER = ["harman", "400-kamera", "kaynak", "tekstil", "tir-yukleme", "fuar", "acik-alan-duman", "islak-mendil", "darbogaz", "medikal", "isg", "kalite", "tekstil", "gida", "lojistik"]
-CIMG = {"400-kamera": "img/vaka/kkd-depo.webp", "tir-yukleme": "img/vaka/tir-1.webp", "fuar": "img/vaka/fuar-1.webp", "acik-alan-duman": "img/vaka/duman.webp", "harman": "img/vaka/harman-1.webp", "islak-mendil": "img/vaka/mendil-ocr.webp", "darbogaz": "img/vaka/darbogaz.webp", "kaynak": "img/vaka/kaynak-1.webp", "medikal": "img/vaka/med-ok.webp", "gida": "img/vaka/gida-idle.webp",
+CIMG = {"400-kamera": "img/vaka/kkd-depo.webp", "tir-yukleme": "img/vaka/tir-1.webp", "fuar": "img/vaka/fuar-1.webp", "acik-alan-duman": "img/vaka/duman.webp", "harman": "img/vaka/kkd-depo.webp", "islak-mendil": "img/vaka/mendil-ocr.webp", "darbogaz": "img/vaka/darbogaz.webp", "kaynak": "img/vaka/kaynak-1.webp", "medikal": "img/vaka/med-ok.webp", "gida": "img/vaka/gida-idle.webp",
         "isg": "img/det-kkd.webp", "kalite": "img/det-cnc.webp", "tekstil": "img/vaka/tekstil-bant.webp", "lojistik": "img/det-forklift.webp"}
 D = json.load(open(os.path.join(ROOT, "content.json"), encoding="utf-8"))
 cases = [x for x in D["pages"] if x["path"].startswith("/vaka-calismalari/")]
