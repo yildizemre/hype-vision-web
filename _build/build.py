@@ -83,10 +83,10 @@ def link(href, lang="tr"):
     if lang == "tr":
         if base in TR_LOCAL: return slash(base)
         if base in FALLBACK: return "/" + FALLBACK[base] if FALLBACK[base].startswith("#") else FALLBACK[base]
-        if base.startswith("/en"): return slash(TR_OF[base]) if base in TR_OF else None
+        if base == "/en" or base.startswith("/en/"): return slash(TR_OF[base]) if base in TR_OF else None
         return None
     # en
-    if base.startswith("/en"):
+    if base == "/en" or base.startswith("/en/"):
         if base in EN_LOCAL: return slash(base)
         if base in EN_FALLBACK: return EN_FALLBACK[base]
         if base in TR_OF and TR_OF[base] in EN_OF and EN_OF[TR_OF[base]] in EN_LOCAL: return slash(EN_OF[TR_OF[base]])
@@ -162,7 +162,7 @@ def build_en_home():
     # linkler
     BLOG_FIX = {"/blog/yapay-zeka-ile-is-guvenligi": "/blog/cctv-ile-baret-tespiti", "/blog/kvkk-kamera-yapay-zeka": "/blog/edge-ai-ve-cloud-ai-farki"}
     # EN'de henüz çevrilmemiş TR-only araçlar: ölü/yanlış dil linki yerine menüden tamamen kaldır (eksik sayfa izlenimi oluşmasın)
-    EN_DROP = {"/teknik-merkez", "/kamera-uyumluluk", "/uygulamalar", "/entegrasyon", "/benchmark", "/sozluk", "/karsilastirma", "/cctv-sorun-cozumleri", "/bolge", "/mevzuat"}
+    EN_DROP = {"/bolge", "/mevzuat"}  # Türkiye'ye özel, İngilizce karşılığı yok; diğer teknik merkez araçları artık çevrildi
     for a in list(soup.find_all("a", href=True)):
         if norm(a["href"]) in EN_DROP and not a.find("img"): a.decompose()
     # ana sayfadaki çözüm link ızgarası: EN'de karşılığı olmayan çözümü gösterme (ölü /en/#iletisim linki olmasın)
@@ -478,6 +478,13 @@ for _p in SOLS + SECS + CASES + BLOGS + [EG]:
     REL["titles"][_p["path"]] = (SX.short_title(_p["title"], 70), SX.short_title(_e["title"], 70) if _e else "", EN_OF.get(_p["path"]) if _e else "")
 for _tr, _en in list(EN_OF.items()):
     REL["tr_of"][_en] = _tr
+# EN teknik merkez eşlemeleri (hreflang + iç link + EN menü için): hub seviyesi + çevrilen gen sayfaları
+for _tr, _en in {"/teknik-merkez": "/en/technical-hub", "/kamera-uyumluluk": "/en/camera-compatibility", "/benchmark": "/en/gpu-calculator",
+                 "/uygulamalar": "/en/applications", "/entegrasyon": "/en/integrations", "/karsilastirma": "/en/comparisons",
+                 "/cctv-sorun-cozumleri": "/en/cctv-troubleshooting", "/sozluk": "/en/glossary"}.items():
+    EN_OF[_tr] = _en; TR_OF[_en] = _tr; EN_LOCAL.add(_en)
+for _trp, _e in D.get("gen_en", {}).items():
+    EN_OF[_trp] = _e["path"]; TR_OF[_e["path"]] = _trp; EN_LOCAL.add(_e["path"])
 # ================================================================== ÜRETİM
 miss = build_en_home()
 P["tr"], P["en"] = parts("tr"), parts("en")

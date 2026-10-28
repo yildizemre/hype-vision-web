@@ -18,6 +18,19 @@ IMG_BY_SECTOR = {"Tekstil": "/img/sektor/tekstil.webp", "Otomotiv": "/img/sektor
  "Üretim verimliliği": "/img/vaka/tekstil-bant.webp", "Perakende ve mağaza": "/img/sektor/perakende.webp", "Genel makine görüşü": "/img/det-cnc.webp"}
 IMG_BY_TYPE = {"integration": "/img/det-kusbakisi.webp", "compare": "/img/01-kusbakisi.webp", "trouble": "/img/00-genel.webp", "topic": "/img/det-forklift.webp", "glossary": "/img/dijital-ikiz.webp", "city": "/img/01-kusbakisi.webp", "law": "/img/det-kkd.webp"}
 
+# --- İngilizce teknik merkez (yalnızca uluslararası değeri olan tipler; city/law çevrilmez) ---
+EN_HUBS = {
+ "cluster": ("/en/applications", "Application & defect atlas", "Concrete production, quality and safety problems you can solve with your existing cameras."),
+ "integration": ("/en/integrations", "Camera & VMS integrations", "Add AI to Hikvision, Dahua and Axis cameras and to NVR/VMS systems without replacing your infrastructure."),
+ "compare": ("/en/comparisons", "Comparisons", "In-camera built-in analytics vs. central AI analysis — objective comparisons."),
+ "trouble": ("/en/cctv-troubleshooting", "CCTV troubleshooting center", "Step-by-step fixes for RTSP, ONVIF, NVR and stream problems."),
+}
+EN_CRUMB = {"cluster": ("Applications", "/en/applications"), "integration": ("Integrations", "/en/integrations"), "compare": ("Comparisons", "/en/comparisons"), "trouble": ("CCTV troubleshooting", "/en/cctv-troubleshooting"), "topic": ("Technical hub", "/en/technical-hub"), "glossary": ("Technical hub", "/en/technical-hub")}
+PRE_EN = """<div class="wrap" id="on-analiz" style="margin-top:70px"><div class="pre rv"><div><span class="k-eyebrow">Free · 15 minutes</span>
+<h2>What can AI detect in your factory?</h2><p>Let's review together which safety, quality and production analytics your existing security cameras can deliver.</p>
+<ul><li>Free 15-minute technical call</li><li>Camera infrastructure pre-assessment</li><li>Feasible AI scenarios</li></ul></div>
+<div class="pre-b"><form class="hvcb" data-cb><b>Leave your phone number, we'll call you</b><input name="ad" placeholder="Your name" autocomplete="name"><input name="sirket" placeholder="Company" autocomplete="organization"><input name="telefon" type="tel" placeholder="Phone number" autocomplete="tel" required><button type="submit">Call me</button><small class="hvcb-msg"></small></form><a class="w" href="https://wa.me/905412609190?text=Hello%2C%20I%27d%20like%20a%20free%20camera%20pre-assessment." target="_blank" rel="noopener">Chat on WhatsApp</a><a class="o" href="/en/camera-compatibility">Is my camera compatible?</a></div></div></div>"""
+
 PRE = """<div class="wrap" id="on-analiz" style="margin-top:70px"><div class="pre rv"><div><span class="k-eyebrow">Ücretsiz · 15 dakika</span>
 <h2>Fabrikanızda yapay zekâ ile neleri tespit edebiliriz?</h2><p>Mevcut güvenlik kameralarınız üzerinden yapılabilecek İSG, kalite kontrol ve üretim analizlerini birlikte değerlendirelim.</p>
 <ul><li>15 dakikalık ücretsiz teknik görüşme</li><li>Kamera altyapısı ön değerlendirmesi</li><li>Uygulanabilir yapay zekâ senaryoları</li></ul></div>
@@ -167,4 +180,110 @@ r.innerHTML='<table>'+rows.map(x=>'<tr><td>'+x[0]+'</td><td>'+x[1]+'</td></tr>')
 <script>function g(){{const c=+g1.value,f=+g2.value,cap=+g3.value*(+g4.value/100),need=c*f,n=Math.max(1,Math.ceil(need/cap));o1.textContent=need.toLocaleString('tr-TR');o2.textContent=Math.round(cap).toLocaleString('tr-TR');o3.textContent=n;o4.textContent=Math.floor(cap/f)}}
 ['g1','g2','g3','g4'].forEach(i=>document.getElementById(i).addEventListener('input',g));g();</script>{PRE}"""
     write("/benchmark", shell(title, desc, body, "/benchmark", "tr", crumbs=[("Ana sayfa", "/"), ("Teknik merkez", "/teknik-merkez"), ("GPU kapasite aracı", "/benchmark")]))
-    return [p["path"] for p in G] + [v[0] for v in HUBS.values()] + ["/teknik-merkez", "/kamera-uyumluluk", "/benchmark"]
+
+    # ================= İNGİLİZCE TEKNİK MERKEZ =================
+    GEN_EN = list(c["D"].get("gen_en", {}).values())
+    en_paths = []
+    def page_en(p):
+        kind = p["type"]; path = p["path"]; en_paths.append(path)
+        n, u = EN_CRUMB[kind]
+        cr = [("Home", "/en/"), (n, u), (p["title"], path)]
+        crh = f'<a href="/en/">Home</a> / <a href="{u}">{E(n)}</a> / <span>{E(p["title"])}</span>'
+        img = IMG_BY_SECTOR.get(p.get("sector")) or IMG_BY_TYPE.get(kind, "/img/det-kusbakisi.webp")
+        intro = "".join(f"<p>{E(t)}</p>" for t in p.get("intro", [])[:2])
+        short = f'<div class="wrap"><section class="tldr rv"><span class="k-eyebrow">Quick answer</span><p style="margin-top:8px;font-size:16px;color:#2F3237">{E(p["short"])}</p></section></div>' if p.get("short") else ""
+        secs = "".join(section_html({"h": s.get("h", ""), "p": s.get("p", []) or [], "li": s.get("li", []) or [], "rows": s.get("rows", []) or [], "cards": []}, "en") for s in p["sections"])
+        tags = ""
+        if p.get("kws"):
+            tags = '<div class="wrap" style="margin-top:30px"><p style="font-size:13px;color:var(--mute)">This page answers: ' + " · ".join(E(k) for k in p["kws"][:10]) + "</p></div>"
+        body = f"""{CSS}<div class="wrap"><div class="crumb rv">{crh}</div>
+<div class="ph rv"><h1>{E(p['title'])}<span>{E(p['desc'])}</span></h1><div class="intro">{intro}<div class="pillg"><a href="/en/#iletisim">Contact</a><a class="d" href="#on-analiz">Free pre-assessment</a></div></div></div>
+<div class="pimg rv"><img src="{img}" alt="{E(p['title'])}"></div></div>{short}
+<div class="wrap" style="margin-top:50px">{secs}</div>{tags}
+{faq_html(p.get('faq') or [], 'en')}{PRE_EN}"""
+        write(path, shell(p["title"], p["desc"], body, path, "en", faq=p.get("faq") or None, crumbs=cr, kind="sol" if kind in ("integration", "topic") else "page"))
+    for p in GEN_EN: page_en(p)
+
+    # EN hub indexleri
+    for kind, (path, title, sub) in EN_HUBS.items():
+        items = [p for p in GEN_EN if p["type"] == kind]
+        if not items: continue
+        if kind == "cluster":
+            groups = {}
+            for p in items: groups.setdefault(p.get("sector", "Other") or "Other", []).append(p)
+            blocks = "".join(f'<div class="hubg rv"><h3>{E(s)}</h3><div class="hubl">' + "".join(f'<a href="{p["path"]}">{E(p["title"])}<small>{E(p["desc"][:90])}…</small></a>' for p in ps) + "</div></div>" for s, ps in groups.items())
+        else:
+            blocks = '<div class="hubg rv"><div class="hubl">' + "".join(f'<a href="{p["path"]}">{E(p["title"])}<small>{E(p["desc"][:90])}…</small></a>' for p in items) + "</div></div>"
+        body = f"""{CSS}<div class="wrap"><div class="crumb rv"><a href="/en/">Home</a> / <a href="/en/technical-hub">Technical hub</a> / <span>{E(title)}</span></div>
+<div class="ph rv"><h1>{E(title)}<span>{E(sub)}</span></h1><div class="intro"><div class="pillg"><a href="/en/technical-hub">Technical hub</a><a class="d" href="#on-analiz">Free pre-assessment</a></div></div></div>{blocks}</div>{PRE_EN}"""
+        write(path, shell(title, sub, body, path, "en", crumbs=[("Home", "/en/"), ("Technical hub", "/en/technical-hub"), (title, path)], kind="index", items_ld=[(p["title"], p["path"]) for p in items])); en_paths.append(path)
+
+    # EN sözlük (glossary tek sayfa, EN_HUBS'ta yok; zaten page_en ile üretildi)
+    # EN teknik merkez
+    have = {p["type"] for p in GEN_EN}
+    TM_EN = [("/en/applications", "Application & defect atlas", "Concrete problems: fabric holes, paint defects, missing parts, PPE…"),
+             ("/en/integrations", "Camera & VMS integrations", "Hikvision, Dahua, Axis, NVR, Milestone, Nx Witness."),
+             ("/en/camera-compatibility", "Is your camera AI-ready?", "Pre-check by brand and model code."),
+             ("/en/gpu-calculator", "GPU capacity estimator", "How many cameras, how many GPUs, which Hype-Model size?"),
+             ("/en/comparisons", "Comparisons", "In-camera AI or a central server?"),
+             ("/en/cctv-troubleshooting", "CCTV troubleshooting", "RTSP, ONVIF, H.265, NVR stream issues."),
+             ("/en/glossary", "CCTV & AI glossary", "RTSP, ONVIF, ROI, VLM, edge AI and more."),
+             ("/en/resources", "Guides & resources", "Application guides and Q&A articles."),
+             ("/en/case-studies", "Case studies", "Results measured on site.")]
+    tmcards = "".join(f'<a class="rv" href="{u}"><b>{E(t)}</b><p>{E(d)}</p><span>Explore →</span></a>' for u, t, d in TM_EN)
+    body = f"""{CSS}<div class="wrap"><div class="crumb rv"><a href="/en/">Home</a> / <span>Technical hub</span></div>
+<div class="ph rv"><h1>Industrial AI technical hub<span>Camera integrations, the application atlas, calculators and troubleshooting guides in one place.</span></h1><div class="intro"><div class="pillg"><a href="/en/camera-compatibility">Is my camera compatible?</a><a class="d" href="#on-analiz">Free pre-assessment</a></div></div></div>
+<div class="tm">{tmcards}</div></div>{PRE_EN}"""
+    write("/en/technical-hub", shell("Technical hub", "Industrial AI & CCTV technical hub: integrations, application atlas, calculators, glossary.", body, "/en/technical-hub", "en", crumbs=[("Home", "/en/"), ("Technical hub", "/en/technical-hub")])); en_paths.append("/en/technical-hub")
+
+    # EN kamera uyumluluk aracı
+    body = f"""{CSS}<div class="wrap"><div class="crumb rv"><a href="/en/">Home</a> / <a href="/en/technical-hub">Technical hub</a> / <span>Camera compatibility</span></div>
+<div class="ph rv"><h1>Is your camera AI-ready?<span>Enter the brand and model code to see the RTSP/ONVIF connection method, the recommended stream and feasible AI scenarios.</span></h1>
+<div class="intro"><p>This tool gives a pre-assessment by model family. Exact compatibility depends on firmware, network and camera angle, and is confirmed in the free pre-assessment.</p></div></div>
+<div class="tool rv"><div class="row"><label>Brand<select id="cb"><option value="">Select</option>{''.join(f'<option>{b}</option>' for b in CAM["brands"])}</select></label>
+<label style="grid-column:span 2">Model code<input id="cm" placeholder="e.g. DS-2CD2347G2, IPC-HFW2441, P3268-LVE"></label>
+<label>Use case<select id="cu"><option>PPE / safety</option><option>Quality control</option><option>Counting / productivity</option><option>Security / intrusion</option></select></label></div>
+<div class="res" id="cr"><p style="color:var(--mute)">Enter a brand and model code.</p></div></div>
+<div style="margin-top:40px"><h2 class="h rv">Supported model families<span>with known connection methods</span></h2>
+<div class="tbl rv" style="margin-top:16px"><table><tr><th>Brand</th><th>Model family</th><th>Type</th><th>ONVIF</th></tr>{rows}</table></div>
+<p style="font-size:13px;color:var(--mute);margin-top:10px">This is general model-family information and does not imply any official manufacturer partnership. ONVIF support may vary by firmware version. Sources: manufacturer documentation and the ONVIF conformant products database.</p></div></div>
+<script>const CAM={json.dumps(CAM, ensure_ascii=False)};
+const U={{"PPE / safety":"Hard hats, vests, gloves; restricted areas; forklift–pedestrian distance","Quality control":"Presence/absence and large defects with general CCTV; industrial cameras recommended for micron level","Counting / productivity":"Product/pallet counting, station occupancy, cycle time","Security / intrusion":"Zone intrusion, abandoned objects, crowding, smoke/flame"}};
+function run(){{const b=document.getElementById('cb').value,m=document.getElementById('cm').value.trim().toUpperCase(),u=document.getElementById('cu').value,r=document.getElementById('cr');
+if(!b&&!m){{r.innerHTML='<p style="color:var(--mute)">Enter a brand and model code.</p>';return}}
+let f=CAM.families.find(x=>(!b||x.brand===b)&&x.prefixes.some(p=>m.startsWith(p)));if(!f&&b)f=CAM.families.find(x=>x.brand===b&&x.default);
+const br=CAM.brandInfo[b||(f&&f.brand)]||{{}};
+const rows=[['Brand / family',(f?f.brand+' · '+f.family:(b||'—'))+(m?' · '+m:'')],['Camera type',f?f.type:'—'],['RTSP path (typical)',br.rtsp||'Per manufacturer documentation'],['ONVIF',f&&f.onvif?'Usually Profile S supported (verify with firmware)':'Needs verification'],['Recommended stream','Substream 720p–1080p, 10–15 fps; main stream for quality control'],['Feasible scenarios',U[u]],['Hype Vision test',f&&f.tested?'<span class="badge">Verified on site</span>':'<span class="badge w">Pre-assessment — test required</span>']];
+r.innerHTML='<table>'+rows.map(x=>'<tr><td>'+x[0]+'</td><td>'+x[1]+'</td></tr>').join('')+'</table><div class="pillg" style="display:inline-flex;margin-top:16px"><a href="https://wa.me/905412609190?text='+encodeURIComponent('Hello, I would like an AI compatibility assessment for my '+(b||'')+' '+m+' camera.')+'" target="_blank" rel="noopener">WhatsApp</a><a class="d" href="/en/#iletisim">Free assessment</a></div>'}}
+['cb','cm','cu'].forEach(i=>document.getElementById(i).addEventListener('input',run));</script>{PRE_EN}"""
+    write("/en/camera-compatibility", shell("Is your camera AI-ready?", "AI compatibility pre-check for Hikvision, Dahua, Axis and ONVIF cameras: RTSP path, recommended stream and feasible scenarios.", body, "/en/camera-compatibility", "en", crumbs=[("Home", "/en/"), ("Technical hub", "/en/technical-hub"), ("Camera compatibility", "/en/camera-compatibility")])); en_paths.append("/en/camera-compatibility")
+
+    # EN GPU hesaplayıcı
+    if measured:
+        etitle = "Hype-Model GPU benchmark & capacity calculator"
+        edesc = "How many GPUs for 100 cameras? Capacity calculator with measured FPS, latency and VRAM for the Hype-Model family."
+        eh1 = "Hype-Model GPU benchmark & capacity calculator<span>How many GPUs for 100 cameras? Plan camera count, analysis frequency and GPU capacity with measured values.</span>"
+        etable = f'<h2 class="h rv" style="margin-top:50px">Measurement table <span class="badge">Measured: {E(BM["date"])}</span><span>by model · hardware · test date and version</span></h2>\n<div class="tbl rv" style="margin-top:16px"><table><tr><th>Model</th><th>Input</th><th>GPU</th><th>FPS</th><th>Latency (ms)</th><th>VRAM (GB)</th></tr>{trs}</table></div>'
+    else:
+        etitle = "GPU capacity estimator — how many GPUs for Hype-Model?"
+        edesc = "How many GPUs for 100 cameras? A free estimator to plan GPU needs by camera count, analysis frequency and Hype-Model size."
+        eh1 = "GPU capacity estimator<span>How many GPUs for 100 cameras? Estimate GPU needs by camera count, analysis frequency and model size.</span>"
+        etable = ('<h2 class="h rv" style="margin-top:50px">How are these values calculated?<span>planning assumptions, not field measurements</span></h2>'
+                  '<div class="tbl rv" style="margin-top:16px;padding:22px 24px;background:var(--bg2);border-radius:14px"><p style="margin:0 0 10px">The results above assume a single RTX 4090-class GPU with 640 px input and video decoding included, using a conservative planning assumption. Exact FPS, latency and VRAM vary by model, input resolution, driver/TensorRT version and your cameras\' encoding.</p>'
+                  '<p style="margin:0;color:var(--mute);font-size:14px">Field-measured benchmark results for the Hype-Model family (FPS · latency · VRAM), with methodology, are being prepared and will be published here. Until then this is a planning tool only; exact hardware is sized during the pilot on your own cameras and modules.</p></div>')
+    body = f"""{CSS}<div class="wrap"><div class="crumb rv"><a href="/en/">Home</a> / <a href="/en/technical-hub">Technical hub</a> / <span>GPU capacity tool</span></div>
+<div class="ph rv"><h1>{eh1}</h1>
+<div class="intro"><p>Hype-Model is Hype Vision's industrial computer-vision model family: Hype-Model-N (edge), -S, -M and -L (high accuracy). The tool below shows its assumptions explicitly; you can change the values for your own site.</p></div></div>
+<div class="tool rv"><div class="row">
+<label>Number of cameras<input id="g1" type="number" value="100" min="1"></label>
+<label>Analysis per camera (FPS)<input id="g2" type="number" value="5" min="1" step="1"></label>
+<label>Model<select id="g3">{''.join(f'<option value="{m["fps"]}">{E(m["name"])}</option>' for m in BM["calc_models"])}</select></label>
+<label>Target GPU utilisation (%)<input id="g4" type="number" value="70" min="30" max="95"></label></div>
+<div class="kpi4"><div><b id="o1">—</b><small>Total FPS required</small></div><div><b id="o2">—</b><small>Capacity per GPU (FPS)</small></div><div><b id="o3">—</b><small>GPUs needed (estimate)</small></div><div><b id="o4">—</b><small>Cameras per GPU</small></div></div>
+<p style="font-size:13px;color:var(--mute);margin-top:12px">Per-GPU capacity figures are for planning (a single RTX 4090-class GPU, 640 px input, video decoding included, conservative assumption). Exact hardware is measured during the pilot on your own cameras and modules.</p></div>
+{etable}</div>
+<script>function g(){{const c=+g1.value,f=+g2.value,cap=+g3.value*(+g4.value/100),need=c*f,n=Math.max(1,Math.ceil(need/cap));o1.textContent=need.toLocaleString('en-US');o2.textContent=Math.round(cap).toLocaleString('en-US');o3.textContent=n;o4.textContent=Math.floor(cap/f)}}
+['g1','g2','g3','g4'].forEach(i=>document.getElementById(i).addEventListener('input',g));g();</script>{PRE_EN}"""
+    write("/en/gpu-calculator", shell(etitle, edesc, body, "/en/gpu-calculator", "en", crumbs=[("Home", "/en/"), ("Technical hub", "/en/technical-hub"), ("GPU capacity tool", "/en/gpu-calculator")])); en_paths.append("/en/gpu-calculator")
+
+    return [p["path"] for p in G] + [v[0] for v in HUBS.values()] + ["/teknik-merkez", "/kamera-uyumluluk", "/benchmark"] + en_paths
