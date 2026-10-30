@@ -79,6 +79,15 @@ ALT = {
  "tekstil-kalite-3": ("Kumaş muayene makinesine kurulan yapay zekâ kamerasıyla akan kumaşın gerçek zamanlı kalite kontrolü", "Real-time quality control of moving fabric with an AI camera on the fabric inspection machine"),
  "makine-sayim-1": ("Kamera ile makineden çıkan ruloların yapay zekâ ile sayılması ve ayrı ID ile takibi (Roll 45, Roll 46, Roll 47)", "AI counting rolls coming off a machine and tracking each with its own ID (Roll 45, Roll 46, Roll 47)"),
  "makine-sayim-2": ("Üretim hattında ürün ID takibi ile makine üretim performansının yapay zekâ ile ölçülmesi", "Measuring machine production performance with AI using product ID tracking on a production line"),
+ "yumurta-1": ("Konveyördeki yumurtaların yapay zekâ ile büyük/küçük sınıflandırılması ve sayım çizgisiyle sayılması", "AI classifying eggs on a conveyor as large/small and counting them with a counting line"),
+ "yumurta-2": ("Yumurta tesisinde birleşen konveyörde yumurtaların yapay zekâ ile tek tek sayılması ve ID ile takibi", "AI counting eggs one by one and tracking them by ID on the merged conveyor at an egg facility"),
+ "yumurta-3": ("Yumurta paketleme tesisinde mevcut konveyör ve kameralarla üretim hattının izlenmesi", "Monitoring the production line with existing conveyor and cameras at an egg packing facility"),
+ "yumurta-4": ("Kanatlı yumurta tavuğu üretim tesisi — yumurtaların toplandığı kümes ortamı", "Poultry layer production facility — the barn where eggs are collected"),
+ "forklift-binme-1": ("Depoda forklift/transpalet üstüne binen personelin yapay zekâ ile tespiti ve güvenlik ihlali uyarısı (Person on forklift)", "AI detecting a person riding on a forklift/pallet truck in a warehouse and raising a safety-violation alert (Person on forklift)"),
+ "forklift-binme-2": ("Depo koridorunda mevcut güvenlik kamerasıyla forklift ve personel hareketinin izlenmesi", "Monitoring forklift and staff movement with an existing security camera in a warehouse aisle"),
+ "yangin-1": ("Kamera ile erken yangın tespiti: 15-20 metreden basketbol topu büyüklüğündeki alevin yapay zekâ ile görülmesi", "Early fire detection with a camera: AI spotting a basketball-sized flame from 15-20 meters"),
+ "yangin-2": ("Yangın tespitinde anlık WhatsApp uyarısı (YANGIN TESPİT)", "Instant WhatsApp alert on fire detection (fire detected)"),
+ "lastik-1": ("Lastik/kauçuk hattında yüzey yırtık ve çatlağın endüstriyel kamera ve yapay zekâ ile tespiti", "Detecting surface tears and cracks on a rubber/tire line with an industrial camera and AI"),
 }
 REV = {}  # imgseo: SEO dosya adı -> ALT anahtarı
 def _key(src):

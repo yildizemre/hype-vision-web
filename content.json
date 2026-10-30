@@ -8646,6 +8646,590 @@
     }
    ],
    "links": []
+  },
+  {
+   "path": "/vaka-calismalari/yumurta-siniflandirma-sayim-hat-verimliligi",
+   "date": "2025-01-02",
+   "title": "Yumurta tesisinde kamera ile sınıflandırma, sayım ve hat verimliliği: 18 hat tek sistemde, %0,69 hata",
+   "desc": "Yumurta üretim tesisinde mevcut kameralarla yumurtalar sayılıyor ve büyük/küçük olarak sınıflandırılıyor; 18 toplama hattı tek sistemde birleşti, ölçülen hata oranı %0,69.",
+   "intro": [
+    "Bir yumurta (kanatlı) üretim tesisinde yumurtalar 18 ayrı toplama hattından geliyor ve tek bir konveyörde birleşerek boylama-paketlemeye ilerliyordu. Yumurtaların sayımı ve boyuna göre ayrımı büyük ölçüde elle ve tahmine dayalıydı. Hype Vision, tesisteki mevcut kameraları yapay zekâya bağladı: yumurtaları tek tek sayan, büyük/küçük olarak sınıflandıran ve hat verimliliğini ölçen bir sistem kurdu. Sahada ölçülen hata oranı %0,69 oldu."
+   ],
+   "specs": [
+    [
+     "Kamera",
+     "Mevcut IP kameralar (RTSP/ONVIF)"
+    ],
+    [
+     "Hat",
+     "18 toplama hattı → tek konveyörde birleşme"
+    ],
+    [
+     "Sayım",
+     "Yumurta tek tek, ID ile; mükerrer sayım yok"
+    ],
+    [
+     "Sınıflandırma",
+     "Büyük / küçük (boy)"
+    ],
+    [
+     "Hata oranı",
+     "%0,69 (sahada ölçülen)"
+    ],
+    [
+     "Mimari",
+     "On-premise · hat verimliliği ve raporlama"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Problem: 18 hat, elle sayım ve boylama",
+     "p": [
+      "Tesiste yumurtalar 18 farklı toplama hattından geliyor ve tek konveyörde birleşiyordu. Bu yoğun akışta yumurtaların doğru sayılması ve boyuna göre ayrılması elle neredeyse imkânsızdı; sayım tahmine dayanıyor, hat verimliliği ölçülemiyordu.",
+      "Yeni, pahalı optik boylama hatları kurmak yerine mevcut kameralardan faydalanmak istendi."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "18 hattan tek hatta: yumurta sayımı",
+     "p": [
+      "18 toplama hattından gelip tek konveyörde birleşen yumurtalar, mevcut kamerayla tek tek tespit edilir ve her biri ayrı ID ile takip edilir; belirlenen sayım çizgisini geçen yumurta sayılır, aynı yumurta iki kez sayılmaz. Toplam ve zaman bazında üretim anlık panele yansır."
+     ],
+     "li": [
+      "Birleşen hatta yumurtaların tek tek sayımı",
+      "Her yumurta ayrı ID — mükerrer sayım yok",
+      "Sayım çizgisi ile doğru geçiş sayımı",
+      "Anlık ve zaman damgalı üretim adedi"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/yumurta-2.webp",
+       "Yumurta tesisinde birleşen konveyörde yumurtaların yapay zekâ ile tek tek sayılması ve ID ile takibi (ROI)"
+      ]
+     ]
+    },
+    {
+     "h": "Yumurta sınıflandırma: büyük / küçük",
+     "p": [
+      "Yumurtalar sayım sırasında boyuna göre sınıflandırılır: büyük ve küçük yumurtalar ayrı işaretlenir (ör. büyük yeşil, küçük turuncu). Böylece yalnızca toplam adet değil, boy dağılımı da anlık olarak görünür; üretim ve paketleme planı veriyle yapılır."
+     ],
+     "li": [
+      "Boya göre sınıflandırma (büyük / küçük)",
+      "Boy dağılımının anlık görünürlüğü",
+      "Sayımla birlikte boylama verisi",
+      "Mevcut kamera ile — ek optik hat gerekmez"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/yumurta-1.webp",
+       "Konveyördeki yumurtaların yapay zekâ ile büyük/küçük sınıflandırılması ve sayım çizgisiyle sayılması"
+      ]
+     ]
+    },
+    {
+     "h": "Hat verimliliği ve doğruluk",
+     "p": [
+      "Aynı sistem hat verimliliğini de ölçer: üretim hızı, aktif/boşta süreler ve 18 hattın birleşik çıktısı izlenir. Sahada ölçülen hata oranı %0,69 oldu; yani sayım ve sınıflandırma, elle kontrole göre yüksek doğrulukla ve sürekli yapıldı.",
+      "Kurulumda yeni bir boylama makinesi değil, tesisin mevcut kameraları kullanıldı."
+     ],
+     "li": [
+      "Üretim hızı ve aktif/boşta süre",
+      "18 hattın birleşik çıktısının takibi",
+      "Sahada ölçülen %0,69 hata oranı",
+      "Mevcut kamerayla, ek donanım yatırımı olmadan"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/yumurta-3.webp",
+       "Yumurta paketleme tesisinde mevcut konveyör ve kameralarla üretim hattının izlenmesi"
+      ]
+     ]
+    },
+    {
+     "h": "Tesis ve kurulum",
+     "p": [
+      "Yumurtalar kümesten toplama hatlarıyla paketleme alanına taşınır; kamera, hatların birleştiği konveyörü görecek şekilde konumlandırılır. Analiz tesis içinde (on-premise) çalışır, görüntü dışarı çıkmaz; sonuçlar panelde toplanır ve istenirse ERP/paketleme sistemine aktarılır."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/yumurta-4.webp",
+       "Kanatlı (yumurta tavuğu) üretim tesisi — yumurtaların toplandığı kümes ortamı"
+      ]
+     ]
+    },
+    {
+     "h": "Sonuç",
+     "p": [
+      "Yumurta sayımı ve boylama elle ve tahmine dayalı olmaktan çıkıp sürekli, otomatik ve yüksek doğruluklu hale geldi. 18 hattın birleşik üretimi tek sistemde, büyük/küçük ayrımıyla ve %0,69 hata oranıyla izleniyor — hepsi mevcut kameralarla."
+     ],
+     "li": [
+      "18 hat tek sistemde birleşti",
+      "Yumurta sayımı + büyük/küçük sınıflandırma",
+      "Sahada ölçülen %0,69 hata oranı",
+      "Mevcut kamera, ek optik hat yok"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Yeni boylama/optik makine gerekiyor mu?",
+     "a": "Hayır. Bu kurulumda tesisin mevcut kameraları kullanıldı; yumurtalar kameradan sayılıp büyük/küçük olarak sınıflandırıldı. Pahalı optik boylama hattı kurmaya gerek kalmadı."
+    },
+    {
+     "q": "Hata oranı ne kadar?",
+     "a": "Bu sahada ölçülen hata oranı %0,69 oldu. Doğruluk; kamera açısı, aydınlatma, konveyör hızı ve yumurta akış yoğunluğuna bağlı olarak değişir ve pilotta sahaya göre doğrulanır."
+    },
+    {
+     "q": "18 hattı nasıl tek sistemde topluyorsunuz?",
+     "a": "18 toplama hattı tek konveyörde birleştiği için, birleşme noktasındaki kamera tüm akışı görür; yumurtalar bu noktada tek tek sayılıp sınıflandırılır. Gerekirse hat bazında da ayrı sayım yapılandırılabilir."
+    },
+    {
+     "q": "Görüntü tesis dışına çıkıyor mu?",
+     "a": "Hayır. Kurulum on-premise'dir; analiz tesis içindeki sunucuda yapılır, panele yalnızca sayım, sınıf ve metrik verisi aktarılır."
+    }
+   ],
+   "links": []
+  },
+  {
+   "path": "/vaka-calismalari/forklift-uzerinde-personel-tespiti",
+   "date": "2025-01-02",
+   "title": "Depoda forklift/transpalet üstüne binen personelin tespiti: yapay zekâ ile güvenlik ihlali uyarısı",
+   "desc": "Depo kameralarıyla forklift veya transpalet üstüne binen (ayakta taşınan) personel yapay zekâ ile anlık tespit ediliyor; bu tehlikeli davranış için kanıt kareli uyarı üretiliyor.",
+   "intro": [
+    "Depolarda sık görülen tehlikeli davranışlardan biri, personelin forklift/transpalet üzerine binip ayakta taşınmasıdır; bu davranış ciddi yaralanma riski taşır ve iş güvenliği kurallarına aykırıdır. Onlarca koridor kamerasını sürekli izleyip bunu yakalamak mümkün değildir. Hype Vision, depodaki mevcut kameraları yapay zekâya bağladı: forklift/transpalet üstünde taşınan bir kişiyi ('Person on forklift') anlık tespit edip kanıt kareli uyarı üretir — tümü tesis içinde (on-premise)."
+   ],
+   "specs": [
+    [
+     "Kamera",
+     "Mevcut depo/koridor kameraları (RTSP/ONVIF)"
+    ],
+    [
+     "Tespit",
+     "Forklift/transpalet üzerinde taşınan personel"
+    ],
+    [
+     "Uyarı",
+     "Kanıt kareli anlık alarm · panel/WhatsApp"
+    ],
+    [
+     "Kapsam",
+     "Koridor ve geçiş bazında, çok kameralı"
+    ],
+    [
+     "Sektör",
+     "Depo · lojistik · dağıtım · perakende"
+    ],
+    [
+     "Mimari",
+     "On-premise · kimliksiz"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Problem: forklift/transpalet üstüne binme",
+     "p": [
+      "Personelin forklift çatalına, transpalet platformuna veya aracın üzerine binip taşınması, depolarda sık görülen ama yüksek riskli bir davranıştır. Düşme, sıkışma ve çarpma kazalarına yol açar; buna rağmen anlık olarak fark edilmesi zordur.",
+      "Güvenlik ekibi onlarca koridor kamerasını aynı anda izleyemez; ihlal çoğu zaman ancak bir kaza olduğunda görülür."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "'Person on forklift' tespiti",
+     "p": [
+      "Sistem, koridordaki forklift ve transpaletleri ve üzerlerindeki kişileri tespit eder. Bir kişi aracın üzerinde taşınıyorsa 'forklift üstünde personel' ihlali olarak işaretlenir; olay zaman damgalı kanıt kareyle kaydedilir ve anlık uyarı üretilir.",
+      "Uyarı panele, WhatsApp'a veya güvenlik ekibine iletilir; böylece davranış tekrarlanmadan müdahale ve uyarı yapılabilir."
+     ],
+     "li": [
+      "Forklift/transpalet üstünde taşınan kişinin tespiti",
+      "Kanıt kareli, zaman damgalı ihlal kaydı",
+      "Panel / WhatsApp / güvenlik bildirimi",
+      "Koridor ve çok kamera bazında kapsama"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/forklift-binme-1.webp",
+       "Depoda forklift/transpalet üstüne binen personelin yapay zekâ ile tespiti ve güvenlik ihlali uyarısı (Person on forklift)"
+      ]
+     ]
+    },
+    {
+     "h": "Mevcut kameralarla, ek donanımsız",
+     "p": [
+      "Özel sensör veya araç üstü ekipman gerekmez; depodaki mevcut koridor kameraları kullanılır. Aynı sistem forklift-yaya yakınlaşması, yasaklı alan ve KKD gibi diğer depo güvenliği kurallarıyla birlikte çalışacak şekilde genişletilebilir."
+     ],
+     "li": [
+      "Mevcut IP/CCTV kameralarla uyum",
+      "Araç üstü sensör/etiket gerektirmez",
+      "Forklift-yaya, yasaklı alan, KKD ile birlikte genişletilebilir"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/forklift-binme-2.webp",
+       "Depo koridorunda mevcut güvenlik kamerasıyla forklift ve personel hareketinin izlenmesi"
+      ]
+     ]
+    },
+    {
+     "h": "On-premise mimari ve gizlilik",
+     "p": [
+      "Tüm analiz tesis içindeki sunucuda çalışır; görüntü dışarı çıkmaz. Takip kimliksizdir; kişiler kimliklendirilmez ve yüzler bulanıklaştırılabilir. İhlaller panelde toplanır ve İSG raporlamasına veri sağlar."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Sonuç",
+     "p": [
+      "Forklift/transpalet üstüne binme gibi tehlikeli davranışlar artık sürekli ve otomatik izleniyor; ihlal anında kanıt kareyle uyarı üretiliyor. Depo iş güvenliği gözleme değil, veriye dayanıyor — hepsi mevcut kameralarla."
+     ],
+     "li": [
+      "Tehlikeli binme davranışı anlık tespit",
+      "Kanıt kareli uyarı ve kayıt",
+      "Mevcut kamerayla, ek donanımsız",
+      "İSG raporlamasına veri"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Sistem forklift üstündeki kişiyi nasıl anlıyor?",
+     "a": "Yapay zekâ, koridordaki forklift/transpaleti ve kişiyi tespit edip konumlarını ilişkilendirir; kişi aracın üzerinde taşınıyorsa bunu 'forklift üstünde personel' ihlali olarak işaretler ve kanıt kareyle kaydeder."
+    },
+    {
+     "q": "Yeni kamera veya sensör gerekiyor mu?",
+     "a": "Çoğu durumda hayır. Koridorları gören mevcut depo kameraları yeterlidir; araca sensör veya etiket takmak gerekmez. Görüş açısı uygunluğu ücretsiz ön analizde değerlendirilir."
+    },
+    {
+     "q": "Başka depo güvenliği kurallarını da izleyebilir mi?",
+     "a": "Evet. Aynı sistem forklift-yaya yakınlaşması, yasaklı alan ihlali, baret/yelek (KKD) ve hız gibi kurallarla birlikte çalışacak şekilde genişletilebilir."
+    },
+    {
+     "q": "Görüntü dışarı çıkıyor mu?",
+     "a": "Hayır. Kurulum on-premise'dir; analiz tesis içindeki sunucuda yapılır, panele yalnızca olay verisi aktarılır."
+    }
+   ],
+   "links": []
+  },
+  {
+   "path": "/vaka-calismalari/yangin-alev-erken-tespiti-kamera",
+   "date": "2025-01-02",
+   "title": "Kamera ile erken yangın ve alev tespiti: 15-20 metreden basketbol topu büyüklüğündeki alevi görür",
+   "desc": "Mevcut kameralarla yangın ve alev erken aşamada görüntüden tespit ediliyor; 15-20 metre mesafeden basketbol topu büyüklüğündeki bir alev yakalanıp anlık WhatsApp/panel uyarısı üretiliyor.",
+   "intro": [
+    "Yangında en kritik şey zamandır: alev büyümeden fark edilirse müdahale çok daha kolaydır. Isı ve duman dedektörleri çoğu zaman dumanın ya da sıcaklığın dedektöre ulaşmasını bekler; geniş ve yüksek tavanlı alanlarda bu geç kalabilir. Hype Vision, mevcut kameralarla alevi görüntüden erken tespit eden bir sistem kurdu. Saha denemesinde 15-20 metre mesafeden, basketbol topu büyüklüğündeki bir alev tespit edilip anında WhatsApp ve panel üzerinden uyarı üretildi."
+   ],
+   "specs": [
+    [
+     "Kamera",
+     "Mevcut IP/CCTV kameralar (RTSP/ONVIF)"
+    ],
+    [
+     "Tespit",
+     "Alev / yangın — görüntüden"
+    ],
+    [
+     "Menzil (demo)",
+     "15-20 m'den basketbol topu büyüklüğünde alev"
+    ],
+    [
+     "Uyarı",
+     "Anlık WhatsApp · panel · kanıt kare"
+    ],
+    [
+     "Sektör",
+     "Fabrika, depo, atölye, enerji, geri dönüşüm"
+    ],
+    [
+     "Mimari",
+     "On-premise · dedektörleri tamamlar"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Problem: yangını büyümeden görmek",
+     "p": [
+      "Isı ve duman dedektörleri yangını, ısının veya dumanın fiziksel olarak dedektöre ulaşmasıyla algılar. Yüksek tavanlı, geniş veya havalandırmalı alanlarda bu gecikebilir; alev görünür durumdayken bile sistem tetiklenmeyebilir.",
+      "Kamera ise alevi ve dumanı görüş alanında, kaynağında ve mesafeden görsel olarak yakalayabilir — yeter ki akıllı bir analiz onu tanısın."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": []
+    },
+    {
+     "h": "Çözüm: kameradan alev tespiti (saha demosu)",
+     "p": [
+      "Mevcut kamera görüntüsü sürekli analiz edilir; model alev ve yangın işaretlerini arar. Saha denemesinde, 15-20 metre mesafeden yerleştirilen basketbol topu büyüklüğündeki bir alev tespit edildi ve olay anında bildirildi. Bu, erken aşamadaki küçük bir alevin bile uzaktan yakalanabildiğini gösterir."
+     ],
+     "li": [
+      "Görüntüden alev ve yangın tespiti",
+      "15-20 m mesafeden küçük alevin yakalanması",
+      "Erken aşamada, büyümeden tespit",
+      "Mevcut kamera ile — ek özel sensör yok"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": [
+      [
+       "/img/vaka/yangin-1.mp4",
+       "Saha denemesi: 15-20 metre mesafeden basketbol topu büyüklüğündeki alevin kamera ile tespiti ve anlık uyarı",
+       "/img/vaka/yangin-1.webp"
+      ]
+     ]
+    },
+    {
+     "h": "Anlık uyarı: WhatsApp ve panel",
+     "p": [
+      "Alev tespit edildiği an uyarı üretilir ve kanıt kareyle birlikte WhatsApp'a, panele veya güvenlik ekibine iletilir. Böylece olaydan saniyeler sonra ilgili kişiler haberdar olur ve müdahale erken başlar."
+     ],
+     "li": [
+      "Alev tespitinde anlık WhatsApp/panel uyarısı",
+      "Kanıt kareli, zaman damgalı kayıt",
+      "Güvenlik ekibine/çağrı sistemine bildirim",
+      "Hızlı müdahale için erken haber"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": [
+      [
+       "/img/vaka/yangin-2.mp4",
+       "Yangın tespitinde anlık WhatsApp uyarısının telefona düşmesi (YANGIN TESPİT)",
+       "/img/vaka/yangin-2.webp"
+      ]
+     ]
+    },
+    {
+     "h": "Mevcut kamera, mesafe ve kapsama",
+     "p": [
+      "Özel bir alev dedektörü değil, tesisin mevcut kameraları kullanılır. Menzil ve güvenilirlik; kamera çözünürlüğüne, görüş açısına, ortam ışığına ve alevin boyutuna bağlıdır. Yüksek yangın yüklü bölgeler (atölye, depo, geri dönüşüm, enerji) öncelikli kapsanır."
+     ],
+     "li": [
+      "Mevcut IP/CCTV kameralarla çalışır",
+      "Menzil kamera ve ortama göre değişir",
+      "Yüksek riskli bölgelerin önceliklendirilmesi",
+      "Çok kameralı geniş alan kapsaması"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": []
+    },
+    {
+     "h": "On-premise mimari ve dedektörleri tamamlama",
+     "p": [
+      "Analiz tesis içinde (on-premise) çalışır; görüntü dışarı çıkmaz. Kamera tabanlı tespit, mevcut ısı/duman dedektörlerinin yerine geçmez; onları görsel ve mesafeli bir erken uyarı katmanıyla tamamlar."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": []
+    },
+    {
+     "h": "Sonuç",
+     "p": [
+      "Yangın, dumanın dedektöre ulaşmasını beklemeden, alev aşamasında ve mesafeden görsel olarak tespit edilebiliyor. 15-20 metreden küçük bir alev bile yakalanıp saniyeler içinde WhatsApp'a düşüyor — hepsi mevcut kameralarla."
+     ],
+     "li": [
+      "Alev aşamasında erken tespit",
+      "15-20 m'den küçük alevin yakalanması",
+      "Anlık WhatsApp/panel uyarısı",
+      "Mevcut kamera, dedektörleri tamamlar"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Gerçekten 15-20 metreden küçük bir alevi görüyor mu?",
+     "a": "Saha denemesinde 15-20 metre mesafeden, basketbol topu büyüklüğündeki bir alev tespit edildi ve anında uyarı üretildi. Menzil; kamera çözünürlüğü, görüş açısı, ortam ışığı ve alev boyutuna göre değişir ve her sahada ön analizde doğrulanır."
+    },
+    {
+     "q": "Isı/duman dedektörünün yerine mi geçiyor?",
+     "a": "Hayır, tamamlıyor. Kamera alevi görüş alanında ve mesafeden görsel olarak erken yakalar; mevcut yangın algılama sistemleriyle birlikte bir erken uyarı katmanı olarak çalışır."
+    },
+    {
+     "q": "Yeni kamera gerekiyor mu?",
+     "a": "Çoğu durumda hayır. İlgili alanı gören mevcut kameralar kullanılır; görüş açısı ve menzil uygunluğu ücretsiz ön analizde değerlendirilir."
+    },
+    {
+     "q": "Uyarı nereye gidiyor?",
+     "a": "Alev tespitinde anlık uyarı; panele, WhatsApp'a, güvenlik ekibine ve istenirse sesli anons/çağrı sistemine iletilebilir. Analiz on-premise çalışır, görüntü dışarı çıkmaz."
+    }
+   ],
+   "links": []
+  },
+  {
+   "path": "/vaka-calismalari/kaucuk-lastik-yuzey-yirtik-catlak-tespiti",
+   "date": "2025-01-02",
+   "title": "Kauçuk/lastik hattında yüzey yırtık ve çatlak tespiti: endüstriyel kamera ile yüksek hızlı kalite kontrol",
+   "desc": "Hızlı akan kauçuk/lastik yüzeyindeki yırtık ve çatlaklar, yüksek kare hızlı endüstriyel kamera ve yapay zekâ ile anlık tespit ediliyor; kusur erken yakalanıp fire ve iade azaltılıyor.",
+   "intro": [
+    "Lastik ve kauçuk üretiminde koyu renkli, hızlı akan yüzeyde oluşan küçük yırtık ve çatlakların gözle fark edilmesi çok zordur; kaçan bir kusur sonraki adımlarda fire ya da müşteri iadesi olarak geri döner. Bu projede Hype Vision, hatta yüksek kare hızlı bir endüstriyel makine görüşü kamerası (Hikrobot) konumlandırdı ve analizi bir GPU iş istasyonu (workstation) üzerinde çalıştırdı; akan kauçuk yüzeyindeki yırtık ve çatlaklar anlık olarak tespit edilip işaretlendi."
+   ],
+   "specs": [
+    [
+     "Kamera",
+     "Yüksek kare hızlı endüstriyel makine görüşü kamerası (Hikrobot)"
+    ],
+    [
+     "Donanım",
+     "GPU iş istasyonu (workstation) üzerinde çalışır"
+    ],
+    [
+     "Tespit",
+     "Yüzey yırtığı · çatlak · kusur"
+    ],
+    [
+     "Hız",
+     "Yüksek kare hızında, hızlı akan yüzeyde"
+    ],
+    [
+     "Sektör",
+     "Lastik · kauçuk · konveyör bandı · teknik tekstil"
+    ],
+    [
+     "Mimari",
+     "On-premise · hat üstü entegrasyon"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Problem: koyu, hızlı akan yüzeyde kusuru görmek",
+     "p": [
+      "Kauçuk ve lastik yüzeyi koyu renklidir ve hat hızlıdır; bu şartlarda küçük bir yırtık veya çatlak gözle kolayca kaçırılır. Kusur erken yakalanmazsa, hatanın bulunduğu bölüm sonraki süreçlere ilerler ve fire, hurda ya da müşteri iadesi olarak maliyete dönüşür.",
+      "Elle muayene hem yorucu hem tutarsızdır; yüksek hızda sürekli ve aynı hassasiyette kontrol yapılamaz."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": []
+    },
+    {
+     "h": "Çözüm: endüstriyel kamera + yapay zekâ (yüksek hızda)",
+     "p": [
+      "Hatta yüksek kare hızlı bir endüstriyel makine görüşü kamerası (Hikrobot) konumlandırıldı ve uygun aydınlatmayla akan yüzey net görüntülendi. Analiz bir GPU iş istasyonu üzerinde çalıştırılarak hızlı akan kauçuk yüzeyindeki yırtık ve çatlaklar anlık tespit edildi; her kusur kutuyla işaretlenip kaydedildi.",
+      "Bu kurulum, koyu ve hızlı yüzeyde çıplak gözün kaçıracağı küçük kusurları yakalar ve operatöre anında bildirir."
+     ],
+     "li": [
+      "Yüksek kare hızlı endüstriyel kamera ile görüntüleme",
+      "GPU iş istasyonu üzerinde gerçek zamanlı analiz",
+      "Yırtık ve çatlağın kutuyla işaretlenmesi",
+      "Operatöre anlık kusur bildirimi"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": [
+      [
+       "/img/vaka/lastik-1.mp4",
+       "Lastik/kauçuk hattında yüzey yırtık ve çatlağın endüstriyel kamera ve yapay zekâ ile tespiti",
+       "/img/vaka/lastik-1.webp"
+      ]
+     ]
+    },
+    {
+     "h": "Hızlı akan ve koyu yüzeyde doğruluk",
+     "p": [
+      "Sistem, koyu renkli ve hızlı hareket eden kauçuk yüzeyi için kalibre edildi; yüksek kare hızı sayesinde hız arttığında bile kusurlar yakalanabilir. Küçük yüzey yırtıkları ve çatlaklar, geç fark edilen bir hata olmaktan çıkıp anlık tespit edilen bir olaya dönüşür."
+     ],
+     "li": [
+      "Koyu ve hızlı yüzey için kalibrasyon",
+      "Yüksek kare hızında kusur yakalama",
+      "Küçük yüzey kusurlarının erken tespiti",
+      "Sürekli ve tutarlı kontrol"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": []
+    },
+    {
+     "h": "Kurulum ve entegrasyon",
+     "p": [
+      "Endüstriyel kamera hat üzerine konumlandırılır, uygun aydınlatma sağlanır ve analiz GPU iş istasyonunda çalışır. Kusur verisi panelde toplanır; istenirse hat durdurma, işaretleme veya kalite/ERP sistemiyle entegre edilebilir. Analiz on-premise çalışır, görüntü dışarı çıkmaz."
+     ],
+     "li": [
+      "Hat üstü endüstriyel kamera + aydınlatma",
+      "GPU iş istasyonunda analiz",
+      "Hat durdurma / işaretleme entegrasyonu",
+      "Kalite/ERP sistemine veri"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": []
+    },
+    {
+     "h": "Sonuç",
+     "p": [
+      "Kauçuk/lastik yüzeyindeki yırtık ve çatlaklar, hızlı ve koyu yüzeyde bile sürekli ve otomatik olarak tespit edildi. Kusurun erken yakalanması, hatalı ürünün sonraki süreçlere gitmeden ayrılmasını sağlayarak fire ve müşteri iadesini azaltır."
+     ],
+     "li": [
+      "Yüksek hızda sürekli yüzey kontrolü",
+      "Yırtık ve çatlağın erken tespiti",
+      "Endüstriyel kamera + GPU iş istasyonu",
+      "Fire ve müşteri iadesinin azaltılması"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Hangi kamera ve donanım kullanıldı?",
+     "a": "Hatta yüksek kare hızlı bir endüstriyel makine görüşü kamerası (Hikrobot) kullanıldı ve analiz bir GPU iş istasyonu (workstation) üzerinde çalıştırıldı. Kamera, aydınlatma ve kare hızı; yüzey, hız ve kusur boyutuna göre sahaya özel seçilir."
+    },
+    {
+     "q": "Ne tür kusurları tespit ediyor?",
+     "a": "Yüzey yırtığı, çatlak ve benzeri görünür kusurlar. Her kusur kutuyla işaretlenip zaman damgasıyla kaydedilir; istenirse hat durdurma veya işaretleme ile eşleştirilir."
+    },
+    {
+     "q": "Mevcut güvenlik kamerasıyla olur mu?",
+     "a": "Bu gibi hızlı ve küçük yüzey kusurlarında genellikle endüstriyel makine görüşü kamerası ve uygun aydınlatma önerilir; İSG/sayım gibi senaryolarda ise mevcut IP kameralar yeterlidir. Uygunluk ücretsiz ön analizde belirlenir."
+    },
+    {
+     "q": "Görüntü dışarı çıkıyor mu?",
+     "a": "Hayır. Analiz on-premise (GPU iş istasyonu) çalışır; görüntü tesisten çıkmaz, panele yalnızca kusur ve metrik verisi aktarılır."
+    }
+   ],
+   "links": []
   }
  ],
  "legal": {
@@ -19752,6 +20336,590 @@
     {
      "q": "Is the data pushed to ERP/MES?",
      "a": "Yes, if wanted. Count and performance data are collected on the dashboard and can be pushed to ERP/MES via REST API. Analysis runs on-premise and video does not leave the site."
+    }
+   ],
+   "links": []
+  },
+  "/vaka-calismalari/yumurta-siniflandirma-sayim-hat-verimliligi": {
+   "path": "/en/case-studies/egg-grading-counting-line-efficiency",
+   "date": "2025-01-02",
+   "title": "Egg grading, counting and line efficiency with cameras: 18 lines in one system, 0.69% error",
+   "desc": "At an egg facility, existing cameras count eggs and classify them as large/small; 18 collection lines merged into one system, with a measured error rate of 0.69%.",
+   "intro": [
+    "At an egg (poultry) production facility, eggs came from 18 separate collection lines and merged onto a single conveyor toward grading and packing. Counting the eggs and sorting them by size was largely manual and based on estimates. Hype Vision connected the facility's existing cameras to AI: a system that counts eggs one by one, classifies them as large/small and measures line efficiency. The error rate measured on site was 0.69%."
+   ],
+   "specs": [
+    [
+     "Cameras",
+     "Existing IP cameras (RTSP/ONVIF)"
+    ],
+    [
+     "Lines",
+     "18 collection lines → merged onto one conveyor"
+    ],
+    [
+     "Counting",
+     "Each egg with its own ID; no double counting"
+    ],
+    [
+     "Classification",
+     "Large / small (size)"
+    ],
+    [
+     "Error rate",
+     "0.69% (measured on site)"
+    ],
+    [
+     "Architecture",
+     "On-premise · line efficiency and reporting"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "The problem: 18 lines, manual counting and sizing",
+     "p": [
+      "Eggs came from 18 different collection lines and merged onto one conveyor. In this dense flow, counting eggs accurately and sorting them by size was almost impossible by hand; counting relied on estimates and line efficiency could not be measured.",
+      "Rather than installing new, expensive optical grading lines, the facility wanted to use its existing cameras."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "18 lines into one: egg counting",
+     "p": [
+      "Eggs arriving from 18 collection lines and merging onto one conveyor are detected one by one by the existing camera, each tracked with its own ID; an egg crossing the defined counting line is counted, and the same egg is not counted twice. Total and time-based output appears on the dashboard in real time."
+     ],
+     "li": [
+      "One-by-one egg counting on the merged line",
+      "Each egg a separate ID — no double counting",
+      "Accurate crossing count with a counting line",
+      "Real-time, timestamped production quantity"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/yumurta-2.webp",
+       "AI counting eggs one by one and tracking them by ID on the merged conveyor at an egg facility (ROI)"
+      ]
+     ]
+    },
+    {
+     "h": "Egg classification: large / small",
+     "p": [
+      "During counting, eggs are classified by size: large and small eggs are marked separately (e.g. large in green, small in orange). So not only the total count but also the size distribution is visible in real time, and production and packing are planned with data."
+     ],
+     "li": [
+      "Size classification (large / small)",
+      "Real-time visibility of size distribution",
+      "Sizing data together with the count",
+      "With existing cameras — no extra optical line needed"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/yumurta-1.webp",
+       "AI classifying eggs on the conveyor as large/small and counting them with a counting line"
+      ]
+     ]
+    },
+    {
+     "h": "Line efficiency and accuracy",
+     "p": [
+      "The same system also measures line efficiency: production speed, active/idle times and the combined output of the 18 lines are tracked. The error rate measured on site was 0.69%, meaning counting and classification were done continuously and with high accuracy compared with manual checking.",
+      "The setup used the facility's existing cameras, not a new grading machine."
+     ],
+     "li": [
+      "Production speed and active/idle time",
+      "Combined output of the 18 lines tracked",
+      "0.69% error rate measured on site",
+      "With existing cameras, no extra hardware investment"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/yumurta-3.webp",
+       "Monitoring the production line with the existing conveyor and cameras at an egg packing facility"
+      ]
+     ]
+    },
+    {
+     "h": "Facility and setup",
+     "p": [
+      "Eggs are carried from the barn to the packing area by collection lines; the camera is positioned to see the conveyor where the lines merge. Analysis runs on-premise, video does not leave the site; results are collected on the dashboard and can be pushed to an ERP/packing system if wanted."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/yumurta-4.webp",
+       "Poultry (layer) production facility — the barn environment where eggs are collected"
+      ]
+     ]
+    },
+    {
+     "h": "Outcome",
+     "p": [
+      "Egg counting and sizing moved from manual and estimate-based to continuous, automatic and high-accuracy. The combined output of 18 lines is tracked in one system, with large/small sorting and a 0.69% error rate — all with existing cameras."
+     ],
+     "li": [
+      "18 lines merged into one system",
+      "Egg counting + large/small classification",
+      "0.69% error rate measured on site",
+      "Existing cameras, no extra optical line"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Do I need a new optical grading machine?",
+     "a": "No. This setup used the facility's existing cameras; eggs were counted and classified as large/small from the camera. There was no need to install an expensive optical grading line."
+    },
+    {
+     "q": "What is the error rate?",
+     "a": "The error rate measured on this site was 0.69%. Accuracy varies with camera angle, lighting, conveyor speed and egg flow density, and is verified on site during the pilot."
+    },
+    {
+     "q": "How do you merge 18 lines into one system?",
+     "a": "Because the 18 collection lines merge onto one conveyor, the camera at the merge point sees the whole flow; eggs are counted and classified there one by one. Per-line counting can also be configured if needed."
+    },
+    {
+     "q": "Does video leave the facility?",
+     "a": "No. The deployment is on-premise; analysis runs on a server inside the facility and only count, class and metric data reach the dashboard."
+    }
+   ],
+   "links": []
+  },
+  "/vaka-calismalari/forklift-uzerinde-personel-tespiti": {
+   "path": "/en/case-studies/person-riding-forklift-detection",
+   "date": "2025-01-02",
+   "title": "Detecting people riding on forklifts/pallet trucks in the warehouse: AI safety-violation alerts",
+   "desc": "Warehouse cameras detect people riding (standing) on forklifts or pallet trucks with AI, raising an evidence-framed alert for this unsafe behavior.",
+   "intro": [
+    "One of the common unsafe behaviors in warehouses is staff riding on a forklift/pallet truck, standing on it while it moves; this carries a serious injury risk and breaks safety rules. Continuously watching dozens of aisle cameras to catch it is impossible. Hype Vision connected the warehouse's existing cameras to AI: it instantly detects a person being carried on a forklift/pallet truck ('Person on forklift') and raises an evidence-framed alert — all fully on-premise."
+   ],
+   "specs": [
+    [
+     "Cameras",
+     "Existing warehouse/aisle cameras (RTSP/ONVIF)"
+    ],
+    [
+     "Detects",
+     "Person riding on a forklift/pallet truck"
+    ],
+    [
+     "Alert",
+     "Evidence-framed instant alarm · dashboard/WhatsApp"
+    ],
+    [
+     "Scope",
+     "Per aisle, multi-camera"
+    ],
+    [
+     "Sector",
+     "Warehouse · logistics · distribution · retail"
+    ],
+    [
+     "Architecture",
+     "On-premise · anonymous"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "The problem: riding on a forklift/pallet truck",
+     "p": [
+      "Staff riding on a forklift's forks, a pallet-truck platform or on top of the vehicle is a common but high-risk behavior in warehouses. It causes falls, crushing and collision injuries; yet it is hard to notice in real time.",
+      "Security cannot watch dozens of aisle cameras at once; the violation is usually only seen after an accident."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "'Person on forklift' detection",
+     "p": [
+      "The system detects forklifts and pallet trucks in the aisle and the people on them. If a person is being carried on the vehicle, it is flagged as a 'person on forklift' violation; the event is logged with a timestamped evidence frame and an instant alert is raised.",
+      "The alert is sent to the dashboard, WhatsApp or the security team, so staff can intervene and warn before the behavior repeats."
+     ],
+     "li": [
+      "Detection of a person carried on a forklift/pallet truck",
+      "Timestamped, evidence-framed violation log",
+      "Dashboard / WhatsApp / security alert",
+      "Per-aisle, multi-camera coverage"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/forklift-binme-1.webp",
+       "AI detecting a person riding on a forklift/pallet truck in a warehouse and raising a safety-violation alert (Person on forklift)"
+      ]
+     ]
+    },
+    {
+     "h": "With existing cameras, no extra hardware",
+     "p": [
+      "No special sensor or on-vehicle equipment is needed; the warehouse's existing aisle cameras are used. The same system can be extended to work alongside other warehouse-safety rules such as forklift-pedestrian proximity, restricted areas and PPE."
+     ],
+     "li": [
+      "Works with existing IP/CCTV cameras",
+      "No on-vehicle sensor/tag required",
+      "Extensible with forklift-pedestrian, restricted area, PPE"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/forklift-binme-2.webp",
+       "Monitoring forklift and staff movement with an existing security camera in a warehouse aisle"
+      ]
+     ]
+    },
+    {
+     "h": "On-premise architecture and privacy",
+     "p": [
+      "All analysis runs on a server inside the facility; video does not leave the site. Tracking is anonymous; people are not identified and faces can be blurred. Violations are collected on the dashboard and feed safety reporting."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Outcome",
+     "p": [
+      "Unsafe behaviors like riding on a forklift/pallet truck are now monitored continuously and automatically, with an evidence-framed alert the moment it happens. Warehouse safety is based on data, not observation — all with existing cameras."
+     ],
+     "li": [
+      "Instant detection of unsafe riding behavior",
+      "Evidence-framed alert and log",
+      "With existing cameras, no extra hardware",
+      "Data for safety reporting"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "How does the system know a person is on the forklift?",
+     "a": "AI detects the forklift/pallet truck and the person in the aisle and associates their positions; if a person is being carried on the vehicle, it flags a 'person on forklift' violation and logs it with an evidence frame."
+    },
+    {
+     "q": "Do I need new cameras or sensors?",
+     "a": "In most cases no. Existing warehouse cameras that see the aisles are enough; no sensor or tag on the vehicle is needed. Field-of-view suitability is assessed in the free pre-assessment."
+    },
+    {
+     "q": "Can it monitor other warehouse-safety rules too?",
+     "a": "Yes. The same system can be extended to work alongside forklift-pedestrian proximity, restricted-area intrusion, hard hat/vest (PPE) and speed."
+    },
+    {
+     "q": "Does video leave the site?",
+     "a": "No. The deployment is on-premise; analysis runs on a server inside the facility and only event data reach the dashboard."
+    }
+   ],
+   "links": []
+  },
+  "/vaka-calismalari/yangin-alev-erken-tespiti-kamera": {
+   "path": "/en/case-studies/early-fire-flame-detection-cameras",
+   "date": "2025-01-02",
+   "title": "Early fire and flame detection with cameras: spots a basketball-sized flame from 15-20 meters",
+   "desc": "Existing cameras detect fire and flame early from the image; a basketball-sized flame is caught from 15-20 meters away and an instant WhatsApp/dashboard alert is raised.",
+   "intro": [
+    "In a fire, time is everything: catching the flame before it grows makes response far easier. Heat and smoke detectors usually wait for smoke or heat to physically reach the detector; in large, high-ceiling or ventilated spaces that can be late. Hype Vision built a system that detects flame early from the image using existing cameras. In a field test, a basketball-sized flame placed 15-20 meters away was detected and an alert was raised instantly via WhatsApp and the dashboard."
+   ],
+   "specs": [
+    [
+     "Cameras",
+     "Existing IP/CCTV cameras (RTSP/ONVIF)"
+    ],
+    [
+     "Detects",
+     "Flame / fire — from the image"
+    ],
+    [
+     "Range (demo)",
+     "basketball-sized flame from 15-20 m"
+    ],
+    [
+     "Alert",
+     "Instant WhatsApp · dashboard · evidence frame"
+    ],
+    [
+     "Sector",
+     "Factory, warehouse, workshop, energy, recycling"
+    ],
+    [
+     "Architecture",
+     "On-premise · complements detectors"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "The problem: seeing a fire before it grows",
+     "p": [
+      "Heat and smoke detectors sense a fire when heat or smoke physically reaches the detector. In high-ceiling, large or ventilated spaces that can be delayed; the system may not trigger even while a flame is visible.",
+      "A camera, on the other hand, can catch flame and smoke visually in its field of view, at the source and from a distance — as long as smart analysis recognizes it."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": []
+    },
+    {
+     "h": "The solution: flame detection from the camera (field demo)",
+     "p": [
+      "The existing camera feed is analyzed continuously; the model looks for flame and fire signatures. In a field test, a basketball-sized flame placed 15-20 meters away was detected and the event was reported instantly. This shows that even a small, early-stage flame can be caught from a distance."
+     ],
+     "li": [
+      "Flame and fire detection from the image",
+      "Catching a small flame from 15-20 m away",
+      "Early-stage detection, before it grows",
+      "With existing cameras — no special sensor"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": [
+      [
+       "/img/vaka/yangin-1.mp4",
+       "Field test: a camera detecting a basketball-sized flame from 15-20 meters away and raising an instant alert",
+       "/img/vaka/yangin-1.webp"
+      ]
+     ]
+    },
+    {
+     "h": "Instant alert: WhatsApp and dashboard",
+     "p": [
+      "The moment a flame is detected, an alert is raised and sent with an evidence frame to WhatsApp, the dashboard or the security team. So the right people know within seconds of the event and response starts early."
+     ],
+     "li": [
+      "Instant WhatsApp/dashboard alert on flame detection",
+      "Evidence-framed, timestamped log",
+      "Notification to security team/paging system",
+      "Early warning for fast response"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": [
+      [
+       "/img/vaka/yangin-2.mp4",
+       "An instant WhatsApp alert reaching the phone on fire detection (fire detected)",
+       "/img/vaka/yangin-2.webp"
+      ]
+     ]
+    },
+    {
+     "h": "Existing cameras, range and coverage",
+     "p": [
+      "Not a dedicated flame detector but the facility's existing cameras are used. Range and reliability depend on camera resolution, field of view, ambient light and flame size. High-fire-load areas (workshop, warehouse, recycling, energy) are covered first."
+     ],
+     "li": [
+      "Works with existing IP/CCTV cameras",
+      "Range varies with camera and environment",
+      "Prioritization of high-risk areas",
+      "Wide-area coverage across multiple cameras"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": []
+    },
+    {
+     "h": "On-premise architecture and complementing detectors",
+     "p": [
+      "Analysis runs on-premise; video does not leave the site. Camera-based detection does not replace existing heat/smoke detectors; it complements them with a visual, at-a-distance early-warning layer."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": []
+    },
+    {
+     "h": "Outcome",
+     "p": [
+      "Fire can be detected visually at the flame stage and from a distance, without waiting for smoke to reach a detector. Even a small flame from 15-20 meters is caught and reaches WhatsApp within seconds — all with existing cameras."
+     ],
+     "li": [
+      "Early detection at the flame stage",
+      "Catching a small flame from 15-20 m",
+      "Instant WhatsApp/dashboard alert",
+      "Existing cameras, complements detectors"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Does it really see a small flame from 15-20 meters?",
+     "a": "In a field test, a basketball-sized flame was detected from 15-20 meters and an alert was raised instantly. Range depends on camera resolution, field of view, ambient light and flame size, and is verified on each site during the pre-assessment."
+    },
+    {
+     "q": "Does it replace heat/smoke detectors?",
+     "a": "No, it complements them. The camera catches flame visually and at a distance early; it works as an early-warning layer alongside existing fire-detection systems."
+    },
+    {
+     "q": "Do I need new cameras?",
+     "a": "In most cases no. Existing cameras that see the area are used; field-of-view and range suitability are assessed in the free pre-assessment."
+    },
+    {
+     "q": "Where does the alert go?",
+     "a": "On flame detection, an instant alert can be sent to the dashboard, WhatsApp, the security team and, if wanted, a PA/paging system. Analysis runs on-premise and video does not leave the site."
+    }
+   ],
+   "links": []
+  },
+  "/vaka-calismalari/kaucuk-lastik-yuzey-yirtik-catlak-tespiti": {
+   "path": "/en/case-studies/rubber-tire-surface-tear-crack-detection",
+   "date": "2025-01-02",
+   "title": "Rubber/tire surface tear and crack detection: high-speed quality inspection with an industrial camera",
+   "desc": "Tears and cracks on fast-moving rubber/tire surfaces are detected in real time with a high-frame-rate industrial camera and AI; defects are caught early, cutting scrap and returns.",
+   "intro": [
+    "In tire and rubber manufacturing, small tears and cracks on a dark, fast-moving surface are very hard to spot by eye; a missed defect comes back downstream as scrap or a customer return. In this project, Hype Vision placed a high-frame-rate industrial machine-vision camera (Hikrobot) on the line and ran the analysis on a GPU workstation; tears and cracks on the moving rubber surface were detected and marked in real time."
+   ],
+   "specs": [
+    [
+     "Camera",
+     "High-frame-rate industrial machine-vision camera (Hikrobot)"
+    ],
+    [
+     "Hardware",
+     "Runs on a GPU workstation"
+    ],
+    [
+     "Detects",
+     "Surface tear · crack · defect"
+    ],
+    [
+     "Speed",
+     "At high frame rate, on a fast-moving surface"
+    ],
+    [
+     "Sector",
+     "Tire · rubber · conveyor belt · technical textile"
+    ],
+    [
+     "Architecture",
+     "On-premise · on-line integration"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "The problem: seeing defects on a dark, fast surface",
+     "p": [
+      "Rubber and tire surfaces are dark and the line is fast; in these conditions a small tear or crack is easily missed by eye. If a defect is not caught early, the affected section moves downstream and becomes scrap or a customer return.",
+      "Manual inspection is tiring and inconsistent; you cannot inspect continuously and at the same sensitivity at high speed."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": []
+    },
+    {
+     "h": "The solution: industrial camera + AI (at high speed)",
+     "p": [
+      "A high-frame-rate industrial machine-vision camera (Hikrobot) was placed on the line and, with proper lighting, imaged the moving surface clearly. The analysis ran on a GPU workstation, detecting tears and cracks on the fast-moving rubber surface in real time; each defect was boxed and logged.",
+      "This setup catches small defects on a dark, fast surface that the naked eye would miss and flags them to the operator instantly."
+     ],
+     "li": [
+      "Imaging with a high-frame-rate industrial camera",
+      "Real-time analysis on a GPU workstation",
+      "Tears and cracks marked with a box",
+      "Instant defect alert to the operator"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": [
+      [
+       "/img/vaka/lastik-1.mp4",
+       "Detecting surface tears and cracks on a rubber/tire line with an industrial camera and AI",
+       "/img/vaka/lastik-1.webp"
+      ]
+     ]
+    },
+    {
+     "h": "Accuracy on a fast, dark surface",
+     "p": [
+      "The system was calibrated for the dark, fast-moving rubber surface; thanks to the high frame rate, defects can be caught even as speed increases. Small surface tears and cracks move from being a late-noticed error to a real-time detected event."
+     ],
+     "li": [
+      "Calibration for a dark, fast surface",
+      "Defect capture at high frame rate",
+      "Early detection of small surface defects",
+      "Continuous, consistent inspection"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": []
+    },
+    {
+     "h": "Setup and integration",
+     "p": [
+      "The industrial camera is placed over the line, proper lighting is provided, and analysis runs on the GPU workstation. Defect data is collected on the dashboard and can be integrated with line stop, marking or a quality/ERP system. Analysis runs on-premise and video does not leave the site."
+     ],
+     "li": [
+      "On-line industrial camera + lighting",
+      "Analysis on a GPU workstation",
+      "Line-stop / marking integration",
+      "Data to a quality/ERP system"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": []
+    },
+    {
+     "h": "Outcome",
+     "p": [
+      "Tears and cracks on the rubber/tire surface were detected continuously and automatically, even on a fast, dark surface. Catching defects early keeps bad product from moving downstream, reducing scrap and customer returns."
+     ],
+     "li": [
+      "Continuous surface inspection at high speed",
+      "Early detection of tears and cracks",
+      "Industrial camera + GPU workstation",
+      "Reduced scrap and customer returns"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [],
+     "vids": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Which camera and hardware were used?",
+     "a": "A high-frame-rate industrial machine-vision camera (Hikrobot) was used on the line and the analysis ran on a GPU workstation. Camera, lighting and frame rate are chosen per site based on the surface, speed and defect size."
+    },
+    {
+     "q": "What defects does it detect?",
+     "a": "Surface tears, cracks and similar visible defects. Each defect is boxed and timestamped, and can be matched to a line stop or marking if wanted."
+    },
+    {
+     "q": "Can existing security cameras do this?",
+     "a": "For fast, small surface defects like these, an industrial machine-vision camera and proper lighting are usually recommended; for safety/counting scenarios, existing IP cameras are enough. Suitability is determined in the free pre-assessment."
+    },
+    {
+     "q": "Does video leave the site?",
+     "a": "No. Analysis runs on-premise (a GPU workstation); video does not leave the facility, only defect and metric data reach the dashboard."
     }
    ],
    "links": []
