@@ -7283,6 +7283,1369 @@
    "path": "/vaka-calismalari/400-kamera-alan-bazli-kkd-denetimi",
    "date": "2026-10-12",
    "links": []
+  },
+  {
+   "path": "/vaka-calismalari/uretim-hatti-verimlilik-analizi-kamera",
+   "date": "2024-12-10",
+   "title": "Üretim hattında hat verimliliği analizi: makine çalışma süresi, istasyon ve İSG tek kamerada",
+   "desc": "Tek bir tavan kamerasıyla üretim hattında makine çalışma/duruş süresi, personel istasyonları ve tehlikeli alanlar yapay zekâ ile 7/24 izlenir; hat verimliliği ölçülebilir hale gelir.",
+   "intro": [
+    "Bir tekstil üretim hattında hat verimliliği uzun süre ustabaşının gözlemine ve elle tutulan kayıtlara dayanıyordu: makinenin ne kadar çalıştığı, personelin hangi istasyonda ne yaptığı ve vinç geçiş yolundaki riskler ölçülemiyordu. Hype Vision, hattın üzerindeki tek bir mevcut IP kamerayı RTSP ile bağlayarak makine durumunu, personel istasyonlarını, malzeme akışını ve İSG bölgelerini aynı görüntüden tespit eden bir platform kurdu — tümü tesis içinde (on-premise)."
+   ],
+   "specs": [
+    [
+     "Kamera",
+     "1 mevcut tavan IP kamera (RTSP/ONVIF)"
+    ],
+    [
+     "Mimari",
+     "On-premise · veri tesisten çıkmaz"
+    ],
+    [
+     "Modüller",
+     "Makine durumu · personel/istasyon · malzeme · tehlikeli alan"
+    ],
+    [
+     "Sektör",
+     "Tekstil / üretim hattı"
+    ],
+    [
+     "Çıktı",
+     "Hat verimliliği, makine çalışma/duruş süresi"
+    ],
+    [
+     "Gizlilik",
+     "Kimliksiz, yüzler bulanıklaştırılır"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Problem: hat verimliliği neden ölçülemiyordu?",
+     "p": [
+      "Üretim hattında verimlilik, vardiya içinde yapılan gözlemlere ve sonradan doldurulan formlara bağlıydı. Makinenin gerçekte ne kadar süre çalıştığı ve ne kadar durduğu bilinmiyor, duruş nedenleri kayıt altına alınmıyordu.",
+      "Aynı alanda farklı rollerde personel (operatör, kalite kontrol, montaj) ve yoğun bir vinç trafiği vardı. Kimin hangi istasyonda olduğu, istasyonların ne kadar dolu olduğu ve vinç geçiş yolundaki güvenlik riski sürekli izlenemiyordu."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Makine çalışma ve duruş süresi (OEE temeli)",
+     "p": [
+      "Üretim makinesi kamera görüntüsünde bir bölge olarak tanımlandı; model makinenin çalışır/durur durumunu sürekli tespit eder. Çalışma ve duruş süreleri zaman damgasıyla kaydedilir, böylece planlı/plansız duruşlar ayrıştırılabilir ve hat verimliliği OEE mantığıyla izlenebilir."
+     ],
+     "li": [
+      "Makine çalışıyor / durdu durumu anlık tespit",
+      "Çalışma ve duruş sürelerinin zaman damgalı kaydı",
+      "Vardiya ve gün bazında makine kullanım oranı",
+      "Duruşların görüntülü kanıtla incelenmesi"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Personel ve istasyon analizi",
+     "p": [
+      "Sahadaki personel kimliksiz olarak tespit edilir ve bulunduğu bölgeye göre rolüyle (operatör, kalite kontrol, montaj) etiketlenir. İstasyon doluluğu, aktif çalışma ve boşta kalma ayrıştırılarak hattın gerçek iş akışı görünür hale gelir.",
+      "Yüzler tanınmaz; takip kimliksiz ID'lerle yapıldığı için analiz KVKK'ya uygun tasarlanır."
+     ],
+     "li": [
+      "Bölge/istasyon bazlı personel tespiti",
+      "İstasyon doluluğu ve aktif/boşta ayrımı",
+      "Rol bazlı iş akışı görünürlüğü (operatör, kalite, montaj)",
+      "Kimliksiz takip — yüz tanıma yok"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/hat-verimliligi-1.webp",
+       "Üretim hattında makine durumu, personel istasyonları ve İSG bölgelerinin tek kamerada yapay zekâ ile izlenmesi"
+      ]
+     ]
+    },
+    {
+     "h": "Malzeme ve bölge takibi",
+     "p": [
+      "Hammadde ruloları, işlenecek kumaş levhaları ve çalışma alanı ayrı bölgeler olarak tanımlanır. Malzemenin doğru bölgede olup olmadığı ve çalışma alanındaki hareket görünür kılınır; bu, hat verimliliği analizini malzeme akışıyla birlikte değerlendirmeyi sağlar."
+     ],
+     "li": [
+      "Hammadde ve iş malzemesi bölgelerinin tanımı",
+      "Yanlış bölgeye bırakılan malzeme için uyarı",
+      "Çalışma alanı doluluğu ve hareket"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "İSG: vinç geçiş yolu (tehlikeli alan)",
+     "p": [
+      "Vinç geçiş yolu tehlikeli alan olarak işaretlendi. Bu bölgeye personel girdiğinde veya vinç yoluyla yaya çakıştığında anlık uyarı üretilir; olay kanıt kareyle kaydedilir. Böylece verimlilik ölçümüyle aynı kameradan İSG denetimi de yapılır."
+     ],
+     "li": [
+      "Tehlikeli alan (vinç yolu) ihlali anlık uyarı",
+      "Kanıt kareli olay kaydı",
+      "Verimlilik ve İSG aynı kameradan"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "On-premise mimari ve gizlilik",
+     "p": [
+      "Tüm analiz tesis içindeki sunucuda çalışır; görüntü tesisten çıkmaz. Tek kamera aynı anda makine, personel, malzeme ve İSG modüllerini besler. Kişiler kimliklendirilmez, takip kimliksiz ID'lerle yapılır ve yüzler bulanıklaştırılır."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Sonuç",
+     "p": [
+      "Hat verimliliği, vardiya gözlemine ve formlara bağlı olmaktan çıkıp sürekli ve ölçülebilir hale geldi. Makine duruşları, istasyon doluluğu ve İSG ihlalleri aynı ekranda, zaman damgalı veriyle izleniyor."
+     ],
+     "li": [
+      "Makine çalışma/duruş süresi sürekli ölçülüyor",
+      "İstasyon ve personel iş akışı görünür",
+      "Tehlikeli alan ihlalleri kayıt altında",
+      "Üretim ve İSG ekipleri aynı veriden çalışıyor"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Hat verimliliği için yeni kamera gerekiyor mu?",
+     "a": "Çoğu durumda hayır. RTSP/ONVIF destekli mevcut bir tavan kamerası yeterlidir; aynı görüntüden hem makine durumu, hem personel, hem İSG analizi yapılır."
+    },
+    {
+     "q": "Bu bir OEE ölçümü mü?",
+     "a": "Makine çalışma ve duruş süresini ölçerek OEE'nin kullanılabilirlik (availability) bileşenine doğrudan veri sağlar. Kalite ve performans bileşenleri için hat ve ürün özelinde ek modüller eklenebilir."
+    },
+    {
+     "q": "Çalışan performansı ölçülürken KVKK sorun olur mu?",
+     "a": "Analiz kimliksizdir; yüzler tanınmaz, takip kimliksiz ID'lerle yapılır. Yine de teknik tedbirler (yerinde işleme, saklama süresi, rol bazlı erişim) ve veri sorumlusu yükümlülükleri tesisle birlikte netleştirilir."
+    },
+    {
+     "q": "Görüntü tesis dışına çıkıyor mu?",
+     "a": "Hayır. Kurulum on-premise'dir; analiz tesis içindeki sunucuda yapılır, panele yalnızca olay ve metrik verisi aktarılır."
+    }
+   ],
+   "links": []
+  },
+  {
+   "path": "/vaka-calismalari/kamera-ile-5s-denetimi",
+   "date": "2024-12-10",
+   "title": "Kamera ile otomatik 5S denetimi: düzen, temizlik ve güvenlik yapay zekâ ile sürekli izleniyor",
+   "desc": "Mevcut güvenlik kameralarıyla 5S denetimi otomatikleşiyor: dağınık malzeme, kapalı geçiş, yerdeki engel, temizlik ve forklift güvenliği yapay zekâ ile 7/24 tespit edilir.",
+   "intro": [
+    "5S; işyerinde düzen, temizlik, güvenlik ve verimliliği artırmak için Japonya'da geliştirilen, Japonca 'S' harfiyle başlayan beş adımdan (Seiri-ayıkla, Seiton-düzenle, Seiso-temizle, Seiketsu-standartlaştır, Shitsuke-sürdür) oluşan bir yalın üretim metodolojisidir. Çoğu tesiste 5S denetimi haftada ya da ayda bir, elle ve kontrol listesiyle yapılır; aradaki zamanda bozulan düzen görülmez. Hype Vision, bir depo ve üretim alanındaki mevcut kameraları RTSP ile bağlayarak 5S kurallarını sürekli ve otomatik denetleyen bir sistem kurdu — tümü tesis içinde (on-premise)."
+   ],
+   "specs": [
+    [
+     "Kamera",
+     "Mevcut IP/CCTV kameralar (RTSP/ONVIF)"
+    ],
+    [
+     "Mimari",
+     "On-premise · veri tesisten çıkmaz"
+    ],
+    [
+     "5S adımları",
+     "Seiri · Seiton · Seiso · Seiketsu · Shitsuke"
+    ],
+    [
+     "Modüller",
+     "Düzen (Set in Order) · temizlik (Shine) · güvenlik (Safety)"
+    ],
+    [
+     "Alan",
+     "Depo + üretim sahası"
+    ],
+    [
+     "Çıktı",
+     "Sürekli 5S skoru ve zaman damgalı kayıt"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "5S neden kameryla denetlenmeli?",
+     "p": [
+      "Klasik 5S denetimi periyodiktir: denetçi sahayı gezer, kontrol listesini doldurur ve bir rapor çıkarır. Ama denetimden birkaç saat sonra koridora bırakılan bir palet, yere düşen bir malzeme ya da kapatılan bir geçiş bir sonraki denetime kadar görülmez.",
+      "Mevcut kameralar üzerinden çalışan yapay zekâ, 5S kurallarını sürekli denetler: her bölgeyi tanımlı kurala göre değerlendirir, ihlali anında işaretler ve zaman damgalı kayıt tutar. Böylece 5S 'bir denetim anı' olmaktan çıkıp sürekli ölçülen bir duruma dönüşür."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Seiri & Seiton — ayıklama ve düzen (Set in Order)",
+     "p": [
+      "Depolama ve malzeme alanları kamera görüntüsünde tanımlı bölgeler olarak işaretlenir. Model, malzemenin doğru bölgede ve düzenli olup olmadığını değerlendirir: düzenli depo 'uygun', tanımlı alan dışına taşan palet veya geçişi kapatan malzeme ise ihlal olarak işaretlenir.",
+      "Yaya ve forklift koridorlarını kapatan yığınlar, yanlış yere bırakılmış paletler ve dağınık depolama anında görünür hale gelir."
+     ],
+     "li": [
+      "Düzenli vs dağınık depolama tespiti",
+      "Tanımlı alan dışına taşan malzeme uyarısı",
+      "Geçişi/koridoru kapatan malzeme tespiti",
+      "Malzemenin doğru bölgede olup olmadığı"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/5s-denetimi-1.webp",
+       "Depoda 5S denetimi: düzenli depolama, tanımlı alan dışı malzeme ve geçişi kapatan yığınların yapay zekâ ile tespiti"
+      ]
+     ]
+    },
+    {
+     "h": "Seiso — temizlik (Shine)",
+     "p": [
+      "Makine ve ekipman bölgeleri 'temiz ve yerinde mi' kuralına göre izlenir. Atık konteynerleri ve atık alanları ayrı tanımlanır; dolu konteyner, taşan atık veya kirli bölge işaretlenir. Böylece temizlik durumu da sürekli kayıt altında olur."
+     ],
+     "li": [
+      "Makine/ekipman temiz ve yerinde mi kontrolü",
+      "Atık konteyneri ve atık alanı durumu",
+      "Kirli/dağınık bölge tespiti"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/5s-denetimi-2.webp",
+       "Üretim alanında 5S temizlik denetimi: makine temiz ve yerinde, koridor açık, malzeme düzenli"
+      ]
+     ]
+    },
+    {
+     "h": "Güvenlik (Safety) — açık koridor, engelsiz zemin, forklift",
+     "p": [
+      "Koridorlar ve geçiş yolları 'açık mı' kuralına göre izlenir. Zemine düşen bir engel, kapatılan bir geçiş (kaza riski) ya da tanımlı alan dışında bırakılan bir palet anında uyarıya dönüşür. Forklift hareketi de aynı görüntüden izlenir; böylece 5S'in güvenlik boyutu sürekli denetlenir."
+     ],
+     "li": [
+      "Koridor/geçiş açık mı kontrolü",
+      "Zeminde engel tespiti (düşme/çarpma riski)",
+      "Kapalı geçiş — kaza riski uyarısı",
+      "Forklift hareketinin izlenmesi"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/5s-denetimi-3.webp",
+       "5S güvenlik denetimi: koridorda zemin engeli ve tanımlı alan dışı malzemenin yapay zekâ ile tespiti"
+      ]
+     ]
+    },
+    {
+     "h": "Seiketsu & Shitsuke — standartlaştır ve sürdür",
+     "p": [
+      "Her bölgenin durumu zaman damgasıyla kaydedilir; sürekli bir 5S skoru ve trend oluşur. Denetim, kişiye ve denetim gününe bağlı olmaktan çıkar; standart kurallar her vardiyada aynı şekilde uygulanır ve iyileşme ölçülebilir hale gelir.",
+      "İhlaller panel, WhatsApp veya e-posta ile ilgili ekibe iletilebilir; böylece düzeltici aksiyon denetimi beklemeden alınır."
+     ],
+     "li": [
+      "Bölge bazlı sürekli 5S skoru ve trend",
+      "Zaman damgalı ihlal kaydı ve raporu",
+      "Standart kuralların her vardiyada aynı uygulanması",
+      "İhlal bildirimi (panel/WhatsApp/e-posta)"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "On-premise mimari ve gizlilik",
+     "p": [
+      "Tüm analiz tesis içindeki sunucuda çalışır; görüntü tesisten çıkmaz. 5S denetimi nesne ve bölge temellidir, kişi kimliklendirmesi gerektirmez; personel göründüğünde takip kimliksiz yapılır ve yüzler bulanıklaştırılabilir."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Sonuç",
+     "p": [
+      "5S denetimi periyodik ve elle olmaktan çıkıp sürekli, otomatik ve ölçülebilir hale geldi. Düzen, temizlik ve güvenlik ihlalleri aynı ekranda, zaman damgalı kayıtla izleniyor; 5S raporu insan emeği olmadan üretiliyor."
+     ],
+     "li": [
+      "5S denetimi 7/24 otomatik",
+      "Düzen, temizlik ve güvenlik tek platformda",
+      "Zaman damgalı kanıtla sürekli skor",
+      "Denetim raporu otomatik üretiliyor"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "5S denetimi için yeni kamera gerekiyor mu?",
+     "a": "Çoğu durumda hayır. Depoyu ve üretim alanını gören mevcut RTSP/ONVIF kameralar yeterlidir; aynı görüntüden düzen, temizlik ve güvenlik birlikte değerlendirilir."
+    },
+    {
+     "q": "Hangi 5S adımları kamerayla denetlenebilir?",
+     "a": "Görünür olan her şey: Seiri/Seiton (düzen, tanımlı alan, kapalı geçiş), Seiso (temizlik, atık, makine yerinde) ve güvenlik. Seiketsu/Shitsuke ise sürekli skor ve kayıtla standartlaştırma ve sürdürmeyi destekler."
+    },
+    {
+     "q": "Sistem yanlış alarm üretir mi?",
+     "a": "Her bölge sahaya özel kurallarla tanımlanır ve pilotta kalibre edilir; amaç denetçiyi değil, denetimler arasındaki kör noktayı ortadan kaldırmaktır. Kritik ihlaller önceliklendirilir."
+    },
+    {
+     "q": "Görüntü tesis dışına çıkıyor mu?",
+     "a": "Hayır. Kurulum on-premise'dir; analiz tesis içindeki sunucuda yapılır, panele yalnızca olay ve skor verisi aktarılır."
+    }
+   ],
+   "links": []
+  },
+  {
+   "path": "/vaka-calismalari/el-hijyeni-uv-kamera-analizi",
+   "date": "2024-12-10",
+   "title": "UV kamera ile el hijyeni analizi: el yıkama kalitesi yüzde olarak ölçülüyor",
+   "desc": "Hastanede el hijyeni, floresan solüsyon ve UV ışık altında endüstriyel kamerayla ölçülüyor: hangi bölgenin ne kadar temizlendiği yapay zekâ ile yüzde ve cm² olarak raporlanır.",
+   "intro": [
+    "El yıkama kalitesi genelde gözle ve öznel olarak değerlendirilir; oysa parmak araları, baş parmak ve el bileği gibi bölgeler sıklıkla atlanır. Bir hastane için Hype Vision, el hijyenini nesnel olarak ölçen anahtar teslim bir sistem geliştirdi: cihazın mekanik tasarımından endüstriyel kameraya ve UV aydınlatmaya, oradan yapay zekâ analizine kadar tüm çözümü üstlendi. Personel floresan bir eğitim solüsyonu sürüp ellerini mavi-mor (UV) ışık altındaki cihaza gösterir; sistem, solüsyonun kapladığı (temizlenen) ve atlanan bölgeleri ayırıp temizlik oranını yüzde olarak çıkarır."
+   ],
+   "specs": [
+    [
+     "Kapsam",
+     "Cihaz tasarımı + endüstriyel kamera + UV aydınlatma + yapay zekâ (anahtar teslim)"
+    ],
+    [
+     "Yöntem",
+     "Floresan solüsyon + UV (mavi-mor) görüntüleme"
+    ],
+    [
+     "Çıktı",
+     "El/bölge bazında kapsama yüzdesi ve cm²"
+    ],
+    [
+     "Bölgeler",
+     "Avuç içi, parmaklar, el üstü, el bileği"
+    ],
+    [
+     "Kullanım",
+     "Hastane · gıda · ilaç — hijyen eğitimi ve denetimi"
+    ],
+    [
+     "Mimari",
+     "On-premise · tesis içinde"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Problem: el hijyeni neden ölçülemiyordu?",
+     "p": [
+      "El yıkama eğitimlerinde kalite çoğunlukla gözle değerlendirilir ve kişiden kişiye değişir. Parmak uçları, parmak araları, baş parmak ve el bileği gibi kritik bölgeler sıklıkla eksik kalır ama bu eksik çıplak gözle fark edilmez.",
+      "Hastane, el hijyeni kalitesini öznel gözlemden çıkarıp nesnel, tekrarlanabilir ve kayıt altına alınan bir ölçüme dönüştürmek istedi."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Çözüm: UV görüntüleme + yapay zekâ (uçtan uca Hype Vision)",
+     "p": [
+      "Hype Vision, cihazın mekanik tasarımını, içindeki endüstriyel kamerayı, UV (mavi-mor) aydınlatmayı ve görüntüyü işleyen yapay zekâyı birlikte geliştirdi. Personel floresan solüsyonu ellerine sürer; UV ışık altında solüsyonun bulunduğu yerler parlar. Model, parlayan (solüsyon uygulanmış = temizlenmiş) alanlar ile karanlık (atlanmış) alanları piksel piksel ayırır.",
+      "Sonuç saniyeler içinde ekrana gelir: sol el, sağ el ve toplam için kapsama yüzdesi, atlanan bölgeler ve her bölgenin (avuç içi, parmaklar, el üstü, el bileği) ayrı yüzdesi."
+     ],
+     "li": [
+      "Cihaz + kamera + UV aydınlatma + AI tek elden (Hype Vision)",
+      "Solüsyon uygulanmış vs atlanmış alan piksel bazında ayrımı",
+      "Sol/sağ el ve toplam kapsama yüzdesi",
+      "Avuç içi, parmaklar, el üstü, el bileği için ayrı skor"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/el-hijyeni-1.webp",
+       "UV ışık altında el hijyeni analizi: solüsyonun kapladığı (temizlenen) ve atlanan bölgelerin yapay zekâ ile yüzde olarak ölçülmesi"
+      ]
+     ]
+    },
+    {
+     "h": "Ölçülen çıktı — örnek bir tarama",
+     "p": [
+      "Her tarama nesnel bir rapor üretir. Örnek bir ölçümde sistem; toplam temizlik oranını, toplam el alanını (cm²), kapsanan ve atlanan alanı (cm²) ve bölge bazında yüzdeleri raporlar. Böylece hangi bölgenin tekrar yıkanması gerektiği net görünür.",
+      "Değerler ölçüme ve kişiye göre değişir; sistem yüzdeyi ve cm²'yi doğrudan görüntüden hesaplar, tahmin etmez."
+     ],
+     "li": [
+      "Toplam ve el bazında kapsama yüzdesi",
+      "Kapsanan / atlanan alan (cm²)",
+      "Bölge bazında skor (ör. avuç > parmak araları)",
+      "Atlanan bölgelerin görüntü üzerinde işaretlenmesi"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/el-hijyeni-2.webp",
+       "El hijyeni tarama paneli: toplam temizlik oranı, kapsanan/atlanan alan (cm²) ve bölge bazında yüzdeler"
+      ]
+     ]
+    },
+    {
+     "h": "Yüksek hacimli tarama ve analiz",
+     "p": [
+      "Sistem hızlı tarama için tasarlandı: personel ellerini gösterir, sonuç saniyeler içinde çıkar. Bu hastanede vardiya başında yaklaşık 120 personel taranıyor; her tarama saniyeler sürer ve zaman damgasıyla kaydedilir.",
+      "Zaman içinde kişi/birim/bölge bazında trend oluşur: hangi ekibin hangi bölgede sık eksik bıraktığı görünür ve eğitim buna göre yönlendirilir. (Günlük tarama kapasitesi tesise göre ölçeklenir.)"
+     ],
+     "li": [
+      "Tarama başına saniyeler mertebesinde sonuç",
+      "Vardiya başında ~120 personel taranıyor",
+      "Zaman damgalı kayıt ve kişi/birim/bölge trendi",
+      "Eğitim ihtiyacının veriyle belirlenmesi"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Gizlilik ve kurulum",
+     "p": [
+      "Analiz tesis içinde (on-premise) çalışır; görüntü dışarı çıkmaz. Sistem elleri analiz eder; kimlik eşlemesi tesisin tercihiyle ve KVKK yükümlülükleri birlikte kurgulanarak yapılır."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Sonuç",
+     "p": [
+      "El hijyeni kalitesi, öznel gözlemden nesnel ve tekrarlanabilir bir ölçüme dönüştü. Hangi bölgenin ne kadar temizlendiği yüzde ve cm² olarak kayıt altına alınıyor; eğitim, veriyle ve kişiye özel yönlendiriliyor."
+     ],
+     "li": [
+      "Nesnel, tekrarlanabilir el hijyeni ölçümü",
+      "Bölge bazında eksiklerin görünür olması",
+      "Cihazdan analize uçtan uca Hype Vision çözümü",
+      "Zaman damgalı kayıt ve trend ile sürekli iyileştirme"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Sistem el yıkamayı nasıl ölçüyor?",
+     "a": "Floresan bir eğitim solüsyonu ellere sürülür; UV (mavi-mor) ışık altında solüsyonun bulunduğu yerler parlar. Endüstriyel kamera görüntüyü alır, yapay zekâ parlayan (temizlenen) ve karanlık (atlanan) alanları ayırıp kapsama yüzdesini hesaplar."
+    },
+    {
+     "q": "Cihazı da Hype Vision mı yaptı?",
+     "a": "Evet. Cihazın mekanik tasarımı, içindeki endüstriyel kamera, UV aydınlatma ve yapay zekâ analizi uçtan uca Hype Vision tarafından geliştirildi."
+    },
+    {
+     "q": "Sonuç ne kadar sürüyor?",
+     "a": "Personel ellerini gösterir ve kapsama yüzdesi saniyeler içinde ekrana gelir; bu sayede vardiya başında çok sayıda kişi kısa sürede taranabilir."
+    },
+    {
+     "q": "Nerelerde kullanılır?",
+     "a": "El hijyeninin kritik olduğu her yerde: hastaneler, gıda üretimi ve ilaç/kozmetik tesisleri. Hem eğitim hem periyodik denetim için kullanılır."
+    }
+   ],
+   "links": []
+  },
+  {
+   "path": "/vaka-calismalari/mobilya-fabrikasi-45-kamera-kkd-yangin-duman",
+   "date": "2025-09-30",
+   "title": "Mobilya fabrikasında 45 kamerada KKD, yangın ve duman tespiti tek platformda",
+   "desc": "Bir mobilya ve yatak fabrikasında 45 mevcut kamera yapay zekâya bağlandı: baret ve yelek (KKD) uyumu ile yangın ve duman, tesis genelinde 7/24 otomatik tespit ediliyor.",
+   "intro": [
+    "Sünger, kumaş ve ahşabın yoğun olduğu bir mobilya ve yatak fabrikasında hem iş güvenliği hem yangın riski yüksekti; denetim ise birkaç kişinin gözüne ve periyodik turlara bağlıydı. Hype Vision, tesisteki 45 mevcut kamerayı RTSP ile tek bir platforma bağladı ve aynı kameralardan baret/yelek (KKD) uyumunu, yangını ve dumanı 7/24 otomatik tespit eden bir sistem kurdu — tümü tesis içinde (on-premise)."
+   ],
+   "specs": [
+    [
+     "Kamera",
+     "45 mevcut IP kamera (RTSP/ONVIF)"
+    ],
+    [
+     "Mimari",
+     "On-premise · veri tesisten çıkmaz"
+    ],
+    [
+     "KKD",
+     "Baret ve iş yeleği uyumu, kişi bazında"
+    ],
+    [
+     "Yangın/Duman",
+     "Tesis genelinde erken tespit"
+    ],
+    [
+     "Sektör",
+     "Mobilya ve yatak üretimi"
+    ],
+    [
+     "Alarm",
+     "Panel · WhatsApp · zaman damgalı kayıt"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Problem: yüksek yangın yükü + geniş alanda İSG",
+     "p": [
+      "Mobilya ve yatak üretiminde sünger, kumaş, tutkal ve ahşap tozu yüksek yangın yükü oluşturur; küçük bir kıvılcım veya için için yanma hızla büyüyebilir. Aynı zamanda geniş üretim ve depo alanında onlarca personelin baret ve yelek kullanımı sürekli denetlenemiyordu.",
+      "45 kameralık mevcut CCTV altyapısı vardı ama sadece kayıt için kullanılıyordu; kimse 45 ekranı aynı anda izleyemezdi."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "45 kamerada KKD (baret ve yelek) uyumu",
+     "p": [
+      "Her kameradaki kişiler tespit edilir ve baret ile iş yeleği kullanımı kişi bazında kontrol edilir. Uyumlu personel yeşil, baretsiz veya yeleksiz personel kırmızı olarak işaretlenir; ihlal anında zaman damgalı kanıt kareyle alarm üretilir.",
+      "Panelde kamera ve alan bazında anlık uyum oranı (ör. baret uyumu, yelek uyumu) ve tespit edilen kişi/forklift sayısı görünür."
+     ],
+     "li": [
+      "Kişi bazında baret ve yelek kontrolü",
+      "Anlık KKD uyum oranı (kamera/alan bazında)",
+      "İhlalde zaman damgalı kanıt kareli alarm",
+      "Tespit edilen kişi ve forklift sayısı"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/mobilya-kkd-1.webp",
+       "Mobilya fabrikasında 45 kamerada KKD tespiti: baretsiz ve yeleksiz personelin yapay zekâ ile anlık işaretlenmesi"
+      ]
+     ]
+    },
+    {
+     "h": "Tesis genelinde yangın ve duman tespiti",
+     "p": [
+      "Aynı kameralar yangın ve duman tespiti için de kullanılır. Model, görüntüde alev ve duman işaretlerini arar; erken aşamada tespit ederek panel ve WhatsApp üzerinden anında uyarı üretir. Böylece yüksek yangın yüküne sahip bölgelerde dumanın büyümeden fark edilmesi hedeflenir.",
+      "Yangın/duman tespiti sıcaklık dedektörlerini tamamlar: dumanı kaynağında, kamera görüş alanında görsel olarak yakalar."
+     ],
+     "li": [
+      "Görüntüden alev ve duman erken tespiti",
+      "Panel ve WhatsApp ile anında uyarı",
+      "Yüksek yangın yüklü bölgelerin önceliklendirilmesi",
+      "Mevcut dedektörleri görsel kanıtla tamamlama"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/mobilya-kkd-2.webp",
+       "45 kameralı mobilya fabrikasında KKD uyum paneli: baret ve yelek uyum oranı, kişi ve forklift tespiti"
+      ]
+     ]
+    },
+    {
+     "h": "45 kamera, tek platform, on-premise",
+     "p": [
+      "45 kamera tek bir platformda toplanır ve her kamera aynı anda hem KKD hem yangın/duman modülünü besler. Tüm analiz tesis içindeki sunucuda çalışır; görüntü tesisten çıkmaz. Kişiler kimliklendirilmez, takip kimliksiz yapılır ve yüzler bulanıklaştırılabilir."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Sonuç",
+     "p": [
+      "45 kameranın tamamı artık sadece kayıt değil, aktif bir İSG ve yangın güvenliği katmanı. KKD ihlalleri ve yangın/duman riski aynı ekranda, zaman damgalı kayıtla izleniyor; müdahale saniyeler içinde başlatılabiliyor."
+     ],
+     "li": [
+      "45 kamera tek platformda, on-premise",
+      "Baret/yelek uyumu 7/24 kayıt altında",
+      "Yangın ve duman erken uyarı",
+      "İSG ve güvenlik ekipleri aynı veriden çalışıyor"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "45 kamera için yeni donanım gerekiyor mu?",
+     "a": "Kameralar mevcut; RTSP/ONVIF ile bağlanır. Analiz için tesis içine bir edge sunucu konumlandırılır ve donanım kamera sayısı ile modüllere göre keşifte boyutlandırılır. Aynı kamera hem KKD hem yangın/duman modülünü besler."
+    },
+    {
+     "q": "Yangın/duman tespiti dedektörün yerine mi geçer?",
+     "a": "Hayır, tamamlar. Kamera, dumanı ve alevi görüş alanında görsel olarak erken yakalar; mevcut yangın algılama sistemleriyle birlikte kullanılır."
+    },
+    {
+     "q": "KKD tespiti gece veya düşük ışıkta çalışır mı?",
+     "a": "Kameranın görüntü verebildiği ölçüde çalışır. Düşük ışıkta aydınlatma veya uygun kamera önerilir; uygunluk ücretsiz ön analizde değerlendirilir."
+    },
+    {
+     "q": "Görüntü tesis dışına çıkıyor mu?",
+     "a": "Hayır. Kurulum on-premise'dir; analiz tesis içindeki sunucuda yapılır, panele yalnızca olay ve metrik verisi aktarılır."
+    }
+   ],
+   "links": []
+  },
+  {
+   "path": "/vaka-calismalari/akaryakit-istasyonu-servis-analizi",
+   "date": "2024-10-03",
+   "title": "Akaryakıt istasyonunda kamera ile servis analizi: ilk temas, hizmet süresi, cam silme ve kaput açma",
+   "desc": "Akaryakıt istasyonunda pompa görevlisi performansı ve müşteri hizmeti yapay zekâ ile ölçülüyor: ilk temas süresi, hizmet süresi, cam silindi mi, kaput açıldı mı ve araç bekleme süresi.",
+   "intro": [
+    "Akaryakıt istasyonlarında müşteri memnuniyeti hizmet standardına bağlıdır: araç yanaştığında görevlinin ne kadar sürede geldiği, camın silinip silinmediği, kaput/yağ kontrolünün yapılıp yapılmadığı ve müşterinin ne kadar beklediği. Bunların hepsi şimdiye kadar yöneticinin gözüne bağlıydı. Hype Vision, pompa kameralarını yapay zekâya bağladı ve poz tahmini (pose estimation) ile araç tespitini birleştirerek her pompadaki hizmeti nesnel olarak ölçen bir sistem kurdu — tümü tesis içinde (on-premise)."
+   ],
+   "specs": [
+    [
+     "Kamera",
+     "Mevcut pompa/saha kameraları (RTSP/ONVIF)"
+    ],
+    [
+     "Yöntem",
+     "Poz tahmini (pose estimation) + araç tespiti"
+    ],
+    [
+     "Ölçülen",
+     "İlk temas · hizmet süresi · cam silme · kaput açma · bekleme"
+    ],
+    [
+     "Kapsam",
+     "Pompa bazında servis ve yoğunluk"
+    ],
+    [
+     "Sektör",
+     "Akaryakıt istasyonu / forecourt"
+    ],
+    [
+     "Mimari",
+     "On-premise · kimliksiz"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Problem: istasyon hizmet standardı ölçülemiyordu",
+     "p": [
+      "Bir istasyonda hizmet kalitesi; görevlinin müşteriyi karşılama hızına, cam silme ve kaput/yağ kontrolü gibi ek hizmetlere ve müşterinin bekleme süresine bağlıdır. Ama bu adımların gerçekte yapılıp yapılmadığı ve ne kadar sürdüğü ölçülemiyordu.",
+      "Yoğun saatlerde hangi pompanın dolduğu, müşterinin ne kadar beklediği ve görevlinin ilk teması ne zaman kurduğu yalnızca tahmin ediliyordu."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "İlk temas ve bekleme süresi",
+     "p": [
+      "Araç pompaya yanaştığı an tespit edilir; görevli araca ilk kez yaklaştığında 'ilk temas' zamanı ölçülür. Aradaki süre, müşterinin ne kadar beklediğini nesnel olarak gösterir. Pompa bazında ortalama ilk temas ve bekleme süresi çıkarılır.",
+      "Böylece 'müşteri beklerken kimse gelmedi' gibi durumlar veriyle görünür hale gelir."
+     ],
+     "li": [
+      "Araç yanaşma anının tespiti",
+      "İlk temas süresi (görevli ne kadar sürede geldi)",
+      "Müşteri bekleme süresi",
+      "Pompa bazında ortalama ve yoğun saat analizi"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/akaryakit-1.webp",
+       "Akaryakıt istasyonunda poz tahmini ile görevli-müşteri etkileşiminin ve hizmet adımlarının yapay zekâ ile ölçülmesi"
+      ]
+     ]
+    },
+    {
+     "h": "Hizmet adımları: cam silme, kaput açma, hizmet süresi",
+     "p": [
+      "Poz tahmini, görevlinin hareketlerini ayırt eder: cam silme, kaput açma, yakıt verme gibi adımlar tanınır. Böylece kaç aracın camının silindiği, kaçının kaputunun açıldığı sayılabilir ve toplam hizmet süresi ölçülür.",
+      "Bu, hizmet standardının gerçekten uygulanıp uygulanmadığını ve hangi görevlinin/pompanın daha iyi hizmet verdiğini gösterir."
+     ],
+     "li": [
+      "Cam silme hareketinin tespiti (kaç araç)",
+      "Kaput/yağ kontrolü hareketinin tespiti",
+      "Toplam hizmet süresi",
+      "Görevli ve pompa bazında hizmet performansı"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/akaryakit-2.webp",
+       "Pompa başında yakıt verme ve ek hizmet adımlarının poz tahmini ile tespiti"
+      ]
+     ]
+    },
+    {
+     "h": "Araç ve pompa yoğunluğu",
+     "p": [
+      "Araçlar (otomobil, kamyon, ticari) tespit edilip pompa bazında sayılır. Hangi pompanın ne zaman yoğunlaştığı, sıra oluşup oluşmadığı ve istasyon genel doluluğu görünür hale gelir; vardiya ve personel planlaması veriyle yapılabilir."
+     ],
+     "li": [
+      "Pompa bazında araç sayımı ve tür (otomobil/kamyon)",
+      "Yoğun saat ve doluluk analizi",
+      "Sıra/bekleme oluşumunun tespiti",
+      "Vardiya ve personel planlamasına veri"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/akaryakit-3.webp",
+       "Gece istasyonda birden fazla pompada eşzamanlı servis ve araç yoğunluğunun izlenmesi"
+      ]
+     ]
+    },
+    {
+     "h": "On-premise mimari ve gizlilik",
+     "p": [
+      "Tüm analiz tesis içindeki sunucuda çalışır; görüntü dışarı çıkmaz. Analiz hareket ve araç temellidir; kişiler kimliklendirilmez, takip kimliksiz yapılır ve yüzler bulanıklaştırılabilir. Plaka okuma yalnızca istenirse ve KVKK yükümlülükleriyle birlikte eklenir."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Sonuç",
+     "p": [
+      "İstasyon hizmet standardı artık ölçülebilir: ilk temas, hizmet süresi, cam silme ve kaput açma oranları ve bekleme süreleri pompa bazında veriyle izleniyor. Yönetici, hizmet kalitesini gözleme değil veriye dayanarak yönetiyor."
+     ],
+     "li": [
+      "İlk temas ve bekleme süresi ölçülüyor",
+      "Cam silme / kaput açma oranı sayılıyor",
+      "Hizmet süresi ve görevli performansı görünür",
+      "Vardiya ve yoğunluk planlaması veriyle"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Sistem cam silme veya kaput açmayı nasıl anlıyor?",
+     "a": "Poz tahmini (pose estimation) görevlinin vücut ve kol hareketlerini modelleyerek cam silme, kaput açma ve yakıt verme gibi adımları ayırt eder; araç tespitiyle birlikte hangi araca hangi hizmetin verildiği çıkarılır."
+    },
+    {
+     "q": "Yeni kamera gerekiyor mu?",
+     "a": "Çoğu durumda hayır. Pompaları gören mevcut RTSP/ONVIF kameralar yeterlidir; görüş açısı uygunluğu ücretsiz ön analizde değerlendirilir."
+    },
+    {
+     "q": "Plaka okunuyor mu, KVKK sorun olur mu?",
+     "a": "Varsayılan analiz kimliksizdir; plaka okuma yalnızca istenirse eklenir. Teknik tedbirler ve veri sorumlusu yükümlülükleri tesisle birlikte netleştirilir."
+    },
+    {
+     "q": "Görüntü istasyon dışına çıkıyor mu?",
+     "a": "Hayır. Kurulum on-premise'dir; analiz tesis içindeki sunucuda yapılır, panele yalnızca olay ve metrik verisi aktarılır."
+    }
+   ],
+   "links": []
+  },
+  {
+   "path": "/vaka-calismalari/market-alisveris-sepeti-cikis-engelleme",
+   "date": "2025-01-02",
+   "title": "Markette alışveriş sepetinin otopark dışına çıkışını engelleme: yapay zekâ ile sepet kaybı önleme",
+   "desc": "Market otoparkında alışveriş sepetleri mevcut kameralarla izleniyor: sepet çıkış/yasak alana yaklaştığında yapay zekâ anında uyarı üretir, sepet kaybı önlenir.",
+   "intro": [
+    "Market ve AVM otoparklarında alışveriş sepetlerinin dışarı çıkarılıp geri getirilmemesi (sepet kaybı) hem maliyet hem de düzen sorunu yaratır; kaybolan her sepet yeniden satın alınır, dağılan sepetler trafik ve güvenlik riski oluşturur. Onlarca kamerayı aynı anda izlemek mümkün değildir. Hype Vision, otoparktaki mevcut kameraları yapay zekâya bağladı: sistem alışveriş sepetlerini tespit eder, kameralar arası takip eder ve bir sepet çıkışa / yasak alana yaklaştığı an anında uyarı üretir — tümü tesis içinde (on-premise)."
+   ],
+   "specs": [
+    [
+     "Kamera",
+     "Mevcut otopark/giriş kameraları (RTSP/ONVIF)"
+    ],
+    [
+     "Yöntem",
+     "Nesne tespiti + bölge (yasak alan) + kameralar arası takip"
+    ],
+    [
+     "Tespit",
+     "Alışveriş sepeti · çıkış denemesi"
+    ],
+    [
+     "Alarm",
+     "Panel · sesli anons · güvenlik bildirimi · bariyer/kapı"
+    ],
+    [
+     "Sektör",
+     "Market · AVM · perakende"
+    ],
+    [
+     "Mimari",
+     "On-premise · kimliksiz"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Problem: sepet kaybı ve dağınık otopark",
+     "p": [
+      "Alışveriş sepetleri otoparktan dışarı çıkarıldığında çoğu zaman geri gelmez. Her kayıp sepet doğrudan maliyettir; ayrıca otoparka ve çevre yollara dağılan sepetler hem görüntü kirliliği hem araç ve yaya için risk oluşturur.",
+      "Güvenlik, onlarca otopark kamerasını aynı anda izleyip bir sepetin çıkışa yöneldiğini fark edemez; olay ancak sepet kaybolduktan sonra anlaşılır."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Çözüm: sepet tespiti + yasak alan + anlık uyarı",
+     "p": [
+      "Sistem, görüntüdeki alışveriş sepetlerini tespit eder ve konumlarını takip eder. Çıkış kapısı ve otopark sınırı 'yasak alan' olarak tanımlanır; bir sepet bu alana yaklaştığında veya geçmeye çalıştığında 'Sepet çıkış denemesi' alarmı üretilir ve kanıt kareyle kaydedilir.",
+      "Uyarı; panele, sesli anons sistemine, güvenlik ekibine ve istenirse otomatik bariyer/kapıya iletilebilir; böylece sepet otoparkı terk etmeden müdahale edilir."
+     ],
+     "li": [
+      "Alışveriş sepetinin anlık tespiti",
+      "Çıkış/yasak alan tanımı ve ihlal uyarısı",
+      "Kanıt kareli 'sepet çıkış denemesi' alarmı",
+      "Panel · sesli anons · güvenlik · bariyer entegrasyonu"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/market-sepet-1.webp",
+       "Market otoparkında yapay zekâ ile sepet çıkış denemesinin tespiti: çok kameralı takip ve yasak alan uyarısı"
+      ]
+     ]
+    },
+    {
+     "h": "Mevcut güvenlik kameralarıyla çalışır",
+     "p": [
+      "Özel donanım gerekmez; otoparktaki mevcut CCTV/IP kameralar kullanılır. Aynı görüntü üzerinde sepet tespiti yapılır, standart kamera yeterlidir. Böylece market, kamera altyapısını değiştirmeden sepet kaybını önleyen bir katman kazanır."
+     ],
+     "li": [
+      "Mevcut IP/CCTV kameralarla uyum",
+      "Özel sensör veya etiket (RFID) gerektirmez",
+      "Tek görüntüden sepet tespiti ve takibi"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/market-sepet-2.webp",
+       "Market otoparkındaki mevcut güvenlik kamerasında alışveriş sepetinin yapay zekâ ile tespiti"
+      ]
+     ]
+    },
+    {
+     "h": "Çok kameralı takip",
+     "p": [
+      "Sepet, ana giriş, çıkış kapısı ve yan görüş gibi birden fazla kamerada takip edilir. Bir kameradan çıkan sepet diğerinde yakalanır; böylece otoparkın tamamı tek bir sistemle kapsanır ve sepetin yönü (içeri/dışarı) anlaşılır."
+     ],
+     "li": [
+      "Ana giriş, çıkış kapısı ve yan görüş kameralarının birlikte çalışması",
+      "Sepetin kameralar arası izlenmesi",
+      "Otoparkın tamamının tek sistemle kapsanması"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "On-premise mimari ve gizlilik",
+     "p": [
+      "Tüm analiz tesis içindeki sunucuda çalışır; görüntü dışarı çıkmaz. Sistem nesne (sepet) temellidir, kişi kimliklendirmesi gerektirmez; görüntüde kişiler göründüğünde takip kimliksiz yapılır ve yüzler bulanıklaştırılabilir."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Sonuç",
+     "p": [
+      "Sepetler otoparkı terk etmeden tespit ediliyor; güvenlik saniyeler içinde uyarılıyor. Sepet kaybı azalıyor, otopark düzeni ve güvenliği artıyor — hepsi mevcut kameralarla."
+     ],
+     "li": [
+      "Sepet çıkışı otopark sınırında engelleniyor",
+      "Güvenliğe anlık, kanıt kareli uyarı",
+      "Mevcut kameralarla, ek donanımsız",
+      "Sepet kaybı ve dağınıklığın azalması"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Sepete RFID/etiket takmak gerekiyor mu?",
+     "a": "Hayır. Sistem görüntüden alışveriş sepetini yapay zekâ ile tespit eder; sepete sensör, etiket veya tekerlek kilidi takmak gerekmez. Mevcut kameralar yeterlidir."
+    },
+    {
+     "q": "Sepet gerçekten çıkışta durdurulabiliyor mu?",
+     "a": "Sistem sepet çıkış sınırına yaklaştığı an uyarı üretir; bu uyarı sesli anonsa, güvenlik ekibine ve istenirse otomatik bariyer/kapıya bağlanarak sepet otoparkı terk etmeden müdahale sağlar."
+    },
+    {
+     "q": "Yeni kamera gerekiyor mu?",
+     "a": "Çoğu durumda hayır. Otoparkı ve çıkışı gören mevcut CCTV/IP kameralar kullanılır; görüş açısı uygunluğu ücretsiz ön analizde değerlendirilir."
+    },
+    {
+     "q": "Görüntü dışarı çıkıyor mu?",
+     "a": "Hayır. Kurulum on-premise'dir; analiz tesis içindeki sunucuda yapılır, panele yalnızca olay verisi aktarılır."
+    }
+   ],
+   "links": []
+  },
+  {
+   "path": "/vaka-calismalari/tasinabilir-kamera-kkd-hat-verimliligi",
+   "date": "2025-01-02",
+   "title": "Taşınabilir yapay zekâ kamerası: bone, maske, eldiven (KKD) ve hat verimliliği tek kurulumda",
+   "desc": "Kurulumsuz, taşınabilir yapay zekâ kamerasıyla paketleme hattında bone-maske-eldiven (KKD) uyumu, hat aktif/boşta süreleri, üretim sayımı ve KPI'lar dakikalar içinde ölçülür.",
+   "intro": [
+    "Gıda, kozmetik ve ilaç paketleme hatlarında bone, maske ve eldiven gibi hijyen KKD'si zorunludur; aynı zamanda hat verimliliği (aktif/boşta süreleri, sayımlar) ölçülmek istenir. Ama her hatta kalıcı kamera kurulumu her zaman mümkün ya da pratik değildir. Hype Vision, bunun için taşınabilir bir yapay zekâ kamerası geliştirdi: tripod üzerinde, açısı ve yüksekliği ayarlanabilen, çantasıyla taşınan ve bir hatta dakikalar içinde kurulan bağımsız bir ünite. Tek kurulumda hem hijyen KKD uyumunu hem hat verimliliğini ölçer; istenen hatta taşınıp tekrar kullanılır."
+   ],
+   "specs": [
+    [
+     "Cihaz",
+     "Taşınabilir ünite · tripod · ayarlanabilir açı ve yükseklik · çantalı"
+    ],
+    [
+     "Kurulum",
+     "Kurulumsuz (plug-and-play), dakikalar içinde, hatlar arası taşınır"
+    ],
+    [
+     "KKD",
+     "Bone, maske, eldiven — kişi bazında"
+    ],
+    [
+     "Verimlilik",
+     "Hat aktif/pasif (boşta) süresi · üretim sayımı · KPI"
+    ],
+    [
+     "Sektör",
+     "Gıda · kozmetik · ilaç paketleme"
+    ],
+    [
+     "Mimari",
+     "On-premise / edge · kimliksiz, yüzler bulanık"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Problem: hijyen KKD + hat verimliliği, kalıcı kurulum olmadan",
+     "p": [
+      "Paketleme hatlarında bone, maske ve eldiven kullanımı hijyen için zorunludur ve sürekli denetlenmesi gerekir. Aynı anda hattın ne kadar aktif çalıştığı, ne kadar boşta kaldığı ve ne kadar üretildiği de ölçülmek istenir.",
+      "Ama birden fazla hatta kalıcı kamera kurmak maliyetli ve zaman alıcıdır; bazen yalnızca belirli bir hattı kısa süre analiz etmek ya da farklı hatları sırayla ölçmek gerekir."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Taşınabilir kamera: kurulumsuz, dakikalar içinde",
+     "p": [
+      "Hype Vision'ın taşınabilir ünitesi tripod üzerinde gelir; açısı ve yüksekliği hatta göre ayarlanır, sabit montaj gerektirmez. Çantasıyla taşınır, bir hatta dakikalar içinde kurulur ve analiz hemen başlar. İş bitince toplanıp başka bir hatta taşınır.",
+      "Böylece kalıcı altyapı yatırımı yapmadan, istenen hat istenen zaman analiz edilebilir; birden fazla hat tek üniteyle sırayla ölçülebilir."
+     ],
+     "li": [
+      "Tripod üzerinde ayarlanabilir açı ve yükseklik",
+      "Kurulumsuz (plug-and-play), dakikalar içinde hazır",
+      "Çantalı taşınabilir tasarım, hatlar arası taşınır",
+      "Kalıcı montaj ve altyapı yatırımı gerektirmez"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/tasinabilir-kamera-2.webp",
+       "Taşınabilir yapay zekâ kamerası: tripod üzerinde ayarlanabilir açı ve yükseklik, çantalı taşınabilir tasarım — kurulumsuz KKD ve hat verimliliği analizi"
+      ]
+     ]
+    },
+    {
+     "h": "Hijyen KKD: bone, maske, eldiven",
+     "p": [
+      "Hattaki her çalışan tespit edilir; bone, maske ve eldiven kullanımı kişi bazında kontrol edilir. Uyumlu çalışan 'PPE OK', eksik olan 'PPE INCOMPLETE' olarak işaretlenir ve ihlal zaman damgalı kanıt kareyle kaydedilir.",
+      "Yüzler bulanıklaştırılır; takip kimliksiz yapıldığı için analiz KVKK'ya uygun tasarlanır."
+     ],
+     "li": [
+      "Bone, maske ve eldiven kişi bazında kontrol",
+      "'PPE OK' / 'PPE INCOMPLETE' anlık işaretleme",
+      "İhlalde zaman damgalı kanıt kareli kayıt",
+      "Yüz bulanıklaştırma — kimliksiz analiz"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/tasinabilir-kamera-1.webp",
+       "Paketleme hattında bone, maske ve eldiven (KKD) uyumunun yapay zekâ ile kişi bazında tespiti: PPE OK ve PPE INCOMPLETE"
+      ]
+     ]
+    },
+    {
+     "h": "Hat verimliliği: aktif/boşta süreleri",
+     "p": [
+      "Aynı kamera hat verimliliğini de ölçer: hattın aktif çalıştığı ve boşta kaldığı (duran) süreler ayrıştırılır. Boşta kalma anları zaman damgasıyla kaydedilir, böylece darboğazlar ve duruş nedenleri görünür hale gelir."
+     ],
+     "li": [
+      "Hat aktif ve pasif (boşta) süresinin ayrıştırılması",
+      "Boşta kalma anlarının zaman damgalı kaydı",
+      "Darboğaz ve duruş görünürlüğü",
+      "Vardiya ve gün bazında hat kullanım oranı"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Hat sayımı ve performans KPI'ları",
+     "p": [
+      "Bantta ilerleyen ürün/paket sayılır; hat bazında üretim adedi, hız ve performans KPI'ları çıkarılır. Hijyen uyumu, boşta süre ve üretim sayısı tek panelde toplanır; hatlar ve vardiyalar objektif olarak karşılaştırılabilir."
+     ],
+     "li": [
+      "Üretim/paket sayımı (hat bazında)",
+      "Hız ve performans KPI'ları",
+      "Hat ve vardiya karşılaştırması",
+      "KKD + verimlilik + sayım tek panelde"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Sonuç",
+     "p": [
+      "Tek bir taşınabilir üniteyle, kalıcı kurulum olmadan, bir hatta dakikalar içinde hem hijyen KKD uyumu hem hat verimliliği hem üretim sayımı ölçülebildi. Ünite hatlar arasında taşınarak tüm tesis sırayla analiz edilebiliyor."
+     ],
+     "li": [
+      "Kurulumsuz, dakikalar içinde analiz",
+      "Bone/maske/eldiven uyumu kayıt altında",
+      "Hat aktif/boşta süresi ve üretim sayımı",
+      "Hatlar arası taşınabilir, tek üniteyle tüm tesis"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Taşınabilir kamera kalıcı kurulum gerektirir mi?",
+     "a": "Hayır. Ünite tripod üzerinde gelir, açısı ve yüksekliği ayarlanır, kabloları takılır ve dakikalar içinde analiz başlar. Sabit montaj ve altyapı yatırımı gerekmez; iş bitince toplanıp başka hatta taşınır."
+    },
+    {
+     "q": "Hangi KKD'leri tespit ediyor?",
+     "a": "Bu kurulumda gıda/hijyen için bone, maske ve eldiven kişi bazında kontrol edilir. İhtiyaca göre baret, yelek gibi diğer KKD'ler de eklenebilir."
+    },
+    {
+     "q": "Hat verimliliğini nasıl ölçüyor?",
+     "a": "Aynı kamera hattın aktif ve boşta (duran) sürelerini ayrıştırır ve banttaki ürün/paketi sayar; hat bazında üretim adedi ve performans KPI'ları çıkarılır."
+    },
+    {
+     "q": "Veri ve gizlilik nasıl yönetiliyor?",
+     "a": "Analiz on-premise/edge çalışır; yüzler bulanıklaştırılır ve takip kimliksizdir. Teknik tedbirler ve veri sorumlusu yükümlülükleri tesisle birlikte netleştirilir."
+    }
+   ],
+   "links": []
+  },
+  {
+   "path": "/vaka-calismalari/tekstil-kumas-kalite-kontrol-hata-tespiti",
+   "date": "2025-01-02",
+   "title": "Tekstilde kumaş kalite kontrol: desenli ve desensiz kumaşta delik, yırtık ve leke tespiti",
+   "desc": "Kumaş muayene makinesine kurulan yapay zekâ kamerasıyla desenli ve desensiz kumaşta delik, yırtık ve leke gibi hatalar anlık tespit ediliyor; ham kumaş kalite kontrolü %100 kayıt altına alınıyor.",
+   "intro": [
+    "Tekstilde kumaş kalite kontrolü (ham kontrol/muayene) genelde işçinin gözüne dayanır; metrelerce kumaş hızla geçerken küçük delik, yırtık ve lekelerin kaçırılması kaçınılmazdır. Özellikle desenli (ekoseli, çizgili) kumaşlarda hata, desenin içinde kaybolur. Hype Vision, kumaş muayene makinesine bir yapay zekâ kamerası kurdu: akan kumaş üzerinde delik, yırtık ve leke gibi hataları anlık tespit edip konumu ve güven skoruyla işaretler — desenli kumaşta bile."
+   ],
+   "specs": [
+    [
+     "Kurulum",
+     "Kumaş muayene makinesine kamera (taşınabilir de olabilir)"
+    ],
+    [
+     "Kumaş",
+     "Desenli ve desensiz (ekose, çizgi, düz)"
+    ],
+    [
+     "Tespit",
+     "Delik · yırtık · leke · doku bozukluğu"
+    ],
+    [
+     "Çıktı",
+     "Hata türü, konum, boyut ve güven skoru"
+    ],
+    [
+     "Sektör",
+     "Tekstil · dokuma · konfeksiyon"
+    ],
+    [
+     "Mimari",
+     "On-premise · metre/top bazında kayıt"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Problem: gözle kumaş muayenesi hata kaçırır",
+     "p": [
+      "Kumaş muayene masasında metrelerce kumaş hızla geçer; işçi aynı anda tüm genişliği ve her detayı göremez. Küçük delik, yırtık ve lekeler kaçar, hata ancak kesim veya dikim aşamasında fark edilir ve bu da fire ve zaman kaybı demektir.",
+      "Desenli (ekose/çizgi) kumaşlarda sorun daha da büyür: yoğun desen, hatanın gözle ayırt edilmesini zorlaştırır."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Yapay zekâ ile hata tespiti: delik, yırtık, leke",
+     "p": [
+      "Kumaş muayene makinesine kurulan kamera, akan kumaşı sürekli analiz eder. Model, delik, yırtık, leke ve doku bozukluğu gibi hataları tespit eder; her hatayı kutuyla işaretler, türünü, konumunu ve güven skorunu verir (ör. 'Hole 0.86').",
+      "Hata anında operatöre bildirilir ve metre/top bazında kaydedilir; böylece hangi topta nerede hata olduğu kayıt altına alınır."
+     ],
+     "li": [
+      "Delik, yırtık, leke ve doku bozukluğu tespiti",
+      "Hata türü, konum ve güven skoru",
+      "Metre/top bazında zaman damgalı kayıt",
+      "Operatöre anlık bildirim"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/tekstil-kalite-1.webp",
+       "Tekstil kumaş kalite kontrolünde yapay zekâ ile kumaştaki deliğin tespiti: hata kutusu ve güven skoru (Hole 0.86)"
+      ]
+     ]
+    },
+    {
+     "h": "Desenli ve desensiz kumaşta çalışır",
+     "p": [
+      "Sistem hem düz (desensiz) hem desenli (ekose, çizgi) kumaşlarda çalışır. En zor durum desenli kumaştır: yoğun çizgi ve kareler hatayı gizler. Model, hatayı desenden ayırt edecek şekilde çalışır; böylece ekoseli bir kumaşta bile leke ve delik yakalanır."
+     ],
+     "li": [
+      "Düz ve desenli (ekose/çizgi) kumaş desteği",
+      "Hatanın desenden ayırt edilmesi",
+      "Farklı renk ve dokulara uyarlanabilir",
+      "Yeni kumaş tipleri için kalibrasyon"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/tekstil-kalite-2.webp",
+       "Desenli (ekose) kumaşta yapay zekâ ile leke tespiti: desenin içinde kaybolan hatanın yakalanması (Stain)"
+      ]
+     ]
+    },
+    {
+     "h": "Kurulum: muayene makinesine veya taşınabilir",
+     "p": [
+      "Kamera, mevcut kumaş muayene makinesinin üzerine konumlandırılır; sabit ışık ve uygun açıyla akan kumaşı net görür. Kurulum muayene hattına entegre edilebileceği gibi, farklı hatlarda denemek için taşınabilir de olabilir."
+     ],
+     "li": [
+      "Mevcut muayene makinesine entegrasyon",
+      "Sabit aydınlatma ile net görüntü",
+      "Hatlar arası taşınabilir seçenek",
+      "Üretim hızına uygun analiz"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/tekstil-kalite-3.webp",
+       "Kumaş muayene makinesine kurulan yapay zekâ kamerasıyla akan kumaşın gerçek zamanlı kalite kontrolü"
+      ]
+     ]
+    },
+    {
+     "h": "On-premise mimari ve entegrasyon",
+     "p": [
+      "Tüm analiz tesis içindeki sunucuda/edge cihazında çalışır; görüntü dışarı çıkmaz. Hatalar panelde toplanır, metre/top bazında raporlanır ve istenirse ERP/kalite sistemine aktarılır; hatalı bölgeler fiziksel işaretleme sistemleriyle de eşleştirilebilir."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Sonuç",
+     "p": [
+      "Kumaş kalite kontrolü işçinin dikkatine bağlı olmaktan çıkıp sürekli ve kayıtlı hale geldi. Delik, yırtık ve leke erken yakalanıyor; hatalı kumaş kesim/dikime gitmeden ayrılıyor, fire ve müşteri iadesi azalıyor."
+     ],
+     "li": [
+      "Akan kumaşta %100 sürekli kontrol",
+      "Delik, yırtık, leke erken tespit",
+      "Desenli kumaşta bile hata yakalanıyor",
+      "Metre/top bazında kayıt ve raporlama"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Desenli (ekoseli) kumaşta da çalışıyor mu?",
+     "a": "Evet. Sistem hem düz hem desenli kumaşlarda çalışacak şekilde tasarlandı; model hatayı desenden ayırt eder, böylece yoğun ekose veya çizgili kumaşta bile delik ve leke yakalanır. Yeni kumaş tipleri için kısa bir kalibrasyon yapılır."
+    },
+    {
+     "q": "Hangi hataları tespit ediyor?",
+     "a": "Delik, yırtık, leke ve doku/örgü bozuklukları gibi görünür hatalar. Her hata türü, konumu, boyutu ve güven skoruyla işaretlenir ve metre/top bazında kaydedilir."
+    },
+    {
+     "q": "Yeni makine almak gerekiyor mu?",
+     "a": "Hayır. Kamera mevcut kumaş muayene makinesine konumlandırılır; sabit aydınlatma ve uygun açıyla çalışır. Farklı hatlarda denemek için taşınabilir kurulum da mümkündür."
+    },
+    {
+     "q": "Veriler nasıl kullanılıyor?",
+     "a": "Analiz on-premise/edge çalışır; görüntü dışarı çıkmaz. Hatalar panelde ve raporda toplanır, istenirse ERP/kalite sistemine aktarılır."
+    }
+   ],
+   "links": []
+  },
+  {
+   "path": "/vaka-calismalari/makine-uretim-sayimi-performans",
+   "date": "2024-09-23",
+   "title": "Makineden çıkan ürünleri sayma ve üretim performansı: kamera ile makine bazında çıktı ve verimlilik",
+   "desc": "Kamera ile makinelerden çıkan ürünler (rulo, top, levha) otomatik sayılıyor; makine bazında üretim adedi, hız ve performans yapay zekâ ile kayıt altına alınıyor.",
+   "intro": [
+    "Üretimde en temel soru basittir ama cevabı çoğu zaman gün sonunda, elle tutulan kayıtlarla verilir: hangi makine ne kadar üretti? Hype Vision, üretim ve paketleme hatlarındaki mevcut kameraları yapay zekâya bağladı: makinelerden çıkan ürünleri (rulo, top, levha vb.) tek tek sayar, her birini takip eder ve makine bazında üretim performansını anlık olarak çıkarır — tümü tesis içinde (on-premise)."
+   ],
+   "specs": [
+    [
+     "Kamera",
+     "Mevcut hat/makine kameraları (RTSP/ONVIF)"
+    ],
+    [
+     "Sayım",
+     "Makineden çıkan ürün (rulo, top, levha, paket)"
+    ],
+    [
+     "Takip",
+     "Her ürün ayrı ID ile; mükerrer sayım önlenir"
+    ],
+    [
+     "Çıktı",
+     "Makine bazında adet, hız ve performans (KPI)"
+    ],
+    [
+     "Sektör",
+     "Tekstil, nonwoven, kağıt, levha, genel üretim"
+    ],
+    [
+     "Mimari",
+     "On-premise · ERP/MES'e aktarılabilir"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Problem: hangi makine ne kadar üretti?",
+     "p": [
+      "Üretim adedi genelde operatörün elle tuttuğu kayıtlara ya da makine sayaçlarına bağlıdır; bu kayıtlar eksik, gecikmeli veya tutarsız olabilir. Makineler arasında gerçek performans farkı ve vardiya bazında çıktı çoğu zaman net bilinmez.",
+      "Elle sayım hem iş gücü ister hem hata içerir; anlık üretim takibi ve makine karşılaştırması yapılamaz."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Makineden çıkan ürünleri sayma",
+     "p": [
+      "Kamera, makineden çıkan ürünleri (rulo, top, levha, paket) görür ve tek tek sayar. Her ürün ayrı bir kutu ve ID ile işaretlenir (ör. 'Roll 45', 'Roll 46', 'ID: 12'); aynı ürün birden fazla sayılmaz. Sayım anlık panele yansır ve zaman damgasıyla kaydedilir."
+     ],
+     "li": [
+      "Makine çıkışında ürün sayımı (rulo/top/levha/paket)",
+      "Her ürüne ayrı ID — mükerrer sayım yok",
+      "Anlık adet ve zaman damgalı kayıt",
+      "Vardiya ve gün bazında toplam çıktı"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/makine-sayim-1.webp",
+       "Kamera ile makineden çıkan ruloların yapay zekâ ile sayılması ve ayrı ID ile takibi (Roll 45, Roll 46, Roll 47)"
+      ]
+     ]
+    },
+    {
+     "h": "Makine ve üretim performansı (KPI)",
+     "p": [
+      "Sayım verisi makine bazında performansa dönüşür: her makinenin saatlik/vardiyalık çıktısı, üretim hızı ve duruş süreleri çıkarılır. Makineler ve vardiyalar objektif olarak karşılaştırılır; hangi makinenin/vardiyanın daha verimli olduğu veriyle görünür.",
+      "Üretim düşüşleri ve duruşlar zaman damgasıyla görünür hale gelir; planlama tahmine değil veriye dayanır."
+     ],
+     "li": [
+      "Makine bazında saatlik/vardiyalık çıktı",
+      "Üretim hızı ve duruş süresi",
+      "Makine ve vardiya karşılaştırması (KPI)",
+      "Üretim düşüşlerinin erken görünmesi"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/makine-sayim-2.webp",
+       "Üretim hattında operatör ve üründe ID takibi ile makine performansının yapay zekâ ile ölçülmesi"
+      ]
+     ]
+    },
+    {
+     "h": "Çok makineli / çok hatlı kapsam",
+     "p": [
+      "Birden fazla makine ve hat aynı sistemde izlenir; her makinenin çıktısı ayrı ayrı sayılır ve karşılaştırılır. Tesisin toplam üretimi tek panelde toplanır, makineler arası denge ve darboğaz görünür olur."
+     ],
+     "li": [
+      "Her makine/hattın ayrı sayımı",
+      "Tesis geneli toplam üretim",
+      "Makineler arası denge ve darboğaz",
+      "Tek panelde üretim görünürlüğü"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "On-premise mimari ve entegrasyon",
+     "p": [
+      "Tüm analiz tesis içindeki sunucuda çalışır; görüntü dışarı çıkmaz. Sayım ve performans verisi panelde toplanır ve istenirse ERP/MES sistemine aktarılır. Görüntüde kişiler göründüğünde takip kimliksiz yapılır ve yüzler bulanıklaştırılır."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Sonuç",
+     "p": [
+      "Üretim sayımı elle tutmaktan ve gün sonu kayıttan çıkıp anlık, otomatik ve makine bazında hale geldi. Hangi makinenin ne kadar ürettiği ve performansı veriyle görünüyor; planlama ve iyileştirme ölçülebilir veriyle yapılıyor."
+     ],
+     "li": [
+      "Makine çıktısı anlık ve otomatik sayılıyor",
+      "Makine/vardiya performansı kayıt altında",
+      "Mükerrer sayım yok, ID ile takip",
+      "ERP/MES'e aktarılabilir üretim verisi"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Sistem ürünleri nasıl sayıyor?",
+     "a": "Kamera makineden çıkan ürünü (rulo, top, levha, paket) tespit eder ve her birini ayrı bir ID ile işaretleyip takip eder; böylece aynı ürün birden fazla sayılmaz. Sayım anlık panele yansır ve kaydedilir."
+    },
+    {
+     "q": "Makine performansını nasıl çıkarıyor?",
+     "a": "Sayım verisinden makine bazında saatlik/vardiyalık çıktı, üretim hızı ve duruş süreleri hesaplanır; makineler ve vardiyalar objektif olarak karşılaştırılır."
+    },
+    {
+     "q": "Yeni kamera veya sayaç gerekiyor mu?",
+     "a": "Çoğu durumda hayır. Makine çıkışını gören mevcut kameralar yeterlidir; makineye ayrı sayaç veya sensör takmak gerekmez. Görüş açısı uygunluğu ücretsiz ön analizde değerlendirilir."
+    },
+    {
+     "q": "Veri ERP/MES'e aktarılıyor mu?",
+     "a": "Evet, istenirse. Sayım ve performans verisi panelde toplanır ve REST API ile ERP/MES sistemlerine aktarılabilir. Analiz on-premise çalışır, görüntü dışarı çıkmaz."
+    }
+   ],
+   "links": []
   }
  ],
  "legal": {
@@ -17029,6 +18392,1369 @@
      "a": "Processing is performed only with authorised access and permissions to protect personal data confidentiality."
     }
    ]
+  },
+  "/vaka-calismalari/uretim-hatti-verimlilik-analizi-kamera": {
+   "path": "/en/case-studies/production-line-efficiency-monitoring-cameras",
+   "date": "2024-12-10",
+   "title": "Production line efficiency monitoring with one existing camera: machine uptime, workstations and safety",
+   "desc": "With a single overhead camera, AI monitors machine run/idle time, staff workstations and hazardous zones on a production line 24/7 — making line efficiency measurable.",
+   "intro": [
+    "On a textile production line, line efficiency long relied on the supervisor's eye and manual records: how long the machine actually ran, what each operator was doing and the risk along the crane travel path were not measured. Hype Vision connected a single existing overhead IP camera over RTSP and built a platform that detects machine status, staff workstations, material flow and safety zones from the same image — all fully on-premise."
+   ],
+   "specs": [
+    [
+     "Camera",
+     "1 existing overhead IP camera (RTSP/ONVIF)"
+    ],
+    [
+     "Architecture",
+     "On-premise · video never leaves the site"
+    ],
+    [
+     "Modules",
+     "Machine status · staff/workstation · material · hazardous area"
+    ],
+    [
+     "Sector",
+     "Textile / production line"
+    ],
+    [
+     "Output",
+     "Line efficiency, machine run/idle time"
+    ],
+    [
+     "Privacy",
+     "Anonymous, faces blurred"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "The problem: why line efficiency could not be measured",
+     "p": [
+      "Line efficiency depended on shift-time observation and forms filled in afterwards. How long the machine really ran and how long it stopped was unknown, and downtime reasons were not logged.",
+      "The same area had staff in different roles (operator, quality check, assembly) and heavy crane traffic. Who was at which station, how busy stations were and the safety risk along the crane path could not be monitored continuously."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Machine run and idle time (basis for OEE)",
+     "p": [
+      "The production machine was defined as a zone in the camera view; the model continuously detects whether it is running or stopped. Run and idle times are logged with timestamps, so planned and unplanned stops can be separated and line efficiency tracked with OEE logic."
+     ],
+     "li": [
+      "Instant running / stopped detection",
+      "Timestamped logging of run and idle time",
+      "Machine utilisation by shift and day",
+      "Review of stoppages with video evidence"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Staff and workstation analytics",
+     "p": [
+      "Staff on the floor are detected anonymously and labelled by role based on their zone (operator, quality check, assembly). Station occupancy and active vs idle time are separated, making the line's real workflow visible.",
+      "Faces are not recognised; tracking uses anonymous IDs, so the analysis is designed to be privacy-compliant."
+     ],
+     "li": [
+      "Zone/station-based staff detection",
+      "Station occupancy and active/idle split",
+      "Role-based workflow visibility (operator, quality, assembly)",
+      "Anonymous tracking — no facial recognition"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/hat-verimliligi-1.webp",
+       "AI monitoring machine status, staff workstations and safety zones on a production line from a single camera"
+      ]
+     ]
+    },
+    {
+     "h": "Material and zone tracking",
+     "p": [
+      "Raw-material rolls, fabric sheets to be processed and the work area are defined as separate zones. Whether material is in the correct zone and movement in the work area are made visible, so line efficiency can be assessed together with material flow."
+     ],
+     "li": [
+      "Zones for raw material and work material",
+      "Alert for material left in the wrong zone",
+      "Work-area occupancy and movement"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Safety: the crane travel path (hazardous area)",
+     "p": [
+      "The crane travel path was marked as a hazardous area. When staff enter it or a pedestrian conflicts with the crane path, an instant alert is raised and the event is logged with an evidence frame — so safety is checked from the very same camera used for efficiency."
+     ],
+     "li": [
+      "Instant alert on hazardous-area (crane path) violation",
+      "Event logging with evidence frames",
+      "Efficiency and safety from one camera"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "On-premise architecture and privacy",
+     "p": [
+      "All analysis runs on a server inside the plant; video never leaves the site. One camera feeds the machine, staff, material and safety modules at once. People are not identified, tracking uses anonymous IDs and faces are blurred."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Outcome",
+     "p": [
+      "Line efficiency moved from shift observation and forms to continuous, measurable monitoring. Machine stops, station occupancy and safety violations are tracked on one screen with timestamped data."
+     ],
+     "li": [
+      "Machine run/idle time measured continuously",
+      "Station and staff workflow made visible",
+      "Hazardous-area violations logged",
+      "Production and safety teams work from the same data"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Do I need a new camera for line efficiency?",
+     "a": "In most cases no. An existing overhead camera with RTSP/ONVIF is enough; machine status, staff and safety are all analysed from the same feed."
+    },
+    {
+     "q": "Is this an OEE measurement?",
+     "a": "By measuring machine run and idle time it feeds the availability component of OEE directly. Additional modules can be added per line and product for the quality and performance components."
+    },
+    {
+     "q": "Is measuring staff activity a privacy problem?",
+     "a": "The analysis is anonymous; faces are not recognised and tracking uses anonymous IDs. Technical measures (on-premise processing, retention periods, role-based access) and data-controller duties are still defined together with the plant."
+    },
+    {
+     "q": "Does video leave the plant?",
+     "a": "No. The deployment is on-premise; analysis runs on a server inside the plant and only event and metric data reach the dashboard."
+    }
+   ],
+   "links": []
+  },
+  "/vaka-calismalari/kamera-ile-5s-denetimi": {
+   "path": "/en/case-studies/ai-5s-audit-cameras",
+   "date": "2024-12-10",
+   "title": "Automated 5S audits with cameras: order, cleanliness and safety monitored continuously by AI",
+   "desc": "Existing security cameras automate 5S audits: disorganized materials, blocked passages, floor obstacles, cleanliness and forklift safety are detected 24/7 by AI.",
+   "intro": [
+    "5S is a lean-manufacturing methodology developed in Japan to improve order, cleanliness, safety and efficiency, built on five steps whose Japanese names start with 'S' (Seiri-sort, Seiton-set in order, Seiso-shine, Seiketsu-standardize, Shitsuke-sustain). In most plants 5S audits are done weekly or monthly, by hand and with a checklist, so order that slips between audits goes unseen. Hype Vision connected existing cameras in a warehouse and production area over RTSP and built a system that audits 5S rules continuously and automatically — all fully on-premise."
+   ],
+   "specs": [
+    [
+     "Cameras",
+     "Existing IP/CCTV cameras (RTSP/ONVIF)"
+    ],
+    [
+     "Architecture",
+     "On-premise · video never leaves the site"
+    ],
+    [
+     "5S steps",
+     "Seiri · Seiton · Seiso · Seiketsu · Shitsuke"
+    ],
+    [
+     "Modules",
+     "Order (Set in Order) · cleanliness (Shine) · safety (Safety)"
+    ],
+    [
+     "Area",
+     "Warehouse + production floor"
+    ],
+    [
+     "Output",
+     "Continuous 5S score and timestamped log"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Why audit 5S with cameras?",
+     "p": [
+      "A classic 5S audit is periodic: an auditor walks the floor, fills in a checklist and produces a report. But a pallet left in the aisle a few hours later, material dropped on the floor or a blocked passage stays unseen until the next audit.",
+      "AI running on existing cameras audits 5S rules continuously: it evaluates each zone against its defined rule, flags violations instantly and keeps a timestamped log. 5S stops being a single moment of inspection and becomes a continuously measured state."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Seiri & Seiton — sort and set in order",
+     "p": [
+      "Storage and material areas are marked as defined zones in the camera view. The model judges whether material is in the right zone and tidy: an organized store is 'OK', while a pallet spilling outside its zone or material blocking a passage is flagged as a violation.",
+      "Stacks blocking pedestrian and forklift aisles, pallets left in the wrong place and disorganized storage become visible instantly."
+     ],
+     "li": [
+      "Organized vs disorganized storage detection",
+      "Alert for material outside its defined area",
+      "Detection of material blocking a passage/aisle",
+      "Whether material is in the correct zone"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/5s-denetimi-1.webp",
+       "5S audit in a warehouse: AI detecting organized storage, material outside its zone and stacks blocking a passage"
+      ]
+     ]
+    },
+    {
+     "h": "Seiso — shine (cleanliness)",
+     "p": [
+      "Machine and equipment zones are monitored against a 'clean and in place' rule. Waste containers and waste areas are defined separately; a full container, overflowing waste or a dirty zone is flagged, so cleanliness is logged continuously too."
+     ],
+     "li": [
+      "Machine/equipment clean-and-in-place check",
+      "Waste container and waste-area status",
+      "Dirty/cluttered zone detection"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/5s-denetimi-2.webp",
+       "5S cleanliness audit on a production floor: machine clean and in place, aisle clear, material tidy"
+      ]
+     ]
+    },
+    {
+     "h": "Safety — clear aisles, obstacle-free floor, forklifts",
+     "p": [
+      "Aisles and passages are monitored against a 'clear' rule. An obstacle on the floor, a blocked passage (accident risk) or a pallet left outside its zone turns into an instant alert. Forklift movement is monitored from the same image, so the safety dimension of 5S is audited continuously."
+     ],
+     "li": [
+      "Aisle/passage clear check",
+      "Floor obstacle detection (trip/collision risk)",
+      "Blocked passage — accident-risk alert",
+      "Forklift movement monitoring"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/5s-denetimi-3.webp",
+       "5S safety audit: AI detecting a floor obstacle in the aisle and material outside its defined area"
+      ]
+     ]
+    },
+    {
+     "h": "Seiketsu & Shitsuke — standardize and sustain",
+     "p": [
+      "Each zone's status is logged with a timestamp, producing a continuous 5S score and trend. The audit no longer depends on a person or an audit day; standard rules are applied the same way on every shift and improvement becomes measurable.",
+      "Violations can be sent to the responsible team by dashboard, WhatsApp or email, so corrective action is taken without waiting for the next audit."
+     ],
+     "li": [
+      "Continuous, zone-based 5S score and trend",
+      "Timestamped violation log and report",
+      "Standard rules applied the same on every shift",
+      "Violation alerts (dashboard/WhatsApp/email)"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "On-premise architecture and privacy",
+     "p": [
+      "All analysis runs on a server inside the plant; video never leaves the site. 5S auditing is object- and zone-based and needs no personal identification; when staff appear, tracking is anonymous and faces can be blurred."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Outcome",
+     "p": [
+      "5S auditing moved from periodic and manual to continuous, automatic and measurable. Order, cleanliness and safety violations are tracked on one screen with timestamped evidence, and the 5S report is produced without manual effort."
+     ],
+     "li": [
+      "5S audited 24/7 automatically",
+      "Order, cleanliness and safety on one platform",
+      "Continuous score with timestamped evidence",
+      "Audit report generated automatically"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Do I need new cameras for 5S auditing?",
+     "a": "In most cases no. Existing RTSP/ONVIF cameras covering the warehouse and production area are enough; order, cleanliness and safety are assessed from the same feed."
+    },
+    {
+     "q": "Which 5S steps can cameras audit?",
+     "a": "Anything visible: Seiri/Seiton (order, defined areas, blocked passages), Seiso (cleanliness, waste, machine in place) and safety. Seiketsu/Shitsuke are supported through a continuous score and log that help standardize and sustain."
+    },
+    {
+     "q": "Will the system raise false alarms?",
+     "a": "Each zone is defined with site-specific rules and calibrated during the pilot; the goal is not to replace the auditor but to remove the blind spot between audits. Critical violations are prioritized."
+    },
+    {
+     "q": "Does video leave the plant?",
+     "a": "No. The deployment is on-premise; analysis runs on a server inside the plant and only event and score data reach the dashboard."
+    }
+   ],
+   "links": []
+  },
+  "/vaka-calismalari/el-hijyeni-uv-kamera-analizi": {
+   "path": "/en/case-studies/uv-hand-hygiene-analysis",
+   "date": "2024-12-10",
+   "title": "UV camera hand hygiene analysis: hand-washing quality measured as a percentage",
+   "desc": "In a hospital, hand hygiene is measured with a fluorescent solution under UV light and an industrial camera: AI reports how well each region was cleaned as a percentage and in cm².",
+   "intro": [
+    "Hand-washing quality is usually judged by eye and subjectively, yet areas like finger gaps, thumbs and wrists are often missed. For a hospital, Hype Vision developed a turnkey system that measures hand hygiene objectively — taking on the whole solution from the device's mechanical design to the industrial camera and UV lighting and on to the AI analysis. Staff apply a fluorescent training solution and present their hands to the device under blue-purple (UV) light; the system separates the areas the solution covers (cleaned) from those missed and reports the cleanliness rate as a percentage."
+   ],
+   "specs": [
+    [
+     "Scope",
+     "Device design + industrial camera + UV lighting + AI (turnkey)"
+    ],
+    [
+     "Method",
+     "Fluorescent solution + UV (blue-purple) imaging"
+    ],
+    [
+     "Output",
+     "Coverage percentage and cm² per hand/region"
+    ],
+    [
+     "Regions",
+     "Palm, fingers, back of hand, wrist"
+    ],
+    [
+     "Use",
+     "Hospital · food · pharma — hygiene training and auditing"
+    ],
+    [
+     "Architecture",
+     "On-premise · inside the facility"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "The problem: why hand hygiene could not be measured",
+     "p": [
+      "In hand-washing training, quality is mostly judged by eye and varies from person to person. Critical areas such as fingertips, finger gaps, thumbs and wrists are often missed, but that gap is not visible to the naked eye.",
+      "The hospital wanted to move hand-hygiene quality from subjective observation to an objective, repeatable and logged measurement."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "The solution: UV imaging + AI (end-to-end Hype Vision)",
+     "p": [
+      "Hype Vision developed the device's mechanical design, the industrial camera inside it, the UV (blue-purple) lighting and the AI that processes the image — together. Staff apply the fluorescent solution to their hands; under UV light the areas with solution glow. The model separates the glowing (solution applied = cleaned) areas from the dark (missed) areas pixel by pixel.",
+      "The result appears in seconds: coverage percentage for the left hand, right hand and total, the missed areas and a separate percentage for each region (palm, fingers, back of hand, wrist)."
+     ],
+     "li": [
+      "Device + camera + UV lighting + AI from one source (Hype Vision)",
+      "Pixel-level split of applied vs missed area",
+      "Coverage percentage for left/right hand and total",
+      "Separate score for palm, fingers, back of hand, wrist"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/el-hijyeni-1.webp",
+       "Hand hygiene analysis under UV light: AI measuring the areas the solution covered (cleaned) and those missed as a percentage"
+      ]
+     ]
+    },
+    {
+     "h": "Measured output — an example scan",
+     "p": [
+      "Every scan produces an objective report. In an example measurement the system reports the overall cleanliness rate, total hand area (cm²), covered and missed area (cm²) and per-region percentages — so it is clear which area needs washing again.",
+      "Values vary by scan and person; the system computes the percentage and cm² directly from the image rather than estimating."
+     ],
+     "li": [
+      "Overall and per-hand coverage percentage",
+      "Covered / missed area (cm²)",
+      "Per-region score (e.g. palm > finger gaps)",
+      "Missed areas marked on the image"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/el-hijyeni-2.webp",
+       "Hand hygiene scan dashboard: overall cleanliness rate, covered/missed area (cm²) and per-region percentages"
+      ]
+     ]
+    },
+    {
+     "h": "High-volume scanning and analytics",
+     "p": [
+      "The system is designed for fast scanning: a person presents their hands and the result appears in seconds. At this hospital around 120 staff are screened per shift; each scan takes seconds and is logged with a timestamp.",
+      "Over time a trend builds by person, unit and region: which team misses which area most often becomes visible, and training is directed accordingly. (Daily scan capacity scales with the facility.)"
+     ],
+     "li": [
+      "Result in seconds per scan",
+      "~120 staff screened per shift",
+      "Timestamped log and per-person/unit/region trend",
+      "Training needs identified from data"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Privacy and deployment",
+     "p": [
+      "Analysis runs on-premise; video does not leave the facility. The system analyses hands; any identity mapping is set up at the facility's discretion and with data-protection duties defined together."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Outcome",
+     "p": [
+      "Hand-hygiene quality moved from subjective observation to an objective, repeatable measurement. How well each region was cleaned is logged as a percentage and in cm², and training is directed by data and personalised."
+     ],
+     "li": [
+      "Objective, repeatable hand-hygiene measurement",
+      "Per-region gaps made visible",
+      "End-to-end Hype Vision solution, from device to analysis",
+      "Continuous improvement with timestamped logs and trends"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "How does the system measure hand-washing?",
+     "a": "A fluorescent training solution is applied to the hands; under UV (blue-purple) light the areas with solution glow. An industrial camera captures the image and AI separates the glowing (cleaned) from the dark (missed) areas to compute the coverage percentage."
+    },
+    {
+     "q": "Did Hype Vision build the device too?",
+     "a": "Yes. The device's mechanical design, the industrial camera inside it, the UV lighting and the AI analysis were all developed end-to-end by Hype Vision."
+    },
+    {
+     "q": "How long does a result take?",
+     "a": "A person presents their hands and the coverage percentage appears in seconds, so many people can be screened quickly at shift start."
+    },
+    {
+     "q": "Where is it used?",
+     "a": "Anywhere hand hygiene is critical: hospitals, food production and pharma/cosmetics plants — for both training and periodic auditing."
+    }
+   ],
+   "links": []
+  },
+  "/vaka-calismalari/mobilya-fabrikasi-45-kamera-kkd-yangin-duman": {
+   "path": "/en/case-studies/furniture-factory-45-cameras-ppe-fire-smoke",
+   "date": "2025-09-30",
+   "title": "PPE, fire and smoke detection on 45 cameras at a furniture factory",
+   "desc": "At a furniture and mattress factory, 45 existing cameras were connected to AI: hard-hat and vest (PPE) compliance plus fire and smoke are detected automatically, 24/7, across the site.",
+   "intro": [
+    "At a furniture and mattress factory full of foam, fabric and wood, both workplace safety and fire risk were high, yet inspection relied on a few people's eyes and periodic rounds. Hype Vision connected the plant's 45 existing cameras to a single platform over RTSP and built a system that detects hard-hat/vest (PPE) compliance, fire and smoke from those same cameras 24/7 — all fully on-premise."
+   ],
+   "specs": [
+    [
+     "Cameras",
+     "45 existing IP cameras (RTSP/ONVIF)"
+    ],
+    [
+     "Architecture",
+     "On-premise · video never leaves the site"
+    ],
+    [
+     "PPE",
+     "Hard-hat and hi-vis vest compliance, per person"
+    ],
+    [
+     "Fire/Smoke",
+     "Early detection across the site"
+    ],
+    [
+     "Sector",
+     "Furniture and mattress manufacturing"
+    ],
+    [
+     "Alerts",
+     "Dashboard · WhatsApp · timestamped log"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "The problem: high fire load + safety across a large area",
+     "p": [
+      "In furniture and mattress production, foam, fabric, glue and wood dust create a high fire load; a small spark or smouldering can grow fast. At the same time, hard-hat and vest use by dozens of staff across a large production and storage area could not be monitored continuously.",
+      "The plant had 45 existing CCTV cameras but used them only for recording; no one could watch 45 screens at once."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "PPE (hard-hat and vest) compliance on 45 cameras",
+     "p": [
+      "People in each camera are detected and their hard-hat and hi-vis vest use is checked per person. Compliant staff are marked green, those without a helmet or vest red; a violation raises an alert with a timestamped evidence frame.",
+      "The dashboard shows live compliance by camera and area (e.g. helmet compliance, vest compliance) and the number of people and forklifts detected."
+     ],
+     "li": [
+      "Per-person hard-hat and vest checking",
+      "Live PPE compliance by camera/area",
+      "Timestamped evidence-frame alert on violation",
+      "Count of people and forklifts detected"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/mobilya-kkd-1.webp",
+       "PPE detection on 45 cameras at a furniture factory: AI instantly flagging staff without a helmet or vest"
+      ]
+     ]
+    },
+    {
+     "h": "Fire and smoke detection across the site",
+     "p": [
+      "The same cameras are used for fire and smoke detection. The model looks for flame and smoke signatures in the image and, by detecting them early, raises an instant alert via dashboard and WhatsApp — so in high-fire-load areas smoke is noticed before it grows.",
+      "Fire/smoke detection complements heat detectors: it catches smoke at its source, within the camera's field of view."
+     ],
+     "li": [
+      "Early flame and smoke detection from the image",
+      "Instant alert via dashboard and WhatsApp",
+      "Prioritisation of high-fire-load areas",
+      "Visual evidence complementing existing detectors"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/mobilya-kkd-2.webp",
+       "PPE compliance dashboard at a 45-camera furniture factory: helmet and vest compliance, people and forklift detection"
+      ]
+     ]
+    },
+    {
+     "h": "45 cameras, one platform, on-premise",
+     "p": [
+      "All 45 cameras are brought into one platform and each feeds both the PPE and the fire/smoke module at once. All analysis runs on a server inside the plant; video never leaves the site. People are not identified, tracking is anonymous and faces can be blurred."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Outcome",
+     "p": [
+      "All 45 cameras are now not just recording but an active safety and fire-protection layer. PPE violations and fire/smoke risk are tracked on one screen with timestamped evidence, and response can start within seconds."
+     ],
+     "li": [
+      "45 cameras on one on-premise platform",
+      "Hard-hat/vest compliance logged 24/7",
+      "Early fire and smoke warning",
+      "Safety teams work from the same data"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Do 45 cameras need new hardware?",
+     "a": "The cameras are existing and connect over RTSP/ONVIF. An edge server is placed inside the plant for analysis, sized during discovery by camera count and modules. One camera feeds both the PPE and the fire/smoke module."
+    },
+    {
+     "q": "Does fire/smoke detection replace detectors?",
+     "a": "No, it complements them. The camera catches smoke and flame early within its field of view and is used alongside existing fire-detection systems."
+    },
+    {
+     "q": "Does PPE detection work at night or in low light?",
+     "a": "It works as far as the camera can provide an image. In low light, lighting or a suitable camera is recommended; suitability is assessed in the free pre-assessment."
+    },
+    {
+     "q": "Does video leave the plant?",
+     "a": "No. The deployment is on-premise; analysis runs on a server inside the plant and only event and metric data reach the dashboard."
+    }
+   ],
+   "links": []
+  },
+  "/vaka-calismalari/akaryakit-istasyonu-servis-analizi": {
+   "path": "/en/case-studies/gas-station-forecourt-service-analytics",
+   "date": "2024-10-03",
+   "title": "Gas station forecourt service analytics with cameras: first contact, service time, window cleaning and hood checks",
+   "desc": "At a fuel station, attendant performance and customer service are measured with AI: time to first contact, service time, whether the windscreen was cleaned, the hood was opened and vehicle wait time.",
+   "intro": [
+    "At fuel stations, customer satisfaction depends on the service standard: how quickly an attendant reaches a vehicle, whether the windscreen is cleaned, whether the hood/oil is checked and how long the customer waits. Until now all of this relied on the manager's eye. Hype Vision connected the forecourt cameras to AI and combined pose estimation with vehicle detection to measure the service at each pump objectively — all fully on-premise."
+   ],
+   "specs": [
+    [
+     "Cameras",
+     "Existing pump/forecourt cameras (RTSP/ONVIF)"
+    ],
+    [
+     "Method",
+     "Pose estimation + vehicle detection"
+    ],
+    [
+     "Measured",
+     "First contact · service time · window cleaning · hood opening · wait"
+    ],
+    [
+     "Scope",
+     "Service and traffic per pump"
+    ],
+    [
+     "Sector",
+     "Fuel station / forecourt"
+    ],
+    [
+     "Architecture",
+     "On-premise · anonymous"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "The problem: the service standard could not be measured",
+     "p": [
+      "At a station, service quality depends on how fast an attendant greets the customer, extra services like cleaning the windscreen and checking the hood/oil, and how long the customer waits. But whether these steps actually happened and how long they took could not be measured.",
+      "At busy times, which pump filled up, how long the customer waited and when the attendant made first contact were only guessed."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "First contact and wait time",
+     "p": [
+      "The moment a vehicle pulls up to a pump is detected; when an attendant first approaches it, the 'first contact' time is measured. The gap objectively shows how long the customer waited. Average first-contact and wait times are produced per pump.",
+      "Situations like 'the customer waited and no one came' become visible with data."
+     ],
+     "li": [
+      "Detection of a vehicle pulling up",
+      "Time to first contact (how fast the attendant arrived)",
+      "Customer wait time",
+      "Per-pump averages and peak-hour analysis"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/akaryakit-1.webp",
+       "Pose estimation measuring attendant–customer interaction and service steps at a fuel station"
+      ]
+     ]
+    },
+    {
+     "h": "Service steps: window cleaning, hood opening, service time",
+     "p": [
+      "Pose estimation distinguishes the attendant's actions: steps such as cleaning the windscreen, opening the hood and fuelling are recognised. This makes it possible to count how many vehicles had their windscreen cleaned, how many had the hood opened, and to measure total service time.",
+      "It shows whether the service standard is actually applied and which attendant/pump delivers better service."
+     ],
+     "li": [
+      "Window-cleaning action detection (how many vehicles)",
+      "Hood/oil-check action detection",
+      "Total service time",
+      "Service performance per attendant and pump"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/akaryakit-2.webp",
+       "Pose estimation detecting fuelling and extra service steps at the pump"
+      ]
+     ]
+    },
+    {
+     "h": "Vehicle and pump traffic",
+     "p": [
+      "Vehicles (cars, trucks, vans) are detected and counted per pump. Which pump gets busy and when, whether a queue forms and overall forecourt occupancy become visible, so shift and staffing can be planned with data."
+     ],
+     "li": [
+      "Per-pump vehicle count and type (car/truck)",
+      "Peak-hour and occupancy analysis",
+      "Queue/wait formation detection",
+      "Data for shift and staffing planning"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/akaryakit-3.webp",
+       "Monitoring simultaneous service at several pumps and vehicle traffic at the station at night"
+      ]
+     ]
+    },
+    {
+     "h": "On-premise architecture and privacy",
+     "p": [
+      "All analysis runs on a server inside the station; video does not leave the site. The analysis is motion- and vehicle-based; people are not identified, tracking is anonymous and faces can be blurred. Plate reading is added only on request and with data-protection duties defined."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Outcome",
+     "p": [
+      "The station's service standard is now measurable: first contact, service time, window-cleaning and hood-opening rates and wait times are tracked per pump with data. The manager runs service quality on data, not observation."
+     ],
+     "li": [
+      "First contact and wait time measured",
+      "Window-cleaning / hood-opening rate counted",
+      "Service time and attendant performance visible",
+      "Shift and traffic planning with data"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "How does the system know a windscreen was cleaned or a hood opened?",
+     "a": "Pose estimation models the attendant's body and arm movements to distinguish steps like cleaning the windscreen, opening the hood and fuelling; combined with vehicle detection it infers which service was given to which vehicle."
+    },
+    {
+     "q": "Do I need new cameras?",
+     "a": "In most cases no. Existing RTSP/ONVIF cameras that see the pumps are enough; field-of-view suitability is assessed in the free pre-assessment."
+    },
+    {
+     "q": "Are plates read — is that a privacy problem?",
+     "a": "The default analysis is anonymous; plate reading is added only on request. Technical measures and data-controller duties are defined together with the station."
+    },
+    {
+     "q": "Does video leave the station?",
+     "a": "No. The deployment is on-premise; analysis runs on a server inside the station and only event and metric data reach the dashboard."
+    }
+   ],
+   "links": []
+  },
+  "/vaka-calismalari/market-alisveris-sepeti-cikis-engelleme": {
+   "path": "/en/case-studies/supermarket-shopping-cart-loss-prevention",
+   "date": "2025-01-02",
+   "title": "Stopping shopping carts from leaving the car park: AI cart loss prevention for supermarkets",
+   "desc": "In a supermarket car park, shopping carts are tracked with existing cameras: when a cart nears the exit/restricted area AI raises an instant alert, preventing cart loss.",
+   "intro": [
+    "In supermarket and mall car parks, shopping carts being pushed outside and not returned (cart loss) is both a cost and an order problem; every lost cart has to be replaced, and carts scattered around create traffic and safety risks. Watching dozens of cameras at once is impossible. Hype Vision connected the existing car-park cameras to AI: the system detects shopping carts, tracks them across cameras and raises an instant alert the moment a cart approaches or crosses the exit (restricted area) — all fully on-premise."
+   ],
+   "specs": [
+    [
+     "Cameras",
+     "Existing car-park/entrance cameras (RTSP/ONVIF)"
+    ],
+    [
+     "Method",
+     "Object detection + zone (restricted area) + cross-camera tracking"
+    ],
+    [
+     "Detects",
+     "Shopping cart · exit attempt"
+    ],
+    [
+     "Alerts",
+     "Dashboard · PA announcement · security · barrier/gate"
+    ],
+    [
+     "Sector",
+     "Supermarket · mall · retail"
+    ],
+    [
+     "Architecture",
+     "On-premise · anonymous"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "The problem: cart loss and a cluttered car park",
+     "p": [
+      "When shopping carts are taken out of the car park they often never come back. Every lost cart is a direct cost; carts scattered across the lot and nearby roads create visual clutter and a risk for vehicles and pedestrians.",
+      "Security cannot watch dozens of car-park cameras at once and spot a cart heading for the exit; the loss is only noticed after the cart is gone."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "The solution: cart detection + restricted area + instant alert",
+     "p": [
+      "The system detects shopping carts in the image and tracks their positions. The exit gate and car-park boundary are defined as a 'restricted area'; when a cart approaches or tries to cross it, a 'cart exit attempt' alert is raised and logged with an evidence frame.",
+      "The alert can be sent to the dashboard, a PA system, the security team and, if wanted, an automatic barrier/gate — so staff act before the cart leaves the lot."
+     ],
+     "li": [
+      "Instant shopping-cart detection",
+      "Exit/restricted-area definition and violation alert",
+      "'Cart exit attempt' alert with evidence frame",
+      "Dashboard · PA · security · barrier integration"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/market-sepet-1.webp",
+       "AI detecting a shopping-cart exit attempt in a supermarket car park: cross-camera tracking and restricted-area alert"
+      ]
+     ]
+    },
+    {
+     "h": "Works with existing security cameras",
+     "p": [
+      "No special hardware is needed; the existing CCTV/IP cameras in the car park are used. Cart detection runs on the same image and a standard camera is enough, so the store gains a cart-loss-prevention layer without changing its camera infrastructure."
+     ],
+     "li": [
+      "Works with existing IP/CCTV cameras",
+      "No special sensor or tag (RFID) required",
+      "Cart detection and tracking from a single feed"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/market-sepet-2.webp",
+       "AI detecting a shopping cart on an existing security camera in a supermarket car park"
+      ]
+     ]
+    },
+    {
+     "h": "Cross-camera tracking",
+     "p": [
+      "The cart is tracked across several cameras — main entrance, exit gate and side view. A cart leaving one camera is picked up by the next, so the whole car park is covered by one system and the cart's direction (in/out) is understood."
+     ],
+     "li": [
+      "Main entrance, exit gate and side-view cameras working together",
+      "Cart tracked across cameras",
+      "Whole car park covered by one system"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "On-premise architecture and privacy",
+     "p": [
+      "All analysis runs on a server inside the facility; video does not leave the site. The system is object (cart) based and needs no personal identification; when people appear, tracking is anonymous and faces can be blurred."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Outcome",
+     "p": [
+      "Carts are detected before they leave the car park and security is alerted within seconds. Cart loss drops and the car park stays orderly and safer — all with existing cameras."
+     ],
+     "li": [
+      "Cart exit stopped at the car-park boundary",
+      "Instant, evidence-framed alert to security",
+      "Uses existing cameras, no extra hardware",
+      "Less cart loss and clutter"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Do carts need an RFID tag?",
+     "a": "No. The system detects the shopping cart from the image with AI; no sensor, tag or wheel lock is needed on the cart. Existing cameras are enough."
+    },
+    {
+     "q": "Can a cart really be stopped at the exit?",
+     "a": "The system raises an alert the moment a cart nears the exit boundary; this can be connected to a PA announcement, the security team and, if wanted, an automatic barrier/gate, so staff act before the cart leaves the lot."
+    },
+    {
+     "q": "Do I need new cameras?",
+     "a": "In most cases no. Existing CCTV/IP cameras that see the car park and exit are used; field-of-view suitability is assessed in the free pre-assessment."
+    },
+    {
+     "q": "Does video leave the site?",
+     "a": "No. The deployment is on-premise; analysis runs on a server inside the facility and only event data reaches the dashboard."
+    }
+   ],
+   "links": []
+  },
+  "/vaka-calismalari/tasinabilir-kamera-kkd-hat-verimliligi": {
+   "path": "/en/case-studies/portable-ai-camera-ppe-line-efficiency",
+   "date": "2025-01-02",
+   "title": "Portable AI camera: hairnet, mask, glove (PPE) and line efficiency in one setup",
+   "desc": "An install-free, portable AI camera measures hairnet-mask-glove (PPE) compliance, line active/idle times, production counts and KPIs on a packing line in minutes.",
+   "intro": [
+    "On food, cosmetics and pharma packing lines, hygiene PPE such as hairnets, masks and gloves is mandatory, and line efficiency (active/idle times, counts) is also worth measuring. But permanently installing a camera on every line is not always possible or practical. Hype Vision built a portable AI camera for exactly this: a standalone unit on a tripod with adjustable angle and height, carried in a hard case and set up on a line in minutes. In a single setup it measures both hygiene PPE compliance and line efficiency, and it can be moved from line to line and reused."
+   ],
+   "specs": [
+    [
+     "Device",
+     "Portable unit · tripod · adjustable angle and height · hard case"
+    ],
+    [
+     "Setup",
+     "Install-free (plug-and-play), ready in minutes, moves between lines"
+    ],
+    [
+     "PPE",
+     "Hairnet, mask, gloves — per worker"
+    ],
+    [
+     "Efficiency",
+     "Line active/idle time · production count · KPIs"
+    ],
+    [
+     "Sector",
+     "Food · cosmetics · pharma packing"
+    ],
+    [
+     "Architecture",
+     "On-premise / edge · anonymous, faces blurred"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "The problem: hygiene PPE + line efficiency, without a permanent install",
+     "p": [
+      "On packing lines, hairnet, mask and glove use is mandatory for hygiene and must be checked continuously. At the same time, how long the line runs, how long it is idle and how much it produces are worth measuring.",
+      "But installing cameras permanently on several lines is costly and slow; sometimes you only need to analyse one line for a short time or measure different lines in turn."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Portable camera: install-free, ready in minutes",
+     "p": [
+      "Hype Vision's portable unit comes on a tripod; its angle and height are adjusted to the line, with no fixed mounting. It travels in a hard case, is set up on a line in minutes and analysis starts immediately. When done, it is packed up and moved to another line.",
+      "So any line can be analysed at any time without a permanent infrastructure investment, and several lines can be measured in turn with a single unit."
+     ],
+     "li": [
+      "Adjustable angle and height on a tripod",
+      "Install-free (plug-and-play), ready in minutes",
+      "Portable hard-case design, moves between lines",
+      "No fixed mounting or infrastructure investment"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/tasinabilir-kamera-2.webp",
+       "Portable AI camera on a tripod with adjustable angle and height and a hard carry case — install-free PPE and line-efficiency analysis"
+      ]
+     ]
+    },
+    {
+     "h": "Hygiene PPE: hairnet, mask, gloves",
+     "p": [
+      "Every worker on the line is detected; hairnet, mask and glove use is checked per person. A compliant worker is marked 'PPE OK', one missing an item 'PPE INCOMPLETE', and a violation is logged with a timestamped evidence frame.",
+      "Faces are blurred; tracking is anonymous, so the analysis is designed to be privacy-compliant."
+     ],
+     "li": [
+      "Per-worker hairnet, mask and glove check",
+      "Instant 'PPE OK' / 'PPE INCOMPLETE' marking",
+      "Timestamped evidence-frame log on violation",
+      "Face blurring — anonymous analysis"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/tasinabilir-kamera-1.webp",
+       "AI detecting hairnet, mask and glove (PPE) compliance per worker on a packing line: PPE OK and PPE INCOMPLETE"
+      ]
+     ]
+    },
+    {
+     "h": "Line efficiency: active/idle times",
+     "p": [
+      "The same camera also measures line efficiency: the time the line is active and the time it is idle (stopped) are separated. Idle moments are logged with timestamps, so bottlenecks and stop reasons become visible."
+     ],
+     "li": [
+      "Separation of line active and idle (stopped) time",
+      "Timestamped logging of idle moments",
+      "Bottleneck and stoppage visibility",
+      "Line utilisation by shift and day"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Line counting and performance KPIs",
+     "p": [
+      "Products/packs moving on the belt are counted; production quantity, speed and performance KPIs are produced per line. Hygiene compliance, idle time and production count land on one dashboard, so lines and shifts can be compared objectively."
+     ],
+     "li": [
+      "Production/pack counting (per line)",
+      "Speed and performance KPIs",
+      "Line and shift comparison",
+      "PPE + efficiency + counting on one dashboard"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Outcome",
+     "p": [
+      "With a single portable unit and no permanent installation, hygiene PPE compliance, line efficiency and production counts were all measured on a line in minutes. The unit is moved between lines, so the whole plant can be analysed in turn."
+     ],
+     "li": [
+      "Install-free analysis in minutes",
+      "Hairnet/mask/glove compliance logged",
+      "Line active/idle time and production count",
+      "Portable between lines — whole plant with one unit"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Does the portable camera need a permanent install?",
+     "a": "No. The unit comes on a tripod, its angle and height are adjusted, cables are connected and analysis starts in minutes. No fixed mounting or infrastructure investment is needed; when done it is packed up and moved to another line."
+    },
+    {
+     "q": "Which PPE does it detect?",
+     "a": "In this setup, hairnet, mask and gloves are checked per worker for food/hygiene. Other PPE such as hard hats and vests can be added as needed."
+    },
+    {
+     "q": "How does it measure line efficiency?",
+     "a": "The same camera separates the line's active and idle (stopped) times and counts products/packs on the belt, producing per-line production quantity and performance KPIs."
+    },
+    {
+     "q": "How are data and privacy handled?",
+     "a": "Analysis runs on-premise/edge; faces are blurred and tracking is anonymous. Technical measures and data-controller duties are defined together with the facility."
+    }
+   ],
+   "links": []
+  },
+  "/vaka-calismalari/tekstil-kumas-kalite-kontrol-hata-tespiti": {
+   "path": "/en/case-studies/textile-fabric-quality-inspection-defect-detection",
+   "date": "2025-01-02",
+   "title": "Textile fabric quality control: hole, tear and stain detection on patterned and plain fabric",
+   "desc": "An AI camera on the fabric inspection machine detects holes, tears and stains on patterned and plain fabric in real time, logging 100% of greige fabric quality control.",
+   "intro": [
+    "In textiles, fabric quality control (greige/inspection) usually relies on the inspector's eye; as metres of fabric pass quickly, small holes, tears and stains are inevitably missed. On patterned fabric (checks, stripes) the defect hides inside the pattern. Hype Vision installed an AI camera on the fabric inspection machine: it detects defects like holes, tears and stains on the moving fabric in real time and marks each one with its location and a confidence score — even on patterned fabric."
+   ],
+   "specs": [
+    [
+     "Setup",
+     "Camera on the fabric inspection machine (can be portable)"
+    ],
+    [
+     "Fabric",
+     "Patterned and plain (check, stripe, solid)"
+    ],
+    [
+     "Detects",
+     "Hole · tear · stain · weave defect"
+    ],
+    [
+     "Output",
+     "Defect type, location, size and confidence score"
+    ],
+    [
+     "Sector",
+     "Textile · weaving · apparel"
+    ],
+    [
+     "Architecture",
+     "On-premise · logged per metre/roll"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "The problem: visual fabric inspection misses defects",
+     "p": [
+      "On the inspection table, metres of fabric pass quickly; an inspector cannot see the full width and every detail at once. Small holes, tears and stains slip through and are only found at cutting or sewing — which means waste and lost time.",
+      "On patterned (check/stripe) fabric the problem is worse: a busy pattern makes defects hard to spot by eye."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "AI defect detection: holes, tears, stains",
+     "p": [
+      "The camera on the inspection machine continuously analyses the moving fabric. The model detects defects like holes, tears, stains and weave faults; it marks each with a box and gives its type, location and confidence score (e.g. 'Hole 0.86').",
+      "A defect is flagged to the operator instantly and logged per metre/roll, so it is recorded which roll had a defect and where."
+     ],
+     "li": [
+      "Hole, tear, stain and weave-defect detection",
+      "Defect type, location and confidence score",
+      "Timestamped logging per metre/roll",
+      "Instant operator alert"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/tekstil-kalite-1.webp",
+       "AI detecting a hole in textile fabric quality control: defect box and confidence score (Hole 0.86)"
+      ]
+     ]
+    },
+    {
+     "h": "Works on patterned and plain fabric",
+     "p": [
+      "The system works on both plain and patterned (check, stripe) fabric. The hardest case is patterned fabric: busy lines and squares hide the defect. The model is built to distinguish the defect from the pattern, so stains and holes are caught even on a checked fabric."
+     ],
+     "li": [
+      "Support for plain and patterned (check/stripe) fabric",
+      "Defect distinguished from the pattern",
+      "Adaptable to different colours and textures",
+      "Calibration for new fabric types"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/tekstil-kalite-2.webp",
+       "AI detecting a stain on patterned (check) fabric: catching a defect that hides inside the pattern (Stain)"
+      ]
+     ]
+    },
+    {
+     "h": "Setup: on the inspection machine or portable",
+     "p": [
+      "The camera is positioned over the existing fabric inspection machine; with steady lighting and the right angle it sees the moving fabric clearly. It can be integrated into the inspection line, or kept portable to try on different lines."
+     ],
+     "li": [
+      "Integration with the existing inspection machine",
+      "Clear image with steady lighting",
+      "Portable option between lines",
+      "Analysis matched to production speed"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/tekstil-kalite-3.webp",
+       "Real-time quality control of moving fabric with an AI camera installed on the fabric inspection machine"
+      ]
+     ]
+    },
+    {
+     "h": "On-premise architecture and integration",
+     "p": [
+      "All analysis runs on a server/edge device inside the plant; video does not leave the site. Defects are collected on the dashboard, reported per metre/roll and, if wanted, pushed to an ERP/quality system; defect locations can also be matched with physical marking systems."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Outcome",
+     "p": [
+      "Fabric quality control moved from depending on the inspector's attention to continuous and logged. Holes, tears and stains are caught early; defective fabric is pulled before cutting/sewing, reducing waste and customer returns."
+     ],
+     "li": [
+      "100% continuous control of moving fabric",
+      "Early detection of holes, tears, stains",
+      "Defects caught even on patterned fabric",
+      "Logging and reporting per metre/roll"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Does it work on patterned (check) fabric?",
+     "a": "Yes. The system is designed for both plain and patterned fabric; the model distinguishes the defect from the pattern, so holes and stains are caught even on busy check or stripe fabric. A short calibration is done for new fabric types."
+    },
+    {
+     "q": "Which defects does it detect?",
+     "a": "Visible defects such as holes, tears, stains and weave/knit faults. Each defect is marked with its type, location, size and confidence score and logged per metre/roll."
+    },
+    {
+     "q": "Do I need a new machine?",
+     "a": "No. The camera is positioned on the existing fabric inspection machine and works with steady lighting and the right angle. A portable setup is also possible to try on different lines."
+    },
+    {
+     "q": "How is the data used?",
+     "a": "Analysis runs on-premise/edge; video does not leave the site. Defects are collected on the dashboard and in reports, and can be pushed to an ERP/quality system if wanted."
+    }
+   ],
+   "links": []
+  },
+  "/vaka-calismalari/makine-uretim-sayimi-performans": {
+   "path": "/en/case-studies/machine-output-counting-production-performance",
+   "date": "2024-09-23",
+   "title": "Counting machine output and production performance: per-machine output and efficiency with cameras",
+   "desc": "Cameras automatically count products coming off machines (rolls, bolts, sheets); per-machine production quantity, speed and performance are logged with AI.",
+   "intro": [
+    "In manufacturing the most basic question is simple, but the answer usually comes at the end of the day from manual records: which machine produced how much? Hype Vision connected the existing cameras on production and packing lines to AI: it counts the products coming off machines (rolls, bolts, sheets, etc.) one by one, tracks each, and derives per-machine production performance in real time — all fully on-premise."
+   ],
+   "specs": [
+    [
+     "Cameras",
+     "Existing line/machine cameras (RTSP/ONVIF)"
+    ],
+    [
+     "Counting",
+     "Products off the machine (roll, bolt, sheet, pack)"
+    ],
+    [
+     "Tracking",
+     "Each product with its own ID; no double counting"
+    ],
+    [
+     "Output",
+     "Per-machine quantity, speed and performance (KPI)"
+    ],
+    [
+     "Sector",
+     "Textile, nonwoven, paper, board, general manufacturing"
+    ],
+    [
+     "Architecture",
+     "On-premise · can push to ERP/MES"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "The problem: which machine produced how much?",
+     "p": [
+      "Production quantity usually depends on operator-kept records or machine counters; these can be incomplete, delayed or inconsistent. The real performance gap between machines and output per shift is often not clear.",
+      "Manual counting takes labour and contains errors; real-time production tracking and machine comparison are not possible."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Counting products off the machine",
+     "p": [
+      "The camera sees the products coming off the machine (roll, bolt, sheet, pack) and counts them one by one. Each product is marked with its own box and ID (e.g. 'Roll 45', 'Roll 46', 'ID: 12'); the same product is not counted twice. The count appears on the dashboard in real time and is logged with a timestamp."
+     ],
+     "li": [
+      "Product counting at machine output (roll/bolt/sheet/pack)",
+      "Separate ID per product — no double counting",
+      "Real-time quantity and timestamped log",
+      "Total output per shift and day"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/makine-sayim-1.webp",
+       "AI counting rolls coming off a machine and tracking each with its own ID (Roll 45, Roll 46, Roll 47)"
+      ]
+     ]
+    },
+    {
+     "h": "Machine and production performance (KPI)",
+     "p": [
+      "Count data turns into per-machine performance: each machine's hourly/shift output, production speed and downtime are derived. Machines and shifts are compared objectively; which machine/shift is more efficient becomes visible with data.",
+      "Production drops and stoppages become visible with timestamps; planning is based on data, not guesswork."
+     ],
+     "li": [
+      "Hourly/shift output per machine",
+      "Production speed and downtime",
+      "Machine and shift comparison (KPI)",
+      "Early visibility of production drops"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": [
+      [
+       "/img/vaka/makine-sayim-2.webp",
+       "Measuring machine performance with AI using operator and product ID tracking on a production line"
+      ]
+     ]
+    },
+    {
+     "h": "Multi-machine / multi-line coverage",
+     "p": [
+      "Several machines and lines are monitored in one system; each machine's output is counted and compared separately. The plant's total production lands on one dashboard, making balance and bottlenecks between machines visible."
+     ],
+     "li": [
+      "Separate counting per machine/line",
+      "Plant-wide total production",
+      "Balance and bottlenecks between machines",
+      "Production visibility on one dashboard"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "On-premise architecture and integration",
+     "p": [
+      "All analysis runs on a server inside the plant; video does not leave the site. Count and performance data are collected on the dashboard and, if wanted, pushed to an ERP/MES system. When people appear, tracking is anonymous and faces are blurred."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    },
+    {
+     "h": "Outcome",
+     "p": [
+      "Production counting moved from manual, end-of-day records to real-time, automatic and per-machine. How much each machine produced and its performance are visible with data; planning and improvement use measurable data."
+     ],
+     "li": [
+      "Machine output counted in real time, automatically",
+      "Machine/shift performance logged",
+      "No double counting, tracked by ID",
+      "Production data ready for ERP/MES"
+     ],
+     "cards": [],
+     "rows": [],
+     "imgs": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "How does the system count products?",
+     "a": "The camera detects the product coming off the machine (roll, bolt, sheet, pack) and marks and tracks each with its own ID, so the same product is not counted twice. The count appears on the dashboard in real time and is logged."
+    },
+    {
+     "q": "How does it derive machine performance?",
+     "a": "From the count data it calculates per-machine hourly/shift output, production speed and downtime; machines and shifts are compared objectively."
+    },
+    {
+     "q": "Do I need new cameras or counters?",
+     "a": "In most cases no. Existing cameras that see the machine output are enough; no separate counter or sensor is needed on the machine. Field-of-view suitability is assessed in the free pre-assessment."
+    },
+    {
+     "q": "Is the data pushed to ERP/MES?",
+     "a": "Yes, if wanted. Count and performance data are collected on the dashboard and can be pushed to ERP/MES via REST API. Analysis runs on-premise and video does not leave the site."
+    }
+   ],
+   "links": []
   }
  },
  "gen": {
