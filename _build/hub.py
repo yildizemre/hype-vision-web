@@ -182,7 +182,8 @@ r.innerHTML='<table>'+rows.map(x=>'<tr><td>'+x[0]+'</td><td>'+x[1]+'</td></tr>')
     write("/benchmark", shell(title, desc, body, "/benchmark", "tr", crumbs=[("Ana sayfa", "/"), ("Teknik merkez", "/teknik-merkez"), ("GPU kapasite aracı", "/benchmark")]))
 
     # ================= İNGİLİZCE TEKNİK MERKEZ =================
-    GEN_EN = list(c["D"].get("gen_en", {}).values())
+    # gen_en: TR'den çevrilen EN sayfalar · gen_us: yalnızca ABD pazarı için yazılmış EN sayfalar
+    GEN_EN = list(c["D"].get("gen_en", {}).values()) + list(c["D"].get("gen_us", {}).values())
     en_paths = []
     def page_en(p):
         kind = p["type"]; path = p["path"]; en_paths.append(path)

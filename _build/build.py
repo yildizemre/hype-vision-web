@@ -68,6 +68,7 @@ def en_page(tr):
     pg = D.get("en", {}).get(tr)
     return pg if pg else None
 EN_LOCAL = {"/en"} | {EN_OF[t] for t in TR_LOCAL if t in EN_OF and (en_page(t) or t in I18N.FIXED)}
+EN_ONLY = set()  # yalnızca ABD/EN için yazılmış sayfalar (TR karşılığı yok); gen_us'tan doldurulur
 FALLBACK = {"/pilot": "#iletisim", "/kamera-degerlendirme": "#iletisim", "/iletisim": "#iletisim", "/katalog": "/cozumler/"}
 EN_FALLBACK = {"/en/pilot": "/en/#iletisim", "/en/camera-assessment": "/en/#iletisim", "/en/contact": "/en/#iletisim"}
 
@@ -104,6 +105,7 @@ def alt_of(path, lang):
     if lang == "tr":
         e = EN_OF.get(base)
         return slash(e) if e and e in EN_LOCAL else None
+    if base in EN_ONLY: return None  # yalnızca ABD/EN sayfası: TR karşılığı yok, hreflang alternatifi yok
     t = TR_OF.get(base)
     return slash(t) if t else "/"
 
@@ -488,6 +490,8 @@ for _tr, _en in {"/teknik-merkez": "/en/technical-hub", "/kamera-uyumluluk": "/e
     EN_OF[_tr] = _en; TR_OF[_en] = _tr; EN_LOCAL.add(_en)
 for _trp, _e in D.get("gen_en", {}).items():
     EN_OF[_trp] = _e["path"]; TR_OF[_e["path"]] = _trp; EN_LOCAL.add(_e["path"])
+for _e in D.get("gen_us", {}).values():  # ABD/EN sayfaları: TR karşılığı yok
+    EN_LOCAL.add(_e["path"]); EN_ONLY.add(_e["path"])
 # ================================================================== ÜRETİM
 miss = build_en_home()
 P["tr"], P["en"] = parts("tr"), parts("en")
