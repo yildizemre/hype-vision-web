@@ -2725,6 +2725,648 @@
     "Sistemimiz, kameralar üzerinden gerçek zamanlı alan düzeni, temizlik ve standartlara uyumu izleyerek, sürekli görünürlük sağlar. Boş ya da dolu alanlar, yerinde olmayan ekipmanlar, blokajlı yollar gibi kritik konular hızlıca tespit edilebilir ve müdahale süreçleri hızlanır.",
     "Hype-Model ailesinden yapay zeka modülleriyle çalışan çözüm, endüstri ve imalat tesislerinde yalın üretim prensiplerini destekleyerek işyeri güvenliği ve verimliliğine katkı sağlar. KVKK ve kişisel gizlilik hassasiyeti dikkate alınarak, görüntüler tesis içinde anonimleştirilir ve dışa aktarılmaz."
    ]
+  },
+  {
+   "path": "/isg-yazilimi",
+   "title": "İSG Yazılımı — Kamera ile İş Güvenliği Denetimi",
+   "desc": "Mevcut IP/CCTV kameralarınızı endüstriyel yapay zeka ile iş güvenliği yazılımına dönüştürün.",
+   "specs": [
+    [
+     "Çalışma Ortamı",
+     "On-premise / Edge"
+    ],
+    [
+     "Kamera Uyumluluğu",
+     "RTSP ve ONVIF destekli IP/CCTV kameralar"
+    ],
+    [
+     "Analiz Modülleri",
+     "KKD (baret, yelek), yasaklı alan, forklift-yaya, düşme, yangın-duman, el hijyeni"
+    ],
+    [
+     "Raporlama",
+     "İhlal uyarıları, kanıt görüntüleri, vardiya bazlı raporlar"
+    ],
+    [
+     "Gizlilik & Uyumluluk",
+     "KVKK ve 6331 sayılı İş Sağlığı ve Güvenliği Kanununa genel uyum"
+    ],
+    [
+     "Marka Bağımsızlık",
+     "Her marka kamera ile çalışır, ek donanım gerektirmez"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "İş Güvenliği Yazılımı Nedir ve Neden Tercih Edilmelidir?",
+     "p": [
+      "İş sağlığı ve güvenliği denetimleri, iş kazalarını önlemek ve yasal uyumu sağlamak amacıyla düzenli olarak yapılır. Geleneksel yöntemler zaman ve insan kaynağı açısından maliyetli olabilir. Bu nedenle, mevcut güvenlik kameralarınızın yapay zeka destekli İSG yazılımına dönüştürülmesi, denetim süreçlerinizi otomatikleştirir ve hata payını azaltır.",
+      "Yapay zekâ tabanlı sistemler, gerçek zamanlı analiz ve hızlı uyarı mekanizmaları ile işyerindeki riskleri etkin şekilde tespit eder. KKD takibi, yasaklı alan girişi veya düşme gibi kritik durumlarda anında bildirimler sağlar. Bu da iş sağlığı ekiplerinin hızlı ve etkili müdahale etmesine olanak verir."
+     ],
+     "li": [
+      "Denetim süreçlerinde insan hatasını azaltır",
+      "İş kazası risklerinin önceden fark edilmesini sağlar",
+      "Mevzuata uyumda destek olur",
+      "Çalışan güvenliği bilincini artırır"
+     ],
+     "cards": []
+    },
+    {
+     "h": "İSG denetim modülleri",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "KKD Kontrol Sistemi",
+       "d": "Baret, yelek, maske, eldiven kullanımı denetimi.",
+       "href": "/kkd-kontrol-kamera-sistemi"
+      },
+      {
+       "t": "Baret Tespit Sistemi",
+       "d": "7/24 otomatik baret denetimi ve alarm.",
+       "href": "/baret-tespit-sistemi"
+      },
+      {
+       "t": "Forklift–Yaya Güvenliği",
+       "d": "Ramak kala yakınlaşmalarda uyarı.",
+       "href": "/forklift-yaya-guvenlik-sistemi"
+      },
+      {
+       "t": "Yasaklı Alan İhlal Tespiti",
+       "d": "Tehlikeli bölgeye girişte anlık alarm.",
+       "href": "/yasakli-alan-ihlal-tespiti"
+      },
+      {
+       "t": "Düşme Tespit Sistemi",
+       "d": "Düşme ve hareketsizlik alarmı.",
+       "href": "/dusme-tespit-sistemi"
+      },
+      {
+       "t": "Yangın ve Duman Tespiti",
+       "d": "Alev/duman başlangıcını erken yakalayın.",
+       "href": "/yangin-duman-tespiti"
+      },
+      {
+       "t": "El Hijyeni Denetimi",
+       "d": "El yıkama/hijyen adımlarının izlenmesi.",
+       "href": "/el-hijyeni-denetimi-kamera-sistemi"
+      }
+     ]
+    },
+    {
+     "h": "Sektöre göre İSG",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "İmalat",
+       "d": "Hol girişleri ve makine alanlarında denetim.",
+       "href": "/sektor/imalat"
+      },
+      {
+       "t": "Enerji & Petrokimya",
+       "d": "Yüksek riskli tesislerde güvenlik.",
+       "href": "/sektor/enerji-petrokimya"
+      },
+      {
+       "t": "Depo & Lojistik",
+       "d": "Forklift–yaya ve alan güvenliği.",
+       "href": "/sektor/depo-lojistik-guvenlik"
+      },
+      {
+       "t": "İnşaat",
+       "d": "Sahada baret ve yelek denetimi.",
+       "href": "/sektor/insaat"
+      }
+     ]
+    },
+    {
+     "h": "Sistem Nasıl Çalışır? Mevcut Kamera Altyapısı ve Yapay Zeka Entegrasyonu",
+     "p": [
+      "Hype Vision İSG yazılımı, halihazırda kurulu olan IP veya CCTV kameralarınızı, marka bağımsız RTSP veya ONVIF protokolleri üzerinden algılar. Ekstra kamera kurulumu gerektirmeden mevcut altyapınızdan veri alarak çalışır.",
+      "Kameralardan alınan görüntüler, ağ ortamında on-premise veya edge cihazlar üzerinde yapay zeka algoritmalarıyla analiz edilir. Bu sayede, veriler cihazınız dışında buluta veya dış sunuculara aktarılmadan işlenir, hem gizlilik sağlanır hem de hızlı tepki mekanizması oluşturulur."
+     ],
+     "li": [
+      "Marka bağımsız, mevcut kamera desteği",
+      "RTSP/ONVIF ile kolay entegrasyon",
+      "Yüksek performanslı on-premise ve edge işleme",
+      "Gerçek zamanlı analiz ve uyarı"
+     ],
+     "cards": []
+    },
+    {
+     "h": "İSG Yazılımı Hangi Modülleri Kapsar?",
+     "p": [
+      "Hype Vision’un çözümü, iş sağlığı ve güvenliği açısından kritik pek çok alanı kapsayan modüler bir yapıya sahiptir. Böylece işletme ihtiyaçlarına göre farklı modüller seçilebilir veya birlikte kullanılabilir."
+     ],
+     "li": [
+      "KKD takibi: Baret, iş yeleği ve diğer kişisel koruyucu donanımların kullanım kontrolü",
+      "Yasaklı alan denetimi: Yetkisiz kişilerin girişini tespit",
+      "Forklift ve yaya güvenliği: Araç ile yaya etkileşimlerinin izlenmesi",
+      "Düşme tespiti: İşyerinde düşme ve kaza anlarını algılama",
+      "Yangın ve duman algılama: İşyerinde erken uyarı sağlayan görüntü analizi",
+      "El hijyeni kontrolü: Covid-19 ve benzeri salgın dönemlerinde hijyen denetimi",
+      "OEE ve üretim takibi, ürün sayımı, kalite ve yüzey kusuru analizi, anomali tespiti gibi opsiyonel modüller"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Mevcut Kamera Altyapısına Yazılım Eklemenin Avantajları",
+     "p": [
+      "Yeni kamera altyapısı kurmadan mevcut sisteminizden faydalanmak, hem maliyet hem zaman açısından avantaj sağlar. Ayrıca, mevcut kameralarınızın markası ve modeli ne olursa olsun, sistemimizle entegre edilerek çok yönlü analiz yapabilir.",
+      "Bu sayede yatırım ve altyapı değişikliği gerektirmeden, mevcut güvenlik ve üretim alanlarınıza yapay zeka ile değer katabilirsiniz. Kullanıcı dostu arayüzler üzerinden uyarılar ve raporlar kolayca takip edilir."
+     ],
+     "li": [
+      "Ek donanım veya kamera gerektirmez",
+      "Mevcut IP/CCTV kamera altyapısını dönüştürür",
+      "Hızlı kurulum ve devreye alma",
+      "Maliyet etkinliği"
+     ],
+     "cards": []
+    },
+    {
+     "h": "KVKK ve On-Premise Çalışmanın Önemi",
+     "p": [
+      "İş güvenliği yazılımımız, veri gizliliğine azami özen gösterilen on-premise (yerel) ve edge çözümlerle çalışır. İş yerinizdeki kamera görüntüleri, dış bulut ortamlarına aktarılmadan yerel cihazlarda analiz edilir ve saklanır.",
+      "Bu mimari, Kişisel Verilerin Korunması Kanunu (KVKK) başta olmak üzere ilgili mevzuatlara uyumu kolaylaştırır. Ayrıca, kritik güvenlik verilerinin dışa açılmaması, işletme verimliliği ve güvenlik açısından önem taşır."
+     ],
+     "li": [
+      "Kamera görüntüleri dış ortama gönderilmez",
+      "KVKK ve iş sağlığı mevzuatına uygun gizlilik",
+      "Veri güvenliği ve erişim denetimi sağlar",
+      "Yerel sunucularda hızlı veri işleme ve analiz"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Raporlama ve İhlal Yönetimi",
+     "p": [
+      "İSG denetimlerinde sadece tespit yeterli olmaz, aynı zamanda etkin takip ve kayıt da kritik öneme sahiptir. Sistem, tespit edilen ihlallerde anlık uyarılar gönderir, ihlal anına ait kanıt görüntülerini kaydeder ve vardiya bazında detaylı raporlar oluşturur.",
+      "Hazırlanan raporlar, iş güvenliği ekiplerinin denetimleri belgeleyebilmesi için önemli bir kaynak sunar. Böylece hem yasal yükümlülükler desteklenir hem de iş güvenliği süreçleri sürekli iyileştirilebilir."
+     ],
+     "li": [
+      "Anlık ihlal uyarıları ve alarmlar",
+      "İhlal görüntüleri ve kanıtları kayıt altına alma",
+      "Vardiya ve tarih bazında kapsamlı raporlama",
+      "Denetim süreçlerinde şeffaflık ve izlenebilirlik"
+     ],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Mevcut kameralarımı yeni bir cihaz almadan kullanabilir miyim?",
+     "a": "Evet, sistem RTSP ve ONVIF protokolü destekleyen mevcut IP veya CCTV kameralarınızı marka bağımsız şekilde entegre eder. Ek donanım gerektirmez."
+    },
+    {
+     "q": "Yazılımın KVKK uyumluluğu nasıl sağlanıyor?",
+     "a": "Görüntüler yerel olarak on-premise ve edge cihazlarda işlenir, dış bulut ortamına aktarılmaz. Böylece kişisel verilerin korunması kanununa uyum desteklenir."
+    },
+    {
+     "q": "İhlal durumları nasıl bildirilir?",
+     "a": "Sistem, ihlal anında otomatik olarak uyarı gönderir ve ilgili kanıt görüntüsünü kaydeder. Aynı zamanda vardiya bazlı raporlar sistemde tutulur."
+    },
+    {
+     "q": "Hangi iş güvenliği risk alanlarına yönelik modüller var?",
+     "a": "Öne çıkan modüller arasında KKD kullanımı, yasaklı alan takibi, forklift-yaya güvenliği, düşme tespiti, yangın/duman algılama ve el hijyeni yer alır."
+    },
+    {
+     "q": "Sistem çalışma ortamı nasıl olur? Bulut veya yerel mi?",
+     "a": "Çözüm tamamen on-premise (yerel) ve edge tabanlıdır. Veri güvenliği için görüntüler yerelde işlenir, bulut tabanlı bir hizmet kullanılmaz."
+    }
+   ],
+   "intro": [
+    "İş sağlığı ve güvenliği (İSG) uygulamalarının etkinliği, doğru ve zamanında denetim ile doğrudan ilişkilidir. Mevcut IP/CCTV kamera altyapınızı kullanarak iş güvenliği süreçlerinizi dijitalleştirip otomatikleştirmek, hem iş kazalarını önlemede hem de mevzuata uyum sağlamada önemli bir avantaj sunar.",
+    "Hype Vision’un endüstriyel görüntü işleme çözümü, Hype-Model ailesi yapay zekâ algoritmalarıyla; kişisel koruyucu donanım (KKD) takibi, yasaklı alan ihlalleri, forklift ve yaya güvenliği gibi kritik risk unsurlarını kamera görüntülerinden anlık olarak analiz eder. Bu sistem, RTSP ve ONVIF protokolleriyle marka bağımsız kameralarınıza doğrudan entegre olur.",
+    "On-premise ve edge tabanlı çalışan bu İSG yazılımı, KVKK ve iş güvenliği mevzuatının gerektirdiği gizlilik standartlarına uygun olup, iş sağlığı denetimlerini kolaylaştırır ve objektif raporlar sunar."
+   ]
+  },
+  {
+   "path": "/goruntu-isleme-yazilimi",
+   "title": "Görüntü İşleme Yazılımı — Endüstriyel Yapay Zekâ",
+   "desc": "Mevcut IP/CCTV kameralarınızı RTSP/ONVIF ile marka bağımsız bağlayarak Hype-Model derin öğrenme tabanlı modüllerle analiz edin.",
+   "specs": [
+    [
+     "Marka Bağımsızlık",
+     "Mevcut IP/CCTV kameraların RTSP/ONVIF protokolleriyle kolay entegrasyonu"
+    ],
+    [
+     "Çalışma Platformu",
+     "On-premise / Edge tabanlı, internet bağlantısına bağımlı olmayan yapı"
+    ],
+    [
+     "Gizlilik ve Uyumluluk",
+     "KVKK ve ilgili veri koruma mevzuatlarına uyumlu, veri yerel sunucularda tutulur"
+    ],
+    [
+     "Modüler Tasarım",
+     "KKD, forklift-yaya, yasaklı alan, düşme, yangın/duman, el hijyeni, OEE, ürün sayımı, kalite kontrol ve anomali tespiti"
+    ],
+    [
+     "Derin Öğrenme Teknolojisi",
+     "Hype-Model ailesi ile değişken ve zorlu saha koşullarında yüksek tespit başarısı"
+    ],
+    [
+     "Kullanım Alanları",
+     "Endüstriyel üretim, iş güvenliği ve kalite yönetimi süreçlerine yönelik çözüm"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Endüstriyel Görüntü İşleme Yazılımı Nedir ve Neden Tercih Edilir?",
+     "p": [
+      "Endüstriyel görüntü işleme yazılımı; üretim ve iş güvenliği alanlarında kamera görüntülerinden anlamlı veriler çıkaran, bu verilerle otomatik karar mekanizmalarına ve raporlara imkân sağlayan yapay zekâ tabanlı teknolojilerdir. Geleneksel makine görüşü sistemlerinden farklı olarak, derin öğrenme modelleri sayesinde karmaşık ve değişken saha koşullarında da etkili çalışabilirler.",
+      "Özellikle mevcut IP ve CCTV kamera altyapısını kullanabilen bir yazılım tercih etmek; ek donanım ve maliyet yükünü azaltırken, marka bağımsız yapısıyla esneklik sunar. Böylece kamera sayısı ve modeli ne olursa olsun, güvenlik ve üretim alanında yüksek seviyede analiz yapılabilir."
+     ],
+     "li": [
+      "Görüntülerdeki insan, araç, nesne ve olayların tespiti",
+      "Kalite ve süreç yönetimi için ürün sayımı ve kusur analizi",
+      "İş güvenliği kapsamında KKD (Kişisel Koruyucu Donanım) ve yasaklı alan ihlallerinin takibi",
+      "Yangın veya duman gibi acil durumların erken analizi",
+      "Operasyonel verimlilik ve OEE takibi"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Yazılım modülleri",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "Endüstriyel Görüntü İşleme",
+       "d": "Genel bakış: yetenekler ve mimari.",
+       "href": "/endustriyel-goruntu-isleme"
+      },
+      {
+       "t": "Kalite Kontrol",
+       "d": "Hat üzerinde görsel kusur tespiti.",
+       "href": "/kalite-kontrol-goruntu-isleme"
+      },
+      {
+       "t": "Nesne ve Araç Takibi",
+       "d": "Nesne/araç tespiti ve takibi.",
+       "href": "/nesne-takibi"
+      },
+      {
+       "t": "Görsel Anomali Tespiti",
+       "d": "Beklenmedik durum ve sapmalar.",
+       "href": "/anomali-tespiti"
+      },
+      {
+       "t": "Ürün ve Koli Sayımı",
+       "d": "Elle sayım olmadan adet takibi.",
+       "href": "/urun-sayimi"
+      },
+      {
+       "t": "KKD Kontrol",
+       "d": "İş güvenliği için KKD denetimi.",
+       "href": "/kkd-kontrol-kamera-sistemi"
+      }
+     ]
+    },
+    {
+     "h": "Nasıl bağlanır",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "ONVIF / RTSP Entegrasyonu",
+       "d": "Marka bağımsız kamera bağlama.",
+       "href": "/onvif-rtsp-yapay-zeka-entegrasyonu"
+      },
+      {
+       "t": "CCTV Yapay Zeka",
+       "d": "Mevcut CCTV'ye analitik ekleme.",
+       "href": "/cctv-yapay-zeka"
+      },
+      {
+       "t": "Kameram Uygun mu?",
+       "d": "Kamera uygunluk kontrolü.",
+       "href": "/kamera-uyumluluk"
+      }
+     ]
+    },
+    {
+     "h": "Yazılım Nasıl Çalışır? Mevcut Kameralar ile RTSP/ONVIF Entegrasyonu ve On-Premise/Edge Altyapı",
+     "p": [
+      "Hype Vision'un sunduğu yazılım, IP ve CCTV kameralarınızın RTSP ve ONVIF protokolleri aracılığıyla marka bağımsız olarak bağlanır. Ek bir donanım gerekmeksizin sistem, var olan kamera altyapısını kullanarak sahadaki görüntüyü alır ve gerçek zamanlı analiz eder.",
+      "Yazılım on-premise ve edge cihazlar üzerinde çalışır; yani veriniz internet ortamına aktarılmaz, böylece veri güvenliği ve gizliliği üst düzeyde sağlanır. Bu yapı, özellikle KVKK ve yerel gizlilik düzenlemelerine uygunluk açısından önemlidir.",
+      "Derin öğrenme tabanlı Hype-Model ailesi, kameraların farklı ışık ve hava koşullarında bile doğru ve tutarlı sonuçlar verebilmesini mümkün kılar."
+     ],
+     "li": [
+      "RTSP/ONVIF destekleyen tüm IP/CCTV kameralar ile uyum",
+      "Veri yerel sunucularda ya da edge cihazlarda işlenir",
+      "Gerçek zamanlı işleyiş ve düşük gecikme süresi",
+      "Değişken ortamlar ve koşullarda performans garantisi olmadan yüksek tespit kabiliyeti",
+      "Kolay kurulum ve bakım"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Hype-Model Modülleri ve Kapsamı",
+     "p": [
+      "Hype Vision platformu, geniş bir yelpazede endüstriyel ihtiyaçlara yönelik modüller sunar. Her modül, özel ihtiyaçlara göre yapılandırılabilir ve birden fazla modülü bir arada kullanmak mümkündür.",
+      "Kişisel koruyucu donanım takibi modülleri (baret, yelek vb.) iş güvenliği alanında riskleri azaltmaya yardımcı olurken, forklift ve yaya ayrımı modülü operasyonel kazaların önüne geçilmesine destek sağlar.",
+      "Düşme tespiti, yangın ve duman algılama modülleri ise çalışan güvenliği ve acil durum yönetimi açısından kritik öneme sahiptir.",
+      "Kalite kontrol modülleri; ürün sayımı, yüzey kusurlarının tespiti ve anomali belirleme gibi işlevlerle üretim süreçlerinin verimliliğini artırır."
+     ],
+     "li": [
+      "KKD (baret, yelek, maske vb.) tespiti",
+      "Forklift ve yaya ayrımı",
+      "Yasaklı alan ihlali tespiti",
+      "Düşme algılama",
+      "Yangın ve duman algılama",
+      "El hijyeni kontrolü",
+      "Operasyonel verimlilik (OEE)",
+      "Ürün sayımı ve kalite kontrol",
+      "Anomali tespiti"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Mevcut Kamera Altyapınıza Hype Vision Yazılımını Eklemek",
+     "p": [
+      "Halihazırda işletmenizde bulunan IP ya da CCTV kameralar, RTSP ve ONVIF standartlarını destekliyorsa, Hype Vision yazılımı ile ek bir donanım ihtiyacı olmadan entegre edilebilir. Bu sayede hem yatırım maliyeti azalır hem de sistem kurulum süresi kısalır.",
+      "Kamera çözümlerinde marka ve model bağımsız destek sunularak, farklı üreticilerin cihazları sorunsuz şekilde platforma bağlanabilir. Merkezi tek platformdan yönetim ve analiz gerçekleştirilebilir.",
+      "Kamera yerleşimi ya da yeni kamera ihtiyacı durumunda ise Hype Vision ekipleri sahaya özel danışmanlık verebilir."
+     ],
+     "li": [
+      "RTSP/ONVIF uyumlu mevcut kamera kullanımı",
+      "Marka ve model bağımsız bağlantı imkanı",
+      "Ek donanım gerektirmeyen kurulum",
+      "Tek platformdan merkezi yönetim",
+      "Saha danışmanlık desteği"
+     ],
+     "cards": []
+    },
+    {
+     "h": "KVKK ve Gizlilik Önceliği ile On-Premise ve Edge Tabanlı Çalışma",
+     "p": [
+      "Kişisel verilerin korunması ve iş süreçlerinin gizliliği, görüntü işleme sistemlerinde önem taşıyan konulardır. Hype Vision yazılımı, verilerin işlenmesi ve saklanmasını on-premise ve edge çözümlerle yerel ortamda gerçekleştirerek, veri güvenliği risklerini azaltır.",
+      "Bu yaklaşım sayesinde, kamera görüntüleri bulut ortamına gönderilmediği için KVKK, GDPR ve benzeri regülasyonlara uyum kolaylaşır. Ayrıca işletme içi kontrol standartları korunur.",
+      "Kullanıcıların veri güvenliği konusundaki sorumluluklarına yönelik genel bilgilendirme ve hukuki tavsiye olmamakla birlikte, çözümün teknik altyapısı gizliliği destekleyecek şekilde tasarlanmıştır."
+     ],
+     "li": [
+      "Veri işleme ve saklama yerel sunucularda veya edge cihazlarda yapılır",
+      "Bulut bağlantısı zorunlu değildir",
+      "KVKK ve ilgili veri koruma düzenlemelerine uyum kolaylığı",
+      "Gizlilik ve güvenlik öncelikli altyapı",
+      "\"Sunulan bilgiler hukuki tavsiye değildir\" ifadesi"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Raporlama ve Analiz Özellikleri",
+     "p": [
+      "Endüstriyel süreçlerdeki görsel verilerin işlenmesi sonrası elde edilen sonuçlar, karar alma mekanizmalarına hız ve doğruluk kazandırır. Hype Vision yazılımı, modülleri tarafından gerçekleştirilen tespit ve analizleri detaylı raporlar haline getirir.",
+      "Üretim, kalite ve güvenlik alanlarındaki bulgular görsel kayıtlar, istatistikler ve bildirimler ile desteklenir. Böylece operasyonel iyileştirmeler için veri odaklı yol haritaları oluşturulabilir.",
+      "Raporlama seçeneği; farklı departmanların ihtiyaçlarına göre özelleştirilebilir ve periyodik olarak otomatik gönderilebilir."
+     ],
+     "li": [
+      "Detaylı tespit ve analiz raporları",
+      "Görsel destekli kayıt ve geri izleme",
+      "Çoklu modül verilerinin tek platformda birleşimi",
+      "Özelleştirilebilir raporlama seçenekleri",
+      "Periyodik ve otomatik bildirim imkânı"
+     ],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Hype Vision yazılımı mevcut kameralarla uyumlu mu?",
+     "a": "Evet, RTSP ve ONVIF protokollerini destekleyen tüm IP ve CCTV kameralar marka bağımsız şekilde yazılıma entegre edilebilir."
+    },
+    {
+     "q": "Verilerim güvenli bir şekilde nasıl korunuyor?",
+     "a": "Yazılım on-premise ve edge altyapıları sayesinde veriler yerel sunucularda işlenir ve saklanır, böylece KVKK ve veri gizliliği mevzuatlarına uyum kolaylaşır."
+    },
+    {
+     "q": "Yapay zeka modülleri hangi alanlarda kullanılabilir?",
+     "a": "Modüller iş güvenliği (KKD, yasaklı alan, düşme), kalite kontrol (ürün sayımı, yüzey kusuru, anomali), yangın/duman algılama ile operasyonel verimlilik gibi çeşitli alanları kapsar."
+    },
+    {
+     "q": "Sistemin kurulumu ve entegrasyonu nasıl gerçekleşir?",
+     "a": "Halihazırda kullanılan RTSP/ONVIF uyumlu kameralarınıza ek bir donanım gerektirmeden kolayca entegre edilir; ayrıca saha danışmanlığı hizmeti sunulur."
+    },
+    {
+     "q": "Hukuki açıdan sistemimin güvenlik gereksinimlerini karşılıyor mu?",
+     "a": "Sistem güvenlik genel bilgisi sağlar ancak hukuki tavsiye içermemektedir. İş güvenliği ve mevzuat gereksinimleri için ilgili yasal düzenlemeler ve uzman görüşleri takip edilmelidir."
+    }
+   ],
+   "intro": [
+    "Endüstriyel süreçlerde görsel veri analizi, kalite kontrolden iş güvenliğine kadar pek çok alanda kritik öneme sahiptir. Hype Vision'un geliştirdiği derin öğrenme tabanlı görüntü işleme yazılımı, mevcut IP/CCTV kameralarınızı marka bağımsız destekleyerek, üretim ve güvenlik ihtiyaçlarınıza yapay zekâ temelli çözümler sunar.",
+    "Yazılımımız, esnek ve güçlü Hype-Model ailesi ile değişken koşullarda bile yüksek performans gösterir. On-premise ve Edge ortamlarında çalışması, veri güvenliği ve KVKK uyumluluğu sağlayarak sektörel gizlilik beklentilerine karşılık verir.",
+    "RTSP ve ONVIF protokolleri üzerinden kolayca entegre edilen bu yazılım platformu, tespit, sayım, kalite kontrol ve güvenlik modülleriyle tek bir sistemden kapsamlı analiz imkanı sunar."
+   ]
+  },
+  {
+   "path": "/kalite-kontrol-sistemi",
+   "title": "Kalite Kontrol Sistemi — Otomatik Görsel Muayene",
+   "desc": "Hype Vision’un Hype-Model teknolojisi ile marka bağımsız, RTSP/ONVIF destekli kamera sistemlerinizle otomatik görsel kalite kontrol.",
+   "specs": [
+    [
+     "Uyumlu Kamera Tipleri",
+     "IP, CCTV, RTSP/ONVIF destekli mevcut kameralar"
+    ],
+    [
+     "Analiz Teknolojisi",
+     "Endüstriyel yapay zeka destekli görüntü işleme (Hype-Model)"
+    ],
+    [
+     "Kurulum Modeli",
+     "On-premise / Edge cihazlarda çalışır"
+    ],
+    [
+     "Tespit Kapsamı",
+     "Çizik, deformasyon, leke, eksik/yanlış parça, ambalaj ve etiket kontrolü"
+    ],
+    [
+     "Entegrasyon",
+     "PLC/röle tetikleme destekler"
+    ],
+    [
+     "KVKK ve Gizlilik",
+     "Veriler yerelde işlenir, dışa aktarılmaz"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Kalite Kontrol Sistemi Nedir ve Neden Gereklidir?",
+     "p": [
+      "Kalite kontrol sistemi, üretim bantlarındaki ürünlerin standartlara uygunluğunu sağlamak amacıyla uygulanan otomatik ya da manuel denetimler bütünüdür. Bu sistemler, ürünlerdeki görsel kusurların hızlı ve doğru tespit edilmesini sağlarak üretim verimliliğini artırır ve müşteri memnuniyetini yükseltir.",
+      "Manuel kalite kontrol süreçleri zaman alıcı olup insan hatasına açıktır. Otomatik görsel muayene ise kamera ve yapay zeka teknolojilerini kullanarak hat hızında kusur ve hata tespiti yapabilmekte, böylece üretim duruş sürelerini azaltmaktadır."
+     ],
+     "li": [
+      "Üretimde süreklilik ve güvenilirlik sağlar",
+      "İnsan kaynaklı hataları en aza indirir",
+      "Hat sonunda hızlı ve doğru sonuç verir",
+      "Ürünlerin standart dışı ayrıştırılmasını kolaylaştırır"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Kalite modülleri",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "Görüntü İşleme ile Kalite Kontrol",
+       "d": "Hat hızında görsel kontrol.",
+       "href": "/kalite-kontrol-goruntu-isleme"
+      },
+      {
+       "t": "Yüzey Kusuru Tespiti",
+       "d": "Çizik, deformasyon, leke tespiti.",
+       "href": "/yuzey-kusuru-tespiti"
+      },
+      {
+       "t": "Görsel Anomali Tespiti",
+       "d": "Beklenmedik kusur ve sapmalar.",
+       "href": "/anomali-tespiti"
+      },
+      {
+       "t": "Ürün ve Koli Sayımı",
+       "d": "Hat sonunda adet ve eksik kontrolü.",
+       "href": "/urun-sayimi"
+      }
+     ]
+    },
+    {
+     "h": "Sektöre göre kalite",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "İmalat",
+       "d": "Montaj ve işleme hatlarında kontrol.",
+       "href": "/sektor/imalat"
+      },
+      {
+       "t": "Tekstil",
+       "d": "Kumaş kusuru: delik, leke, desen.",
+       "href": "/sektor/tekstil"
+      },
+      {
+       "t": "Otomotiv",
+       "d": "Parça varlığı, hizalama, yüzey.",
+       "href": "/sektor/otomotiv"
+      },
+      {
+       "t": "Gıda",
+       "d": "Ambalaj, etiket ve dolum kontrolü.",
+       "href": "/sektor/gida"
+      },
+      {
+       "t": "Metal",
+       "d": "Yüzey ve kaynak kalitesi.",
+       "href": "/sektor/metal"
+      },
+      {
+       "t": "İlaç & Farma",
+       "d": "Ambalaj ve etiket doğrulama.",
+       "href": "/sektor/ilac-farma"
+      }
+     ]
+    },
+    {
+     "h": "Otomaik Görsel Muayene Nasıl Çalışır?",
+     "p": [
+      "Hype Vision’un çözümü, mevcut markasız ya da çeşitli marka IP/CCTV kameralarınıza RTSP veya ONVIF protokolü ile bağlanır. Kamera görüntüleri, üretim hattına yakın yerel Edge cihazlarında veya tesis içindeki sunucularda kurulu yazılım modülleri aracılığıyla analiz edilir.",
+      "Görsel veriler, Hype-Model ailesine ait yapay zeka algoritmalarıyla işlenerek çizik, leke, deformasyon gibi kaliteyi etkileyebilecek anomaliler anlık tespit edilir. PLC veya röle aracılığıyla üretim otomasyon sistemine bilgi aktarılır, aksi durumda sistem uyarı verir."
+     ],
+     "li": [
+      "Mevcut kameralarla kolay entegrasyon",
+      "Gerçek zamanlı analiz ve geri bildirim",
+      "Hat hızına uyumlu otomatik kontrol",
+      "Edge/on-premise veri işleme ile gizlilik"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Kalite Kontrolü Neler Kapsar?",
+     "p": [
+      "Kalite kontrol sistemi, ürünün her aşamada görsel olarak muayenesini içeren modüllerden oluşur. Hype Vision çözümleri aşağıdaki kalite parametrelerini kapsamaktadır."
+     ],
+     "li": [
+      "Çizik, leke, deformasyon gibi yüzey kusurları",
+      "Eksik veya yanlış montaj/parça tespiti",
+      "Ambalaj ve etiket kontrolü - ürün tanımlama ve barkod doğrulama",
+      "Hat sonu kalite kontrol ile paketleme doğruluğu",
+      "Yüzey ve kalite defektlerinin erken tespiti"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Mevcut Kamera Sistemine Ek Olarak Ne Sunulur?",
+     "p": [
+      "Çoğu standart IP ve CCTV kamera mevcut kalite kontrol uygulamaları için yeterli çözünürlükte görüntü sağlar. Ancak bazı mikron seviyesinde ince detay gerektiren uygulamalarda, endüstriyel kamera ve aydınlatma sistemleri önerilmektedir.",
+      "Hype Vision, modüler yapısı sayesinde hem mevcut kamera altyapınızı kullanır hem de ihtiyaç halinde yüksek hassasiyetli endüstriyel ekipmanların entegrasyonuna imkan tanır. Böylece hem maliyet optimize edilir hem de kalite ölçümü artırılır."
+     ],
+     "li": [
+      "Çoğu uygulamada mevcut kamera yeterlidir",
+      "Mikron hassasiyet gereken durumlar için endüstriyel kamera ve uygun aydınlatma tavsiyesi",
+      "Modüler ve marka bağımsız entegrasyon",
+      "Esnek montaj ve iyileştirme seçenekleri"
+     ],
+     "cards": []
+    },
+    {
+     "h": "KVKK ve On-Premise Veri İşleme Avantajları",
+     "p": [
+      "Kişisel Verilerin Korunması Kanunu (KVKK) ve benzeri gizlilik düzenlemeleri kapsamında, verilerin yerel olarak işlenmesi ve buluta gönderilmemesi tercih edilir. Hype Vision çözümleri, veri güvenliği ve gizlilik odaklı olarak on-premise veya Edge tabanlı mimaride çalışır.",
+      "Bu sayede üretim alanında üretilen görüntüler tesis dışında depolanmaz veya işlenmez. Verilerin yerelde kalması, hem mevzuata uyumu kolaylaştırır hem de olası veri sızıntısı risklerini minimize eder."
+     ],
+     "li": [
+      "Veri gizliliği ve KVKK uyumu",
+      "Bulut bağımsız, yerel veri işleme",
+      "Veri sızıntısı riskini azaltır",
+      "Hızlı tepki ve anlık analiz imkanı"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Raporlama ve Entegrasyon İmkanları",
+     "p": [
+      "Hype Vision kalite kontrol sistemi, tespit edilen görsel kusurlar ve analiz sonuçlarını kolayca takip edilebilen raporlar halinde sunar. Üretim yönetimi, kalite kontrol ve bakım ekipleri için kapsamlı veri sağlar.",
+      "Ayrıca, PLC veya röle tetikleme yoluyla üretim otomasyonu ile entegrasyonu mümkün kılarak; hat durdurma, uyarı sistemleri ya da kayıt altına alma fonksiyonları kolayca entegre edilebilir. Böylece kalite kontrol süreçlerinde etkin müdahale sağlanır."
+     ],
+     "li": [
+      "Anlık ve geçmiş verilerin detaylı raporlanması",
+      "Kullanıcı dostu arayüzlerle veri takibi",
+      "PLC/röle ile otomasyon entegrasyonu",
+      "Üretim verimliliği ve kalite takibinde destek"
+     ],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Mevcut kameralarımı Hype Vision sistemine nasıl bağlarım?",
+     "a": "Sistemimiz RTSP ve ONVIF protokollerini desteklediğinden, IP veya CCTV kameralarınızın bağlı olduğu ağ üzerinden kolayca entegre olur. Teknik destek ekibimiz bağlantı ve kurulumda yardımcı olmaktadır."
+    },
+    {
+     "q": "Üretim hattımı durdurmadan kalite kontrol yapılabilir mi?",
+     "a": "Evet, Hype-Model tabanlı analizler hat hızında, gerçek zamanlı çalışacak şekilde optimize edilmiştir. Bu sayede üretim kesintisi yaşanmadan otomatik görsel muayene sağlanır."
+    },
+    {
+     "q": "KVKK kapsamında verilerim nasıl korunuyor?",
+     "a": "Verileriniz tesis içinde, on-premise veya Edge cihazlarda işlenir ve dışa aktarılmaz. Böylece KVKK ve veri gizliliği gereksinimlerine uyumlu bir çözüm sunar."
+    },
+    {
+     "q": "Mikron seviyesinde kusur tespiti için ne yapmam gerekir?",
+     "a": "Bazı çok hassas kalite kontrol uygulamaları için önerilen endüstriyel kamera ve uygun aydınlatma sistemleri sunulur. Böylece ihtiyaç duyulan yüksek çözünürlük ve netlik sağlanabilir."
+    },
+    {
+     "q": "Sistem kalite sorunlarını tespit ettiğinde nasıl bilgilendiririm?",
+     "a": "PLC veya röle tetikleme ile üretim hattınızı durdurabilir ya da alarm/uyarı sistemlerinizi çalıştırabilirsiniz. Ayrıca sistem detaylı raporlar ve canlı takip imkanı sağlar."
+    }
+   ],
+   "intro": [
+    "Üretim süreçlerinde kalite kontrol kritik öneme sahiptir ve manuel denetimler hem zaman alıcı hem yetersiz kalabilmektedir. Hype Vision, mevcut IP ve CCTV kameralarınızı kullanarak yapay zeka destekli otomatik görsel muayene çözümleri sunar. Bu sayede çizik, deformasyon, leke, eksik ya da yanlış parça gibi görsel kusurlar anlık olarak tespit edilir.",
+    "Hype-Model ailesine ait endüstriyel görüntü işleme modülleri, hat hızında çalışarak üretim süreçlerinizi yavaşlatmadan, gerçek zamanlı kalite kontrol sağlar. Mevcut kameralarınız çoğu senaryoda yeterliyken, mikron seviyesinde kusur tespiti gereken durumlarda önerilen endüstriyel kamera ve aydınlatma sistemleriyle destek sunulmaktadır.",
+    "Türkiye pazarına yönelik bu çözüm, KVKK ve gizlilik gereksinimlerine tam uyumlu, on-premise/edge tabanlı mimarisiyle verilerinizi yerelde tutar. PLC ve röle tetikleme entegrasyonları ile otomasyon altyapınıza kolayca adapte olur."
+   ]
   }
  ],
  "sectors": [
@@ -23933,6 +24575,242 @@
     "Ensuring workplace safety, hygiene, and quality compliance in pharmaceutical manufacturing is critical. Adherence to GMP and related regulations requires proper PPE use, hygiene practices, and continuous quality monitoring.",
     "Hype Vision’s Hype-Model product family integrates with existing IP/CCTV camera systems via RTSP and ONVIF protocols, enabling AI-based analysis of worker behavior and manufacturing processes. Modules include hand hygiene monitoring, PPE compliance (caps, masks, gowns), restricted area access control, and quality/anomaly detection.",
     "Operating on-premise and at the edge, the system keeps video data local and employs face anonymization to comply with privacy regulations. This enables efficient, secure monitoring of crucial hygiene and quality parameters essential for pharmaceutical manufacturing."
+   ]
+  },
+  "/isg-yazilimi": {
+   "path": "/en/solutions/workplace-safety-software",
+   "title": "Workplace Safety Software — AI EHS & PPE",
+   "desc": "Convert existing cameras into a comprehensive AI-powered workplace safety software platform with real-time monitoring, alerts, and reporting for PPE…",
+   "specs": [
+    [
+     "AI Model Family",
+     "Hype-Model proprietary industrial image processing"
+    ],
+    [
+     "Compatibility",
+     "Supports existing IP/CCTV cameras via RTSP and ONVIF"
+    ],
+    [
+     "Deployment",
+     "On-premise edge computing for data privacy and low latency"
+    ],
+    [
+     "Core Modules",
+     "PPE (helmet, vest, glove), forbidden zone, forklift-pedestrian, fall detection, fire-smoke, hand hygiene"
+    ],
+    [
+     "Compliance",
+     "Designed with KVKK/GDPR and general EHS regulations (6331/OSHA) in mind"
+    ],
+    [
+     "Alerting & Reporting",
+     "Real-time violation alerts, evidence snapshots, and shift-based summary reports"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "What is Workplace Safety Software and Why It Matters",
+     "p": [
+      "Workplace safety software enhances traditional surveillance by integrating artificial intelligence to continuously monitor and analyze safety compliance and hazardous conditions. Rather than relying solely on manual inspections, this technology provides real-time visibility into critical safety factors with automated detection and alerts.",
+      "Addressing risks such as improper use of personal protective equipment (PPE), restricted area access, falls, and fire hazards, the software supports organizations in maintaining regulatory compliance and fostering a safer work environment. By leveraging machine learning models trained specifically for industrial use cases, companies can reduce incidents, improve accountability, and enhance operational continuity."
+     ],
+     "li": [
+      "Improves efficiency of safety oversight",
+      "Supports compliance with general workplace safety regulations (e.g., 6331, OSHA)",
+      "Enables proactive incident prevention through early detection",
+      "Reduces reliance on manual inspections and human error",
+      "Provides documented evidence for audits and investigations"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Safety modules",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "PPE Detection",
+       "d": "Hard hat, vest, mask and glove compliance.",
+       "href": "/en/solutions/ppe-detection"
+      },
+      {
+       "t": "Hard Hat Detection",
+       "d": "Per-zone hard hat monitoring with evidence.",
+       "href": "/en/solutions/hard-hat-detection"
+      },
+      {
+       "t": "Forklift–Pedestrian Safety",
+       "d": "Near-miss alerts between vehicles and people.",
+       "href": "/en/solutions/forklift-pedestrian-detection"
+      },
+      {
+       "t": "Restricted Area Monitoring",
+       "d": "Alerts on entry to hazardous zones.",
+       "href": "/en/solutions/restricted-area-monitoring"
+      },
+      {
+       "t": "Fall Detection",
+       "d": "Fall and no-motion alarms.",
+       "href": "/en/solutions/fall-detection"
+      },
+      {
+       "t": "Fire & Smoke Detection",
+       "d": "Early flame and smoke detection.",
+       "href": "/en/solutions/fire-smoke-detection"
+      }
+     ]
+    },
+    {
+     "h": "By industry",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "Manufacturing",
+       "d": "Shop-floor safety across lines.",
+       "href": "/en/industries/manufacturing"
+      },
+      {
+       "t": "Energy & Petrochemical",
+       "d": "Safety in high-risk process areas.",
+       "href": "/en/industries/energy-petrochemical"
+      },
+      {
+       "t": "Warehouse & Logistics",
+       "d": "Forklift and restricted-area safety.",
+       "href": "/en/industries/logistics"
+      },
+      {
+       "t": "Construction",
+       "d": "Hard hats and vests on active sites.",
+       "href": "/en/industries/construction"
+      }
+     ]
+    },
+    {
+     "h": "Related",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "AI PPE Detection",
+       "d": "The PPE detection pillar.",
+       "href": "/en/ppe-detection"
+      },
+      {
+       "t": "AI Video Analytics",
+       "d": "The platform behind every module.",
+       "href": "/en/video-analytics"
+      }
+     ]
+    },
+    {
+     "h": "How Hype Vision’s Software Works with Existing Cameras",
+     "p": [
+      "Hype Vision’s platform connects seamlessly to any brand and model of IP or CCTV cameras supporting standard RTSP or ONVIF streams. This approach eliminates the need to replace existing hardware, ensuring cost efficiency and faster deployment.",
+      "Video streams are processed on-premise, close to the camera source (edge computing), to enable real-time analysis while safeguarding sensitive data. Our proprietary Hype-Model AI algorithms analyze each frame to detect safety compliance and potential risks, generating alerts and storing evidence without cloud dependency.",
+      "This architecture aligns with data protection regulations by keeping visual data within the organization’s infrastructure. It also reduces bandwidth requirements and latency compared to centralized cloud processing."
+     ],
+     "li": [
+      "Supports all major IP/CCTV cameras via RTSP/ONVIF",
+      "Edge-based AI processing minimizes data transfer and latency",
+      "Works with single or multiple camera setups in various environments",
+      "Integrates easily without changing existing infrastructure",
+      "Maintains full control over data within the organization"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Comprehensive Safety Monitoring Modules Included",
+     "p": [
+      "The platform’s modular design covers a broad range of workplace safety needs in a unified interface. Key modules include the following, each trained to identify specific hazards and compliance violations:",
+      "Each module can operate independently or simultaneously, allowing tailored solutions to diverse safety priorities in manufacturing, logistics, construction, and other industrial sectors."
+     ],
+     "li": [
+      "PPE Compliance: Detects presence and proper wearing of helmets, safety vests, and gloves",
+      "Forbidden Zone Detection: Monitors restricted or hazardous areas to prevent unauthorized access",
+      "Forklift-Pedestrian Safety: Identifies unsafe proximity between vehicles and workers",
+      "Fall Detection: Recognizes falls and triggers immediate alerts",
+      "Fire and Smoke Detection: Detects early signs of fire or smoke for rapid response",
+      "Hand Hygiene Monitoring: Ensures proper hand sanitation practices"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Adding the Platform to Your Existing Surveillance System",
+     "p": [
+      "One of the greatest advantages of Hype Vision’s workplace safety software is its ability to leverage your current camera investments without disruption. The platform integrates via standard protocols, requiring no specialized camera hardware or firmware upgrades.",
+      "Installation involves configuring the AI software to access your camera streams, either on-premise servers or edge devices strategically located near cameras. This flexibility enables phased rollouts or comprehensive coverage depending on operational needs.",
+      "The intuitive dashboard aggregates live monitoring data, violation alerts, and historical trends, providing safety teams with actionable intelligence to swiftly address hazards and enforce compliance."
+     ],
+     "li": [
+      "No replacement of existing cameras needed",
+      "Configurable via RTSP and ONVIF standard protocols",
+      "Deployable on local infrastructure or edge appliances",
+      "Supports multiple camera channels concurrently",
+      "Centralized dashboard for alerts, evidence, and reporting"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Prioritizing Data Privacy and On-Premise Deployment",
+     "p": [
+      "Data privacy and regulatory compliance are core to our solution’s design. Processing all video data locally on-premise ensures sensitive visual information remains within the organization’s control, mitigating exposure risks associated with cloud environments.",
+      "The platform’s architecture aligns with KVKK and GDPR principles by restricting data flows, minimizing storage of personally identifiable information, and providing audit trails. Customers retain full ownership and governance over their safety data.",
+      "This approach supports compliance with general workplace safety regulations such as Law 6331 and OSHA guidelines, enabling organizations to implement advanced safety technology without compromising privacy obligations."
+     ],
+     "li": [
+      "On-premise edge processing protects data privacy",
+      "Limits data transmission outside organization boundaries",
+      "Aligns with GDPR and KVKK compliance requirements",
+      "Provides auditability and control over collected data",
+      "Supports compliance with general workplace safety regulations"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Reporting and Alerts for Actionable Safety Insights",
+     "p": [
+      "The platform delivers timely notifications and comprehensive reports to empower safety teams with evidence-based decision making. Upon detecting PPE violations, restricted area intrusions, falls, or fire events, automated alerts notify responsible personnel immediately to trigger responses.",
+      "Captured images or video snippets serve as proof for incident investigation and compliance verification. Additionally, shift-based summary reports aggregate violation data and trends, supporting continuous safety improvement initiatives and management reviews.",
+      "This combination of real-time awareness and historical reporting strengthens workplace safety programs and helps demonstrate due diligence during audits."
+     ],
+     "li": [
+      "Real-time alerts with visual evidence for immediate reaction",
+      "Shift and period-based summary reports for trend analysis",
+      "Supports audit documentation and regulatory compliance",
+      "Customizable notification channels to fit operational workflows",
+      "Dashboard visualization of key safety metrics and incidents"
+     ],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Can the software work with any existing camera brand?",
+     "a": "Yes, it supports virtually all IP and CCTV cameras that provide RTSP or ONVIF video streams, enabling brand-agnostic integration without hardware replacement."
+    },
+    {
+     "q": "How does on-premise deployment benefit workplace safety monitoring?",
+     "a": "Processing data on-premise minimizes latency for real-time alerts, enhances data privacy by keeping footage within your environment, and reduces bandwidth needs compared to cloud-based solutions."
+    },
+    {
+     "q": "Which workplace safety regulations does this software help support?",
+     "a": "The platform is designed to assist compliance with general workplace safety standards such as Law 6331 and OSHA guidelines. It provides monitoring and documentation capabilities but does not provide legal advice."
+    },
+    {
+     "q": "What kinds of safety violations can be detected?",
+     "a": "Key detections include PPE compliance (helmet, vest, glove), unauthorized access to restricted zones, forklift-pedestrian proximity risks, falls, early fire or smoke detection, and hand hygiene compliance."
+    },
+    {
+     "q": "Is it necessary to replace or upgrade existing camera hardware?",
+     "a": "No hardware replacement or specialized cameras are required. The software operates with existing cameras by connecting through standard video stream protocols."
+    }
+   ],
+   "intro": [
+    "Ensuring workplace safety is a critical priority for every organization. Leveraging existing cameras with advanced industrial image processing technology, Hype Vision transforms standard IP and CCTV cameras into intelligent safety monitoring solutions. Using our proprietary Hype-Model AI family, the platform analyzes video streams on-premise at the edge, enabling real-time detection and proactive safety management without compromising privacy.",
+    "Our software monitors personal protective equipment (PPE) compliance—such as hard hats, safety vests, and gloves—alongside critical safety risks including forbidden zone intrusions, forklift and pedestrian proximity, fall detection, fire and smoke hazards, and hand hygiene. These capabilities are consolidated into a single user interface that simplifies environmental health and safety (EHS) oversight in accordance with general workplace regulations like 6331 and OSHA.",
+    "With an emphasis on data privacy, GDPR/KVKK compliance, and ease of deployment on existing surveillance infrastructure, Hype Vision’s workplace safety software delivers actionable insights, immediate alerts, and detailed shift reports to support safer, more efficient industrial environments."
    ]
   }
  },

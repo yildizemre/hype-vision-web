@@ -118,6 +118,7 @@ IMG = [
     ("otomotiv|industries/automotive", "/img/sektor/otomotiv.webp"), ("sektor/gida|industries/food", "/img/sektor/gida.webp"), ("sektor/metal|industries/metal", "/img/sektor/imalat.webp"),
     ("medikal|medical", "/img/vaka/med-ok.webp"), ("gida-hattinda", "/img/vaka/gida-idle.webp"), ("harman-stok|stockyard", "/img/vaka/kkd-depo.webp"), ("islak-mendil|wet-wipes", "/img/vaka/mendil-ocr.webp"), ("darbogaz|bottleneck", "/img/vaka/darbogaz.webp"), ("tekstil-hat-a", "/img/vaka/tekstil-bant.webp"), ("tir-yukleme|truck-loading", "/img/vaka/tir-1.webp"), ("fuar|trade-fair", "/img/vaka/fuar-1.webp"), ("acik-alan-duman|outdoor-smoke", "/img/vaka/duman.webp"), ("400-kamera", "/img/vaka/kkd-depo.webp"), ("kaynak-atolyesi|welding-shop", "/img/vaka/kaynak-1.webp"), ("uretim-hatti-verimlilik-analizi|production-line-efficiency-monitoring", "/img/vaka/hat-verimliligi-1.webp"), ("kamera-ile-5s|5s-audit|5s-denetimi", "/img/vaka/5s-denetimi-1.webp"), ("el-hijyeni|hand-hygiene|uv-hand", "/img/vaka/el-hijyeni-1.webp"), ("mobilya-fabrikasi-45|furniture-factory-45|mobilya-kkd", "/img/vaka/mobilya-kkd-1.webp"), ("akaryakit-istasyonu|gas-station-forecourt|akaryakit", "/img/vaka/akaryakit-1.webp"), ("market-alisveris-sepeti|cart-loss-prevention|market-sepet", "/img/vaka/market-sepet-2.webp"), ("tasinabilir-kamera|portable-ai-camera|portable-camera", "/img/vaka/tasinabilir-kamera-1.webp"), ("tekstil-kumas-kalite|textile-fabric-quality|tekstil-kalite", "/img/vaka/tekstil-kalite-1.webp"), ("makine-uretim-sayimi|machine-output-counting|makine-sayim", "/img/vaka/makine-sayim-1.webp"), ("yumurta-siniflandirma|egg-grading|yumurta", "/img/vaka/yumurta-1.webp"), ("forklift-uzerinde-personel|person-riding-forklift|forklift-binme", "/img/vaka/forklift-binme-1.webp"), ("yangin-alev-erken|early-fire-flame|yangin-1|yangin-2", "/img/vaka/yangin-1.webp"), ("kaucuk-lastik|rubber-tire|lastik", "/img/vaka/lastik-2.webp"),
     ("sektor/enerji-petrokimya|industries/energy-petrochemical|energy-petro", "/img/vaka/akaryakit-1.webp"), ("sektor/ilac-farma|industries/pharmaceutical|pharma", "/img/vaka/el-hijyeni-2.webp"),
+    ("isg-yazilimi|workplace-safety-software", "/img/det-kkd.webp"), ("goruntu-isleme-yazilimi", "/img/det-kusbakisi.webp"), ("kalite-kontrol-sistemi", "/img/det-cnc.webp"),
     ("kkd|baret|ppe", "/img/det-kkd.webp"), ("forklift|palet|depo|lojistik|logistics", "/img/det-forklift.webp"),
     ("oee|verimlilik|personel|urun-sayimi|tekstil-hat|production|workforce|counting", "/img/det-hat.webp"),
     ("kalite|yuzey|anomali|fire|metal|otomotiv|quality|anomaly", "/img/det-cnc.webp"),
@@ -432,10 +433,10 @@ def listing(path, title, sub, items, lang="tr"):
 <div class="grid3">{''.join(tile(p, hr, k) for p, hr, k in items)}</div></div>{cta(lang)}"""
     write(path, shell(title, sub, body, path, lang, crumbs=[(u["home"], h), (title, slash(path))], kind="index", items_ld=[(p["title"], hr) for p, hr, k in items]))
 
-GROUPS = {"tr": [("İş sağlığı ve güvenliği", "kkd|baret|forklift|yasakli|dusme|yangin|el-hijyeni"), ("Üretim ve kalite", "oee|urun-sayimi|kalite|yuzey|personel|anomali|5s-denetimi"),
-                 ("Operasyon ve analitik", "kuyruk|kisi|yogunluk|nesne"), ("Altyapı ve uyum", "kvkk|onvif|cctv")],
-          "en": [("Health & safety", "kkd|baret|forklift|yasakli|dusme|yangin|el-hijyeni"), ("Production & quality", "oee|urun-sayimi|kalite|yuzey|personel|anomali|5s-denetimi"),
-                 ("Operations & analytics", "kuyruk|kisi|yogunluk|nesne"), ("Infrastructure & compliance", "kvkk|onvif|cctv")]}
+GROUPS = {"tr": [("İş sağlığı ve güvenliği", "kkd|baret|forklift|yasakli|dusme|yangin|el-hijyeni|isg-yazilimi"), ("Üretim ve kalite", "oee|urun-sayimi|kalite|yuzey|personel|anomali|5s-denetimi"),
+                 ("Operasyon ve analitik", "kuyruk|kisi|yogunluk|nesne"), ("Altyapı ve uyum", "kvkk|onvif|cctv|goruntu-isleme-yaz")],
+          "en": [("Health & safety", "kkd|baret|forklift|yasakli|dusme|yangin|el-hijyeni|isg-yazilimi"), ("Production & quality", "oee|urun-sayimi|kalite|yuzey|personel|anomali|5s-denetimi"),
+                 ("Operations & analytics", "kuyruk|kisi|yogunluk|nesne"), ("Infrastructure & compliance", "kvkk|onvif|cctv|goruntu-isleme-yaz")]}
 
 def solutions_index(lang):
     u = U[lang]; h = H(lang)
