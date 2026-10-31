@@ -83,6 +83,7 @@ ALT = {
  "yumurta-2": ("Yumurta tesisinde birleşen konveyörde yumurtaların yapay zekâ ile tek tek sayılması ve ID ile takibi", "AI counting eggs one by one and tracking them by ID on the merged conveyor at an egg facility"),
  "yumurta-3": ("Yumurta paketleme tesisinde mevcut konveyör ve kameralarla üretim hattının izlenmesi", "Monitoring the production line with existing conveyor and cameras at an egg packing facility"),
  "yumurta-4": ("Yumurta tesisinde paketleme konveyör hattının üstten görünümü ve ROI ile yumurta sayımı", "Top view of the egg packing conveyor line with ROI egg counting at an egg facility"),
+ "yumurta-5": ("Yumurta tavuğu kümesi — yumurtaların toplandığı üretim ortamı", "Layer poultry barn — the production environment where eggs are collected"),
  "forklift-binme-1": ("Depoda forklift/transpalet üstüne binen personelin yapay zekâ ile tespiti ve güvenlik ihlali uyarısı (Person on forklift)", "AI detecting a person riding on a forklift/pallet truck in a warehouse and raising a safety-violation alert (Person on forklift)"),
  "forklift-binme-2": ("Depo koridorunda mevcut güvenlik kamerasıyla forklift ve personel hareketinin izlenmesi", "Monitoring forklift and staff movement with an existing security camera in a warehouse aisle"),
  "yangin-1": ("Kamera ile erken yangın tespiti: 15-20 metreden basketbol topu büyüklüğündeki alevin yapay zekâ ile görülmesi", "Early fire detection with a camera: AI spotting a basketball-sized flame from 15-20 meters"),
