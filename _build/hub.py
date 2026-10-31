@@ -15,7 +15,8 @@ IMG_BY_SECTOR = {"Tekstil": "/img/sektor/tekstil.webp", "Otomotiv": "/img/sektor
  "Gıda üretimi": "/img/sektor/gida.webp", "İçecek ve dolum": "/img/vaka/mendil-ocr.webp", "İlaç ve kozmetik": "/img/vaka/med-ok.webp", "Kimya": "/img/vaka/kkd-depo.webp",
  "Lojistik depo": "/img/sektor/lojistik.webp", "Maden ve taş ocakları": "/img/vaka/kkd-depo.webp", "Çimento ve beton": "/img/vaka/kkd-depo.webp", "Ahşap ve mobilya": "/img/det-hat.webp",
  "Elektronik üretimi": "/img/det-cnc.webp", "Cam ve seramik": "/img/06-cnc-istasyon.webp", "Kağıt ve ambalaj": "/img/vaka/darbogaz.webp", "İSG ve KKD": "/img/det-kkd.webp",
- "Üretim verimliliği": "/img/vaka/tekstil-bant.webp", "Perakende ve mağaza": "/img/sektor/perakende.webp", "Genel makine görüşü": "/img/det-cnc.webp"}
+ "Üretim verimliliği": "/img/vaka/tekstil-bant.webp", "Perakende ve mağaza": "/img/sektor/perakende.webp", "Genel makine görüşü": "/img/det-cnc.webp",
+ "PPE detection": "/img/det-kkd.webp", "Forklift safety": "/img/det-forklift.webp", "Quality inspection": "/img/det-cnc.webp"}
 IMG_BY_TYPE = {"integration": "/img/det-kusbakisi.webp", "compare": "/img/01-kusbakisi.webp", "trouble": "/img/00-genel.webp", "topic": "/img/det-forklift.webp", "glossary": "/img/dijital-ikiz.webp", "city": "/img/01-kusbakisi.webp", "law": "/img/det-kkd.webp"}
 
 # --- İngilizce teknik merkez (yalnızca uluslararası değeri olan tipler; city/law çevrilmez) ---

@@ -50491,6 +50491,590 @@
     "edge video analytics",
     "on-premise video analytics"
    ]
+  },
+  "/en/ppe-detection": {
+   "path": "/en/ppe-detection",
+   "type": "cluster",
+   "sector": "PPE detection",
+   "title": "AI PPE Detection Software for Existing Cameras",
+   "desc": "Detect PPE like hard hats, hi-vis vests, masks, and gloves with AI on your existing RTSP/ONVIF cameras.",
+   "short": "Hype Vision’s AI PPE detection software uses your existing security cameras to monitor PPE compliance in real time, providing alerts and reports while keeping all data local and private.",
+   "intro": [
+    "Ensuring proper use of personal protective equipment (PPE) such as hard hats and hi-vis vests is critical for workplace safety. Hype Vision offers AI-powered PPE detection software that works seamlessly with the cameras you already have installed.",
+    "This solution connects with standard RTSP/ONVIF security cameras and runs on edge devices, processing video on-premises to maintain privacy and data control. It can detect combinations of PPE items and generate alerts and evidence to support safety supervision.",
+    "Designed to support general OSHA-related safety efforts, this software helps organizations monitor PPE compliance efficiently without additional hardware investment. A free pre-assessment is available to evaluate your current setup."
+   ],
+   "sections": [
+    {
+     "h": "What is AI PPE Detection?",
+     "p": [
+      "AI PPE detection uses artificial intelligence to automatically identify whether individuals are wearing required personal protective equipment within defined areas. This includes hard hats, hi-vis vests, masks, and gloves.",
+      "The system analyzes video streams from cameras and detects compliance or non-compliance with safety protocols in real time. Such monitoring supports proactive safety management and helps in evidence collection for audits or inspections."
+     ],
+     "li": [
+      "Automated recognition of multiple PPE types in a single frame",
+      "Real-time visual alerts on missing PPE",
+      "Compliance reports for safety audits",
+      "Supports zonal detection to monitor specific site areas",
+      "Runs on-premise to ensure footage stays local and private"
+     ],
+     "cards": []
+    },
+    {
+     "h": "What AI PPE detection covers",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "Hard Hat Detection",
+       "d": "Per-zone hard hat compliance with evidence clips.",
+       "href": "/en/solutions/hard-hat-detection"
+      },
+      {
+       "t": "PPE, Vest & Glove Detection",
+       "d": "Vest, mask and glove checks in one pass.",
+       "href": "/en/solutions/ppe-detection"
+      },
+      {
+       "t": "Hi-Vis Vest Detection (ANSI)",
+       "d": "High-visibility vest compliance in traffic zones.",
+       "href": "/en/applications/hi-vis-vest-detection-ansi"
+      },
+      {
+       "t": "Restricted Area Monitoring",
+       "d": "Alerts when people enter hazardous zones.",
+       "href": "/en/solutions/restricted-area-monitoring"
+      },
+      {
+       "t": "Fall Detection",
+       "d": "Fall and no-motion alarms for lone work.",
+       "href": "/en/solutions/fall-detection"
+      }
+     ]
+    },
+    {
+     "h": "PPE monitoring by industry",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "Manufacturing",
+       "d": "Shop-floor PPE across lines and machines.",
+       "href": "/en/industries/manufacturing"
+      },
+      {
+       "t": "Warehouse & Logistics",
+       "d": "Vest and hard hat compliance in traffic areas.",
+       "href": "/en/industries/logistics"
+      },
+      {
+       "t": "Energy & Petrochemical",
+       "d": "PPE in high-risk process areas.",
+       "href": "/en/industries/energy-petrochemical"
+      },
+      {
+       "t": "Pharmaceutical",
+       "d": "Gowns, masks and gloves in cleanrooms.",
+       "href": "/en/industries/pharmaceutical"
+      },
+      {
+       "t": "Construction",
+       "d": "Hard hats and vests across active sites.",
+       "href": "/en/industries/construction"
+      },
+      {
+       "t": "Food & Beverage",
+       "d": "Hygiene PPE on production lines.",
+       "href": "/en/industries/food"
+      }
+     ]
+    },
+    {
+     "h": "Related",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "AI Video Analytics",
+       "d": "The platform behind every module.",
+       "href": "/en/video-analytics"
+      },
+      {
+       "t": "CCTV AI Analytics",
+       "d": "How AI attaches to existing CCTV.",
+       "href": "/en/cctv-ai-analytics"
+      }
+     ]
+    },
+    {
+     "h": "How AI PPE Detection Works with Existing Cameras",
+     "p": [
+      "Hype Vision’s platform integrates directly with any RTSP or ONVIF-compatible IP/CCTV camera, allowing you to leverage your current camera infrastructure without needing replacements.",
+      "Video streams are processed on an edge device located on-site, where the Hype-Model AI analyzes the feeds for PPE presence in configurable zones. This edge deployment avoids cloud data transfers, enhancing privacy and lowering latency.",
+      "The AI can identify combinations such as hard hat worn but no hi-vis vest, triggering alerts and flagging footage as evidence. This zonal and combinational detection gives safety managers precise insights to focus their efforts."
+     ],
+     "li": [],
+     "cards": []
+    },
+    {
+     "h": "Deployment and Pilot Process",
+     "p": [
+      "Deployment begins with a free pre-assessment to review your existing cameras and network setup, determining optimal coverage and integration approach.",
+      "The Hype Vision team configures the software for your site’s PPE requirements and zones, enabling tailored detection rules suited to your operational environment.",
+      "During the pilot phase, you receive live alerts, video evidence clips, and compliance reports to evaluate effectiveness before full deployment.",
+      "Because the software is edge-based and brand-agnostic, it works with a wide variety of camera models and scales flexibly with your needs."
+     ],
+     "li": [
+      "No additional camera hardware needed",
+      "Quick installation and configuration",
+      "Customizable detection zones per site layout",
+      "Real-time alerts via multiple channels",
+      "Detailed reporting for compliance tracking"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Why Choose Hype Vision for AI PPE Detection?",
+     "p": [
+      "Hype Vision combines deep AI expertise with an edge/cloud hybrid approach designed for privacy and operational efficiency. Your video remains onsite, meeting strict privacy standards.",
+      "The Hype-Model AI family is continuously refined for high accuracy across PPE types, supporting complex detection scenarios involving multiple items worn simultaneously.",
+      "Being brand-agnostic and compatible with all standard RTSP and ONVIF cameras, Hype Vision allows you to maximize your existing investments without vendor lock-in.",
+      "Based in Turkey with international project experience, Hype Vision offers dedicated support and flexible deployment options tailored to your site’s needs."
+     ],
+     "li": [
+      "Privacy-first, on-prem edge AI processing",
+      "Broad compatibility without camera replacement",
+      "Advanced detection of PPE combinations per zone",
+      "Live alerts, evidence capture, and comprehensive reports",
+      "Free pre-assessment with no obligation"
+     ],
+     "cards": []
+    },
+    {
+     "h": "General Information and Safety Disclaimer",
+     "p": [
+      "This AI PPE detection software supports organizations’ efforts to meet general OSHA-related and workplace safety standards by automating PPE compliance monitoring.",
+      "However, it is not intended as legal advice and does not guarantee regulatory compliance or eliminate the need for human safety practices and audits.",
+      "Organizations should use AI detection as a valuable tool within a broader safety program."
+     ],
+     "li": [],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Can this AI software detect multiple types of PPE at once?",
+     "a": "Yes, it can simultaneously identify hard hats, hi-vis vests, masks, and gloves, and determine if all required PPE combinations are worn in designated zones."
+    },
+    {
+     "q": "Does Hype Vision require new cameras for PPE detection?",
+     "a": "No, the software works with most existing RTSP or ONVIF-supported IP/CCTV cameras, making use of your current infrastructure."
+    },
+    {
+     "q": "How is privacy maintained with AI PPE detection?",
+     "a": "All video processing runs on-edge devices on-premises with no footage transferred externally, ensuring privacy and data security."
+    },
+    {
+     "q": "What kind of alerts does the system provide for missing PPE?",
+     "a": "Real-time alerts can be sent via SMS, email, or integrated safety platforms, accompanied by evidence clips for rapid follow-up."
+    },
+    {
+     "q": "Is the solution compliant with OSHA regulations?",
+     "a": "The system supports general OSHA-related safety monitoring but is not a substitute for legal or regulatory advice. It helps organizations improve PPE compliance as part of a comprehensive safety strategy."
+    }
+   ],
+   "kws": [
+    "ppe detection",
+    "ai ppe detection",
+    "hard hat detection",
+    "ppe compliance monitoring",
+    "hi-vis vest detection",
+    "osha ppe monitoring",
+    "on-prem ppe AI",
+    "rtsp onvif ppe detection"
+   ]
+  },
+  "/en/forklift-safety": {
+   "path": "/en/forklift-safety",
+   "type": "cluster",
+   "sector": "Forklift safety",
+   "title": "AI Forklift Safety & Pedestrian Detection",
+   "desc": "Improve warehouse forklift safety with AI-powered pedestrian detection and collision prevention using existing cameras.",
+   "short": "Hype Vision enhances forklift safety with AI that detects pedestrians and near-miss risks on your existing cameras, delivering on-site alerts and analytics for safer warehouses.",
+   "intro": [
+    "Forklift safety remains a critical priority in busy warehouse environments where vehicle-pedestrian interactions pose significant risks. Hype Vision's AI forklift safety solution uses existing IP/CCTV cameras to detect and alert on hazardous situations, such as pedestrian proximity and potential collisions.",
+    "Our AI works on-premise and on the edge, ensuring video footage never leaves your site, maintaining strict privacy and security. Compatible with a wide range of cameras over RTSP and ONVIF protocols, this solution integrates seamlessly without requiring new hardware investments.",
+    "Designed with general guidance from OSHA powered industrial truck safety principles, our AI enables real-time alerts on near-misses, restricted zone breaches, and speed/path conflicts. Please note, this information is general and not legal advice."
+   ],
+   "sections": [
+    {
+     "h": "What is AI Forklift Safety & Pedestrian Detection?",
+     "p": [
+      "AI forklift safety and pedestrian detection uses advanced artificial intelligence models to monitor interactions between forklifts and pedestrians within warehouse environments. The technology identifies potential collision risks, near-miss events, and unsafe behaviors, aiming to reduce accidents and improve worker safety.",
+      "This solution enhances awareness by tracking forklifts’ movements, detecting pedestrian presence in restricted or high-risk zones, and monitoring speed and path conflicts. Real-time alerts combined with actionable analytics support proactive safety management on the warehouse floor."
+     ],
+     "li": [
+      "Detect pedestrian presence near forklifts",
+      "Alert on vehicle-pedestrian proximity and near-misses",
+      "Monitor forklift speed and path conflicts",
+      "Identify breaches of restricted zones",
+      "Provide analytics for safety improvements"
+     ],
+     "cards": []
+    },
+    {
+     "h": "What forklift safety AI detects",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "Forklift–Pedestrian Detection",
+       "d": "Near-miss alerts where vehicles and people cross.",
+       "href": "/en/solutions/forklift-pedestrian-detection"
+      },
+      {
+       "t": "Restricted Area Monitoring",
+       "d": "Alerts on entry to no-go or vehicle-only zones.",
+       "href": "/en/solutions/restricted-area-monitoring"
+      },
+      {
+       "t": "PPE & Hard Hat Detection",
+       "d": "Hi-vis and hard hat compliance for drivers and walkers.",
+       "href": "/en/solutions/ppe-detection"
+      },
+      {
+       "t": "Fall Detection",
+       "d": "Fall and no-motion alarms in logistics areas.",
+       "href": "/en/solutions/fall-detection"
+      }
+     ]
+    },
+    {
+     "h": "Forklift safety by industry",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "Warehouse & Logistics",
+       "d": "Aisles, loading docks and stockyards.",
+       "href": "/en/industries/logistics"
+      },
+      {
+       "t": "Manufacturing",
+       "d": "Internal logistics around machines and lines.",
+       "href": "/en/industries/manufacturing"
+      },
+      {
+       "t": "Energy & Petrochemical",
+       "d": "Vehicle-pedestrian safety in plant areas.",
+       "href": "/en/industries/energy-petrochemical"
+      },
+      {
+       "t": "Food & Beverage",
+       "d": "Forklift traffic in cold stores and warehouses.",
+       "href": "/en/industries/food"
+      }
+     ]
+    },
+    {
+     "h": "Related",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "Warehouse Safety AI",
+       "d": "Full warehouse safety application.",
+       "href": "/en/applications/warehouse-safety-ai"
+      },
+      {
+       "t": "Forklift–Pedestrian Safety AI",
+       "d": "The dedicated application page.",
+       "href": "/en/applications/forklift-pedestrian-safety-ai"
+      },
+      {
+       "t": "AI Video Analytics",
+       "d": "The platform behind every module.",
+       "href": "/en/video-analytics"
+      }
+     ]
+    },
+    {
+     "h": "How It Works with Existing Cameras (RTSP/ONVIF & Edge)",
+     "p": [
+      "Hype Vision’s AI forklift safety solution integrates with your current IP or CCTV camera network via standard RTSP or ONVIF protocols. There is no need for specialized cameras or new wiring, which helps keep deployment simple and cost-effective.",
+      "The AI runs on local edge devices or on-premise servers, processing video streams within your facility. This architecture ensures that recorded footage and analytics data remain private and secure onsite without uploading to external cloud services.",
+      "Our “Hype-Model” family of AI models is optimized for reliable detection in warehouse environments, adapting to variable lighting and activity conditions from your existing cameras."
+     ],
+     "li": [
+      "Plug and play with RTSP/ONVIF compliant cameras",
+      "On-premise and edge processing for data privacy",
+      "No cloud dependency—video never leaves site",
+      "Optimized AI models for warehouse forklift detection",
+      "Works with brand-agnostic camera systems"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Deployment and Pilot Process",
+     "p": [
+      "Starting with a free pre-assessment, Hype Vision evaluates your existing camera infrastructure and safety objectives to design a tailored forklift safety AI deployment plan.",
+      "The process includes connecting your camera feeds, configuring AI parameters for your warehouse layout, and running pilot tests to fine-tune detection accuracy and alert thresholds.",
+      "After successful pilot validation, the solution scales to full operation with ongoing support and analytics to help safety managers monitor forklift-pedestrian interactions and near-miss trends."
+     ],
+     "li": [
+      "Free pre-assessment of cameras and goals",
+      "Pilot deployment with real-time AI monitoring",
+      "Adjustments and optimization for accuracy",
+      "Scaling to full coverage warehouse-wide",
+      "Continuous support and analytics reporting"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Why Choose Hype Vision for Forklift Safety AI?",
+     "p": [
+      "Hype Vision offers a privacy-focused, flexible AI solution that leverages your existing camera investments without adding complexity or cloud-related data risks.",
+      "Our AI models are trained specifically to enhance industrial vehicle safety in busy warehouse settings, addressing proximity alerts, restricted zones, and collision prevention with concrete, actionable insights.",
+      "Since 2020, our international experience and technology expertise emphasize on-premise solutions that align with general safety standards and improve warehouse operational awareness without legal guarantees."
+     ],
+     "li": [
+      "Privacy-friendly edge/on-prem AI processing",
+      "Compatible with any RTSP/ONVIF camera brand",
+      "Focus on forklift-pedestrian safety analytics",
+      "International technology with proven approach",
+      "Non-cloud, data-secure architecture"
+     ],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Can the AI system work with my current warehouse cameras?",
+     "a": "Yes, Hype Vision’s AI integrates with existing IP/CCTV cameras that support RTSP or ONVIF protocols, requiring no additional camera hardware."
+    },
+    {
+     "q": "Does using this AI solution mean footage is sent to the cloud?",
+     "a": "No, all processing is done on-premise or at the edge, ensuring video footage remains within your facility for privacy and security."
+    },
+    {
+     "q": "How does the system alert warehouse staff about safety risks?",
+     "a": "The AI generates real-time alerts and notifications for forklift-pedestrian proximity, near-miss events, restricted zone breaches, and potential path conflicts to prompt immediate action."
+    },
+    {
+     "q": "Is this system a replacement for OSHA compliance requirements?",
+     "a": "No, this system provides general safety monitoring and should be used alongside existing workplace safety programs; it does not constitute legal advice or compliance assurance."
+    },
+    {
+     "q": "What is the deployment process like?",
+     "a": "Deployment begins with a free pre-assessment, followed by a pilot phase to configure and validate AI detection performance before scaling to full operational use."
+    }
+   ],
+   "kws": [
+    "forklift safety ai",
+    "forklift pedestrian detection",
+    "warehouse forklift safety",
+    "prevent forklift accidents",
+    "powered industrial truck safety",
+    "forklift collision prevention",
+    "near-miss detection",
+    "forklift safety analytics"
+   ]
+  },
+  "/en/quality-inspection": {
+   "path": "/en/quality-inspection",
+   "type": "cluster",
+   "sector": "Quality inspection",
+   "title": "AI Visual Quality Inspection for Production Lines",
+   "desc": "Enhance production line quality control with Hype Vision's AI visual inspection using existing cameras.",
+   "short": "Hype Vision offers AI-powered visual quality inspection on production lines using existing IP/CCTV cameras, delivering real-time defect detection at line speed with privacy-focused edge computing.",
+   "intro": [
+    "Maintaining high product quality on production lines is crucial for operational efficiency and customer satisfaction. AI visual quality inspection automates this process, identifying defects such as scratches, dents, stains, and misalignments quickly and accurately.",
+    "Hype Vision’s solution integrates seamlessly with existing industrial IP and CCTV cameras over RTSP/ONVIF protocols, adding advanced AI-powered defect detection capabilities without costly hardware changes. It operates on-premise at the edge, ensuring data privacy and reducing latency for fast decision-making.",
+    "Designed to work under varying lighting and operational conditions, Hype Vision’s 'Hype-Model' family leverages deep learning to detect surface defects and packaging issues with precision. This approach supports a flexible, brand-agnostic deployment, ideal for diverse production environments."
+   ],
+   "sections": [
+    {
+     "h": "What is AI Visual Quality Inspection?",
+     "p": [
+      "AI visual quality inspection uses advanced algorithms to automatically detect manufacturing defects during production. Unlike traditional machine vision systems that rely on fixed rules and controlled lighting, AI models analyze images and video feeds to identify anomalies such as scratches, missing parts, stains, dents, and packaging or label defects. This enables faster, more adaptable, and scalable quality control."
+     ],
+     "li": [
+      "Detects surface defects and misalignments at production line speed",
+      "Uses deep learning models trained on variable conditions, not limited to controlled environments",
+      "Supports automated optical inspection replacing manual checks for consistency and speed"
+     ],
+     "cards": []
+    },
+    {
+     "h": "What AI quality inspection detects",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "Visual Quality Inspection",
+       "d": "Line-speed defect and anomaly detection.",
+       "href": "/en/solutions/visual-quality-inspection"
+      },
+      {
+       "t": "Surface Defect Detection",
+       "d": "Scratches, dents, stains and deformation.",
+       "href": "/en/solutions/surface-defect-detection"
+      },
+      {
+       "t": "Visual Anomaly Detection",
+       "d": "Unexpected conditions and process deviations.",
+       "href": "/en/solutions/anomaly-detection"
+      },
+      {
+       "t": "Object & Product Counting",
+       "d": "Automatic counts at lines and packing.",
+       "href": "/en/solutions/product-counting"
+      }
+     ]
+    },
+    {
+     "h": "Quality inspection by industry",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "Manufacturing",
+       "d": "In-line checks across assembly and machining.",
+       "href": "/en/industries/manufacturing"
+      },
+      {
+       "t": "Textile",
+       "d": "Fabric defects: holes, stains, pattern faults.",
+       "href": "/en/industries/textile"
+      },
+      {
+       "t": "Food & Beverage",
+       "d": "Packaging, labels and fill-level checks.",
+       "href": "/en/industries/food"
+      },
+      {
+       "t": "Pharmaceutical",
+       "d": "Packaging and label verification.",
+       "href": "/en/industries/pharmaceutical"
+      },
+      {
+       "t": "Automotive",
+       "d": "Part presence, alignment and surface checks.",
+       "href": "/en/industries/automotive"
+      },
+      {
+       "t": "Metal",
+       "d": "Surface and weld quality on metal parts.",
+       "href": "/en/industries/metal"
+      }
+     ]
+    },
+    {
+     "h": "Related",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "AI Video Analytics",
+       "d": "The platform behind every module.",
+       "href": "/en/video-analytics"
+      },
+      {
+       "t": "Industrial Computer Vision",
+       "d": "The broader industrial CV overview.",
+       "href": "/en/industrial-computer-vision"
+      }
+     ]
+    },
+    {
+     "h": "How Hype Vision Works with Existing Cameras",
+     "p": [
+      "Hype Vision connects directly to your current IP or CCTV cameras using standard protocols like RTSP and ONVIF, avoiding costly camera replacements. This approach leverages your existing hardware investments while adding cutting-edge AI capabilities. The AI processing runs on-premise or at the edge, keeping footage and data local to your facility, which enhances privacy and security."
+     ],
+     "li": [
+      "Supports brand-agnostic cameras including Hikvision, Dahua, Axis, Bosch, Hanwha, and more",
+      "Processes video feeds in real-time on edge devices for rapid defect and anomaly detection",
+      "Requires minimal infrastructure changes; uses existing camera networks and lighting setups when needed"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Deployment and Pilot Programs",
+     "p": [
+      "Deploying Hype Vision’s AI visual inspection solution begins with a free pre-assessment to evaluate your production line’s specific needs and camera setup. This helps identify the optimal Hype-Model configuration and integration approach for your facility.",
+      "Pilot programs involve setting up the AI on local edge devices connected to your cameras and collecting data during normal production. AI models are trained and fine-tuned on your specific product types and defect profiles, delivering actionable insights quickly.",
+      "Ongoing support ensures the models adapt to evolving line conditions and new defect types, maintaining inspection accuracy without major system overhauls."
+     ],
+     "li": [
+      "Comprehensive assessment of existing production cameras and lighting",
+      "Customizable AI models trained on your product and defect data",
+      "Edge deployment for on-site privacy and minimal latency",
+      "Scalable from single lines to full production facilities"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Why Choose Hype Vision for Your Quality Inspection Needs?",
+     "p": [
+      "Hype Vision’s AI visual inspection solution uniquely combines broad support for existing camera systems with privacy-conscious edge computing. Operating entirely on-premise, it eliminates risks associated with cloud-based video processing.",
+      "The 'Hype-Model' family is designed and continuously updated to handle variable industrial conditions where lighting and environments can fluctuate, providing more reliable detection than traditional machine vision systems.",
+      "Operating from Turkey’s Bilisim Vadisi tech hub since 2020, Hype Vision has executed successful international projects, bringing practical experience without dependency on any single camera or VMS brand. This flexibility allows easy integration into diverse production environments."
+     ],
+     "li": [
+      "AI that adapts to changing line conditions and variable lighting",
+      "No requirement for camera hardware upgrades or changes",
+      "Privacy-friendly, on-premise edge deployment",
+      "Flexible, brand-agnostic compatibility for existing systems",
+      "Experience from global projects without typical vendor lock-in"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Safety and Compliance Considerations",
+     "p": [
+      "Integrating AI-powered quality inspection can help support occupational safety and quality compliance by detecting product defects and preventing faulty items from reaching customers. However, it is important to note that this information is provided as general guidance and not legal advice regarding OSHA standards or other regulatory compliance.",
+      "Using AI inspection alongside existing safety protocols can contribute to more consistent production monitoring and early anomaly detection, which may assist in maintaining safer, more reliable manufacturing processes."
+     ],
+     "li": [
+      "Supports quality and safety monitoring but does not replace regulatory compliance requirements",
+      "AI inspection alerts can reduce risks by flagging defects early",
+      "General information only; consult experts for specific compliance guidance"
+     ],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Can Hype Vision work with my existing IP or CCTV cameras?",
+     "a": "Yes, Hype Vision is designed to connect over RTSP and ONVIF protocols, enabling use with a wide range of existing industrial IP and CCTV cameras without requiring hardware changes."
+    },
+    {
+     "q": "Does the AI inspection require cloud computing?",
+     "a": "No, Hype Vision runs entirely on-premise or at the edge, so all video analysis and defect detection happen locally to maximize privacy and reduce latency."
+    },
+    {
+     "q": "What types of defects can the AI detect?",
+     "a": "The AI can identify common surface defects such as scratches, dents, stains, missing or misaligned parts, and packaging or label issues, all at production line speed."
+    },
+    {
+     "q": "How is the AI trained for my production line?",
+     "a": "Hype Vision offers a free pre-assessment followed by pilot programs where the AI models are trained and fine-tuned using your specific product images and defect examples to ensure accurate detection."
+    },
+    {
+     "q": "Is this solution compliant with industrial safety regulations?",
+     "a": "The solution supports safety and quality inspection efforts, but information provided is general and not legal advice. Customers should consult compliance experts to verify alignment with relevant regulations."
+    }
+   ],
+   "kws": [
+    "ai quality inspection",
+    "visual inspection software",
+    "automated optical inspection",
+    "defect detection ai",
+    "surface defect detection",
+    "in-line quality control",
+    "edge ai inspection",
+    "production line defect detection"
+   ]
   }
  }
 }
