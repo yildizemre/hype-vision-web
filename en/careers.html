@@ -676,13 +676,15 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 .lg p{color:var(--mute);margin-top:8px;font-size:15px}
 .lg span{margin-top:auto;font-weight:600;font-size:14px;padding-top:20px}
 /* partnership */
-.orbs{display:grid;grid-template-columns:repeat(3,1fr);gap:26px 18px;justify-items:center}
-.orb{text-align:center}
-.orb .c{width:clamp(96px,10vw,140px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 0 8px #fff,0 0 0 9px var(--line);margin:0 auto}
-.orb .c img{max-width:62%;max-height:40%;object-fit:contain;filter:brightness(0) invert(1)}
-.orb .c b{color:#fff;font-size:clamp(18px,2vw,26px);font-weight:700;letter-spacing:-.01em}
-.orb small{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-top:16px}
-.orb span{font-size:13px;color:var(--mute)}
+.orbs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.orb{position:relative;text-align:left;background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:20px 18px;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.orb:hover{transform:translateY(-4px);box-shadow:0 22px 44px -26px rgba(0,0,0,.45);border-color:transparent}
+.orb .c{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;margin-bottom:15px}
+.orb .c svg{width:25px;height:25px;stroke-width:1.9}
+.orb b.ot{display:block;font-size:16px;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
+.orb span{display:block;font-size:13px;color:var(--mute);margin-top:3px}
+.orb .ar{position:absolute;top:22px;right:18px;color:var(--mute);opacity:0;transform:translateX(-5px);transition:.22s ease}
+.orb:hover .ar{opacity:.55;transform:none}
 .flow{background:#141516;border-radius:14px;padding:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .flow div{border-radius:10px;background:#232427;color:#fff;padding:18px;min-height:170px;display:flex;flex-direction:column;box-shadow:inset 0 0 0 1px #34363a}
 .flow div.on{background:var(--pill);color:var(--pillInk)}
@@ -717,7 +719,7 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 .build h2{font-size:clamp(34px,4.6vw,64px);font-weight:600;letter-spacing:-.03em;line-height:1.05;max-width:16ch}
 .build p{color:#B8BBBF;max-width:56ch;margin-top:16px}
 .build .row-btn a.btn2{background:var(--pill);color:var(--pillInk)}
-@media (max-width:900px){.split,.al,.dk .grid,.area{grid-template-columns:1fr;gap:26px}.stat4{grid-template-columns:1fr 1fr}.val3,.legal3,.flow,.f4{grid-template-columns:1fr}.orbs{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:900px){.split,.al,.dk .grid,.area{grid-template-columns:1fr;gap:26px}.stat4{grid-template-columns:1fr 1fr}.val3,.legal3,.flow,.f4{grid-template-columns:1fr}.orbs{grid-template-columns:1fr 1fr}}
 </style><div class="wrap">
 <div class="crumb rv"><a href="/en/">Home</a> / <a href="/en/about">Company</a> / <span>Careers</span></div>
 <div class="split" style="margin-top:30px">

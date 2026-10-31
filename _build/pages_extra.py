@@ -46,13 +46,15 @@ CSS = """<style>
 .lg p{color:var(--mute);margin-top:8px;font-size:15px}
 .lg span{margin-top:auto;font-weight:600;font-size:14px;padding-top:20px}
 /* partnership */
-.orbs{display:grid;grid-template-columns:repeat(3,1fr);gap:26px 18px;justify-items:center}
-.orb{text-align:center}
-.orb .c{width:clamp(96px,10vw,140px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 0 8px #fff,0 0 0 9px var(--line);margin:0 auto}
-.orb .c img{max-width:62%;max-height:40%;object-fit:contain;filter:brightness(0) invert(1)}
-.orb .c b{color:#fff;font-size:clamp(18px,2vw,26px);font-weight:700;letter-spacing:-.01em}
-.orb small{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-top:16px}
-.orb span{font-size:13px;color:var(--mute)}
+.orbs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.orb{position:relative;text-align:left;background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:20px 18px;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.orb:hover{transform:translateY(-4px);box-shadow:0 22px 44px -26px rgba(0,0,0,.45);border-color:transparent}
+.orb .c{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;margin-bottom:15px}
+.orb .c svg{width:25px;height:25px;stroke-width:1.9}
+.orb b.ot{display:block;font-size:16px;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
+.orb span{display:block;font-size:13px;color:var(--mute);margin-top:3px}
+.orb .ar{position:absolute;top:22px;right:18px;color:var(--mute);opacity:0;transform:translateX(-5px);transition:.22s ease}
+.orb:hover .ar{opacity:.55;transform:none}
 .flow{background:#141516;border-radius:14px;padding:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .flow div{border-radius:10px;background:#232427;color:#fff;padding:18px;min-height:170px;display:flex;flex-direction:column;box-shadow:inset 0 0 0 1px #34363a}
 .flow div.on{background:var(--pill);color:var(--pillInk)}
@@ -87,7 +89,7 @@ CSS = """<style>
 .build h2{font-size:clamp(34px,4.6vw,64px);font-weight:600;letter-spacing:-.03em;line-height:1.05;max-width:16ch}
 .build p{color:#B8BBBF;max-width:56ch;margin-top:16px}
 .build .row-btn a.btn2{background:var(--pill);color:var(--pillInk)}
-@media (max-width:900px){.split,.al,.dk .grid,.area{grid-template-columns:1fr;gap:26px}.stat4{grid-template-columns:1fr 1fr}.val3,.legal3,.flow,.f4{grid-template-columns:1fr}.orbs{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:900px){.split,.al,.dk .grid,.area{grid-template-columns:1fr;gap:26px}.stat4{grid-template-columns:1fr 1fr}.val3,.legal3,.flow,.f4{grid-template-columns:1fr}.orbs{grid-template-columns:1fr 1fr}}
 </style>"""
 
 TXT = {
@@ -295,8 +297,17 @@ def run(c, lang="tr"):
 
     # ---- İş ortaklığı / Partners
     COL = ["#EF6A3A", "#1FAE8C", "#D94C7A", "#7B6CF0", "#E5B92E", "#2F80ED"]
-    INNER = ['<img src="/img/brand/milestone.png" alt="">', "<b>ERP</b>", "<b>PLC</b>", "<b>API</b>", "<b>NVR</b>", "<b>SMS</b>"]
-    orb_html = "".join(f'<div class="orb rv"><div class="c" style="background:{COL[i]}">{INNER[i]}</div><small>{a}</small><span>{b}</span></div>' for i, (a, b) in enumerate(t["orbs"]))
+    _SV = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"'
+    ICON = [
+        f'<svg {_SV}><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>',
+        f'<svg {_SV}><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>',
+        f'<svg {_SV}><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg>',
+        f'<svg {_SV}><path d="m8 8-4 4 4 4M16 8l4 4-4 4"/></svg>',
+        f'<svg {_SV}><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m16 10 6-3v10l-6-3"/></svg>',
+        f'<svg {_SV}><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></svg>',
+    ]
+    AR = '<svg class="ar" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>'
+    orb_html = "".join(f'<div class="orb rv"><div class="c" style="background:{COL[i]}1a;color:{COL[i]}">{ICON[i]}</div><b class="ot">{a}</b><span>{b}</span>{AR}</div>' for i, (a, b) in enumerate(t["orbs"]))
     flow = "".join(f'<div{" class=on" if i==1 else ""}><small>0{i+1}</small><b>{a}</b><p>{b}</p></div>' for i, (a, b) in enumerate(t["flow"]))
     dots = ["#2F80ED", "#D94C7A", "#1FAE8C", "#EF6A3A"]
     fors = "".join(f'<div><i style="background:{dots[i]}"></i><b>{a}</b><p>{b}</p></div>' for i, (a, b) in enumerate(t["fors"]))

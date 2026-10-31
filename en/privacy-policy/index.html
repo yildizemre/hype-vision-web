@@ -676,13 +676,15 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 .lg p{color:var(--mute);margin-top:8px;font-size:15px}
 .lg span{margin-top:auto;font-weight:600;font-size:14px;padding-top:20px}
 /* partnership */
-.orbs{display:grid;grid-template-columns:repeat(3,1fr);gap:26px 18px;justify-items:center}
-.orb{text-align:center}
-.orb .c{width:clamp(96px,10vw,140px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 0 8px #fff,0 0 0 9px var(--line);margin:0 auto}
-.orb .c img{max-width:62%;max-height:40%;object-fit:contain;filter:brightness(0) invert(1)}
-.orb .c b{color:#fff;font-size:clamp(18px,2vw,26px);font-weight:700;letter-spacing:-.01em}
-.orb small{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-top:16px}
-.orb span{font-size:13px;color:var(--mute)}
+.orbs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.orb{position:relative;text-align:left;background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:20px 18px;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.orb:hover{transform:translateY(-4px);box-shadow:0 22px 44px -26px rgba(0,0,0,.45);border-color:transparent}
+.orb .c{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;margin-bottom:15px}
+.orb .c svg{width:25px;height:25px;stroke-width:1.9}
+.orb b.ot{display:block;font-size:16px;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
+.orb span{display:block;font-size:13px;color:var(--mute);margin-top:3px}
+.orb .ar{position:absolute;top:22px;right:18px;color:var(--mute);opacity:0;transform:translateX(-5px);transition:.22s ease}
+.orb:hover .ar{opacity:.55;transform:none}
 .flow{background:#141516;border-radius:14px;padding:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .flow div{border-radius:10px;background:#232427;color:#fff;padding:18px;min-height:170px;display:flex;flex-direction:column;box-shadow:inset 0 0 0 1px #34363a}
 .flow div.on{background:var(--pill);color:var(--pillInk)}
@@ -717,7 +719,7 @@ body:has(.ck-bar:not([hidden])) .hvchat{bottom:120px}
 .build h2{font-size:clamp(34px,4.6vw,64px);font-weight:600;letter-spacing:-.03em;line-height:1.05;max-width:16ch}
 .build p{color:#B8BBBF;max-width:56ch;margin-top:16px}
 .build .row-btn a.btn2{background:var(--pill);color:var(--pillInk)}
-@media (max-width:900px){.split,.al,.dk .grid,.area{grid-template-columns:1fr;gap:26px}.stat4{grid-template-columns:1fr 1fr}.val3,.legal3,.flow,.f4{grid-template-columns:1fr}.orbs{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:900px){.split,.al,.dk .grid,.area{grid-template-columns:1fr;gap:26px}.stat4{grid-template-columns:1fr 1fr}.val3,.legal3,.flow,.f4{grid-template-columns:1fr}.orbs{grid-template-columns:1fr 1fr}}
 </style><div class="wrap"><div class="crumb rv"><a href="/en/">Home</a> / <a href="/en/legal">Legal</a> / <span>Privacy Policy</span></div>
 <div class="rv" style="margin-top:30px"><div class="k-eyebrow">Legal</div><h1 class="bigh">Privacy Policy</h1><p class='lead2'>How we collect, process and protect your personal data, explained transparently.</p></div>
 <div style="margin-top:40px"><div class="sec2 rv"><h2>Introduction</h2><div class="c"><p>This Privacy Policy explains how your personal data is collected, processed, and protected on the hypevisionlab.com website and Hype Vision platform operated by Hype Vision (“Hype Vision”, “we”).</p><p>We act in accordance with Law No. 6698 on the Protection of Personal Data (“KVKK”) and related legislation.</p></div></div><div class="sec2 rv"><h2>Data controller</h2><div class="c"><p>Hype Vision — Bilişim Vadisi, Hightech Building, Kemal Nehrozoğlu Cd. 400. Sokak, 41400 Gebze/Kocaeli, Turkey</p><p>Email: info@hypevisionlab.com</p></div></div><div class="sec2 rv"><h2>Data collected</h2><div class="c"><p>Name, surname, company, email, phone, and message content you share via our contact form, email, or phone.</p><p>During platform use: user account information, role definitions, session records, and configuration preferences.</p><p>Technical data: IP address, browser type, device information, cookie data, and site usage statistics.</p><p>Image and analytics data processed under Hype Vision services are handled per customer contract and KVKK; raw video is not archived long-term by default.</p></div></div><div class="sec2 rv"><h2>Purposes of processing</h2><div class="c"><p>Service delivery, discovery meetings, and responding to contact requests.</p><p>Platform security, performance monitoring, and technical support.</p><p>Fulfillment of legal obligations.</p><p>Marketing communication (newsletter, etc.) with your explicit consent.</p></div></div><div class="sec2 rv"><h2>Data sharing</h2><div class="c"><p>Your personal data may be shared with infrastructure providers (hosting, email) necessary to deliver the service, under limited and contractual safeguards.</p><p>Data may be shared with authorized public institutions when legally required.</p><p>Your personal data is not sold to third parties.</p></div></div><div class="sec2 rv"><h2>Retention period</h2><div class="c"><p>Data is retained for as long as required by the processing purpose and legal retention obligations; it is deleted, destroyed, or anonymized when the period ends.</p></div></div><div class="sec2 rv"><h2>Your rights (KVKK Art. 11)</h2><div class="c"><p>You have the right to learn whether your personal data is processed, request information, correction, deletion, objection, and compensation for damage.</p><p>You may send requests to info@hypevisionlab.com.</p></div></div><div class="sec2 rv"><h2>Security</h2><div class="c"><p>Access control, encryption, network security, and role-based authorization are applied to protect your data.</p></div></div><div class="sec2 rv"><h2>Policy updates</h2><div class="c"><p>This policy may be updated. The current version is always published on this page.</p><p>Have questions?</p><p>Contact us about privacy or terms of service.</p></div></div></div></div>
