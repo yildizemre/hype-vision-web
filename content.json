@@ -14260,8 +14260,8 @@
   },
   "/cctv-yapay-zeka": {
    "path": "/en/cctv-ai-analytics",
-   "title": "Adding AI analytics to existing CCTV cameras",
-   "desc": "Can existing CCTV cameras be used for AI? RTSP/IP camera basics, edge and on-premise processing, real-time detection, alerts, dashboards, API and VMS integration concepts, privacy and pilot methodology.",
+   "title": "CCTV AI Analytics — Add AI to Your Existing CCTV Cameras",
+   "desc": "CCTV AI analytics turns the CCTV/IP cameras you already have into real-time detection, alerts and dashboards — RTSP/ONVIF, on-premise, no new hardware. Free camera pre-assessment.",
    "date": "",
    "specs": [],
    "sections": [
@@ -15739,8 +15739,8 @@
   },
   "/endustriyel-goruntu-isleme": {
    "path": "/en/industrial-computer-vision",
-   "title": "Industrial computer vision and AI video analytics",
-   "desc": "What industrial computer vision is, how existing CCTV is used for AI analytics, edge vs on-premise vs cloud, manufacturing use cases, camera requirements, deployment, privacy and pilots.",
+   "title": "Industrial Computer Vision for Factories & Plants",
+   "desc": "Industrial computer vision adds AI video analytics to the CCTV you already have: PPE, forklift–pedestrian, quality and OEE. Edge/on-premise, brand-agnostic. Free pre-assessment.",
    "date": "",
    "specs": [],
    "sections": [
@@ -50286,6 +50286,210 @@
     "production line monitoring ai",
     "machine utilization cameras",
     "oee video analytics"
+   ]
+  },
+  "/en/video-analytics": {
+   "path": "/en/video-analytics",
+   "type": "cluster",
+   "sector": "Video analytics overview",
+   "title": "AI Video Analytics Software for Existing Cameras",
+   "desc": "AI video analytics on the cameras you already have — real-time detection, alerts and dashboards for safety, quality and operations. On-premise/edge, brand-agnostic, privacy-first.",
+   "short": "Video analytics turns raw camera feeds into real-time events and metrics. Hype Vision runs AI video analytics on your existing RTSP/ONVIF cameras, on-premise — no rip-and-replace, no cloud dependency.",
+   "intro": [
+    "AI video analytics is software that watches your camera streams and automatically detects events, measures activity and raises alerts — so people don't have to stare at monitors.",
+    "Hype Vision adds this layer to the CCTV/IP cameras you already run. Streams are read over RTSP/ONVIF and analyzed on an on-premise edge server with the Hype-Model family, so footage never has to leave your facility.",
+    "This page explains what AI video analytics is, how it runs on existing cameras, what it can detect and measure, and how a short pilot gets you to production."
+   ],
+   "sections": [
+    {
+     "h": "What is AI video analytics?",
+     "p": [
+      "AI video analytics applies computer-vision models to live or recorded video to recognize objects, people and conditions, then turns them into structured events, counts and metrics. It replaces manual monitoring with continuous, consistent detection.",
+      "Unlike basic motion detection, modern video analytics understands context: it can tell a person from a forklift, a missing hard hat from a worn one, or a blocked aisle from a clear one — and only alerts when it matters."
+     ],
+     "li": [
+      "Real-time detection and alerts instead of after-the-fact review",
+      "Objective, 24/7 monitoring that doesn't fatigue",
+      "Structured data (events, counts, dwell times) for dashboards and reports",
+      "Evidence clips attached to every event"
+     ]
+    },
+    {
+     "h": "How it works on your existing cameras",
+     "p": [
+      "You don't need new cameras or a forklift upgrade. Hype Vision connects to your current IP/CCTV cameras over RTSP or ONVIF, decodes the stream on a local GPU/edge server, runs the detection models and pushes results to a dashboard, API or VMS.",
+      "Processing stays on-premise at the edge, which keeps latency low and video inside your network — important for privacy and for sites with limited or no internet."
+     ],
+     "li": [
+      "Brand-agnostic: works with Hikvision, Dahua, Axis, Bosch, Hanwha and any RTSP/ONVIF camera",
+      "Edge / on-premise inference — footage stays in your facility",
+      "One camera can feed several analytics at once",
+      "Results via dashboard, webhook/REST API, PLC or messaging"
+     ]
+    },
+    {
+     "h": "What you can detect and measure",
+     "p": [
+      "The same platform runs many analytics modules. Start with one or two and add more on the same cameras over time."
+     ],
+     "cards": [
+      {
+       "t": "PPE & Hard Hat Detection",
+       "d": "Hard hat, vest, mask and glove compliance by zone.",
+       "href": "/en/solutions/ppe-detection"
+      },
+      {
+       "t": "Forklift–Pedestrian Safety",
+       "d": "Near-miss alerts where vehicles and people cross.",
+       "href": "/en/solutions/forklift-pedestrian-detection"
+      },
+      {
+       "t": "Restricted Area Monitoring",
+       "d": "Alerts when people enter hazardous or off-limits zones.",
+       "href": "/en/solutions/restricted-area-monitoring"
+      },
+      {
+       "t": "Fall Detection",
+       "d": "Fall and no-motion alarms for lone and high-risk work.",
+       "href": "/en/solutions/fall-detection"
+      },
+      {
+       "t": "Fire & Smoke Detection",
+       "d": "Early flame and smoke detection from camera feeds.",
+       "href": "/en/solutions/fire-smoke-detection"
+      },
+      {
+       "t": "Visual Quality Inspection",
+       "d": "Line-speed defect and anomaly detection.",
+       "href": "/en/solutions/visual-quality-inspection"
+      },
+      {
+       "t": "Production / OEE Monitoring",
+       "d": "Runtime, micro-stops and cycle time without PLC data.",
+       "href": "/en/solutions/production-line-monitoring"
+      },
+      {
+       "t": "Object & Product Counting",
+       "d": "Automatic counts at lines, loading and stock points.",
+       "href": "/en/solutions/product-counting"
+      }
+     ]
+    },
+    {
+     "h": "On-premise vs cloud video analytics",
+     "p": [
+      "Hype Vision runs on-premise by default. For factories, warehouses and energy sites this means lower latency, no recurring bandwidth cost to stream video out, and footage that stays inside your network for privacy and compliance.",
+      "Cloud can still be used for dashboards or multi-site reporting; the heavy video processing stays at the edge."
+     ],
+     "li": [
+      "Lower latency for real-time safety triggers",
+      "No video leaves the site unless you choose to send it",
+      "Works on air-gapped or low-bandwidth networks",
+      "Predictable cost — no per-stream cloud egress"
+     ],
+     "cards": [
+      {
+       "t": "On-premise vs cloud — detailed comparison",
+       "d": "When edge wins and when cloud helps.",
+       "href": "/en/comparisons/on-premise-vs-cloud-video-analytics"
+      }
+     ]
+    },
+    {
+     "h": "Video analytics by industry",
+     "p": [
+      "The modules combine differently per sector. Explore how teams apply AI video analytics on their existing cameras:"
+     ],
+     "cards": [
+      {
+       "t": "Manufacturing",
+       "d": "Safety, quality and OEE on the shop floor.",
+       "href": "/en/industries/manufacturing"
+      },
+      {
+       "t": "Warehouse & Logistics",
+       "d": "Forklift–pedestrian, loading and stockyard analytics.",
+       "href": "/en/industries/logistics"
+      },
+      {
+       "t": "Energy & Petrochemical",
+       "d": "PPE, restricted areas and early fire/smoke detection.",
+       "href": "/en/industries/energy-petrochemical"
+      },
+      {
+       "t": "Pharmaceutical",
+       "d": "Hand hygiene, PPE and visual quality in cleanrooms.",
+       "href": "/en/industries/pharmaceutical"
+      },
+      {
+       "t": "Food & Beverage",
+       "d": "Hygiene, packaging and line efficiency.",
+       "href": "/en/industries/food"
+      },
+      {
+       "t": "Retail",
+       "d": "People counting, occupancy and loss prevention.",
+       "href": "/en/industries/retail"
+      }
+     ]
+    },
+    {
+     "h": "Deployment and pilot",
+     "p": [
+      "Most teams start with a focused 2–4 week pilot on a handful of cameras and the one or two problems that hurt most. You see your own footage analyzed before committing to a wider rollout.",
+      "Camera angle and resolution are reviewed first; only where needed do we suggest small adjustments. There is no rip-and-replace."
+     ],
+     "li": [
+      "Pick the cameras and the first use case",
+      "Edge server sized to camera count and frame rate",
+      "Validate detections on your real footage",
+      "Scale to more cameras and modules on the same platform"
+     ],
+     "cards": [
+      {
+       "t": "Is my camera compatible?",
+       "d": "Check your camera against the requirements.",
+       "href": "/en/camera-compatibility"
+      },
+      {
+       "t": "CCTV AI analytics explained",
+       "d": "How AI attaches to existing CCTV.",
+       "href": "/en/cctv-ai-analytics"
+      }
+     ]
+    }
+   ],
+   "faq": [
+    {
+     "q": "What is AI video analytics?",
+     "a": "Software that applies computer-vision models to camera streams to automatically detect objects, people and conditions, then turns them into real-time alerts and structured metrics instead of manual monitoring."
+    },
+    {
+     "q": "Can I run video analytics on my existing CCTV cameras?",
+     "a": "Yes. Hype Vision connects to existing IP/CCTV cameras over RTSP or ONVIF and analyzes the streams on a local edge server. In most cases no new cameras are needed; camera angle and resolution are reviewed first."
+    },
+    {
+     "q": "Is the video processed in the cloud?",
+     "a": "No, by default processing is on-premise at the edge, so footage stays inside your network. Cloud can be used for dashboards or multi-site reporting if you choose, but the video itself does not have to leave the site."
+    },
+    {
+     "q": "What can AI video analytics detect?",
+     "a": "Common modules include PPE/hard-hat compliance, forklift–pedestrian proximity, restricted-area entry, falls, fire and smoke, visual quality defects, production/OEE metrics and object counting. One camera can feed several at once."
+    },
+    {
+     "q": "How do we get started?",
+     "a": "Usually with a short 2–4 week pilot on a few cameras and your highest-priority use case, so you can see your own footage analyzed before scaling. You can book a free pre-assessment to scope it."
+    }
+   ],
+   "kws": [
+    "video analytics",
+    "ai video analytics",
+    "video analytics software",
+    "real-time video analytics",
+    "cctv video analytics",
+    "video analytics platform",
+    "edge video analytics",
+    "on-premise video analytics"
    ]
   }
  }

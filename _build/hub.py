@@ -193,7 +193,7 @@ r.innerHTML='<table>'+rows.map(x=>'<tr><td>'+x[0]+'</td><td>'+x[1]+'</td></tr>')
         img = IMG_BY_SECTOR.get(p.get("sector")) or IMG_BY_TYPE.get(kind, "/img/det-kusbakisi.webp")
         intro = "".join(f"<p>{E(t)}</p>" for t in p.get("intro", [])[:2])
         short = f'<div class="wrap"><section class="tldr rv"><span class="k-eyebrow">Quick answer</span><p style="margin-top:8px;font-size:16px;color:#2F3237">{E(p["short"])}</p></section></div>' if p.get("short") else ""
-        secs = "".join(section_html({"h": s.get("h", ""), "p": s.get("p", []) or [], "li": s.get("li", []) or [], "rows": s.get("rows", []) or [], "cards": []}, "en") for s in p["sections"])
+        secs = "".join(section_html({"h": s.get("h", ""), "p": s.get("p", []) or [], "li": s.get("li", []) or [], "rows": s.get("rows", []) or [], "cards": s.get("cards", []) or []}, "en") for s in p["sections"])
         tags = ""
         if p.get("kws"):
             tags = '<div class="wrap" style="margin-top:30px"><p style="font-size:13px;color:var(--mute)">This page answers: ' + " · ".join(E(k) for k in p["kws"][:10]) + "</p></div>"
