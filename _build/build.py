@@ -209,6 +209,11 @@ def build_en_home():
     out = out.replace('<meta property="og:locale" content="tr_TR">', '<meta property="og:locale" content="en_US">').replace(f'<meta property="og:url" content="{S}/">', f'<meta property="og:url" content="{S}/en/">')
     out = out.replace('content="Yapay Zekâ ile Görüntü İşleme ve İSG Çözümleri | Hype Vision"', 'content="AI Computer Vision for Industrial Safety & Quality | Hype Vision"')
     out = out.replace('content="Mevcut kameralarınızla 7/24 İSG, kalite ve verimlilik denetimi. Marka fark etmez, KVKK uyumlu."', 'content="24/7 safety, quality and productivity monitoring with the cameras you already have. Brand-agnostic and privacy-compliant."')
+    # og:/twitter:description: bs4 attribute sirasi degisebildigi + TR metni kaynakta degisebildigi icin
+    # tum meta etiketini yakalayip content'i zorla EN yap (aksi halde TR metin sizar)
+    _OGD = "The power of AI, in your cameras. 24/7 safety, quality and productivity monitoring with the cameras you already have — brand-agnostic; video is processed on-premise and never leaves your facility."
+    out = re.sub(r'<meta[^>]*(?:og:description|twitter:description)[^>]*>',
+                 lambda m: re.sub(r'content="[^"]*"', 'content="' + _OGD + '"', m.group(0)), out)
     if egen and egen["faq"]:
         out = re.sub(r'\{"@type": "FAQPage".*?\]\}\]\}', lambda m: json.dumps({"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in egen["faq"]]}, ensure_ascii=False) + "]}", out, count=1, flags=re.S)
     os.makedirs(os.path.join(ROOT, "en"), exist_ok=True)
