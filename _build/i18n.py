@@ -44,6 +44,7 @@ T = {
 "Katalog": "Catalogue", "Ürün kataloğu (PDF)": "Product catalogue (PDF)",
 "Giriş yap": "Log in", "Hakkımızda": "About us", "Vakalar": "Case studies",
 "Üyeliklerimiz": "Our memberships",
+"El hijyeni denetimi": "Hand hygiene monitoring", "5S denetimi": "5S audit", "Enerji & Petrokimya": "Energy & Petrochemical", "İlaç & Farma": "Pharmaceutical",
 "Panel": "Dashboard", "Panel girişi": "Dashboard login", "Panel girişi (Dashboard)": "Dashboard login", "Sahadan son videolar": "Latest videos from the field", "5 Temmuz 2026": "5 Jul 2026",
 "Deneyiminizi iyileştirmek ve site trafiğini anonim olarak analiz etmek için çerez kullanıyoruz.": "We use cookies to improve your experience and analyse site traffic anonymously.",
 "Reddet": "Decline", "Kabul et": "Accept",

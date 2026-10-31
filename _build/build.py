@@ -203,6 +203,8 @@ def build_en_home():
     out = re.sub(r"const QA=\[.*?\n\];", lambda m: I18N.QA_EN, out, count=1, flags=re.S)
     out = out.replace('src="img/', 'src="/img/').replace("'img/", "'/img/").replace('src="hypevisionlogo', 'src="/hypevisionlogo')
     out = out.replace("Uyum son 6 ayda", "Compliance rose").replace("'ya yükseldi", "")
+    # EN-only 'video analytics' hub'ini EN footer Solutions sutununa ekle (site geneli inbound link)
+    out = out.replace('>All solutions</a></li>', '>All solutions</a></li><li><a href="/en/video-analytics">AI video analytics</a></li>', 1)
     out = out.replace("%71 → %96", "71% → 96%")  # EN sayı formatı: yüzde işareti sondadır
     S = "https://hypevisionlab.com"
     out = out.replace(f'<link rel="canonical" href="{S}/">', f'<link rel="canonical" href="{S}/en/">')
