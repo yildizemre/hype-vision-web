@@ -241,7 +241,8 @@ def run(c, lang="tr"):
  <div class="rv"><div class="k-eyebrow">{t['ab_t']}</div><h1 class="bigh">{t['ab_h']}</h1><p class="lead2">{t['ab_l']}</p>
   <div class="row-btn"><a class="btn2" href="#misyon">{t['ab_b1']}</a><a class="btn2 o" href="{t['kr_path']}/">{t['kr_t']}</a></div></div>
  <div class="ph2 rv"><img src="/img/det-kusbakisi.webp" alt="Hype Vision"></div>
-</div><div class="stat4">{stats}</div></div>
+</div><div class="stat4">{stats}</div>
+<div class="progband rv"><span class="progs-h">{"Üyeliklerimiz" if lang == "tr" else "Our memberships"}</span><div class="progs-row"><span class="prog"><img loading="lazy" decoding="async" src="/img/programs/bilisim-vadisi.svg" alt="Bilişim Vadisi" height="22"></span><span class="prog prog-tx"><b>NVIDIA</b>Inception</span><span class="prog prog-tx"><b>Google</b>for Startups</span></div></div></div>
 <div class="band" id="misyon"><div class="wrap split">
  <div class="rv"><div class="k-eyebrow">{t['mis_k']}</div><h2 class="bigh" style="font-size:clamp(30px,3.4vw,46px)">{t['mis_h']}</h2></div>
  <div class="rv">{''.join(f'<p class="lead2"{" style=margin-top:0" if i==0 else ""}>{p}</p>' for i,p in enumerate(t['mis_p']))}</div></div></div>
