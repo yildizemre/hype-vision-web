@@ -2458,6 +2458,273 @@
     "Yapay zeka video analitiğinin zaten sahip olduğunuz kamera ve kayıt cihazları üzerinde nasıl çalıştığı: neye ihtiyaç var, ne değişir, ne aynı kalır?",
     "CCTV yapay zeka analizi, mevcut güvenlik kameralarının canlı akışlarında görüntü işleme modelleri çalıştırarak olayları — yasak bölgedeki kişi, eksik KKD, uzayan kuyruk veya duman gibi — tespit etmek ve kayıtları sonradan izlemek yerine anlık alarm ve veri üretmektir."
    ]
+  },
+  {
+   "path": "/el-hijyeni-denetimi-kamera-sistemi",
+   "title": "El Hijyeni Kamera ile Denetimi ve Hijyen Uyum Takibi",
+   "desc": "Gıda, ilaç ve sağlık sektörlerinde el hijyeni uyumunu mevcut IP/CCTV kameralarla izleyen Hype-Model tabanlı çözüm.",
+   "specs": [
+    [
+     "Çalışma altyapısı",
+     "On-premise / Edge cihazlarda çalışır, internet bağımsız"
+    ],
+    [
+     "Kamera uyumu",
+     "RTSP ve ONVIF protokolleri desteklenir, marka bağımsız"
+    ],
+    [
+     "Algoritma ailesi",
+     "Hype-Model yapay zeka modülleri ile el yıkama, hijyen takibi"
+    ],
+    [
+     "Gizlilik",
+     "Görüntü anonimleştirme ve verilerin lokal saklanması"
+    ],
+    [
+     "Uyum kontrolü",
+     "Eksik adım tespiti ve gerçek zamanlı uyarı mekanizması"
+    ],
+    [
+     "Raporlama",
+     "Vardiya bazlı hijyen uyum raporları ve detaylı grafikler"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Neden El Hijyeni Denetimi Önemlidir?",
+     "p": [
+      "El hijyeni, bulaşıcı hastalıkların yayılımını engellemek amacıyla özellikle gıda, ilaç ve sağlık sektörlerinde olmazsa olmazdır. Hijyen kurallarına uyulmaması bulaş riskini artırır, ürün ve çalışan sağlığını tehdit eder.",
+      "Mevzuatta el hijyeni uygulamalarına yönelik genel kurallar ve standartlar yer almakla birlikte, bu kuralların hayata geçirilmesi ve takibi çoğu zaman manuel yöntemlerle zor ve hataya açıktır."
+     ],
+     "li": [
+      "Bulaşıcı hastalık ve mikrop yayılımını önler",
+      "Ürün kalitesi ve güvenliği sağlar",
+      "Çalışan sağlığı ve işyeri güvenliği standartlarını destekler",
+      "Denetim ve raporlama süreçlerini kolaylaştırır"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Mevcut Kamera Sistemleri ile Nasıl Çalışır?",
+     "p": [
+      "Hype-Model algoritmaları, tesisinizde halihazırda bulunan IP veya CCTV kameralarına RTSP veya ONVIF protokolleri üzerinden entegre olur. Kamera markası ve modeli bağımsızdır, böylece ekstra donanım yatırımı gerekmez.",
+      "Kameralar girişlerde ya da hijyen istasyonlarında konumlandırılarak el yıkama ve hijyen uygulamalarını gerçek zamanlı olarak izler. Kamera görüntüleri lokal olarak işlenir, internet veya bulut bağlantısı zorunlu değildir."
+     ],
+     "li": [],
+     "cards": []
+    },
+    {
+     "h": "Hangi Hijyen Adımlarını Tespit Eder?",
+     "p": [
+      "Yapay zeka modülleri, el yıkama başlangıcı, sabun kullanımı, durulama ve el kurutma gibi temel el hijyeni adımlarını analiz eder. Eksik ya da atlanan adımlar belirlenir ve anlık uyarı sistemi ile personel bilgilendirilir."
+     ],
+     "li": [
+      "El yıkama başlatma zorunluluğu",
+      "Sabun kullanımının gözlenmesi",
+      "Yeterli süre ve hareketlerin kontrolü",
+      "El kurutma işlemi",
+      "Hijyen uyumunun vardiya bazında raporlanması"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Mevcut Kameralara Yeni Sistem Nasıl Eklenir?",
+     "p": [
+      "Halihazırdaki IP/CCTV kamera altyapınıza ek bir cihaz veya sunucu kurularak Hype-Model analizi entegre edilir. Kamera görüntüleri aynı ağ üzerinden sağlanır, mevcut VMS ya da kayıt sistemlerinizle uyumlu çalışır.",
+      "Yatırım maliyeti minimize edilirken, maksimum uyumluluk sağlanır. Böylece işletmenizdeki tüm hijyen noktaları etkin şekilde takip edilir."
+     ],
+     "li": [],
+     "cards": []
+    },
+    {
+     "h": "KVKK ve On-Premise Gizlilik Yaklaşımı",
+     "p": [
+      "Kullanılan sistem, KVKK ve kişisel veri koruma ilkelerine uygun olarak geliştirilmiştir. Görseller tesis içinde kalır ve yüz anonimleştirme teknikleri kullanılır.",
+      "Veriler buluta gönderilmez, tüm analiz ve raporlama on-premise olarak yapılır. Bu sayede kişisel veri güvenliği üst seviyede tutulur."
+     ],
+     "li": [],
+     "cards": []
+    },
+    {
+     "h": "Raporlama ve Yönetim Paneli",
+     "p": [
+      "Sistem, vardiya bazında hijyen uyumu ile ilgili detaylı raporlar üretir. Yönetim paneli üzerinden personel ve alan bazında uyum oranları kolayca takip edilir.",
+      "Eksik adımlar, uyarılar ve uyum geçmişi kayıt altına alınır. Böylece hijyenin sürekli gelişimine yönelik aksiyonlar daha hızlı alınabilir."
+     ],
+     "li": [],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "El hijyeni denetimi için ekstra kamera mı gerekir?",
+     "a": "Hayır, Hype Vision çözümü mevcut IP/CCTV kameralarınızla entegre olur. RTSP ve ONVIF protokollerini kullanan kameralar marka bağımsız desteklenir."
+    },
+    {
+     "q": "KVKK kapsamında kişisel veriler nasıl korunur?",
+     "a": "Görüntüler tesis içinde kalır, yüz anonimleştirme yapılır. Veriler buluta gönderilmez ve tüm işlem on-premise gerçekleştirilir."
+    },
+    {
+     "q": "Eksik el hijyeni adımında sistem nasıl uyarı verir?",
+     "a": "Yapay zeka eksik veya atlanan el yıkama adımını algıladığında anlık sesli veya görsel uyarı ile personeli bilgilendirme yapılabilir."
+    },
+    {
+     "q": "Hangi sektörlerde bu sistem kullanılabilir?",
+     "a": "Gıda üretimi, ilaç fabrikaları, sağlık tesisleri gibi el hijyeninin kritik önemde olduğu tüm endüstrilerde kullanılabilir."
+    },
+    {
+     "q": "Sistem internet bağlantısı gerektirir mi?",
+     "a": "Hayır, sistem on-premise çalıştığı için internet veya bulut bağlantısına ihtiyaç duymaz, böylece veri güvenliği artırılır."
+    }
+   ],
+   "intro": [
+    "Gıda, ilaç ve sağlık ortamlarında el hijyeni, bulaş riskinin en aza indirilmesi için kritik öneme sahiptir. Personelin el yıkama ve hijyen kurallarına uyumu, hem çalışan sağlığı hem de ürün güvenliği açısından takip edilmelidir.",
+    "Hype Vision çözümü, mevcut IP/CCTV kameralarınız ile entegre çalışarak personelin el hijyeni adımlarına uyumunu yapay zeka ile değerlendirir. Kamera bazlı el yıkama denetimi, hijyen adımlarında eksiklik tespitinde uyarı verir ve uyum raporları sunar.",
+    "On-premise çalışan bu sistem, KVKK gerekliliklerine uygun olarak görüntüleri tesis içinde tutar ve yüz anonimleştirme yaparak gizliliği sağlar. Gıda ve sağlık sektörlerinde hijyen standartlarının kontrolü artık daha kolay ve verimli."
+   ]
+  },
+  {
+   "path": "/5s-denetimi-kamera-sistemi",
+   "title": "5S Denetimi Kamera ile Otomatik Düzen ve Temizlik Takibi",
+   "desc": "Mevcut IP/CCTV kameralar ile 5S uyumunu yapay zeka destekli otomatik denetim sistemi.",
+   "specs": [
+    [
+     "Uyumluluk",
+     "IP/CCTV kameralar, RTSP/ONVIF protokolleri desteklenir, markadan bağımsız çalışma"
+    ],
+    [
+     "Gerçek Zamanlı İzleme",
+     "5S standartlarına uygun düzen, temizlik ve ekipman yerleşimi anlık kontrol"
+    ],
+    [
+     "Algoritma",
+     "Hype-Model ile endüstriyel görüntü işleme ve yapay zeka analiz"
+    ],
+    [
+     "Veri Güvenliği",
+     "On-premise ve edge cihazlarda görüntü anonimleştirme, KVKK uyumlu"
+    ],
+    [
+     "Modüler Yapı",
+     "Düzen, temizlik, blokaj tespiti, standart takibi gibi farklı denetim senaryoları"
+    ],
+    [
+     "Raporlama",
+     "Kullanıcı dostu panel ile 5S uyumu raporları ve uyarı bildirimleri"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Neden 5S Denetimi Kamera ile Önemlidir?",
+     "p": [
+      "5S uygulaması (Ayıkla, Düzenle, Temizle, Standartlaştır, Sürdür) imalat ve endüstri tesislerinde verimliliği artırırken işyeri güvenliğini de destekler. Ancak uyumun sürekli sağlanması periyodik manuel denetimlerle zordur ve tam görünürlük sağlamaz.",
+      "Kamera tabanlı 5S denetimi, insan gücüne bağımlılığı azaltır ve süreçleri kesintisiz izler. Böylece iş düzeninde ortaya çıkan aksaklıklar anında fark edilir, çalışanlar motivasyon ve disiplin açısından desteklenir."
+     ],
+     "li": [
+      "İşyeri düzeni ve temizlikte standart seviyenin uzun vadede korunması",
+      "Boş alanların iyi yönetimi ve gereksiz ekipman kalabalığının önlenmesi",
+      "Üretim alanlarının iş güvenliği açısından blokaj ve aksaklıkların hızlı tespiti",
+      "Yalın üretim metodolojisine tam uyumun gözle görülür ve raporlanabilir olması"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Nasıl Çalışır? - Mevcut Kamera ve RTSP Destekli Entegrasyon",
+     "p": [
+      "Hype Vision çözümü mevcut IP/CCTV kameralarınızı RTSP veya ONVIF protokolleri üzerinden markadan bağımsız olarak sisteme entegre eder. Bu sayede ilave altyapı yatırımına gerek kalmadan mevcut donanımda çalışır.",
+      "Kameralardan gelen canlı görüntüler Hype-Model yapay zeka modüllerinden geçerek alanın düzeni, temizlik durumu ve standartlara uygunluğu otomatik analiz edilir.",
+      "İşletme içinde lokal olarak çalışan sistem, veri gizliliğine önem verir, görüntüler anonimleştirilir ve sadece izin verilen panellerde gösterilir."
+     ],
+     "li": [
+      "RTSP / ONVIF protokol destekli herhangi IP/CCTV kamera ile uyumlu",
+      "Edge ve on-premise mimari ile düşük gecikmeli, güvenli analiz",
+      "Yapay zeka ile boş/dolu alan, ekipman yerleşimi, yol blokajı tespiti"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Neyi Tespit Eder? 5S Uyum Modülleri ve Kritik Tespitler",
+     "p": [
+      "Sistemimiz, üretim alanlarınızda 5S standartlarına uygunluğu kolayca takip etmenizi sağlar.",
+      "Çalışma alanında düzeni bozan veya standart dışı durumu oluşturan öğeleri tespit ederek raporlar. Bu sayede riskler erken aşamada fark edilir."
+     ],
+     "li": [
+      "Boş ve dolu alan ayrımı ile gereksiz yer işgalinin tespiti",
+      "Yerinde olmayan ekipman ve araçların izlenmesi",
+      "Üretim yollarının blokaj ve kapalı alanlarının tespiti",
+      "Düzen ve temizlik konusunda standart dışı durumlar",
+      "5S periyodik denetimlerde manuel kayıt yükünün azaltılması"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Mevcut Kameralara Ekleme ve Uyumluluk",
+     "p": [
+      "Hype Vision 5S Denetimi çözümü özel bir kamera kurulumu gerektirmez, mevcut tesisinizde kullandığınız IP/CCTV sistemleriyle kolaylıkla entegre olur. RTSP ve ONVIF desteği sayesinde piyasa lideri ya da yerel marka fark etmeksizin tüm sistemlerle uyumludur.",
+      "Bu sayede hem zamandan hem de ekipman yatırım maliyetlerinden tasarruf edilir. Ayrıca ölçeklendirme kolaydır, yeni bölgeler hızlıca sisteme dahil edilir."
+     ],
+     "li": [
+      "Marka bağımsız, mevcut kamera altyapısının değerlendirilmesi",
+      "Kamera ekleme ve farklı görüntü yönetim sistemleri ile uyumlu destek",
+      "Sahadan hızlı entegrasyon ve kısa kurulum süreci"
+     ],
+     "cards": []
+    },
+    {
+     "h": "KVKK ve Veri Gizliliği - On-Premise ve Gizlilik Dostu Yapı",
+     "p": [
+      "Hype Vision çözümü, 5S denetiminde veri ve görüntü gizliliğine azami özen gösterir. Kameralar tesis içinde anonimleştirme algoritmaları ile yüz vb. kişisel veriler gizlenir ve hiçbir görüntü anonim olmadan dışarı çıkarılmaz.",
+      "Sistem tamamen on-premise veya edge cihazlarda çalışarak verilerin bulut veya üçüncü taraflara gönderilmeden tesis içerisinde kalmasını sağlar. Böylece KVKK ve benzeri yerel mevzuatlara uyumu destekler.",
+      "İşletmeler bu sayede hem verimlilik hem de yasal sorumluluk açılarından güvenle kullanabilir."
+     ],
+     "li": [
+      "Kişisel verileri anonimleştirme (yüz bulanıklaştırma vb.)",
+      "Veri dışa aktarımı olmadan tesis içinde analiz",
+      "KVKK ve iş güvenliği mevzuatı gereksinimlerine uygun altyapı"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Raporlama ve Kullanıcı Paneli ile Kolay İzleme",
+     "p": [
+      "5S süreçlerinin izlenmesi ve yönetimi için Hype Vision gelişmiş kullanıcı paneli sunar. Bu panel üzerinde düzen ve temizlik durumu grafik ve görüntülerle anlık olarak takip edilir.",
+      "Sistem, standart dışı durumlarda uyarılar gönderir ve periyodik raporlar oluşturarak denetim süreçlerinin etkinliğini artırır. Böylece karar alma süreçleri hızlanır, işyeri düzeninde sürekli iyileştirme sağlanır."
+     ],
+     "li": [
+      "Kolay anlaşılır görsel raporlama ve analiz paneli",
+      "Uygunsuzluk uyarıları ve önceliklendirme",
+      "Periyodik ve ihtiyaca özel rapor üretimi"
+     ],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Hangi kamera sistemleri ile çalışır?",
+     "a": "RTSP veya ONVIF protokol destekleyen IP ve CCTV kameralarla markadan bağımsız olarak uyumlu çalışır."
+    },
+    {
+     "q": "Sistem görüntüleri dışarıya gönderiyor mu?",
+     "a": "Hayır, tüm analiz on-premise veya edge cihazlarda yapılır ve görüntüler anonimleştirilerek sadece tesis içinde kalır."
+    },
+    {
+     "q": "5S denetimi tam olarak ne tür durumları tespit eder?",
+     "a": "Boş/dolu alan, ekipmanın yerinde olup olmadığı, yolların blokajlı olup olmadığı, temizlik ve düzen standartlarının ihlali gibi durumlardır."
+    },
+    {
+     "q": "Kurulum için ek kamera alınması gerekir mi?",
+     "a": "Mevcut IP/CCTV kameralar kullanılır; yeni kamera gereksinimi doğmaz ama ek bölgeler için opsiyonel ilave olabilir."
+    },
+    {
+     "q": "İşyerinde yasal mevzuata uygunluğu nasıl sağlıyor?",
+     "a": "Sistem KVKK ve diğer genel güvenlik mevzuatlarına uyumlu olup, görüntü anonimleştirme ve veri tesis içi saklama özellikleri ile desteklenir. Detaylı hukuki tavsiye içermez."
+    }
+   ],
+   "intro": [
+    "İşletmelerde 5S uygulamaları, düzen ve temizlik süreçlerinin etkinliğini artırmak için kritik öneme sahiptir. Ancak geleneksel periyodik denetimler fiziksel ve zaman açısından zorluk yaratabilir. Hype Vision’un geliştirdiği 5S Denetimi çözümü, mevcut IP/CCTV kameralarınızı yapay zeka ile entegre ederek kesintisiz ve otomatik 5S takip imkanı sunar.",
+    "Sistemimiz, kameralar üzerinden gerçek zamanlı alan düzeni, temizlik ve standartlara uyumu izleyerek, sürekli görünürlük sağlar. Boş ya da dolu alanlar, yerinde olmayan ekipmanlar, blokajlı yollar gibi kritik konular hızlıca tespit edilebilir ve müdahale süreçleri hızlanır.",
+    "Hype-Model ailesinden yapay zeka modülleriyle çalışan çözüm, endüstri ve imalat tesislerinde yalın üretim prensiplerini destekleyerek işyeri güvenliği ve verimliliğine katkı sağlar. KVKK ve kişisel gizlilik hassasiyeti dikkate alınarak, görüntüler tesis içinde anonimleştirilir ve dışa aktarılmaz."
+   ]
   }
  ],
  "sectors": [
@@ -3414,6 +3681,331 @@
    "faq": [],
    "intro": [
     "Gıda üretim tesislerinde hijyen standartları, ambalaj bütünlüğü ve yabancı madde tespiti kalite güvencesinin temelidir. Hype Vision, mevcut IP kameralarınızdan gelen görüntüyü analiz ederek dolum hattı kusuru, ambalaj hatası, hijyen bölgesi KKD ihlali ve üretim hattı OEE'sini tek panelde birleştirir. Gıda güvenliği regülasyonlarına (HACCP, ISO 22000) uyumlu veri arşivi sunar. HACCP ve ISO 22000 denetimlerinde kanıtlanabilir kalite olay arşivi; hijyen bölgesi KKD ve ambalaj bütünlüğü aynı panelde."
+   ]
+  },
+  {
+   "path": "/sektor/enerji-petrokimya",
+   "title": "Yapay Zekâ Destekli İSG ve Güvenlik Çözümleri: Enerji, Petrokimya ve Akaryakıt",
+   "desc": "Enerji, petrokimya ve akaryakıt sektörleri için yapay zekâ destekli görüntü işleme ile KKD kontrolü, tehlikeli alan izleme ve erken yangın-duman tespiti…",
+   "specs": [
+    [
+     "Çalışma Ortamları",
+     "Enerji santralleri, rafineriler, petrokimya tesisleri, akaryakıt istasyonları"
+    ],
+    [
+     "Başlıca Analiz Modülleri",
+     "KKD (baret, yelek, maske, eldiven), yasaklı alan, yangın ve duman erken tespiti"
+    ],
+    [
+     "Gizlilik ve Uyumluluk",
+     "Yüz anonimleştirme ile KVKK/gizlilik dostu, veri tesis içinde kalır"
+    ],
+    [
+     "Entegrasyon",
+     "Marka bağımsız RTSP/ONVIF destekli kamera ve VMS altyapısına kolay uyum"
+    ],
+    [
+     "Çalışma Modeli",
+     "On-premise/Edge; internet bağımlılığı olmadan düşük gecikmeli analiz"
+    ],
+    [
+     "Risk Alanları",
+     "Yalnız çalışan takibi, forklift-yaya kazaları, tehlikeli alan ihlalleri"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Sektörün Riskleri ve İhtiyaçları",
+     "p": [
+      "Enerji, petrokimya ve akaryakıt sektörleri, yüksek patlama riski, kimyasal maruziyet ve ağır makineler nedeniyle ağır iş güvenliği önlemleri gerektirir. Çalışanların KKD takması, tehlikeli alanların sürekli gözetimi, yangın ve dumanın erken tespiti öncelikler arasındadır.",
+      "Forkliftler ve yürüyen personel arasındaki çarpışmalar, yalnız çalışanların acil yardım çağrıları, ve tehlikeli alana izinsiz girişler gibi vakalar ciddi iş gücü kayıplarına yol açabilir."
+     ],
+     "li": [
+      "KKD kullanımının anlık ve güvenilir takibi",
+      "Tehlikeli ve yasaklı alan ihlallerinin erkenden belirlenmesi",
+      "Yangın ve dumanın hızlı algılanarak müdahale süresinin kısaltılması",
+      "Forklift ve yaya güvenliğinin sağlanması",
+      "Yalnız çalışan takibi ile acil müdahalelerin kolaylaştırılması"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Kullanım senaryoları",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "KKD Kontrol Sistemi",
+       "d": "Baret, yelek, maske ve eldiven kullanımını tehlikeli bölgelerde sürekli denetleyin.",
+       "href": "/kkd-kontrol-kamera-sistemi"
+      },
+      {
+       "t": "Yasaklı Alan İhlal Tespiti",
+       "d": "Tank sahası, pompa ve elektrik odası gibi tehlikeli bölgelere girişte anlık alarm.",
+       "href": "/yasakli-alan-ihlal-tespiti"
+      },
+      {
+       "t": "Yangın ve Duman Erken Tespiti",
+       "d": "Açık ve kapalı alanda alev/duman başlangıcını kamerayla erken yakalayın.",
+       "href": "/yangin-duman-tespiti"
+      },
+      {
+       "t": "Forklift–Yaya Güvenliği",
+       "d": "İç lojistik ve yükleme alanlarında ramak kala yakınlaşmalarda uyarı.",
+       "href": "/forklift-yaya-guvenlik-sistemi"
+      },
+      {
+       "t": "Düşme Tespit Sistemi",
+       "d": "Yalnız çalışma ve yüksek riskli alanlarda düşme/hareketsizlik alarmı.",
+       "href": "/dusme-tespit-sistemi"
+      },
+      {
+       "t": "Kamera ile Ürün/Varlık Sayımı",
+       "d": "Dolum, sevkiyat ve stok noktalarında elle sayım olmadan adet takibi.",
+       "href": "/urun-sayimi"
+      }
+     ]
+    },
+    {
+     "h": "Enerji, Petrokimya ve Akaryakıt Tesislerindeki Denetimler",
+     "p": [
+      "İş sağlığı ve güvenliği uygulamalarında düzenli olarak çeşitli denetimler yapılır. Bu denetimler sırasında KKD uygunluğu kontrolü, tehlikeli alanların korunması, yangın söndürme ekipmanları ve acil durum prosedürlerinin denetimi önemli yer tutar."
+     ],
+     "li": [
+      "Kişisel koruyucu donanım (KKD) uyumluluğu denetimleri",
+      "Tehlikeli alanlar ve yasaklı bölgelerin erişim kontrolleri",
+      "Yangın güvenliği ve duman sensörlerinin işlevselliği",
+      "Forklift ve yaya trafik güvenliği kontrolü",
+      "Yalnız çalışanların takibi ve acil durum prosedürleri"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Mevcut Altyapıya Yapay Zeka Destekli Eklenti",
+     "p": [
+      "Hype Vision’ın markadan bağımsız Hype-Model ailesi, tesislerde hali hazırda kullanılan IP/CCTV kamera sistemlerine kolayca entegre olur. RTSP ve ONVIF destekli mevcut ağ kameraları yapay zekâ tabanlı analiz ile daha etkin şekilde kullanılır.",
+      "On-premise ve edge tabanlı analiz altyapısı sayesinde görüntüler tesis dışına çıkmaz, hızla işlenir ve gizlilik riski minimize edilir. Böylece altyapıya yüksek maliyetli yeni kurulumlar yapılmadan mevcut sistem güncellenir."
+     ],
+     "li": [
+      "RTSP/ONVIF uyumlu mevcut kameralarla hızlı entegrasyon",
+      "On-premise/edge analitik ile görüntü gizliliği ve hız",
+      "Yapay zekâ destekli KKD, yasaklı alan ve yangın-duman algılama",
+      "Kesintisiz ve güvenilir akış takibi",
+      "Entegrasyon sürecinde operasyonel kesinti olmaması"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Mevzuat ve Güvenlik Standartları",
+     "p": [
+      "Enerji, petrokimya ve akaryakıt sektörlerinde iş sağlığı ve güvenliği mevzuatı (örneğin, İş Sağlığı ve Güvenliği Kanunu 6331) kapsamında işverenler, çalışanların güvenliğini sağlamakla yükümlüdür. ABD’de OSHA Process Safety Management (PSM) gibi düzenlemeler ise yüksek riskli proseslerin güvenli yürütülmesini zorunlu kılar.",
+      "Bu çerçevede, otomatik izleme, KKD takibi ve tehlikeli alan güvenliği gibi prosedürlerin teknoloji ile desteklenmesi hem mevzuata uyumu kolaylaştırır hem de risklerin minimize edilmesine yardımcı olur. Ancak sunulan bilgiler genel niteliktedir ve hukuki tavsiye yerine geçmez."
+     ],
+     "li": [
+      "İş Sağlığı ve Güvenliği Kanunu (6331 sayılı Kanun) Türkiye’de temel yasal çerçeveyi oluşturur",
+      "ABD’de OSHA Process Safety Management (PSM) benzer şekilde iş güvenliğini destekler",
+      "KKD zorunluluğu ve tehlikeli alan yönetimi tüm yüksek riskli işyerlerinde önceliklidir",
+      "Yapay zekâ destekli çözümler işverenlere proaktif risk azaltım imkanları sunar",
+      "Yasal uyumluluk için teknolojik altyapı destekleyici bir araçtır"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Neden Hype Vision?",
+     "p": [
+      "Hype Vision; markaya bağımlı olmadan mevcut IP/CCTV altyapısına yapay zekâ destekli analizler ekleyerek iş güvenliği süreçlerini dijitalleştirir. On-premise ve edge altyapısı ile veri gizliliği sağlanırken, yüksek riskli alanlardaki insan ve makine hareketleri hızla analiz edilir.",
+      "Çok modüllü Hype-Model ailesi; KKD takibi, yasaklı alan, yangın-duman erken tespiti, forklift-yaya güvenliği gibi kritik ihtiyaçları karşılayarak, hem iş kazalarını azaltmaya hem de operasyonel süreçlerin şeffaflaşmasına olanak verir.",
+      "Gizlilik, KVKK uyumluluğu ve uluslararası projelerde edinilmiş deneyim ile sektöre özel yapay zekâ çözümleri sunar. Böylece, mevcut altyapınızla yatırım maliyetlerinin kontrolünde güvenlik çalışmaları güçlendirilir."
+     ],
+     "li": [],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Hype Vision çözümleri mevcut kamera sistemlerimize nasıl entegre olur?",
+     "a": "Hype Vision, RTSP ve ONVIF protokollerini desteklediği için mevcut IP kameralarınıza marka bağımsız olarak kolayca entegre olur. Kamera altyapınızı değiştirmeden yapay zekâ tabanlı analizlerinizi hayata geçirmenizi sağlar."
+    },
+    {
+     "q": "Veri gizliliği ve KVKK uyumluluğu nasıl sağlanıyor?",
+     "a": "Çözümlerimiz on-premise ve edge analiz modeli ile çalıştığından görüntüler tesis dışında paylaşılmaz. Yüz anonimleştirme gibi tekniklerle KVKK ve gizlilik kurallarına uyum sağlanır."
+    },
+    {
+     "q": "Yapay zekâ ile hangi iş güvenliği riskleri izlenebilir?",
+     "a": "KKD kontrolü (baret, yelek, maske, eldiven), yasaklı ve tehlikeli alan ihlalleri, yangın ve duman erken tespiti, forklift-yaya çarpışma riski, düşme ve yalnız çalışan takibi gibi kritik risk faktörleri yapay zekâyla izlenebilir."
+    },
+    {
+     "q": "Mevzuat gereksinimlerini karşılamak için yardımcı olur mu?",
+     "a": "Hype Vision çözümleri, iş sağlığı ve güvenliği mevzuatları kapsamında ihtiyaç duyulan izleme ve kontrol süreçlerini destekleyerek risk yönetimini kolaylaştırır. Ancak verilen bilgiler hukuki tavsiye niteliğinde değildir."
+    },
+    {
+     "q": "ABD ofisiniz var mı? Uluslararası destek sağlanıyor mu?",
+     "a": "Hype Vision, Türkiye merkezli olarak uluslararası projeler yürütmekte olup ABD’de fiziki bir ofisi bulunmamaktadır. Ancak global standartlarda hizmet ve destek sağlar."
+    }
+   ],
+   "intro": [
+    "Yüksek riskli enerji, petrokimya ve akaryakıt tesislerinde iş sağlığı ve güvenliği (İSG) kritik bir öneme sahiptir. Çalışanların kişisel koruyucu donanım (KKD) kullanımı, tehlikeli bölge gözetimi ve acil durum erken uyarı sistemleri sektörde yaşanan kazaların önlenmesinde hayati rol oynar.",
+    "Hype Vision'ın yapay zekâ tabanlı Hype-Model ailesi, mevcut IP/CCTV altyapısına entegrasyonla bağımsız ve güvenilir analiz sağlar. KKD algılama, yasaklı alan kontrolü, yangın-duman erken tespiti ve forklift ile yaya güvenliği gibi modüllerle güvenliği artırır, görüntüler tesis içinde anonim kalır.",
+    "KVKK ve gizlilik prensiplerine uygun çalışan Hype Vision çözümleri, tehlikeli çalışma ortamlarında operasyonel verimlilik ile birlikte iş kazalarını azaltmayı hedefler. Bu sayede enerji, petrokimya ve akaryakıt sektörlerindeki risklerin yönetimi için etkili bir destek sunar."
+   ]
+  },
+  {
+   "path": "/sektor/ilac-farma",
+   "title": "İlaç ve Farma Üretiminde Görüntü İşleme: Hijyen, KKD ve Kalite",
+   "desc": "İlaç fabrikalarında GMP standardına uygun hijyen, kişisel koruyucu donanım (KKD) kullanımı ve görsel kalite kontrol için yapay zeka destekli kamera analiz…",
+   "specs": [
+    [
+     "Çalışma Ortamı",
+     "On-premise / Edge"
+    ],
+    [
+     "Entegrasyon",
+     "RTSP / ONVIF protokolleriyle marka bağımsız destek"
+    ],
+    [
+     "Ana Modüller",
+     "El hijyeni, bone-maske-önlük, yasaklı alan, görsel kalite, ambalaj kontrol, anomali"
+    ],
+    [
+     "Veri Gizliliği",
+     "Yüz anonimleştirme ve verilerin tesiste kalması"
+    ],
+    [
+     "Kullanım Alanları",
+     "İlaç üretim tesisleri, temiz odalar, GMP uyumlu hatlar"
+    ],
+    [
+     "Yapay Zeka Teknolojisi",
+     "Hype-Model ailesi, endüstriyel görüntü işleme"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "İlaç ve Farma Üretiminde Riskler ve İhtiyaçlar",
+     "p": [
+      "İlaç üretim süreçlerinde hijyen sağlanması, personelin doğru KKD kullanması ve üretim kalitesinin sürekli izlenmesi hayati öneme sahiptir. Özellikle temiz oda ortamlarında dış kaynaklı ve iç risklere karşı sıkı denetimler gereklidir.",
+      "Yetersiz KKD kullanımı, hijyen eksikliği ve görsel kalite kontrolü problemleri ürün güvenliğini ve üretim standardını olumsuz etkileyebilir. Bu nedenle, süreklilik arz eden ve objektif izlemeye ihtiyaç vardır."
+     ],
+     "li": [
+      "El hijyeninin doğru ve düzenli yapılması",
+      "Bone, maske, önlük gibi KKD uyumunun takibi",
+      "Yasaklı alan girişlerinin kontrolü",
+      "Ürün ambalaj ve görsel kalite kontrolleri",
+      "Anormal ve hatalı durumlardan erken tespit"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Kullanım senaryoları",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "El Hijyeni Denetimi",
+       "d": "Girişte ve istasyonda el yıkama/hijyen adımlarının kamerayla izlenmesi.",
+       "href": "/el-hijyeni-denetimi-kamera-sistemi"
+      },
+      {
+       "t": "KKD Kontrol Sistemi",
+       "d": "Bone, maske, önlük ve eldiven kullanımını temiz oda ve üretim alanlarında denetleyin.",
+       "href": "/kkd-kontrol-kamera-sistemi"
+      },
+      {
+       "t": "Yasaklı Alan İhlal Tespiti",
+       "d": "Temiz oda ve kısıtlı üretim bölgelerine yetkisiz girişte alarm.",
+       "href": "/yasakli-alan-ihlal-tespiti"
+      },
+      {
+       "t": "Görüntü İşleme ile Kalite Kontrol",
+       "d": "Ambalaj, etiket ve dolum hatlarında hat hızında görsel kontrol.",
+       "href": "/kalite-kontrol-goruntu-isleme"
+      },
+      {
+       "t": "Görsel Anomali Tespiti",
+       "d": "Beklenmedik durumları ve süreç sapmalarını görüntüden yakalayın.",
+       "href": "/anomali-tespiti"
+      },
+      {
+       "t": "Kamera ile Ürün/Koli Sayımı",
+       "d": "Üretim ve paketleme hatlarında elle sayım olmadan adet takibi.",
+       "href": "/urun-sayimi"
+      }
+     ]
+    },
+    {
+     "h": "İlaç Üretiminde Yapılan Denetimler ve İzleme Faaliyetleri",
+     "p": [
+      "İlaç sektöründe GMP ve ilgili standartlar kapsamında hijyen ile KKD konularında düzenli ve belgelenebilir denetimler yapılmaktadır. Kamera tabanlı yapay zeka çözümleri, bu denetimlerin sürekliliğini ve objektifliğini artırır."
+     ],
+     "li": [
+      "Personelin KKD (bone, maske, eldiven, önlük) kullanımının izlenmesi",
+      "El hijyeni uygulamalarının video destekli kontrolü",
+      "Temiz oda sınıfındaki yasaklı alan ve geçişlerin takibi",
+      "Üretim hattı kalite ve ambalaj görsel kontrolleri",
+      "Anormallik ve riskli durumların bildirimi"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Mevcut Kamera Altyapısına Kolay Entegrasyon",
+     "p": [
+      "Hype Vision sistemleri RTSP ve ONVIF protokolleriyle marka bağımsız olarak mevcut IP ve CCTV kamera altyapılarına sorunsuz entegre olur. Bu sayede ekstra donanım yatırımı minimuma indirgenir.",
+      "Edge tabanlı çalışan yapay zeka modülleri, verilerin tesis dışına çıkmasını engeller; bu da ilave gizlilik ve güvenlik avantajları sağlar."
+     ],
+     "li": [
+      "Marka bağımsız ve protokol destekli esnek entegrasyon",
+      "Yapay zeka analizlerinin yerel (on-premise) cihazlarda çalışması",
+      "Veri güvenliği ve KVKK uyumlu yüz anonimleştirme",
+      "Kolay kurulum ve minimum altyapı değişikliği"
+     ],
+     "cards": []
+    },
+    {
+     "h": "İlaç Üretiminde İlgili Mevzuat ve Uyumluluk",
+     "p": [
+      "GMP ve ilgili hijyen standartları ilaç üretim tesislerinde uyulması zorunlu kurallardır. KKD kullanımı, el hijyeni uygulamaları ve temiz oda prosedürlerinin takibi mevzuatla desteklenir.",
+      "Hype Vision çözümleri, bu gereksinimlerin yerine getirilmesinde destek sağlar ancak hukuki tavsiye olarak değerlendirilmemelidir."
+     ],
+     "li": [
+      "GMP ve farmasötik üretim hijyen standartları",
+      "İş sağlığı ve güvenliği genel mevzuatı (ör. OSHA kapsamında genel bilgi)",
+      "KVKK ve KVKK benzeri veri gizliliği kanunlarına uyum",
+      "Mevzuata destek amaçlı sürekli izleme ve raporlama"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Neden Hype Vision?",
+     "p": [
+      "Hype Vision, Bilisim Vadisi Gebze merkezli olarak 2020’den beri endüstriyel görüntü işleme alanında ciddi deneyime sahiptir. Medikal ve ilaç üretim tesislerindeki gerçek vaka deneyimleri ile geliştirilmiş Hype-Model ailesi, sektöre özgü ihtiyaçları karşılayacak şekilde tasarlanmıştır.",
+      "Marka bağımsız çalışan, on-premise ve edge tabanlı altyapısı sayesinde gizlilik ve veri güvenliği önceliklerini karşılar. GMP uyumlu hijyen, KKD ve kalite kriterlerini sürekli ve otomatik şekilde denetlemek isteyen ilaç üretim tesisleri için güvenilir bir çözüm sunar."
+     ],
+     "li": [],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Hype Vision sistemleri mevcut kamera altyapımıza uyum sağlar mı?",
+     "a": "Evet, RTSP ve ONVIF destekli tüm IP ve CCTV kamera sistemlerine marka bağımsız olarak entegre olabilir."
+    },
+    {
+     "q": "KVKK ve müşteri verilerinin gizliliği nasıl sağlanır?",
+     "a": "Sistemde yüz anonimleştirme teknolojisi mevcuttur ve görüntüler kurumun kendi tesisinde tutulur, bulut veya dışa veri aktarımı yapılmaz."
+    },
+    {
+     "q": "İlaç üretim tesisimiz için hangi modüller uygundur?",
+     "a": "El hijyeni kontrolü, bone-maske-önlük takibi, yasaklı alan denetimi, görsel kalite ve ambalaj kontrolü ile anomali tespiti modülleri özellikle önerilir."
+    },
+    {
+     "q": "Sistem GMP ve ilgili mevzuata tamamen uyum sağlar mı?",
+     "a": "Hype Vision çözümleri GMP ve ilgili standartlar kapsamında destekleyici olarak tasarlanmıştır ancak hukuki veya mevzuat garantisi vermez."
+    }
+   ],
+   "intro": [
+    "İlaç ve farma üretim tesislerinde iş güvenliği, hijyen ve kalite standartlarının sağlanması kritik öneme sahiptir. Bu alanlarda uyulması gereken GMP ve ilgili yönetmelikler, uygun KKD kullanımı, hijyen uygulamaları ve kaliteli üretim takibini zorunlu kılar.",
+    "Hype Vision'un geliştirdiği Hype-Model ailesi sayesinde mevcut IP/CCTV kamera sistemleri RTSP ve ONVIF protokolleriyle entegre edilerek, çalışan davranışları ve üretim süreçleri yapay zeka ile analiz edilir. El hijyeni denetimi, bone, maske ve önlük gibi KKD şartlarının takibi ve kalite/kusur kontrolü gibi modüllerle tesislerde GMP uyumluluğunun desteklenmesi hedeflenir.",
+    "Sistemler on-premise ve edge mimaride çalışır, görüntüler tesiste kalır; yüz anonimleştirme yapılarak KVKK ve gizlilik gereksinimlerine tam uyum sağlanır. Bu sayede ilaç üretiminde kritik hijyen ve kalite kriterlerinin izlenmesi güvenli ve etkin biçimde gerçekleştirilir."
    ]
   }
  ],
@@ -22750,6 +23342,597 @@
      "q": "How long does a typical pilot last?",
      "a": "Pilots usually span 2-4 weeks during which initial analyses and evaluations are completed to support decision-making for full deployment."
     }
+   ]
+  },
+  "/el-hijyeni-denetimi-kamera-sistemi": {
+   "path": "/en/solutions/hand-hygiene-monitoring",
+   "title": "Hand Hygiene Camera Monitoring & Hygiene Compliance Tracking",
+   "desc": "Hype-Model AI solution for hand hygiene compliance monitoring using existing IP/CCTV cameras.",
+   "specs": [
+    [
+     "Deployment",
+     "On-premise / Edge device operation, no internet dependency"
+    ],
+    [
+     "Camera compatibility",
+     "Supports RTSP and ONVIF protocols, brand independent"
+    ],
+    [
+     "Algorithm family",
+     "Hype-Model AI modules for handwash and hygiene compliance"
+    ],
+    [
+     "Privacy",
+     "Face anonymization and local data storage"
+    ],
+    [
+     "Compliance monitoring",
+     "Real-time detection of missed steps and alerts"
+    ],
+    [
+     "Reporting",
+     "Shift-based hygiene compliance reports with detailed charts"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Why is Hand Hygiene Monitoring Important?",
+     "p": [
+      "Hand hygiene is essential for preventing the spread of infections, especially in food processing, pharmaceuticals, and healthcare sectors. Failure to maintain hygiene increases contamination risks affecting both personnel and product safety.",
+      "Although regulatory frameworks define general hygiene requirements, actual enforcement and monitoring often rely on manual inspections that can be inconsistent and error-prone."
+     ],
+     "li": [
+      "Prevents spread of bacteria and infectious diseases",
+      "Ensures product quality and safety",
+      "Supports workplace health and safety standards",
+      "Simplifies inspection and reporting processes"
+     ],
+     "cards": []
+    },
+    {
+     "h": "How Does It Work With Existing Camera Systems?",
+     "p": [
+      "Hype-Model AI algorithms connect to your current IP or CCTV cameras via RTSP or ONVIF protocols. The solution is camera-agnostic, eliminating the need for additional hardware investment.",
+      "Cameras positioned at entrances or hygiene stations monitor handwashing activities live. Video processing occurs locally without reliance on internet or cloud services."
+     ],
+     "li": [],
+     "cards": []
+    },
+    {
+     "h": "What Hygiene Steps Are Detected?",
+     "p": [
+      "The AI modules evaluate essential hand hygiene steps such as starting handwash, soap application, rinsing, and drying. Any missing or skipped steps trigger alerts to inform staff promptly."
+     ],
+     "li": [
+      "Handwashing initiation",
+      "Soap usage detected",
+      "Verification of sufficient duration and motions",
+      "Hand drying completion",
+      "Shift-wise compliance reporting"
+     ],
+     "cards": []
+    },
+    {
+     "h": "How Can This Be Added to Existing Cameras?",
+     "p": [
+      "An edge device or server with Hype-Model can be installed on your existing camera network to enable AI analysis. Video streams from cameras integrate over the local network and can complement your VMS and recording systems.",
+      "This approach reduces costs and maximizes compatibility while enabling comprehensive monitoring at all hygiene points."
+     ],
+     "li": [],
+     "cards": []
+    },
+    {
+     "h": "Privacy and On-Premise Data Handling",
+     "p": [
+      "The system is designed to comply with personal data protection regulations. Video data remains on-site with face anonymization applied to prevent identification.",
+      "All processing and reporting occur on-premise without sending data to the cloud, ensuring a high level of privacy and security."
+     ],
+     "li": [],
+     "cards": []
+    },
+    {
+     "h": "Reporting and Management Dashboard",
+     "p": [
+      "Detailed hygiene compliance reports are generated per shift. The management dashboard enables monitoring adherence by personnel or location over time.",
+      "Records of missed steps, alerts, and historical compliance data provide actionable insights to improve hygiene protocols."
+     ],
+     "li": [],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Is additional camera hardware required for hand hygiene monitoring?",
+     "a": "No, Hype Vision integrates with your existing IP/CCTV cameras supporting RTSP and ONVIF protocols regardless of brand."
+    },
+    {
+     "q": "How is personal data protected under privacy regulations?",
+     "a": "Video is kept within your facility, and face anonymization techniques are applied. No data leaves the premises, with all processing done locally."
+    },
+    {
+     "q": "How does the system alert if a hand hygiene step is missed?",
+     "a": "The AI detects incomplete or skipped steps and can trigger real-time audio or visual alerts to notify personnel."
+    },
+    {
+     "q": "Which industries benefit from this solution?",
+     "a": "Food manufacturing, pharmaceuticals, healthcare, and other sectors where hand hygiene compliance is critical."
+    },
+    {
+     "q": "Does the system require internet connectivity?",
+     "a": "No, it operates fully on-premise without requiring cloud or internet access, enhancing data security."
+    }
+   ],
+   "intro": [
+    "Hand hygiene plays a vital role in minimizing infection risks in food, pharmaceutical, and healthcare environments. Monitoring staff compliance with proper handwashing steps is critical to protect health and product safety.",
+    "Hype Vision’s AI-based solution integrates seamlessly with your existing IP/CCTV cameras to monitor and analyze hand hygiene steps in real time. It provides alerts for missed steps and detailed compliance reports.",
+    "Operating entirely on-premise, the system respects privacy regulations by anonymizing faces and keeping all video data within the facility. This makes hygiene compliance monitoring easier and more reliable."
+   ]
+  },
+  "/5s-denetimi-kamera-sistemi": {
+   "path": "/en/solutions/5s-audit-monitoring",
+   "title": "5S Audit Camera AI for Automated Workplace Organization & Cleanliness",
+   "desc": "AI-powered 5S audit solution using existing IP/CCTV cameras for continuous monitoring of workplace order, cleanliness, and standard compliance.",
+   "specs": [
+    [
+     "Compatibility",
+     "Works with IP/CCTV cameras supporting RTSP/ONVIF, brand-agnostic integration"
+    ],
+    [
+     "Real-Time Monitoring",
+     "Live tracking of 5S compliance including order, cleanliness, and equipment placement"
+    ],
+    [
+     "AI Technology",
+     "Hype-Model industrial image processing and AI analytics"
+    ],
+    [
+     "Data Privacy",
+     "On-premise/edge processing with anonymized video streams supporting data protection"
+    ],
+    [
+     "Modular Design",
+     "Customizable audit scenarios for orderliness, cleanliness, blockage detection"
+    ],
+    [
+     "Reporting",
+     "User-friendly dashboard with 5S compliance reports and alert notifications"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Why 5S Audit Camera AI Matters",
+     "p": [
+      "5S (Sort, Set in order, Shine, Standardize, Sustain) practices are foundational for operational efficiency and safety in manufacturing environments. Maintaining consistent compliance, however, is challenging with periodic manual audits.",
+      "Camera-based 5S audit removes reliance on manual inspections by providing continuous, automatic monitoring. This real-time visibility helps detect irregularities promptly, enhancing employee discipline and workplace safety."
+     ],
+     "li": [
+      "Sustains workplace organization and cleanliness standards over time",
+      "Identifies underutilized spaces and avoids unnecessary equipment clutter",
+      "Detects obstructed walkways, helping prevent workplace hazards",
+      "Ensures lean manufacturing methods are enforced transparently and measurably"
+     ],
+     "cards": []
+    },
+    {
+     "h": "How It Works - Integration with Existing Cameras via RTSP",
+     "p": [
+      "Hype Vision’s system connects to your current IP/CCTV cameras using RTSP or ONVIF protocols without requiring brand-specific equipment. This leverages your existing infrastructure for a smooth upgrade.",
+      "Video streams are processed live by Hype-Model AI modules that analyze workspace order, cleanliness, and 5S standard adherence automatically.",
+      "Local edge or on-premise deployment ensures data privacy with anonymization algorithms applied within the facility, sharing only approved analytics in dashboards."
+     ],
+     "li": [
+      "Compatible with any IP/CCTV camera supporting RTSP/ONVIF",
+      "Low latency secure processing on edge or on-premises devices",
+      "AI-driven detection of occupancy, misplaced equipment, and pathway blockages"
+     ],
+     "cards": []
+    },
+    {
+     "h": "What It Detects - Key 5S Compliance Insights",
+     "p": [
+      "The system facilitates easy tracking of critical 5S compliance points within your production areas.",
+      "By automatically identifying deviations, it aids in early detection of potential inefficiencies or safety hazards that might be missed by manual checks."
+     ],
+     "li": [
+      "Empty vs. occupied space detection to optimize usage",
+      "Identification of equipment outside designated locations",
+      "Recognition of blocked or constrained workflow paths",
+      "Assessment of orderliness and shine (cleanliness) status",
+      "Reduces manual workload for periodic auditing processes"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Extend Your Current Cameras with Minimal Overhead",
+     "p": [
+      "No additional camera hardware is necessary; the Hype Vision 5S Audit solution leverages your facility’s installed IP/CCTV cameras regardless of manufacturer. RTSP/ONVIF support offers broad compatibility and reduces total cost of ownership.",
+      "The modular solution scales easily to cover additional zones as needed while allowing rapid deployment and integration with existing video management systems."
+     ],
+     "li": [
+      "Brand-agnostic use of existing cameras maximizes investment",
+      "Supports integration with various video management platforms",
+      "Quick setup and expansion possibilities for phased rollouts"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Data Privacy & On-Premise Architecture",
+     "p": [
+      "Prioritizing compliance with data protection laws such as GDPR and local privacy requirements, the solution uses anonymization techniques like face blurring to protect personal information.",
+      "All video analysis occurs locally on edge or on-premise hardware to prevent raw data transfer outside your facility, enabling trusted adherence to privacy regulations and internal policies.",
+      "This empowers organizations to improve 5S compliance while safeguarding sensitive employee information."
+     ],
+     "li": [
+      "Anonymization of personal data within video streams",
+      "On-site processing without cloud upload of sensitive images",
+      "Designed to support regulatory data privacy frameworks as applicable"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Dashboard & Reporting for Actionable Insights",
+     "p": [
+      "The comprehensive user interface provides visual and statistical insights into 5S compliance status in real time. Managers can quickly identify non-compliance areas and receive alerts prior to audits.",
+      "Detailed reports and trends support continuous improvement efforts and facilitate clear communication across teams to maintain high workplace standards."
+     ],
+     "li": [
+      "Intuitive visual dashboard for ongoing compliance monitoring",
+      "Automated alerts for detected deviations from standards",
+      "Scheduled and on-demand report generation options"
+     ],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Which camera systems are supported?",
+     "a": "Compatible with any IP or CCTV cameras supporting RTSP or ONVIF protocols, independent of brand."
+    },
+    {
+     "q": "Are live images sent outside the facility?",
+     "a": "No, all processing is performed on-premise or on edge devices, with anonymized data kept within the premises."
+    },
+    {
+     "q": "What 5S conditions can the system detect?",
+     "a": "It detects occupied and empty spaces, misplaced equipment, blocked paths, cleanliness and orderliness deviations."
+    },
+    {
+     "q": "Is new camera hardware required for setup?",
+     "a": "No, existing cameras are used. Additional cameras can be added optionally for expanded coverage."
+    },
+    {
+     "q": "How does it ensure compliance with privacy regulations?",
+     "a": "Through anonymization features and local processing, it supports GDPR and related laws, though it does not provide legal advice."
+    }
+   ],
+   "intro": [
+    "Effective 5S implementation is essential for improving efficiency and safety in manufacturing facilities. Traditional manual audits, however, can be time-consuming and offer limited visibility. Hype Vision’s 5S Audit Camera AI integrates with your current IP/CCTV systems to provide automated and continuous 5S monitoring.",
+    "The solution analyzes live video streams to detect workspace orderliness, cleanliness, and adherence to standards in real time. It identifies empty or occupied spaces, misplaced equipment, obstructed pathways, and clutter — delivering continual visibility rather than periodic checks.",
+    "Powered by the Hype-Model industrial AI family, this system supports lean manufacturing principles and workplace safety while ensuring privacy through onsite anonymization of images without external data transfer."
+   ]
+  },
+  "/sektor/enerji-petrokimya": {
+   "path": "/en/industries/energy-petrochemical",
+   "title": "AI-Powered Safety and Security Solutions for Energy, Petrochemical and Fuel Operations",
+   "desc": "AI-driven industrial image analysis for PPE compliance, hazardous area monitoring and early fire-smoke detection in energy, petrochemical and fuel…",
+   "specs": [
+    [
+     "Operating Environments",
+     "Energy plants, refineries, petrochemical facilities, fuel stations"
+    ],
+    [
+     "Key Analytics Modules",
+     "PPE (helmet, vest, mask, gloves), restricted area, fire and smoke early detection"
+    ],
+    [
+     "Privacy and Compliance",
+     "Face anonymization ensuring data stays on-premise and privacy compliant"
+    ],
+    [
+     "Integration",
+     "Brand-agnostic RTSP/ONVIF camera and VMS infrastructure integration"
+    ],
+    [
+     "Deployment Model",
+     "On-premise/Edge for low latency and independence from internet connectivity"
+    ],
+    [
+     "Risk Areas",
+     "Lone worker monitoring, forklift-pedestrian risk, hazardous zone intrusions"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Sector Risks and Safety Needs",
+     "p": [
+      "Energy, petrochemical and fuel sectors present elevated risks such as explosion hazards, chemical exposure, and heavy machinery usage that require stringent safety measures. PPE compliance, continuous monitoring of hazardous zones, and early fire-smoke detection are priorities.",
+      "Incidents such as collisions between forklifts and pedestrians, lone worker emergencies, and unauthorized access to restricted areas can cause severe workforce impact and operational disruption."
+     ],
+     "li": [
+      "Real-time and reliable PPE compliance monitoring",
+      "Early detection of hazardous and restricted area violations",
+      "Rapid fire and smoke alerts to reduce emergency response time",
+      "Ensuring forklift and pedestrian safety",
+      "Lone worker monitoring facilitating timely emergency responses"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Use cases",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "PPE Compliance",
+       "d": "Continuously check hard hats, vests, masks and gloves in hazardous areas.",
+       "href": "/en/solutions/ppe-detection"
+      },
+      {
+       "t": "Restricted Area Monitoring",
+       "d": "Instant alerts when people enter tank farms, pumps or electrical rooms.",
+       "href": "/en/solutions/restricted-area-monitoring"
+      },
+      {
+       "t": "Early Fire & Smoke Detection",
+       "d": "Catch flame or smoke onset early, indoors and outdoors, from camera feeds.",
+       "href": "/en/solutions/fire-smoke-detection"
+      },
+      {
+       "t": "Forklift–Pedestrian Safety",
+       "d": "Near-miss alerts where internal logistics crosses pedestrian paths.",
+       "href": "/en/solutions/forklift-pedestrian-detection"
+      },
+      {
+       "t": "Fall Detection",
+       "d": "Fall and no-motion alarms for lone work and high-risk zones.",
+       "href": "/en/solutions/fall-detection"
+      },
+      {
+       "t": "Object & Asset Counting",
+       "d": "Count units at filling, dispatch and stock points without manual tallies.",
+       "href": "/en/solutions/product-counting"
+      }
+     ]
+    },
+    {
+     "h": "Safety Audits in Energy, Petrochemical and Fuel Facilities",
+     "p": [
+      "Regular inspections encompass PPE adherence checks, restricted area access controls, functionality of fire safety equipment, and emergency preparedness. These audits are vital for maintaining safety standards."
+     ],
+     "li": [
+      "Personal protective equipment compliance audits",
+      "Restricted and hazardous zone access control enforcement",
+      "Operational checks of fire and smoke detection systems",
+      "Forklift and pedestrian traffic safety reviews",
+      "Lone worker monitoring and emergency procedure assessments"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Adding AI-Enhanced Analytics to Existing Infrastructure",
+     "p": [
+      "Hype Vision’s brand-independent Hype-Model suite integrates effortlessly with existing RTSP/ONVIF IP camera systems. This enables AI-driven analytics without replacing the current hardware.",
+      "Edge and on-premise processing ensures fast analysis while preserving data privacy locally, avoiding cloud dependencies and potential security concerns. Legacy systems are thus efficiently upgraded."
+     ],
+     "li": [
+      "Seamless integration with existing IP camera infrastructure supporting RTSP/ONVIF",
+      "On-premise and edge analysis for data privacy and low latency",
+      "AI modules for PPE, restricted area and fire-smoke detection",
+      "Continuous, reliable video stream analytics",
+      "Non-disruptive integration without operational downtime"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Regulatory Framework and Safety Standards",
+     "p": [
+      "Employers in energy, petrochemical and fuel industries must comply with occupational health and safety laws such as Turkey’s Law No. 6331 or OSHA’s Process Safety Management (PSM) regulations in the US. These frameworks require proactive risk management and safety measure enforcement.",
+      "AI-enabled monitoring supports compliance by automating PPE checks and hazardous area controls, enhancing workplace safety. The information provided here is general and does not constitute legal advice."
+     ],
+     "li": [
+      "Turkey’s Occupational Health and Safety Law (No. 6331) forms the legal basis locally",
+      "OSHA PSM regulations provide a similar safety framework in the United States",
+      "PPE enforcement and hazardous zone management are key across all high-risk sectors",
+      "AI solutions offer proactive risk reduction capabilities for employers",
+      "Regulatory compliance is facilitated, not replaced, by technological tools"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Why Choose Hype Vision?",
+     "p": [
+      "Hype Vision offers camera brand-independent AI analytics that transform existing IP/CCTV networks into smart safety monitoring systems. Its on-premise and edge deployment guarantees data privacy while providing fast, accurate detection of critical safety factors in hazardous areas.",
+      "The multi-module Hype-Model family covers PPE compliance, restricted zone access, fire and smoke early detection, and forklift-pedestrian safety to reduce workplace accidents and increase operational transparency.",
+      "With privacy-first design, KVKK compliance, and international project experience, Hype Vision delivers sector-specific AI solutions that enhance safety without costly infrastructure overhaul."
+     ],
+     "li": [],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "How does Hype Vision integrate with our existing camera systems?",
+     "a": "Hype Vision supports RTSP and ONVIF protocols, enabling integration with your current IP cameras brand-independently. This allows you to add AI analytics without replacing your camera infrastructure."
+    },
+    {
+     "q": "How is data privacy and KVKK compliance ensured?",
+     "a": "Our solutions operate on-premise and at the edge, so video data remains on-site without cloud transmission. Face anonymization and other privacy features ensure compliance with data protection regulations."
+    },
+    {
+     "q": "Which safety risks can AI monitor effectively?",
+     "a": "AI modules detect PPE usage (helmet, vest, mask, gloves), monitor restricted area breaches, provide early fire and smoke detection, observe forklift-pedestrian interactions, and support lone worker safety tracking."
+    },
+    {
+     "q": "Do these solutions help with regulatory compliance?",
+     "a": "Hype Vision supports occupational safety requirements by enabling automated monitoring and risk detection. However, provided information is general and not a substitute for legal advice."
+    },
+    {
+     "q": "Is there a physical office in the US? Do you offer international support?",
+     "a": "Hype Vision is based in Turkey with international project experience but does not have a physical office in the US. Global service and support are provided remotely."
+    }
+   ],
+   "intro": [
+    "Workplace health and safety in high-risk environments such as energy plants, petrochemical refineries, and fuel stations is critical. Ensuring personal protective equipment (PPE) use, monitoring hazardous zones, and detecting fire-smoke early are essential to prevent accidents.",
+    "Hype Vision’s AI-based Hype-Model family seamlessly integrates with existing IP/CCTV systems to provide independent, reliable analytics. Its modules cover PPE detection, restricted area monitoring, fire and smoke alerting, and forklift-pedestrian safety while preserving image privacy on-premise.",
+    "Designed for KVKK and privacy compliance, Hype Vision solutions help manage risks effectively in hazardous operations, enhancing both safety and operational efficiency across the energy, petrochemical and fuel sectors."
+   ]
+  },
+  "/sektor/ilac-farma": {
+   "path": "/en/industries/pharmaceutical",
+   "title": "Computer Vision for Pharmaceutical Manufacturing: Hygiene, PPE and Quality",
+   "desc": "AI-powered camera analytics solutions for ensuring GMP-compliant hygiene, personal protective equipment (PPE) use, and visual quality control in…",
+   "specs": [
+    [
+     "Deployment",
+     "On-premise / Edge"
+    ],
+    [
+     "Integration",
+     "Brand-agnostic support with RTSP / ONVIF protocols"
+    ],
+    [
+     "Key Modules",
+     "Hand hygiene, cap-mask-gown PPE, restricted area monitoring, visual quality and packaging inspection, anomaly detection"
+    ],
+    [
+     "Data Privacy",
+     "Face anonymization and video data retained on premises"
+    ],
+    [
+     "Application Areas",
+     "Pharmaceutical manufacturing plants, cleanrooms, GMP-compliant production lines"
+    ],
+    [
+     "AI Technology",
+     "Hype-Model family for industrial computer vision"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Risks and Needs in Pharmaceutical Manufacturing",
+     "p": [
+      "Maintaining hygiene, correct PPE usage, and continuous quality monitoring are paramount in pharmaceutical production processes. Strict controls are required especially in cleanroom environments to prevent contamination and uphold product integrity.",
+      "Insufficient adherence to PPE protocols, hygiene lapses, and inconsistent visual quality inspection can negatively impact product safety and compliance, necessitating continuous objective monitoring."
+     ],
+     "li": [
+      "Proper and frequent hand hygiene adherence",
+      "Monitoring PPE compliance including caps, masks, and gowns",
+      "Restricted area access control in sensitive zones",
+      "Visual quality and packaging inspections",
+      "Early detection of anomalies and deviations"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Use cases",
+     "p": [],
+     "li": [],
+     "cards": [
+      {
+       "t": "Hand Hygiene Monitoring",
+       "d": "Monitor handwash and hygiene steps at entry and stations from existing cameras.",
+       "href": "/en/solutions/hand-hygiene-monitoring"
+      },
+      {
+       "t": "PPE Compliance",
+       "d": "Check gowns, masks, bonnets and gloves across cleanrooms and production.",
+       "href": "/en/solutions/ppe-detection"
+      },
+      {
+       "t": "Restricted Area Monitoring",
+       "d": "Alerts on unauthorized entry to cleanrooms and restricted production zones.",
+       "href": "/en/solutions/restricted-area-monitoring"
+      },
+      {
+       "t": "Visual Quality Inspection",
+       "d": "Line-speed visual checks on packaging, labels and filling lines.",
+       "href": "/en/solutions/visual-quality-inspection"
+      },
+      {
+       "t": "Visual Anomaly Detection",
+       "d": "Catch unexpected conditions and process deviations from the image.",
+       "href": "/en/solutions/anomaly-detection"
+      },
+      {
+       "t": "Object & Case Counting",
+       "d": "Count units on production and packaging lines without manual tallies.",
+       "href": "/en/solutions/product-counting"
+      }
+     ]
+    },
+    {
+     "h": "Inspections and Monitoring in Pharmaceutical Production",
+     "p": [
+      "Regular, documented inspections focusing on hygiene and PPE practices are mandated as part of GMP and related pharmaceutical manufacturing standards. AI-driven video analytics enhance the continuity and objectivity of these inspections."
+     ],
+     "li": [
+      "Monitoring of PPE usage (caps, masks, gloves, gowns) by personnel",
+      "Video-backed verification of hand hygiene protocols",
+      "Control of restricted cleanroom access points",
+      "Visual quality checks on production line and packaging",
+      "Notification of abnormal or risky events"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Seamless Integration with Existing Camera Infrastructure",
+     "p": [
+      "Hype Vision solutions integrate seamlessly with existing IP and CCTV camera infrastructure through RTSP and ONVIF protocols, minimizing additional hardware investments.",
+      "Edge-based AI modules ensure data processing onsite, preventing external data transfers and enhancing security and privacy."
+     ],
+     "li": [
+      "Brand-agnostic, protocol-based flexible integration",
+      "Local (on-premise) AI inference and video analysis",
+      "Data security and privacy compliant face anonymization",
+      "Easy installation with minimal infrastructure changes"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Relevant Regulations and Compliance in Pharmaceutical Manufacturing",
+     "p": [
+      "GMP and hygiene standards impose mandatory requirements for pharmaceutical manufacturing environments including PPE use and hand hygiene. Hype Vision systems support adherence to these requirements though they do not constitute legal advice or assured compliance."
+     ],
+     "li": [
+      "GMP and pharmaceutical hygiene standards",
+      "General occupational health and safety regulations (e.g., OSHA for awareness)",
+      "Privacy laws such as GDPR or equivalent regulations",
+      "Continuous monitoring and reporting to assist compliance"
+     ],
+     "cards": []
+    },
+    {
+     "h": "Why Choose Hype Vision?",
+     "p": [
+      "Based in Bilişim Vadisi Gebze since 2020, Hype Vision specializes in industrial computer vision with proven experience in pharmaceutical and medical manufacturing use cases. The Hype-Model family is tailored to meet industry-specific needs.",
+      "Its brand-agnostic, on-premise, and edge-based design ensures compliance with privacy and data security requirements, offering pharmaceutical manufacturers a reliable solution to continuously monitor hygiene, PPE, and quality."
+     ],
+     "li": [],
+     "cards": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Do Hype Vision systems integrate with our existing camera infrastructure?",
+     "a": "Yes, the solution supports integration with all RTSP and ONVIF-enabled IP and CCTV camera systems regardless of brand."
+    },
+    {
+     "q": "How is data privacy and customer confidentiality ensured?",
+     "a": "Face anonymization technology is applied, and video data remains stored locally on your premises without cloud or external transfer."
+    },
+    {
+     "q": "Which modules are recommended for pharmaceutical manufacturing?",
+     "a": "Modules for hand hygiene monitoring, PPE compliance (caps, masks, gowns), restricted area control, visual quality and packaging inspection, and anomaly detection are especially suitable."
+    },
+    {
+     "q": "Does the system guarantee full GMP and regulatory compliance?",
+     "a": "Hype Vision solutions are designed to support GMP and relevant standards but should not be considered as legal or regulatory compliance guarantees."
+    }
+   ],
+   "intro": [
+    "Ensuring workplace safety, hygiene, and quality compliance in pharmaceutical manufacturing is critical. Adherence to GMP and related regulations requires proper PPE use, hygiene practices, and continuous quality monitoring.",
+    "Hype Vision’s Hype-Model product family integrates with existing IP/CCTV camera systems via RTSP and ONVIF protocols, enabling AI-based analysis of worker behavior and manufacturing processes. Modules include hand hygiene monitoring, PPE compliance (caps, masks, gowns), restricted area access control, and quality/anomaly detection.",
+    "Operating on-premise and at the edge, the system keeps video data local and employs face anonymization to comply with privacy regulations. This enables efficient, secure monitoring of crucial hygiene and quality parameters essential for pharmaceutical manufacturing."
    ]
   }
  },

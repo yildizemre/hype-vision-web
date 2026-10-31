@@ -122,6 +122,10 @@ TOPICS = [
  (r"onvif|rtsp|cctv|kamera-acisi|ip-kamera|camera|mimari|edge", ["/onvif-rtsp-yapay-zeka-entegrasyonu", "/cctv-yapay-zeka", "/endustriyel-goruntu-isleme"], ["400-kamera", "tir-yukleme"]),
  (r"kvkk|gizlilik|privacy|gdpr", ["/kvkk-uyumlu-kamera-analitigi", "/cctv-yapay-zeka"], ["fuar", "400-kamera"]),
  (r"goruntu-isleme|computer-vision|makine|firma|maliyet|ne-kadar|pilot|video-analitigi|nedir", ["/endustriyel-goruntu-isleme", "/kalite-kontrol-goruntu-isleme", "/kkd-kontrol-kamera-sistemi"], ["400-kamera", "medikal", "tekstil"]),
+ (r"el-hijyeni|hand-hygiene|hijyen", ["/kkd-kontrol-kamera-sistemi", "/kalite-kontrol-goruntu-isleme", "/kvkk-uyumlu-kamera-analitigi"], ["el-hijyeni", "medikal", "gida-hattinda"]),
+ (r"5s-denetimi|5s-audit|5s-kamera", ["/oee-takip-sistemi", "/kalite-kontrol-goruntu-isleme", "/yasakli-alan-ihlal-tespiti"], ["kamera-ile-5s", "400-kamera", "kaynak"]),
+ (r"enerji|petrokimya|rafineri|akaryakit|energy|petrochemical|oil-gas|refinery|fuel", ["/kkd-kontrol-kamera-sistemi", "/yasakli-alan-ihlal-tespiti", "/yangin-duman-tespiti"], ["akaryakit-istasyonu", "400-kamera", "acik-alan-duman"]),
+ (r"ilac|farma|pharma|gmp|cleanroom|temiz-oda", ["/el-hijyeni-denetimi-kamera-sistemi", "/kkd-kontrol-kamera-sistemi", "/kalite-kontrol-goruntu-isleme"], ["el-hijyeni", "medikal", "islak-mendil"]),
 ]
 LBL = {"tr": ("İlgili çözümler", "İlgili vaka çalışmaları", "İncele →"), "en": ("Related solutions", "Related case studies", "Explore →")}
 
