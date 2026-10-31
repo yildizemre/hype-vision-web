@@ -321,11 +321,8 @@ def H(lang):  # ana sayfa kökü
     return "/" if lang == "tr" else "/en/"
 
 def cta(lang="tr"):
-    if lang == "tr": return load_mod("hub").PRE
-    u = U[lang]; h = H(lang)
-    return f"""<div class="wrap endcta"><div class="cta rv"><img src="/img/det-kusbakisi.webp" alt=""><div class="in">
-<h2 class="h">{u['cta_h']}<span>{u['cta_s']}</span></h2>
-<div class="pillg"><a href="{h}#iletisim">{u['contact']}</a><a class="d" href="{h}#iletisim">{u['demo']}</a></div></div></div></div>"""
+    # Lead toplama: her iki dilde de "telefonunu bırak biz arayalım" formunu (PRE/PRE_EN) göster
+    return load_mod("hub").PRE if lang == "tr" else load_mod("hub").PRE_EN
 
 def faq_html(items, lang="tr"):
     if not items: return ""
