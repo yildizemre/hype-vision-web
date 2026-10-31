@@ -9239,6 +9239,942 @@
     }
    ],
    "links": []
+  },
+  {
+   "path": "/blog/mevcut-guvenlik-kameralarina-yapay-zeka-ekleme-adim-adim-baslangic",
+   "title": "Mevcut Güvenlik Kameralarına Yapay Zekâ Nasıl Eklenir — Adım Adım Başlangıç",
+   "desc": "Mevcut RTSP/ONVIF destekli güvenlik kameralara yapay zekâ ekleme sürecini edge sunucu ve Hype-Model modülleri ile basitçe öğrenin.",
+   "date": "2026-10-31",
+   "specs": [],
+   "sections": [
+    {
+     "h": "Neden Mevcut Kameralara Yapay Zekâ Eklenmeli?",
+     "p": [
+      "Yapay zekâ destekli analiz; KKD kontrolü, forklift-yaya ayrımı, yasaklı alan takibi, yangın-duman algılama, ürün sayımı, kalite kontrol ve OEE gibi pek çok alanda önemli değer katar.",
+      "Yeni kamera veya sistem yatırımı yapmadan, var olan altyapı üzerinde operasyonel verimlilik ve güvenlik artırılabilir."
+     ],
+     "li": [
+      "Yatırım maliyetlerinde tasarruf",
+      "Kurulum süresinin kısalması",
+      "Marka bağımsız çalışabilme",
+      "KVKK ve gizlilik uyumluluğu",
+      "Edge sunucular ile hızlı ve güvenli veri işleme"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "RTSP ve ONVIF Nedir? Neden Önemlidir?",
+     "p": [
+      "RTSP (Real Time Streaming Protocol) ve ONVIF (Open Network Video Interface Forum) standartları, IP/CCTV kameralardan video akışını ve cihaz bilgilerini almak için yaygın kullanılmaktadır.",
+      "Bu protokoller sayesinde farklı marka ve modellerdeki kameralarınıza markaya özel yazılım kullanmadan bağlantı kurulabilir."
+     ],
+     "li": [
+      "RTSP: Canlı video akışının alımı için standart bir protokol.",
+      "ONVIF: Kamera kontrolü (pan-tilt-zoom) ve cihaz yönetiminde standart.",
+      "Çoğu modern IP kamera bu protokolleri destekler."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Edge Sunucu ve Hype-Model Yazılımı ile Entegrasyon",
+     "p": [
+      "Yapay zekâ hesaplama ve görüntü işleme işlemleri, genellikle bulut yerine onsite (edge) sunucuda gerçekleştirilir.",
+      "Bu sayede veri güvenliği artırılır, gecikme azalır ve KVKK gibi kişisel veri koruma gereksinimlerine uygunluk sağlanır."
+     ],
+     "li": [
+      "Edge sunucuya kameraların RTSP/ONVIF bağlantılarının kurulması",
+      "Hype-Model yapay zekâ modüllerinin seçilmesi (örneğin, KKD/baret, forklift-yaya, yasaklı alan)",
+      "Video akışlarının gerçek zamanlı olarak yapay zeka ile analiz edilmesi",
+      "Analiz sonuçlarının ilgili dashboard ve süreçlere aktarılması"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Pilot Süreci — 2-4 Haftalık Başlangıç Aşamaları",
+     "p": [
+      "Pilot aşama; saha analizi, kamera uygunluğunun değerlendirilmesi, akış ve algoritma testi gibi adımları içerir.",
+      "Tipik olarak 2-4 hafta sürer ve operasyonunuza uygun modüller belirlenir."
+     ],
+     "li": [
+      "Kamera ve altyapı analizi",
+      "RTSP/ONVIF bağlantı testleri",
+      "Hype-Model modüllerinin sahada test edilmesi",
+      "Performans ve güvenlik değerlendirmesi",
+      "Raporlama ve sonraki adımlar için öneriler"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Sonraki Adım: Ücretsiz Ön Analiz ile Başlayın",
+     "p": [
+      "Mevcut kameralarınızın yapay zekâ entegrasyonuna uygunluğunu ilk aşamada ücretsiz ön analiz ile değerlendirebilirsiniz.",
+      "Bu analiz sayesinde gereksinimleriniz ve mevcut sisteminiz göz önüne alınarak en doğru yol haritası çıkarılır."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Mevcut kameralara yapay zekâ eklemek için kamera modeli değiştirmek gerekir mi?",
+     "a": "Hayır, RTSP ve ONVIF destekleyen mevcut IP/CCTV kameralarınızı değiştirmeden yapay zekâ analizine dahil edebilirsiniz."
+    },
+    {
+     "q": "Edge sunucu kullanmanın avantajları nelerdir?",
+     "a": "Veri güvenliği artar, gecikme azalır ve KVKK gibi gizlilik kurallarına uyum sağlanır. Ayrıca internet bağımlılığı azalır."
+    },
+    {
+     "q": "Hype-Model modüllerini nasıl seçmeliyim?",
+     "a": "İhtiyacınıza göre KKD kontrolü, yasaklı alan takibi, yangın algılama gibi modüller önerilir. Pilot aşamada ihtiyacınız belirlenir."
+    },
+    {
+     "q": "Pilot sürecinde ne olur?",
+     "a": "Saha ve kamera analizleri yapılarak, yapay zekâ modelleri test edilir, performans değerlendirilir ve sonraki adımlar planlanır."
+    },
+    {
+     "q": "Yapay zekâ entegrasyonu KVKK’ya uygun mu?",
+     "a": "Evet, edge sunucu ve gizlilik dostu yazılım mimarisi ile kişisel verilerin korunmasına özen gösterilir. Ancak hususta genel bilgi amaçlıdır, hukuki tavsiye değildir."
+    }
+   ],
+   "intro": [
+    "Endüstriyel ortamlarda güvenlik ve operasyon verimliliğini artırmak için yapay zekâ destekli görüntü işleme çözümleri tercih ediliyor.",
+    "Mevcut IP/CCTV kameralarınızı değiştirmeden, RTSP/ONVIF protokolleri üzerinden yapay zekâ ile donatabilirsiniz.",
+    "Bu rehberde, bağlantıdan pilot adımlarına kadar süreci teknik ama sade şekilde anlatıyoruz."
+   ],
+   "links": [
+    "/blog/yapay-zeka-kamera-sistemi-maliyeti-neye-bagli",
+    "/blog/yapay-zeka-pilotu-oncesi-hazirlik-kontrol-listesi",
+    "/blog/onvif-nedir",
+    "/blog/video-analitigi-nedir"
+   ]
+  },
+  {
+   "path": "/blog/yapay-zeka-kamera-sistemi-maliyeti-neye-bagli",
+   "title": "Yapay Zekâ Kamera Sistemi Maliyeti Neye Bağlıdır?",
+   "desc": "Yapay zekâ kamera sistemi fiyatını belirleyen faktörler nelerdir? Kamera sayısı, modüller, sunucu altyapısı ve pilot uygulama süreci hakkında bilgi edinin.",
+   "date": "2026-10-30",
+   "specs": [],
+   "sections": [
+    {
+     "h": "Kamera Sayısı ve Tipi",
+     "p": [
+      "Bir yapay zekâ kamera sisteminin maliyetinde en önemli faktörlerden biri, kurulacak kamera sayısıdır. Ne kadar çok kamera kullanılırsa, donanım ve lisans maliyeti o ölçüde artar.",
+      "Ayrıca kamera özellikleri (çözünürlük, gece görüşü, dayanıklılık gibi) fiyatı etkileyen önemli unsurlardandır."
+     ],
+     "li": [
+      "Yüksek çözünürlüklü kameralar hassas analiz sağlar ancak daha maliyetlidir.",
+      "Kapalı alan veya dış mekan koşulları kamera seçimini ve dolayısıyla fiyatı değiştirebilir."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Yapay Zekâ Modülleri ve Analiz Kapasitesi",
+     "p": [
+      "Hype Vision’un Hype-Model ailesi gibi modüler yapay zekâ çözümleri, maliyeti etkileyen bir diğer önemli bileşendir.",
+      "İş güvenliği için KKD kontrolü, forklift-yaya algılama, yasaklı alan denetimi, yangın/duman tespiti, ürün sayımı ve kalite kontrol gibi farklı modüller seçilebilir."
+     ],
+     "li": [
+      "Her modül farklı işlev ve analitik karmaşıklığa sahiptir; bu da lisans maliyetini etkiler.",
+      "Gelişmiş özellikler ve kapsamlı raporlama seçenekleri fiyatı artırabilir."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Sunucu ve Yazılım Altyapısı",
+     "p": [
+      "Yapay zekâ modeli ve görüntü işleme, on-premise olarak çalışan yerel sunucularda gerçekleştirilir. Bu sayede KVKK ve gizlilik (privacy) koşullarına da uygunluk sağlanır.",
+      "Sunucu donanımı, kurulacak sistemin iş yüküne göre değişir ve bu da maliyeti etkileyen unsurlardan biridir."
+     ],
+     "li": [
+      "Yüksek işlem gücüne sahip sunucular daha hızlı ve hassas analiz yapar ancak yatırım maliyetini artırır.",
+      "Sunucu düzgün yönetilmezse sistem performansı ve sürdürülebilirliği olumsuz etkilenebilir."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Pilot Uygulama ve Ön Analiz Süreci",
+     "p": [
+      "Tipik olarak 2-4 haftalık bir pilot uygulama Hype Vision ile başlar. Bu süreçte sistemin ihtiyaca uygunluğu ve performansı detaylı şekilde incelenir.",
+      "Pilot sonuçları, kesin maliyet teklifine esas olacak teknik detayların netleşmesini sağlar.",
+      "Dolayısıyla bir ön analiz olmadan net bir fiyat vermek mümkün değildir."
+     ],
+     "li": [
+      "Pilot aşaması, kurulum ve personel eğitimi gibi süreçleri de kapsar.",
+      "Bu sayede müşterinin gerçek ihtiyacı ve beklentisi doğrultusunda özelleştirilmiş çözüm sunulur."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Hukuki Çerçeve ve Kullanım Alanları",
+     "p": [
+      "İşyerlerinde yapay zekâ kamera sistemlerinin kullanımı, genel iş sağlığı ve güvenliği mevzuatı kapsamında değerlendirilir.",
+      "KVKK gibi kişisel veri koruma kanunlarına uygun bir sistem tercih edilmelidir.",
+      "Bu yazı hukuki danışmanlık niteliği taşımamakla birlikte, iş güvenliği uygulamalarınızı destekleyici genel bilgiler sunmaktadır."
+     ],
+     "li": [
+      "PPE (KKD) kontrolü ve forklift güvenliği iş kazalarını azaltmada önemli fayda sağlar.",
+      "Endüstriyel üretimde kalite ve verimlilik takibi OEE modülü ile sağlanabilir."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Sonraki Adım: Ücretsiz Ön Analiz ve Değerlendirme",
+     "p": [
+      "Yapay zekâ kamera sistemi maliyeti ihtiyaç ve ölçek doğrultusunda şekillenir. Kesin fiyat için ön analizle kapsamlı bir keşif yapmak gerekir.",
+      "Hype Vision’da ücretsiz ön analiz ve pilot uygulama sürecini başlatarak, işletmenize en uygun çözümleri birlikte belirleyebilirsiniz."
+     ],
+     "li": [
+      "İşletmenizin mevcut kamera altyapısını ve gereksinimlerini uzmanlarımızla ücretsiz olarak değerlendirin.",
+      "Bu adım, doğru yatırım kararını vermenizde size rehberlik edecektir."
+     ],
+     "cards": [],
+     "rows": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Yapay zekâ kamera sistemlerinin fiyatını ne belirler?",
+     "a": "Kamera sayısı, seçilen yapay zekâ modülleri, sunucu altyapısı ve yapılacak pilot uygulama süreci gibi faktörler fiyat üzerinde etkili olur. Kesin fiyat için ön analiz şarttır."
+    },
+    {
+     "q": "KVKK uyumluluğu yapay zekâ sistem maliyetini etkiler mi?",
+     "a": "KVKK ve benzeri gizlilik düzenlemelerine uygun on-premise çözümler işletme ve veri güvenliği açısından tercih edilir. Uygunluk maliyeti etkileyebilir ancak uzun vadede fayda sağlar."
+    },
+    {
+     "q": "Mevcut kameralarım yapay zekâ sistemine entegre olur mu?",
+     "a": "Hype Vision, RTSP ve ONVIF destekli mevcut kamera altyapılarını marka bağımsız olarak kullanabilir. Bu da ek donanım ihtiyacını ve maliyeti azaltabilir."
+    },
+    {
+     "q": "Pilot uygulama süreci neden önemlidir?",
+     "a": "Pilot aşaması, sistem performansının gerçek sahada test edilmesini sağlar ve nihai maliyet teklifinin netleşmesine yardımcı olur. Ayrıca özel gereksinimlere uygun çözümler sunar."
+    },
+    {
+     "q": "Kesin bir maliyet teklifi ne zaman alınabilir?",
+     "a": "Pilot uygulama tamamlandığında ve ön analizde ihtiyaçlar netleştiğinde, işletmeye özel kesin maliyet teklifi hazırlanabilir."
+    }
+   ],
+   "intro": [
+    "Yapay zekâ destekli kamera sistemleri, iş güvenliği ve endüstriyel görüntü işleme alanında giderek yaygınlaşıyor.",
+    "Ancak maliyetleri belirleyen pek çok değişken bulunuyor ve kesin fiyat vermek doğru değil.",
+    "Bu yazıda yapay zekâ kamera sistemi maliyetini etkileyen temel unsurları ele alacağız."
+   ],
+   "links": [
+    "/blog/yapay-zeka-pilotu-oncesi-hazirlik-kontrol-listesi",
+    "/blog/kamerayla-kkd-baret-denetimi-pilot-kurulumu",
+    "/blog/mevcut-guvenlik-kameralarina-yapay-zeka-ekleme-adim-adim-baslangic",
+    "/blog/goruntu-isleme-pilot-projesi-planlama",
+    "/blog/video-analitigi-nedir"
+   ]
+  },
+  {
+   "path": "/blog/yapay-zeka-pilotu-oncesi-hazirlik-kontrol-listesi",
+   "title": "Yapay Zekâ Pilot Öncesi Hazırlık Kontrol Listesi",
+   "desc": "Kamera, ağ ve İSG hedefleri için yapay zekâ pilotlarınız öncesinde dikkat edilmesi gereken pratik hazırlıklar ve kontrol adımları.",
+   "date": "2026-10-29",
+   "specs": [],
+   "sections": [
+    {
+     "h": "Kamera ve Görüntü Kalitesi Kontrolü",
+     "p": [
+      "Yapay zekâ analizlerinin doğruluğu büyük ölçüde kullanılan kameraların kalitesine bağlıdır. Kameranın çözünürlüğü, pozlama ayarları ve görüş açısı doğru belirlenmelidir.",
+      "RTSP/ONVIF uyumluluğu, markadan bağımsız bağlantı için zorunludur. Hype-Model modüllerimiz bu protokollere uygun kameralarla çalışır."
+     ],
+     "li": [
+      "Görüntülerin net, karanlık ya da aşırı parlak olmaması.",
+      "Kameranın sabit ve hedef bölgeyi tam kapsaması.",
+      "RTSP veya ONVIF üzerinden canlı bağlantının test edilmesi.",
+      "Çalışma saatleri ve ışık koşullarına göre kamera ayarlarının optimize edilmesi."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Ağ Altyapısı ve Veri Güvenliği Değerlendirmesi",
+     "p": [
+      "Kamere ve görüntü işleme cihazlarının ağ bağlantısı kesintisiz olmalıdır. Band genişliği ve veri transfer hızları proje performansı için kritik öneme sahiptir.",
+      "KVKK ve veri gizliliği kapsamında on-premise sistem kullanımına öncelik verilmektedir; bu nedenle veri bulut transferleri minimize edilmelidir."
+     ],
+     "li": [
+      "Kamera ve sunucu erişim izinlerinin net tanımlanması.",
+      "Güvenli ağ protokolleri ve firewall ayarlarının kontrolü.",
+      "Veri depolama ve işleme süreçlerinin yerel (on-premise) olması.",
+      "Ağ altyapısının pilot akışını destekleyecek performansta olması."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "İş Sağlığı ve Güvenliği (İSG) Hedeflerinin Belirlenmesi",
+     "p": [
+      "Pilot uygulama öncesinde tesis içi İSG hedeflerinin belirlenmesi, yapay zekâ modüllerinin doğru parametreler ile çalışmasına olanak sağlar.",
+      "KKD kullanımı, forklift-yaya kaza önleme ve yasaklı alan ihlalleri gibi modüllerin öncelikleri net olmalıdır."
+     ],
+     "li": [
+      "İSG risk analiz raporlarının gözden geçirilmesi.",
+      "Tesisin kritik risk noktalarının haritalanması.",
+      "KKD ve diğer koruyucu ekipman kullanımının standartlaştırılması.",
+      "İlgili ekip ve personel bilgilendirmelerinin yapılması."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Pilot Sürecinin Hızlandırılması İçin Ön Analiz",
+     "p": [
+      "Pilot başlangıcında 2-4 haftalık sürecin en verimli şekilde tamamlanması için ön analiz yapılması hayati önem taşır.",
+      "Alan ziyaretleri, mevcut kamera ve altyapı değerlendirmesi ile risklerin belirlenmesi, projenin sağlıklı ilerlemesini sağlar."
+     ],
+     "li": [
+      "Mevcut kamera sistemlerinin yerinde kontrolü ve kayıt alınması.",
+      "Ağ altyapısı ile ilgili teknik ekiplerle işbirliği yapılması.",
+      "İSG sorumluları ile ön görüşmeler ve hedeflerin netleşmesi.",
+      "Pilot sonrası kullanılacak rapor ve çıktılar için ihtiyaçların belirlenmesi."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Bir Sonraki Adım: Ücretsiz Ön Analiz Teklifi",
+     "p": [
+      "Yapay zekâ pilot projelerinizde hızlı ve sağlıklı başlangıç için Hype Vision’ın ücretsiz ön analiz hizmetinden faydalanabilirsiniz.",
+      "Alan uzmanlarımız, kamera ve altyapı değerlendirmesi ile sizin için en uygun modül ve çözüm planını önerecektir.",
+      "İletişime geçerek projenizin hızlı başlamasını sağlayabilirsiniz."
+     ],
+     "li": [
+      "Ücretsiz ön analiz talebi için web sitemizde yer alan formu doldurabilirsiniz.",
+      "Pilot süreci ve ihtiyaçlarınız hakkında detaylı bilgilendirme yapılacaktır.",
+      "Sizinle birlikte ideal planlama yapılır, gereksiz zaman kayıpları önlenir."
+     ],
+     "cards": [],
+     "rows": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Hangi kameralar yapay zekâ pilotu için uygundur?",
+     "a": "Hype-Model modüllerimiz RTSP veya ONVIF protokolü üzerinden erişilebilir, sabit ve net görüntü sağlayan tüm markalardan kameralarla uyumludur."
+    },
+    {
+     "q": "Pilot sürecinde ağ altyapısı neden önemli?",
+     "a": "Kesintisiz veri akışı, görüntülerin gerçek zamanlı analiz edilmesi için kritik olup, ağın bant genişliği ve güvenlik ayarları pilot başarısını etkiler."
+    },
+    {
+     "q": "Yapay zekâ uygulamalarında KVKK nasıl korunur?",
+     "a": "Hype Vision yazılım ve donanımları on-premise çalışır, veriler kurum içinde kalır, böylece KVKK ve gizlilik kurallarına uygun bir analiz yapılır. Bu yazı genel bilgi amaçlıdır, hukuki tavsiye değildir."
+    },
+    {
+     "q": "Pilot öncesi hazırlık ne kadar sürede tamamlanmalıdır?",
+     "a": "Tipik hazırlık ve pilot başlangıcı 2 ila 4 hafta sürer; ön analizle bu süre optimize edilir ve sorunsuz bir başlangıç sağlanır."
+    }
+   ],
+   "intro": [
+    "Endüstriyel görüntü işleme projelerinde yapay zekâ pilotu, başarının temel adımıdır. ",
+    "Pilot öncesinde yapılacak doğru hazırlık, sürecin hızlanmasını ve doğru veri alınmasını sağlar.",
+    "Bu yazıda, kamera uygunluğu, ağ altyapısı ve iş sağlığı güvenliği (İSG) hedefleri için etkili bir kontrol listesi sunuyoruz."
+   ],
+   "links": [
+    "/blog/kamerayla-kkd-baret-denetimi-pilot-kurulumu",
+    "/blog/forklift-yaya-kazalarini-kamerayla-onleme-rehberi",
+    "/blog/mevcut-guvenlik-kameralarina-yapay-zeka-ekleme-adim-adim-baslangic",
+    "/blog/goruntu-isleme-pilot-projesi-planlama",
+    "/blog/kamera-acisi-neden-onemli"
+   ]
+  },
+  {
+   "path": "/blog/kamerayla-kkd-baret-denetimi-pilot-kurulumu",
+   "title": "Kamerayla KKD (Baret/Yelek) Denetimi: Pilot Nasıl Kurulur?",
+   "desc": "Kamera ile iş yerinde KKD denetimi pilot kurulumu için adım adım rehber. Baret ve yelek tespiti, kamera yerleşimi, alarm sistemi ve pilot süreci hakkında pratik bilgiler.",
+   "date": "2026-10-28",
+   "specs": [],
+   "sections": [
+    {
+     "h": "Kamera ile KKD Denetiminin Avantajları",
+     "p": [
+      "Kamera destekli KKD denetimi, insan hatasını azaltır, gerçek zamanlı uyarılar sağlar ve iş sahasında uyumluluğu artırır. Pilot uygulama sayesinde sistem sahaya uyarlanabilir."
+     ],
+     "li": [
+      "Kesintisiz izleme ile güvenliği artırır.",
+      "Uyumluluk ve raporlama imkanı sunar.",
+      "Yapay zeka modülleri sayesinde baret ve yelek gibi KKD’ler doğru tespit edilir."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Pilot Kurulumunda Kamera ve Yerleşim",
+     "p": [
+      "KKD denetiminde doğru kamera seçimi ve konumu başarının temelidir. Hype Vision’un Hype-Model yapay zeka ailesi farklı marka ve tipte kameralarla uyumludur.",
+      "Kamera yerleşimi, iş sahasında giriş-çıkış noktaları, forklift yolları ve riskli alanlar öncelikli olarak planlanmalıdır."
+     ],
+     "li": [
+      "Yüksek çözünürlüklü ve gece görüş özellikli kameralar tercih edilir.",
+      "Kameralar, çalışanların KKD takıp takmadığını net görecek şekilde konumlandırılır.",
+      "Alan genişse birden fazla kamera kullanılması faydalıdır."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Denetim Kuralları ve Alarm Yönetimi",
+     "p": [
+      "Pilot uygulamada KKD kuralları genel güvenlik standartlarına uygun şekilde belirlenir. Yapay zeka, KKD uygunluğu ihlalini tespit ettiğinde gerçek zamanlı alarm verir.",
+      "Alarm mekanizması, iş güvenliği sorumlularının hızlı müdahale etmesini sağlar."
+     ],
+     "li": [
+      "KKD olmayan veya eksik olan çalışanlar için uyarı sistemi kurulur.",
+      "Alarm bildirimleri, görsel ve sesli olabilir.",
+      "Sistem, yanlış pozitifleri minimize edecek şekilde optimize edilir."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Pilot Süreci ve Sonrası",
+     "p": [
+      "Pilot genellikle 2-4 hafta sürer ve kurulumdan sonra saha testleri yapılır. Toplanan veri analiz edilerek sistem ayarları optimize edilir.",
+      "Pilot sonunda operasyonel kullanıma uygunluk değerlendirilir."
+     ],
+     "li": [
+      "Saha analizi ve kamera yaygınlığı kontrolü.",
+      "Yapay zeka modülünün hatasız çalışması için ince ayar.",
+      "Gerekirse kapsam ve alan genişletme planları."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Sonraki Adım: Ücretsiz Ön Analiz",
+     "p": [
+      "İş yerinizde KKD denetimi için kamera pilotu kurulumuna hazır mısınız? Hype Vision olarak ön saha analizinde size ücretsiz destek sunuyoruz. Saha koşullarınıza ve hedeflerinize uygun en etkin çözümü birlikte belirleyelim.",
+      "Pilot sürecinizin başarıyla ilerlemesi için bizimle iletişime geçin, ücretsiz ön analiz fırsatından faydalanın."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Kamera ile KKD denetimi hangi alanlarda uygulanabilir?",
+     "a": "Kamera tabanlı KKD denetimi inşaat, depo, fabrika gibi iş yerlerinde, özellikle giriş/çıkış, riskli bölgeler ve forklift yollarında etkili şekilde uygulanabilir."
+    },
+    {
+     "q": "Pilot kurulum süresi ne kadardır?",
+     "a": "Tipik pilot kurulum ve test süreci 2-4 hafta arasında değişmektedir; bu süre sahaya ve projenin kapsamına göre ayarlanabilir."
+    },
+    {
+     "q": "Kamera markası önemli mi?",
+     "a": "Hype Vision’ın Hype-Model algoritmaları marka bağımsız çalıştığı için mevcut kamera altyapınızı kullanabilirsiniz."
+    },
+    {
+     "q": "Alarm sistemleri nasıl çalışır?",
+     "a": "Yapay zeka, KKD takmayan veya eksik KKD kullananları anlık tespit edip uyarı alarmları verir; bu alarmlar görsel veya sesli olabilir."
+    },
+    {
+     "q": "Yasal tavsiye almalı mıyım?",
+     "a": "Paylaşılan bilgiler genel bilgilendirme amaçlıdır, hukuki tavsiye niteliği taşımaz. İş yeriniz için resmi mevzuat danışmanlığı önerilir."
+    }
+   ],
+   "intro": [
+    "İş güvenliğinde KKD (Kişisel Koruyucu Donanım) kullanımı kritik öneme sahiptir. Kamera ile yapılan KKD denetimi, sahadaki riskleri otomatik algılayarak iş güvenliği süreçlerini destekler.",
+    "Bu rehber, kamera tabanlı baret ve yelek tespiti pilotunun nasıl kurulacağı ve sürecin avantajları hakkında bilgi verir."
+   ],
+   "links": [
+    "/blog/forklift-yaya-kazalarini-kamerayla-onleme-rehberi",
+    "/blog/100-kamerali-tesiste-yapay-zeka-nereden-baslamali",
+    "/blog/mevcut-guvenlik-kameralarina-yapay-zeka-ekleme-adim-adim-baslangic",
+    "/blog/yapay-zeka-ile-is-guvenligi",
+    "/blog/goruntu-isleme-pilot-projesi-planlama"
+   ]
+  },
+  {
+   "path": "/blog/forklift-yaya-kazalarini-kamerayla-onleme-rehberi",
+   "title": "Forklift-Yaya Kazalarını Kamerayla Önleme Rehberi",
+   "desc": "Depoda forklift-yaya kazalarını yapay zeka destekli kameralarla önlemenin yolları. Güvenlik uyarı senaryoları ve mevcut kameralarla entegrasyon.",
+   "date": "2026-10-27",
+   "specs": [],
+   "sections": [
+    {
+     "h": "Forklift-Yaya Güvenliği Neden Önemlidir?",
+     "p": [
+      "Depo ve endüstriyel ortamlarda forkliftler, yüksek hızda ve büyük yükler taşır. Bu durum yaya çalışanlar için ciddi riskler doğurur.",
+      "Kazaların önlenmesi hem çalışan sağlığını korur hem de üretim kayıplarını azaltır."
+     ],
+     "li": [
+      "Yayalarla forkliftlerin sık kesiştiği alanlarda risk artar",
+      "Kamera tabanlı güvenlik çözümleri olayları erken tespit edebilir",
+      "Yapay zeka ile gerçek zamanlı uyarılar vererek kazaları önleme potansiyeli"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Yapay Zeka Destekli Kamera Analizi Nasıl Çalışır?",
+     "p": [
+      "Hype-Model ailesi, mevcut IP/CCTV kameralarınız üzerinden çalışır ve marka bağımsızdır. Kameralar RTSP veya ONVIF protokolleri ile sisteme bağlanır.",
+      " Yapay zeka modeli, forklift ve yaya hareketlerini anlık olarak analiz eder, tehlike oluşturabilecek durumları algılar."
+     ],
+     "li": [
+      "Forklift ve yaya varlığını tespit etme",
+      "Tehlikeli yakınlık veya hız alarmı oluşturma",
+      "Gerçek zamanlı uyarı senaryoları planlanması"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Uyarı Senaryoları ve İşleyişi",
+     "p": [
+      "Yapay zeka modeli tehlikeli durumları tespit ettiğinde farklı uyarı senaryoları devreye girer. Bunlar işletmenizin ihtiyaçlarına göre özelleştirilebilir.",
+      "Bu uyarılar sesli ikazlar, ışık sinyalleri veya saha içi operatörlere anlık mesajlar şeklinde olabilir."
+     ],
+     "li": [
+      "Yaya ve forkliftin riskli mesafede olması halinde erken uyarı",
+      "Ters yöne giden forkliftlere alarm",
+      "Yayaya fazla yaklaşan forklift için hız sınırı tavsiyesi"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Mevcut Kamera Sistemleri ile Entegrasyon",
+     "p": [
+      "Çözüm, hali hazırda kullanmakta olduğunuz IP/CCTV kameralarla uyumlu olarak çalışır. Yeni kamera yatırımı gerektirmez.",
+      "Marka ve model farkı gözetmeksizin RTSP/ONVIF destekli tüm cihazlarla hızlı entegrasyon sağlanabilir."
+     ],
+     "li": [
+      "Uyumlu IP ve CCTV kameralar kullanılır",
+      "Kamera markasına bağlı kalmadan analiz imkanı",
+      "Sistem, mevcut VMS ile birlikte veya bağımsız çalışabilir"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "OSHA ve Depo Güvenliği Genel Bilgisi",
+     "p": [
+      "OSHA, endüstriyel araçlar ve depo güvenliği konusunda standartlar sunar. Forklift-yaya kazalarının önlenmesi bu standartların temel amaçlarındandır.",
+      "Hype-Model ile çalışan yapay zeka destekli güvenlik çözümleri, bu genel güvenlik prensiplerine uyum sağlayarak kazaların azaltılmasına destek olur."
+     ],
+     "li": [
+      "Forkliftlerin güvenli sürüşü ve yaya korumasına dikkat edilir",
+      "Riskli durumlara zamanında müdahale ile kaza oranları azalır",
+      "Genel bilgi amaçlıdır, hukuki tavsiye niteliği taşımaz"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Bir Sonraki Adım: Ücretsiz Ön Analiz",
+     "p": [
+      "Mevcut ortamınızda forklift-yaya kazalarını önlemek için yapay zeka destekli kamera analiziyle ilgili detaylı ücretsiz ön analiz hizmeti sunuyoruz.",
+      "Hype Vision uzmanları mevcut kameralarınızı inceleyerek, hangi alanlarda risk olduğunu ve sistem kurulumunun nasıl yapılacağını ücretsiz raporlar.",
+      "Siz de depo iş güvenliğinizi artırmak için ilk adımı atabilirsiniz."
+     ],
+     "li": [
+      "Kamera alt yapısı ücretsiz incelenir",
+      "Riskli bölgeler tespit edilir",
+      "Sistem kurulum ve maliyet önerisi sunulur"
+     ],
+     "cards": [],
+     "rows": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Forklift-yaya güvenliği için neden yapay zeka kullanmalıyım?",
+     "a": "Yapay zeka, kameralar aracılığıyla sürekli ve gerçek zamanlı analiz yaparak insan hatası kaynaklı riskleri minimize eder ve erken uyarı sağlar."
+    },
+    {
+     "q": "Sistem mevcut kameralarla uyumlu mu?",
+     "a": "Evet, sistem RTSP veya ONVIF protokolünü destekleyen tüm IP/CCTV kameralarla marka bağımsız olarak çalışır."
+    },
+    {
+     "q": "Uyarılar nasıl iletiliyor?",
+     "a": "Uyarılar sesli, ışıklı veya operatörlerin kullandığı cihazlara anlık mesaj şeklinde iletilebilir, kişiselleştirilebilir."
+    },
+    {
+     "q": "Bu sistem yasal zorunlulukları karşılıyor mu?",
+     "a": "Sistem OSHA gibi mevcut genel güvenlik prensiplerine uyumludur fakat bu bilgi hukuki tavsiye değildir."
+    },
+    {
+     "q": "Sistem kurulumu ne kadar sürer?",
+     "a": "Tipik pilot uygulama 2 ila 4 hafta arasında tamamlanır, mevcut kamera altyapısına bağlı olarak değişebilir."
+    }
+   ],
+   "intro": [
+    "Forkliftlerin çalıştığı ortamlarda yaya güvenliği kritik bir önceliktir. Yapay zeka destekli görüntü işleme çözümleri, mevcut IP/CCTV kameralarınızı kullanarak hızlı ve etkili koruma sağlar.",
+    "Bu rehberde forklift-yaya kazalarını önlemenin nasıl mümkün olabileceğini, uyarı sistemlerini ve uyumluluk konularını ele alıyoruz."
+   ],
+   "links": [
+    "/blog/100-kamerali-tesiste-yapay-zeka-nereden-baslamali",
+    "/blog/fabrika-video-yapay-zekasinda-on-premise-mi-bulut-mu",
+    "/blog/mevcut-guvenlik-kameralarina-yapay-zeka-ekleme-adim-adim-baslangic",
+    "/blog/yapay-zeka-ile-is-guvenligi",
+    "/blog/kamera-acisi-neden-onemli"
+   ]
+  },
+  {
+   "path": "/blog/100-kamerali-tesiste-yapay-zeka-nereden-baslamali",
+   "title": "100+ Kameralı Tesiste Yapay Zekâ: Nereden Başlamalı?",
+   "desc": "Yüzlerce kamera ile endüstriyel görüntü işleme. Önceliklendirme, GPU planlama ve aşamalı yayılımda pratik adımlar.",
+   "date": "2026-10-26",
+   "specs": [],
+   "sections": [
+    {
+     "h": "Büyük Tesislerde Yapay Zekâya Başlamanın Zorlukları",
+     "p": [
+      "Çok sayıda kamerayı yapay zekâ ile analiz etmek, altyapı, performans ve veri yönetimi açısından özel planlama gerektirir.",
+      "Hangi görüntülerin kritik olduğunu belirlemek ve doğru donanımı seçmek kritik önemdedir."
+     ],
+     "li": [
+      "Farklı kamera modellerinin RTSP/ONVIF standartlarında sorunsuz entegrasyonu",
+      "Gerçek zamanlı analiz için GPU ihtiyacının tespiti",
+      "Çoklu kamera verisinin senkronizasyon ve yönetimi"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Adım 1: Önceliklendirme ve İhtiyaç Analizi",
+     "p": [
+      "İlk adımda hangi alanların ve olayların izleneceği netleştirilmeli.",
+      "Öncelik sırası genelde iş güvenliği modülleri (KKD, forklift-yaya) ve kritik kalite kontrolleri olur."
+     ],
+     "li": [
+      "Tehlikeli/yasaklı bölgeler tanımlanmalı",
+      "KKD, baret, yelek gibi uyulması zorunlu ekipman takibi için öncelik verilmeli",
+      "Yangın veya duman algılama için kritik noktalar belirlenmeli"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Adım 2: Edge ve GPU Kaynak Planlaması",
+     "p": [
+      "Çok kameralı sistemlerde tüm görüntünün merkezi işlenmesi gecikme ve bant genişliği sorununa yol açabilir.",
+      "Bu nedenle on-premise edge cihazlarda yerel analiz ön plandadır."
+     ],
+     "li": [
+      "Her GPU’nun kaç kamera işleyebileceğine dair gerçekçi ön analiz yapılmalı",
+      "GPU ve edge cihazlar için tesisin ağ altyapısına uygun kapasite planlanmalı",
+      "Hype-Model modülleri ve modül yoğunluğu donanım ihtiyacını etkiler"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Adım 3: Aşamalı Yayılım ve Pilot Proje",
+     "p": [
+      "Yüzlerce kamerayla doğrudan tam entegrasyon önerilmez.",
+      "2-4 haftalık pilot uygulamalarla geri bildirim toplanır ve sistem optimizasyonu sağlanır."
+     ],
+     "li": [
+      "Öncelikli alanlarla başlamak",
+      "Sonuçlar ve performans değerlendirildikten sonra kapsam kademeli genişletilir",
+      "Pilot sonuçları işletmeye özel veri ve ihtiyaçları netleştirir"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Yasal Uyarı ve Genel Bilgilendirme",
+     "p": [
+      "Yapay zekâ destekli izleme sistemlerinin kullanımı yerel mevzuata ve KVKK gibi gizlilik yasalarına uygun olmalıdır.",
+      "İş sağlığı ve güvenliği standartlarına genel çerçevede uyum önemlidir.",
+      "Bu yazı hukuki tavsiye değil, genel bilgi amaçlıdır."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Bir Sonraki Adım: Ücretsiz Ön Analiz",
+     "p": [
+      "Hype Vision olarak tesisinizin çok kameralı görüntü işleme ihtiyacına özel ücretsiz ön analiz sunuyoruz.",
+      "Detaylı planlama ve donanım önerileri ile yapay zekâ yatırımlarınızın başarısını artırabiliriz."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "100’den fazla kamera için kaç GPU gerekir?",
+     "a": "İhtiyaç modüllerinize ve kameraların çözünürlüğüne göre değişir. Genel bir kural olmamakla birlikte, ön analizle doğru kapasite belirlenir."
+    },
+    {
+     "q": "Farklı marka kameralar bir arada çalışabilir mi?",
+     "a": "RTSP ve ONVIF standartlarını destekleyen marka bağımsız entegrasyon mümkündür."
+    },
+    {
+     "q": "Yapay zekâ modülleri hangi sektörlerde kullanılır?",
+     "a": "İş güvenliği, kalite kontrol, ürün sayımı, yangın-duman algılama ve OEE gibi birçok endüstriyel alanda uygulanabilir."
+    },
+    {
+     "q": "Pilot proje süreci nasıl işler?",
+     "a": "Genellikle 2-4 hafta sürer, sistem performansı gerçek koşullarda değerlendirilir ve optimizasyon yapılır."
+    },
+    {
+     "q": "Veri gizliliği nasıl sağlanır?",
+     "a": "On-premise çözümler KVKK ve benzeri gizlilik ilkelerine uygun olarak tesis içinde çalışır, bulut bağımlılığı yoktur."
+    }
+   ],
+   "intro": [
+    "100’den fazla kameranın bulunduğu büyük tesislerde yapay zekâ uygulamaları karmaşık olabilir.",
+    "Doğru planlama ile ROI artırılır, iş güvenliği ve verimlilik üst seviyeye çıkar.",
+    "Bu rehberde önceliklendirme, donanım ve aşamalı yayılım stratejilerini inceliyoruz."
+   ],
+   "links": [
+    "/blog/fabrika-video-yapay-zekasinda-on-premise-mi-bulut-mu",
+    "/blog/uretim-verimliligi-kamera-ilk-30-gun",
+    "/blog/mevcut-guvenlik-kameralarina-yapay-zeka-ekleme-adim-adim-baslangic",
+    "/blog/onvif-nedir",
+    "/blog/goruntu-isleme-pilot-projesi-planlama"
+   ]
+  },
+  {
+   "path": "/blog/fabrika-video-yapay-zekasinda-on-premise-mi-bulut-mu",
+   "title": "Fabrika Video Yapay Zekâsında On-Premise mi Bulut mu?",
+   "desc": "Fabrikalarda video yapay zekası kullanırken on-premise ve bulut çözümlerini gizlilik, gecikme ve maliyet açısından karşılaştırıyoruz.",
+   "date": "2026-10-25",
+   "specs": [],
+   "sections": [
+    {
+     "h": "On-Premise ve Bulut Video Analitik Nedir?",
+     "p": [
+      "On-premise video analitik, verilerin işletmenin kendi altyapısında işlenmesi anlamına gelir. Kamera ve yapay zeka modülleri yerel olarak çalışır ve dışarıya veri gönderilmez.",
+      "Bulut tabanlı çözümler ise kameradan alınan görüntüleri internet üzerinden uzak sunucularda işleyerek sonuçları kullanıcıya sunar."
+     ],
+     "li": [
+      "On-premise: Düşük gecikme, yüksek veri kontrolü, internet bağlantısına bağımlılık yok.",
+      "Bulut: Kolay ölçeklenebilirlik, merkezi yönetim, yüksek başlangıç yatırımı gerekmez."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Gizlilik ve KVKK Açısından Değerlendirme",
+     "p": [
+      "Türkiye’de KVKK gereklilikleri gereği, kişisel verilerin korunması ve yerel işlenmesi önceliklidir. On-premise çözümler, verilerin kurum içinde kalmasını sağlayarak bu açıdan avantaj sunar.",
+      "Bulut çözümlerde verinin yurt dışı sunuculara gönderilmesi, ilgili izinlerin ve sözleşmelerin dikkatli yönetilmesini gerektirir.",
+      "Veri gizliliği konusu, endüstriyel uygulamalar ve çalışan güvenliği bağlamında da yüksek hassasiyet taşır."
+     ],
+     "li": [
+      "On-premise: KVKK uyumuna daha uygun, veri kontrolü tamamen sizde.",
+      "Bulut: Kullanılan hizmetin veri işleme politikaları dikkatle incelenmeli."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Performans ve Gecikme Kıyaslaması",
+     "p": [
+      "Video analitikte gecikme (latency) kritik bir faktördür. Özellikle forklift-yaya güvenliği, KKD tespiti gibi anlık müdahale gereken uygulamalarda hızlı analiz gerekir.",
+      "On-premise sistemler, yerel işlem nedeniyle milisaniye mertebesinde yanıt verirken, bulut çözümlerinde internet bağlantısına ve sunucu yoğunluğuna bağlı gecikmeler oluşabilir."
+     ],
+     "li": [
+      "On-premise: Kritik uygulamalarda üstün performans.",
+      "Bulut: İnternet hızı ve kesintiler performansı etkileyebilir."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Maliyet ve Bakım Yönünden Karşılaştırma",
+     "p": [
+      "On-premise çözümler başlangıçta donanım ve kurulum maliyeti gerektirir ancak uzun vadede kontrol ve bakım esnekliği sağlar.",
+      "Bulut çözümler aylık abonelik bazlı olup, büyük yatırımlar olmadan hızla devreye alınabilir fakat süreklilikte gider artışı olabilir.",
+      "Fabrikalar için maliyet planlamasında kullanılacak modüller (KKD, yangın, ürün sayımı vb.) ve proje süresi önemlidir."
+     ],
+     "li": [
+      "On-premise: İlk yatırım yüksek, uzun vadede daha ekonomik olabilir.",
+      "Bulut: Düşük başlangıç maliyeti, süreklilikte giderler yükselebilir."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Birlikte Kullanım ve Hibrit Yaklaşımlar",
+     "p": [
+      "Bazı işletmeler kritik analizleri yerel on-premise sistemlerle yaparken, arşivleme ve raporlama için bulut çözümlerini tercih eder.",
+      "Hibrit modeller veri gizliliği ve hızlı yanıt gereksinimlerini dengeleyerek esnek çözümler sağlar.",
+      "OSHA ve genel iş güvenliği standartları doğrultusunda analizlerin anlık ve güvenli olması önem taşır."
+     ],
+     "li": [
+      "Veri duyarlılığı yüksek uygulamalar için öncelikle on-premise analiz.",
+      "Bulutla merkezi veri yönetimi ve uzaktan erişim avantajı."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Fabrikalar İçin Doğru Seçim Nasıl Yapılır?",
+     "p": [
+      "İhtiyaç analizi, veri gizliliği politikaları ve teknik altyapı incelenmelidir.",
+      "Başlangıçta küçük ölçekli 2-4 haftalık pilot projelerle performans ve uygunluk testleri yapılması faydalıdır.",
+      "Hype Vision olarak, on-premise Hype-Model ailesiyle uzman çözümler sunuyoruz ve ücretsiz ön analiz ile destek oluyoruz."
+     ],
+     "li": [
+      "Gizlilik sizin için öncelikse on-premise tercih edin.",
+      "İş süreçlerinize göre pilot ile hızlı değerlendirme yapın."
+     ],
+     "cards": [],
+     "rows": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "On-premise video analitik KVKK uyumluluğunu nasıl destekler?",
+     "a": "Veriler kurum içinde işlendiği için dışa aktarım olmayarak kişisel verilere dair kontrol sağlanır ve KVKK gereksinimlerine uygunluk kolaylaşır."
+    },
+    {
+     "q": "Bulut çözümlerde veri gizliliği nasıl sağlanır?",
+     "a": "Bulut sağlayıcıların uyguladığı güvenlik protokolleri ve sözleşmeleri dikkatle incelenmeli, özellikle veri yerleşim ve erişim kontrolleri göz önünde bulundurulmalıdır."
+    },
+    {
+     "q": "On-premise sistemlerin bakım ve işletme maliyetleri yüksek midir?",
+     "a": "Başlangıç yatırımı olabilir ancak uzun vadede yönetim esnekliği ve internet bağımlılığı olmaması maliyet etkinliği sağlar."
+    },
+    {
+     "q": "Performans açısından hangi sistem daha uygundur?",
+     "a": "Zaman kritik uygulamalarda yerel on-premise analizler çok daha hızlı ve güvenilir sonuç verir."
+    },
+    {
+     "q": "Pilot aşamasında nelere dikkat edilmelidir?",
+     "a": "İşletmenin öncelikli ihtiyaçları, mevcut kamera altyapısı ve veri gizliliği gereksinimleri ayrıntılı değerlendirilmelidir."
+    }
+   ],
+   "intro": [
+    "Endüstriyel ortamlarda video yapay zekâsı uygulamaları, verimlilik ve güvenliği artırıyor. Ancak, verilerin nerede işlendiği önemli bir karar noktası.",
+    "On-premise ve bulut tabanlı video analitik çözümlerinin avantajları ve zorluklarını inceleyerek, işletmeniz için en uygun yaklaşımı keşfedin."
+   ],
+   "links": [
+    "/blog/uretim-verimliligi-kamera-ilk-30-gun",
+    "/blog/mevcut-guvenlik-kameralarina-yapay-zeka-ekleme-adim-adim-baslangic",
+    "/blog/video-analitigi-nedir",
+    "/blog/onvif-nedir"
+   ]
+  },
+  {
+   "path": "/blog/uretim-verimliligi-kamera-ilk-30-gun",
+   "title": "Üretimi Kamerayla Ölçmek: İlk 30 Gün Rehberi",
+   "desc": "Üretim verimliliğini kamera ile ölçmek, OEE ve hat verimliliği analizlerinin pilot aşamasında nasıl başlanacağı ve hangi KPI'ların takip edileceğini öğrenin.",
+   "date": "2026-10-24",
+   "specs": [],
+   "sections": [
+    {
+     "h": "Kamera ile Üretim İzleme Neden Önemli?",
+     "p": [
+      "Geleneksel üretim ölçüm yöntemleri genellikle manuel veri toplama ve zaman alıcı analizler içerir. Kameralı görüntü işleme çözümleri, üretim hattının gerçek zamanlı ve detaylı takibini mümkün kılar.",
+      "Hype Vision’un yapay zeka destekli 'Hype-Model' ailesi, marka bağımsız kameralardan alınan RTSP/ONVIF verileriyle kritik üretim süreçlerinde anlık analiz yapar. Bu sayede hava alma, KKD kullanımı, işçi ve forklift hareketleri gibi noktalar kolayca gözlemlenebilir."
+     ],
+     "li": [
+      "On-premise çalışması nedeniyle veri gizliliği sağlar",
+      "Kamera sistemleriyle entegre, mevcut altyapıda hızlı kurulum",
+      "Modüler çözümlerle üretim hattına özel analizler"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "İlk 30 Gün: Pilotta Nelere Odaklanmalısınız?",
+     "p": [
+      "Pilot projede, üretim verimliliği ölçümü için net ve ulaşılabilir KPI’ların belirlenmesi kritik. Bu KPI’lar üretim hattının genel durumunu ve darboğazları ortaya çıkarır.",
+      "Ölçülebilecek tipik KPI’lar şunlardır:"
+     ],
+     "li": [
+      "Hat verimliliği ve duruş süreleri",
+      "Forklift ve yaya hareket analizi, iş güvenliği gözlemi",
+      "KKD (Kişisel Koruyucu Donanım) kullanımı kontrolü",
+      "Ürün sayımı ve kalite kontrolü",
+      "Yangın ve duman tespiti gibi emniyet kriterleri"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Pilot Uygulamada Ölçüm ve Ön Analiz Süreci",
+     "p": [
+      "Pilot başlangıcında öncelikle üretim hattındaki kritik noktalar tespit edilip, uygun kameralarla bu alanlar izlenir.",
+      "Sonrasında Hype-Model yapay zeka modülleri devreye alınarak veriler gerçek zamanlı analize tabi tutulur.",
+      "Toplanan veriler, günlük ve haftalık olarak değerlendirilerek ilk 30 günün sonunda kapsamlı ön analiz raporu hazırlanır."
+     ],
+     "li": [
+      "Kamera görüntülerinin kalitesi ve uygunluğunun kontrolü",
+      "Analiz için gerekli KPI’ların tanımlanması ve ölçüm metriklerinin belirlenmesi",
+      "Olası hataların, risklerin ve darboğazların önceliklendirilmesi"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Yasal Çerçeve ve KVKK Uyumuna Dikkat",
+     "p": [
+      "Üretim sürecinin kamera ile izlenmesi sırasında kişisel verilerin korunması büyük önem taşır.",
+      "KVKK ve benzeri regülasyonlar kapsamında, çalışanların rızası ve verilerin güvenli yönetimi önceliğimizdir.",
+      "Bu süreçte yerel yasal koşullara uyumun sağlanması ve genel iş sağlığı-güvenliği prensiplerine uygun hareket edilmesi gerekmektedir.",
+      "Bu yazı hukuki tavsiye niteliği taşımaz; detaylı bilgi için ilgili mevzuat ve uzman görüşü alınmalıdır."
+     ],
+     "li": [
+      "Kişisel verilerin anonimleştirilmesi veya sınırlandırılması",
+      "Çalışanların bilgilendirilmesi ve veri kullanımının şeffaf olması",
+      "Verilerin sadece onaylanan analiz amaçları için kullanılması"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Sonraki Adım: Ücretsiz Ön Analiz İle Başlayın",
+     "p": [
+      "Üretim hattınızı kamera ve yapay zeka ile daha verimli yönetmeye başlamak için ilk adım ön analize katılmaktır.",
+      "Hype Vision olarak, referans niteliğinde pilot uygulamalarla süreci 2-4 hafta arasında tamamlıyor; belirlenen KPI’lar doğrultusunda somut sonuçlar sunuyoruz.",
+      "Ücretsiz ön analiz teklifi ile süreç ve ihtiyaçlarınızı birlikte değerlendirip, size özel çözümler sunabiliriz."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Üretim hattını kamera ile izlemek hangi avantajları sağlar?",
+     "a": "Gerçek zamanlı veriyle üretim duruşlarını hızlı tespit, iş güvenliği denetimleri, kalite kontrol ve üretim verimliliği analizlerini kolaylaştırır."
+    },
+    {
+     "q": "Pilot aşamada hangi KPI’lar ölçülür?",
+     "a": "Hat verimliliği, ürün sayımı, KKD uyumu, forklift-yaya hareket analizleri ve emniyet kriterleri gibi üretime özel anahtar performans göstergeleri takip edilir."
+    },
+    {
+     "q": "Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında dikkat edilmesi gerekenler nelerdir?",
+     "a": "Çalışanların rıza süreçleri, veri anonimleştirme ve sadece amaçlanan kullanım için veri işlenmesi gereklidir. Hype Vision çözümleri bu prensiplere uygun tasarlanmıştır."
+    },
+    {
+     "q": "Pilot sürecinin tipik süreleri ne kadardır?",
+     "a": "2-4 hafta arasında değişir. Bu süre içinde gerçekleştirdiğimiz ön analiz ve değerlendirme sonrası, ana projeye geçiş için somut veriler sunulur."
+    }
+   ],
+   "intro": [
+    "Üretim süreçlerinin kameralı izlenmesi ve yapay zeka destekli analizler, doğru verimlilik ölçümü için kritik hale geliyor.",
+    "Pilot uygulamanın ilk 30 gününde dikkat edilmesi gereken KPI’lar ve ön analiz yöntemleri üretim verimliliğinizi artırmanıza yardımcı olur."
+   ],
+   "links": [
+    "/blog/mevcut-guvenlik-kameralarina-yapay-zeka-ekleme-adim-adim-baslangic",
+    "/blog/yapay-zeka-kamera-sistemi-maliyeti-neye-bagli",
+    "/blog/yapay-zeka-ile-uretim-kalite-kontrolu",
+    "/blog/video-analitigi-nedir"
+   ]
   }
  ],
  "legal": {
@@ -20941,6 +21877,880 @@
     }
    ],
    "links": []
+  },
+  "/blog/mevcut-guvenlik-kameralarina-yapay-zeka-ekleme-adim-adim-baslangic": {
+   "path": "/en/resources/how-to-add-ai-to-existing-security-cameras-step-by-step-start",
+   "title": "How to Add AI to Existing Security Cameras — Step-by-Step Start",
+   "desc": "Learn how to retrofit your RTSP/ONVIF-enabled security cameras with AI using edge servers and Hype-Model modules, from connection to pilot steps.",
+   "intro": [
+    "Industrial environments increasingly rely on AI-powered image processing for enhanced safety and operational efficiency.",
+    "You can upgrade your existing IP/CCTV cameras without replacing them by connecting via RTSP/ONVIF protocols.",
+    "This guide explains the process clearly and technically, including connection details and pilot project stages."
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "Why Add AI to Existing Cameras?",
+     "p": [
+      "AI-driven analytics help with PPE compliance, forklift-pedestrian detection, restricted area monitoring, fire-smoke detection, product counting, quality control, and OEE improvements.",
+      "Upgrading existing infrastructure avoids costly new camera or system investments while boosting safety and efficiency."
+     ],
+     "li": [
+      "Cost savings on new hardware",
+      "Faster deployment timelines",
+      "Brand-agnostic compatibility",
+      "Compliance with data privacy regulations",
+      "Fast and secure processing via edge servers"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "What Are RTSP and ONVIF? Why Do They Matter?",
+     "p": [
+      "RTSP (Real Time Streaming Protocol) and ONVIF (Open Network Video Interface Forum) are common standards to access video streams and control devices from IP/CCTV cameras.",
+      "They enable connection to different camera brands/models without proprietary software."
+     ],
+     "li": [
+      "RTSP: Standard protocol for live video streaming.",
+      "ONVIF: Standard for camera control (PTZ) and device management.",
+      "Most modern IP cameras support these protocols."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Integration with Edge Server and Hype-Model Software",
+     "p": [
+      "AI processing and image analysis usually run on onsite (edge) servers instead of cloud platforms.",
+      "This enhances data security, reduces latency, and ensures compliance with regulations like GDPR."
+     ],
+     "li": [
+      "Connecting camera RTSP/ONVIF streams to the edge server",
+      "Selecting appropriate Hype-Model AI modules (e.g., PPE helmet detection, forklift-pedestrian separation, restricted zone alerts)",
+      "Real-time video analysis using AI algorithms",
+      "Delivering actionable insights to dashboards and operational workflows"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Pilot Process — Typical 2-4 Week Initial Phase",
+     "p": [
+      "The pilot phase includes site assessment, camera compatibility check, streaming tests, and algorithm validation.",
+      "It typically lasts 2 to 4 weeks and helps define the most suitable AI modules for your operations."
+     ],
+     "li": [
+      "Assessing cameras and network infrastructure",
+      "Testing RTSP/ONVIF connectivity",
+      "Deploying and testing Hype-Model modules on-site",
+      "Evaluating performance and security",
+      "Reporting results and planning next steps"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Next Step: Start with a Free Pre-Assessment",
+     "p": [
+      "Begin by evaluating your existing cameras’ readiness for AI integration through a free pre-assessment.",
+      "This helps create a tailored roadmap considering your infrastructure and requirements."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Do I need to replace my cameras to add AI?",
+     "a": "No, you can retrofit AI analytics onto your existing IP/CCTV cameras as long as they support RTSP and ONVIF protocols."
+    },
+    {
+     "q": "What are the benefits of using an edge server?",
+     "a": "Edge servers improve data security, reduce latency, and enhance compliance with privacy regulations like GDPR, while minimizing dependence on internet connectivity."
+    },
+    {
+     "q": "How do I choose the right Hype-Model AI modules?",
+     "a": "Modules are selected based on your needs, such as PPE compliance, restricted area detection, or fire alerts. The pilot phase helps define what fits best."
+    },
+    {
+     "q": "What happens during the pilot phase?",
+     "a": "Site and camera evaluations are performed, AI models are tested and optimized, and performance is assessed to recommend next steps."
+    },
+    {
+     "q": "Is AI integration compliant with data privacy regulations?",
+     "a": "Yes, using edge servers and privacy-conscious software design helps protect personal data. This information is general and not legal advice."
+    }
+   ]
+  },
+  "/blog/yapay-zeka-kamera-sistemi-maliyeti-neye-bagli": {
+   "path": "/en/resources/what-affects-the-cost-of-ai-camera-systems",
+   "title": "What Affects the Cost of AI Camera Systems?",
+   "desc": "Learn the key factors influencing AI camera system costs, including camera quantities, AI modules, server infrastructure, and pilot projects.",
+   "intro": [
+    "AI-powered camera systems are increasingly used in safety and industrial image processing.",
+    "However, various factors influence their cost, making it difficult to provide a fixed price.",
+    "This article explores the main elements that determine AI camera system expenses."
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "Number and Type of Cameras",
+     "p": [
+      "One of the most significant cost factors is the number of cameras installed. More cameras mean higher hardware and licensing expenses.",
+      "Camera specifications such as resolution, night vision capability, and durability also impact the overall price."
+     ],
+     "li": [
+      "High-resolution cameras deliver more precise analysis but come with higher costs.",
+      "Indoor vs. outdoor usage influences camera selection and pricing."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "AI Modules and Analytics Features",
+     "p": [
+      "Modular AI solutions like Hype Vision's Hype-Model family affect pricing based on selected features.",
+      "Modules can include PPE detection, forklift-pedestrian interaction, restricted area monitoring, fire/smoke detection, product counting, quality control, and OEE tracking."
+     ],
+     "li": [
+      "Each module carries different functional complexity and licensing fees.",
+      "Advanced capabilities and detailed reporting options can increase cost."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Server and Software Infrastructure",
+     "p": [
+      "AI processing typically runs on on-premise servers, supporting privacy compliance.",
+      "The server hardware required depends on workload and influences the investment needed."
+     ],
+     "li": [
+      "Powerful servers enable faster, more accurate analysis but increase initial costs.",
+      "Proper server management is critical for system performance and sustainability."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Pilot Project and Pre-Assessment",
+     "p": [
+      "A typical pilot phase lasts 2-4 weeks, allowing thorough evaluation of system suitability and performance.",
+      "The pilot results inform the final technical details and cost quotations.",
+      "Thus, a clear price cannot be given without a pre-assessment."
+     ],
+     "li": [
+      "Pilot includes setup and training activities.",
+      "This ensures a tailored solution aligned with specific business needs and expectations."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Legal Framework and Use Cases",
+     "p": [
+      "AI camera systems are applied in workplaces under general occupational health and safety regulations.",
+      "Compliance with privacy regulations like data protection laws is essential.",
+      "This content provides general information and is not legal advice."
+     ],
+     "li": [
+      "PPE detection and forklift safety help reduce workplace accidents.",
+      "Quality and productivity monitoring is supported by OEE modules in industrial environments."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Next Step: Free Pre-Assessment and Consultation",
+     "p": [
+      "AI camera system cost varies by scope and requirement. A detailed pre-assessment is necessary for accurate pricing.",
+      "With Hype Vision, you can start a free pre-assessment to identify the best solution for your business."
+     ],
+     "li": [
+      "Have your existing camera infrastructure and needs evaluated by our experts at no cost.",
+      "This step will guide you to make an informed investment decision."
+     ],
+     "cards": [],
+     "rows": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "What determines the price of AI camera systems?",
+     "a": "Factors include the number of cameras, selected AI modules, server infrastructure, and pilot project scope. A pre-assessment is essential for precise pricing."
+    },
+    {
+     "q": "Does compliance with privacy regulations affect cost?",
+     "a": "On-premise solutions compliant with privacy laws ensure data security. Compliance may affect cost but brings long-term benefits."
+    },
+    {
+     "q": "Can existing cameras be integrated into the AI system?",
+     "a": "Hype Vision supports RTSP and ONVIF-compatible cameras regardless of brand, potentially reducing hardware costs."
+    },
+    {
+     "q": "Why is the pilot phase important?",
+     "a": "The pilot tests system performance in the real environment and helps finalize cost estimates, enabling customized solutions."
+    },
+    {
+     "q": "When can I get a firm cost offer?",
+     "a": "A detailed cost proposal is provided after the pilot and pre-assessment clarify your specific requirements."
+    }
+   ]
+  },
+  "/blog/yapay-zeka-pilotu-oncesi-hazirlik-kontrol-listesi": {
+   "path": "/en/resources/computer-vision-pilot-checklist-ai-pilot-preparation",
+   "title": "Computer Vision Pilot Checklist: AI Pilot Preparation",
+   "desc": "Practical checklist for camera readiness, network setup, and safety goals to start your computer vision pilot quickly and effectively.",
+   "intro": [
+    "Launching a computer vision pilot is a crucial step for successful industrial AI projects.",
+    "Proper preparation before the pilot ensures fast deployment and high-quality data collection.",
+    "This article covers essential checks for camera compatibility, network infrastructure, and workplace safety objectives."
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "Camera and Image Quality Check",
+     "p": [
+      "The accuracy of AI-based analyses depends heavily on the quality of cameras used. Resolution, exposure settings, and field of view must be optimized.",
+      "Compatibility with RTSP/ONVIF protocols is required for seamless integration with Hype-Model modules."
+     ],
+     "li": [
+      "Ensure images are clear without overexposure or darkness.",
+      "Cameras should be securely mounted and cover the target zones.",
+      "Test live feed access via RTSP or ONVIF protocols.",
+      "Adjust camera settings according to lighting and operating schedules."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Network Infrastructure and Data Security",
+     "p": [
+      "Stable network connectivity with sufficient bandwidth is critical for smooth data transfer between cameras and processing units.",
+      "Preferring on-premise deployments ensures sensitive data remains within the facility, aligning with data privacy best practices."
+     ],
+     "li": [
+      "Define clear access permissions for cameras and servers.",
+      "Verify firewall settings and secure network protocols are in place.",
+      "Ensure that local data storage is configured properly.",
+      "Confirm network capacity supports pilot data workloads."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Workplace Safety (OSHA) Objectives Alignment",
+     "p": [
+      "Prior to pilot start, defining workplace safety goals enables tailoring AI modules for compliance and risk monitoring.",
+      "Modules like PPE detection, forklift-pedestrian alerts, and restricted zone monitoring should align with identified risk areas."
+     ],
+     "li": [
+      "Review risk assessments and safety reports.",
+      "Map high-risk zones within the facility.",
+      "Standardize use of protective equipment policies.",
+      "Communicate objectives with relevant teams."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Accelerating Pilot Launch with a Pre-Assessment",
+     "p": [
+      "Completing a thorough pre-assessment including site visits and reviewing existing camera setups helps mitigate risks and streamline the pilot timeframe.",
+      "This step verifies readiness and defines key performance indicators for pilot success."
+     ],
+     "li": [
+      "On-site verification of camera systems and recording sample footage.",
+      "Coordination with IT teams to assess network capabilities.",
+      "Engagement with safety officers to clarify objectives.",
+      "Defining reporting needs and expected outputs."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Next Steps: Request a Free Pre-Assessment",
+     "p": [
+      "To ensure a smooth and effective computer vision pilot, take advantage of Hype Vision’s free pre-assessment service.",
+      "Our experts will evaluate your current setup and recommend suitable models and plans tailored to your facility.",
+      "Contact us today to kick-start your project efficiently."
+     ],
+     "li": [
+      "Submit a free pre-assessment request via our website form.",
+      "Receive detailed consultation regarding pilot scope and requirements.",
+      "Collaborate on a customized rollout plan that saves time and resources."
+     ],
+     "cards": [],
+     "rows": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Which cameras are suitable for AI pilots?",
+     "a": "Hype-Model modules are compatible with all cameras accessible via RTSP or ONVIF protocols, regardless of brand, as long as they provide stable, clear images."
+    },
+    {
+     "q": "Why is network infrastructure important for the pilot?",
+     "a": "Uninterrupted data flow and sufficient bandwidth are vital for real-time image analysis, affecting pilot performance."
+    },
+    {
+     "q": "How is data privacy maintained in AI deployments?",
+     "a": "Hype Vision systems operate on-premise to ensure data remains within your facility, aligning with privacy regulations. This information is for general guidance, not legal advice."
+    },
+    {
+     "q": "How long does pilot preparation usually take?",
+     "a": "Typical preparation and pilot startup takes 2 to 4 weeks; a pre-assessment helps optimize this schedule for a smooth launch."
+    }
+   ]
+  },
+  "/blog/kamerayla-kkd-baret-denetimi-pilot-kurulumu": {
+   "path": "/en/resources/ppe-hard-hat-detection-camera-pilot-setup",
+   "title": "PPE Compliance Camera Pilot: How to Set Up Hard Hat Detection",
+   "desc": "Step-by-step guide to setting up a PPE compliance pilot using cameras for hard hat detection. Learn about camera placement, rules, alarms, and pilot process in workplace safety monitoring.",
+   "intro": [
+    "Ensuring PPE compliance, especially hard hat use, is crucial in workplace safety. Camera-based monitoring with AI enhances OSHA-related PPE oversight by automating detection and alerts.",
+    "This guide explains how to set up a pilot for hard hat detection using cameras and outlines the process benefits."
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "Benefits of Camera-Based PPE Monitoring",
+     "p": [
+      "Using cameras for PPE compliance reduces human error, provides real-time alerts, and improves safety protocols. A pilot deployment allows customization to specific site conditions."
+     ],
+     "li": [
+      "Continuous monitoring boosts overall workplace safety.",
+      "Enables compliance reporting and documentation.",
+      "Hype Vision's Hype-Model AI accurately detects hard hats and safety vests."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Camera Selection and Placement for the Pilot",
+     "p": [
+      "Correct camera selection and placement are key to successful PPE detection. Hype Vision’s Hype-Model AI integrates with many camera brands without official partnerships.",
+      "Position cameras at entry points, forklift routes, and restricted zones to maximize coverage."
+     ],
+     "li": [
+      "Choose cameras with high resolution and low-light capability.",
+      "Place cameras where workers and PPE are clearly visible.",
+      "Use multiple cameras if the area is large or complex."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Rules and Alarm Configuration",
+     "p": [
+      "Pilot settings should reflect general safety standards related to PPE. The AI issues real-time alarms when violations occur, enabling prompt corrective actions."
+     ],
+     "li": [
+      "Set alerts for missing or improper PPE detection.",
+      "Alarms can be visual or audible notifications.",
+      "System tuning minimizes false positives for reliability."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Pilot Implementation and Review",
+     "p": [
+      "A typical pilot lasts 2-4 weeks during which installation and site testing occur. Data gathered is used to optimize system performance.",
+      "After the pilot, evaluate readiness for operational use."
+     ],
+     "li": [
+      "Conduct site analysis and camera coverage checks.",
+      "Fine-tune AI model for accurate PPE compliance detection.",
+      "Plan for extension or scaling based on pilot results."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Next Step: Free Pre-Assessment",
+     "p": [
+      "Ready to deploy a camera-based PPE compliance pilot at your facility? Hype Vision offers a free pre-assessment to evaluate your site and recommend the best approach tailored to your needs.",
+      "Contact us to schedule your free pre-assessment and take the first step toward smarter OSHA PPE monitoring."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Where can camera-based PPE monitoring be applied?",
+     "a": "This technology is effective in construction sites, warehouses, factories, and other workplaces, especially at entrances, hazardous zones, and forklift paths."
+    },
+    {
+     "q": "What is the pilot installation duration?",
+     "a": "Typically, pilot setup and validation take between 2-4 weeks, depending on site specifics and project scope."
+    },
+    {
+     "q": "Does camera brand matter?",
+     "a": "Hype Vision’s Hype-Model AI supports a wide range of cameras regardless of brand, so you can use your existing devices."
+    },
+    {
+     "q": "How do alarm systems function?",
+     "a": "The AI detects workers without proper PPE and triggers alerts, which can be visual or audio to facilitate quick enforcement."
+    },
+    {
+     "q": "Is this a legal advice?",
+     "a": "Information provided is for general informational purposes only and does not constitute legal advice. Consult appropriate legal resources for compliance."
+    }
+   ]
+  },
+  "/blog/forklift-yaya-kazalarini-kamerayla-onleme-rehberi": {
+   "path": "/en/resources/prevent-forklift-pedestrian-accidents-with-ai-camera-guide",
+   "title": "Your Guide to Preventing Forklift-Pedestrian Accidents with AI Cameras",
+   "desc": "Learn how AI-powered camera analysis helps prevent warehouse forklift safety incidents. Real-time alerts and integration with existing cameras.",
+   "intro": [
+    "Pedestrian safety around forklifts is a top priority in warehouse environments. AI-based image processing solutions can leverage your existing IP/CCTV cameras to provide effective protection.",
+    "This guide explains how to prevent forklift pedestrian accidents, key alert scenarios, and compatibility with current camera infrastructure."
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "Why Forklift-Pedestrian Safety Matters",
+     "p": [
+      "Forklifts operate at high speeds while carrying heavy loads, posing serious risks to pedestrians in warehouses and industrial sites.",
+      "Preventing accidents protects workers' health and minimizes costly operational disruptions."
+     ],
+     "li": [
+      "Pedestrian and forklift interactions increase risk hotspots",
+      "Camera-based safety solutions enable early incident detection",
+      "AI provides real-time alerts to help avoid accidents"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "How AI-Powered Camera Analysis Works",
+     "p": [
+      "The Hype-Model system works with your existing IP/CCTV cameras using RTSP or ONVIF protocols, supporting a wide range of brands without dependence on specific vendors.",
+      "AI analyzes forklift and pedestrian movements in real time to detect potential hazard situations."
+     ],
+     "li": [
+      "Detection of forklifts and pedestrians",
+      "Generating alarms for unsafe proximity or speed",
+      "Configurable real-time alert scenarios"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Alert Scenarios and Operation",
+     "p": [
+      "When AI detects a hazardous situation, various alert scenarios activate based on your facility’s needs.",
+      "Alerts may include audible alarms, flashing lights, or messages sent to on-site operators."
+     ],
+     "li": [
+      "Early warning when pedestrians and forklifts are too close",
+      "Alarms for forklifts moving in the wrong direction",
+      "Speed limit warnings when forklifts approach too close to pedestrians"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Integrating with Existing Camera Systems",
+     "p": [
+      "The solution utilizes your current IP/CCTV cameras, requiring no new hardware investments.",
+      "Compatible with any camera supporting RTSP or ONVIF protocols, enabling fast setup regardless of existing brands."
+     ],
+     "li": [
+      "Utilizes IP and CCTV cameras you already have",
+      "Brand-agnostic operation lets you avoid vendor lock-in",
+      "Operates standalone or alongside your existing VMS"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "OSHA and Warehouse Safety Overview",
+     "p": [
+      "OSHA establishes general guidance for powered industrial trucks and warehouse safety, emphasizing pedestrian protection around forklifts.",
+      "AI-enabled safety systems like Hype-Model help support these general principles by reducing accident risk.",
+      "This information is provided as general guidance and does not constitute legal advice."
+     ],
+     "li": [
+      "Focus on safe forklift operation and pedestrian awareness",
+      "Timely intervention reduces accident rates",
+      "General information only, not legal guidance"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Next Step: Free Pre-Assessment",
+     "p": [
+      "We offer a free pre-assessment service to evaluate how AI-powered camera analysis can prevent forklift-pedestrian accidents in your warehouse.",
+      "Our experts review your existing camera setup, identify risk zones, and provide a no-obligation report detailing potential implementations.",
+      "Take the first step to improve your warehouse safety today."
+     ],
+     "li": [
+      "Free evaluation of your camera infrastructure",
+      "Identification of high-risk areas",
+      "Implementation and cost proposals delivered"
+     ],
+     "cards": [],
+     "rows": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "Why should I use AI for forklift pedestrian safety?",
+     "a": "AI continuously analyzes video feeds to reduce human error, detecting hazards early and sending timely alerts to prevent accidents."
+    },
+    {
+     "q": "Is the system compatible with my existing cameras?",
+     "a": "Yes, it works with all IP/CCTV cameras that support RTSP or ONVIF protocols, independent of brand."
+    },
+    {
+     "q": "How are alerts delivered?",
+     "a": "Alerts can be sent as audible warnings, visual signals, or instant messages to operators, customizable to your needs."
+    },
+    {
+     "q": "Does this system comply with OSHA regulations?",
+     "a": "The system aligns with general OSHA safety principles but this should not be considered legal advice."
+    },
+    {
+     "q": "How long does system installation take?",
+     "a": "Typical pilot projects complete within 2 to 4 weeks, depending on your existing camera infrastructure."
+    }
+   ]
+  },
+  "/blog/100-kamerali-tesiste-yapay-zeka-nereden-baslamali": {
+   "path": "/en/resources/ai-for-100-cameras-where-to-start",
+   "title": "AI for 100+ Cameras in Large Facilities: Where to Start?",
+   "desc": "Practical steps for multi-camera video analytics: prioritization, GPU planning, and phased deployment in industrial environments.",
+   "intro": [
+    "Deploying AI analytics for over 100 cameras in a large facility can be complex.",
+    "With proper planning, you can maximize ROI while enhancing safety and operational efficiency.",
+    "This guide covers prioritization, hardware resource planning, and gradual rollout strategies."
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "Challenges of AI with Many Cameras in Industrial Settings",
+     "p": [
+      "Analyzing numerous cameras using AI requires special attention to infrastructure, performance, and data management.",
+      "Identifying critical video streams and selecting appropriate hardware is essential."
+     ],
+     "li": [
+      "Integrating various camera brands via RTSP/ONVIF standards",
+      "Determining realistic GPU requirements for real-time analytics",
+      "Managing synchronization and data flow from multiple video sources"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Step 1: Prioritization and Needs Assessment",
+     "p": [
+      "Start by defining which areas and events need monitoring most.",
+      "Typically, safety-related modules (PPE, forklift-pedestrian) and critical quality checks lead the priority list."
+     ],
+     "li": [
+      "Identify hazardous or restricted zones",
+      "Focus on compliance monitoring like PPE detection (hard hats, vests)",
+      "Highlight crucial points for fire and smoke detection"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Step 2: Edge and GPU Resource Planning",
+     "p": [
+      "Sending video from all cameras to a central server can cause latency and bandwidth bottlenecks.",
+      "Local edge analytics devices minimize these issues and enable faster responses."
+     ],
+     "li": [
+      "Conduct accurate pre-assessments to estimate how many cameras per GPU can be processed",
+      "Plan GPU and edge computing capacity according to network infrastructure",
+      "Model types and workload intensity influence hardware needs"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Step 3: Phased Deployment and Pilot Programs",
+     "p": [
+      "Deploying hundreds of cameras at once is not recommended.",
+      "2-4 week pilots allow system tuning based on real feedback."
+     ],
+     "li": [
+      "Start with priority zones",
+      "Expand the scope step-by-step after evaluating pilot results",
+      "Pilot data helps tailor solutions to the site’s unique requirements"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Legal Considerations and General Advice",
+     "p": [
+      "AI-powered surveillance should comply with local privacy laws and regulations like OSHA in the US.",
+      "General workplace safety standards should always be followed.",
+      "This article is for informational purposes only and not legal advice."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Next Step: Free Pre-Assessment",
+     "p": [
+      "Hype Vision offers a free pre-assessment customized for your multi-camera video analytics needs.",
+      "Let us help you plan and succeed with AI investments that scale."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "How many GPUs are needed for 100+ cameras?",
+     "a": "This depends on your use cases and camera resolution. Accurate pre-assessment determines the right capacity for your setup."
+    },
+    {
+     "q": "Can different camera brands be used together?",
+     "a": "Yes, as long as they support RTSP and ONVIF protocols, brand-independent integration is possible."
+    },
+    {
+     "q": "Which industries use AI modules like PPE detection or forklift-pedestrian safety?",
+     "a": "These are widely applied in workplace safety, quality control, inventory counting, fire detection, and OEE in industrial environments."
+    },
+    {
+     "q": "What is the typical duration and scope of a pilot project?",
+     "a": "Usually 2-4 weeks, focusing on real-life testing and system adjustments before full deployment."
+    },
+    {
+     "q": "How is data privacy ensured?",
+     "a": "On-premise solutions operate within your facility, minimizing cloud dependency and helping to comply with privacy laws."
+    }
+   ]
+  },
+  "/blog/fabrika-video-yapay-zekasinda-on-premise-mi-bulut-mu": {
+   "path": "/en/resources/factory-video-ai-on-premise-vs-cloud",
+   "title": "On-Premise vs Cloud in Factory Video AI: What’s Right?",
+   "desc": "We compare on-premise and cloud video analytics for factories focusing on data privacy, latency, and cost considerations.",
+   "intro": [
+    "Video AI is transforming factory operations by enhancing efficiency and safety. Choosing where to process data is a critical decision.",
+    "Explore the benefits and challenges of on-premise and cloud video analytics to find the best fit for your industrial environment."
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "What Are On-Premise and Cloud Video Analytics?",
+     "p": [
+      "On-premise video analytics means processing data locally within the factory’s own infrastructure, keeping data inside the premises.",
+      "Cloud-based solutions send video streams over the internet to remote servers for analysis, providing results back to users."
+     ],
+     "li": [
+      "On-premise: Low latency, full data control, no dependency on internet.",
+      "Cloud: Easy scalability, centralized management, no large upfront investment."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Data Privacy and Compliance Considerations",
+     "p": [
+      "Data privacy laws require personal information protection and often prefer local data processing. On-premise systems better support these needs by retaining data in-house.",
+      "Cloud services may involve transferring data to external servers, requiring detailed agreements and strict security policies.",
+      "Protecting employee and operational data privacy is essential in industrial video AI applications."
+     ],
+     "li": [
+      "On-premise: Higher compliance certainty and complete data ownership.",
+      "Cloud: Requires careful review of data handling and storage policies."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Latency and Performance Comparison",
+     "p": [
+      "Latency is critical in applications like PPE detection, forklift-pedestrian safety, and restricted zone monitoring where immediate reaction is needed.",
+      "On-premise analytics provide millisecond-level response times, while cloud solutions depend on network speed and server load, potentially introducing delays."
+     ],
+     "li": [
+      "On-premise: Best suited for time-sensitive tasks.",
+      "Cloud: Possible delays due to internet connectivity."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Cost Structure and Maintenance",
+     "p": [
+      "On-premise solutions require investment in hardware and setup but offer control and long-term cost predictability.",
+      "Cloud analytics work on subscription models, allowing quick deployment but potentially increasing ongoing operational expenses.",
+      "Consider the modules needed (PPE, fire detection, counting, OEE) and project duration for cost evaluation."
+     ],
+     "li": [
+      "On-premise: Higher initial cost but potentially lower long-term expenses.",
+      "Cloud: Lower startup cost with pay-as-you-go pricing."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Hybrid Approaches and Combined Use",
+     "p": [
+      "Some factories run critical analytics on-premise while using cloud services for storage and reporting.",
+      "Hybrid models balance privacy, performance, and flexibility, supporting compliance and operational needs.",
+      "General OSHA guidelines emphasize timely and accurate safety monitoring in industrial environments."
+     ],
+     "li": [
+      "On-premise for sensitive real-time monitoring.",
+      "Cloud for centralized management and remote accessibility."
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "How to Choose the Right Option for Your Factory?",
+     "p": [
+      "Conduct a thorough needs assessment considering privacy policies and technical infrastructure.",
+      "Pilot projects over 2-4 weeks can help evaluate fit and performance before full deployment.",
+      "Hype Vision offers on-premise Hype-Model AI modules with expert consultation and free pre-assessments."
+     ],
+     "li": [
+      "Prioritize on-premise if data privacy is critical.",
+      "Test with a pilot to understand operational gains quickly."
+     ],
+     "cards": [],
+     "rows": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "How does on-premise video analytics aid data privacy compliance?",
+     "a": "Data remains within the organization, eliminating external transfers and enhancing control aligned with privacy regulations."
+    },
+    {
+     "q": "What should be considered for data privacy in cloud analytics?",
+     "a": "Review cloud provider security protocols, data residency, and access controls thoroughly before adoption."
+    },
+    {
+     "q": "Are maintenance costs higher for on-premise systems?",
+     "a": "Initial costs may be more, but on-premise systems reduce internet dependency and allow flexible long-term management."
+    },
+    {
+     "q": "Which system offers better performance for safety-critical tasks?",
+     "a": "On-premise solutions deliver faster, more reliable real-time analytics essential for immediate safety actions."
+    },
+    {
+     "q": "What factors are important during a pilot phase?",
+     "a": "Analyze key business needs, existing camera setups, and privacy requirements to ensure the solution fits your operations."
+    }
+   ]
+  },
+  "/blog/uretim-verimliligi-kamera-ilk-30-gun": {
+   "path": "/en/resources/measuring-production-with-cameras-first-30-days",
+   "title": "Measuring Production with Cameras: The First 30 Days Guide",
+   "desc": "Learn how to start measuring production efficiency with cameras, key OEE and line efficiency KPIs to track during a pilot, and how to perform pre-assessment.",
+   "intro": [
+    "Camera-based production monitoring combined with AI-driven analytics is becoming essential for accurate efficiency measurement.",
+    "Focusing on key KPIs and a solid pre-assessment within the first 30 days of a pilot helps optimize your manufacturing processes."
+   ],
+   "specs": [],
+   "sections": [
+    {
+     "h": "Why Use Cameras to Monitor Production?",
+     "p": [
+      "Traditional methods of production measurement usually involve manual data collection and lengthy analysis.",
+      "Hype Vision’s AI-enabled 'Hype-Model' family analyzes RTSP/ONVIF streams from virtually any camera brand, delivering real-time insights on critical processes such as PPE compliance, forklift and pedestrian movements, and line performance."
+     ],
+     "li": [
+      "On-premise deployment ensures data privacy",
+      "Quick integration with existing camera or VMS infrastructure",
+      "Modular AI models tailored to your production environment"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "What to Focus on During the First 30 Days of a Pilot?",
+     "p": [
+      "Setting clear, achievable KPIs is critical to identifying bottlenecks and measuring line efficiency effectively.",
+      "Typical production and safety KPIs to consider include:"
+     ],
+     "li": [
+      "Line efficiency and downtime metrics",
+      "Forklift and pedestrian movement and safety monitoring",
+      "Personal Protective Equipment (PPE) compliance checks",
+      "Product counting and quality inspection",
+      "Fire and smoke detection"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Measurement and Pre-Assessment Process During the Pilot",
+     "p": [
+      "Start by identifying the critical production points and setting up cameras to monitor these areas.",
+      "Then activate Hype-Model AI modules to analyze the video data in real-time.",
+      "Collected data is reviewed daily and weekly, culminating in a comprehensive pre-assessment report at the end of 30 days."
+     ],
+     "li": [
+      "Ensuring video quality and coverage",
+      "Defining essential KPIs and measurement criteria",
+      "Prioritizing risks, errors, and bottlenecks for improvement"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Legal Considerations and Data Privacy Compliance",
+     "p": [
+      "Monitoring production with video requires careful handling of personal data.",
+      "Compliance with local regulations such as data privacy laws and general occupational safety guidelines is essential.",
+      "This content does not constitute legal advice; please consult relevant legislation or legal experts for detailed guidance."
+     ],
+     "li": [
+      "Anonymizing or limiting personal data collection",
+      "Transparent communication with employees regarding video monitoring",
+      "Using data only for approved analysis purposes"
+     ],
+     "cards": [],
+     "rows": []
+    },
+    {
+     "h": "Next Step: Get Started with a Free Pre-Assessment",
+     "p": [
+      "Start improving your production line efficiency using cameras and AI by joining a free pre-assessment.",
+      "Hype Vision delivers pilot projects within 2-4 weeks, providing actionable insights based on your selected KPIs.",
+      "Contact us for a no-cost pre-assessment to explore tailored solutions for your production environment."
+     ],
+     "li": [],
+     "cards": [],
+     "rows": []
+    }
+   ],
+   "faq": [
+    {
+     "q": "What are the advantages of monitoring production lines with cameras?",
+     "a": "It enables real-time detection of production stoppages, supports safety compliance checks, improves quality control, and streamlines efficiency analysis."
+    },
+    {
+     "q": "Which KPIs are typically measured during a pilot?",
+     "a": "Line efficiency, product counts, PPE compliance, forklift and pedestrian movement analysis, and safety-related metrics are commonly tracked."
+    },
+    {
+     "q": "What should be considered regarding data privacy laws?",
+     "a": "Employee consent, data anonymization, and processing data only for intended purposes are fundamental. Hype Vision solutions are designed with these principles in mind."
+    },
+    {
+     "q": "How long does a typical pilot last?",
+     "a": "Pilots usually span 2-4 weeks during which initial analyses and evaluations are completed to support decision-making for full deployment."
+    }
+   ]
   }
  },
  "gen": {
