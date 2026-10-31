@@ -88,6 +88,7 @@ ALT = {
  "yangin-1": ("Kamera ile erken yangın tespiti: 15-20 metreden basketbol topu büyüklüğündeki alevin yapay zekâ ile görülmesi", "Early fire detection with a camera: AI spotting a basketball-sized flame from 15-20 meters"),
  "yangin-2": ("Yangın tespitinde anlık WhatsApp uyarısı (YANGIN TESPİT)", "Instant WhatsApp alert on fire detection (fire detected)"),
  "lastik-1": ("Lastik/kauçuk hattında yüzey yırtık ve çatlağın endüstriyel kamera ve yapay zekâ ile tespiti", "Detecting surface tears and cracks on a rubber/tire line with an industrial camera and AI"),
+ "lastik-2": ("Lastik/kauçuk hattında tespit edilen yüzey yırtığı — yapay zekâ ile kutu içinde işaretleniyor", "A surface tear detected on a rubber/tire line — marked with a box by AI"),
 }
 REV = {}  # imgseo: SEO dosya adı -> ALT anahtarı
 def _key(src):

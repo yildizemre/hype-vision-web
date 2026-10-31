@@ -9136,7 +9136,12 @@
      "li": [],
      "cards": [],
      "rows": [],
-     "imgs": [],
+     "imgs": [
+      [
+       "/img/vaka/lastik-2.webp",
+       "Lastik/kauçuk hattında tespit edilen yüzey yırtığı — yapay zekâ ile kutu içinde işaretleniyor"
+      ]
+     ],
      "vids": []
     },
     {
@@ -20829,7 +20834,12 @@
      "li": [],
      "cards": [],
      "rows": [],
-     "imgs": [],
+     "imgs": [
+      [
+       "/img/vaka/lastik-2.webp",
+       "A surface tear detected on a rubber/tire line — marked with a box by AI"
+      ]
+     ],
      "vids": []
     },
     {
